@@ -1,0 +1,447 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Student life</title>
+<script type="text/javascript" src="./scripts/css3-mediaqueries.js"></script>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+h2 {
+	font-family: sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	padding: 20px;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+p {
+	padding: 18px;
+}
+.container-fullb {
+	width: 100%;
+	float: left;
+	background-color: #222;
+	clear: both;
+	overflow: hidden;
+}
+.container-fullw {
+	width: 100%;
+	float: left;
+	background-color: #fff;
+	clear: both;
+}
+.container-fullg {
+	width: 100%;
+	float: left;
+	background-color: #F3F3F3;
+	clear: both;
+}
+.container-fullc {
+	width: 100%;
+	float: left;
+	background-color: #b4c960;
+	clear: both;
+	overflow: hidden;
+}
+.container-a {
+	overflow: hidden;
+	position: relative;
+	max-width: 960px;
+}
+.tintb {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+	color: #fff;
+	width: 100%;
+}
+.tintc {
+	background: rgba(180, 201, 96, 0.8);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+	color: #fff;
+	width: 100%;
+}
+.tintt {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	color: #fff;
+	width: 100%;
+}
+.tinthalf {
+	width: 50%;
+}
+.full {
+	width: 100%;
+}
+.hero1 a, .hero2 a, .hero3 a, .hero4 a, .hero5 a {
+	color: #fff;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.hero1, .hero2, .hero3, .hero4, .hero5 {
+	float: left;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+.absolute {
+	position: absolute;
+	left: 50%;
+	margin: -50px 0 0 -50px;
+	top: 50%;
+	float: left;
+	text-align: center;
+}
+.center a {
+	display: inline-block;
+	margin: 0;
+	padding: 20px;
+	outline: none;
+	border: 2px solid #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	width: 150px;
+	color: #fff;
+	background-color: #none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -50px 0 0 -100px;
+	text-align: center;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+.center a:hover {
+	border: 2px solid rgba(0, 0, 0, 0);
+	color: #000;
+	background-color: #fff;
+	-webkit-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+.borderw {
+	border: 1px solid #222;
+	box-sizing: border-box;
+}
+.borderb {
+	border: 1px solid #fff;
+	box-sizing: border-box;
+}
+.borderc {
+	border: 1px solid #b4c960;
+	box-sizing: border-box;
+}
+.description {
+	background-color: #fff;
+	color: #666;
+	width: 100%;
+	overflow: hidden;
+	padding: 20px 0;
+	clear: both;
+}
+.absolutecenter {
+	width: 80%;
+	height: 100px;
+	background-color: green;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.verticalbox {
+	display: table;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+.verticaltext {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
+	float: none;
+	width: 50%;
+	padding: 0;
+	background-color: #f06;
+}
+.verticalbox .verticaltext p {
+	color: #fff;
+}
+.verticalbox .verticaltext a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.verticalcenter a {
+	display: inline-block;
+	margin: 0;
+	padding: 20px;
+	outline: none;
+	border: 2px solid #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	width: 150px;
+	color: #fff;
+	background-color: #none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -50px 0 0 -100px;
+	text-align: center;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+.verticalcenter a:hover {
+	border: 2px solid rgba(0, 0, 0, 0);
+	color: #000;
+	background-color: #fff;
+	-webkit-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+.floatl {
+	float: left;
+}
+.floatr {
+	float: right;
+}
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+.padl {
+	padding-left: 10px;
+}
+.bordert {
+	border-top: none;
+}
+@font-face {
+	font-family: 'NeuzeitforPlymouthBlack';
+	src: url('fonts/neuzeitforplymouth-black-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-black-webfont.eot?#iefix') format('embedded-opentype'),  url('fonts/neuzeitforplymouth-black-webfont.woff') format('woff'),  url('fonts/neuzeitforplymouth-black-webfont.ttf') format('truetype'),  url('fonts/neuzeitforplymouth-black-webfont.svg#NeuzeitforPlymouthBlack') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.neuzit {
+	font-family: 'NeuzeitforPlymouthBlack', Arial, Helvetica, sans-serif;
+	font-size: 48px;
+	color: #222;
+	text-transform: uppercase;
+	line-height: 36px;
+	margin: 24px 18px 0 18px;
+}
+.blacktext {
+	color: #222;
+	background-color: #fff;
+}
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+ @media screen and (max-width: 599px) {
+body {
+	-webkit-text-size-adjust: none;
+}
+.container-a {
+	min-width: 320px;
+}
+.container-fullb {
+	background-color: #222;
+}
+.tintb {
+	position: relative;
+	width: 100%;
+	background-image: none;
+	background-color: #000;
+}
+.tintt {
+	position: relative;
+	width: 100%;
+	background-image: none;
+	background-color: #000;
+	bottom: 0;
+}
+.verticaltext {
+	width: 100%;
+	display: block;
+}
+.desktop {
+	display: none;
+}
+.mobile {
+	display: block;
+}
+.neuzit {
+	font-size: 36px;
+	line-height: 30px;
+}
+}
+ @media screen and (min-width: 600px) and (max-width: 899px) {
+.hero1 {
+	width: 66.66%;
+}
+.hero2 {
+	width: 33.33%;
+}
+.hero3 {
+	width: 50%;
+}
+.hero4 {
+	width: 33.33%;
+}
+.hero5 {
+	width: 50%;
+}
+.desktop {
+	display: none;
+}
+.mobile {
+	display: block;
+}
+.neuzit {
+	font-size: 36px;
+	line-height: 30px;
+}
+}
+ @media screen and (min-width: 900px) {
+.hero1 {
+	width: 50%;
+}
+.hero2 {
+	width: 25%;
+}
+.hero3 {
+	width: 25%;
+}
+.hero4 {
+	width: 33.33%;
+}
+.hero5 {
+	width: 50%;
+}
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+.neuzit {
+	font-size: 48px;
+	line-height: 36px;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="container-fullb">
+  <div class="container-a"><img src="images/topstrap150810a.gif" alt="" width="800" height="50" class="desktop floatl padl"><img src="images/topstrap150810b.gif" alt="" width="50" height="50" class="mobile floatl padl"></div>
+</div>
+<div class="container-fullg">
+  <div class="container-a"> <img src="images/topstrap150810c.gif" alt="" width="210" height="140" class="floatl"><img src="images/topstrap150810d.gif" width="340" height="140" alt="" class="floatr"> </div>
+</div>
+<div class="container-fullg">
+  <div class="container-a blacktext">
+    <h1 class="neuzit">Student life magazine</h1>
+    <p class="whitetext">A new magazine to give you the low down of being a student at Plymouth University
+  </div>
+</div>
+<div class="container-fullb">
+  <div class="container-a">
+    <div class="hero1 borderw"><img src="images/sl150810a.jpg" class="full" alt="">
+      <div class="tintb tinthalf">
+        <p><a href="#">Hanging out in ocean city</a></p>
+      </div>
+    </div>
+    <div class="hero2 borderw"><img src="images/sl150810g.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">Welcome to the yard</a></p>
+      </div>
+    </div>
+    <div class="hero2 borderw"><img src="images/sl150810k.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">Fine art graduate Laura Rosser</a></p>
+      </div>
+    </div>
+    <div class="hero3 borderw"><img src="images/sl150810c.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">What makes a brilliant start-up?</a></p>
+      </div>
+    </div>
+    <div class="hero3 borderw"><img src="images/sl150810d.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">Can you make a living as an inventor?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fullb">
+  <div class="container-a">
+    <div class="hero3 borderw"><img src="images/sl150810j.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">The caf&eacute;s and shops of Royal William Yard</a></p>
+      </div>
+    </div>
+    <div class="hero3 borderw"><img src="images/sl150810m.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">Could you discover a new species?</a></p>
+      </div>
+    </div>
+    <div class="hero3 borderw"><img src="images/sl150810f.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">Can we turn the tide on plastic pollution?</a></p>
+      </div>
+    </div>
+    <div class="hero3 borderw"><img src="images/sl150810i.jpg" class="full" alt="">
+      <div class="tintb">
+        <p><a href="#">The bike shop entrepreneur</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

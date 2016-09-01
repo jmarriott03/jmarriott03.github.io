@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Tag cloud</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+	color: #666;
+	font-weight: normal;
+}
+h2, p {
+	padding: 0 20px 10px 20px;
+	float: left;
+	clear: both;
+}
+a {
+	color: #08c;
+	font-weight: bold;
+}
+.box {
+	overflow: hidden;
+	float: left;
+	background: #eee;
+	padding: 10px 0;
+	width: 100%;
+}
+.wrapper {
+	max-width: 1024px;
+	overflow: hidden;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+	margin: 10px 20px;
+	padding: 10px;
+	clear: both;
+}
+td {
+	padding: 5px;
+	text-align: left;
+	border: 1px solid #666;
+}
+.fullb {
+	background-color: #222;
+	overflow: hidden;
+	background: url(images/1280x720hero.jpg) no-repeat right;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+}
+.buttonstyle a {
+	padding: 5px 10px;
+	margin: 10px 10px 0 0;
+	float: left;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+.borderbot {
+	border-bottom: 2px solid #666;
+}
+.padbot20 {
+	padding-bottom: 20px;
+}
+.box1a {
+	background-color: #a80075;
+}
+.box1b {
+	background-color: #d335a4;
+}
+.box1c {
+	background-color: #6d004c;
+}
+.box2a {
+	background-color: #c74a8d;
+}
+.box2b {
+	background-color: #e378b0;
+}
+.box2c {
+	background-color: #811850;
+}
+.box3a {
+	background-color: #c1004a;
+}
+.box3b {
+	background-color: #e03879;
+}
+.box3c {
+	background-color: #7d0031;
+}
+.box4a {
+	background-color: #e09e33;
+}
+.box4b {
+	background-color: #f0bb65;
+}
+.box4c {
+	background-color: #926011;
+}
+.box5a {
+	background-color: #f3d213;
+}
+.box5b {
+	background-color: #f9e04d;
+}
+.box5c {
+	background-color: #9e8806;
+}
+.box6a {
+	background-color: #7b77a5;
+}
+.box6b {
+	background-color: #aaa6d2;
+}
+.box6c {
+	background-color: #2d276b;
+}
+.box7a {
+	background-color: #5391ca;
+}
+.box7b {
+	background-color: #80b5e4;
+}
+.box7c {
+	background-color: #1b5283;
+}
+.box8a {
+	background-color: #7fbfd7;
+}
+.box8b {
+	background-color: #a3d7eb;
+}
+.box8c {
+	background-color: #29718c;
+}
+.box9a {
+	background-color: #9fcac5;
+}
+.box9b {
+	background-color: #c0e4e1;
+}
+.box9c {
+	background-color: #34837b;
+}
+.box10a {
+	background-color: #b4c960;
+}
+.box10b {
+	background-color: #d2e48b;
+}
+.box10c {
+	background-color: #6e831f;
+}
+.box11a {
+	background-color: #1d347e;
+}
+.box11b {
+	background-color: #516abf;
+}
+.box11c {
+	background-color: #091a52;
+}
+.box12a {
+	background-color: #3c3e6f;
+}
+.box12b {
+	background-color: #787bb7;
+}
+.box12c {
+	background-color: #131648;
+}
+.box13a {
+	background-color: #747376;
+}
+.box13b {
+	background-color: #b6b7b9;
+}
+.box13c {
+	background-color: #222222;
+}
+.swatch1a {
+	color: #a80075;
+}
+.swatch1b {
+	color: #d335a4;
+}
+.swatch1c {
+	color: #6d004c;
+}
+.swatch2a {
+	color: #c74a8d;
+}
+.swatch2b {
+	color: #e378b0;
+}
+.swatch2c {
+	color: #811850;
+}
+.swatch3a {
+	color: #c1004a;
+}
+.swatch3b {
+	color: #e03879;
+}
+.swatch3c {
+	color: #7d0031;
+}
+.swatch4a {
+	color: #e09e33;
+}
+.swatch4b {
+	color: #f0bb65;
+}
+.swatch4c {
+	color: #926011;
+}
+.swatch5a {
+	color: #f3d213;
+}
+.swatch5b {
+	color: #f9e04d;
+}
+.swatch5c {
+	color: #9e8806;
+}
+.swatch6a {
+	color: #7b77a5;
+}
+.swatch6b {
+	color: #aaa6d2;
+}
+.swatch6c {
+	color: #2d276b;
+}
+.swatch7a {
+	color: #5391ca;
+}
+.swatch7b {
+	color: #80b5e4;
+}
+.swatch7c {
+	color: #1b5283;
+}
+.swatch8a {
+	color: #7fbfd7;
+}
+.swatch8b {
+	color: #a3d7eb;
+}
+.swatch8c {
+	color: #29718c;
+}
+.swatch9a {
+	color: #9fcac5;
+}
+.swatch9b {
+	color: #c0e4e1;
+}
+.swatch9c {
+	color: #34837b;
+}
+.swatch10a {
+	color: #b4c960;
+}
+.swatch10b {
+	color: #d2e48b;
+}
+.swatch10c {
+	color: #6e831f;
+}
+.swatch11a {
+	color: #1d347e;
+}
+.swatch11b {
+	color: #516abf;
+}
+.swatch11c {
+	color: #091a52;
+}
+.swatch12a {
+	color: #3c3e6f;
+}
+.swatch12b {
+	color: #787bb7;
+}
+.swatch12c {
+	color: #131648;
+}
+.swatch13a {
+	color: #747376;
+}
+.swatch13b {
+	color: #b6b7b9;
+}
+.swatch13c {
+	color: #222222;
+}
+.textsize1 {
+	font-size: 30px;
+	line-height: 36px;
+}
+.textsize2 {
+	font-size: 20px;
+	line-height: 30px;
+}
+.textsize3 {
+	font-size: 16px;
+	line-height: 24px;
+}
+.textsize4 {
+	font-size: 30px;
+	line-height: 36px;
+	padding-right: 10px;
+}
+.textsize5 {
+	font-size: 20px;
+	line-height: 30px;
+	padding-right: 10px;
+}
+.textsize6 {
+	font-size: 16px;
+	line-height: 24px;
+	padding-right: 10px;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+/*
+@media only screen and (max-width: 479px) {
+.backcol1, .backcol2, .backcol4, .backcol5 {
+	font-size: 16px;
+	line-height: 24px;
+}
+}
+*/
+</style>
+</head>
+
+<body>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box1c textsize1">#undergraduate</a> <a href="#" class="box1c textsize1">#study</a> <a href="#" class="box1c textsize1">#apply</a> <a href="#" class="box1a textsize2">#research</a> <a href="#" class="box1a textsize2">#school-of-health-professions</a> <a href="#" class="box1a textsize2">#phd</a> <a href="#" class="box1b textsize3">#news</a> <a href="#" class="box1b textsize3">#students</a> <a href="#" class="box1b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box2c textsize1">#undergraduate</a> <a href="#" class="box2c textsize1">#study</a> <a href="#" class="box2c textsize1">#apply</a> <a href="#" class="box2a textsize2">#research</a> <a href="#" class="box2a textsize2">#school-of-health-professions</a> <a href="#" class="box2a textsize2">#phd</a> <a href="#" class="box2b textsize3">#news</a> <a href="#" class="box2b textsize3">#students</a> <a href="#" class="box2b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box3c textsize1">#undergraduate</a> <a href="#" class="box3c textsize1">#study</a> <a href="#" class="box3c textsize1">#apply</a> <a href="#" class="box3a textsize2">#research</a> <a href="#" class="box3a textsize2">#school-of-health-professions</a> <a href="#" class="box3a textsize2">#phd</a> <a href="#" class="box3b textsize3">#news</a> <a href="#" class="box3b textsize3">#students</a> <a href="#" class="box3b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box4c textsize1">#undergraduate</a> <a href="#" class="box4c textsize1">#study</a> <a href="#" class="box4c textsize1">#apply</a> <a href="#" class="box4a textsize2">#research</a> <a href="#" class="box4a textsize2">#school-of-health-professions</a> <a href="#" class="box4a textsize2">#phd</a> <a href="#" class="box4b textsize3">#news</a> <a href="#" class="box4b textsize3">#students</a> <a href="#" class="box4b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box5c textsize1">#undergraduate</a> <a href="#" class="box5c textsize1">#study</a> <a href="#" class="box5c textsize1">#apply</a> <a href="#" class="box5a textsize2">#research</a> <a href="#" class="box5a textsize2">#school-of-health-professions</a> <a href="#" class="box5a textsize2">#phd</a> <a href="#" class="box5b textsize3">#news</a> <a href="#" class="box5b textsize3">#students</a> <a href="#" class="box5b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box6c textsize1">#undergraduate</a> <a href="#" class="box6c textsize1">#study</a> <a href="#" class="box6c textsize1">#apply</a> <a href="#" class="box6a textsize2">#research</a> <a href="#" class="box6a textsize2">#school-of-health-professions</a> <a href="#" class="box6a textsize2">#phd</a> <a href="#" class="box6b textsize3">#news</a> <a href="#" class="box6b textsize3">#students</a> <a href="#" class="box6b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box7c textsize1">#undergraduate</a> <a href="#" class="box7c textsize1">#study</a> <a href="#" class="box7c textsize1">#apply</a> <a href="#" class="box7a textsize2">#research</a> <a href="#" class="box7a textsize2">#school-of-health-professions</a> <a href="#" class="box7a textsize2">#phd</a> <a href="#" class="box7b textsize3">#news</a> <a href="#" class="box7b textsize3">#students</a> <a href="#" class="box7b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box8c textsize1">#undergraduate</a> <a href="#" class="box8c textsize1">#study</a> <a href="#" class="box8c textsize1">#apply</a> <a href="#" class="box8a textsize2">#research</a> <a href="#" class="box8a textsize2">#school-of-health-professions</a> <a href="#" class="box8a textsize2">#phd</a> <a href="#" class="box8b textsize3">#news</a> <a href="#" class="box8b textsize3">#students</a> <a href="#" class="box8b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box9c textsize1">#undergraduate</a> <a href="#" class="box9c textsize1">#study</a> <a href="#" class="box9c textsize1">#apply</a> <a href="#" class="box9a textsize2">#research</a> <a href="#" class="box9a textsize2">#school-of-health-professions</a> <a href="#" class="box9a textsize2">#phd</a> <a href="#" class="box9b textsize3">#news</a> <a href="#" class="box9b textsize3">#students</a> <a href="#" class="box9b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box10c textsize1">#undergraduate</a> <a href="#" class="box10c textsize1">#study</a> <a href="#" class="box10c textsize1">#apply</a> <a href="#" class="box10a textsize2">#research</a> <a href="#" class="box10a textsize2">#school-of-health-professions</a> <a href="#" class="box10a textsize2">#phd</a> <a href="#" class="box10b textsize3">#news</a> <a href="#" class="box10b textsize3">#students</a> <a href="#" class="box10b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box11c textsize1">#undergraduate</a> <a href="#" class="box11c textsize1">#study</a> <a href="#" class="box11c textsize1">#apply</a> <a href="#" class="box11a textsize2">#research</a> <a href="#" class="box11a textsize2">#school-of-health-professions</a> <a href="#" class="box11a textsize2">#phd</a> <a href="#" class="box11b textsize3">#news</a> <a href="#" class="box11b textsize3">#students</a> <a href="#" class="box11b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box12c textsize1">#undergraduate</a> <a href="#" class="box12c textsize1">#study</a> <a href="#" class="box12c textsize1">#apply</a> <a href="#" class="box12a textsize2">#research</a> <a href="#" class="box12a textsize2">#school-of-health-professions</a> <a href="#" class="box12a textsize2">#phd</a> <a href="#" class="box12b textsize3">#news</a> <a href="#" class="box12b textsize3">#students</a> <a href="#" class="box12b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <div class="buttonstyle">
+      <p> <a href="#" class="box13c textsize1">#undergraduate</a> <a href="#" class="box13c textsize1">#study</a> <a href="#" class="box13c textsize1">#apply</a> <a href="#" class="box13a textsize2">#research</a> <a href="#" class="box13a textsize2">#school-of-health-professions</a> <a href="#" class="box13a textsize2">#phd</a> <a href="#" class="box13b textsize3">#news</a> <a href="#" class="box13b textsize3">#students</a> <a href="#" class="box13b textsize3">#alumni</a> </p>
+    </div>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch1c textsize4">#undergraduate</a> <a href="#" class="swatch1c textsize4">#study</a> <a href="#" class="swatch1c textsize4">#apply</a> <a href="#" class="swatch1a textsize5">#research</a> <a href="#" class="swatch1a textsize5">#school-of-health-professions</a> <a href="#" class="swatch1a textsize5">#phd</a> <a href="#" class="swatch1b textsize6">#news</a> <a href="#" class="swatch1b textsize6">#students</a> <a href="#" class="swatch1b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch2c textsize4">#undergraduate</a> <a href="#" class="swatch2c textsize4">#study</a> <a href="#" class="swatch2c textsize4">#apply</a> <a href="#" class="swatch2a textsize5">#research</a> <a href="#" class="swatch2a textsize5">#school-of-health-professions</a> <a href="#" class="swatch2a textsize5">#phd</a> <a href="#" class="swatch2b textsize6">#news</a> <a href="#" class="swatch2b textsize6">#students</a> <a href="#" class="swatch2b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch3c textsize4">#undergraduate</a> <a href="#" class="swatch3c textsize4">#study</a> <a href="#" class="swatch3c textsize4">#apply</a> <a href="#" class="swatch3a textsize5">#research</a> <a href="#" class="swatch3a textsize5">#school-of-health-professions</a> <a href="#" class="swatch3a textsize5">#phd</a> <a href="#" class="swatch3b textsize6">#news</a> <a href="#" class="swatch3b textsize6">#students</a> <a href="#" class="swatch3b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch4c textsize4">#undergraduate</a> <a href="#" class="swatch4c textsize4">#study</a> <a href="#" class="swatch4c textsize4">#apply</a> <a href="#" class="swatch4a textsize5">#research</a> <a href="#" class="swatch4a textsize5">#school-of-health-professions</a> <a href="#" class="swatch4a textsize5">#phd</a> <a href="#" class="swatch4b textsize6">#news</a> <a href="#" class="swatch4b textsize6">#students</a> <a href="#" class="swatch4b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch5c textsize4">#undergraduate</a> <a href="#" class="swatch5c textsize4">#study</a> <a href="#" class="swatch5c textsize4">#apply</a> <a href="#" class="swatch5a textsize5">#research</a> <a href="#" class="swatch5a textsize5">#school-of-health-professions</a> <a href="#" class="swatch5a textsize5">#phd</a> <a href="#" class="swatch5b textsize6">#news</a> <a href="#" class="swatch5b textsize6">#students</a> <a href="#" class="swatch5b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch6c textsize4">#undergraduate</a> <a href="#" class="swatch6c textsize4">#study</a> <a href="#" class="swatch6c textsize4">#apply</a> <a href="#" class="swatch6a textsize5">#research</a> <a href="#" class="swatch6a textsize5">#school-of-health-professions</a> <a href="#" class="swatch6a textsize5">#phd</a> <a href="#" class="swatch6b textsize6">#news</a> <a href="#" class="swatch6b textsize6">#students</a> <a href="#" class="swatch6b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch7c textsize4">#undergraduate</a> <a href="#" class="swatch7c textsize4">#study</a> <a href="#" class="swatch7c textsize4">#apply</a> <a href="#" class="swatch7a textsize5">#research</a> <a href="#" class="swatch7a textsize5">#school-of-health-professions</a> <a href="#" class="swatch7a textsize5">#phd</a> <a href="#" class="swatch7b textsize6">#news</a> <a href="#" class="swatch7b textsize6">#students</a> <a href="#" class="swatch7b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch8c textsize4">#undergraduate</a> <a href="#" class="swatch8c textsize4">#study</a> <a href="#" class="swatch8c textsize4">#apply</a> <a href="#" class="swatch8a textsize5">#research</a> <a href="#" class="swatch8a textsize5">#school-of-health-professions</a> <a href="#" class="swatch8a textsize5">#phd</a> <a href="#" class="swatch8b textsize6">#news</a> <a href="#" class="swatch8b textsize6">#students</a> <a href="#" class="swatch8b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch9c textsize4">#undergraduate</a> <a href="#" class="swatch9c textsize4">#study</a> <a href="#" class="swatch9c textsize4">#apply</a> <a href="#" class="swatch9a textsize5">#research</a> <a href="#" class="swatch9a textsize5">#school-of-health-professions</a> <a href="#" class="swatch9a textsize5">#phd</a> <a href="#" class="swatch9b textsize6">#news</a> <a href="#" class="swatch9b textsize6">#students</a> <a href="#" class="swatch9b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch10c textsize4">#undergraduate</a> <a href="#" class="swatch10c textsize4">#study</a> <a href="#" class="swatch10c textsize4">#apply</a> <a href="#" class="swatch10a textsize5">#research</a> <a href="#" class="swatch10a textsize5">#school-of-health-professions</a> <a href="#" class="swatch10a textsize5">#phd</a> <a href="#" class="swatch10b textsize6">#news</a> <a href="#" class="swatch10b textsize6">#students</a> <a href="#" class="swatch10b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch11c textsize4">#undergraduate</a> <a href="#" class="swatch11c textsize4">#study</a> <a href="#" class="swatch11c textsize4">#apply</a> <a href="#" class="swatch11a textsize5">#research</a> <a href="#" class="swatch11a textsize5">#school-of-health-professions</a> <a href="#" class="swatch11a textsize5">#phd</a> <a href="#" class="swatch11b textsize6">#news</a> <a href="#" class="swatch11b textsize6">#students</a> <a href="#" class="swatch11b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch12c textsize4">#undergraduate</a> <a href="#" class="swatch12c textsize4">#study</a> <a href="#" class="swatch12c textsize4">#apply</a> <a href="#" class="swatch12a textsize5">#research</a> <a href="#" class="swatch12a textsize5">#school-of-health-professions</a> <a href="#" class="swatch12a textsize5">#phd</a> <a href="#" class="swatch12b textsize6">#news</a> <a href="#" class="swatch12b textsize6">#students</a> <a href="#" class="swatch12b textsize6">#alumni</a> </p>
+  </div>
+</div>
+<div class="wrapper padbot20">
+  <div class="box">
+    <h2>This section is tagged with...</h2>
+    <p> <a href="#" class="swatch13c textsize4">#undergraduate</a> <a href="#" class="swatch13c textsize4">#study</a> <a href="#" class="swatch13c textsize4">#apply</a> <a href="#" class="swatch13a textsize5">#research</a> <a href="#" class="swatch13a textsize5">#school-of-health-professions</a> <a href="#" class="swatch13a textsize5">#phd</a> <a href="#" class="swatch13b textsize6">#news</a> <a href="#" class="swatch13b textsize6">#students</a> <a href="#" class="swatch13b textsize6">#alumni</a> </p>
+  </div>
+</div>
+</body>
+</html>

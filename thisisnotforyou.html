@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>THISISNOTFORYOU</title>
+</head>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+.box { 
+  background: url(images/thisisnotforyou.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+	animation: colorchange 5s infinite;
+	-webkit-animation: colorchange 5s infinite;
+}
+body, html {
+  height: 100%;	
+}
+p {
+	padding: 20px;
+}
+ @keyframes colorchange {
+ 0% {
+background: #f06;
+}
+ 45% {
+background: #f06;
+}
+ 50% {
+background: #cf0;
+}
+95% {
+background: #cf0;
+}
+ 100% {
+background: #f06;
+}
+}
+ @-webkit-keyframes colorchange {
+ 0% {
+background: #f06;
+}
+ 50% {
+background: #cf0;
+}
+ 100% {
+background: #f06;
+}
+}
+</style>
+</head><body>
+<div class="box"></div>
+</body>
+</html>
