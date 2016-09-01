@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	background-color: #fff;
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+h2, p {
+	padding: 10px;
+	clear: both;
+}
+#hideit {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+	margin-top: -50px;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+	background-image: url(images/666.png);
+}
+html {
+	background: url(images/sea1.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+<div id="hideit">
+  <p id="p1">Hello!</p>
+</div>
+<script type="text/javascript">//<![CDATA[ 
+//]]>
+var myDate = new Date(); 
+var username = "Rebecca";  
+if ( myDate.getHours() < 12 )  
+{
+	document.getElementById("p1").innerHTML = "Good morning " + username; 
+} 
+else
+if ( myDate.getHours() >= 12 && myDate.getHours() <= 17 ) 
+{
+	document.getElementById("p1").innerHTML = "Good afternoon " + username;
+} 
+else
+if ( myDate.getHours() > 17 && myDate.getHours() <= 24 ) 
+{
+	document.getElementById("p1").innerHTML = "Good evening " + username; 
+}
+function hideIt() {
+	document.getElementById("hideit").style.visibility = "hidden";
+}
+setTimeout("hideIt()", 5000);
+</script>
+</body>
+</html>

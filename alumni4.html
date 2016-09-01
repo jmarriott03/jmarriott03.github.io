@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<script type="text/javascript" src="./scripts/css3-mediaqueries.js"></script>
+<style type="text/css">
+@font-face {
+	font-family: 'neuzeit';
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot');
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot?#iefix') format('embedded-opentype'), url('fonts/NeuzeitforPlymouthW04-Blk.woff') format('woff'), url('fonts/NeuzeitforPlymouthW04-Blk.ttf') format('truetype'), url('fonts/NeuzeitforPlymouthW04-Blk.svg#neuzit') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-light';
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-light-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-light-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-light-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-regular';
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-regular-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-regular-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-regular-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-bold';
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-bold-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-bold-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-bold-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-italic';
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-italic-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-italic-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-italic-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern" 1;
+}
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: 'neuzeit-regular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+h1 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+h2 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 32px;
+}
+.neuzeit {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+strong {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+em {
+	font-family: 'neuzeit-italic', Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+a {
+	color: #08c;
+	text-decoration: underline;
+}
+/*a:visited {
+	color: #c0f;
+	text-decoration: underline;
+}*/
+img {
+	border: 0;
+	text-decoration: none;
+}
+img a {
+	vertical-align: middle;
+}
+.widtha {
+	border-top: 1px solid #f3d213;
+	float: left;
+	width: 100%;
+}
+.padbot10 {
+	padding-bottom: 10px;
+}
+h1, h2, p {
+	padding: 6px 0;
+}
+.widtha img {
+	float: left;
+	padding: 0 6px 0 0;
+	width: 48px;
+	height: 48px;
+}
+.widthb {
+	width: 50%;
+	min-width: 320px;
+}
+.widthc {
+	padding: 0 0 0 66px;
+	position: relative;
+}
+.widthc img {
+	left: 0;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	margin: 6px 6px 0 0;
+}
+ul {
+	padding: 0;
+	margin: 0 0 0 18px;
+}
+li {
+	padding: 0;
+	margin: 6px;
+}
+.padtop10 {
+	padding-top: 10px;
+	float: left;
+}
+.button {
+	padding: 6px;
+	background-color: #08c;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	margin: 24px 6px 0 0;
+	margin-left: 66px;
+}
+.topstrap {
+	background-color: #f3d213;
+	width: 100%;
+	overflow: hidden;
+	padding: 24px;
+	margin-bottom: 12px;
+}
+</style>
+</head>
+
+<body>
+<p class="topstrap"><img src="images/connect-with-alumni.png" width="170" height="100" alt="Plymouth University"></p>
+<div class="widthb">
+  <h2>What is Plymouth Connect?</h2>
+  <p>Welcome to Plymouth Connect, a professional network for students and alumni of Plymouth University. Here you can connect with Plymouth University alumni to share contact details and career information, network online and stay in touch.</p>
+  <div class="widtha">
+    <div class="widthc">
+      <p><img src="images/alumni1y.png" alt="eMentoring"><strong>eMentoring</strong><br>
+        eMentoring is designed to help alumni and current students connect so that alumni can advise and guide students and graduates on their professional journey. This could be anything from a few emails or checking a CV/application, to having a telephone conversation or even offering work experience. The idea is that alumni can give as much or as little of their time and expertise as they can spare to help.</p>
+      <p><img src="images/alumni2y.png" alt="Re-connecting"><strong>Re-connecting</strong><br>
+        Plymouth Connect allows you to enter your current contact details, details of your time at Plymouth, and information about your current job. You can then decide how much of this information you are happy to share with others on the Directory. Log-in details will only be given to alumni, students and staff of Plymouth University.</p>
+      <p><img src="images/alumni3y.png" alt="Keeping in touch"><strong>Keeping in touch</strong><br>
+        The Directory is a great starting point if you are trying to get back in touch with an old University friend, or to find Plymouth alumni in your area or in your field of work. It can also be used simply to update the contact details the University holds for you</p>
+      <p><img src="images/alumni4y.png" alt="Alumni map"><strong>Alumni map</strong><br>
+        This map helps you see where in the country, or indeed the world, other Plymouth alumni are based. This could be useful if you are visiting an area for a work placement, on business, or completely relocating and keen to connect with others who share your experiences of Plymouth!</p>
+        <p><img src="images/alumni5y.png" alt="Ambassadors"><strong>Ambassadors</strong><br>
+        Plymouth Connect is the online community where applicants can connect with Plymouth’s Alumni Ambassadors to ask questions about life at Plymouth University. You can search for an ambassador by location, course studied and subject area as well as by their current employment details.</p>
+    </div>
+    <div class="widtha padtop10 padbot10">
+      <p><a href="#" class="button">Register now</a> to start connecting with Plymouth alumni around the world.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

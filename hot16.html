@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plymouth University</title>
+<script type="text/javascript" src="./scripts/jquery-1.6.4.js"></script>
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	background-color: #fff;
+}
+body, html {
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+a {
+	color: #00f;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.noborder {
+	border: 0;
+}
+p {
+	padding: 10px 0;
+	float: left;
+	clear: both;
+}
+ul {
+	margin: 10px 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	float: left;
+	clear: both;
+}
+li {
+	margin-bottom: 10px;
+}
+.grey {
+	background-color: #eee;
+	overflow: hidden;
+	width: 100%;
+}
+.black {
+	background-color: #000;
+	overflow: hidden;
+	color: #fff;
+	width: 100%;
+	padding-bottom: 10px;
+}
+.black a {
+	color: #fff;
+}
+.widtha {
+	overflow: hidden;
+	max-width: 1024px;
+}
+.widthb {
+	max-width: 1024px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 10px solid rgba(255, 255, 255, 0);
+}
+.box {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	overflow: hidden;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image: url(images/umbrella.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+video#bgvid {
+	z-index: 0;
+	background: url(umbrella.jpg) no-repeat;
+	background-size: 100% 100%;
+	bottom: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+.center a {
+	display: inline-block;
+	margin: 0;
+	outline: none;
+	text-decoration: none;
+	max-width: 290px;
+	color: #fff;
+	position: absolute;
+	left: 10px;
+	bottom: 90px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 10px solid rgba(255, 255, 255, 0);
+}
+.center img {
+	margin: 0 0 10px 0;
+}
+.center a strong {
+	text-decoration: underline;
+}
+.third {
+	width: 33.333%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 10px solid rgba(255, 255, 255, 0);
+}
+.left-half {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 10px solid rgba(255, 255, 255, 0);
+	display: table-cell;
+	width: 50%;
+}
+.right-half {
+	background: #b6701e;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image: url(images/720x720-160427.jpg);
+	display: table-cell;
+	width: 50%;
+	background-position: 50% 10%;
+}
+.absolutebottom {
+	height: 40px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+}
+.topleft {
+	height: 30px;
+	position: fixed;
+	width: 30px;
+	left: 0;
+	top: 0;
+	float: left;
+	margin: 20px;
+	z-index: 1;
+}
+.topright {
+	height: 30px;
+	position: fixed;
+	width: 75px;
+	right: 0;
+	top: 0;
+	float: left;
+	margin: 20px;
+	z-index: 2;
+}
+.socialmedia img {
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+}
+.semester {
+	padding: 20px 10px 0 10px;
+}
+.mobilepad {
+	padding: 0;
+}
+ @-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -moz-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -webkit-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -webkit-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-20px);
+ -ms-transform: translateY(-20px);
+ -webkit-transform: translateY(-20px);
+ transform: translateY(-20px);
+}
+ 60% {
+ -moz-transform: translateY(-10px);
+ -ms-transform: translateY(-10px);
+ -webkit-transform: translateY(-10px);
+ transform: translateY(-10px);
+}
+}
+.bounce {
+	-moz-animation: bounce 2s 2;
+	-webkit-animation: bounce 2s 2;
+	animation: bounce 2s 2;
+}
+.padtop10 {
+ padding: top: 10px;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media only screen and (max-width: 599px) {
+.third {
+	width: 100%;
+}
+.third p {
+	padding: 0;
+}
+.half p {
+	padding: 0;
+}
+.left-half {
+	width: 100%;
+}
+.right-half {
+	display: none;
+}
+.mobilepad {
+	padding: 10px 0;
+}
+.hidey {
+	display: none;
+}
+}
+</style>
+<script type="text/javascript">//<![CDATA[ 
+function goToByScroll(id){
+	$('html,body').animate({scrollTop: $("."+id).offset().top},'slow');
+	}
+$(window).scroll(function () {
+	scrollValue = $(document).scrollTop();
+	if (scrollValue > 0){
+		$(".absolutebottom").fadeOut(200);
+		$(".topleft").fadeOut(200);
+		$(".topright").fadeOut(200);
+		}
+		else{
+			$(".absolutebottom").fadeIn(200);
+			$(".topleft").fadeIn(200);
+			$(".topright").fadeIn(200);
+			}
+			});
+/* ]]> */
+//]]>
+</script>
+</head>
+
+<body>
+<div class="topleft"><a href="javascript:void(0)" onclick="goToByScroll('P3');"><img src="images/menu.png" alt=""/></a></div>
+<div class="topright"><a href="#"><img src="images/search3.png" alt=""/></a></div>
+<div class="box center P1">
+  <video autoplay loop poster="images/umbrella.jpg" id="bgvid" class="hidey">
+    <source src="images/umbrella.mp4" type="video/mp4">
+  </video>
+  <a href="#"><strong>Art and Design Degree Show</strong><br>
+  Immerse yourself in a celebration of highly creative talent and enterprise; the culmination of study and practice at Plymouth University.</a> </div>
+<div class="widtha P2">
+  <p class="semester"><a href="#">Semester dates</a> | Semester 2 | Week 40</p>
+</div>
+<div class="widtha mobilepad">
+  <div class="third">
+    <p><a href="#"><img src="images/1280x720-150428a.jpg" alt="" />Our distinct research areas</a> offer many exciting opportunities to explore and discover.</p>
+  </div>
+  <div class="third">
+    <p><a href="#"><img src="images/1280x720-150428d.jpg" alt="" />Marine Station shortlisted for national 'inspiring' award</a></p>
+  </div>
+  <div class="third">
+    <p><a href="#"><img src="images/1280x720-150428c.jpg" alt="" />The annual showcase</a> for final project work by some of the most talented and creative students in the country.</p>
+  </div>
+</div>
+<div class="grey">
+  <div class="widtha">
+    <div class="left-half">
+      <p>With a mission to advance knowledge and transform lives through education and research, Plymouth University is among the emerging global elite of modern higher education institutions. Ranked as the <a href="#">number one modern (post-1992) university</a> in the UK by Times Higher Education in October 2014, Plymouth is distinguished by its approach to combining <a href="#">world-class research and teaching</a> with a commitment to widening participation and social inclusion.</p>
+      <p>Our University campus is at the centre of a thriving, oceanfront city in one of the UK’s most beautiful regions. <a href="#">Plymouth has everything you would expect</a> from the largest city in the South West - major high street stores, theatres, multiplex cinema, art cinemas, and a wealth of small clubs and venues. We also enjoy easy access to the <a href="#">fine beaches and beautiful countryside</a> of the South West.</p>
+    </div>
+    <div class="right-half"> </div>
+  </div>
+</div>
+<div class="black P3">
+  <div class="widtha">
+    <div class="third">
+      <ul>
+        <li><a href="#">Courses &amp; study</a></li>
+        <li><a href="#">Accommodation</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Student life</a></li>
+        <li><a href="#">Open days</a></li>
+        <li><a href="#">Download prospectus</a></li>
+      </ul>
+    </div>
+    <div class="third">
+      <ul>
+        <li><a href="#">International Plymouth</a></li>
+        <li><a href="#">Research &amp; expertise</a></li>
+        <li><a href="#">Business &amp; partners</a></li>
+        <li><a href="#">Alumni &amp; friends</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Job vacancies</a></li>
+      </ul>
+    </div>
+    <div class="third">
+      <p><strong>Plymouth University</strong><br>
+        Drake Circus<br>
+        Plymouth<br>
+        Devon<br>
+        PL4 8AA</p>
+      <ul class="footerlist">
+        <li><a href="#">+44 1752 600600</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Maps &amp; directions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="widthb socialmedia">
+    <p><a href="#"><img src="images/facebook100.png" alt=""/></a> <a href="#"><img src="images/twitter100.png" alt=""/></a> <a href="#"><img src="images/youtube100.png" alt=""/></a> <a href="#"><img src="images/instagram100.png" alt=""/></a> <a href="#"><img src="images/google100.png" alt=""/></a> <a href="#"><img src="images/linkedin100.png" alt=""/></a> <a href="#"><img src="images/pinterest100.png" alt=""/></a></p>
+    <p><a href="javascript:void(0)" onclick="goToByScroll('P1');">Back to top</a></p>
+  </div>
+</div>
+<div class="absolutebottom bounce">
+  <p><a href="javascript:void(0)" onclick="goToByScroll('P2');"><img src="images/arrowdown.png" width="50" height="30" alt=""></a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: #000;
+}
+body, html {
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+#header {
+    height: 100%;
+	background-image: url('images/cpd2.jpg');
+	background-size: cover; 
+	overflow: hidden;
+}
+#accelerometer {
+	width: 50px;
+	height: 50px;
+	background-color: #f06;
+	float: left;
+}
+</style>
+<script type="text/javascript">//<![CDATA[
+
+
+
+
+function motion(event){
+	var gyroy = event.accelerationIncludingGravity.y;
+  document.getElementById("accelerometer").innerHTML = "Accelerometer: "
+    + (gyroy);
+	var gyroi = Math.round(gyroy*2);
+	header.style.backgroundPosition = gyroi + 'px 0';
+}
+
+  if(window.DeviceMotionEvent){
+    window.addEventListener("devicemotion", motion, false);
+  };
+  
+  
+  
+  
+
+var mie = (navigator.appName == "Microsoft Internet Explorer") ? true : false;
+
+if (!mie) {
+     document.captureEvents(Event.MOUSEMOVE);
+     document.captureEvents(Event.MOUSEDOWN);
+}
+
+var mie = (navigator.appName == "Microsoft Internet Explorer") ? true : false;
+
+if (!mie) {
+     document.captureEvents(Event.MOUSEMOVE);
+     document.captureEvents(Event.MOUSEDOWN);
+}
+
+document.onmousemove = function (e) {mousePos(e);};
+document.onmousedown = function (e) {mouseClicked();};
+
+var mouseClick;
+var keyClicked;
+
+var mouseX = 0;
+var mouseY = 0;
+
+function mousePos (e) {
+    if (!mie) {
+        mouseX = e.pageX; 
+        mouseY = e.pageY;
+    }
+    else {
+        mouseX = event.clientX + document.body.scrollLeft;
+        mouseY = event.clientY + document.body.scrollTop;
+    }
+
+    document.show.mouseXField.value = mouseX;
+    document.show.mouseYField.value = mouseY;
+
+}
+ 
+ 
+document.addEventListener('mousemove', function (event) {
+    if (window.event) { // IE fix
+        event = window.event;
+    }
+
+    // Grab the mouse's X-position.
+    var mousex = event.clientX;
+    var header = document.getElementById('header');
+    header.style.backgroundPosition = mousex/200-5 + 'px 0';
+}, false);
+</script>
+</head>	
+
+<body>
+<div id="header"><form name ="show">
+        <input type="text" name="mouseXField" value="0" size="6">Mouse X Position<br>
+        <input type="text" name="mouseYField" value="0" size="6">Mouse Y Position<br>
+</form>
+
+<div id="accelerometer"></div>
+
+</div>
+</body>
+</html>

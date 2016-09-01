@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	background-color: #fff;
+}
+p {
+	padding: 0 0 10px 0;
+}
+a {
+	color: #00f;
+	font-weight: bold;
+}
+a img {
+	text-decoration: none;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+#canvas1 {
+	background-image: url('images/1280x720canvas.jpg');
+	background-size: cover;
+	width: 320px;
+	height: 180px;
+	border: 1px solid #bbb;
+}
+#canvas2 {
+	background-image: url('images/1280x720canvas.jpg');
+	background-size: cover;
+	width: 320px;
+	height: 120px;
+	border: 1px solid #bbb;
+}
+#canvas3 {
+	background-image: url('images/1280x720canvas.jpg');
+	background-size: cover;
+	width: 180px;
+	height: 180px;
+	border: 1px solid #bbb;
+}
+.bckpos1 {
+	background-position: left top;
+}
+.bckpos2 {
+	background-position: center top;
+}
+.bckpos3 {
+	background-position: right top;
+}
+.bckpos4 {
+	background-position: left center;
+}
+.bckpos5 {
+	background-position: center center;
+}
+.bckpos6 {
+	background-position: right center;
+}
+.bckpos7 {
+	background-position: left bottom;
+}
+.bckpos8 {
+	background-position: center bottom;
+}
+.bckpos9 {
+	background-position: right bottom;
+}
+.canvasarrow {
+	width: 100px;
+	float: left;
+	clear: both;
+	padding: 20px;
+}
+.floatl {
+	float: left;
+	padding: 20px 0 20px 20px;
+}
+.container {
+	float: left;
+	padding: 20px;
+}
+.container p {
+	padding: 10px 0 0 0;
+}
+.greybck {
+	background-color: #eee;
+	overflow: hidden;
+}
+.greybck p {
+	font-size: 12px;
+}
+</style>
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+document.getElementById('getval').addEventListener('change', readURL, true);
+function readURL(){
+    var file = document.getElementById("getval").files[0];
+    var reader = new FileReader();
+    reader.onloadend = function(){
+        document.getElementById('canvas1').style.backgroundImage = "url(" + reader.result + ")";
+		document.getElementById('canvas2').style.backgroundImage = "url(" + reader.result + ")";
+		document.getElementById('canvas3').style.backgroundImage = "url(" + reader.result + ")";        
+    }
+    if(file){
+        reader.readAsDataURL(file);
+    }else{
+    }
+}
+}
+function allbuttonoff(){
+		document.getElementById('button1').src  = 'images/canvas1a.gif';
+		document.getElementById('button2').src  = 'images/canvas2a.gif';
+		document.getElementById('button3').src  = 'images/canvas3a.gif';
+		document.getElementById('button4').src  = 'images/canvas4a.gif';
+		document.getElementById('button5').src  = 'images/canvas5a.gif';
+		document.getElementById('button6').src  = 'images/canvas6a.gif';
+		document.getElementById('button7').src  = 'images/canvas7a.gif';
+		document.getElementById('button8').src  = 'images/canvas8a.gif';
+		document.getElementById('button9').src  = 'images/canvas9a.gif';
+		}		
+function canvasarrow1(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos1';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos1';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos1';
+		allbuttonoff();
+		document.getElementById('button1').src  = 'images/canvas1b.gif';   
+		}
+function canvasarrow2(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos2';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos2';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos2';
+		allbuttonoff();
+		document.getElementById('button2').src  = 'images/canvas2b.gif';
+		}
+function canvasarrow3(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos3';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos3';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos3';
+		allbuttonoff();
+		document.getElementById('button3').src  = 'images/canvas3b.gif';
+		}
+function canvasarrow4(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos4';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos4';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos4';
+		allbuttonoff();
+		document.getElementById('button4').src  = 'images/canvas4b.gif';
+		}
+function canvasarrow5(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos5';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos5';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos5';
+		allbuttonoff();
+		document.getElementById('button5').src  = 'images/canvas5b.gif';
+		}
+function canvasarrow6(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos6';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos6';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos6';
+		allbuttonoff();
+		document.getElementById('button6').src  = 'images/canvas6b.gif';
+		}
+function canvasarrow7(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos7';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos7';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos7';
+		allbuttonoff();
+		document.getElementById('button7').src  = 'images/canvas7b.gif';
+		}
+function canvasarrow8(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos8';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos8';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos8';
+		allbuttonoff();
+		document.getElementById('button8').src  = 'images/canvas8b.gif';
+		}
+function canvasarrow9(){
+		var e=document.getElementById('canvas1');
+		e.className='bckpos9';
+		var e=document.getElementById('canvas2');
+		e.className='bckpos9';
+		var e=document.getElementById('canvas3');
+		e.className='bckpos9';
+		allbuttonoff();
+		document.getElementById('button9').src  = 'images/canvas9b.gif';
+		}
+function resetimg() {
+    document.getElementById('canvas1').style.backgroundImage = "url('images/1280x720canvas.jpg')";
+	document.getElementById('canvas2').style.backgroundImage = "url('images/1280x720canvas.jpg')";
+	document.getElementById('canvas3').style.backgroundImage = "url('images/1280x720canvas.jpg')";
+}
+	//]]> 
+</script>
+</head>
+
+<body>
+<div class="greybck">
+  <div class="container">
+    <div id="canvas1" class="bckpos6"></div>
+    <p>1280x720 (16:9)</p>
+  </div>
+  <div class="container">
+    <div id="canvas2" class="bckpos6"></div>
+    <p>1280x480 (8:3)</p>
+  </div>
+  <div class="container">
+    <div id="canvas3" class="bckpos6"></div>
+    <p>480x480 (1:1)</p>
+  </div>
+</div>
+<div class="canvasarrow">
+  <p>Anchor image</p>
+  <p><a href="javascript:canvasarrow1()"><img src="images/canvas1a.gif" alt="" width="30" height="30" id="button1"/></a><a href="javascript:canvasarrow2()"><img src="images/canvas2a.gif" alt="" width="30" height="30" id="button2"/></a><a href="javascript:canvasarrow3()"><img src="images/canvas3a.gif" alt="" width="30" height="30" id="button3"/></a><a href="javascript:canvasarrow4()"><img src="images/canvas4a.gif" alt="" width="30" height="30" id="button4"/></a><a href="javascript:canvasarrow5()"><img src="images/canvas5a.gif" alt="" width="30" height="30" id="button5"/></a><a href="javascript:canvasarrow6()"><img src="images/canvas6b.gif" alt="" width="30" height="30" id="button6"/></a><a href="javascript:canvasarrow7()"><img src="images/canvas7a.gif" alt="" width="30" height="30" id="button7"/></a><a href="javascript:canvasarrow8()"><img src="images/canvas8a.gif" alt="" width="30" height="30" id="button8"/></a><a href="javascript:canvasarrow9()"><img src="images/canvas9a.gif" alt="" width="30" height="30" id="button9"/></a></p>
+</div>
+<div class="floatl">
+  <p>Choose a different image</p>
+  <input type='file' id='getval' style="color:transparent;"/>
+</div>
+<div class="floatl">
+<p>Default image</p>
+  <button onclick="javascript:resetimg()">Reset image</button>
+</div>
+</body>
+</html>

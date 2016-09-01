@@ -1,0 +1,625 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Collaborate</title>
+<style type="text/css">
+@font-face {
+	font-family: 'neuzeit';
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot');
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot?#iefix') format('embedded-opentype'), url('fonts/NeuzeitforPlymouthW04-Blk.woff') format('woff'), url('fonts/NeuzeitforPlymouthW04-Blk.ttf') format('truetype'), url('fonts/NeuzeitforPlymouthW04-Blk.svg#neuzit') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-light';
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-light-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-light-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-light-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-regular';
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-regular-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-regular-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-regular-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-bold';
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-bold-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-bold-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-bold-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-italic';
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-italic-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-italic-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-italic-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7k-webfont.eot');
+	src: url('fonts/icon7k-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7k-webfont.woff') format('woff'), url('fonts/icon7k-webfont.ttf') format('truetype'), url('fonts/icon7k-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #666;
+}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern" 1;
+	word-wrap: break-word;
+}
+body {
+	font-family: 'neuzeit-regular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #222;
+	margin: 0;
+}
+h1 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+}
+h2 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+}
+.neuzeit {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #666;
+	margin: 0;
+}
+strong {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+}
+em {
+	font-family: 'neuzeit-italic', Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, strong, em {
+	font-weight: normal;
+	font-style: normal;
+}
+a {
+	color: #08c;
+	text-decoration: underline;
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+}
+/*a:visited {
+	color: #c0f;
+	text-decoration: underline;
+}*/
+img, img a {
+	vertical-align: middle;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td, th {
+	padding: 6px;
+	text-align: left;
+	border: 1px solid #ccc;
+	vertical-align: top;
+	width: 0%;
+}
+.calendar td, .calendar th {
+	text-align: center;
+}
+.iconcell td, .iconcell th {
+	text-align: center;
+	background-color: #f3f3f3;
+}
+.iconfont td, .iconfont th {
+	text-align: center;
+	background-color: #fff;
+}
+td a {
+	display: block;
+}
+td em {
+	font-style: normal;
+	color: #666;
+	font-size: 14px;
+	display: block;
+}
+th {
+	font-family: 'neuzeit-bold';
+	font-weight: normal;
+}
+.weekend {
+	background-color: #f3f3f3;
+}
+.previous, .next {
+	color: #aaa;
+}
+.current {
+	background: #666;
+}
+.current, .current a {
+	color: #fff;
+}
+.alternate tr:nth-child(even) {
+	background-color: #efefef;
+}
+.alternate tr:nth-child(odd) {
+	background-color: #fff;
+}
+.widtha {
+	margin: 10px;
+	padding-bottom: 10px;
+}
+.buttonstyle {
+	padding: 10px;
+	background-color: #08c;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 0 20px 10px 0;
+	min-width: 170px;
+}
+.ucas {
+	padding: 10px;
+	background-color: #e42438;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 0 20px 10px 0;
+	min-width: 170px;
+}
+.logotype1 {
+	color: #f06;
+}
+.cellstyle1 {
+	width: 90px;
+}
+.bordertop {
+	border-top: 1px solid #ccc;
+	width: 100%;
+	margin-top: 20px;
+	padding-top: 10px;
+	clear: both;
+}
+ul.nav1 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #222;
+	overflow: hidden;
+}
+.nav1 li {
+	display: inline;
+	float: left;
+	margin-right: 10px;
+}
+.nav1 li a {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+.nav1 li a:hover {
+	text-decoration: underline;
+}
+.iconcell {
+	background-color: #f3f3f3;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+<ul class="nav1">
+  <li><a href="#">Courses<br>
+    &amp; study</a></li>
+  <li><a href="#">Student<br>
+    life</a></li>
+  <li><a href="#">Your<br>
+    university</a></li>
+  <li><a href="#">International<br>
+    Plymouth</a></li>
+  <!--<li><a href="#">Research<br>
+    &amp; expertise</a></li>
+  <li><a href="#">Business<br>
+    &amp; partners</a></li>
+  <li><a href="#">Alumni<br>
+    &amp; friends</a></li>
+  <li><a href="#">About<br>
+    us</a></li>-->
+</ul>
+<div class="widtha">
+  <p class="neuzeit"><span class="logotype1">logotype</span><br>
+    with<br>
+    plymouth<br>
+    university</p>
+  <p class="bordertop">An example of paragraph text:<br>
+    ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789<br>
+    (62 characters optimal line length) </p>
+  <p><strong>An example of strong text</strong></p>
+  <p><a href="#">An example of a link</a></p>
+  <p><em>An example of emphasis text</em></p>
+  <h1>An example of h1 text</h1>
+  <h2>An example of h2 text</h2>
+  <p class="bordertop">An example of calendar styling</p>
+  <table class="calendar">
+    <thead>
+      <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th class="weekend">Sat</th>
+        <th class="weekend">Sun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="previous">30
+          <div class="day"></div></td>
+        <td class="previous">31
+          <div class="day"></div></td>
+        <td>1
+          <div class="day"></div></td>
+        <td>2
+          <div class="day"></div></td>
+        <td>3
+          <div class="day"></div></td>
+        <td class="weekend">4
+          <div class="day"></div></td>
+        <td class="weekend">5
+          <div class="day"></div></td>
+      </tr>
+      <tr>
+        <td class="current"><a href="#">6</a>
+          <div class="day"></div></td>
+        <td><a href="#">7</a>
+          <div class="day"></div></td>
+        <td><a href="#">8</a>
+          <div class="day"></div></td>
+        <td><a href="#">9</a>
+          <div class="day"></div></td>
+        <td><a href="#">10</a>
+          <div class="day"></div></td>
+        <td class="weekend">11
+          <div class="day"></div></td>
+        <td class="weekend">12
+          <div class="day"></div></td>
+      </tr>
+      <tr>
+        <td>13
+          <div class="day"></div></td>
+        <td>14
+          <div class="day"></div></td>
+        <td>15
+          <div class="day"></div></td>
+        <td>16
+          <div class="day"></div></td>
+        <td>17
+          <div class="day"></div></td>
+        <td class="weekend">18
+          <div class="day"></div></td>
+        <td class="weekend">19
+          <div class="day"></div></td>
+      </tr>
+      <tr>
+        <td>20
+          <div class="day"></div></td>
+        <td>21
+          <div class="day"></div></td>
+        <td>22
+          <div class="day"></div></td>
+        <td>23
+          <div class="day"></div></td>
+        <td>24
+          <div class="day"></div></td>
+        <td class="weekend">25
+          <div class="day"></div></td>
+        <td class="weekend">26
+          <div class="day"></div></td>
+      </tr>
+      <tr>
+        <td>27
+          <div class="day"></div></td>
+        <td>28
+          <div class="day"></div></td>
+        <td>29
+          <div class="day"></div></td>
+        <td>30
+          <div class="day"></div></td>
+        <td>31
+          <div class="day"></div></td>
+        <td class="weekend next">1
+          <div class="day"></div></td>
+        <td class="weekend next">2
+          <div class="day"></div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="bordertop">An example of a table with alternating rows</p>
+  <p>
+  <table class="alternate">
+    <tr>
+      <td class="cellstyle1">Course code</td>
+      <td><strong>IMS536/IMS553</strong></td>
+    </tr>
+    <tr>
+      <td>Credits</td>
+      <td><strong>20/30</strong></td>
+    </tr>
+    <tr>
+      <td>FHEQ level</td>
+      <td><strong>7 (postgraduate)</strong></td>
+    </tr>
+    <tr>
+      <td>Course type</td>
+      <td><strong>Part time</strong></td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td><strong>1 year</strong></td>
+    </tr>
+    <tr>
+      <td>Dates</td>
+      <td><strong>Thursday 21 and 28 January 2016; Thursday 4, 11, 18 and 25 February 2016; and Thursday 3 and 10 March 2016.</strong></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td><strong>Distance learning</strong></td>
+    </tr>
+    <tr>
+      <td>Fees</td>
+      <td><strong>20 credits - £628<br>
+        30 credits - £942<br>
+        Funding not available</strong></td>
+    </tr>
+  </table>
+  <p class="bordertop">An example of buttons</p>
+  <p><a href="#" class="ucas">Apply via UCAS</a><a href="#" class="buttonstyle">Admissions enquiry</a></p>
+  <p class="bordertop">An example of icons</p>
+  <!--<p class="iconfont">!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuwxyz</p>-->
+  <table>
+    <tbody>
+      <tr class="iconcell">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+      </tr>
+      <tr class="iconfont">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+      </tr>
+      <tr class="iconcell">
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+      </tr>
+      <tr class="iconcell">
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+      </tr>
+      <tr class="iconfont">
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+      </tr>
+      <tr class="iconcell">
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconfont">
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconcell">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+      </tr>
+      <tr class="iconfont">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>&nbsp;</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+      </tr>
+      <tr class="iconcell">
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+      </tr>
+      <tr class="iconfont">
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>&nbsp;</td>
+        <td>r</td>
+        <td>&nbsp;</td>
+        <td>t</td>
+        <td>u</td>
+        <td>&nbsp;</td>
+        <td>w</td>
+        <td>&nbsp;</td>
+        <td>y</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

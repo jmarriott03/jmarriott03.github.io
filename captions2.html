@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<script type="text/javascript" src="./scripts/css3-mediaqueries.js"></script>
+<style type="text/css">
+#style1 {
+	background-color: #F0F;
+}
+#style1 .container-a {
+	background-color: #F00;
+	border: 1px solid #fff;
+}
+#style1 .container-full {
+	border: 1px solid #000;
+}
+#style2, #style2 .container-a, #style2 .container-b, #style2 .container-c, #style2 .container-d, #style2 .container-e {
+	background-color: #fff;
+}
+#style2 .black {
+	background-color: #282828 !important;
+	color: #fff;
+	overflow: hidden;
+}
+#style2 .grey {
+	background-color: #efefef !important;
+	overflow: hidden;
+}
+#style2 .darkgrey {
+	background-color: #ccc !important;
+	overflow: hidden;
+}
+#style2 .white {
+	background-color: #fff !important;
+	color: #000;
+	overflow: hidden;
+}
+* {
+	margin: 0 auto;
+}
+@font-face {
+	font-family: 'icon-webfont';
+	src: url('fonts/icon-webfont.eot');
+	src: url('fonts/icon-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon-webfont.woff') format('woff'), url('fonts/icon-webfont.ttf') format('truetype'), url('fonts/icon-webfont.svg#source-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit';
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot');
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot?#iefix') format('embedded-opentype'), url('fonts/NeuzeitforPlymouthW04-Blk.woff') format('woff'), url('fonts/NeuzeitforPlymouthW04-Blk.ttf') format('truetype'), url('fonts/NeuzeitforPlymouthW04-Blk.svg#neuzit') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-light';
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-light-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-light-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-light-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-regular';
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-regular-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-regular-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-regular-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-bold';
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-bold-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-bold-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-bold-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-italic';
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-italic-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-italic-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-italic-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html, body, form, fieldset, p, div, h2, h3, h3, h4, h5, h6 {
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern" 1;
+}
+body {
+	font-family: 'neuzeit-regular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+p, h1, h2, h3 {
+	padding: 0;
+	margin: 12px;
+	font-weight: normal;
+}
+h2 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: normal;
+}
+h3 {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: normal;
+}
+strong {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+a {
+	color: #08c;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.container-b, .container-c {
+	float: left;
+}
+.container-full {
+	width: 100%;
+	float: left;
+}
+.container-a {
+	overflow: hidden;
+	position: relative;
+}
+.container-b {
+	background-color: #F90;
+}
+.hero {
+	float: left;
+	width: 100%;
+	background-width: 100%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.hero a, .boxb a {
+	color: #fff;
+}
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p, .hero strong, .hero em {
+	color: #fff;
+}
+.tinttl {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+}
+.tinttr {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	right: 0;
+	float: left;
+}
+.tintbl {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+}
+.tintbr {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: left;
+}
+.full {
+	width: 100%;
+}
+ @media screen and (max-width: 639px) {
+.container-a {
+	min-width: 320px;
+}
+.container-b, .container-c, .container-d, .container-e {
+	min-width: 100%;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	position: relative;
+	width: 100%;
+	background-color: #282828;
+}
+.hero h1 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: none;
+	font-weight: normal;
+}
+}
+ @media screen and (min-width: 640px) {
+.container-a {
+	max-width: 900px;
+}
+.container-b {
+	width: 66.9%;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	max-width: 49.9%;
+}
+.hero h1 {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 48px;
+	line-height: 36px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+}
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function keyscroll(e){
+var evtobj=window.event? event : e
+var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
+var actualkey=String.fromCharCode(unicode)
+if (actualkey=="2") back1();
+if (actualkey=="1") back2();
+}
+
+document.onkeypress=keyscroll
+
+function back1(){
+document.getElementsByTagName('body')[0].id="style1"}
+
+function back2(){
+document.getElementsByTagName('body')[0].id="style2"}
+
+
+/* ]]> */
+</script>
+</head>
+
+<body id="style2">
+<div class="container-full">
+  <div class="container-a">
+    <p><img src="images/succeed-with-100.gif" width="171" height="100" alt=""></p>
+  </div>
+</div>
+<div class="container-full">
+  <div class="container-a">
+    <div class="hero"><img src="images/1280x720.jpg" class="full" alt="">
+      <div class="tinttl">
+        <h1>Hero image</h1>
+        <h3>1280w X 720d<br>
+        (900w X 506d actual)<br>
+        16:9
+        </h3>
+        <p><a href="https://www.plymouth.ac.uk/style-guide/brand/#photography">https://www.plymouth.ac.uk/style-guide/brand/#photography</a></p>
+      </div>
+    </div>
+    <div class="container-b black">
+      <p>Biology is a rapidly moving science, with new discoveries every day. Our Biological Sciences course puts you on the front line. Covering molecular and cellular biology, microbiology, plant, animal and human biology as well as ecology and biodiversity, you'll build your knowledge of the science of life.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

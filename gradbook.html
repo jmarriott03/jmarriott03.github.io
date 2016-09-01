@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Gradbook</title>
+<style type="text/css">
+@font-face {
+	font-family: 'neuzeit';
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot');
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot?#iefix') format('embedded-opentype'), url('fonts/NeuzeitforPlymouthW04-Blk.woff') format('woff'), url('fonts/NeuzeitforPlymouthW04-Blk.ttf') format('truetype'), url('fonts/NeuzeitforPlymouthW04-Blk.svg#neuzit') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-light';
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-light-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-light-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-light-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-regular';
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-regular-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-regular-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-regular-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-bold';
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-bold-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-bold-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-bold-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-italic';
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-italic-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-italic-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-italic-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern" 1;
+}
+body {
+	font-family: 'neuzeit-regular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
+h1 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+h2 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+h3 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+h4 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+h5 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+h6 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+}
+.neuzeit {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #666;
+}
+strong {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+}
+em {
+	font-family: 'neuzeit-italic', Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, strong, em {
+	font-weight: normal;
+}
+a {
+	color: #08c;
+	text-decoration: underline;
+}
+/*a:visited {
+	color: #c0f;
+	text-decoration: underline;
+}*/
+img, img a {
+	vertical-align: middle;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 10px 0;
+	padding: 10px;
+}
+td {
+	padding: 6px;
+	text-align: left;
+	border: 1px solid #333;
+}
+th {
+	padding: 6px;
+	text-align: left;
+	border: 1px solid #333;
+	background-color: #333;
+	color: #fff;
+}
+tr:nth-child(even) {
+	background-color: #efefef;
+}
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+.widtha p {
+	width: 600px;
+}
+.widtha {
+	margin: 24px;
+}
+.borderbottom {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 12px;
+}
+.button {
+	padding: 6px;
+	background-color: #08c;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	margin: 24px 6px 0 0;
+}
+.color1 {
+	color: #f06;
+}
+.staffquote {
+	padding: 0 0 0 62px;
+	position: relative;
+	max-width: 600px;
+	min-width: 240px;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin: 6px 0 0 0;
+}
+</style>
+</head>
+
+<body>
+<div class="widtha">
+  <h1 class="neuzeit"><span class="color1">Gradbook</span><br>
+    with<br>
+    Plymouth<br>
+    University</h1>
+  <div class="borderbottom"></div>
+  <p><a href="#">My students</a> > Student profile</p>
+  <h2>Student profile</h2>
+  <div class="staffquote">
+    <p><a href="#"><strong><img src="images/people5.jpg" alt="">Dr Julian Brigstocke</strong></a><br>
+      Student Ref: <strong>12345678</strong><br>
+      Programme Ref: <strong>3490 - PhD Psychology</strong><br>
+      Programme Status: <strong>L/ Live</strong><br>
+      Stage Year: <strong>2</strong><br>
+      Stage Status: <strong>L/ Live</strong></p>
+  </div>
+  <div class="borderbottom"></div>
+  <h2>Deadlines</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th>Progression Stage</th>
+      <th>Outcome</th>
+      <th>Due Date</th>
+      <th colspan="3">Received/Submitted</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>36 month FT / 48 month PT final meeting</td>
+      <td>With Staff - Francesca Niedzielski</td>
+      <td>31/12/2016</td>
+      <td></td>
+      <td><img src="images/cross32.png" width="16" height="16" alt=""></td>
+      <td><img src="images/magnify32.png" width="16" height="16" alt=""></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>33 month FT / 44 month PT</td>
+      <td></td>
+      <td>30/09/2016</td>
+      <td></td>
+      <td><img src="images/dash32.png" width="16" height="16" alt=""></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><img src="images/arrow32.png" width="16" height="12" alt=""></td>
+      <td>AM 2015-2016 from student <a href="#">View form</a></td>
+      <td>Received</td>
+      <td>31/07/2016</td>
+      <td>11/12/2015</td>
+      <td><img src="images/tick32.png" width="16" height="16" alt=""></td>
+      <td><img src="images/warning32.png" width="16" height="14" alt="a"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>30 month FT / 40 month PT</td>
+      <td></td>
+      <td>30/06/2016</td>
+      <td></td>
+      <td><img src="images/tick32.png" width="16" height="16" alt=""></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>AM 2015-2016 from student <a href="#">View form</a></td>
+      <td></td>
+      <td>01/04/2016</td>
+      <td></td>
+      <td><img src="images/tick32.png" width="16" height="16" alt=""></td>
+      <td></td>
+    </tr>
+  </table>
+  <p><a href="#" class="button">Add event</a></p>
+  <div class="borderbottom"></div>
+  <h2>Leave Application</h2>
+  <p>Status: <strong>Approved</strong></p>
+  <p>Please use this form to request the approval of Annual Leave.</p>
+  <div class="borderbottom"></div>
+  <p>All PGR students have an allowance of 8 weeks leave per year, which includes public bank holidays. This form should be completed BEFORE the annual leave has taken place and before you leave the University.</p>
+  <p>The Compliance Team must be kept informed when you are on leave, so we can assist you in maintaining your visa status and so we can explain your situation to UKVI officers if you are stopped at the UK border. You must inform us if the period of absence stated on this form becomes longer. Extenuating circumstance procedures should still be followed as per usual procedures.</p>
+  <p>It is your responsibility to ensure this information reaches your Director of Studies and the UKVI Compliance Team, by completing this form and your Director of Studies approving it. If we have no record of why you are not here your enrolment and visa may be cancelled. The UKVI Compliance Team will assess the information provided, and will inform the student and Faculty of any implications for the student's visa and ability to study in the UK.</p>
+</div>
+</body>
+</html>

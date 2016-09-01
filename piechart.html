@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+window.onload = function() {
+var canvas = document.getElementById("can");
+var ctx = canvas.getContext("2d");
+var lastend = 0;
+var data = [60, 30, 10]; // If you add more data values make sure you add more colors
+var myTotal = 0; // Automatically calculated so don't touch
+var myColor = ['#666', '#999', '#ccc']; // Colors of each slice
+
+for (var e = 0; e < data.length; e++) {
+  myTotal += data[e];
+}
+
+for (var i = 0; i < data.length; i++) {
+  ctx.fillStyle = myColor[i];
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, canvas.height / 2);
+  // Arc Parameters: x, y, radius, startingAngle (radians), endingAngle (radians), antiClockwise (boolean)
+  ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, lastend, lastend + (Math.PI * 2 * (data[i] / myTotal)), false);
+  ctx.lineTo(canvas.width / 2, canvas.height / 2);
+  ctx.fill();
+  lastend += Math.PI * 2 * (data[i] / myTotal);
+}
+};
+</script>
+
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+hml, body, div, canvas {
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+h2 {
+	font-family: sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	padding: 20px;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+p {
+	padding: 20px;
+}
+#can {
+	background-color: #eee;
+	width: 100%;
+	max-width: 620px;
+	border: 20px solid #f06;
+	box-sizing: border-box;
+}
+</style>
+</head>
+
+<body>
+<canvas id="can" width="1000" height="1000"></canvas><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+</html>

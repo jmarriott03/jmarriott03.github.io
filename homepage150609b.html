@@ -1,0 +1,591 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<script type="text/javascript" src="./scripts/css3-mediaqueries.js"></script>
+<style type="text/css">
+#style1 {
+	background-color: #F0F;
+}
+#style1 .container-a {
+	background-color: #F00;
+	border: 1px solid #fff;
+}
+#style1 .container-full {
+	border: 1px solid #000;
+}
+#style2, #style2 .container-a, #style2 .container-b, #style2 .container-c, #style2 .container-d, #style2 .container-e {
+	background-color: #fff;
+}
+#style2 .black {
+	background-color: #282828 !important;
+	color: #fff;
+	overflow: hidden;
+}
+#style2 .grey {
+	background-color: #efefef !important;
+	overflow: hidden;
+}
+#style2 .darkgrey {
+	background-color: #ccc !important;
+	overflow: hidden;
+	color: #000;
+}
+#style2 .container-full.black .container-a.black .container-c.darkgrey .footerlist li a, #style2 .container-full.black .container-a.black .container-c.darkgrey .footerlist li a .icon {
+	color: #000;
+}
+#style2 .white {
+	background-color: #fff !important;
+	color: #000;
+	overflow: hidden;
+}
+* {
+	margin: 0 auto;
+}
+@font-face {
+	font-family: 'icon-webfont';
+	src: url('fonts/icon-webfont.eot');
+	src: url('fonts/icon-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon-webfont.woff') format('woff'), url('fonts/icon-webfont.ttf') format('truetype'), url('fonts/icon-webfont.svg#source-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit';
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot');
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot?#iefix') format('embedded-opentype'), url('fonts/NeuzeitforPlymouthW04-Blk.woff') format('woff'), url('fonts/NeuzeitforPlymouthW04-Blk.ttf') format('truetype'), url('fonts/NeuzeitforPlymouthW04-Blk.svg#neuzit') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-light';
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-light-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-light-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-light-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-regular';
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-regular-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-regular-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-regular-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-bold';
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-bold-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-bold-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-bold-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-italic';
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-italic-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-italic-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-italic-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html, body, form, fieldset, p, div, h2, h3, h3, h4, h5, h6 {
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern" 1;
+}
+body {
+	font-family: 'neuzeit-regular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+#style2 .container-full .container-a .hero .tinttl h1 {
+	color: #c20e1a;
+}
+table {
+	float: left;
+	margin: 12px;
+}
+p, h1, h2, h3 {
+	padding: 0;
+	margin: 12px;
+	font-weight: normal;
+}
+h2 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: normal;
+}
+h3 {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: normal;
+}
+strong {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+a {
+	color: #08c;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.icon {
+	font-family: 'icon-webfont', Arial, Helvetica, sans-serif;
+	display: inline;
+	font-size: 20px;
+	color: #fff;
+	line-height: 18px;
+}
+.icon:before {
+	content: attr(data-icon);
+}
+.hor-zebra {
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #000;
+	margin-bottom: 24px;
+	clear: both;
+	float: left;
+}
+.hor-zebra th {
+	padding: 6px;
+	border: 1px solid #000;
+}
+.hor-zebra td {
+	padding: 6px;
+	border: 1px solid #000;
+}
+.hor-zebra .odd {
+	background: #ccc;
+}
+.hor-zebra .blacktitle {
+	background: #000;
+	color: #fff;
+}
+.bbot {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #ccc;
+}
+.container-b, .container-c, .container-d {
+	float: left;
+}
+.container-full {
+	width: 100%;
+	float: left;
+}
+.container-a {
+	overflow: hidden;
+	position: relative;
+}
+.container-b {
+	background-color: #F90;
+}
+.container-c {
+	background-color: #FF0;
+}
+.container-d {
+	background-color: #0F0;
+}
+.container-e {
+	background-color: #0FF;
+}
+ul {
+	padding: 12px 12px 12px 32px;
+}
+ul.nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.nav li {
+	display: inline;
+	padding: 12px;
+	float: left;
+	margin-right: 12px;
+}
+.nav li, .nav li a {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+}
+.nav li a:hover {
+	text-decoration: underline;
+}
+.floatl {
+	float: left;
+}
+.floatr {
+	float: right;
+}
+.textr {
+	text-align: right;
+}
+.hero {
+	float: left;
+	width: 100%;
+	background-width: 100%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.hero a, .boxb a {
+	color: #fff;
+}
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p, .hero strong, .hero em {
+	color: #fff;
+}
+.tinttl {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+}
+.tinttr {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	right: 0;
+	float: left;
+}
+.tintbl {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+}
+.tintbr {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: left;
+}
+.full {
+	width: 100%;
+}
+.max300 {
+	max-width: 300px;
+}
+.floatlimage {
+	float: left;
+	padding: 0 12px 0 0;
+}
+.picola {
+	color: #3CBEB4;
+}
+.picolb {
+	color: #58595B;
+}
+.padding12 {
+	padding: 12px;
+}
+.padtop6 {
+	padding-top: 6px;
+}
+.dblock {
+	display: block;
+}
+.footerlist li a {
+	padding: 12px 12px 11px 12px;
+	display: block;
+	border-bottom: 1px solid #444;
+	margin-right: 24px;
+	text-decoration: none;
+	color: #fff;
+}
+.footerlist li a:hover {
+	text-decoration: underline;
+}
+ul.footerlist {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.facebook {
+	font-size: 24px;
+	text-decoration: none;
+	color: #0C6;
+	padding: 12px;
+}
+.facebook, .twitter, .google, .youtube, .instagram, .linkedin, .pinterest {
+	font-size: 20px;
+	text-decoration: none;
+	padding: 12px;
+}
+.facebook {
+	color: #3b5998;
+}
+.twitter {
+	color: #55acee;
+}
+.google {
+	color: #db4437;
+}
+.youtube {
+	color: #c4302b;
+}
+.instagram {
+	color: #3f729b;
+}
+.linkedin {
+	color: #0e76a8;
+}
+.pinterest {
+	color: #c8232c;
+}
+.bordertop {
+	border-top: 10px solid #ccc;
+	margin-top: 20px;
+}
+ @media screen and (max-width: 639px) {
+.container-a {
+	min-width: 320px;
+}
+.container-b, .container-c, .container-d, .container-e {
+	min-width: 100%;
+}
+.nav {
+	display: none;
+}
+.desktop {
+	display: none;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	position: relative;
+	width: 100%;
+	background-color: #282828;
+}
+.hero h1 {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: none;
+	font-weight: normal;
+}
+.footerlist li a {
+	margin-right: 0;
+}
+.clearboth {
+	clear: both;
+}
+}
+ @media screen and (min-width: 640px) and (max-width: 939px) {
+.container-b {
+	width: 49.9%;
+	float: left;
+}
+.container-c {
+	width: 49.9%;
+	float: left;
+}
+.container-d {
+	width: 49.9%;
+}
+.container-e {
+	width: 66.9%;
+}
+.mobile {
+	display: none;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	max-width: 49.9%;
+}
+.hero h1 {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	line-height: 24px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+}
+ @media screen and (min-width: 940px) {
+.container-a {
+	max-width: 940px;
+}
+.container-b {
+	width: 66.9%;
+}
+.container-c {
+	width: 33%;
+}
+.container-d {
+	width: 49.9%;
+}
+.container-e {
+	width: 66.9%;
+	max-width: 640px;
+}
+.mobile {
+	display: none;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	max-width: 49.9%;
+}
+.hero h1 {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 48px;
+	line-height: 36px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+}
+#style2 .container-full.white .container-a.white .container-c.white.padtop6 p img {
+	width: 100%;
+}
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function keyscroll(e){
+var evtobj=window.event? event : e
+var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
+var actualkey=String.fromCharCode(unicode)
+if (actualkey=="2") back1();
+if (actualkey=="1") back2();
+}
+
+document.onkeypress=keyscroll
+
+function back1(){
+document.getElementsByTagName('body')[0].id="style1"}
+
+function back2(){
+document.getElementsByTagName('body')[0].id="style2"}
+
+
+/* ]]> */
+</script>
+</head>
+
+<body id="style2">
+<div class="container-full">
+  <div class="container-a">
+    <p class="floatr"><img src="images/search-box.gif" width="123" height="19" alt="" class="desktop"> <img src="images/magnify2.gif" alt="" width="48" height="16"></p>
+    <p><img src="images/succeed-with-red.gif" width="170" height="100" alt=""></p>
+  </div>
+</div>
+<div class="container-full black">
+  <div class="container-a black">
+    <p class="mobile"><img src="images/burger.png" width="16" height="16" alt=""></p>
+    <ul class="nav">
+      <li><a href="#">Courses </a></li>
+      <li><a href="#">International </a></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container-full grey">
+  <div class="container-a grey">
+    <p>Home > <a href="#">What's on</a> > <a href="#">HOT ’15 - Art and Design Degree Show</a></p>
+  </div>
+</div>
+<div class="container-full">
+  <div class="container-a">
+    <div class="hero"><img src="images/hero940x400v3.jpg" class="full" alt="HOT'15 - Art and Design Degree Show">
+      <div class="tinttl">
+        <p><a href="#">Immerse yourself in a celebration of highly creative talent and enterprise; the culmination of study and practice at Plymouth&nbsp;University.</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-full darkgrey bordertop">
+  <div class="container-a darkgrey">
+    <div class="container-c grey">
+      <div class="darkgrey"><a href="#"><img src="images/p-1479825.jpg"  class="full" alt=""></a>
+        <p><a href="#">Lorem ipsum dolor sit</a> amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+      </div>
+    </div>
+    <div> </div>
+    <div class="container-b grey">
+      <h3>Ut enim ad minim veniam</h3>
+      <p><a href="#">Quis nostrud exercitation ullamco</a> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <a href="#">officia deserunt mollit anim id, sunt in culpa qui officia deserunt mollit anim id est laborum.</a></p>
+    </div>
+  </div>
+</div>
+<div class="container-full">
+  <div class="container-a">
+    <h3>What's on</h3>
+    <div class="container-c"><img src="images/p-1526622.jpg"  class="full" alt="">
+      <p><a href="#">Lorem ipsum dolor sit amet</a></p>
+    </div>
+    <div class="container-c"><a href="#"><img src="images/p-1530143.jpg"  class="full" alt=""></a>
+      <p><a href="#">Sed do eiusmod tempor incididunt</a></p>
+    </div>
+    <div class="container-c"><a href="#"><img src="images/p-1526207.jpg"  class="full" alt=""></a>
+      <p><a href="#">Consectetur adipisicing elit</a></p>
+    </div>
+  </div>
+</div>
+<div class="container-full grey">
+  <div class="container-a grey">
+    <h3>Showcase</h3>
+    <div class="container-c grey"><img src="images/p-1332963.jpg"  class="full" alt="">
+      <p><a href="#">Lorem ipsum dolor sit amet</a></p>
+    </div>
+    <div class="container-c grey"><a href="#"><img src="images/p-1534017.jpg"  class="full" alt=""></a>
+      <p><a href="#">Sed do eiusmod tempor incididunt</a></p>
+    </div>
+    <div class="container-c grey"><a href="#"><img src="images/p-1524606.jpg"  class="full" alt=""></a>
+      <p><a href="#">Consectetur adipisicing elit</a></p>
+    </div>
+  </div>
+</div>
+<div class="container-full white">
+  <div class="container-a white">
+    <div class="container-b white">
+      <p><strong>Tem dates</strong> | Summer term | Week 42</p>
+    </div>
+    <div class="container-c white padtop6">
+      <p><img src="images/social-media.png" alt=""></p>
+    </div>
+  </div>
+</div>
+<div class="container-full black">
+  <div class="container-a black">
+    <div class="container-c black">
+      <ul class="footerlist">
+        <li><a href="#">Courses &amp; study</a></li>
+        <li><a href="#">Student life</a></li>
+        <li><a href="#">International Plymouth</a></li>
+        <li><a href="#">Research &amp; expertise</a></li>
+      </ul>
+    </div>
+    <div class="container-c black">
+      <ul class="footerlist">
+        <li><a href="#">International students</a></li>
+        <li><a href="#">Business &amp; partners</a></li>
+        <li><a href="#">Your university</a></li>
+      </ul>
+    </div>
+    <div class="container-c darkgrey">
+      <p><strong>Plymouth University</strong><br>
+        Drake Circus<br>
+        Plymouth<br>
+        Devon<br>
+        PL4 8AA</p>
+      <ul class="footerlist">
+        <li><a href="#"><span class="icon">0 </span>+44 (0)1752 600600</a></li>
+        <li><a href="#"><span class="icon">U </span>Map &amp; directions</a></li>
+        <li><a href="#"><span class="icon">X </span>Visit us</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

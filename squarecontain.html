@@ -1,0 +1,546 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Genetic Science for Health Professionals</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	background-color: #fff;
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+h3 {
+	font-size: 18px;
+	line-height: 24px;
+}
+h2, h3, p {
+	padding: 0 20px 10px 20px;
+	float: left;
+	clear: both;
+}
+ul {
+	padding: 0 20px 0 40px;
+	float: left;
+	clear: both;
+}
+li {
+	padding: 0 0 10px 0;
+}
+a {
+	color: #00f;
+	font-weight: bold;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.box {
+	overflow: hidden;
+	float: left;
+	background: rgba(256,256,256,0.9);
+	padding: 20px 0 0 0;
+	width: 50%;
+}
+.box2 {
+	padding: 20px 0 0 0;
+	max-width: 640px;
+	overflow: hidden;
+}
+.wrapper {
+	max-width: 1024px;
+	overflow: hidden;
+}
+.line {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 10px;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+	margin: 10px 20px;
+	padding: 10px;
+	clear: both;
+}
+td {
+	padding: 5px;
+	text-align: left;
+	border: 1px solid #666;
+}
+.fullb {
+	overflow: hidden;
+	background: url(images/640x640e.jpg) no-repeat top right #222;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	width: 100%;
+}
+.buttonstyle {
+	padding: 10px;
+	background-color: #08c;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 10px 20px 10px 0;
+	min-width: 170px;
+}
+.ucas {
+	padding: 10px;
+	background-color: #e42438;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 10px 20px 10px 0;
+	min-width: 170px;
+}
+tr:nth-child(even) {
+	background-color: #efefef;
+}
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+.topstrap {
+	width: 100%;
+	background-color: #999999;
+	overflow: hidden;
+}
+.logo {
+	padding: 20px;
+}
+.staffquote {
+	padding: 0 0 10px 65px;
+	position: relative;
+	max-width: 600px;
+	min-width: 240px;
+	clear: both;
+	float: left;
+	display: block;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin: 5px 10px 0 20px;
+}
+.backswatch1 {
+	background-color: #eee;
+	padding: 10px;
+	margin: 0 20px 10px 20px;
+}
+ul.nav {
+	margin: 0;
+	padding: 0 0 0 10px;
+	list-style-type: none;
+	background-color: #222;
+	max-width: 1260px;
+	overflow: hidden;
+}
+.nav li {
+	display: inline;
+	padding: 10px;
+	float: left;
+	margin-right: 12px;
+}
+.nav li, .nav li a {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 16px;
+}
+.nav li a:hover {
+	text-decoration: underline;
+}
+.blackbackground {
+	background-color: #222;
+	overflow: hidden;
+	width: 100%;
+	color: #fff;
+}
+.mobile {
+	padding: 14px;
+}
+.desktop {
+	padding: 20px;
+}
+.floatr {
+	float: right;
+}
+.topstrap .wrapper .mobile {
+	padding: 0 0 20px 20px;
+}
+.footerlist li a {
+	padding: 20px;
+	text-decoration: underline;
+	color: #fff;
+}
+.footerlist li a:hover {
+	text-decoration: underline;
+}
+.container-c {
+	float: left;
+	width: 50%;
+}
+.floatr img {
+	margin: 0 5px 0 20px;
+}
+.desktop img {
+	margin: 0 5px 0 20px;
+}
+.blackbackground a, .topstrap a {
+	color: #fff;
+}
+.boximg img {
+	width: 100%;
+	margin-top: 10px;
+}
+.marginright5 {
+	margin-right: 5px;
+}
+.marginright20 {
+	margin-right: 20px;
+}
+.socialmedia img {
+	margin: 20px 20px 20px 0;
+}
+.professional {
+	padding: 0 20px 0 20px;
+}
+.tags {
+	float: left;
+	margin-top: 10px;
+}
+.tags a {
+	font-size: 12px;
+	background-color: #eee;
+	text-decoration: none;
+	margin: 0 10px 10px 0;
+	padding: 5px 10px;
+	float: left;
+	-moz-border-radius: 6px;
+	border-radius: 5px;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media only screen and (max-width: 799px) {
+.box {
+	width: 100%;
+	background-color: #fff;
+}
+.container-c {
+	min-width: 100%;
+}
+}
+@media only screen and (min-width: 800px) {
+.box {
+	width: 50%;
+}
+.boximg img {
+	display: none;
+}
+}
+@media only screen and (max-width: 1024px) {
+ul.nav {
+	display: none;
+}
+.desktop {
+	display: none;
+}
+}
+@media only screen and (min-width: 1025px) {
+.mobile {
+	display: none;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="blackbackground">
+  <div class="wrapper">
+    <div class="mobile floatr"><a href="#"><img src="images/share.png" width="18" height="20" alt="" >Share</a><a href="#"><img src="images/login.png" width="16" height="20" alt="" >Login</a></div>
+    <a href="#"><img src="images/burger.gif" width="20" height="20" alt="" class="mobile"></a>
+    <ul class="nav">
+      <li><a href="#">Courses<br>
+        &amp; study</a></li>
+      <li><a href="#">Student<br>
+        life</a></li>
+      <li><a href="#">Your<br>
+        university</a></li>
+      <li><a href="#">International<br>
+        Plymouth</a></li>
+      <li><a href="#">Research<br>
+        &amp; expertise</a></li>
+      <li><a href="#">Business<br>
+        &amp; partners</a></li>
+      <li><a href="#">Alumni<br>
+        &amp; friends</a></li>
+      <li><a href="#">About<br>
+        us</a></li>
+    </ul>
+  </div>
+</div>
+<div class="topstrap">
+  <div class="wrapper">
+    <div class="desktop floatr"><img src="images/search2.png" width="200" height="20" alt=""><a href="#"><img src="images/share.png" width="18" height="20" alt="" >Share</a><a href="#"><img src="images/login.png" width="16" height="20" alt="" >Login</a></div>
+    <a href="#"></a><a href="#"><img src="images/succeed-with.png" width="170" height="100" alt="" class="logo"></a><br>
+    <img src="images/search2.png" width="200" height="20" alt="" class="mobile"></div>
+</div>
+<div class="fullb">
+  <div class="wrapper">
+    <div class="box">
+      <p class="professional"><a href="#">Faculty of Health and Human Sciences</a></p>
+      <h2>GENETIC SCIENCE FOR HEALTH PROFESSIONALS (LEVEL 7)</h2>
+      <p>Appropriate for health professionals working with individuals or families who have, or are at risk of having, a genetic condition.</p>
+      <table>
+        <tr>
+          <td>Course code</td>
+          <td><strong>IMS536/IMS553</strong></td>
+        </tr>
+        <tr>
+          <td>Credits</td>
+          <td><strong>20/30</strong></td>
+        </tr>
+        <tr>
+          <td>FHEQ level</td>
+          <td><strong>7 (postgraduate)</strong></td>
+        </tr>
+        <tr>
+          <td>Course type</td>
+          <td><strong>Part time</strong></td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td><strong>1 year</strong></td>
+        </tr>
+        <tr>
+          <td>Dates</td>
+          <td><strong>Thursday 21 and 28 January 2016; Thursday 4, 11, 18 and 25 February 2016; and Thursday 3 and 10 March 2016.</strong></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><strong>Distance learning</strong></td>
+        </tr>
+        <tr>
+          <td>Fees</td>
+          <td><strong>20 credits - £628<br>
+            30 credits - £942<br>
+            Funding not available</strong></td>
+        </tr>
+      </table>
+      <p>You are invited to contact <a href="#">Professor Heather Skirton</a> by email before applying, to discuss whether this module is appropriate for your needs.</p>
+      <p><a href="#" class="marginright20"><img src="images/facebook.png" width="20" height="20" alt="" class="marginright5">/gensciplym</a><a href="#"><img src="images/twitter.png" width="20" height="20" alt="" class="marginright5">#gensciplym</a></p>
+      <p class="boximg"><img src="images/640x640e.jpg" alt="" ></p>
+    </div>
+  </div>
+</div>
+<div class="line">
+  <div class="box2">
+    <h2>Key features</h2>
+    <ul>
+      <li>The module has been designed and is delivered by experienced health professionals.</li>
+      <li>The content is related to practical healthcare.</li>
+      <li>The module is delivered entirely by distance learning, via a series of webinars you can access from your own computer.</li>
+      <li>Weekly quizzes and exercises are set to facilitate your learning.</li>
+      <li>The module content is appropriate for students from any country.</li>
+      <li>The module fulfils the criteria for an assessed genetic science course, as required by the <a href="#">Genetic Counsellor Registration Board</a> in the UK.</li>
+    </ul>
+    <div class="tags">
+      <p><a href="#" >genetic-science</a><a href="#" >genetic-counselling</a><a href="#" >health-genetics</a><a href="#" >continuing-professional-development</a><a href="#" >continuing-professional-development</a><a href="#" >cpd</a></p>
+    </div>
+  </div>
+</div>
+<div class="line">
+  <div class="box2">
+    <h2>Course details</h2>
+    <p>This module is aimed at practitioners who work with individuals or families who have or are at risk of a genetic condition, in any setting. It builds on basic biological principles to enhance development of the practitioner’s skills for application to clinical work. Throughout the module, theoretical material is related to clinical issues such as risk assessment and genetic testing. It is suitable for those working as genetic counsellors and for other health professionals working with individuals or families affected by a genetic condition (for example, haemophilia, haemoglobinopathy, familial cancer, inherited cardiac conditions). You will be encouraged to relate the material to your own practice setting throughout the module.</p>
+    <p>As this module is offered by distance learning, you will need to be self-motivated and have access to the internet. However, a series of webcasts at regular intervals will be used to enable specific topics to be discussed in depth and enhance interaction between you and the module tutor. You will be encouraged to attend and contribute to live webinars but these will also be recorded and available for downloading later.</p>
+    <h3>The aim of the module is to enable you to:</h3>
+    <ul>
+      <li>Develop an in-depth understanding of the structure and variations in genetic material.</li>
+      <li>Utilise knowledge of laboratory techniques for genetic testing to support your understanding of both processes and results of genetic testing.</li>
+      <li>Integrate scientific knowledge to enhance your communication with patients and other health professionals.</li>
+      <li>Enhance your ability to evaluate scientific reports.</li>
+    </ul>
+    <h3>At the end of the module you will be able to:</h3>
+    <ul>
+      <li>Develop an in-depth understanding of the structure, replication and variations in genetic material.</li>
+      <li>Understand the principles of heredity and apply these to clinical situations.</li>
+      <li>Apply knowledge of genetic variation to enhance your understanding of mechanisms that cause genetic disease/conditions.</li>
+      <li>Understand genetic test results.</li>
+      <li>Convey complex scientific principles related to heredity to patients in a way that facilitates understanding.</li>
+      <li>Explain issues and practical aspects of genetic testing in a way that facilitates informed consent.</li>
+    </ul>
+    <p>The module can be used as an optional module towards the <a href="#">MSc Contemporary Healthcare (Health Genetics).</a></p>
+  </div>
+</div>
+<div class="line">
+  <div class="box2">
+    <h2>Accreditation</h2>
+    <p>The module fulfils the criteria for an assessed genetic science course, as required by the Genetic Counsellor Registration Board in the UK.</p>
+    <p>To achieve a Postgraduate Certificate, you’ll need to earn 60 credits. You can achieve 60 credits from a combination of this module and one or two other genetics modules. You will be able to use your PgCert Contemporary Healthcare (Health Genetics) towards registration by the European Board of Medical Genetics.</p>
+  </div>
+</div>
+<div class="line">
+  <div class="box2">
+    <h2>Entry requirements</h2>
+    <p>You will normally be a health professional and have a degree in a health related field.</p>
+  </div>
+</div>
+<div class="line">
+  <div class="box2">
+    <h2>How to apply</h2>
+    <p><strong>To apply for this module, please contact:</strong></p>
+    <p>Professional Development Unit<br>
+      Level 4 Rolle Building<br>
+      Plymouth University<br>
+      Drake Circus<br>
+      Plymouth<br>
+      PL4 8AA</p>
+    <p>Email: <a href="#">pdu@plymouth.ac.uk</a></p>
+    <p>Telephone: <a href="#">+44 (0)1752 586951</a></p>
+  </div>
+</div>
+<div class="line">
+  <div class="box2">
+    <h2>Student insight</h2>
+    <div class="staffquote">
+      <p><a href="#"><strong><img src="images/people6.jpg" alt="">Module lead - Heather Skirton</strong></a> <br>
+        <strong>Associate Professor (Reader) in Earth Systems Science</strong></p>
+      <p class="backswatch1">&quot;Genetic science can be complex, but in this module we relate the concepts to everyday practice. You will find the weekly quizzes helpful in testing your understanding, and the webinar style delivery gives everybody the opportunity to study the module.&quot;</p>
+      <p>Heather received the European Society of Human Genetics Education Award in 2015 in recognition of her work in genetics education internationally.</p>
+      <p><a href="#">Find out more about Heather Skirton's teaching and research interests.</a></p>
+    </div>
+    <div class="staffquote">
+      <p><img src="images/people4.gif" alt="">Sylvia de Nobele <br>
+        <strong> Student insight</strong></p>
+      <p class="backswatch1">&quot;I used this module to build my knowledge in genetic counselling and now I am applying for European registration as a genetic counsellor using the award.&quot;</p>
+    </div>
+  </div>
+</div>
+<div class="box2">
+  <h2>Related pages</h2>
+  <ul class="nobullet">
+    <li><a href="#">Knowledge Spa, Truro, Cornwall</a></li>
+    <li><a href="#">Accreditation of Prior Learning (APL)</a></li>
+    <li><a href="#">Advanced Practice Acute and Urgent Care Workforce Development</a></li>
+    <li><a href="#">Advancing Practice in Acute and Urgent Care (Level 6 and 7)</a></li>
+    <li><a href="#">Advancing Research Knowledge and Practice 1 (Level 7)</a></li>
+    <li><a href="#">Advancing Research Knowledge and Practice 2 (Level 7)</a></li>
+    <li><a href="#">Asthma and COPD (Level 6)</a></li>
+    <li><a href="#">BSc (Hons) Health Studies</a></li>
+    <li><a href="#">BSc (Hons) Health Studies modules</a></li>
+    <li><a href="#">BSc (Hons) Urgent and Emergency Care</a></li>
+    <li><a href="#">Choosing a mentorship module</a></li>
+    <li><a href="#">Clinical Skills in Community and Primary Care (Level 6)</a></li>
+    <li><a href="#">Clinical Skills in Community and Primary Care (Level 7)</a></li>
+    <li><a href="#">Community and primary care</a></li>
+    <li><a href="#">Community and Primary Care Workforce Development</a></li>
+    <li><a href="#">Condition specific modules</a></li>
+    <li><a href="#">Counselling Skills for Genetic Healthcare (Level 7)</a></li>
+    <li><a href="#">Dietetic interviews with the Faculty of Health and Human Sciences</a></li>
+    <li><a href="#">Evidence-Informed Decision Making (Level 6)</a></li>
+    <li><a href="#">Evidencing professional development in urgent and emergency care (via e-portfolio) (Level 6)</a></li>
+    <li><a href="#">Faculty of Health & Human Sciences interviews</a></li>
+    <li><a href="#">Faculty of Health and Human Sciences</a></li>
+    <li><a href="#">Family Planning and Women’s Health (Level 6)</a></li>
+    <li><a href="#">Healthcare Support (Level 4)</a></li>
+    <li><a href="#">Integrated Advancing Practice (Level 6)</a></li>
+    <li><a href="#">Integrated Advancing Practice (Level 7)</a></li>
+    <li><a href="#">Integrated Advancing Practice in Context (Level 6)</a></li>
+    <li><a href="#">Integrated Advancing Practice in Context (Level 7)</a></li>
+    <li><a href="#">Integrated Community Care in Context (Level 6)</a></li>
+    <li><a href="#">Integrated Community Care in Context (Level 7)</a></li>
+    <li><a href="#">Integrated Community Practice (Level 6)</a></li>
+    <li><a href="#">Integrated Community Practice (Level 7)</a></li>
+    <li><a href="#">Leadership and Innovation (Level 6)</a></li>
+    <li><a href="#">Leadership and Innovation (Level 7)</a></li>
+    <li><a href="#">Management and Leadership (Level 6)</a></li>
+    <li><a href="#">Management of children and young people requiring urgent or emergency care (Level 7)</a></li>
+    <li><a href="#">Mental Health Assessment in Urgent, Emergency and Acute Care (Level 6)</a></li>
+    <li><a href="#">Mentorship (Level 6 and 7)</a></li>
+    <li><a href="#">Mentorship APL (Level 6 and Level 7)</a></li>
+    <li><a href="#">Mentorship APL via distance learning (Level 6 and Level 7)</a></li>
+    <li><a href="#">Minor illness and minor injury (Level 6)</a></li>
+    <li><a href="#">MSc Contemporary Healthcare Dissertation (Level 7)</a></li>
+    <li><a href="#">Newborn and Infant Examination (APL) (Level 6 and 7)</a></li>
+    <li><a href="#">Occupational therapy interviews with the Faculty of Health and Human Sciences</a></li>
+    <li><a href="#">Physiotherapy interviews with the Faculty of Health and Human Sciences</a></li>
+    <li><a href="#">Podiatry interviews with the Faculty of Health and Human Sciences</a></li>
+    <li><a href="#">Postgraduate professional development</a></li>
+    <li><a href="#">Practical Genetics for Health Professionals (Level 7)</a></li>
+    <li><a href="#">Preceptorship APL (Level 6 and 7)</a></li>
+    <li><a href="#">Preparation of Supervisor of Midwives (Level 6 and 7)</a></li>
+    <li><a href="#">Professional Development for Health and Human Sciences</a></li>
+    <li><a href="#">Return to Practice (Nursing) (Level 6)</a></li>
+    <li><a href="#">Return to Practice (Nursing) frequently asked questions</a></li>
+    <li><a href="#">School of Health Professions interview days</a></li>
+    <li><a href="#">School of Nursing and Midwifery interview days</a></li>
+    <li><a href="#">Sign-off (nursing/midwifery) mentor APL (Level 6 and 7)</a></li>
+    <li><a href="#">Supporting the needs of the frail older person in the community (Level 6)</a></li>
+    <li><a href="#">Supporting the needs of the frail older person in the community (Level 7)</a></li>
+    <li><a href="#">Surgical First Assistant Course - Level 6</a></li>
+    <li><a href="#">Surgical First Assistant Course - level 7</a></li>
+    <li><a href="#">The Child or Young Person requiring Urgent or Emergency Care (Level 6)</a></li>
+  </ul>
+</div>
+<div class="blackbackground">
+  <div class="box2">
+    <p><strong>Plymouth University</strong><br>
+      Drake Circus<br>
+      Plymouth<br>
+      Devon<br>
+      PL4 8AA</p>
+    <ul>
+      <li>Telephone: <a href="#">+44 (0)1752 600600</a></li>
+      <li><a href="#">Maps &amp; directions</a></li>
+      <li><a href="#">Visit us</a></li>
+      <li><a href="#">Download prospectus</a></li>
+      <li><a href="#">Job vacancies</a></li>
+      <li><a href="#">RSS Feed</a></li>
+      <li><a href="#">Events iCal feed</a></li>
+      <li><a href="#">About cookies</a></li>
+    </ul>
+    <p class="socialmedia"><a href="#"><img src="images/facebook.png" width="20" height="20" alt=""></a> <a href="#"><img src="images/twitter.png" width="20" height="20" alt="" ></a> <a href="#"><img src="images/youtube.png" width="20" height="20" alt="" ></a> <a href="#"><img src="images/google.png" width="20" height="20" alt="" ></a> <a href="#"><img src="images/linkedin.png" width="20" height="20" alt="" class="marginright20"></a> <a href="#"><img src="images/pinterest.png" width="20" height="20" alt="" ></a> 
+  </div>
+</div>
+</body>
+</html>

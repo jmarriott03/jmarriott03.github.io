@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plymouth University</title>
+<script type="text/javascript" src="./scripts/jquery-1.6.4.js"></script>
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: #fff;
+}
+h2 {
+	font-size: 22px;
+	line-height: 24px;
+	padding: 10px 10px 0 10px;
+}
+body, html {
+	height: 100%;
+}
+a {
+	color: #08c;
+}
+a:hover {
+	text-decoration: underline;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	float: left;
+	box-sizing: border-box;
+	width: 33.3333%;
+}
+.noborder {
+	border: 0;
+}
+p {
+	margin: 10px;
+}
+.grey {
+	background-color: #fff;
+	overflow: hidden;
+	width: 100%;
+}
+.grey {
+	background-color: #eee;
+	overflow: hidden;
+	width: 100%;
+}
+.black {
+	background-color: #000;
+	overflow: hidden;
+	color: #fff;
+	width: 100%;
+	z-index: -1;
+}
+.black a {
+	color: #fff;
+}
+.widtha {
+	overflow: hidden;
+}
+.widthb {
+	float: left;
+}
+.box {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	overflow: hidden;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image: url(images/hero3.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;/*box-sizing: border-box;
+	border: 20px solid #fff;*/
+}
+.center a {
+	display: inline-block;
+	margin: 0;
+	padding: 20px;
+	outline: none;
+	border: 2px solid #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	width: 150px;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -25px 0 0 -100px;
+	text-align: center;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.floatl {
+	float: left;
+}
+.floatl img {
+	width: 100% !important;
+	margin-bottom: 6px;
+}
+.tags {
+	font-family: neuzeit-regular, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #08c;
+	background-color: #ddd;
+	text-decoration: none;
+	margin: 10px 10px 10px 0;
+	padding: 0 6px;
+	float: left;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.black p .tags {
+	color: #08c;
+}
+.pad10 {
+	padding: 10px;
+}
+ @-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -moz-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -webkit-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -webkit-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-30px);
+ -ms-transform: translateY(-30px);
+ -webkit-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -moz-transform: translateY(-15px);
+ -ms-transform: translateY(-15px);
+ -webkit-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+.arrow {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -25px;
+	width: 50px;
+	height: 50px;
+}
+.arrow img {
+	width: 100%;
+}
+.bounce {
+	-moz-animation: bounce 4s infinite;
+	-webkit-animation: bounce 4s infinite;
+	animation: bounce 4s infinite;
+}
+.className {
+	width: 80%;
+	height: 60%;
+	position: relative;
+	min-width: 300px;
+	max-width: 600px;
+}
+.className img {
+	width: 100%;
+	padding-bottom: 10px;
+}
+.className a {
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+}
+ul {
+	padding: 12px 12px 12px 32px;
+}
+ul.nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.nav li {
+	display: inline;
+	padding: 12px;
+	float: left;
+	margin-right: 12px;
+	line-height: 14px;
+}
+.nav li, .nav li a {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+.nav li a:hover {
+	text-decoration: underline;
+}
+.floatr {
+	float: right;
+}
+.floatr img {
+	width: 154px;
+}
+.social {
+	width: 220px;
+	padding-bottom: 10px;
+}
+.burger img {
+	width: 16px !important;
+	height: 16px !important;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media only screen and (max-width: 479px) {
+img {
+	width: 100%;
+}
+.widthb {
+	width: 100%;
+}
+.floatl {
+	width: 100%;
+}
+.ynn {
+	display: block;
+}
+.yyn {
+	display: block;
+}
+.nyy {
+	display: none;
+}
+.nny {
+	display: none;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+img {
+	width: 50%;
+}
+.widthb {
+	width: 100%;
+}
+.floatl {
+	width: 100%;
+}
+.floatl p img {
+	width: 33% !important;
+	padding: 0 10px 10px 0;
+}
+.ynn {
+	display: none;
+}
+.yyn {
+	display: block;
+}
+.nyy {
+	display: block;
+}
+.nny {
+	display: none;
+}
+}
+@media only screen and (min-width: 960px) {
+.widtha {
+	width: 960px;
+}
+.widthb {
+	width: 640px;
+	overflow: hidden;
+}
+.floatl {
+	width: 33%;
+}
+.ynn {
+	display: none;
+}
+.yyn {
+	display: none;
+}
+.nyy {
+	display: block;
+}
+.nny {
+	display: block;
+}
+}
+</style>
+<script type="text/javascript">//<![CDATA[ 
+function goToByScroll(id){
+	$('html,body').animate({scrollTop: $("."+id).offset().top},'slow');
+	}
+	
+	$(window).scroll(function () {
+	scrollValue = $(document).scrollTop();
+	if (scrollValue > 0){
+		$(".arrow").fadeOut(200);
+		}
+		else{
+			$(".arrow").fadeIn(200);
+			}
+			});
+			
+			
+			
+			
+			$(document).ready(function(){					   
+	$(window).resize(function(){
+		$('.className').css({
+			position:'absolute',
+			left: ($(window).width() - $('.className').outerWidth())/2,
+			top: ($(window).height() - $('.className').outerHeight())/2
+		});		
+	});
+	// To initially run the function:
+	$(window).resize();
+
+});
+//]]>
+</script>
+</head>
+
+<body>
+<div class="black P1">
+  <p class="floatr"><img src="images/magnify2c.gif" alt="" ></p>
+  <p class="burger yyn"><img src="images/burger.png" alt=""></p>
+  <ul class="nav nny">
+    <li><a href="#">Courses
+      </a></li>
+    <li><a href="#">International
+      </a></li>
+    <li><a href="#">Research</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+<div class="box">
+  <div class="className"><a href="#"><img src="images/hot15.png" width="600" alt="" />Immerse yourself in a celebration of highly creative talent and enterprise; the culmination of study and practice at Plymouth University.</a></div>
+  <div class="arrow bounce"> <a href="javascript:void(0)" onclick="goToByScroll('P2');"><img src="images/circle.png" width="50" height="50" alt=""></a></div>
+</div>
+<div class="widtha P2">
+  <h2>What's on</h2>
+  <div class="floatl">
+    <p><a href="#"><img src="images/p-1479825.jpg" alt=""  /> Lorem ipsum dolor sit amet</a><br>
+      <a href="#" class="tags">events</a><a href="#" class="tags">business</a><a href="#" class="tags">support</a></p>
+  </div>
+  <div class="floatl">
+    <p><a href="#"><img src="images/p-1530143.jpg" alt=""  />Consectetur adipisicing elit</a><br>
+      <a href="#" class="tags">support</a></p>
+  </div>
+  <div class="floatl">
+    <p><a href="#"><img src="images/p-1526622.jpg" alt=""  />Sed do eiusmod tempor incididunt</a><br>
+      <a href="#" class="tags">business</a><a href="#" class="tags">support</a></p>
+  </div>
+</div>
+<div class="grey">
+  <div class="widtha">
+    <h2>Showcase</h2>
+    <div class="floatl">
+      <p><a href="#"><img src="images/p-1526207.jpg" alt="" />Labore et dolore magna aliqua</a><br>
+        <a href="#" class="tags">events</a></p>
+    </div>
+    <div class="floatl">
+      <p><img src="images/p-1524606.jpg" alt="" /><a href="#">Ut enim ad minim veniam</a><br>
+        <a href="#" class="tags">events</a><a href="#" class="tags">business</a><a href="#" class="tags">support</a></p>
+    </div>
+    <div class="floatl">
+      <p><img src="images/p-1534017.jpg" alt="" /><a href="#">Aliquip ex ea commodo consequat</a><br>
+        <a href="#" class="tags">business</a><a href="#" class="tags">support</a></p>
+    </div>
+    <div class="widthb">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <a href="#">incididunt ut labore et dolore</a> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum.</a></p>
+    </div>
+  </div>
+</div>
+<div class="white">
+  <div class="widtha">
+    <p>Plymouth University, Drake Circus, Plymouth, Devon. PL4 8AA. United Kingdom <br>
+      Tel: +44 1752 600600 | <a href="#">Prospectus</a> | <a href="#">Maps & directions</a> | <a href="#">Visit us</a></p>
+    <p><img src="images/social-media.png" alt="" class="social"></p>
+  </div>
+</div>
+<div class="black">
+  <div class="widtha">
+    <p><a href="javascript:void(0)" onclick="goToByScroll('P1');">Back to top</a></p>
+  </div>
+</div>
+</body>
+</html>

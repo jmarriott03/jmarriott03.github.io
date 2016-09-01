@@ -1,0 +1,735 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<script type="text/javascript" src="./scripts/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="./scripts/jquery-1.5.min.js"></script>
+<style type="text/css">
+#style1 {
+	background-color: #F0F;
+}
+#style1 .container-a {
+	background-color: #F00;
+	border: 1px solid #fff;
+}
+#style1 .container-full {
+	border: 1px solid #000;
+}
+#style2, #style2 .container-a, #style2 .container-b, #style2 .container-c, #style2 .container-d, #style2 .container-e {
+	background-color: #fff;
+}
+#style2 .black {
+	background-color: #282828 !important;
+	color: #fff;
+	overflow: hidden;
+}
+#style2 .grey {
+	background-color: #efefef !important;
+	overflow: hidden;
+}
+#style2 .darkgrey {
+	background-color: #ccc !important;
+	overflow: hidden;
+}
+#style2 .white {
+	background-color: #fff !important;
+	color: #000;
+	overflow: hidden;
+}
+* {
+	margin: 0 auto;
+}
+body, html {
+	height: 100%;
+}
+@font-face {
+	font-family: 'icon-webfont';
+	src: url('fonts/icon-webfont.eot');
+	src: url('fonts/icon-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon-webfont.woff') format('woff'), url('fonts/icon-webfont.ttf') format('truetype'), url('fonts/icon-webfont.svg#source-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit';
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot');
+	src: url('fonts/NeuzeitforPlymouthW04-Blk.eot?#iefix') format('embedded-opentype'), url('fonts/NeuzeitforPlymouthW04-Blk.woff') format('woff'), url('fonts/NeuzeitforPlymouthW04-Blk.ttf') format('truetype'), url('fonts/NeuzeitforPlymouthW04-Blk.svg#neuzit') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-light';
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-light-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-light-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-light-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-regular';
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-regular-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-regular-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-regular-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-bold';
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-bold-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-bold-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-bold-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'neuzeit-italic';
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot');
+	src: url('fonts/neuzeitforplymouth-italic-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/neuzeitforplymouth-italic-webfont.woff') format('woff'), url('fonts/neuzeitforplymouth-italic-webfont.ttf') format('truetype'), url('fonts/neuzeitforplymouth-italic-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html, body, form, fieldset, p, div, h2, h3, h3, h4, h5, h6 {
+	-webkit-text-size-adjust: none;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "kern=1";
+	-ms-font-feature-settings: "kern" 1;
+}
+body {
+	font-family: 'neuzeit-regular', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+}
+table {
+	float: left;
+	margin: 12px;
+}
+p, h1, h2, h3 {
+	padding: 0;
+	margin: 12px;
+	font-weight: normal;
+}
+h2 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: normal;
+}
+h3 {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: normal;
+}
+strong {
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+a {
+	color: #08c;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.icon {
+	font-family: 'icon-webfont', Arial, Helvetica, sans-serif;
+	display: inline;
+	font-size: 20px;
+	color: #fff;
+	line-height: 18px;
+}
+.icon:before {
+	content: attr(data-icon);
+}
+.hor-zebra {
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #000;
+	margin-bottom: 24px;
+	clear: both;
+	float: left;
+}
+.hor-zebra th {
+	padding: 6px;
+	border: 1px solid #000;
+}
+.hor-zebra td {
+	padding: 6px;
+	border: 1px solid #000;
+}
+.hor-zebra .odd {
+	background: #ccc;
+}
+.hor-zebra .blacktitle {
+	background: #000;
+	color: #fff;
+}
+.bbot {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #ccc;
+}
+.container-b, .container-c, .container-d {
+	float: left;
+}
+.container-full {
+	width: 100%;
+	float: left;
+}
+.container-a {
+	overflow: hidden;
+	position: relative;
+}
+.container-b {
+	background-color: #F90;
+}
+.container-c {
+	background-color: #FF0;
+}
+.container-d {
+	background-color: #0F0;
+}
+.container-e {
+	background-color: #0FF;
+}
+ul {
+	padding: 12px 12px 12px 32px;
+}
+ul.nav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.nav li {
+	display: inline;
+	padding: 12px;
+	float: left;
+	margin-right: 24px;
+}
+.nav li, .nav li a {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'neuzeit-bold', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+}
+.nav li a:hover {
+	text-decoration: underline;
+}
+.floatl {
+	float: left;
+}
+.floatr {
+	float: right;
+}
+.textr {
+	text-align: right;
+}
+.hero {
+	float: left;
+	width: 100%;
+	background-width: 100%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.hero a, .boxb a {
+	color: #fff;
+}
+.hero h1, .hero h2, .hero h3, .hero h4, .hero h5, .hero h6, .hero p, .hero strong, .hero em {
+	color: #fff;
+}
+.tinttl {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+}
+.tinttr {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	float: left;
+	left: 100%;
+}
+.tintbl {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+}
+.tintbr {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: left;
+}
+.full {
+	width: 100%;
+}
+.max300 {
+	max-width: 300px;
+}
+.floatlimage {
+	float: left;
+	padding: 0 12px 0 0;
+}
+.picola {
+	color: #3CBEB4;
+}
+.picolb {
+	color: #58595B;
+}
+.padding12 {
+	padding: 12px;
+}
+.padtop6 {
+	padding-top: 6px;
+}
+.dblock {
+	display: block;
+}
+.footerlist li a {
+	padding: 12px 12px 11px 12px;
+	display: block;
+	border-bottom: 1px solid #444;
+	margin-right: 24px;
+	text-decoration: none;
+	color: #fff;
+}
+.footerlist li a:hover {
+	text-decoration: underline;
+}
+ul.footerlist {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.facebook, .twitter, .google, .youtube, .instagram, .linkedin, .pinterest, .share {
+	font-size: 26px;
+	text-decoration: none;
+	padding: 6px;
+}
+.facebook {
+	color: #3b5998;
+}
+.twitter {
+	color: #55acee;
+}
+.google {
+	color: #db4437;
+}
+.youtube {
+	color: #c4302b;
+}
+.instagram {
+	color: #3f729b;
+}
+.linkedin {
+	color: #0e76a8;
+}
+.pinterest {
+	color: #c8232c;
+}
+.share {
+	color: #999;
+}
+.bordertop {
+	border-top: 10px solid #ccc;
+	margin-top: 20px;
+}
+.absolutebottom {
+	height: 50px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+}
+a img {
+	border: 0;
+	outline: 0;
+}
+.tags a {
+	font-family: neuzeit-regular, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #fff;
+	background-color: #666;
+	text-decoration: none;
+	margin: 6px 0 0 6px;
+	padding: 6px;
+	float: left;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	line-height: 16px;
+}
+.bigimage {
+	width: 100%;
+	height: 100%;
+	background: url(images/hero.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.bigimagetl {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+}
+.bigimagetr {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 0;
+	right: 0;
+	float: left;
+}
+.bigimagebl {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	float: left;
+}
+.bigimagebr {
+	background-image: url(images/666.png);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	float: left;
+}
+.bigimagecc {
+	background-image: url(images/666.png);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	float: left;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+ @media screen and (max-width: 639px) {
+.container-a {
+	min-width: 320px;
+}
+.container-b, .container-c, .container-d, .container-e {
+	min-width: 100%;
+}
+.nav {
+	display: none;
+}
+.desktop {
+	display: none;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	position: relative;
+	width: 100%;
+	background-color: #282828;
+}
+.hero h1 {
+	font-family: 'neuzeit-light', Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: none;
+	font-weight: normal;
+}
+.footerlist li a {
+	margin-right: 0;
+}
+.clearboth {
+	clear: both;
+}
+}
+ @media screen and (min-width: 640px) and (max-width: 939px) {
+.container-b {
+	width: 49.9%;
+	float: left;
+}
+.container-c {
+	width: 49.9%;
+	float: left;
+}
+.container-d {
+	width: 49.9%;
+}
+.container-e {
+	width: 66.9%;
+}
+.mobile {
+	display: none;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	max-width: 49.9%;
+}
+.hero h1 {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	line-height: 24px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+}
+ @media screen and (min-width: 940px) {
+.container-a {
+	max-width: 940px;
+}
+.container-b {
+	width: 66.9%;
+}
+.container-c {
+	width: 33%;
+}
+.container-d {
+	width: 49.9%;
+}
+.container-e {
+	width: 66.9%;
+	max-width: 640px;
+}
+.mobile {
+	display: none;
+}
+.tinttl, .tinttr, .tintbl, .tintbr {
+	max-width: 49.9%;
+}
+.hero h1 {
+	font-family: 'neuzeit', Arial, Helvetica, sans-serif;
+	font-size: 48px;
+	line-height: 36px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+}
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function keyscroll(e){
+var evtobj=window.event? event : e
+var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
+var actualkey=String.fromCharCode(unicode)
+if (actualkey=="2") back1();
+if (actualkey=="1") back2();
+}
+
+document.onkeypress=keyscroll
+
+function back1(){
+document.getElementsByTagName('body')[0].id="style1"}
+
+function back2(){
+document.getElementsByTagName('body')[0].id="style2"}
+
+function goToByScroll(id){
+   			$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+				}
+				
+$(window).scroll(function () {
+	scrollValue = $(document).scrollTop();
+	if (scrollValue > 0){
+		$(".absolutebottom").fadeOut(200);
+		}
+		else{
+			$(".absolutebottom").fadeIn(200);
+			}
+			});
+/* ]]> */
+</script>
+</head>
+
+<body id="style2">
+
+<div class="container-full black">
+  <div class="container-a black">
+    <p class="mobile"><img src="images/burger.png" width="16" height="16" alt=""></p><p class="floatr"><img src="images/search-box.gif" width="123" height="19" alt="" class="desktop"> <img src="images/magnify2.gif" alt="" width="48" height="16"></p>
+    <ul class="nav">
+      <li>Courses <img src="images/arrow-down.png" width="16" height="16" alt=""></li>
+      <li><a href="#">Research</a></li>
+      <li><a href="#">Enterprise</a></li>
+      <li><a href="#">Our university</a></li>
+    </ul>
+  </div>
+</div><div class="bigimage">
+
+
+
+
+<div class="bigimagetl"><h1>1gvmgfjg</h1></div>
+<div class="bigimagetr"><h1>2gvmgfjg</h1></div>
+<div class="bigimagebl"><h1>3gvmgfjg</h1></div>
+<div class="bigimagebr"><h1>4gvmgfjg</h1></div></div>
+<div class="bigimagecc"><h1>5gvmgfjg</h1></div>
+
+
+
+
+
+<div class="container-full grey">
+  <div class="container-a grey">
+    <p><a href="#">Courses</a> > <a href="#">Undergraduate</a> > <a href="#">BSc (Hons) Lorem ipsum</a> > <a href="#">Course detail and module information</a></p>
+  </div>
+</div>
+<div class="container-full">
+  <div class="container-a">
+    <div class="hero"><img src="images/microbial.jpg" class="full" alt="">
+      <div class="tinttl">
+        <h1>Microbial life</h1>
+        <h3>Module code: MBIO208</h3>
+        <p>Credits: 20 Level: 5</p>
+        <p>Module team: Dr Consectetur, Dr Adipisicing</p>
+      </div>
+    </div>
+    
+    <div class="tags"> <a href="#" >Lorem ipsum</a><a href="#" >Dolor sit</a><a href="#" >Consectetur adipisicing</a><a href="#" >Sed do eiusmod</a><a href="#" >Tempor incididunt</a><a href="#" >Labore et dolore</a></div>
+    
+    
+  </div>
+</div>
+<div class="container-full darkgrey bordertop">
+  <div class="container-a darkgrey">
+    <div class="container-c grey">
+      <div class="darkgrey"> <img src="images/shasha-small.jpg"  class="full" alt="">
+        <p><strong><a href="#">Dr Shasha Yu</a></strong> is a lecturer and module leader for international lorem ipsum studies. She is an experienced and active researcher and lorem advisor. Her teaching and research interests include general marketing ipsum issues, emerging markets, firm internationalisation, foreign market entry strategies, and IT implications.</p>
+      </div>
+    </div>
+    <div> </div>
+    <div class="container-b grey">
+      <h3>Aims</h3>
+      <p>To show how the global importance of microbes can be explained by an understanding of their genes, genomes, metabolic diversity, ecology, and evolution.</p>
+      <h3>Learning outcomes</h3>
+      <p>At the end of the module you should be able to: </p>
+      <ul>
+        <li>Explain how microbes control gene expression and adapt to their environment (LO1).</li>
+        <li>Discuss the metabolic diversity and ecology of microbes, and their roles in biogeochemical cycles (LO2).</li>
+        <li>Explain modern concepts in microbial evolution and systematics (LO3).</li>
+        <li>Understand and apply modern laboratory techniques for the study of microbes and communicate the results of investigations effectively (LO4).</li>
+        <li>Formulate and discuss an individually selected microbiological research topic (LO5).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container-full">
+  <div class="container-e">
+    <h3>Outline of syllabus</h3>
+    <p class="bbot">Bacteria, archaea and viruses constitute over half of the biomass of life on Earth. This module explores the tremendous diversity and adaptability of microbial life, showing how exciting recent discoveries have led to new understanding of the importance of microbes in marine, freshwater and terrestrial environments and in biogeochemical cycles and global processes. Such knowledge is vital at a time of rapid global change.</p>
+    <p><img src="images/microbe1.jpg" width="96" height="96" alt="" class="floatlimage"><strong>In Term 1</strong> lectures, you will learn about the organization of microbial genes and genomes and how microbes regulate the expression of their genes and respond to changes in environmental and nutritional conditions through sensing, signal transduction and transcriptional control. The importance of these mechanisms will be illustrated through important examples of microbial growth, behaviour, development, survival, and interactions with other organisms.</p>
+    <p class="bbot">You will learn how the discovery of phenomena such as quorum sensing and biofilm formation requires us to reconsider the nature of bacteria and archaea. Did you know that these “simple” organisms sometimes show social behaviour and act as multicellular entities?</p>
+    <p><img src="images/microbe2.jpg" width="98" height="98" alt="" class="floatlimage"><strong>In Term 2</strong>, you will learn about the metabolic diversity and physiology of bacterial growth under different conditions. You will see how our understanding of the ecological role of microbes – in biogeochemical cycling, biodegradation and biodeterioration – has been revolutionised by the development of metagenomics and related molecular techniques.</p>
+    <p class="bbot">Did you know that the oxygen in every fifth breath you take is made by marine bacteria, or that microbes are alive and active in rocks many kilometres below the surface?</p>
+    <p>Practical work is an essential feature of microbiology and this module features an exciting programme of work, in which you will devise the right conditions isolating particular types of microbe, extract their DNA and identify these organisms using cutting edge methods of genome sequencing and bioinformatics analysis.</p>
+    <p class="picola">Coursework 70%</p>
+    <p><img src="images/pi.png" alt="" class="full max300"></p>
+    <p class="textr picolb max300">Written exam 30%</p>
+    <table class="hor-zebra">
+      <tr class="blacktitle">
+        <th colspan="3">Assessment</th>
+      </tr>
+      <tr class="odd">
+        <td>Category</td>
+        <td>%</td>
+        <td>Comments</td>
+      </tr>
+      <tr>
+        <td>Coursework</td>
+        <td>70</td>
+        <td>Reports on practical work and your special study topic</td>
+      </tr>
+      <tr>
+        <td>Written exam</td>
+        <td>30</td>
+        <td>2 hour exam includes short answer questions and a prepared essay on your special study topic</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>100</strong></td>
+        <td></td>
+      </tr>
+    </table>
+    <table class="hor-zebra">
+      <tr class="blacktitle">
+        <th colspan="3">Teaching and learning</th>
+      </tr>
+      <tr class="odd">
+        <td>Scheduled activities</td>
+        <td>Hours</td>
+        <td>Comments</td>
+      </tr>
+      <tr>
+        <td>Lecture</td>
+        <td>24</td>
+        <td>12 x 1 hour lectures per term</td>
+      </tr>
+      <tr>
+        <td>Tutorial</td>
+        <td>27</td>
+        <td>9 x 3 hour lab sessions</td>
+      </tr>
+      <tr>
+        <td>Practical classes and workshops</td>
+        <td>27</td>
+        <td>9 x 3 hour lab sessions4</td>
+      </tr>
+      <tr>
+        <td>Guided independent study</td>
+        <td>146</td>
+        <td>Includes preparation for lab sessions and in depth study of a ‘hot topic’ of your choice</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>200</strong></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="container-full black">
+  <div class="container-a black">
+    <div class="container-c black">
+      <ul class="footerlist">
+        <li><a href="#">Courses &amp; study</a></li>
+        <li><a href="#">Student life</a></li>
+        <li><a href="#">International Plymouth</a></li>
+        <li><a href="#">Research &amp; expertise</a></li>
+        <li><a href="#">International students</a></li>
+        <li><a href="#">Business &amp; partners</a></li>
+        <li><a href="#">Your university</a></li>
+      </ul>
+    </div>
+    <div class="container-c black">
+      <p><strong>Plymouth University</strong><br>
+        Drake Circus<br>
+        Plymouth<br>
+        Devon<br>
+        PL4 8AA</p>
+      <ul class="footerlist">
+        <li><a href="#"><span class="icon">0 </span>+44 (0)1752 600600</a></li>
+        <li><a href="#"><span class="icon">U </span>Map &amp; directions</a></li>
+        <li><a href="#"><span class="icon">X </span>Visit us</a></li>
+      </ul>
+    </div>
+    <div class="container-c white padtop6 floatr">
+      <p class="icon"><a href="#" class="facebook">f</a><a href="#" class="twitter">t</a><a href="#" class="google">g</a><a href="#" class="youtube">y</a><a href="#" class="instagram">i</a><a href="#" class="linkedin">l</a><a href="#" class="pinterest">p</a><a href="#" class="share">[</a></p>
+    </div>
+  </div>
+</div>
+<div id="morecontent" class="absolutebottom"> <a href="javascript:void(0)" onClick="goToByScroll('morecontent');"><img src="images/circle.png" width="50" height="50" alt="" /></a></div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: #fff;
+}
+body, html {
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+h2 {
+	padding: 10px;
+}
+a {
+	color: #00f;
+	font-weight: bold;
+}
+p {
+	margin: 10px;
+}
+.grey {
+	background-color: #eee;
+	overflow: hidden;
+	width: 100%;
+}
+.black {
+	background-color: #000;
+	overflow: hidden;
+	color: #fff;
+	width: 100%;
+}
+.black a {
+	color: #fff;
+}
+.widtha {
+	overflow: hidden;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.widthb {
+	float: left;
+}
+.box1 {
+	position: relative;
+	width: 33.3%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 10px solid rgba(255, 255, 255, 0);
+	color: #fff;
+}
+.box1 img {
+	width: 100%;
+}
+.box2 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 2;
+	background: rgba(0,0,0,0.4);
+	width: 100%;
+}
+.box2 a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.backcol1 {
+	background-color: #e09e33;
+	overflow: hidden;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+@media only screen and (max-width: 479px) {
+img {
+	width: 100%;
+}
+.widthb {
+	width: 100%;
+}
+.box1 {
+	width: 100%;
+	min-width: 240px;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+img {
+	width: 50%;
+}
+.widthb {
+	max-width: 640px;
+}
+.box1 {
+	width: 50%;
+}
+}
+@media only screen and (min-width: 960px) {
+.widtha {
+	width: 960px;
+}
+.widthb {
+	width: 640px;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="backcol1">
+  <div class="widtha">
+    <h2>Latest updates</h2>
+    <div class="box1">
+      <div class="box2">
+        <p><a href="#">Lorem ipsum dolor sit amet, consec tetur adipisicing elit.</a></p>
+      </div>
+      <a href="#"><img src="images/sea1.jpg" alt=""></a> </div>
+    <div class="box1">
+      <div class="box2">
+        <p><a href="#">Sed do eiusmod tempor incididunt ut labore et dolore magna.</a></p>
+      </div>
+      <img src="images/sea2.jpg" alt=""> </div>
+    <div class="box1">
+      <div class="box2">
+        <p><a href="#">Ut enim ad minim veniam, quis nostrud exercitation.</a></p>
+      </div>
+      <img src="images/sea3.jpg" alt=""> </div>
+    <div class="box1">
+      <div class="box2">
+        <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</a></p>
+      </div>
+      <img src="images/sea3.jpg" alt=""> </div>
+    <div class="box1">
+      <div class="box2">
+        <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate velit.</a></p>
+      </div>
+      <img src="images/sea2.jpg" alt=""> </div>
+    <div class="box1">
+      <div class="box2">
+        <p><a href="#">Esse.</a></p>
+      </div>
+      <img src="images/sea1.jpg" alt=""> </div>
+  </div>
+</div>
+<div class="widtha">
+  <div class="widthb">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <a href="#">sunt in culpa qui officia deserunt mollit anim id est laborum.</a></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in r	eprehenderit in voluptate <a href="#">velit esse cillum dolore eu fugiat nulla pariatur.</a></p>
+  </div>
+</div>
+<!--<div class="black">
+  <div class="widtha">
+    <p><a href="#">Back to top</a></p>
+  </div>
+</div>-->
+</body>
+</html>

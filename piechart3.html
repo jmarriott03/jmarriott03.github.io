@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Pie chart</title>
+<script type="text/javascript">
+function start(id){
+var canvas = document.getElementById("can");
+var ctx = canvas.getContext("2d");
+var lastend = 0;
+var rnd_no1 = Math.floor(6*Math.random(6));
+var rnd_no2 = Math.floor(6*Math.random(6));
+var rnd_no3 = Math.floor(10-rnd_no1-rnd_no2);
+var data = [rnd_no1, rnd_no2, rnd_no3]; //	 If you add more data values make sure you add more colors
+var myTotal = 0; // Automatically calculated so don't touch
+var myColor = ['#f90', '#39c', '#9c9']; // Colors of each slice
+
+for (var e = 0; e < data.length; e++) {
+  myTotal += data[e];
+}
+
+for (var i = 0; i < data.length; i++) {
+  ctx.fillStyle = myColor[i];
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, canvas.height / 2);
+  // Arc Parameters: x, y, radius, startingAngle (radians), endingAngle (radians), antiClockwise (boolean)
+  ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, lastend, lastend + (Math.PI * 2 * (data[i] / myTotal)), false);
+  ctx.lineTo(canvas.width / 2, canvas.height / 2);
+  ctx.fill();
+  lastend += Math.PI * 2 * (data[i] / myTotal);
+}
+
+document.getElementById("swatch1").innerHTML = rnd_no1*10 + "% Coursework";
+document.getElementById("swatch2").innerHTML = rnd_no2*10 + "% Practical";
+document.getElementById("swatch3").innerHTML = rnd_no3*10 + "% Placement";
+
+setTimeout(start, 2000);
+}
+
+window.onload=start;
+
+</script>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+p {
+	padding: 10px 20px 0 10px;
+}
+#can {
+	background-color: #fff;
+	width: 150px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	vertical-align: top;
+	float: left;
+}
+#swatch1, #swatch2, #swatch3 {
+	color: #fff;
+	font-weight: bold;
+	float: left;
+	width: 150px;
+}
+#swatch1 {
+	color: #f90;
+}
+#swatch2 {
+	color: #39c;
+}
+#swatch3 {
+	color: #9c9;
+}
+.container {
+	width: 150px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 40px 0;
+	z-index: 1;
+}
+.fullw {
+	width: 100%;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 20px;
+}
+.circle {
+	position: absolute;
+	z-index: 2;
+	width: 132px;
+}
+</style>
+</head>
+
+<body>
+<div class="fullw">
+  <div class="container">
+    <canvas id="can" width="640" height="640"></canvas>
+    <div class="circle"><img src="images/whitecircle.png" width="150" alt=""></div>
+    <p id="swatch1">60% Coursework</p>
+    <p id="swatch2">30% Practical</p>
+    <p id="swatch3">10% Placement</p>
+  </div>
+</div>
+</body>
+</html>

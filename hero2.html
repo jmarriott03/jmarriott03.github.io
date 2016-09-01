@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Hero image</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+h2, p {
+	padding: 0 20px 10px 20px;
+	float: left;
+	clear: both;
+}
+a {
+	color: #08c;
+	font-weight: bold;
+}
+.box {
+	overflow: hidden;
+	float: left;
+	background: rgba(256,256,256,0.9);
+	padding: 20px 0 0 0;
+	width: 50%;
+}
+.wrapper {
+	max-width: 1024px;
+	overflow: hidden;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+	margin: 10px 20px;
+	padding: 10px;
+	clear: both;
+}
+td {
+	padding: 5px;
+	text-align: left;
+	border: 1px solid #666;
+}
+.fullb {
+	background-color: #222;
+	overflow: hidden;
+	background: url(images/1280x720hero2.jpg) no-repeat center right fixed;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.buttonstyle {
+	padding: 10px;
+	background-color: #08c;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 10px 20px 10px 0;
+	min-width: 170px;
+}
+.ucas {
+	padding: 10px;
+	background-color: #e42438;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 10px 20px 10px 0;
+	min-width: 170px;
+}
+tr:nth-child(even) {
+	background-color: #efefef;
+}
+tr:nth-child(odd) {
+	background-color: #fff;
+}
+.box img {
+	width: 100%;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media only screen and (max-width: 799px) {
+.box {
+	width: 100%;
+	background-color: #fff;
+}
+}
+@media only screen and (min-width: 800px) {
+.box {
+	width: 50%;
+}
+.box img {
+	display: none;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="fullb">
+  <div class="wrapper">
+    <div class="box">
+      <p><a href="#">School of Architecture, Design and Environment</a></p>
+      <h2>BSc (Hons) ARCHITECTURAL ENGINEERING</h2>
+      <table>
+        <tr>
+          <td>UCAS tariff</td>
+          <td><strong>280</strong></td>
+        </tr>
+        <tr>
+          <td>UCAS course code</td>
+          <td><strong>K236</strong></td>
+        </tr>
+        <tr>
+          <td>Institution code</td>
+          <td><strong>P60</strong></td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td><strong>3 years (+optional placement)</strong></td>
+        </tr>
+        <tr>
+          <td>Course type</td>
+          <td><strong>Full-time</strong></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><strong>Plymouth</strong></td>
+        </tr>
+      </table>
+      <p><a href="#" class="ucas">Apply via UCAS</a><a href="#" class="buttonstyle">Admissions enquiry</a><a href="#" class="buttonstyle">Visit an open day</a><a href="#" class="buttonstyle">Download prospectus</a></p>
+      <p>Applying engineering principles and technology to building design and construction, you'll develop the knowledge and skills necessary for a successful career as an architectural engineer. The combination of lectures, design workshops, field trips, site visits, tutorials with industry partners and an optional year-long paid industry placement, will prepare you for a range of routes in the built environment sector including design engineering, project management and architectural consultancy.</p>
+      <p><img src="images/1280x720hero2.jpg" alt=""></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

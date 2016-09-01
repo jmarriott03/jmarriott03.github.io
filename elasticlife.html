@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Elastic life 2</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+h2 {
+	font-family: sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	padding: 20px;
+}
+a {
+	color: #000;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.fullb {
+	width: 100%;
+	background-color: #000;
+	overflow: hidden;
+	float: left;
+	color: #fff;
+	clear: both;
+}
+.fullw {
+	width: 100%;
+	background-color: #fff;
+	overflow: hidden;
+	float: left;
+	color: #000;
+	clear: both;
+}
+.widtha {
+	max-width: 1040px;
+	overflow: hidden;
+}
+.hero1 {
+	width: 50%;
+	padding-bottom: 50%;
+	background: url(images/sl1332949d.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.hero2 {
+	width: 25%;
+	padding-bottom: 25%;
+	background: url(images/sl1522190.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.hero3 {
+	width: 25%;
+	padding-bottom: 25%;
+	background: url(images/sl1530143.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.hero4 {
+	width: 25%;
+	padding-bottom: 25%;
+	background: url(images/sl1479825.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.hero5 {
+	width: 25%;
+	padding-bottom: 25%;
+	background: url(images/sl1508814.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.third1 {
+	width: 33.33%;
+	padding-bottom: 33.33%;
+	background: url(images/third1.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.third2 {
+	width: 33.33%;
+	padding-bottom: 33.33%;
+	background: url(images/third2.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.third3 {
+	width: 33.33%;
+	padding-bottom: 33.33%;
+	background: url(images/third3.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.half1 {
+	width: 50%;
+	padding-bottom: 50%;
+	background: url(images/sl1332949d.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.half2 {
+	width: 50%;
+	padding-bottom: 50%;
+	background: url(images/sl1522190.jpg) center center no-repeat;
+	float: left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.twothird {
+	width: 66%;
+	overflow: hidden;
+	float: left;
+}
+.textbox {
+	color: #fff;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 2;
+	width: 100%;
+	background-image: url(images/666.png);
+	float: left;
+}
+.textboxtop {
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	width: 100%;
+	background-image: url(images/666.png);
+	float: left;
+}
+.textbox a, .textboxtop a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+p {
+	padding: 20px;
+	margin: 0;
+}
+.padtopb {
+	padding: 10px 0;
+}
+.fullw .widtha .twothird p a {
+	color: #000;
+}
+.fullb .widtha .twothird p a {
+	color: #fff;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+ @media screen and (max-width: 599px) {
+.hero1, .hero2, .hero3, .hero4, .hero5 {
+	width: 100%;
+	padding-bottom: 100%;
+	margin-bottom: 10px;
+}
+.third1, .third2, .third3 {
+	width: 100%;
+	padding-bottom: 100%;
+	margin-bottom: 10px;
+}
+.half1, .half2 {
+	width: 100%;
+	padding-bottom: 100%;
+	margin-bottom: 10px;
+}
+.twothird {
+	width: 100%;
+}
+}
+ @media screen and (min-width: 600px) and (max-width: 899px) {
+.hero1 {
+	width: 66%;
+	padding-bottom: 66%;
+}
+.hero2, .hero3 {
+	width: 34%;
+	padding-bottom: 34%;
+}
+.hero4, .hero5 {
+	width: 50%;
+	padding-bottom: 50%;
+}
+.third1, .third2, .third3 {
+	width: 33.33%;
+	padding-bottom: 33.33%;
+}
+.half1, .half2 {
+	width: 50%;
+	padding-bottom: 50%;
+}
+.twothird {
+	width: 100%;
+	max-width: 640px;
+}
+}
+ @media screen and (min-width: 900px) {
+.hero1 {
+	width: 50%;
+	padding-bottom: 50%;
+}
+.hero2, .hero3, .hero4, .hero5 {
+	width: 25%;
+	padding-bottom: 25%;
+}
+.third1, .third2, .third3 {
+	width: 33.33%;
+	padding-bottom: 33.33%;
+}
+.half1, .half2 {
+	width: 50%;
+	padding-bottom: 50%;
+}
+.twothird {
+	width: 640px;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="widtha">
+  <p><img src="images/student-life-150b.gif" width="160" alt=""/></p>
+  <p><a href="#">Home</a> | Student life</p>
+</div>
+<div class="fullb">
+  <div class="widtha">
+    <div class="hero1">
+      <div class="textbox">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></p>
+      </div>
+    </div>
+    <div class="hero2">
+      <div class="textbox">
+        <p>Ut enim ad minim veniam, quis nostrud exercitation <a href="#">ullamco laboris nisi</a></p>
+      </div>
+    </div>
+    <div class="hero3">
+      <div class="textbox">
+        <p>Duis aute irure <a href="#">dolor in reprehenderit</a> in voluptate velit esse</p>
+      </div>
+    </div>
+    <div class="hero4">
+      <div class="textbox">
+        <p>Excepteur sint occaecat cupidatat non proident, <a href="#">sunt in culpa qui officia</a></p>
+      </div>
+    </div>
+    <div class="hero5">
+      <div class="textbox">
+        <p>Deserunt mollit anim id <a href="#">est laborum</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fullw padtopb">
+  <div class="widtha">
+  <h2>Living it, learning it, loving it</h2>
+    <div class="third1">
+      <div class="textboxtop">
+        <p><a href="#">The best things in Plymouth. . . Nightlife</a></p>
+      </div>
+    </div>
+    <div class="third2">
+      <div class="textbox">
+        <p><a href="#">Making friends in your first year</a></p>
+      </div>
+    </div>
+    <div class="third3">
+      <div class="textbox">
+        <p><a href="#">Cooking for one</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fullb">
+  <div class="widtha">
+    <div class="twothird">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut <a href="#">aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</a> velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
+<div class="fullw">
+  <div class="widtha">
+    <div class="twothird">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a href="#">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

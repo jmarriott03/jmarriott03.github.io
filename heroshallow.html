@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>About Us</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+h2 {
+	font-size: 24px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+h2, p {
+	padding: 0 20px 10px 20px;
+	float: left;
+	clear: both;
+}
+.box {
+	overflow: hidden;
+	float: center;
+	background: rgba(256,256,256,0.9);
+	padding: 20px 0 0 0;
+	width: 50%;
+}
+.wrapper {
+	max-width: 1024px;
+	overflow: hidden;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+	margin: 10px 20px;
+	padding: 10px;
+	clear: both;
+}
+.fullb {
+	background-color: #222;
+	overflow: hidden;
+	background: url(images/inkwater.jpg) no-repeat center center fixed;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.box img {
+	width: 100%;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media only screen and (max-width: 799px) {
+.box {
+	width: 100%;
+	background-color: #fff;
+}
+}
+@media only screen and (min-width: 800px) {
+.box {
+	width: 50%;
+}
+.box img {
+	display: none;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="fullb">
+  <div class="wrapper">
+    <div class="box">
+      <h2>About Plymouth University</h2>
+      <p>Our organisation, mission, vision and values</p>
+      <p><img src="images/inkwater.jpg" alt=""></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

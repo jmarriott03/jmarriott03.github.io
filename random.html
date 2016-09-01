@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Random icon</title>
+<script type="text/javascript">
+var img_name = new Array("&", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<", "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "[", "]", "^", "_", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "l", "m", "n", "p", "r", "t", "u", "w", "y");
+var l = img_name.length;
+
+var colours = new Array();
+colours[0] = "#a80075";
+colours[1] = "#c74a8d";
+colours[2] = "#c1004a";
+colours[3] = "#e09e33";
+colours[4] = "#f3d213";
+colours[5] = "#7b77a5";
+colours[6] = "#5391ca";
+colours[7] = "#7fbfd7";
+colours[8] = "#9fcac5";
+colours[9] = "#b4c960";
+colours[10] = "#1d347e";
+colours[11] = "#3c3e6f";
+colours[12] = "#747376";
+
+function start(id){
+
+var rnd_no = Math.floor(l*Math.random());
+document.getElementById('iconfont').innerHTML = img_name[rnd_no];
+
+var b = Math.floor(Math.random()*colours.length);
+document.getElementById("iconfont").style.color = colours[b];
+
+setTimeout(start, 300);
+}
+
+window.onload=start;
+
+</script>
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7k-webfont.eot');
+	src: url('fonts/icon7k-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7k-webfont.woff') format('woff'), url('fonts/icon7k-webfont.ttf') format('truetype'), url('fonts/icon7k-webfont.svg#neuzeit-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+#iconfont {
+	font-family: 'icon', sans-serif;
+	font-size: 500px;
+	line-height: 390px;
+	font-weight: normal;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -250px 0 0 -250px;
+	width: 500px;
+	height: 500px;
+}
+</style>
+</head>
+
+<body>
+<div id="iconfont">X</div>
+</body>
+</html>
