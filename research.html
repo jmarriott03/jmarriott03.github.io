@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+@font-face {
+	font-family: 'source-light';
+	src: url('fonts/SourceSansPro-Light-webfont.eot');
+	src: url('fonts/SourceSansPro-Light-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SourceSansPro-Light-webfont.woff') format('woff'), url('fonts/SourceSansPro-Light-webfont.ttf') format('truetype'), url('fonts/SourceSansPro-Light-webfont.svg#source-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'source-regular';
+	src: url('fonts/SourceSansPro-Regular-webfont.eot');
+	src: url('fonts/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SourceSansPro-Regular-webfont.woff') format('woff'), url('fonts/SourceSansPro-Regular-webfont.ttf') format('truetype'), url('fonts/SourceSansPro-Regular-webfont.svg#source-regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'source-bold';
+	src: url('fonts/SourceSansPro-Bold-webfont.eot');
+	src: url('fonts/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SourceSansPro-Bold-webfont.woff') format('woff'), url('fonts/SourceSansPro-Bold-webfont.ttf') format('truetype'), url('fonts/SourceSansPro-Bold-webfont.svg#source-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'source-italic';
+	src: url('fonts/SourceSansPro-It-webfont.eot');
+	src: url('fonts/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/SourceSansPro-It-webfont.woff') format('woff'), url('fonts/SourceSansPro-It-webfont.ttf') format('truetype'), url('fonts/SourceSansPro-It-webfont.svg#source-italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7n-webfont.eot');
+	src: url('fonts/icon7n-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7n-webfont.woff') format('woff'), url('fonts/icon7n-webfont.ttf') format('truetype'), url('fonts/icon7n-webfont.svg#icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	margin-right: 5px;
+	color: #8c9682;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 10px;
+}
+html, body {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+}
+body {
+	font-family: 'source-regular', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 30px;
+	color: #000;
+	background-color: #fafafa;
+}
+h1 {
+	font-family: 'source-light', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: normal;
+}
+h1 a {
+	color: #fff;
+	font-weight: normal;
+}
+h2 {
+	font-family: 'source-light', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: normal;
+}
+a {
+	color: #8e9b89;
+	font-family: 'source-bold', Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+em {
+	font-family: 'source-italic', Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.container {
+	max-width: 960px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+.herotext {
+	margin: 0;
+	background: rgba(140,150,130,0.6);
+	padding: 20px;
+	position: absolute;
+	bottom: 0px;
+	color: #fff;
+}
+.fullw {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+.fullw img {
+	max-width: 960px;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 20px;
+}
+.crest {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	width: 10%;
+	max-width: 80px;
+	min-width: 50px;
+}
+.researchtext {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-weight: normal;
+	color: #fff;
+	margin: 0;
+	background: rgba(0,0,0,0.6);
+	padding: 10px;
+}
+.theme01 {
+	background-color: #000;
+	color: #fff;
+}
+.theme01 a {
+	color: #c1cabe;
+}
+.forty {
+	width: 40%;
+	float: left;
+}
+.fifty {
+	width: 50%;
+	float: left;
+}
+.sixty {
+	width: 60%;
+	float: left;
+}
+.buttonstyle {
+	padding: 10px;
+	background-color: #8e9b89;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin: 0 20px 10px 0;
+}
+.staffquote {
+	padding: 0 0 0 60px;
+	position: relative;
+	min-width: 240px;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	margin: 6px 0 0 0;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 800px) {
+.container {
+	width: auto;
+}
+.forty, .fifty, .sixty {
+	width: 100%;
+}
+.herotext {
+	position: inherit;
+	background-color: #8c9682;
+}
+.researchtext {
+	position: inherit;
+	background-color: #000;
+}
+}
+</style>
+<script type="text/javascript">//<![CDATA[ 
+//]]>
+</script>
+</head>
+
+<body>
+<div class="fullw theme01">
+  <div class="container"><img src="images/1280x480-1522167.jpg" alt=""/>
+    <div class="crest"><img src="images/crestblack200.png" alt=""/></div>
+    <div class="researchtext">Faculty of Arts and Humanities > The Arts Institute</div>
+    <div class="herotext">
+      <h1>Arts and Humanities Doctoral Training Centre</h1>
+      <p>Become part of a scholarly community that proudly includes a wide range of approaches and disciplines</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="fifty borderbox theme01">
+    <p>As a research degree student within the Faculty of Arts and Humanities, you will become part of a scholarly community that proudly includes a wide range of approaches and disciplines. The majority of Plymouth's doctoral students are based at Plymouth University, with a dedicated supervisory team. Some are based at one of our doctoral 'nodes' such as the <a href="#">Transart Institute</a> and the <a href="#">Planetary Collegium.</a></p>
+  </div>
+  <div class="fifty borderbox">
+    <p>Additionally, some Plymouth PhD students are members of the <a href="#">3D3 Centre for Doctoral Training</a>, a partnership between Falmouth University, Plymouth University and the University of the West of England, Bristol (UWE Bristol), funded by the <a href="#">Arts & Humanities Research Council (AHRC).</a></p>
+  </div>
+</div>
+<div class="container">
+  <div class="fifty borderbox"><img src="images/research1280x720a.jpg" alt=""/>
+    <h2>3D3 masters studentships at Plymouth</h2>
+    <p><a href="#">Applications are invited for a research masters studentship</a> to undertake a ResM or MRes programme that includes a practice-led individual research project in the digital arts, design, media and/or performance.</p>
+  </div>
+  <div class="fifty borderbox"><img src="images/research1280x720c.jpg" alt=""/>
+    <h2>PhD studentships at Plymouth</h2>
+    <p><a href="#"><a href="#">Applications are invited for PhD studentships</a> to undertake practice-led research projects that focus on any area of digital arts, design, media and/or performance. Up to three studentships will be available at Plymouth University.</p>
+  </div>
+</div>
+<div class="fullw theme01">
+  <div class="container">
+    <div class="fifty borderbox">
+      <h2>Contact us</h2>
+      <div class="staffquote">
+        <p><a href="#"><strong><img src="images/people5.jpg" alt="">Dr John Doe</strong></a><br>
+          Associate Professor <em>(Senior Lecturer)</em> in Theatre & Performance
+          
+          School of Humanities and Performing Arts <em>(Faculty of Arts & Humanities)</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+	
