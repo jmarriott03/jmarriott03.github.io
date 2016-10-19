@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700,700i" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7n-webfont.eot');
+	src: url('fonts/icon7n-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7n-webfont.woff') format('woff'), url('fonts/icon7n-webfont.ttf') format('truetype'), url('fonts/icon7n-webfont.svg#iconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 20px;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+}
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #000;
+	background-color: #eee;
+}
+h2 {
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.container {
+	max-width: 960px;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 20px;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+@-moz-keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+@-webkit-keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+@-o-keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+@keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+.fadein1 {
+	-moz-animation: fadein 1s ease-in;
+	-webkit-animation: fadein 1s ease-in;
+	-o-animation: fadein 1s ease-in;
+	animation: fadein 1s ease-in;
+}
+.fadein2 {
+	opacity: 0;
+	-moz-animation: fadein 1s ease-in 3s forwards;
+	-webkit-animation: fadein 1s ease-in 3s forwards;
+	-o-animation: fadein 1s ease-in 3s forwards;
+	animation: fadein 1s ease-in 3s forwards;
+	margin: 0;
+}
+.buttonstyle a {
+	padding: 10px;
+	background-color: #08c;
+	float: left;
+	box-shadow: 2px 2px 2px #ccc;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+#input {
+	margin: 0;
+}
+.news {
+	margin: 0;
+}
+</style>
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+function doWithInterval(id, sentence)
+{
+    var f;
+    f= function(i){
+        document.getElementById(id).innerHTML+=sentence[i];
+        if(i+1==sentence.length)
+           return;
+        window.setTimeout(function(){f(i+1);},20);
+    }
+    f(0);
+}
+
+doWithInterval("input","Top 100 globally, 19th in UK: 2015 CWTS Leiden Rankings for the quality and influence of Plymouth University's research");
+}
+
+function myFunction() {
+    location.reload();
+}
+//]]> 
+
+</script>
+</head>
+
+<body>
+<div class="container borderbox">
+  <div class="buttonstyle">
+    <p><a href="#" onclick="myFunction();">Play animations again</a></p>
+  </div>
+</div>
+<div class="container borderbox">
+  <h2> A) With icon</h2>
+  <div class="news">
+    <p><span class="iconfont">{</span> Top 100 globally, 19th in UK: 2015 CWTS Leiden Rankings for the quality and influence of Plymouth University's research</p>
+  </div>
+</div>
+<div class="container borderbox">
+  <h2>B) Delay, fade in</h2>
+  <div class="fadein2">
+    <p>Top 100 globally, 19th in UK: 2015 CWTS Leiden Rankings for the quality and influence of Plymouth University's research</p>
+  </div>
+</div>
+<div class="container borderbox">
+  <h2>C) Typewriter</h2>
+  <div id='input'></div>
+</div>
+</body>
+</html>
