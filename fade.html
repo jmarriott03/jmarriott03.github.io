@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px
+}
+body {
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #000;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.two {
+	width: 50%;
+	margin: 0;
+}
+.three {
+	width: 33.333%;
+	margin: 0;
+}
+.four {
+	width: 25%;
+	margin: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+ @-moz-keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+@-webkit-keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+@-o-keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+@keyframes fadein {
+ from {
+opacity:0;
+}
+to {
+opacity: 1;
+}
+}
+.fadein1 {
+	-moz-animation: fadein 1s ease-in;
+	-webkit-animation: fadein 1s ease-in;
+	-o-animation: fadein 1s ease-in;
+	animation: fadein 1s ease-in;
+}
+.fadein2 {
+	opacity: 0;
+	-moz-animation: fadein 1s ease-in 1s forwards;
+	-webkit-animation: fadein 1s ease-in 1s forwards;
+	-o-animation: fadein 1s ease-in 1s forwards;
+	animation: fadein 1s ease-in 1s forwards;
+}
+.fadein3 {
+	opacity: 0;
+	-moz-animation: fadein 1s ease-in 2s forwards;
+	-webkit-animation: fadein 1s ease-in 2s forwards;
+	-o-animation: fadein 1s ease-in 2s forwards;
+	animation: fadein 1s ease-in 2s forwards;
+}
+.fadein4 {
+	opacity: 0;
+	-moz-animation: fadein 1s ease-in 3s forwards;
+	-webkit-animation: fadein 1s ease-in 3s forwards;
+	-o-animation: fadein 1s ease-in 3s forwards;
+	animation: fadein 1s ease-in 3s forwards;
+}
+.fadein5 {
+	opacity: 0;
+	-moz-animation: fadein 1s ease-in 4s forwards;
+	-webkit-animation: fadein 1s ease-in 4s forwards;
+	-o-animation: fadein 1s ease-in 4s forwards;
+	animation: fadein 1s ease-in 4s forwards;
+}
+.fadein6 {
+	opacity: 0;
+	-moz-animation: fadein 1s ease-in 5s forwards;
+	-webkit-animation: fadein 1s ease-in 5s forwards;
+	-o-animation: fadein 1s ease-in 5s forwards;
+	animation: fadein 1s ease-in 5s forwards;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 38em) {
+.four {
+	width: 50%;
+}
+}
+</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+function goToByScroll(id){
+   			$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+				}
+
+function keyscroll(e){
+var evtobj=window.event? event : e
+var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
+var actualkey=String.fromCharCode(unicode)
+if (actualkey=="1") $('html,body').animate({scrollTop: $("#P1").offset().top},'slow');
+if (actualkey=="2") $('html,body').animate({scrollTop: $("#P2").offset().top},'slow');
+if (actualkey=="3") $('html,body').animate({scrollTop: $("#P3").offset().top},'slow');
+if (actualkey=="4") $('html,body').animate({scrollTop: $("#P4").offset().top},'slow');
+if (actualkey=="5") $('html,body').animate({scrollTop: $("#P5").offset().top},'slow');
+if (actualkey=="6") $('html,body').animate({scrollTop: $("#P6").offset().top},'slow');
+if (actualkey=="7") $('html,body').animate({scrollTop: $("#P7").offset().top},'slow');
+if (actualkey=="0") $('html,body').animate({scrollTop: $("#P0").offset().top},'slow');
+}
+
+document.onkeypress=keyscroll
+
+
+$(document).ready(function(){
+	$(document).ready(function(){
+    setInterval(function() {
+		
+    $('.fadea').each( function(){
+        var bottom_of_object = $(this).position().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).delay(200).animate({'opacity':'1'},300);
+        }
+		
+		else if( bottom_of_window < $(this).position().top ){
+            $(this).stop(true, true).css({ opacity: 0 });
+        }
+    });
+	
+	$('.fadeb').each( function(){
+        var bottom_of_object = $(this).position().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).delay(400).animate({'opacity':'1'},300);
+        }
+		
+		else if( bottom_of_window < $(this).position().top ){
+            $(this).stop(true, true).css({ opacity: 0 });
+        }
+    });
+	
+	$('.fadec').each( function(){
+        var bottom_of_object = $(this).position().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).delay(600).animate({'opacity':'1'},300);
+        }
+		
+		else if( bottom_of_window < $(this).position().top ){
+            $(this).stop(true, true).css({ opacity: 0 });
+        }
+    });
+	
+	$('.faded').each( function(){
+        var bottom_of_object = $(this).position().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).delay(800).animate({'opacity':'1'},300);
+        }
+		
+		else if( bottom_of_window < $(this).position().top ){
+            $(this).stop(true, true).css({ opacity: 0 });
+        }
+    });
+	}, 100);
+});
+})
+
+/* ]]> */
+</script>
+</head>
+<body>
+<div class="textbox borderbox">
+  <p><strong>Did you know:</strong></p>
+  <ul>
+    <li class="fadein1">Brain tumours are the biggest cancer killer of children and adults under 40?</li>
+    <li class="fadein2">Around 16,000 people a year in the UK are diagnosed with a brain tumour?</li>
+    <li class="fadein3">58 per cent of sufferers die within a year of diagnosis, compared with four per cent for breast cancer and six per cent for prostate cancer?</li>
+    <li class="fadein4">Brain tumours kill twice as many women as cervical cancer, and more men under the age of 45 than prostate or any other cancer?</li>
+    <li class="fadein5">In the average patient, brain tumours are responsible for 20 lost years of life?</li>
+    <li class="fadein6">The South West has the highest rate of brain tumours diagnosed per million in England?</li>
+  </ul>
+</div>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2 class="fadea">JX</h2>
+<h2>Jamie Marriott</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="fullw"><img src="images/mono1.jpg" alt="" class="four fadea"/><img src="images/mono2.jpg" alt="" class="four fadeb"/><img src="images/mono3.jpg" alt="" class="four fadec"/><img src="images/mono4.jpg" alt="" class="four faded"/></div>
+<div class="textbox borderbox">
+  <h2>Jamie Marriott - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+  <p>Professional development review Wednesday 29 April 2015</p>
+  <p class="ellipsis"><a href="#">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</a></p>
+  <p><strong>Projects</strong></p>
+  <ul>
+    <li>New website</li>
+    <li><strong><em>Digital screen</em></strong></li>
+    <li><em>Customer relationship</em> management (CRM) <a href="#" class="visited nowrap">visited no wrap link</a></li>
+    <li>Project 1</li>
+    <li>Project 2</li>
+  </ul>
+</div>
+</body>
+</html>
