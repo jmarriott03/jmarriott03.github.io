@@ -20,10 +20,11 @@ html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	font-size: 20px
+	font-size: 20px;
+	height: 100%;
 }
 body {
-	font-family: sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1em;
 	line-height: 1.25em;
 	color: #000;
@@ -32,7 +33,7 @@ body {
 h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
-	font-weight: 400;
+	font-weight: 300;
 }
 a {
 	color: #00f;
@@ -92,80 +93,93 @@ img {
 	overflow: hidden;
 	margin: 0;
 }
- @-moz-keyframes fadein {
- from {
-opacity:0;
+.coverpic {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	overflow: hidden;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image: url(images/1280x720-160425c.jpg);
+	background-position: 60% top;
+	background-repeat: no-repeat;
 }
-to {
-opacity: 1;
+.absolutebottom {
+	height: 40px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+}
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -moz-transform: translateY(-15px);
+ transform: translateY(-15px);
 }
 }
-@-webkit-keyframes fadein {
- from {
-opacity:0;
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
 }
-to {
-opacity: 1;
+ 40% {
+ -webkit-transform: translateY(-30px);
+ transform: translateY(-30px);
 }
-}
-@-o-keyframes fadein {
- from {
-opacity:0;
-}
-to {
-opacity: 1;
+ 60% {
+ -webkit-transform: translateY(-15px);
+ transform: translateY(-15px);
 }
 }
-@keyframes fadein {
- from {
-opacity:0;
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
 }
-to {
-opacity: 1;
+ 40% {
+ -moz-transform: translateY(-20px);
+ -ms-transform: translateY(-20px);
+ -webkit-transform: translateY(-20px);
+ transform: translateY(-20px);
+}
+ 60% {
+ -moz-transform: translateY(-10px);
+ -ms-transform: translateY(-10px);
+ -webkit-transform: translateY(-10px);
+ transform: translateY(-10px);
 }
 }
-.fadein1 {
-	-moz-animation: fadein 1s ease-in;
-	-webkit-animation: fadein 1s ease-in;
-	-o-animation: fadein 1s ease-in;
-	animation: fadein 1s ease-in;
+.bounce {
+	-moz-animation: bounce 2s 2;
+	-webkit-animation: bounce 2s 2;
+	animation: bounce 2s 2;
 }
-.fadein2 {
-	opacity: 0;
-	-moz-animation: fadein 1s ease-in 1s forwards;
-	-webkit-animation: fadein 1s ease-in 1s forwards;
-	-o-animation: fadein 1s ease-in 1s forwards;
-	animation: fadein 1s ease-in 1s forwards;
+.topleft {
+	position: fixed;
+	width: 4em;
+	left: 0;
+	top: 0;
+	float: left;
+	margin: 1em;
+	z-index: 1;
 }
-.fadein3 {
-	opacity: 0;
-	-moz-animation: fadein 1s ease-in 2s forwards;
-	-webkit-animation: fadein 1s ease-in 2s forwards;
-	-o-animation: fadein 1s ease-in 2s forwards;
-	animation: fadein 1s ease-in 2s forwards;
+.topleft img {
+	width: 100%;
 }
-.fadein4 {
-	opacity: 0;
-	-moz-animation: fadein 1s ease-in 3s forwards;
-	-webkit-animation: fadein 1s ease-in 3s forwards;
-	-o-animation: fadein 1s ease-in 3s forwards;
-	animation: fadein 1s ease-in 3s forwards;
-}
-.fadein5 {
-	opacity: 0;
-	-moz-animation: fadein 1s ease-in 4s forwards;
-	-webkit-animation: fadein 1s ease-in 4s forwards;
-	-o-animation: fadein 1s ease-in 4s forwards;
-	animation: fadein 1s ease-in 4s forwards;
-}
-.fadein6 {
-	opacity: 0;
-	-moz-animation: fadein 1s ease-in 5s forwards;
-	-webkit-animation: fadein 1s ease-in 5s forwards;
-	-o-animation: fadein 1s ease-in 5s forwards;
-	animation: fadein 1s ease-in 5s forwards;
-}
-
 /*
    ____               _ _                                
   / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
@@ -185,23 +199,6 @@ opacity: 1;
 function goToByScroll(id){
    			$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 				}
-
-function keyscroll(e){
-var evtobj=window.event? event : e
-var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
-var actualkey=String.fromCharCode(unicode)
-if (actualkey=="1") $('html,body').animate({scrollTop: $("#P1").offset().top},'slow');
-if (actualkey=="2") $('html,body').animate({scrollTop: $("#P2").offset().top},'slow');
-if (actualkey=="3") $('html,body').animate({scrollTop: $("#P3").offset().top},'slow');
-if (actualkey=="4") $('html,body').animate({scrollTop: $("#P4").offset().top},'slow');
-if (actualkey=="5") $('html,body').animate({scrollTop: $("#P5").offset().top},'slow');
-if (actualkey=="6") $('html,body').animate({scrollTop: $("#P6").offset().top},'slow');
-if (actualkey=="7") $('html,body').animate({scrollTop: $("#P7").offset().top},'slow');
-if (actualkey=="0") $('html,body').animate({scrollTop: $("#P0").offset().top},'slow');
-}
-
-document.onkeypress=keyscroll
-
 
 $(document).ready(function(){
 	$(document).ready(function(){
@@ -258,78 +255,42 @@ $(document).ready(function(){
 });
 })
 
+$(window).scroll(function () {
+	scrollValue = $(document).scrollTop();
+	if (scrollValue > 0){
+		$(".absolutebottom").fadeOut(200);
+		$(".topleft").fadeOut(200);
+		}
+		else{
+			$(".absolutebottom").fadeIn(200);
+			$(".topleft").fadeIn(200);
+			}
+			});
 /* ]]> */
 </script>
 </head>
 <body>
-<div class="textbox borderbox">
-  <p><strong>Did you know:</strong></p>
-  <ul>
-    <li class="fadein1">Brain tumours are the biggest cancer killer of children and adults under 40?</li>
-    <li class="fadein2">Around 16,000 people a year in the UK are diagnosed with a brain tumour?</li>
-    <li class="fadein3">58 per cent of sufferers die within a year of diagnosis, compared with four per cent for breast cancer and six per cent for prostate cancer?</li>
-    <li class="fadein4">Brain tumours kill twice as many women as cervical cancer, and more men under the age of 45 than prostate or any other cancer?</li>
-    <li class="fadein5">In the average patient, brain tumours are responsible for 20 lost years of life?</li>
-    <li class="fadein6">The South West has the highest rate of brain tumours diagnosed per million in England?</li>
-  </ul>
+<div class="coverpic" id="P0"></div>
+<div class="topleft"><img src="images/crest400white.png" alt=""/></div>
+<div class="absolutebottom bounce">
+  <p><a href="javascript:void(0)" onclick="goToByScroll('P1');"><img src="images/arrowdown.png" width="50" height="30" alt=""></a></p>
 </div>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2 class="fadea">JX</h2>
-<h2>Jamie Marriott</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="textbox borderbox" id="P1">	
+  <h2>Undergraduate open day</h2>
+  <p>Student ambassadors and members of staff welcome you to the campus and help you get the most out of your open day.</p>
+  <h2>Programme</h2>
+  <p>To help you plan your day in advance we will send you a copy of the programme one week before the day.</p>
+  <p>A full printed version of the programme will also be available for you to collect from registration when you arrive at the Open Day.</p>
 </div>
 <div class="fullw"><img src="images/mono1.jpg" alt="" class="four fadea"/><img src="images/mono2.jpg" alt="" class="four fadeb"/><img src="images/mono3.jpg" alt="" class="four fadec"/><img src="images/mono4.jpg" alt="" class="four faded"/></div>
 <div class="textbox borderbox">
-  <h2>Jamie Marriott - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-  <p>Professional development review Wednesday 29 April 2015</p>
-  <p class="ellipsis"><a href="#">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</a></p>
-  <p><strong>Projects</strong></p>
-  <ul>
-    <li>New website</li>
-    <li><strong><em>Digital screen</em></strong></li>
-    <li><em>Customer relationship</em> management (CRM) <a href="#" class="visited nowrap">visited no wrap link</a></li>
-    <li>Project 1</li>
-    <li>Project 2</li>
-  </ul>
+  
+  <h2>Arrival</h2>
+  <p>The undergraduate open day runs from 9.00am until 4.30pm.</p>
+  <p>On arrival to the campus, please collect your goody bag and register your attendance with a member of the registration team in the Roland Levinsky Building.</p>
+  <p>The registration team will talk you through the programme for the day and answer any questions you may have.</p>
+  <p>We strongly advise that you check the times of the talks and subject sessions that you are interested in, as some sessions are only run once.</p>
+  <p><a href="javascript:void(0)" onclick="goToByScroll('P0');">Back to top</a></p>
 </div>
 </body>
 </html>
