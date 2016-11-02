@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700,700i" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'digitalclock';
+	src: url('fonts/digitalclock-webfont.eot');
+	src: url('fonts/digitalclock-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/digitalclock-webfont.woff') format('woff'), url('fonts/digitalclock-webfont.ttf') format('truetype'), url('fonts/digitalclock-webfont.svg#digitalclock') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.digitalclock {
+	font-family: 'digitalclock', sans-serif;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px
+}
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #000;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+#clockdiv {
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+}
+#clockdiv > div {
+	padding: 0.5em;
+	border-radius: 0.25em;
+	background: #222;
+	display: inline-block;
+}
+#clockdiv div > span {
+	padding-top: 0.25em;
+	display: inline-block;
+	font-size: 3em;
+	color: #f00;
+	text-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
+}
+.smalltext {
+	font-size: 0.75em;
+	margin: 0;
+}
+#clockdiv2 {
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+}
+#clockdiv2 > div {
+	padding: 0.5em;
+	border-radius: 0.25em;
+	background: #ccc;
+	display: inline-block;
+	color: #000;
+}
+#clockdiv2 div > span {
+	padding: 0.5em;
+	border-radius: 0.25em;
+	display: inline-block;
+	font-size: 2em;
+	background: #000;
+	color: #fff;
+}
+.smalltext2 {
+	font-size: 1em;
+	margin: 0;
+}
+#clockdiv3 {
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+}
+#clockdiv3 > div {
+	border-radius: 0.25em;
+	padding: 1em;
+	background: #000;
+	display: inline-block;
+}
+#clockdiv3 div > span {
+	border-radius: 0.25em;
+	display: inline-block;
+	font-size: 2em;
+	background: #000;
+	color: #fff;
+}
+.smalltext3 {
+	font-size: 1em;
+	margin: 0;
+}
+</style>
+<script type="text/javascript">
+
+    CountDownTimer('12/25/2016 9:0 AM', 'digital_countdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'Expired!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + 'days, ';
+            document.getElementById(id).innerHTML += hours + 'hrs, ';
+            document.getElementById(id).innerHTML += minutes + 'mins, ';
+            document.getElementById(id).innerHTML += seconds + 'secs.';
+			
+			document.getElementById('days').innerHTML = days;
+			document.getElementById('hours').innerHTML = hours;
+			document.getElementById('minutes').innerHTML = minutes;
+			document.getElementById('seconds').innerHTML = seconds;
+			
+			document.getElementById('days2').innerHTML = days;
+			document.getElementById('hours2').innerHTML = hours;
+			document.getElementById('minutes2').innerHTML = minutes;
+			document.getElementById('seconds2').innerHTML = seconds;
+			
+			document.getElementById('days3').innerHTML = days;
+			document.getElementById('hours3').innerHTML = hours;
+			document.getElementById('minutes3').innerHTML = minutes;
+			document.getElementById('seconds3').innerHTML = seconds;
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+
+</script>
+</head>
+
+<body>
+<div class="textbox borderbox">
+  <h2>A) Text</h2>
+  <p id="digital_countdown" class="nowrap"></p>
+  <h2>B) Calendar</h2>
+  <div id="clockdiv2">
+    <div> <span id="days3"></span>
+      <div class="smalltext2">Days</div>
+    </div>
+    <div> <span id="hours3"></span>
+      <div class="smalltext2">Hours</div>
+    </div>
+    <div> <span id="minutes3"></span>
+      <div class="smalltext2">Minutes</div>
+    </div>
+    <div> <span id="seconds3"></span>
+      <div class="smalltext2">Seconds</div>
+    </div>
+  </div>
+  <h2>C) Mono digital font, small text</h2>
+  <div id="clockdiv3">
+    <div> <span id="days" class="digitalclock"></span>
+      <div class="smalltext">Days</div>
+    </div>
+    <div> <span id="hours" class="digitalclock"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div> <span id="minutes" class="digitalclock"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div> <span id="seconds" class="digitalclock"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
+  </div>
+  <h2>D) Red digital font, CSS3 glow</h2>
+  <div id="clockdiv">
+    <div> <span id="days2" class="digitalclock"></span>
+      <div class="smalltext2">Days</div>
+    </div>
+    <div> <span id="hours2" class="digitalclock"></span>
+      <div class="smalltext2">Hours</div>
+    </div>
+    <div> <span id="minutes2" class="digitalclock"></span>
+      <div class="smalltext2">Minutes</div>
+    </div>
+    <div> <span id="seconds2" class="digitalclock"></span>
+      <div class="smalltext2">Seconds</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
