@@ -30,7 +30,7 @@ body {
 	background-color: #ccc;
 	background-image: url(images/chalk.png)
 }
-h2 {	
+h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
 	font-weight: 400;
@@ -55,8 +55,8 @@ img {
 	width: 16em;
 }
 .container {
-	width: 18em;	
-	overflow: hidden;	
+	width: 18em;
+	overflow: hidden;
 	text-align: center;
 	margin-top: 2em;
 }
@@ -76,21 +76,19 @@ img {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-#clockdiv{
+#clockdiv {
 	color: #fff;
 	display: block;
 	text-align: center;
 	padding: 1em;
 }
-
-#clockdiv > div{
+#clockdiv > div {
 	padding: 0.25em;
 	border-radius: 0.125em;
 	background: #666;
 	display: inline-block;
 }
-
-#clockdiv div > span{
+#clockdiv div > span {
 	padding: 0.25em;
 	border-radius: 0.125em;
 	background: #222;
@@ -103,31 +101,26 @@ img {
 </style>
 </head>
 <body>
-<div class="container">
-<img src="images/nsslogo.png" alt=""/><div id="clockdiv">
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
+<div class="container"> <img src="images/nsslogo.png" alt=""/>
+  <div id="clockdiv">
+    <div> <span class="days"></span>
+      <div class="smalltext">Days</div>
+    </div>
+    <div> <span class="hours"></span>
+      <div class="smalltext">Hours</div>
+    </div>
+    <div> <span class="minutes"></span>
+      <div class="smalltext">Minutes</div>
+    </div>
+    <div> <span class="seconds"></span>
+      <div class="smalltext">Seconds</div>
+    </div>
   </div>
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext">Hours</div>
-  </div>
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
-  </div>
-</div><p><strong>Time is running out</strong><br>
-<a href="#">www.plymouth.ac.uk/studentsurveys</a><br>
-<br>
-<img src="images/nssinfographic.png" alt=""/></div>
-
-
-
+  <p><strong>Time to make your voice count</strong><br>
+    <a href="#">www.plymouth.ac.uk/studentsurveys</a><br>
+    <br>
+    <img src="images/nssinfographic.png" alt=""/>
+</div>
 <script type="text/javascript">
 
 function getTimeRemaining(endtime) {
@@ -173,8 +166,5 @@ var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
 
 </script>
-
-
-
 </body>
 </html>
