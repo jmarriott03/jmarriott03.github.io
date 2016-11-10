@@ -179,26 +179,26 @@ img {
 	text-align: center;
 }
 #clockdiv2 > div {
-	padding: 0.5em;
+	padding: 0.25em;
 	border-radius: 0.25em;
 	background: rgba(256,204,0,0.8);
 	display: inline-block;
 	color: #000;
 }
 #clockdiv2 div > span {
-	padding: 0.5em;
+	padding: 0.25em;
 	border-radius: 0.25em;
 	display: inline-block;
 	font-size: 1.5em;
 	background: #000;
 	color: #fff;
+	min-width: 1em;
 }
 .smalltext2 {
-	font-size: 0.75em;
+	font-size: 0.6em;
 	margin-top: 0.5em;
 	line-height: 1em;
 }
-
 /*
    ____               _ _                                
   / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
@@ -207,7 +207,7 @@ img {
   \____/                                                 
 
 */
-@media (max-width: 45em) {
+@media (max-width: 44em) {
 .container {
 	width: auto;
 }
@@ -223,13 +223,13 @@ img {
 	background-color: #000;
 }
 #clockdiv2 > div {
-	background-color: #fff;
+	background-color: #fc0;
 }
 }
 </style>
 <script type="text/javascript">
 
-    CountDownTimer('12/25/2017 9:0 AM', 'digital_countdown');
+    CountDownTimer('12/25/2016 9:0 AM', 'digital_countdown');
 
     function CountDownTimer(dt, id)
     {
