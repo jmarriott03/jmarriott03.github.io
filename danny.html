@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px
+}
+body {
+	font-family: sans-serif;
+	font-size: 1.5em;
+	line-height: 1.25em;
+	color: #333;
+	background-color: #eee;
+}
+h2 {
+	font-size: 4em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.textbox {
+	max-width: 20em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+#words img {
+	width: 30px;
+	height: 30px;
+}
+audio { 
+   display:none;
+}
+</style>
+<script type="text/javascript">
+
+var img_name = new Array("d02.jpg", "d03.jpg", "d04.jpg", "d05.jpg", "d06.jpg", "d07.jpg", "d08.jpg", "d09.jpg", "d10.jpg", "d11.jpg", "d12.jpg", "d13.jpg", "d14.jpg", "d15.jpg", "d16.jpg", "d17.jpg", "d18.jpg", "d19.jpg", "d20.jpg", "d21.jpg", "d22.jpg", "d23.jpg", "d24.jpg", "d25.jpg", "d26.jpg", "d27.jpg", "d28.jpg", "d29.jpg", "d30.jpg", "d31.jpg", "d32.jpg", 	"d33.jpg", "d34.jpg", "d35.jpg", "d36.jpg", "d37.jpg", "d38.jpg", "d39.jpg", "d40.jpg");
+var l = img_name.length;
+
+var img_word = new Array("#needfun", "#handsomeboy", "#chilling", "#needlove", "#happy", "#xxx", "#drinking", "#maybe", "#nightout", "#cute", "#cuddles", "#stillpartying", "#morepartying", "#handsome", "#gamer", "#drinks", "#beers", "#friends", "#needcuddles", "#love", "#sleepy", "#sleepingbuddy", "#busyday", "#bestfriends", "#single", "#cuddlebuddy", "#future", "#living", "#hotgamer", "#modelingagency", "#maybenot", "#togetherforever", "#alone", "#workingout", "#bedhead", "#single", "#cuteboys", "#life", "#havingfun", "#me", "#model", "#friendsforever", "#greeneyes", "#lush", "#amazing", "#needhugs", "#alonetime", "#goodlooking", "#imdone", "#annoyed", "#whynot", "#modeling", "#haha", "#sexytime", "#lol", "#loveme", "#livinglife", "#yolo", "#handsomedevil", "#nerd", "#needhelp", "#sohot", "#gettingready", "#sexy", "#dreams", "#snuggles", "#kisses", "#worklife", "#loveyourself");
+var m = img_word.length;
+
+function start()
+{
+var rnd_no1 = Math.floor(l*Math.random());
+var rnd_no2 = Math.floor(m*Math.random());
+var instagram = '<img src="images/danny/instagram400.png" width="20" height="20" alt=""/> ';
+document.getElementById("changeimg").src = "images/danny/" + img_name[rnd_no1];
+document.getElementById("words").innerHTML = instagram + img_word[rnd_no2];
+setTimeout(start, 2000);
+}
+
+window.onload=start;
+
+</script>
+</head>
+<body>
+<div class="textbox borderbox"><img src="images/danny/d03.jpg" id="changeimg"/>
+  <div id="words"><img src="images/danny/instagram400.png" width="20" height="20" alt=""/></div>
+</div>
+<audio autoplay loop src="images/danny/coco.mp3">
+</body>
+</html>
