@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <meta name = "viewport" content = "width = device-width">
 <meta name="viewport" content="initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>Plymouth University</title>
 <style type="text/css">
 * {
@@ -26,17 +27,17 @@ body {
 	font-size: 1em;
 	line-height: 1.25em;
 	color: #000;
-	background-color: #eee;	
+	background-color: #eee;
 }
-h1 {	
+h1 {
 	font-size: 2em;
 	line-height: 1.25em;
 	font-weight: normal;
 }
-h2 {	
+h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
-	font-weight: normal;	
+	font-weight: normal;
 }
 a {
 	color: #00f;
@@ -51,16 +52,16 @@ em {
 	font-weight: 400i;
 }
 img {
-	border: 0;	
+	border: 0;
 	text-decoration: none;
 	vertical-align: top;
 }
 .textbox {
-	max-width: 38em;		
+	max-width: 38em;
 	overflow: hidden;
 }
 .imagebox {
-	max-width: 48em;	
+	max-width: 48em;
 	overflow: hidden;
 }
 .borderbox {
@@ -107,10 +108,19 @@ img {
 	text-decoration: none;
 	float: left;
 }
+#musicinfo {
+	display: none;
+}
 }
 </style>
-<script type="text/javascript">//<![CDATA[ 
-//]]>
+<script>
+$(document).ready(
+    function(){
+        $("#music").click(function () {
+			$("#musicinfo").show();
+			$("#musicinfo").delay(1000).fadeOut("slow");
+			});
+			});
 function CopyClipboard(){
   t = document.createElement("textarea")
   t.id = 't'
@@ -121,19 +131,20 @@ function CopyClipboard(){
   selector.select()
   document.execCommand('copy')
   document.body.removeChild(t)
-}
+}	
 </script>
 </head>
 <body>
 <div class="textbox borderbox">
-<p><a href="javascript:void(0)" onClick="CopyClipboard();" class="buttonstyle">Copy contents to clipboard</a></p>
+  <p><a href="#">&#8592; Back to course list</a></p>
+  <p><a href="javascript:void(0)" onClick="CopyClipboard();" id="music">Copy text to clipboard</a><span id="musicinfo"> copied</span></p>
 </div>
 <div class="textbox borderbox" id="to-copy">
-<h1>Plymouth Business School</h1>
-<h2>BA (Hons) Accounting and Finance</h2>
-<p>Make your mark in the world of business. Throughout this course you’ll explore the latest developments in the field, and master the complex set of skills needed to embark on a career in accounting and finance.</p>
-<p>You’ll experience accountancy in the real world while working inside businesses, and graduate with credits towards your professional qualification with the ICAEW, ACCA or CIMA.</p>
-<p>In the 2016 National Student Survey, 95 per cent of students agreed staff were good at explaining things; 89 per cent agreed staff made the subject interesting; 95 per cent agreed they got sufficient advice and support; 95 per cent were satisfied overall and 90 per cent were in work/study six months after finishing.</p>
+  <h1>Plymouth Business School</h1>
+  <h2>BA (Hons) Accounting and Finance</h2>
+  <p>Make your mark in the world of business. Throughout this course you’ll explore the latest developments in the field, and master the complex set of skills needed to embark on a career in accounting and finance.</p>
+  <p>You’ll experience accountancy in the real world while working inside businesses, and graduate with credits towards your professional qualification with the ICAEW, ACCA or CIMA.</p>
+  <p>In the 2016 National Student Survey, 95 per cent of students agreed staff were good at explaining things; 89 per cent agreed staff made the subject interesting; 95 per cent agreed they got sufficient advice and support; 95 per cent were satisfied overall and 90 per cent were in work/study six months after finishing.</p>
 </div>
 </body>
 </html>
