@@ -108,7 +108,7 @@ img {
 	text-decoration: none;
 	float: left;
 }
-#musicinfo {
+#copiedalert {
 	display: none;
 }
 }
@@ -116,9 +116,9 @@ img {
 <script>
 $(document).ready(
     function(){
-        $("#music").click(function () {
-			$("#musicinfo").show();
-			$("#musicinfo").delay(1000).fadeOut("slow");
+        $("#copybutton").click(function () {
+			$("#copiedalert").show();
+			$("#copiedalert").delay(1000).fadeOut("slow");
 			});
 			});
 function CopyClipboard(){
@@ -137,7 +137,7 @@ function CopyClipboard(){
 <body>
 <div class="textbox borderbox">
   <p><a href="#">&#8592; Back to course list</a></p>
-  <p><a href="javascript:void(0)" onClick="CopyClipboard();" id="music">Copy text to clipboard</a><span id="musicinfo"> copied</span></p>
+  <p><a href="javascript:void(0)" onClick="CopyClipboard();" id="copybutton">Copy text to clipboard</a><span id="copiedalert"> copied</span></p>
 </div>
 <div class="textbox borderbox" id="to-copy">
   <h1>Plymouth Business School</h1>
