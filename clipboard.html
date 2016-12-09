@@ -106,10 +106,11 @@ img {
 	text-align: center;
 	color: #fff;
 	text-decoration: none;
-	float: left;
 }
 #copiedalert {
 	display: none;
+	margin-left: 0.5em;
+	background-color: #000;
 }
 }
 </style>
@@ -126,7 +127,7 @@ function CopyClipboard(){
   t.id = 't'
   t.style.height = 0
   document.body.appendChild(t)
-  t.value = document.getElementById('to-copy').innerText
+  t.value = document.getElementById('tocopy').innerText
   selector = document.querySelector('#t')
   selector.select()
   document.execCommand('copy')
@@ -137,9 +138,9 @@ function CopyClipboard(){
 <body>
 <div class="textbox borderbox">
   <p><a href="#">&#8592; Back to course list</a></p>
-  <p><a href="javascript:void(0)" onClick="CopyClipboard();" id="copybutton">Copy text to clipboard</a><span id="copiedalert"> copied</span></p>
+  <p><a href="javascript:void(0)" onClick="CopyClipboard();" id="copybutton" class="buttonstyle">Copy text to clipboard</a><span id="copiedalert" class="buttonstyle">Copied</span></p>
 </div>
-<div class="textbox borderbox" id="to-copy">
+<div class="textbox borderbox" id="tocopy">
   <h1>Plymouth Business School</h1>
   <h2>BA (Hons) Accounting and Finance</h2>
   <p>Make your mark in the world of business. Throughout this course you’ll explore the latest developments in the field, and master the complex set of skills needed to embark on a career in accounting and finance.</p>
