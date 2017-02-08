@@ -82,58 +82,10 @@ img {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-.two {
-	width: 50%;
-	margin: 0;
-}
-.three {
-	width: 33.333%;
-	margin: 0;
-}
-.four {
-	width: 25%;
-	margin: 0;
-}
 .fullw {
 	width: 100%;
 	overflow: hidden;
 	margin: 0;
-}
-.badge1 {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	color: #111;
-	line-height: 50px;
-	text-align: center;
-	background: #c0e4e1;
-	border: 5px solid #34837b;
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
-.badge2 {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	color: #111;
-	line-height: 50px;
-	text-align: center;
-	background: #9fcac5;
-	border: 5px solid #34837b;
-	margin-bottom: 0.5em;
-	font-weight: bold;
-}
-.badge3 {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	color: #eee;
-	line-height: 50px;
-	text-align: center;
-	background: #34837b;
-	border: 5px solid #9fcac5;
-	margin-bottom: 0.5em;
-	font-weight: bold;
 }
 .badgetext {
 	text-align: center;
@@ -141,18 +93,32 @@ img {
 	padding: 1em;
 	line-height: 1em;
 }
-
-/*
-   ____               _ _                                
-  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
- / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
- \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
-  \____/                                                 
-*/
-@media (max-width: 38em) {
-.four {
-	width: 50%;
+.badge1, .badge2, .badge3 {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	margin-bottom: 0.5em;
+	font-weight: bold;
 }
+.badge1 {
+	background: rgba(52,131,123,.3);
+	border: 5px solid rgba(52,131,123,1);
+	background-clip: padding-box;
+	color: #111;
+}
+.badge2 {
+	background: rgba(52,131,123,.6);
+	border: 5px solid rgba(52,131,123,1);
+	background-clip: padding-box;
+	color: #111;
+}
+.badge3 {
+	background: rgba(52,131,123,1);
+	border: 5px solid rgba(52,131,123,.6);
+	background-clip: padding-box;
+	color: #eee;
 }
 </style>
 </head>
