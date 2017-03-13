@@ -23,6 +23,13 @@
 	font-weight: normal;
 	vertical-align: bottom;
 }
+.weatherfontsmall {
+	font-family: 'weathericon', sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: normal;
+	vertical-align: bottom;
+}
 * {
 	margin: 0 auto;
 }
@@ -87,6 +94,25 @@ td, th {
 	margin: 0;
 	float: left;
 }
+.box2 {
+	width: 60px;
+	margin: 0;
+	float: left;
+	font-size: 0.75em;
+	line-height: 1em;
+}
+.box3 {
+	width: 190px;
+	margin: 0;
+	float: left;
+}
+.greytext {
+	color: #666;
+}
+.rightdotborder {
+	border-right: 1px solid #ccc;
+}
+
 /*
    ____               _ _                                
   / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
@@ -102,10 +128,29 @@ td, th {
 }
 </style>
 </head>
-
 <body>
 <div class="box">
-  <p>weather-webfont</p> 
+  <p>weather-webfont</p>
+</div>
+<div class="box">
+  <div class="box3">
+    <p><span class="weatherfont">T</span> <span class="greytext">Now</span> 12&deg;c</p>
+    <div class="box2 rightdotborder">
+      <p> <span class="greytext">16:00</span><br>
+        12&deg;c<br>
+        <span class="weatherfontsmall">A</span></p>
+    </div>
+    <div class="box2 rightdotborder">
+      <p><span class="greytext">19:00</span><br>
+        10&deg;c<br>
+        <span class="weatherfontsmall">V</span></p>
+    </div>
+    <div class="box2">
+      <p><span class="greytext">22:00</span><br>
+        9&deg;c<br>
+        <span class="weatherfontsmall">M</span></p>
+    </div>
+  </div>
 </div>
 <div class="black">
   <div class="box">
@@ -122,8 +167,8 @@ td, th {
   <p><span class="weatherfont">G</span> G: Heavy rain</p>
   <p><span class="weatherfont">H</span> H: Light snow</p>
   <p><span class="weatherfont">I</span> I: Heavy snow</p>
-  </div>
-  <div class="three">
+</div>
+<div class="three">
   <p><span class="weatherfont">J</span> J: Sleet</p>
   <p><span class="weatherfont">K</span> K: Hail</p>
   <p><span class="weatherfont">L</span> L: Partly cloudy (night)</p>
@@ -133,8 +178,8 @@ td, th {
   <p><span class="weatherfont">P</span> P: Light snow (night)</p>
   <p><span class="weatherfont">Q</span> Q: Heavy snow (night)</p>
   <p><span class="weatherfont">R</span> R: Sleet (night)</p>
-  </div>
-  <div class="three">
+</div>
+<div class="three">
   <p><span class="weatherfont">S</span> S: Hail (night)</p>
   <p><span class="weatherfont">T</span> T: Sunny intervals</p>
   <p><span class="weatherfont">U</span> U: Thunder shower</p>
