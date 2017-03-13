@@ -10,14 +10,14 @@
 <title>Plymouth University</title>
 <style type="text/css">
 @font-face {
-	font-family: 'icon';
+	font-family: 'weathericon';
 	src: url('fonts/weather-webfont.eot');
 	src: url('fonts/weather-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/weather-webfont.woff') format('woff'), url('fonts/weather-webfont.ttf') format('truetype'), url('fonts/weather-webfont.svg#weatherfont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 .weatherfont {
-	font-family: 'icon', sans-serif;
+	font-family: 'weathericon', sans-serif;
 	font-size: 40px;
 	line-height: 30px;
 	font-weight: normal;
@@ -60,7 +60,7 @@ li {
 	padding: 0 0 10px 0;
 }
 .box {
-	max-width: 800px;
+	width: 800px;
 	overflow: hidden;
 	padding: 10px;
 }
@@ -91,7 +91,24 @@ td, th {
 	color: #eee;
 	overflow: hidden;
 }
+.three {
+	width: 33.333%;
+	margin: 0;
+	float: left;
+}
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
 
+*/
+@media (max-width: 55em) {
+.three {
+	width: 100%;
+}
+}
 </style>
 </head>
 
@@ -104,7 +121,7 @@ td, th {
     <p><span class="weatherfont">C</span> 11&deg;c - Today will be cloudy for most with some hill fog and a chance of rain.</p>
   </div>
 </div>
-<div class="box">
+<div class="three">
   <p><span class="weatherfont">A</span> A: Sunny</p>
   <p><span class="weatherfont">B</span> B: Clear sky (night)</p>
   <p><span class="weatherfont">C</span> C: Cloudy</p>
@@ -114,6 +131,8 @@ td, th {
   <p><span class="weatherfont">G</span> G: Heavy rain</p>
   <p><span class="weatherfont">H</span> H: Light snow</p>
   <p><span class="weatherfont">I</span> I: Heavy snow</p>
+  </div>
+  <div class="three">
   <p><span class="weatherfont">J</span> J: Sleet</p>
   <p><span class="weatherfont">K</span> K: Hail</p>
   <p><span class="weatherfont">L</span> L: Partly cloudy (night)</p>
@@ -123,6 +142,8 @@ td, th {
   <p><span class="weatherfont">P</span> P: Light snow (night)</p>
   <p><span class="weatherfont">Q</span> Q: Heavy snow (night)</p>
   <p><span class="weatherfont">R</span> R: Sleet (night)</p>
+  </div>
+  <div class="three">
   <p><span class="weatherfont">S</span> S: Hail (night)</p>
   <p><span class="weatherfont">T</span> T: Sunny intervals</p>
   <p><span class="weatherfont">U</span> U: Thunder shower</p>
