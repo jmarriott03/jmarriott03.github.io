@@ -12,8 +12,8 @@
 * {
 	margin: 0 auto;
 }
-* + * {
-	margin-top: 1em;
+* > :last-child {
+	margin-bottom: 0 !important;
 }
 html, body {
 	height: 100%;
@@ -25,16 +25,19 @@ html {
 	font-size: 20px;
 }
 body {
-	font-family: 'Roboto' , sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	line-height: 1.5em;
 	color: #eee;
-	background-color: #111;	
+	background-color: #111;
 }
-h2 {		
+h2 {
 	font-size: 1.5em;
 	line-height: 1.5em;
 	font-weight: 400;
+}
+h2, p {
+	margin-bottom: 1em;
 }
 a {
 	color: #cc0;
@@ -111,7 +114,6 @@ img {
 //]]>
 </script>
 </head>
-
 <body>
 <div class="fullw">
   <div class="box">
