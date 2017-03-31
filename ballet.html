@@ -62,22 +62,25 @@ img {
 	box-sizing: border-box;
 	padding: 1em;
 }
-.box2 img {
+.box2 {
 	position: absolute;
-	top: 1em;
-	left: 1em;
+	top: 0;
+	left: 0;
 	z-index: 2;
-	max-width: 360px;
+	max-width: 379px;
+}
+.box2 img {
+	width: 100%;
 }
 </style>
 </head>
 
 <body>
 <div class="bckimg">
-<div class="tintcol1">
-  <div class="box borderbox verticalalign"><img src="images/plymouthconservatoire.svg" width=100% alt=""/>
-    
-</div></div>
-<div class="box2"><img src="images/withtrp.png" alt=""/></div></div>
+  <div class="tintcol1">
+    <div class="box borderbox verticalalign"><img src="images/plymouthconservatoire.svg" width=100% alt=""/> </div>
+  </div>
+  <div class="box2 borderbox"><img src="images/withtrp.png" alt=""/></div>
+</div>
 </body>
 </html>
