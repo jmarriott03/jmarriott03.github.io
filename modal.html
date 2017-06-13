@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<style type="text/css">
+* {
+ margin: 0 auto;
+ padding: 0;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0.5em;
+	font-size: 20px;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+	margin-bottom: 0.5em;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 1em;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+	background-color: #fff;
+	margin: auto;
+	padding: 0.5em;
+	border: 1px solid #666;
+	width: 80%;
+}
+.close {
+	color: #00f;
+	float: right;
+	font-size: 2em;
+	font-weight: normal;
+	padding-bottom: 0.25em;
+}
+.close:hover, .close:focus {
+	text-decoration: none;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h2>Graduation group photos 2015</h2>
+<p><a href="javascript:openmodal();">School of Biological Science (Opens in modal window)</a></p>
+<div id="myModal" class="modal"> 
+  <div class="modal-content"><span class="close">&times;</span>
+  <p><img src="images/1280x720-160425.jpg" alt=""/></p>
+  </div>
+</div>
+<script>
+var modal = document.getElementById('myModal');
+function openmodal(){
+modal.style.display = "block";
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
