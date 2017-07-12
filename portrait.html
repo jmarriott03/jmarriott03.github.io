@@ -145,10 +145,10 @@ img {
 	padding: 0;
 	margin: 0;
 }
-.L {
+.landscape {
 	width: 100%;
 }
-.P {
+.portrait {
 	height: 60vh;
 }
 
@@ -170,7 +170,7 @@ img {
 .fifty {
 	width: 100%;
 }
-.P {
+.portrait {
 	width: 100%;
 	height: auto;
 }
@@ -194,9 +194,9 @@ h1 {
             for (var i = 0; i < images.length; i++) {
                 var image = images[i];
                 if (1>image.naturalHeight/image.naturalWidth) {
-                    image.className += " L";
+                    image.className += " landscape";
                 } else {
-                    image.className += " P";
+                    image.className += " portrait";
                 }
             }
         }
@@ -209,11 +209,12 @@ h1 {
 </div>
 <img src="images/1280x720hot17a.jpg">
 <div class="textbox borderbox">
-  <p>Examples of portrait &amp; square images resized to 60% height on larger browsers</p>
+  <p>Examples of portrait &amp; square images resized to 60% height on larger browsers.</p>
 </div>
 <img src="images/1280x720hot17d.jpg"><img src="images/1280x720hot17e.jpg"><img src="images/1280x720hot17l.jpg">
 <div class="textbox borderbox">
-  <p>Another landscape image</p>
-</div><img src="images/1280x720hot17b.jpg">
+  <p>Another landscape image.</p>
+</div>
+<img src="images/1280x720hot17b.jpg">
 </body>
 </html>
