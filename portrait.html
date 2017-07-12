@@ -189,20 +189,23 @@ h1 {
 }
 </style>
 <script language="javascript" type="text/javascript">
-        function scale_images() {
-            var images = document.images;
-            for (var i = 0; i < images.length; i++) {
-                var image = images[i];
-                if (1>image.naturalHeight/image.naturalWidth) {
-                    image.className += " landscape";
-                } else {
-                    image.className += " portrait";
-                }
-            }
-        }
-    </script>
+function scale_images() {
+	var images = document.images;
+	for (var i = 0; i < images.length; i++) {
+		var image = images[i];
+		if (1>image.naturalHeight/image.naturalWidth) {
+			image.className += " landscape";
+			} else {
+				image.className += " portrait";
+				}
+				}
+				}
+window.onload = scale_images;
+window.addEventListener("onresize", scale_images, false);
+window.addEventListener("orientationchange", scale_images, false);
+</script>
 </head>
-<body onload="scale_images();" onresize="scale_images();" onorientationchange="scale_images();">
+<body>
 <div class="textbox borderbox">
   <h2>Dynamic image resize based on dimensions.</h2>
   <p>Here is an example of a landscape image resized to full width.</p>
