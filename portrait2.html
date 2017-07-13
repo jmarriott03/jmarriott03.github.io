@@ -190,20 +190,19 @@ h1 {
 </style>
 <script>
 function scale_images() {
-	var images = document.images;
-	for (var i = 0; i < images.length; i++) {
-		var image = images[i];
-		if (1>image.naturalHeight/image.naturalWidth) {
-			image.className += " landscape";
-			} else {
-				image.className += " portrait";
-				}
-				}
-				}
-function reset_page() {
-    location.reload();
+var images = document.images;
+for (var i = 0; i < images.length; i++) {
+var image = images[i]
+if (1>image.naturalHeight/image.naturalWidth) {
+image.className += " landscape"
+} else {
+image.className += " portrait"
 }
-
+}
+}
+function reset_page() {
+location.reload();
+}
 function textsizer(e){
 var evtobj=window.event? event : e
 var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
@@ -211,7 +210,6 @@ var actualkey=String.fromCharCode(unicode)
 if (actualkey=="1") scale_images()
 if (actualkey=="2") reset_page()
 }
-
 document.onkeypress=textsizer
 
 </script>
