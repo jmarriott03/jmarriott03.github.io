@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-size: calc(18px + 0.5vw);
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.25em;
+	color: #eee;
+	background-color: #111;
+}
+h1 {
+	font-size: 2.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+	text-align: center;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #eee;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	margin: 0;
+	width: 20%;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	max-width: 48em;
+	overflow: hidden;
+}
+.herotext {
+	margin: 0;
+	background: rgba(0,0,0,0.6);
+	padding: 1em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #eee;
+	width: 38em;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.relative {
+	position: relative;
+}
+.herotext a {
+	color: #eee;
+}
+.cc0 {
+	width: 100%;
+ overflow-hidden;
+	background-color: #cc0;
+	margin-top: 0;
+	color: #111;
+}
+.cc0 a {
+	color: #111;
+}
+.marginr {
+	margin-right: 1em;
+}
+.fifty {
+	width: 50%;
+	float: left;
+}
+.fifty img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.landscape {
+	width: 100%;
+}
+.portrait {
+	height: 60vh;
+	width: auto;
+}
+.tac {
+	text-align: center;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 38em) {
+.textbox img {
+	height: auto;
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+}
+.fifty {
+	width: 100%;
+}
+.portrait {
+	width: 100%;
+	height: auto;
+}
+}
+
+@media (max-width: 61em) {
+.herotext {
+	position: inherit;
+	background-color: #111;
+	width: 100%;
+	left: 0;
+}
+h1 {
+	font-size: 2em;
+}
+}
+</style>
+<script>
+function scale_images() {
+	var images = document.images;
+	for (var i = 0; i < images.length; i++) {
+		var image = images[i];
+		if (1>image.naturalHeight/image.naturalWidth) {
+			image.className += " landscape";
+			} else {
+				image.className += " portrait";
+				}
+				}
+				}
+function reset_page() {
+    location.reload();
+}
+
+function textsizer(e){
+var evtobj=window.event? event : e
+var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
+var actualkey=String.fromCharCode(unicode)
+if (actualkey=="1") scale_images();
+if (actualkey=="2") reset_page();
+}
+
+document.onkeypress=textsizer
+
+</script>
+</head>
+<body>
+<div class="textbox borderbox">
+  <h2>Dynamic image resize based on dimensions.</h2>
+  <p><a href="javascript:void(0)" onclick="scale_images()">Select this link to resize images. [1]</a></p>
+  <p><a href="javascript:void(0)" onclick="reset_page()">Select this link to reset images. [2]</a></p>
+</div>
+<p class="tac"><img src="images/1280x720hot17a.jpg" alt=""/><img src="images/1280x720hot17b.jpg" alt=""/><img src="images/1280x720hot17c.jpg" alt=""/><img src="images/1280x720hot17d.jpg" alt=""/><img src="images/1280x720hot17e.jpg" alt=""/><img src="images/1280x720hot17f.jpg" alt=""/><img src="images/1280x720hot17g.jpg" alt=""/><img src="images/1280x720hot17h.jpg" alt=""/><img src="images/1280x720hot17k.jpg" alt=""/><img src="images/1280x720hot17m.jpg" alt=""/><img src="images/1280x720hot17n.jpg" alt=""/><img src="images/1280x720hot17p.jpg" alt=""/><img src="images/1280x720hot17q.jpg" alt=""/></p>
+</body>
+</html>
