@@ -208,8 +208,8 @@ function textsizer(e){
 var evtobj=window.event? event : e
 var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
 var actualkey=String.fromCharCode(unicode)
-if (actualkey=="1") scale_images();
-if (actualkey=="2") reset_page();
+if (actualkey=="1") scale_images()
+if (actualkey=="2") reset_page()
 }
 
 document.onkeypress=textsizer
