@@ -151,6 +151,22 @@ img {
 .tac {
 	text-align: center;
 }
+.keyboard {
+	width: 1em;
+	height: 1em;
+	color: #eee;
+	background-color: #666;
+	border-radius: 0.3em;
+	display: inline-block;
+	text-align: center;
+	padding: 0;
+	margin: 0 2em 0 0.2em;
+	width: 2em;
+	height: 2em;
+	vertical-align: middle;
+	font-size: 0.5em;
+	line-height: 2em;
+}
 
 /*
    ____               _ _                                
@@ -190,26 +206,28 @@ h1 {
 </style>
 <script>
 function scale_images() {
-var images = document.images
-for (var i = 0; i < images.length; i++) {
-var image = images[i]
-if (1>image.naturalHeight/image.naturalWidth) {
-image.className += " landscape"
-} else {
-image.className += " portrait"
-}
-}
-}
+	var images = document.images;
+	for (var i = 0; i < images.length; i++) {
+		var image = images[i];
+		if (1>image.naturalHeight/image.naturalWidth) {
+			image.className += " landscape";
+			} else {
+				image.className += " portrait";
+				}
+				}
+				}
 function reset_page() {
-location.reload()
+    location.reload();
 }
+
 function textsizer(e){
 var evtobj=window.event? event : e
 var unicode=evtobj.charCode? evtobj.charCode : evtobj.keyCode
 var actualkey=String.fromCharCode(unicode)
-if (actualkey=="1") scale_images()
-if (actualkey=="2") reset_page()
+if (actualkey=="1") scale_images();
+if (actualkey=="2") reset_page();
 }
+
 document.onkeypress=textsizer
 
 </script>
@@ -217,7 +235,7 @@ document.onkeypress=textsizer
 <body>
 <div class="textbox borderbox">
   <h2>Dynamic image resize based on dimensions.</h2>
-  <p><a href="javascript:void(0)" onclick="scale_images()">Select this link to resize images.</a> [1]</p><p> <a href="javascript:void(0)" onclick="reset_page()">Select this link to reset images.</a> [2]</p>
+  <p><a href="javascript:void(0)" onclick="scale_images()">Select this link to resize images.</a> <span class="keyboard marginr">1</span> <a href="javascript:void(0)" onclick="reset_page()">Select this link to reset images.</a> <span class="keyboard">2</span></p>
 </div>
 <p class="tac"><img src="images/1280x720hot17a.jpg" alt=""/><img src="images/1280x720hot17b.jpg" alt=""/><img src="images/1280x720hot17c.jpg" alt=""/><img src="images/1280x720hot17d.jpg" alt=""/><img src="images/1280x720hot17e.jpg" alt=""/><img src="images/1280x720hot17f.jpg" alt=""/><img src="images/1280x720hot17g.jpg" alt=""/><img src="images/1280x720hot17h.jpg" alt=""/><img src="images/1280x720hot17k.jpg" alt=""/><img src="images/1280x720hot17m.jpg" alt=""/><img src="images/1280x720hot17n.jpg" alt=""/><img src="images/1280x720hot17p.jpg" alt=""/><img src="images/1280x720hot17q.jpg" alt=""/></p>
 </body>
