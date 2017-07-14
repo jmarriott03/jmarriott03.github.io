@@ -148,6 +148,10 @@ img {
 	height: 60vh;
 	width: auto;
 }
+.reset {
+	width: 20%;
+	height: auto;
+}
 .tac {
 	text-align: center;
 }
@@ -204,18 +208,27 @@ h1 {
 </style>
 <script>
 function scale_images() {
-	var images = document.images;
-	for (var i = 0; i < images.length; i++) {
-		var image = images[i];
-		if (1>image.naturalHeight/image.naturalWidth) {
-			image.className += " landscape";
-			} else {
-				image.className += " portrait";
-				}
-				}
-				}
+var images = document.images;
+for (var i = 0; i < images.length; i++) {
+var image = images[i];
+if (1>image.naturalHeight/image.naturalWidth) {
+image.className += " landscape";
+} else {
+image.className += " portrait";
+}
+}
+}
+
 function reset_page() {
-    location.reload();
+var images = document.images;
+for (var i = 0; i < images.length; i++) {
+var image = images[i];
+if (1>image.naturalHeight/image.naturalWidth) {
+image.className -= " landscape";
+} else {
+image.className -= " portrait";
+}
+}
 }
 
 function textsizer(e){
