@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 16px;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+p {
+	clear: both;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	color: #eee;
+	background-color: #111;
+}
+.fullw a {
+	color: #eee;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 0 0;
+}
+td, th {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid #111;
+}
+th {
+	border-bottom: 2px solid #111;
+}
+/*tr:nth-child(2n+1) {
+	background-color: #ddd;
+}*/
+.staff img {
+	float: left;
+	padding: 0 0.5em 0 0;
+	width: 2.5em;
+}
+.staff ul {
+	margin: 1em 0;
+	list-style: none;
+}
+.staff li {
+	margin: 0 0.5em 0.5em 0;
+	background-color: #111;
+	float: left;
+	padding: 0.25em 0.5em;
+	color: #eee;
+	border-radius: 0.2em;
+	}
+.staff li:before {
+	content: "@";
+	font-family: 'icon', sans-serif;
+	margin-right: 0.25em;
+	display: inline-block;
+	color: #eee;
+}
+.marginbot {
+	margin-bottom: 2em;
+	clear: both;
+}
+.marginr {
+	margin-right: 1em;
+}
+.greybox {
+	background-color: #fff;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
+	text-align: left;
+	text-decoration: none;
+	float: left;
+	width: auto;
+	border: 1px solid #e6e6e6;
+	margin: 0.5em 0;
+	padding: 1em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 38em) {
+.staff li {
+	clear: both;
+}
+.greybox {
+	width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="textbox borderbox staff">
+<h2>Experts directory: Engineering</h2>
+<div class="greybox">
+<p><a href="#"><img src="images/people1.jpg" alt=""><strong>Dr Person One</strong></a> <strong><br>Lecturer in Digital Communication One</strong></p>
+<ul>
+<li>Multimedia communications</li>
+<li>Digital rights management</li>
+<li>Video and image processing</li>
+<li>Data compressing</li>
+<li>Wireless error correction</li>
+<li>Engineering - software</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588001</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.one@plymouth.ac.uk</a></p>
+</div>
+
+<div class="greybox">
+<p><a href="#"><img src="images/people2.jpg" alt=""><strong>Dr Person Two</strong></a> <strong><br>Lecturer in Digital Communication Two</strong></p><ul>
+<li>High performance graphics</li>
+<li>Computer games development</li>
+<li>Computer software - DirectX and OpenGL</li>
+<li>Mobile app development</li>
+<li>Software engineering</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588002</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.two@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Three</strong></a> <strong><br>Lecturer in Digital Communication Three</strong></p><ul>
+<li>Materials engineering</li>
+<li>Structural integrity</li>
+<li>Corrosion protection</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588003</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.three@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><img src="images/people3.jpg" alt=""><strong>Dr Person Four</strong></a> <strong><br>Lecturer in Digital Communication Four</strong></p><ul>
+<li>CognitiveRobotics</li>
+<li>Artificial intelligence</li>
+<li>Reinforcement Learning</li>
+<li>Assisted living and care</li>
+<li>Teleoperation</li>
+<li>Biologically inspired systems</li>
+<li>Artificial Neural Networks</li>
+<li>Robot Software Engineering</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588004</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.four@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Mr Person Five</strong></a> <strong><br>Lecturer in Digital Communication Five</strong></p><ul>
+<li>Marine renewable energy</li>
+<li>Marine engineering</li>
+<li>Marine propulsion and hydrodynamics</li>
+<li>Computational fluid dynamics</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588005</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.five@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Six</strong></a> <strong><br>Lecturer in Digital Communication Six</strong></p><ul>
+<li>Engineering problem solving</li>
+<li>Engineering creativity</li>
+<li>Engineering entrepreneurship</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588006</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.six@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><img src="images/people5.jpg" alt=""><strong>Dr Person Seven</strong></a> <strong><br>Lecturer in Digital Communication Seven</strong></p><ul>
+<li>Civil engineering management</li>
+<li>Project management</li>
+<li>Contract management</li>
+<li>Disaster management</li>
+<li>Philosophy of engineering</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588007</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.seven@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Eight</strong></a> <strong><br>Lecturer in Digital Communication Eight</strong></p><ul>
+<li>Materials failure</li>
+<li>Failure analysis</li>
+<li>Marine technology</li>
+<li>Manufacturing engineering</li>
+<li>Boat and yacht surveying</li>
+<li>Welding, Adhesive and joining technologies</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588008</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.eight@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Mrs Person Nine</strong></a> <strong><br>Lecturer in Digital Communication Nine</strong></p><ul>
+<li>Computational fluid dynamics</li>
+<li>Fluid structure interaction</li>
+<li>Marine renewable energy</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588009</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.nine@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Ten</strong></a> <strong><br>Lecturer in Digital Communication Ten</strong></p><ul>
+<li>Natural ventilation</li>
+<li>Carbon capture and storage</li>
+<li>Solution mining</li>
+<li>Sea ice mechanics</li>
+<li>Iceberg melt processes</li>
+<li>Evaporite geology</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588010</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.ten@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><img src="images/people6.jpg" alt=""><strong>Dr Person Eleven</strong></a> <strong><br>Lecturer in Digital Communication Eleven</strong></p><ul>
+<li>Women in engineering</li>
+<li>Gender and technology</li>
+<li>Leadership and management</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588011</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.eleven@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Miss Person Twelve</strong></a> <strong><br>Lecturer in Digital Communication Twelve</strong></p><ul>
+<li>Coastal engineering</li>
+<li>Harbour engineering</li>
+<li>Marine renewable energy</li>
+<li>Port structures</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588012</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.twelve@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Thirteen</strong></a> <strong><br>Lecturer in Digital Communication Thirteen</strong></p><ul>
+<li>Computational fluid dynamics (CFD)</li>
+<li>Engineering design</li>
+<li>Educational research</li>
+<li>ICT (in education)</li>
+<li>Secondary schools</li>
+<li>Teacher education</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588013</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.thirteen@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><img src="images/people7.jpg" alt=""><strong>Dr Person Fourteen</strong></a> <strong><br>Lecturer in Digital Communication Fourteen</strong></p><ul>
+<li>Structural integrity</li>
+<li>Failure analysis</li>
+<li>Material properties</li>
+<li>Welding</li>
+<li>Residual stresses</li>
+<li>Fatigue and fracture</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588014</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.fourteen@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Fifteen</strong></a> <strong><br>Lecturer in Digital Communication Fifteen</strong></p><ul>
+<li>Cyber security</li>
+<li>Maritime Cyber Threats</li>
+<li>Hardware verification</li>
+<li>Analogue verification</li>
+<li>Trustworthiness of Complex Systems</li>
+<li>Software development</li>
+<li>CAD tools</li>
+<li>Formal methods</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588015</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.fifteen@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Sixteen</strong></a> <strong><br>Lecturer in Digital Communication Sixteen</strong></p><ul>
+<li>Unmanned marine vehicles</li>
+<li>Artificial intelligent techniques</li>
+<li>Marine renewable energy</li>
+<li>Engineering - industrial control Systems</li>
+<li>Engineering - design processes</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588016</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.sixteen@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Seventeen</strong></a> <strong><br>Lecturer in Digital Communication Seventeen</strong></p><ul>
+<li>Engineering-interdisciplinary design</li>
+<li>Operations management</li>
+<li>Project management</li>
+<li>Industrial control systems</li>
+<li>Building management systems</li>
+<li>Life cycle design</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588017</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.seventeen@plymouth.ac.uk</a></p>
+</div>
+<div class="greybox">
+<p><a href="#"><strong>Dr Person Eighteen</strong></a> <strong><br>Lecturer in Digital Communication Eighteen</strong></p><ul>
+<li>Composite materials</li>
+<li>Composites engineering</li>
+<li>Composite structures</li>
+<li>Composites manufacture</li>
+<li>Life cycle assessment</li>
+<li>Sustainable materials</li>
+<li>Microstructural characterisation</li>
+<li>Non-destructive testing</li>
+</ul>
+<p><a href="#" class="nowrap marginr"><span class="iconfont" aria-hidden="true">0</span> +44 1752 588018</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> person.eighteen@plymouth.ac.uk</a></p>
+</div>
+</div>
+</body>
+</html>
