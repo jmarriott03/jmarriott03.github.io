@@ -14,10 +14,11 @@ function motion(event){
 	if (gyroi<3) {
         image.src = "images/mono1.jpg";
     } else {
-		if (gyroi<6) {
+	if (gyroi<6) {
         image.src = "images/mono2.jpg";
     } else
         image.src = "images/mono3.jpg";
+    }
 }
 
   if(window.DeviceMotionEvent){
@@ -28,6 +29,6 @@ function motion(event){
 </head>
 <body>
 <div id="accelerometer"></div>
-<img  style="width:100%;" id="myImage" src="images/mono4.jpg" alt=""/>
+<img id="myImage" src="images/mono4.jpg" alt="" width="600" height="400"/>
 </body>
 </html>
