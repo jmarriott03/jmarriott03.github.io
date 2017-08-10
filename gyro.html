@@ -11,23 +11,13 @@ function motion(event){
     + (gyroi);
 	
 	var image = document.getElementById('myImage');
-	if (gyroi<2) {
+	if (gyroi<3) {
         image.src = "images/mono1.jpg";
     } else {
-		if (gyroi<4) {
+		if (gyroi<6) {
         image.src = "images/mono2.jpg";
     } else
-	if (gyroi<6) {
         image.src = "images/mono3.jpg";
-    } else
-	if (gyroi<8) {
-        image.src = "images/mono4.jpg";
-    } else
-	if (gyroi<10) {
-        image.src = "images/mono5.jpg";
-    } else
-        image.src = "images/mono6.jpg";
-    }
 }
 
   if(window.DeviceMotionEvent){
