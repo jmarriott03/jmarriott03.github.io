@@ -135,28 +135,6 @@ img {
 	background-color: #fa0;
 	margin-top: 0;
 }
-.gradient1 {
-	background: #fc3;
-	background: -webkit-radial-gradient(#fc3, #c90);
-	background: -o-radial-gradient(#fc3, #c90);
-	background: -moz-radial-gradient(#fc3, #c90);
-	background: radial-gradient(#fc3, #c90);
-}
-.gradient2 {
-	background: #06c;
-	background: -webkit-radial-gradient(#06c, #069);
-	background: -o-radial-gradient(#06c, #069);
-	background: -moz-radial-gradient(#06c, #069);
-	background: radial-gradient(#06c, #069);
-}
-.gradient3 {
-	background: #f7f6f2;
-	background: -webkit-radial-gradient(#f7f6f2, #d5c9bb);
-	background: -o-radial-gradient(#f7f6f2, #d5c9bb);
-	background: -moz-radial-gradient(#f7f6f2, #d5c9bb);
-	background: radial-gradient(#f7f6f2, #d5c9bb);
-	margin: 0;
-}
 .swatch1 a {
 	color: #111;
 }
@@ -169,9 +147,12 @@ img {
 .marginr {
 	margin-right: 1em;
 }
-.flex {
-	display: flex;
-	align-items: center;
+.verticalalign {
+	display: table;
+}
+.verticalalign > div {
+	display: table-cell;
+	vertical-align: middle;
 }
 .width25 {
 	width: 25%;
@@ -188,7 +169,6 @@ img {
 	margin: 0 auto;
 	padding: 2em;
 }
-
 /*
    ____               _ _                                
   / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
@@ -207,18 +187,14 @@ img {
 h1 {
 	font-size: 2em;
 }
-.flex {
-	display: inherit;
-	text-align: left;
-}
-.flex h2 {
-	text-align: left;
-}
 .width25 {
 	width: 50%;
 }
 .width50 {
 	width: 100%;
+}
+.verticalalign, .verticalalign > div {
+	display: inherit;
 }
 }
 
@@ -239,7 +215,7 @@ h1 {
 </style>
 </head>
 <body>
-<div class="flex swatch1">
+<div class="verticalalign swatch1">
   <div class="width50"><img src="images/720x720-160427.jpg" alt=""/></div>
   <div class="width50 borderbox2">
     <h2>Virtual tour of Plymouth</h2>
