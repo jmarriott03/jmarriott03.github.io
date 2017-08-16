@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>The University of Plymouth</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-size: calc(20px + 0.2vw);
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+a {
+	color: #00f;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.black {
+	width: 100%;
+	overflow: hidden;
+	background-color: #111;
+	margin-top: 0;
+	color: #eee;
+}
+.black a {
+	color: #eee;
+}
+.swatch1 {
+	width: 100%;
+	overflow: hidden;
+	background-color: #eee;
+	margin-top: 0;
+}
+.swatch1 a {
+	color: #111;
+}
+.textbox img {
+	width: 10em;
+	float: left;
+	margin: 0 1em 1em 0;
+	clear: both;
+}
+.marginr {
+	margin-right: 1em;
+}
+.verticalalign {
+	display: table;
+}
+.verticalalign > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.flex {
+	display: flex;
+	align-items: center;
+}
+.width25 {
+	width: 25%;
+	margin: 0;
+}
+.width50 {
+	width: 50%;
+	margin: 0;
+}
+.borderbox2 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 2em;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 61em) {
+.width25 {
+	width: 50%;
+}
+.width50 {
+	width: 100%;
+}
+.verticalalign > div {
+	display: inherit;
+}
+.flex {
+	display: inherit;
+}
+}
+
+@media (max-width: 38em) {
+.textbox img {
+	height: auto;
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+}
+.width25 {
+	width: 100%;
+}
+.borderbox2 {
+	padding: 1em;
+}
+}
+</style>
+</head>
+<body>
+<div class="verticalalign swatch1">
+  <div class="width50"><img src="images/1280x1280square.gif" alt=""/></div>
+  <div class="width50 borderbox2">
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+  </div>
+</div>
+<div class="fullw"><img src="images/1280x1280square.gif" alt="" class="width25"/><img src="images/1280x1280square.gif" alt="" class="width25"/><img src="images/1280x1280square.gif" alt="" class="width25"/><img src="images/1280x1280square.gif" alt="" class="width25"/></div>
+<div class="fullw black borderbox"</div>
+<h2>Flex version (Doesn't work in IE9 &amp; earlier)</h2>
+</div>
+<div class="flex swatch1">
+  <div class="width50"><img src="images/1280x1280square.gif" alt=""/></div>
+  <div class="width50 borderbox2">
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+  </div>
+</div>
+<div class="fullw"><img src="images/1280x1280square.gif" alt="" class="width25"/><img src="images/1280x1280square.gif" alt="" class="width25"/><img src="images/1280x1280square.gif" alt="" class="width25"/><img src="images/1280x1280square.gif" alt="" class="width25"/></div>
+</body>
+</html>
