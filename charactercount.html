@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Character count</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 1em;
+	font-size: 20px;
+}
+body {
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+input[type="text"], textarea {
+	width: 50%;
+	border: 1px solid 111;
+	font-size: 1em;
+	padding: 1em;
+	height: auto;
+}
+button {
+	padding: 1em;
+	font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<p>
+  <textarea id="my-text-area"></textarea>
+</p>
+<p>
+  <button onclick="calculate();">Character count</button>
+</p>
+<p id="demo"></p>
+</body>
+<script type="text/javascript">
+    function calculate() {
+        var textArea = document.getElementById("my-text-area");
+        var arrayOfLines = textArea.value.split("\n");
+        for(var i = 0;i < arrayOfLines.length;i++){
+            document.getElementById("demo").innerHTML = (arrayOfLines[i].length);
+        }
+    }
+</script>
+</html>
