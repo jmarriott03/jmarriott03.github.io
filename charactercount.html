@@ -63,6 +63,15 @@ button {
 	font-size: 1em;
 }
 </style>
+<script>
+    function calculate() {
+        var textArea = document.getElementById("my-text-area");
+        var arrayOfLines = textArea.value.split("\n");
+        for(var i = 0;i < arrayOfLines.length;i++){
+            document.getElementById("demo").innerHTML = (arrayOfLines[i].length);
+        }
+    }
+</script>
 </head>
 
 <body>
@@ -72,15 +81,6 @@ button {
 <p>
   <button onclick="calculate();">Character count</button>
 </p>
-<p id="demo"></p>
+<p id="demo"></p>a
 </body>
-<script type="text/javascript">
-    function calculate() {
-        var textArea = document.getElementById("my-text-area");
-        var arrayOfLines = textArea.value.split("\n");
-        for(var i = 0;i < arrayOfLines.length;i++){
-            document.getElementById("demo").innerHTML = (arrayOfLines[i].length);
-        }
-    }
-</script>
 </html>
