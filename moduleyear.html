@@ -86,6 +86,16 @@ img {
 	clear: both;
 	display: block;
 }
+.staffquote {
+	padding-left: 3em;
+	position: relative;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 2.5em;
+	margin-right: 1em;
+}
 .quoteline {
 	border-left: 0.25em solid #ccc;
 	padding-left: 0.5em;
@@ -98,8 +108,11 @@ p {
 <body>
 <div class="textbox borderbox">
   <h2>Year 1 course details</h2>
-  <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a>
-   Course leader</strong></p>
+  <div class="staffquote">
+    <p><a href="#"><strong><img src="images/people2.jpg" alt="">Dr Person One</strong></a>
+     <strong> Course leader</strong></p>
+  </div>
+  <p class="quoteline">&quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&quot;</p>
   <p class="quoteline">"You'll start to develop the basic technical skills needed to become a computing professional including: programming, databases, computer hardware, computer networking and how a computer operating system works, with optional modules on topics such as creating an e-commerce site."</p>
   <h2>Core modules</h2>
   <p><strong><span class="swatch1">BPIE111</span> Stage 1 Computing Placement Preparation</strong></p>
