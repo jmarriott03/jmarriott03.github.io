@@ -115,6 +115,7 @@ button.accordion:after {
 	content: 'O';
 	float: right;
 	margin-right: 0.5em;
+	color: #999;
 }
 button.accordion.active:after {
 	content: "M";
@@ -171,7 +172,8 @@ p {
 <body>
 <div class="textbox borderbox">
   <h2>Year 1 course details</h2>
-  <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a> Course leader</strong></p>
+  <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a> 
+  Course leader</strong></p>
   <p class="quoteline">"You'll start to develop the basic technical skills needed to become a computing professional including: programming, databases, computer hardware, computer networking and how a computer operating system works, with optional modules on topics such as creating an e-commerce site."</p>
   <h2>Core modules</h2>
   <button class="accordion"><span class="swatch1">BPIE111</span> Stage 1 Computing Placement Preparation</button>
@@ -186,55 +188,43 @@ p {
   <div class="panel">
     <p>An introduction to the analysis, design concepts essential for developing and implementing Software Systems and Database Systems. The module will explore design concepts and procedures, such as principles of Business Rules, specifying Requirements, Data Modelling, Relational Modelling and SQL. It will also enable students to acquire, develop and apply Unified Modelling Language (UML) relevant for computing professionals.</p>
   </div>
-  
- <button class="accordion"><span class="swatch1">NET107</span> Principles of Infrastructure</button>
+  <button class="accordion"><span class="swatch1">NET107</span> Principles of Infrastructure</button>
   <div class="panel">
     <p>This module is intended to provide a basic understanding of the operation of the hardware components of computer systems and networks including some low level programming. The role of a typical multi-tasking operating system is also covered, as is how to manage asynchronous program code safely.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">SOFT151</span> Introduction to Object-oriented Programming</button>
   <div class="panel">
     <p>A comprehensive introduction to Software Engineering (SE) begins with coverage of the core building blocks prior to covering more advanced skills including Object-Oriented Programming. Front-end software development is tackled using interface components with the final part of the module integrating all aspects of SE practice into an individually programmed, moderately sized application.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">SOFT162</span> Computing Immersive Introduction</button>
   <div class="panel">
     <p>This module provides an intensive introduction to the concepts, modes of study and, to some extent, technical content, that students studying BSc (Hons) Computing will need. And last, but not least, the extended induction aims to get students enthused about their chosen course.</p>
-</div>
- 
- <h2>Optional modules</h2>
- 
+  </div>
+  <h2>Optional modules</h2>
   <button class="accordion"><span class="swatch1">AINT153PP</span> Intelligent Systems</button>
   <div class="panel">
     <p>Topics covered within this module are selected to be inspirational demonstrators that showcase research topics in the field of Intelligent Systems and provide "hands-on" involvement in a lecture/practical setting. This module is suitable both for students form technical degrees (e.g. computer science, robotics, mathematics) and for students from psychology, business and social sciences.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">DAT406PP</span> Digital Making</button>
   <div class="panel">
     <p>This module introduces students to a key set of digital technologies that are core to the production of current digital artwork. This will include exposure to a wide range of software, hardware and networking components commonly used by digital artists and designers. This is a Plymouth Plus module.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">INDE404PP</span> Social Network Design</button>
   <div class="panel">
     <p>Emphasis is placed on the development of practical and creative web design skills for the production and programming of online interactive multimedia, experimenting with issues such as navigation, hyper media, narrative, representation, game and interactivity.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">MATH1608PP</span> Understanding Big Data from Social Networks</button>
   <div class="panel">
     <p>The amount of data from questionnaires and social networks has grown enormously. Computer tools are needed to understand what these data are telling us. Students will gain valuable experience in questionnaire analysis, and in the use of software for understanding and reporting the underlying messages from data sources such as social networks. They will also meet appropriate high performance computing techniques.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">SEC102PP</span> Cybersecurity Essentials</button>
   <div class="panel">
     <p>This module provides an introduction to core principles of cybersecurity applicable to the protection of individuals and organisations. The coverage addresses technical and human perspectives, considering the fundamental threats and safeguards that concern both personal and workplace contexts. Candidates will emerge with the knowledge and skills necessary to ensure informed decisions when protecting IT systems and data.</p>
-</div>
- 
+  </div>
   <button class="accordion"><span class="swatch1">SOFT156PP</span> Developing E-commerce Applications</button>
   <div class="panel">
     <p>This module introduces students to the range of issues surrounding the rapid development of an e-commerce application through the use of appropriate frameworks.</p>
-</div>
- 
-  
+  </div>
 </div>
 <script>
 var acc = document.getElementsByClassName("accordion");
