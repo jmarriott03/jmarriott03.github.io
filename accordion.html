@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>The University of Plymouth</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	width: 1em;
+	display: inline-block;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+a {
+	color: #00f;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+button.accordion {
+	background-color: #ccc;
+	cursor: pointer;
+	padding: 0.5em;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1em;
+	margin: 0.5em 0 0 0;
+}
+button.accordion.active, button.accordion:hover {
+	background-color: #ddd;
+}
+button.accordion:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: 'O';
+	float: right;
+	margin-right: 0.5em;
+	color: #999;
+}
+button.accordion.active:after {
+	content: "M";
+}
+div.panel {
+	padding: 0;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin: 0em;
+}
+div.panel p {
+	padding: 0.5em;
+}
+</style>
+</head>
+<body>
+<div class="textbox borderbox">
+  <h2>Obvious call to action dropdowns</h2>
+  <button class="accordion"><span class="iconfont" aria-hidden="true">0</span> Contact numbers</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <button class="accordion"><span class="iconfont" aria-hidden="true">c</span> Opening times</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <button class="accordion"><span class="iconfont" aria-hidden="true">&amp;</span> Calendar dates</button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+</body>
+</html>
