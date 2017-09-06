@@ -94,7 +94,7 @@ img {
 	margin: 0;
 }
 button.accordion {
-	background-color: #ccc;
+	background-color: #eee;
 	cursor: pointer;
 	padding: 0.5em;
 	width: 100%;
@@ -103,7 +103,7 @@ button.accordion {
 	outline: none;
 	transition: 0.4s;
 	font-size: 1em;
-	margin: 0.5em 0 0 0;
+	margin: 0;
 }
 button.accordion.active, button.accordion:hover {
 	background-color: #ddd;
@@ -115,18 +115,18 @@ button.accordion:after {
 	content: 'O';
 	float: right;
 	margin-right: 0.5em;
-	color: #999;
+	color: #aaa;
 }
 button.accordion.active:after {
 	content: "M";
 }
 div.panel {
 	padding: 0;
-	background-color: white;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	margin: 0em;
+	border-bottom: 2px solid #aaa;
 }
 div.panel p {
 	padding: 0.5em;
@@ -172,8 +172,7 @@ p {
 <body>
 <div class="textbox borderbox">
   <h2>Year 1 course details</h2>
-  <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a> 
-  Course leader</strong></p>
+  <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a> Course leader</strong></p>
   <p class="quoteline">"You'll start to develop the basic technical skills needed to become a computing professional including: programming, databases, computer hardware, computer networking and how a computer operating system works, with optional modules on topics such as creating an e-commerce site."</p>
   <h2>Core modules</h2>
   <button class="accordion"><span class="swatch1">BPIE111</span> Stage 1 Computing Placement Preparation</button>
