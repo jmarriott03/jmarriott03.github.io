@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>The University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-size: calc(20px + 0.2vw);
+	font-family: sans-serif;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+a {
+	color: #00f;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.textbox {
+	max-width: 34em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.black {
+	width: 100%;
+	overflow: hidden;
+	background-color: #111;
+	margin-top: 0;
+}
+.black a {
+	color: #eee;
+}
+.swatch2 {
+	width: 100%;
+	overflow: hidden;
+	background-color: #fa0;
+	margin-top: 0;
+}
+.swatch2 a {
+	color: #111;
+}
+.textbox img {
+	width: 10em;
+	float: left;
+	margin: 0 1em 1em 0;
+	clear: both;
+}
+.marginr {
+	margin-right: 1em;
+}
+.verticalalign {
+	display: table;
+}
+.verticalalign > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.width25 {
+	width: 25%;
+	margin: 0;
+}
+.width50 {
+	width: 50%;
+	margin: 0;
+}
+.borderbox2 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 2em;
+}
+button.accordion {
+	background-color: #eee;
+	cursor: pointer;
+	padding: 0.5em;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1em;
+	margin: 0;
+}
+button.accordion.active, button.accordion:hover {
+	background-color: #ddd;
+}
+button.accordion:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: 'O';
+	float: right;
+	margin-right: 0.5em;
+	color: #00f;
+}
+button.accordion.active:after {
+	content: "M";
+}
+div.panel {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin: 0em;
+	border-bottom: 2px solid #aaa;
+}
+div.panel p {
+	padding: 0.5em;
+}
+.staff {
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+.staff img {
+	float: left;
+	padding: 0 0.5em 0 0;
+	width: 2.5em;
+}
+.swatch1 {
+	color: #999;
+	min-width: 5em;
+	display: inline-block;
+}
+.quoteline {
+	border-left: 0.25em solid #111;
+	padding-left: 0.5em;
+}
+p {
+	white-space: pre-line;
+}
+#can {
+	width: 8em;
+	box-sizing: border-box;
+	margin-top: 1em;
+	vertical-align: top;
+	float: left;
+}
+#swatch1, #swatch2, #swatch3 {
+	font-weight: bold;
+	float: left;
+}
+#swatch1 {
+	color: #fa0;
+}
+#swatch2 {
+	color: #39c;
+}
+#swatch3 {
+	color: #9c9;
+}
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 61em) {
+.width25 {
+	width: 50%;
+}
+.width50 {
+	width: 100%;
+}
+.verticalalign > div {
+	display: inherit;
+}
+.swatch1 {
+	display: block;
+}
+}
+
+@media (max-width: 38em) {
+.textbox img {
+	height: auto;
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+}
+.width25 {
+	width: 100%;
+}
+.borderbox2 {
+	padding: 1em;
+}
+}
+</style>
+</head>
+<body>
+<div class="verticalalign swatch2">
+  <div class="width50"><img src="images/1280x1280jodieoreilly.jpg" alt=""/></div>
+  <div class="width50 borderbox2">
+  <p><a href="#">School of Computing, Electronics and Mathematics</a></p>
+<h2>BSc (Hons) Computing year 3</h2>
+    <p class="quoteline">"My programming skills came on leaps and bounds in the last year. This is because I was using these skills every single day and the projects were a lot more complex than anything I had tackled in the past. This also tested my problem solving and mathematical skills.""</p>
+    <p><a href="#">Jodie O'Reilly</a> – Software Engineer at Renishaw</p>
+  </div>
+</div>
+<div class="fullw"><img src="images/1280x720comp1.jpg" alt="" class="width25"/><img src="images/1280x720comp2.jpg" alt="" class="width25"/><img src="images/1280x720comp3.jpg" alt="" class="width25"/><img src="images/1280x720comp4.jpg" alt="" class="width25"/></div>
+<div class="swatch2">
+  <div class="textbox borderbox">
+    <p><a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">0</span> +44 1752 600600</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">/</span> Contact us</a></p>
+  </div>
+</div>
+<div class="textbox borderbox">
+  <h2>Year 3 course details</h2>
+  <h2>Core modules</h2>
+  <button class="accordion"><span class="swatch1">BPIE111</span> Stage 1 Computing Placement Preparation</button>
+  <div class="panel">
+    <p><img src="images/1280x720comp5.jpg" alt=""/>This module is aimed at students who may be undertaking an industrial placement in the third year of their programme. It is designed to assist students in their search for a placement and in their preparation for the placement itself.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">ISAD154</span> Analysis and Design Project</button>
+  <div class="panel">
+    <p>This module provides an opportunity to apply fundamental analysis and design concepts situated in the context of a well-rounded computing project. Students work in teams to apply requirements and systems engineering concepts to a contextually relevant web application development scenario.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">ISAD155</span> Databases: Analysis, Design and Development</button>
+  <div class="panel">
+    <p>An introduction to the analysis, design concepts essential for developing and implementing Software Systems and Database Systems. The module will explore design concepts and procedures, such as principles of Business Rules, specifying Requirements, Data Modelling, Relational Modelling and SQL. It will also enable students to acquire, develop and apply Unified Modelling Language (UML) relevant for computing professionals.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">NET107</span> Principles of Infrastructure</button>
+  <div class="panel">
+    <p>This module is intended to provide a basic understanding of the operation of the hardware components of computer systems and networks including some low level programming. The role of a typical multi-tasking operating system is also covered, as is how to manage asynchronous program code safely.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">SOFT151</span> Introduction to Object-oriented Programming</button>
+  <div class="panel">
+    <p>A comprehensive introduction to Software Engineering (SE) begins with coverage of the core building blocks prior to covering more advanced skills including Object-Oriented Programming. Front-end software development is tackled using interface components with the final part of the module integrating all aspects of SE practice into an individually programmed, moderately sized application.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">SOFT162</span> Computing Immersive Introduction</button>
+  <div class="panel">
+    <p>This module provides an intensive introduction to the concepts, modes of study and, to some extent, technical content, that students studying BSc (Hons) Computing will need. And last, but not least, the extended induction aims to get students enthused about their chosen course.</p>
+  </div>
+  <h2>Optional modules</h2>
+  <button class="accordion"><span class="swatch1">AINT153PP</span> Intelligent Systems</button>
+  <div class="panel">
+    <p>Topics covered within this module are selected to be inspirational demonstrators that showcase research topics in the field of Intelligent Systems and provide "hands-on" involvement in a lecture/practical setting. This module is suitable both for students form technical degrees (e.g. computer science, robotics, mathematics) and for students from psychology, business and social sciences.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">DAT406PP</span> Digital Making</button>
+  <div class="panel">
+    <p>This module introduces students to a key set of digital technologies that are core to the production of current digital artwork. This will include exposure to a wide range of software, hardware and networking components commonly used by digital artists and designers. This is a Plymouth Plus module.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">INDE404PP</span> Social Network Design</button>
+  <div class="panel">
+    <p>Emphasis is placed on the development of practical and creative web design skills for the production and programming of online interactive multimedia, experimenting with issues such as navigation, hyper media, narrative, representation, game and interactivity.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">MATH1608PP</span> Understanding Big Data from Social Networks</button>
+  <div class="panel">
+    <p>The amount of data from questionnaires and social networks has grown enormously. Computer tools are needed to understand what these data are telling us. Students will gain valuable experience in questionnaire analysis, and in the use of software for understanding and reporting the underlying messages from data sources such as social networks. They will also meet appropriate high performance computing techniques.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">SEC102PP</span> Cybersecurity Essentials</button>
+  <div class="panel">
+    <p>This module provides an introduction to core principles of cybersecurity applicable to the protection of individuals and organisations. The coverage addresses technical and human perspectives, considering the fundamental threats and safeguards that concern both personal and workplace contexts. Candidates will emerge with the knowledge and skills necessary to ensure informed decisions when protecting IT systems and data.</p>
+  </div>
+  <button class="accordion"><span class="swatch1">SOFT156PP</span> Developing E-commerce Applications</button>
+  <div class="panel">
+    <p>This module introduces students to the range of issues surrounding the rapid development of an e-commerce application through the use of appropriate frameworks.</p>
+  </div>
+  <h2>Year 1 course breakdown</h2>
+  <canvas id="can" width="640" height="640"></canvas>
+    <p id="swatch1">60% Coursework</p>
+    <p id="swatch2">30% Practical</p>
+    <p id="swatch3">10% Placement</p>
+</div>
+<div class="black">
+  <div class="textbox borderbox">
+    <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">f</span> /computingplym</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">i</span> @computingplym</a></p>
+  </div>
+</div>
+</body>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+
+function start(id){
+var canvas = document.getElementById("can");
+var ctx = canvas.getContext("2d");
+var lastend = 0;
+var rnd_no1 = 70;
+var rnd_no2 = 20;
+var rnd_no3 = 10;
+var data = [rnd_no1, rnd_no2, rnd_no3]; //	 If you add more data values make sure you add more colors
+var myTotal = 0; // Automatically calculated so don't touch
+var myColor = ['#fa0', '#39c', '#9c9']; // Colors of each slice
+
+for (var e = 0; e < data.length; e++) {
+  myTotal += data[e];
+}
+
+for (var i = 0; i < data.length; i++) {
+  ctx.fillStyle = myColor[i];
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, canvas.height / 2);
+  // Arc Parameters: x, y, radius, startingAngle (radians), endingAngle (radians), antiClockwise (boolean)
+  ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, lastend, lastend + (Math.PI * 2 * (data[i] / myTotal)), false);
+  ctx.lineTo(canvas.width / 2, canvas.height / 2);
+  ctx.fill();
+  lastend += Math.PI * 2 * (data[i] / myTotal);
+}
+
+document.getElementById("swatch1").innerHTML = rnd_no1 + "% Coursework";
+document.getElementById("swatch2").innerHTML = rnd_no2 + "% Practical";
+document.getElementById("swatch3").innerHTML = rnd_no3 + "% Placement";
+
+}
+
+window.onload=start;
+</script>
+</html>
