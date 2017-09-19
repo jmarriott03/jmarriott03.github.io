@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px
+}
+body {
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.container {
+	max-width: 32em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.imgcontainer {
+	font-size: 0.7em;
+	color: #999;
+}
+</style>
+<script>
+window.onload=function(){
+var alttag = document.getElementById('alttag');
+var imageContainers = alttag.getElementsByClassName('imgcontainer');
+for (var i = 0; i < imageContainers.length; i++) {
+var image = imageContainers[i].getElementsByTagName('img')[0];
+caption = document.createElement('span');
+caption.innerHTML = image.alt;
+imageContainers[i].appendChild(caption);
+}
+}
+</script>
+</head>
+
+<body>
+<div class="container borderbox">
+  <div id="alttag">
+    <div class="imgcontainer"><img src="images/1280x720comp1.jpg" alt="1) Lorem ipsum dolor sit amet"> </div>
+    <div class="imgcontainer"><img src="images/1280x720comp2.jpg" alt="2) Consectetur adipisicing elit, sed"> </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+    <p>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="imgcontainer"> <img src="images/1280x720comp3.jpg" alt="3) Eiusmod tempor incididunt ut labore"> </div>
+  </div>
+</div>
+</body>
+</html>
