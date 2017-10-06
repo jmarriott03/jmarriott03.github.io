@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>University of Plymouth</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	width: 1em;
+	display: inline-block;
+}
+* {
+	margin: 0 auto;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+	margin-bottom: 0.5em;
+}
+a {
+	color: #00f;
+}
+p {
+	clear: both;
+	white-space: pre-line;
+	margin: 1em 0;
+	padding: 0;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+button.accordion {
+	background-color: #eee;
+	cursor: pointer;
+	padding: 0.5em;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1em;
+	margin: 0 0 0 0;
+}
+button.accordion.active, button.accordion:hover {
+	background-color: #ddd;
+}
+button.accordion:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: 'O';
+	float: right;
+	margin-right: 0.5em;
+}
+button.accordion.active:after {
+	content: "M";
+}
+.panel {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin: 0em;
+	border-bottom: 2px solid #aaa;
+}
+.gallery img {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0.5em;
+	width: 50%;
+}
+.margint {
+	margin-top: 0.5em;
+}
+.marginb {
+	margin-bottom: 0.5em;
+}
+.quoteline {
+	border-left: 0.25em solid #111;
+	padding-left: 0.5em;
+}
+.telephone {
+	width: 5em;
+	display: inline-block;
+}
+.leftbutton {
+	left: 0;
+}
+.rightbutton {
+	right: 0;
+}
+.leftbutton, .rightbutton {
+	position: absolute;
+	top: 50%;
+	text-shadow: none;
+	border: 0;
+	color: #fff;
+	background-color: #111;
+	width: 2em;
+	height: 4em;
+	margin-top: -2em;
+	cursor: pointer;
+	outline: none;
+	font-family: 'icon', sans-serif;
+	font-weight: 400;
+}
+.slideshow {
+	position: relative;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 61em) {
+.gallery img {
+	width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<div class="textbox borderbox">
+  <h2>BA (Hons) Fine Art - final year show</h2>
+  <button class="accordion"><span class="iconfont" aria-hidden="true">0</span> Contact numbers</button>
+  <div class="panel">
+    <p><span class="telephone">Tickets:</span> <a href="tel:+441752585858">+44 1752 585858</a></p>
+    <p><span class="telephone">Enquiries:</span> <a href="tel:+441752363636">+44 1752 363636</a></p>
+  </div>
+  <button class="accordion"><span class="iconfont" aria-hidden="true">z</span> Graduate insight - Adam Smith</button>
+  <div class="panel">
+    <p><a href="images/1280x720comp1.jpg"><img src="images/1280x720comp1.jpg" alt=""/></a></p>
+    <p class="quoteline">"During my second year I went on an exchange to Rotterdam to study at Willem De Kooning Academie for a term, January to April. This defined my practice as I had to build from scratch with my ideas."</p>
+    <p>Adam tells us about exhibiting his artwork, juggling work and his creative pursuits, and the importance of a supportive environment.</p>
+    <p><a href="#">Learn more about Adam's experience of BA (Hons) Fine Art</a></p>
+  </div>
+  <button class="accordion"><span class="iconfont" aria-hidden="true">V</span> Image gallery</button>
+  <div class="panel gallery">
+    <p><a href="images/1280x720comp5.jpg"><img src="images/1280x720comp5.jpg" alt=""/></a><a href="images/1280x720comp2.jpg"><img src="images/1280x720comp2.jpg" alt=""/></a><a href="images/1280x720comp3.jpg"><img src="images/1280x720comp3.jpg" alt=""/></a><a href="images/1280x720comp4.jpg"><img src="images/1280x720comp4.jpg" alt=""/></a></p>
+  </div>
+  <h2 class="margint">Alternative image gallery</h2>
+  <div class="slideshow"> <img class="mySlides" src="images/1280x720comp1.jpg" style="width:100%"> <img class="mySlides" src="images/1280x720comp2.jpg" style="width:100%"> <img class="mySlides" src="images/1280x720comp3.jpg" style="width:100%"> <img class="mySlides" src="images/1280x720comp4.jpg" style="width:100%">
+    <button class="leftbutton" onclick="plusDivs(-1)">P</button>
+    <button class="rightbutton" onclick="plusDivs(1)">N</button>
+  </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '37') {
+        plusDivs(-1);
+    }
+    else if (e.keyCode == '39') {
+        plusDivs(1);
+    }
+}
+</script>
+</body>
+</html>
