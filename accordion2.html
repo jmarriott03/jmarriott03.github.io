@@ -30,6 +30,7 @@ html, body {
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
 	font-size: 20px;
+	font-size: calc(20px + 0.2vw);
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.25em;
 	color: #111;
@@ -177,6 +178,10 @@ button.accordion.active:after {
 .slideshow {
 	position: relative;
 }
+.width25 {
+	width: 25%;
+	margin: 0;
+}
 
 /*
    ____               _ _                                
@@ -190,12 +195,24 @@ button.accordion.active:after {
 .gallery img {
 	width: 100%;
 }
+.width25 {
+	width: 50%;
+}
+}
+
+@media (max-width: 38em) {
+.width25 {
+	width: 100%;
+}
+.marginr {
+	display: block;
+}
 }
 </style>
 </head>
 <body>
 <div class="textbox borderbox">
-  <h2>BA (Hons) Fine Art - final year show</h2>
+  <h2>Image gallery 1</h2>
   <button class="accordion"><span class="iconfont" aria-hidden="true">0</span> Contact numbers</button>
   <div class="panel">
     <p><span class="telephone">Tickets:</span> <a href="tel:+441752585858">+44 1752 585858</a></p>
@@ -211,9 +228,14 @@ button.accordion.active:after {
   <button class="accordion"><span class="iconfont" aria-hidden="true">V</span> Image gallery</button>
   <div class="panel gallery">
     <p><a href="images/1280x720comp5.jpg"><img src="images/1280x720comp5.jpg"  alt=""/></a><a href="images/1280x720comp2.jpg"><img src="images/1280x720comp2.jpg"  alt=""/></a><a href="images/1280x720comp3.jpg"><img src="images/1280x720comp3.jpg"  alt=""/></a><a href="images/1280x720comp4.jpg"><img src="images/1280x720comp4.jpg"  alt=""/></a></p>
-  </div>
-  <h2 class="margint">Alternative image gallery</h2>
-  <div class="slideshow"> <img class="mySlides" src="images/1280x720comp1.jpg" alt=""> <img class="mySlides" src="images/1280x720comp2.jpg" alt=""> <img class="mySlides" src="images/1280x720comp3.jpg" alt=""> <img class="mySlides" src="images/1280x720comp4.jpg" alt="">
+  </div></div>
+  
+  <div class="textbox borderbox"><h2>Image gallery 2</h2></div>
+  <div class="fullw"><a href="images/1280x720comp5.jpg"><img src="images/1280x720comp5.jpg" alt="" class="width25"/></a><a href="images/1280x720comp2.jpg"><img src="images/1280x720comp2.jpg" alt="" class="width25"/></a><a href="images/1280x720comp3.jpg"><img src="images/1280x720comp3.jpg" alt="" class="width25"/></a><a href="images/1280x720comp4.jpg"><img src="images/1280x720comp4.jpg" alt="" class="width25"/></a></div>
+  
+  <div class="textbox borderbox">
+  <h2 class="margint">Image gallery 3</h2>
+  <div class="slideshow"> <img class="mySlides" src="images/1280x720comp5.jpg" alt=""> <img class="mySlides" src="images/1280x720comp2.jpg" alt=""> <img class="mySlides" src="images/1280x720comp3.jpg" alt=""> <img class="mySlides" src="images/1280x720comp4.jpg" alt="">
     <button class="leftbutton" onclick="plusDivs(-1)">P</button>
     <button class="rightbutton" onclick="plusDivs(1)">N</button>
   </div>
