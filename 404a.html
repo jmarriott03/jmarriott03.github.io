@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>Plymouth University</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px
+}
+body {
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.2em;
+	color: #eee;
+	background-color: #006;
+	background: url(images/404boat.jpg) no-repeat 10% center fixed;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.container {
+	max-width: 45em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.bubble {
+	width: 60px;
+	height: 60px;
+	background: #009;
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	position: absolute;
+	opacity: 0;
+}
+.x1 {
+	left: 30%;
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-o-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x2 {
+	left: 50%;
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	-webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+	-moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+	-o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x3 {
+	left: 60%;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	-webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+	-o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x4 {
+	left: 70%;
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	-webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+	-o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+.x5 {
+	left: 40%;
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	-webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+	-moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+	-o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes moveclouds {
+ 0% {
+ top: 80%;
+ opacity: 0;
+}
+ 100% {
+ top: -80%;
+ opacity: 0.5;
+}
+}
+ @-webkit-keyframes sideWays {
+ 0% {
+ margin-left:0px;
+ opacity: 0;
+}
+ 100% {
+ margin-left:50px;
+ opacity: 0.5;
+}
+}
+ @-moz-keyframes moveclouds {
+ 0% {
+ top: 80%;
+ opacity: 0;
+}
+ 100% {
+ top: -80%;
+ opacity: 0.5;
+}
+}
+ @-moz-keyframes sideWays {
+ 0% {
+ margin-left:0px;
+ opacity: 0;
+}
+ 100% {
+ margin-left:50px;
+ opacity: 0.5;
+}
+}
+@-o-keyframes moveclouds {
+ 0% {
+ top: 80%;
+ opacity: 0;
+}
+ 100% {
+ top: -80%;
+ opacity: 0.5;
+}
+}
+ @-o-keyframes sideWays {
+ 0% {
+ margin-left:0px;
+ opacity: 0;
+}
+ 100% {
+ margin-left:50px;
+ opacity: 0.5;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="bubble x1"></div>
+<div class="bubble x2"></div>
+<div class="bubble x3"></div>
+<div class="bubble x4"></div>
+<div class="bubble x5"></div>
+<div class="container borderbox"><img src="images/404text.svg" alt="" width="100%"/></div>
+</body>
+</html>
