@@ -24,7 +24,7 @@ html, body {
 }
 body {
 	font-family: sans-serif;
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.5rem;
 	color: #111;
 	background-color: #eee;
@@ -103,43 +103,57 @@ th {
 	color: #666;
 }
 
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
 
+*/
+
+@media (max-width: 38rem) {
+td, th {
+	display: table-cell;
+	width: 100%;
+	display: block;
+	margin: 0;
+	border-bottom: 0;
+}
+}
 </style>
 </head>
 <body>
 <div class="textbox borderbox">
   <h2>Scholarship idea 1</h2>
-<p><strong>Firefly Scholarship in podiatry</strong></p>
-<p class="swatch1"><strong>Eligibility</strong></p>
-<p>To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-<p class="swatch1"><strong>How to apply</strong></p>
-<p>For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  <p><strong>Firefly Scholarship in podiatry</strong></p>
+  <p class="swatch1"><strong>Eligibility</strong></p>
+  <p>To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+  <p class="swatch1"><strong>How to apply</strong></p>
+  <p>For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
 </div>
-
 <div class="textbox borderbox">
-<h2>Scholarship idea 2</h2>
-<p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-<p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-<p><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  <h2>Scholarship idea 2</h2>
+  <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+  <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+  <p><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
 </div>
-
 <div class="textbox borderbox">
   <h2>Scholarship idea 3</h2>
   <table>
     <tr>
-      <th></th><th>Firefly Scholarship in podiatry</th>
+      <th></th>
+      <th>Firefly Scholarship in podiatry</th>
     </tr>
     <tr>
-      <td><strong>Eligibility</strong></td>
+      <td class="swatch1"><strong>Eligibility</strong></td>
       <td>To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</td>
     </tr>
     <tr>
-      <td><strong>How to apply</strong></td>
+      <td class="swatch1"><strong>How to apply</strong></td>
       <td>For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></td>
     </tr>
-    </table>
- 
+  </table>
 </div>
-
 </body>
 </html>
