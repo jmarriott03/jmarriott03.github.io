@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+* + * {
+	margin-top: 1rem;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 18px;
+	font-size: calc(18px + 0.2vw);
+}
+body {
+	font-family: sans-serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+	text-decoration: underline;
+	display: inline-block;
+	margin: 0;
+}
+a:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: "N";
+	margin-left: 0.25rem;
+	display: inline-block;
+	transition: transform 0.2s ease-out;
+}
+a:hover::after {
+	transform: translate(0.25rem, 0);
+}
+.visited {
+	color: #90f;
+}
+p {
+	clear: both;
+	margin: 1rem 0 0 0;
+	padding: 0;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+ul {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+li {
+	margin: 1em 0 0 0;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.textbox {
+	max-width: 38rem;
+	overflow: hidden;
+}
+.imagebox {
+	max-width: 48rem;
+	overflow: hidden;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	color: #eee;
+	background-color: #111;
+}
+.fullw a {
+	color: #eee;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1rem 0 2rem 0;
+}
+td, th {
+	padding: 0.5rem;
+	margin: 0;
+	text-align: left;
+	border-bottom: 1px solid #111;
+}
+th {
+	border-bottom: 2px solid #111;
+}
+.swatch1 {
+	color: #666;
+}
+button.accordion {
+	background-color: #eee;
+	cursor: pointer;
+	padding: 0.5rem;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1rem;
+	margin: 0;
+}
+button.accordion.active, button.accordion:hover {
+	background-color: #ddd;
+}
+button.accordion:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: 'O';
+	float: right;
+	margin-right: 0.5rem;
+}
+button.accordion.active:after {
+	content: "M";
+}
+.panel {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin: 0;
+	border-bottom: 1px solid #111;
+}
+.marbot {
+	margin-bottom: 1rem;
+}
+</style>
+</head>
+<body>
+<div class="textbox borderbox">
+<h2 class="marbot">Scholarship categories 1</h2>
+<p><ul>
+<li><a href="#">High achievers</a></li>
+<li><a href="#">Subjects</a></li>
+<li><a href="#">Countries</a></li>
+<li><a href="#">Alumni</a></li>
+<li><a href="#">Individuals</a></li>
+</ul>
+<h2 class="marbot">Scholarship categories 2</h2>
+<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> High achievers</button>
+<div class="panel">
+    
+    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+
+<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Subjects</button>
+<div class="panel">
+    
+    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+
+<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Countries</button>
+<div class="panel">
+    
+    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+
+<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Alumni</button>
+<div class="panel">
+    
+    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+
+<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Individuals</button>
+<div class="panel">
+    
+    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+
+  <button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Fees, costs and funding</button>
+  <div class="panel">
+    
+    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
+    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+</body>
+</html>
