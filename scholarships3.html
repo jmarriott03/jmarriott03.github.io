@@ -185,14 +185,11 @@ button.accordion.active:after {
 .marbot {
 	margin-bottom: 1rem;
 }
-.hierachy ul li {
-}
 </style>
 </head>
 <body>
 <div class="textbox borderbox anima">
   <h2 class="marbot">Scholarship categories 1</h2>
-  <p>
   <ul>
     <li><a href="#">High achievers</a></li>
     <li><a href="#">Subjects</a></li>
@@ -200,7 +197,6 @@ button.accordion.active:after {
     <li><a href="#">Alumni</a></li>
     <li><a href="#">Individuals</a></li>
   </ul>
-  </p>
 </div>
 <div class="textbox borderbox">
   <h2 class="marbot">Scholarship categories 2</h2>
@@ -237,28 +233,26 @@ button.accordion.active:after {
 </div>
 <div class="textbox borderbox">
   <h2 class="marbot">Scholarship categories 3</h2>
-  <p>
   <ul class="hierachy">
     <li><a href="#">High achievers</a></li>
     <li><a href="#">Subjects</a></li>
-    <ul>
-      <li><a href="#">Subject 1</a></li>
-      <li><a href="#">Subject 2</a></li>
-    </ul>
-    <li><a href="#">Countries</a></li>
-    <ul>
-      <li><a href="#">Country 1</a></li>
+    <li>
       <ul>
-        <li><a href="#">North</a></li>
-        <li><a href="#">South</a></li>
+        <li><a href="#">Subject 1</a></li>
+        <li><a href="#">Subject 2</a></li>
       </ul>
-      <li><a href="#">Country 2</a></li>
-      <li><a href="#">Country 3</a></li>
-    </ul>
+    </li>
+    <li><a href="#">Countries</a></li>
+    <li>
+      <ul>
+        <li><a href="#">Country 1</a></li>
+        <li><a href="#">Country 2</a></li>
+        <li><a href="#">Country 3</a></li>
+      </ul>
+    </li>
     <li><a href="#">Alumni</a></li>
     <li><a href="#">Individuals</a></li>
   </ul>
-  </p>
 </div>
 <script>
 var acc = document.getElementsByClassName("accordion");
