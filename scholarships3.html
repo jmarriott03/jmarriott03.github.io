@@ -29,8 +29,7 @@ html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	font-size: 18px;
-	font-size: calc(18px + 0.2vw);
+	font-size: 16px;
 }
 body {
 	font-family: sans-serif;
@@ -50,7 +49,7 @@ a {
 	display: inline-block;
 	margin: 0;
 }
-a:after {
+.anima a:after {
 	font-family: 'icon', sans-serif;
 	font-weight: normal;
 	vertical-align: auto;
@@ -59,7 +58,7 @@ a:after {
 	display: inline-block;
 	transition: transform 0.2s ease-out;
 }
-a:hover::after {
+.anima a:hover::after {
 	transform: translate(0.25rem, 0);
 }
 .visited {
@@ -87,6 +86,16 @@ ul {
 }
 li {
 	margin: 1em 0 0 0;
+}
+.hierachy, .hierachy ul li {
+	list-style: none;
+}
+.hierachy ul li:before {
+	font-weight: normal;
+	vertical-align: auto;
+	content: "↳";
+	margin-right: 0.25rem;
+	display: inline-block;
 }
 .borderbox {
 	-webkit-box-sizing: border-box;
@@ -176,66 +185,86 @@ button.accordion.active:after {
 .marbot {
 	margin-bottom: 1rem;
 }
+.hierachy ul li {
+}
 </style>
 </head>
 <body>
+<div class="textbox borderbox anima">
+  <h2 class="marbot">Scholarship categories 1</h2>
+  <p>
+  <ul>
+    <li><a href="#">High achievers</a></li>
+    <li><a href="#">Subjects</a></li>
+    <li><a href="#">Countries</a></li>
+    <li><a href="#">Alumni</a></li>
+    <li><a href="#">Individuals</a></li>
+  </ul>
+  </p>
+</div>
 <div class="textbox borderbox">
-<h2 class="marbot">Scholarship categories 1</h2>
-<p><ul>
-<li><a href="#">High achievers</a></li>
-<li><a href="#">Subjects</a></li>
-<li><a href="#">Countries</a></li>
-<li><a href="#">Alumni</a></li>
-<li><a href="#">Individuals</a></li>
-</ul>
-<h2 class="marbot">Scholarship categories 2</h2>
-<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> High achievers</button>
-<div class="panel">
-    
-    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
-  </div>
-
-<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Subjects</button>
-<div class="panel">
-    
-    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
-  </div>
-
-<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Countries</button>
-<div class="panel">
-    
-    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
-  </div>
-
-<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Alumni</button>
-<div class="panel">
-    
-    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
-  </div>
-
-<button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Individuals</button>
-<div class="panel">
-    
-    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
-    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
-  </div>
-
-  <button class="accordion"><span class="iconfont" aria-hidden="true">*</span> Fees, costs and funding</button>
+  <h2 class="marbot">Scholarship categories 2</h2>
+  <button class="accordion">High achievers</button>
   <div class="panel">
-    
-    <p><strong>Title: Firefly Scholarship in podiatry</strong></p>
-    <p><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p><strong>Title:</strong> Lorem ipsum dolor sit amet</p>
+    <p><strong>Eligibility:</strong> To be eligible consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
     <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
   </div>
+  <button class="accordion">Subjects</button>
+  <div class="panel">
+    <p><strong>Title:</strong> Lorem ipsum dolor sit amet</p>
+    <p><strong>Eligibility:</strong> To be eligible consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+  <button class="accordion">Countries</button>
+  <div class="panel">
+    <p><strong>Title:</strong> Lorem ipsum dolor sit amet</p>
+    <p><strong>Eligibility:</strong> To be eligible consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+  <button class="accordion">Alumni</button>
+  <div class="panel">
+    <p><strong>Title:</strong> Lorem ipsum dolor sit amet</p>
+    <p><strong>Eligibility:</strong> To be eligible consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+  <button class="accordion">Individuals</button>
+  <div class="panel">
+    <p><strong>Title:</strong> Lorem ipsum dolor sit amet</p>
+    <p><strong>Eligibility:</strong> To be eligible consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+  <button class="accordion">Fees, costs and funding</button>
+  <div class="panel">
+    <p><strong>Title:</strong> Lorem ipsum dolor sit amet</p>
+    <p><strong>Eligibility:</strong> To be eligible consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+    <p class="marbot"><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  </div>
+</div>
+<div class="textbox borderbox">
+  <h2 class="marbot">Scholarship categories 3</h2>
+  <p>
+  <ul class="hierachy">
+    <li><a href="#">High achievers</a></li>
+    <li><a href="#">Subjects</a></li>
+    <ul>
+      <li><a href="#">Subject 1</a></li>
+      <li><a href="#">Subject 2</a></li>
+    </ul>
+    <li><a href="#">Countries</a></li>
+    <ul>
+      <li><a href="#">Country 1</a></li>
+      <ul>
+        <li><a href="#">North</a></li>
+        <li><a href="#">South</a></li>
+      </ul>
+      <li><a href="#">Country 2</a></li>
+      <li><a href="#">Country 3</a></li>
+    </ul>
+    <li><a href="#">Alumni</a></li>
+    <li><a href="#">Individuals</a></li>
+  </ul>
+  </p>
 </div>
 <script>
 var acc = document.getElementsByClassName("accordion");
