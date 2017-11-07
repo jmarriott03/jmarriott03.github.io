@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rotate table cell</title>
+<style type="text/css">
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+td, th {
+	padding: 10px;
+	text-align: left;
+	border: 1px solid #111;
+}
+.vertical-rl {
+	writing-mode: vertical-rl;
+	white-space: nowrap;
+}
+.rotatenotsogood {
+	transform: rotate(90deg);
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<table>
+  <tr>
+    <th><span class="vertical-rl">Extremely long text 1a</span></th>
+    <th>1b</th>
+  </tr>
+  <tr>
+    <td >2a</td>
+    <td>2b</td>
+  </tr>
+  <tr>
+    <td>3a</td>
+    <td>3b</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th class="rotatenotsogood">Extremely long text 1a</th>
+    <th>1b</th>
+  </tr>
+  <tr>
+    <td >2a</td>
+    <td>2b</td>
+  </tr>
+  <tr>
+    <td>3a</td>
+    <td>3b</td>
+  </tr>
+</table>
+
+<script>
+window.addEventListener('load', function () {
+    var rotates = document.getElementsByClassName('rotatenotsogood');
+    for (var i = 0; i < rotates.length; i++) {
+        rotates[i].style.height = rotates[i].offsetWidth + 'px';
+    }
+});
+</script>
+
+</body>
+</html>
