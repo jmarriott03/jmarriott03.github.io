@@ -1,49 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
 <head>
-<style>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>University of Plymouth</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+* + * {
+	margin-top: 1rem;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+}
+body {
+	font-family: sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #111;
+	background-color: #fafafa;
+}
+h2 {
+	font-size: 1.5;
+	line-height: 1.2;
+	font-weight: bold;
+}
+p, h2 {
+	float: left;
+	clear: both;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1rem;
+}
+.textbox {
+	max-width: 37rem;
+	overflow: hidden;
+}
+.textbox img {
+	width: 10em;
+	float: left;
+	margin: 0 1rem 0 0;
+	clear: both;
+}
+.fullw {
+	width: 100% !important;
+	margin: 1rem 0 0 0 !important;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.noir {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	color: #fafafa;
+	background-color: #111;
+}
+.noir a {
+	color: #fafafa;
+}
+.hero {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	background-color: #fafafa;
+}
+.hero img {
+	margin: 0 auto;
+	display: block;
+	max-width: 40rem;
+}
+.quoteline {
+	border-left: 0.25rem solid;
+	padding-left: 0.5rem;
+	font-style: italic;
+}
+.width25 {
+	width: 25%;
+	margin: 0;
+}
+.width33 {
+	width: 33.33%;
+	float: left;
+}
 .scrollmenu {
-    background-color: #333;
-    overflow: auto;
-    white-space: nowrap;
+	background-color: #111;
+	overflow: auto;
+	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
+	font-size: 0.7rem;
+	line-height: 1.2;
+	padding: 0;
 }
-
 .scrollmenu a {
-    display: inline-block;
-    color: white;
-    text-align: left;
-    padding: 14px;
-    text-decoration: none;
-	/*float: left;*/
+	display: inline-block;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	margin: 0.5rem;
+}
+.scrollmenu a:hover {
+	text-decoration: underline;
 }
 
-.scrollmenu a:hover {
-    text-decoration: underline;
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+@media (max-width: 62rem) {
+.width25 {
+	width: 50%;
+}
+}
+
+@media (max-width: 38rem) {
+body {
+	font-size: 18px;
+}
+.width25 {
+	width: 100%;
+}
+.width33 {
+	width: 100%;
+}
+.textbox img {
+	height: auto;
+	width: 100%;
+	float: left;
+	margin: 0 0 1rem 0;
+}
 }
 </style>
 </head>
 <body>
-
-<div class="scrollmenu">
-  <a href="#home">COURSES <br>
-&amp; STUDY</a>
-  <a href="#news">STUDENT <br>
-LIFE</a>
-  <a href="#contact">YOUR <br>
-UNIVERSITY</a>
-  <a href="#about">INTERNATIONAL <br>
-PLYMOUTH</a>
-  <a href="#support">RESEARCH <br>
-&amp; EXPERTISE</a>
-  <a href="#blog">BUSINESS <br>
-&amp; PARTNERS</a>
-  <a href="#tools">ALUMNI <br>
-&amp; FRIENDS</a>  
-  <a href="#base">ABOUT US</a>
-  
+<div class="scrollmenu"> <a href="#home">COURSES <br>
+  &amp; STUDY</a> <a href="#news">STUDENT <br>
+  LIFE</a> <a href="#contact">YOUR <br>
+  UNIVERSITY</a> <a href="#about">INTERNATIONAL <br>
+  PLYMOUTH</a> <a href="#support">RESEARCH <br>
+  &amp; EXPERTISE</a> <a href="#blog">BUSINESS <br>
+  &amp; PARTNERS</a> <a href="#tools">ALUMNI <br>
+  &amp; FRIENDS</a> <a href="#base">ABOUT US</a> </div>
+<div class="textbox borderbox">
+  <h2>Xorem ipsum dolor sit amet, consectetur Xdipisicing elit, sed do eiusmod tempor incididunX</h2>
+  <img src="images/1280x720cs5.jpg" alt="" class="fullw"/>
+  <p><strong>Title:</strong> Firefly Scholarship in podiatry</p>
+  <p><img src="images/1280x720cs2.jpg" alt=""/><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+  <p><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+  <p class="quoteline">"It’s really exciting right at this moment in time, being part of a movement which supports people across the world who are developing opportunities and solving problems in their own communities with digital technology."</p>
 </div>
-
+<div class="fullw">
+  <div class="width33 borderbox"><img src="images/mono1.jpg" alt=""/></div>
+  <div class="width33 borderbox"><img src="images/mono2.jpg" alt=""/></div>
+  <div class="width33 borderbox"><img src="images/mono3.jpg" alt=""/></div>
+</div>
+<div class="noir">
+  <div class="textbox borderbox">
+    <h2>Xorem ipsum dolor sit amet, consectetur Xdipisicing elit, sed do eiusmod tempor incididunX</h2>
+    <p><strong>Title:</strong> Firefly Scholarship in podiatry</p>
+    <p><img src="images/1280x720hot17l.jpg" alt=""/><strong>Eligibility:</strong> To be eligible for the award, you should be a well-motivated, committed and a high-achieving final year undergraduate student, who requires financial support. You should demonstrate an interest in musculoskeletal practice. You should have an excellent record of academic achievement, with strong support from one academic and one clinical referee.</p>
+    <p><strong>How to apply:</strong> For enquiries please email: <a href="#">alumni@plymouth.ac.uk</a></p>
+    <p class="quoteline">"It’s really exciting right at this moment in time, being part of a movement which supports people across the world who are developing opportunities and solving problems in their own communities with digital technology."</p>
+  </div>
+</div>
+<div class="fullw"><a href="images/1280x720cs1.jpg"><img src="images/1280x720cs1.jpg" alt="" class="width25"/></a><a href="images/1280x720cs2.jpg"><img src="images/1280x720cs2.jpg" alt="" class="width25"/></a><a href="images/1280x720cs3.jpg"><img src="images/1280x720cs3.jpg" alt="" class="width25"/></a><a href="images/1280x720cs4.jpg"><img src="images/1280x720cs4.jpg" alt="" class="width25"/></a></div>
 </body>
 </html>
