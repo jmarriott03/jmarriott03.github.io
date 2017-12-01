@@ -9,6 +9,15 @@
 <meta name="viewport" content="initial-scale=1">
 <title>University of Plymouth</title>
 <style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
 * {
 	margin: 0 auto;
 	padding: 0;
@@ -129,6 +138,7 @@ img {
 	font-size: 0.7rem;
 	line-height: 1.2;
 	padding: 0;
+	clear: both;
 }
 .scrollmenu a {
 	display: inline-block;
@@ -139,6 +149,19 @@ img {
 }
 .scrollmenu a:hover {
 	text-decoration: underline;
+}
+.uop {
+	width: 8rem;
+	clear: both;
+	margin: 1rem;
+}
+.topright {
+	position: absolute;
+	top: 0;
+	right: 1rem;
+}
+.marginr {
+	margin-right: 1rem;
 }
 
 /*
@@ -176,6 +199,8 @@ body {
 </style>
 </head>
 <body>
+<p><img src="images/uoptemp.svg" alt="" class="uop"/></p>
+<p class="topright"><a href="#" class="marginr" ><span class="iconfont" aria-hidden="true">A</span> Log in</a> <a href="#" ><span class="iconfont" aria-hidden="true">B</span> Search</a></p>
 <div class="scrollmenu"> <a href="#">Courses &amp; study</a> <a href="#">Student life</a> <a href="#">Your University</a> <a href="#">International Plymouth</a> <a href="#">Research &amp; expertise</a> <a href="#">Business &amp; partners</a> <a href="#">Alumni &amp; friends</a> <a href="#">About us</a></div>
 <div class="textbox borderbox">
   <h2>Xorem ipsum dolor sit amet, consectetur Xdipisicing elit, sed do eiusmod tempor incididunX</h2>
