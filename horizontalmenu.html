@@ -64,6 +64,7 @@ img {
 	text-decoration: none;
 	vertical-align: top;
 	width: 100%;
+	margin: 0;
 }
 .borderbox {
 	-webkit-box-sizing: border-box;
@@ -129,7 +130,7 @@ img {
 	padding: 0 0.5rem 1rem 0.5rem;
 }
 .scrollmenu {
-	background-color: #111;
+	background-color: #ccc;
 	overflow: auto;
 	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
@@ -140,10 +141,11 @@ img {
 	clear: both;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin: 0;
 }
 .scrollmenu a {
 	display: inline-block;
-	color: white;
+	color: #111;
 	text-align: left;
 	text-decoration: none;
 	margin: 0.5rem;
@@ -163,6 +165,9 @@ img {
 }
 .marginr {
 	margin-right: 0.5rem;
+}
+.nomargintop {
+	margin: 0;
 }
 
 /*
@@ -200,8 +205,10 @@ body {
 </style>
 </head>
 <body>
-<p><img src="images/uoptemp.svg" alt="" class="uop"/></p>
-<p class="topright"><a href="#" class="marginr" ><span class="iconfont" aria-hidden="true">A</span> Log in</a> <a href="#" ><span class="iconfont" aria-hidden="true">B</span> Search</a></p>
+<div class="noir">
+  <p><img src="images/uoptempwhite.svg" alt="" class="uop"/></p>
+  <p class="topright"><a href="#" class="marginr" ><span class="iconfont" aria-hidden="true">A</span> Log in</a> <a href="#" ><span class="iconfont" aria-hidden="true">B</span> Search</a></p>
+</div>
 <div class="scrollmenu"> <a href="#">Courses <br>
   &amp; study</a> <a href="#">Student <br>
   life</a> <a href="#">Your <br>
