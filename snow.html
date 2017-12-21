@@ -235,6 +235,17 @@ p img {
 .absolutebottom img {
 	width: 50px;
 }
+.scrolltopvalue {
+	position: fixed;
+	left: 0;
+	top: 0;
+	float: left;
+	margin: 0;
+	padding: .5em;
+	z-index: 100;
+	color: #fff;
+	background-color: #000;
+}
 
 /*
    ____               _ _                                
@@ -278,7 +289,7 @@ body {
 }
 }
 </style>
-<script type="text/javascript">//<![CDATA[ 
+<script type="text/javascript">
 function goToByScroll(id){
 	$('html,body').animate({scrollTop: $("."+id).offset().top},'slow');
 	}
@@ -291,18 +302,26 @@ $(window).scroll(function () {
 			$(".absolutebottom").fadeIn(200);
 			}
 			});
-/* ]]> */
-//]]>
+
+/*$(window).scroll(function () {
+       $('.scrolltopvalue').text($(window).scrollTop());
+});*/
+
+$(window).scroll(function(){
+    $(".top").css("opacity", 1 - $(window).scrollTop() / 500);
+  });
+
 </script>
 </head>
 <body>
+<!--<div class="scrolltopvalue">0</div>-->
 <div class="noir">
   <div class="textbox borderbox">
     <h2>Searching for answers on the other side of the world, Zoe dives for data in the depths of Antarctica.</h2>
     <p>Could you withstand extreme weather conditions and survive in darkness? Live with isolation, cut off from the world, with no mobile phone? Swim through ice as part of your day job? Well, ocean science graduate Zoe Waring does this for a living and thinks it’s awesome.</p>
   </div>
 </div>
-<img src="images/snow10.jpg" alt=""/>
+<div class="noir"> <img src="images/snow10.jpg" alt="" class="top"/> </div>
 <div class="textbox borderbox P2">
   <h2>Living and learning in Antarctica</h2>
   <p>We have two seasons, summer and winter. Quite literally polar opposites in so many ways.</p>
