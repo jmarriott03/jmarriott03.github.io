@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+* + * {
+	margin-top: 1rem;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+}
+body {
+	font-family: sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #000;
+	background-color: #fafafa;
+}
+h2 {
+	font-size: 1.5;
+	line-height: 1.2;
+	font-weight: bold;
+}
+p, h2 {
+	float: left;
+	clear: both;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1rem;
+}
+.textbox {
+	max-width: 37em;
+	overflow: hidden;
+}
+p img {
+	width: 10em;
+	float: left;
+	margin: 0 1rem 0 0;
+	clear: both;
+}
+.hero {
+	width: 100% !important;
+	margin: 1rem 0 0 0 !important;
+}
+.fullw {
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.noir {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	color: #fafafa;
+	background-color: #000;
+}
+.noir a {
+	color: #fafafa;
+}
+.quoteline {
+	border-left: 0.25rem solid;
+	padding-left: 0.5rem;
+	font-style: italic;
+}
+.width25 {
+	width: 25%;
+	margin: 0;
+}
+.width33container {
+	width: 100%;
+	margin: 0;
+	padding: 1rem 0.5rem;
+}
+.width33 {
+	width: 33.33%;
+	float: left;
+	padding: 0 0.5rem 1rem 0.5rem;
+}
+.scrollmenu {
+	background-color: #ccc;
+	overflow: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	font-size: 0.7rem;
+	line-height: 1.2;
+	padding: 0 0 0 0.5rem;
+	clear: both;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+}
+.scrollmenu a {
+	display: inline-block;
+	color: #000;
+	text-align: left;
+	text-decoration: none;
+	margin: 0.5rem;
+}
+.scrollmenu a:hover {
+	text-decoration: underline;
+}
+.uop {
+	width: 8rem;
+	clear: both;
+	margin: 1rem;
+}
+.topright {
+	position: absolute;
+	top: 0;
+	right: 1rem;
+}
+.marginr {
+	margin-right: 0.5rem;
+}
+.nomargintop {
+	margin: 0;
+}
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -moz-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -webkit-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -webkit-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-20px);
+ -ms-transform: translateY(-20px);
+ -webkit-transform: translateY(-20px);
+ transform: translateY(-20px);
+}
+ 60% {
+ -moz-transform: translateY(-10px);
+ -ms-transform: translateY(-10px);
+ -webkit-transform: translateY(-10px);
+ transform: translateY(-10px);
+}
+}
+.bounce {
+	-moz-animation: bounce 2s 2;
+	-webkit-animation: bounce 2s 2;
+	animation: bounce 2s 2;
+}
+.absolutebottom {
+	height: 40px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+}
+.absolutebottom img {
+	width: 50px;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
+@media (max-width: 62rem) {
+.width25 {
+	width: 50%;
+}
+.absolutebottom {
+	display: none;
+}
+}
+
+@media (max-width: 38rem) {
+body {
+	font-size: 18px;
+}
+.width25 {
+	width: 100%;
+}
+.width33 {
+	width: 100%;
+}
+p img {
+	height: auto;
+	width: 100%;
+	float: left;
+	margin: 0 0 1rem 0;
+}
+}
+
+@media (min-width: 92rem) {
+body {
+	font-size: 30px;
+}
+}
+</style>
+<script type="text/javascript">//<![CDATA[ 
+function goToByScroll(id){
+	$('html,body').animate({scrollTop: $("."+id).offset().top},'slow');
+	}
+$(window).scroll(function () {
+	scrollValue = $(document).scrollTop();
+	if (scrollValue > 0){
+		$(".absolutebottom").fadeOut(200);
+		}
+		else{
+			$(".absolutebottom").fadeIn(200);
+			}
+			});
+/* ]]> */
+//]]>
+</script>
+</head>
+<body>
+<div class="noir">
+  <div class="textbox borderbox">
+    <h2>Searching for answers on the other side of the world, Zoe dives for data in the depths of Antarctica.</h2>
+    <p>Could you withstand extreme weather conditions and survive in darkness? Live with isolation, cut off from the world, with no mobile phone? Swim through ice as part of your day job? Well, ocean science graduate Zoe Waring does this for a living and thinks it’s awesome.</p>
+  </div>
+</div>
+<img src="images/snow10.jpg" alt=""/>
+<div class="textbox borderbox P2">
+  <h2>Living and learning in Antarctica</h2>
+  <p>We have two seasons, summer and winter. Quite literally polar opposites in so many ways.</p>
+  <p><img src="images/snow02.jpg" alt=""/>Summers see comparatively warmer weather and more people visiting us. While winter brings isolation, plunging temperatures, gusting winds and even total darkness for a couple of weeks over midwinter.</p>
+  <p class="quoteline">"It’s very hard to describe what it is like to live in Antarctica year round, as there is nothing quite like it."</p>
+  <h2>My role at Rothera</h2>
+  <p>Antarctica is one of the last untouched areas of the world. Many of the factors that control global climate are driven in the Antarctic, such as the down welling of cold water, which drives the rest of the oceans currents.</p>
+  <p>It is my current role as Marine Assistant at Rothera research station, which has brought me to Antarctica. I primarily collect data for the Rothera Time Series (RaTS), the only project of its kind in Antarctica. Since 1997, oceanographic data has been collected year round – once a week during winter and twice in summer – either from boats, or through holes cut into the sea ice.</p>
+  <p>I am based in the Western Antarctic Peninsula (WAP), an area that has experienced significant warming in recent decades. Our research here, carried out with little disturbance from human impact, makes it an important place to study changes caused by global warming.</p>
+  <p>Find out more about the <a href="#">British Antarctic Survey</a></p>
+  <h2>Diving through ice</h2>
+  <p>Our project focuses on understanding the feedbacks between ocean, ice and atmosphere, as well as the role of ocean dynamics on the productivity of phytoplankton.</p>
+  <p>This is achieved through taking CTD casts to measure the physical characteristics of the water, such as temperature and salinity. As well as water samples, which measure everything from phytoplankton levels and their community structure, to available nutrients and dissolved gases. </p>
+  <p>Alongside this, we undertake a number of dive projects to understand the impact that short term and long term climate events have on the benthic community. Diving through sea ice is one of many unforgettable experiences I’ve had. </p>
+  <p class="quoteline">"Being able to see the ice crystals form in the water around me, to getting out and have a layer of ice instantly form over me, is truly remarkable." </p>
+</div>
+<div class="width33container borderbox">
+  <div class="width33 borderbox"><img src="images/snow03.jpg" alt=""/></div>
+  <div class="width33 borderbox"><img src="images/snow04.jpg" alt=""/></div>
+  <div class="width33 borderbox"><img src="images/snow05.jpg" alt=""/></div>
+</div>
+<div class="noir">
+  <div class="textbox borderbox">
+    <h2>Two states</h2>
+    <p><img src="images/snow06.jpg" alt=""/>The six months of our winter are spent in isolation. While in summer there are always planes coming and going, plenty of visiting ships and the number of people on base jumps up dramatically. </p>
+    <p>There are just 22 of us in winter, covering a wide range of skills from the marine science team to mechanics, plumbers and field guides. </p>
+    <p>It feels a lot like home as everyone helps out with the cleaning and cooking, under guidance from our chef. </p>
+    <p>Our nearest neighbours are an Argentinian base over 100km away, but we have no contact with them, as it is too far to travel. We have no need for keys, mobile phones or money. We have to be completely self-sufficient. Everything from food, to toilet roll, needs to be planned for, at least a year in advance. </p>
+    <p class="quoteline">"We need to be capable to deal with different situations as they arise. Anything from equipment breaking, to helping the doctor in an emergency." </p>
+  </div>
+</div>
+<div class="width33container borderbox">
+  <div class="width33 borderbox"><img src="images/snow07.jpg" alt=""/></div>
+  <div class="width33 borderbox"><img src="images/snow08.jpg" alt=""/></div>
+  <div class="width33 borderbox"><img src="images/snow09.jpg" alt=""/></div>
+</div>
+<div class="absolutebottom bounce">
+  <p><a href="javascript:void(0)" onclick="goToByScroll('P2');"><img src="images/arrowdown.png" alt=""></a></p>
+</div>
+</body>
+</html>
