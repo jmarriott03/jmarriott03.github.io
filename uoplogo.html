@@ -12,9 +12,8 @@
 <title>University of Plymouth</title>
 <style type="text/css">
 @font-face {
-	font-family: 'icon';
-	src: url('fonts/icon7q-webfont.eot');
-	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
 }
 .iconfont {
 	font-family: 'icon', sans-serif;
@@ -34,8 +33,8 @@ html, body {
 	font-size: 18px;
 	font-family: sans-serif;
 	line-height: 1.5em;
-	color: #fafafa;
-	background-color: #111;
+	color: #111;
+	background-color: #eee;
 }
 h2 {
 	font-size: 1.5em;
@@ -44,7 +43,7 @@ h2 {
 	margin-bottom: 1em;
 }
 a {
-	color: #fafafa;
+	color: #00e;
 }
 p {
 	clear: both;
@@ -93,16 +92,6 @@ img {
 p {
 	white-space: pre-line;
 }
-.swatch1 {
-	width: 100%;
-	overflow: hidden;
-	background-color: #eee;
-	margin-top: 0;
-	color: #111;
-}
-.swatch1 a {
-	color: #111;
-}
 .swatch2 {
 	width: 100%;
 	overflow: hidden;
@@ -116,50 +105,363 @@ p {
 .crest {
 	width: 16.5%;
 }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+	margin-bottom: 1em;
+}
+td, th {
+	padding: 5px;
+	text-align: left;
+	border: 1px dotted #666;
+	vertical-align: top;
+	width: 0%;
+}
+.iconcell td, .iconcell th {
+	text-align: center;
+	background-color: #ddd;
+}
+.iconfont td, .iconfont th {
+	text-align: center;
+	background-color: #eee;
+	border-bottom: 1px solid #666;
+}
+.col01 {
+	color: #eee;
+	background-color: #00e;
+}
+.col02 {
+	color: #eee;
+	background-color: #551A8B;
+}
+.col03 {
+	color: #eee;
+	background-color: #f00;
+}
+.col04 {
+	color: #111;
+	background-color: #eee;
+	border: 1px solid #111;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.col05 {
+	color: #111;
+	background-color: #ccc;
+}
+.col06 {
+	color: #eee;
+	background-color: #111;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	width: 130px;
+	height: 80px;
+	justify-content: center;
+	margin: 0 1em 1em 0;
+	float: left;
+}
 </style>
 </head>
 <body>
-<div class="fullw swatch1">
-  <div class="textbox borderbox">
-    <h2>University of Plymouth digital assets</h2>
-    <a href="images/uoplogo.svg" download><img src="images/uoplogo.svg" alt="University of Plymouth" />
-    <p>Full colour logo for light backgrounds. (.svg format, 24 KB <span class="iconfont">%</span>)</p>
-    </a></div>
-</div>
+<div class="textbox borderbox">
+  <h2>University of Plymouth logos</h2>
+  <a href="images/uoplogo.svg" download><img src="images/uoplogo.svg" alt="University of Plymouth" />
+  <p>Full colour logo for light backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+  </a></div>
 <div class="fullw swatch2">
   <div class="textbox borderbox"><a href="images/uoplogowhite.svg" download><img src="images/uoplogowhite.svg" alt="University of Plymouth" />
-    <p>Full colour logo for dark backgrounds. (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+    <p>Full colour logo for dark backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
     </a></div>
 </div>
-<div class="fullw swatch1">
-  <div class="textbox borderbox"><a href="images/uoplogomono.svg" download><img src="images/uoplogomono.svg" alt="University of Plymouth" />
-    <p>Mono logo for light backgrounds. (.svg format, 24 KB <span class="iconfont">%</span>)</p>
-    </a> </div>
-</div>
+<div class="textbox borderbox"><a href="images/uoplogomono.svg" download><img src="images/uoplogomono.svg" alt="University of Plymouth" />
+  <p>Mono logo for light backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+  </a> </div>
 <div class="fullw swatch2">
   <div class="textbox borderbox"><a href="images/uoplogomonowhite.svg" download><img src="images/uoplogomonowhite.svg" alt="University of Plymouth" />
-    <p>Mono logo for dark backgrounds. (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+    <p>Mono logo for dark backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
     </a> </div>
 </div>
-<div class="fullw swatch1">
-  <div class="textbox borderbox"><a href="images/uopcrest.svg" download><img src="images/uopcrest.svg" alt="University of Plymouth Crest" class="crest" />
-    <p>Full colour crest for light backgrounds. (.svg format, 8 KB <span class="iconfont">%</span>)</p>
-    </a></div>
-</div>
+<div class="textbox borderbox"><a href="images/uopcrest.svg" download><img src="images/uopcrest.svg" alt="University of Plymouth Crest" class="crest" />
+  <p>Full colour crest for light backgrounds (.svg format, 8 KB <span class="iconfont">%</span>)</p>
+  </a></div>
 <div class="fullw swatch2">
   <div class="textbox borderbox"><a href="images/uopcrestwhite.svg" download><img src="images/uopcrestwhite.svg" alt="University of Plymouth Crest" class="crest" />
-    <p>Full colour crest for dark backgrounds. (.svg format, 7 KB <span class="iconfont">%</span>)</p>
+    <p>Full colour crest for dark backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
     </a> </div>
 </div>
-<div class="fullw swatch1">
-  <div class="textbox borderbox"><a href="images/uopcrestmono.svg" download><img src="images/uopcrestmono.svg" alt="University of Plymouth Crest" class="crest" />
-    <p>Mono crest for light backgrounds. (.svg format, 7 KB <span class="iconfont">%</span>)</p>
-    </a> </div>
-</div>
+<div class="textbox borderbox"><a href="images/uopcrestmono.svg" download><img src="images/uopcrestmono.svg" alt="University of Plymouth Crest" class="crest" />
+  <p>Mono crest for light backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
+  </a> </div>
 <div class="fullw swatch2">
   <div class="textbox borderbox"><a href="images/uopcrestmonowhite.svg" download><img src="images/uopcrestmonowhite.svg" alt="University of Plymouth Crest" class="crest" />
-    <p>Mono crest for dark backgrounds. (.svg format, 7 KB <span class="iconfont">%</span>)</p>
+    <p>Mono crest for dark backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
     </a> </div>
+</div>
+<div class="textbox borderbox">
+  <h2>Icon font</h2>
+  <table>
+    <tbody>
+      <tr class="iconcell">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+      </tr>
+      <tr class="iconfont">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+      </tr>
+      <tr class="iconcell">
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+      </tr>
+      <tr class="iconcell">
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+      </tr>
+      <tr class="iconfont">
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+      </tr>
+      <tr class="iconcell">
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconfont">
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconcell">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+      </tr>
+      <tr class="iconfont">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+      </tr>
+      <tr class="iconcell">
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+      </tr>
+      <tr class="iconfont">
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+      </tr>
+      <tr class="iconcell">
+        <td>&#123;</td>
+        <td>&#124;</td>
+        <td>&#125;</td>
+        <td>&#126;</td>
+        <td>&#196;</td>
+        <td>&#197;</td>
+        <td>&#199;</td>
+        <td>&#201;</td>
+        <td>&#209;</td>
+        <td>&#214;</td>
+        <td>&#220;</td>
+        <td>&#225;</td>
+        <td>&#224;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>&#123;</td>
+        <td>&#124;</td>
+        <td>&#125;</td>
+        <td>&#126;</td>
+        <td>&#196;</td>
+        <td>&#197;</td>
+        <td>&#199;</td>
+        <td>&#201;</td>
+        <td>&#209;</td>
+        <td>&#214;</td>
+        <td>&#220;</td>
+        <td>&#225;</td>
+        <td>&#224;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a href="fonts/icon7r-webfont.woff" download>Icon font (.woff format, 34 KB <span class="iconfont">%</span>)</a></p>
+  <h2>Colours &amp; font</h2>
+  <div class="flex col01">#00E<br>
+    Standard link</div>
+  <div class="flex col02">#551A8B<br>
+    Visited link</div>
+  <div class="flex col03">#F00<br>
+    Active link</div>
+  <div class="flex col04">#EEE<br>
+    Light</div>
+  <div class="flex col05">#CCC<br>
+    Medium</div>
+  <div class="flex col06">#111<br>
+    Dark</div>
+  <p>Minimum 16px for body text</p>
+  <p>font-family: sans-serif;</p>
+</div>
 </div>
 </body>
 </html>
