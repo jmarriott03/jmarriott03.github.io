@@ -101,6 +101,45 @@ p {
 .swatch2 a {
 	color: #eee;
 }
+.bgcolor {
+	background-color: #ccc;
+	animation: colorchange 20s infinite;
+	-webkit-animation: colorchange 20s infinite;
+}
+@keyframes colorchange {
+ 0% {
+background: #111;
+}
+ 20% {
+background: #c60;
+}
+ 40% {
+background: #060;
+}
+ 60% {
+background: #369;
+}
+ 100% {
+background: #111;
+}
+}
+@-webkit-keyframes colorchange {
+ 0% {
+background: #111;
+}
+ 20% {
+background: #c60;
+}
+ 40% {
+background: #060;
+}
+ 60% {
+background: #369;
+}
+ 100% {
+background: #111;
+}
+}
 </style>
 </head>
 <body>
