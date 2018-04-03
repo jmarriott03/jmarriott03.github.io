@@ -1,56 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
 <head>
-<style>
-.newspaper {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
-    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 20px; /* Firefox */
-    column-gap: 20px;
-	padding: 40px;
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<link rel="icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/appletouchicon.png">
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00e;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
 }
 img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 10em;
+}
+.textbox {
+	max-width: 40em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 20em;
+	overflow: hidden;
+	margin: 0;
+}
+p {
+	white-space: pre-line;
+}
+.swatch2 {
 	width: 100%;
+	overflow: hidden;
+	background-color: #111;
+	margin-top: 0;
+	color: #eee;
 }
-#container {
-//    column-count: 3;
-//    -moz-column-count: 3;
-//    -webkit-column-count: 3;
-    width: 100%;
-    font-size:0px;
+.swatch2 a {
+	color: #eee;
 }
-.item {
-    background: red;
-display: inline-block;
-height: 100px;
-margin-bottom: 10px;
-box-sizing: border-box;
-width: 25%;
-padding-right: 10px;
-background-clip: content-box;
-font-size: 12px;
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
+li {
+	margin: 0 0 1em 0;
+}
+.twocol {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-width: 18em;
+	-moz-column-width: 18em;
+	column-width: 18em;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+
 </style>
 </head>
 <body>
-
-<div id="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
+<div class="textbox borderbox">
+<h2>Student IT</h2>
+<div class="twocol">
+  <ul>
+    <li><a href="#">Apple support</a></li>
+    <li><a href="#">Changing/forgotten your password</a></li>
+    <li><a href="#">Digital Learning Environment (DLE)</a></li>
+    <li><a href="#">Email and Office 365</a></li>
+    <li><a href="#">ePortfolios using PebblePad</a></li>
+    <li><a href="#">Internet access in halls</a></li>
+    <li><a href="#">Library services</a></li>
+    <li><a href="#">Lynda.com – online training</a></li>
+    <li><a href="#">Mobile with Plymouth University app</a></li>
+    <li><a href="#">My timetable</a></li>
+    <li><a href="#">Online IT induction</a></li>
+    <li><a href="#">PC availability</a></li>
+    <li><a href="#">Printing, scanning & copying</a></li>
+    <li><a href="#">Print and multimedia services</a></li>
+    <li><a href="#">Saving your work</a></li>
+    <li><a href="#">Service status</a></li>
+    <li><a href="#">Software</a></li>
+    <li><a href="#">Student portal</a></li>
+    <li><a href="#">Update my profile</a></li>
+    <li><a href="#">Wi-Fi</a></li>
+  </ul>
 </div>
-
-<p><b>Note:</b> Internet Explorer 9, and earlier versions, does not support the column-rule-style property.</p>
-
-<div class="newspaper"><img src="images/sea1.jpg" alt="">
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
-</div>
-
 </body>
 </html>
