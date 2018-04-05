@@ -90,9 +90,6 @@ img {
 	overflow: hidden;
 	margin: 0;
 }
-p {
-	white-space: pre-line;
-}
 .swatch2 {
 	width: 100%;
 	overflow: hidden;
@@ -165,6 +162,10 @@ td, th {
 	margin: 0 1em 1em 0;
 	float: left;
 }
+.code {
+	font-family: monospace;
+	padding: 1em;
+}
 </style>
 </head>
 <body>
@@ -203,6 +204,16 @@ td, th {
     </a> </div>
 </div>
 <div class="textbox borderbox">
+  <h2>Favicon</h2>
+  <a href="images/favicon.png" download><img src="images/favicon.png" alt="University of Plymouth Crest" class="crest" />
+  <p>Favicon for browser tabs (.png format, 4 KB <span class="iconfont">%</span>)</p>
+  </a>
+  <p class="code">&lt;link rel="icon" href="images/favicon.png"&gt;</p>
+  <h2>Apple touch icon</h2>
+  <a href="images/appletouchicon.png" download><img src="images/appletouchicon.png" alt="University of Plymouth Crest" class="crest" />
+  <p>Icon for iOS &amp; Android home screens (.png format, 3 KB <span class="iconfont">%</span>)</p>
+  </a>
+  <p class="code">&lt;link rel="apple-touch-icon" href="images/appletouchicon.png"&gt;</p>
   <h2>Icon font</h2>
   <table>
     <tbody>
@@ -461,6 +472,17 @@ td, th {
     </tbody>
   </table>
   <p><a href="fonts/icon7r-webfont.woff" download>Icon font (.woff format, 34 KB <span class="iconfont">%</span>)</a></p>
+  <p class="code"> &lt;style type="text/css"&gt;<br>
+    @font-face {<br>
+    font-family: icon;<br>
+    src: url('fonts/icon7r-webfont.woff');<br>
+    }<br>
+    .iconfont {<br>
+    font-family: 'icon', sans-serif;<br>
+    font-weight: normal;<br>
+    vertical-align: auto;<br>
+    }<br>
+    &lt;/style&gt; </p>
   <h2>Colours &amp; font</h2>
   <div class="flex col01">#00E<br>
     Standard link</div>
