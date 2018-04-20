@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>The University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: 'icon';
+	src: url('fonts/icon7q-webfont.eot');
+	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 18px;
+	font-family: sans-serif;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+a {
+	color: #00f;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.textbox {
+	max-width: 38em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.imagebox {
+	max-width: 48em;
+	overflow: hidden;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+button.accordion {
+	background-color: #eee;
+	cursor: pointer;
+	padding: 0.5em;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1em;
+	margin: 0;
+}
+button.accordion.active, button.accordion:hover {
+	background-color: #ddd;
+}
+button.accordion:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: 'O';
+	float: right;
+	margin-right: 0.5em;
+	color: #00f;
+}
+button.accordion.active:after {
+	content: "M";
+}
+div.panel {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin: 0em;
+	border-bottom: 2px solid #aaa;
+}
+div.panel p {
+	padding: 0.5em;
+}
+.staff {
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+.staff img {
+	float: left;
+	padding: 0 0.5em 0 0;
+	width: 2.5em;
+}
+.swatch1 {
+	color: #999;
+	min-width: 5em;
+	display: inline-block;
+}
+.quoteline {
+	border-left: 0.25em solid #ccc;
+	padding-left: 0.5em;
+}
+p {
+	white-space: pre-line;
+}
+
+/*
+   ____               _ _                                
+  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
+ / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
+ \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
+  \____/                                                 
+
+*/
+@media (max-width: 60em) {
+.swatch1 {
+	display: block;
+}
+}
+</style>
+</head>
+<body>
+<div class="textbox borderbox">
+<h2>Year 1 staff</h2>
+<p class="staff"><a href="#"><img src="images/people2.jpg" alt=""></a><a href="#"><img src="images/people1.jpg" alt=""></a><a href="#"><img src="images/people3.jpg" alt=""></a></p>
+  <h2>Themes studied</h2>
+  <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a> Course leader</strong></p>
+  <p class="quoteline">"You'll start to develop the basic technical skills needed to become a computing professional including: programming, databases, computer hardware, computer networking and how a computer operating system works, with optional modules on topics such as creating an e-commerce site."</p>
+  <h2>Learning methods</h2>
+  <p>This year you’ll do your industry placement - which you’ve been preparing for over the past two years - aided by our network of industry contacts. This extensive training period allows you to learn within a professional context, giving you the opportunity to apply your knowledge and skills in the real world, as well as learning from those around you. Over 48 weeks you’ll gain experience and confidence, as well as a host of contacts - all essential in readying you for employment on graduation.</p>
+  <h2>Learning outcomes</h2>
+  <p>You’ll round off your studies with two core modules, both connected with issues of software project management. You’ll also carry out an individual project, which will take up a third of the year. The remainder of the year is made up of optional modules to enhance your skills further with your choice of topics ranging from internet psychology to programming for entertainment systems.</p>
+  <h2>Year 2 staff</h2>
+<p class="staff"><a href="#"><img src="images/people5.jpg" alt=""></a><a href="#"><img src="images/people4.gif" alt=""></a></p>
+  <h2>Themes studied</h2>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+</body>
+</html>
