@@ -7,12 +7,13 @@
 <meta charset="UTF-8">
 <meta name = "viewport" content = "width = device-width">
 <meta name="viewport" content="initial-scale=1">
-<title>The University of Plymouth</title>
+<link rel="icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/appletouchicon.png">
+<title>University of Plymouth</title>
 <style type="text/css">
 @font-face {
-	font-family: 'icon';
-	src: url('fonts/icon7q-webfont.eot');
-	src: url('fonts/icon7q-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/icon7q-webfont.woff') format('woff'), url('fonts/icon7q-webfont.ttf') format('truetype'), url('fonts/icon7q-webfont.svg#iconfont') format('svg');
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
 }
 .iconfont {
 	font-family: 'icon', sans-serif;
@@ -45,6 +46,7 @@ a {
 }
 p {
 	clear: both;
+	white-space: pre-line;
 }
 .visited {
 	color: #90f;
@@ -92,44 +94,6 @@ img {
 	overflow: hidden;
 	margin: 0;
 }
-button.accordion {
-	background-color: #eee;
-	cursor: pointer;
-	padding: 0.5em;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
-	transition: 0.4s;
-	font-size: 1em;
-	margin: 0;
-}
-button.accordion.active, button.accordion:hover {
-	background-color: #ddd;
-}
-button.accordion:after {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	vertical-align: auto;
-	content: 'O';
-	float: right;
-	margin-right: 0.5em;
-	color: #00f;
-}
-button.accordion.active:after {
-	content: "M";
-}
-div.panel {
-	padding: 0;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-	margin: 0em;
-	border-bottom: 2px solid #aaa;
-}
-div.panel p {
-	padding: 0.5em;
-}
 .staff {
 	display: block;
 	clear: both;
@@ -137,20 +101,12 @@ div.panel p {
 }
 .staff img {
 	float: left;
-	padding: 0 0.5em 0 0;
+	padding: 0 0.5em 0.5em 0;
 	width: 2.5em;
-}
-.swatch1 {
-	color: #999;
-	min-width: 5em;
-	display: inline-block;
 }
 .quoteline {
 	border-left: 0.25em solid #ccc;
 	padding-left: 0.5em;
-}
-p {
-	white-space: pre-line;
 }
 
 /*
@@ -170,8 +126,8 @@ p {
 </head>
 <body>
 <div class="textbox borderbox">
-<h2>Year 1 staff</h2>
-<p class="staff"><a href="#"><img src="images/people2.jpg" alt=""></a><a href="#"><img src="images/people1.jpg" alt=""></a><a href="#"><img src="images/people3.jpg" alt=""></a></p>
+  <h2>Year 1 staff</h2>
+  <p class="staff"><a href="#"><img src="images/people2.jpg" alt=""></a><a href="#"><img src="images/people1.jpg" alt=""></a><a href="#"><img src="images/people4.gif" alt=""></a><a href="#"><img src="images/people3.jpg" alt=""></a><a href="#"><img src="images/people5.jpg" alt=""></a><a href="#"><img src="images/people6.jpg" alt=""></a><a href="#"><img src="images/people7.jpg" alt=""></a></p>
   <h2>Themes studied</h2>
   <p class="staff"><strong><a href="#"><img src="images/people2.jpg" alt="">Dr Person One</a> Course leader</strong></p>
   <p class="quoteline">"You'll start to develop the basic technical skills needed to become a computing professional including: programming, databases, computer hardware, computer networking and how a computer operating system works, with optional modules on topics such as creating an e-commerce site."</p>
@@ -180,7 +136,7 @@ p {
   <h2>Learning outcomes</h2>
   <p>You’ll round off your studies with two core modules, both connected with issues of software project management. You’ll also carry out an individual project, which will take up a third of the year. The remainder of the year is made up of optional modules to enhance your skills further with your choice of topics ranging from internet psychology to programming for entertainment systems.</p>
   <h2>Year 2 staff</h2>
-<p class="staff"><a href="#"><img src="images/people5.jpg" alt=""></a><a href="#"><img src="images/people4.gif" alt=""></a></p>
+  <p class="staff"><a href="#"><img src="images/people5.jpg" alt=""></a><a href="#"><img src="images/people6.jpg" alt=""></a><a href="#"><img src="images/people7.jpg" alt=""></a></p>
   <h2>Themes studied</h2>
 </div>
 <script>
