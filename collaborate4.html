@@ -56,7 +56,7 @@ a {
 	transition: background-color 0.5s ease;
 }
 a:hover {
-	background: rgba(0,136,204,1);
+	background: rgba(0,136,204,0.6);
 }
 .visited {
 	color: #90f;
@@ -147,8 +147,10 @@ img {
 .four img {
 	display: none;
 }
-a {
+a, a:hover {
 	padding: 0.5em;
+	background: rgba(0,136,204,1);
+	border-radius: 0.25em;
 }
 body {
 	background-image: none;
