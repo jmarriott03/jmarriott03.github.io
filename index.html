@@ -1,274 +1,507 @@
-
 <!doctype html>
 <html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
 <head>
 <meta charset="UTF-8">
-<title>Color themes</title>
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<link rel="icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/appletouchicon.png">
+<title>University of Plymouth</title>
 <style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #EEE;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+a {
+	color: #00E;
+}
+.visited {
+    color: #551A8B;
+}
+.active {
+    color: #F00;
+}
 p {
 	clear: both;
-	padding: 10px 0 0 0;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	display: block;
-	margin: 0;
 }
 strong {
-	font-size: 14px;
-	line-height: 14px;
+	font-weight: bold;
 }
 em {
-	font-style: normal;
-	color: #b6b7b9;
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 20px;
+	font-style: italic;
 }
-.container {
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: middle;
+	width: 100%;
+}
+.textbox {
+	max-width: 34em;
+	overflow: hidden;
+	padding-top: 0;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 2em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 20em;
+	overflow: hidden;
+	margin: 0;
+}
+.swatch2 {
+	width: 100%;
+	overflow: hidden;
+	background-color: #111;
+	margin-top: 0;
+	color: #EEE;
+}
+.swatch2 a {
+	color: #EEE;
+}
+.crest {
+	width: 16.5%;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 	float: left;
-	border: 1px solid #ccc;
-	margin: 10px;
-	padding: 10px;
-	width: 180px;
+	margin: 0 0 1em 0;
 }
-
-
-.box1a {
-	background-color: #a80075;
+td, th {
+	padding: 3px 5px;
+	text-align: left;
+	border: 1px dotted #666;
+	vertical-align: top;
+	width: 0%;
 }
-.box1b {
-	background-color: #d335a4;
+.iconcell td, .iconcell th {
+	text-align: center;
+	background-color: #DDD;
 }
-.box1c {
-	background-color: #6d004c;
+.iconfont td, .iconfont th {
+	text-align: center;
+	background-color: #EEE;
+	border-bottom: 1px solid #666;
 }
-
-
-.box2a {
-	background-color: #c74a8d;
+.col01 {
+	color: #EEE;
+	background-color: #00E;
 }
-.box2b {
-	background-color: #e378b0;
+.col02 {
+	color: #EEE;
+	background-color: #551A8B;
 }
-.box2c {
-	background-color: #811850;
+.col03 {
+	color: #EEE;
+	background-color: #F00;
 }
-
-
-.box3a {
-	background-color: #c1004a;
+.col04 {
+	color: #111;
+	background-color: #EEE;
+	border: 1px solid #111;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-.box3b {
-	background-color: #e03879;
+.col05 {
+	color: #111;
+	background-color: #CCC;
 }
-.box3c {
-	background-color: #7d0031;
+.col06 {
+	color: #EEE;
+	background-color: #111;
 }
-
-
-.box4a {
-	background-color: #e09e33;
-}
-.box4b {
-	background-color: #f0bb65;
-}
-.box4c {
-	background-color: #926011;
-}
-
-
-.box5a {
-	background-color: #f3d213;
-}
-.box5b {
-	background-color: #f9e04d;
-}
-.box5c {
-	background-color: #9e8806;
-}
-
-
-.box6a {
-	background-color: #7b77a5;
-}
-.box6b {
-	background-color: #aaa6d2;
-}
-.box6c {
-	background-color: #2d276b;
-}
-
-
-.box7a {
-	background-color: #5391ca;
-}
-.box7b {
-	background-color: #80b5e4;
-}
-.box7c {
-	background-color: #1b5283;
-}
-
-
-.box8a {
-	background-color: #7fbfd7;
-}
-.box8b {
-	background-color: #a3d7eb;
-}
-.box8c {
-	background-color: #29718c;
-}
-
-
-.box9a {
-	background-color: #9fcac5;
-}
-.box9b {
-	background-color: #c0e4e1;
-}
-.box9c {
-	background-color: #34837b;
-}
-
-
-.box10a {
-	background-color: #b4c960;
-}
-.box10b {
-	background-color: #d2e48b;
-}
-.box10c {
-	background-color: #6e831f;
-}
-
-
-.box11a {
-	background-color: #1d347e;
-}
-.box11b {
-	background-color: #516abf;
-}
-.box11c {
-	background-color: #091a52;
-}
-
-
-.box12a {
-	background-color: #3c3e6f;
-}
-.box12b {
-	background-color: #787bb7;
-}
-.box12c {
-	background-color: #131648;
-}
-
-
-.box13a {
-	background-color: #747376;
-}
-.box13b {
-	background-color: #b6b7b9;
-}
-.box13c {
-	background-color: #222222;
-}
-
-
-.box1a, .box2a, .box3a, .box4a, .box5a, .box6a, .box7a, .box8a, .box9a, .box10a, .box11a, .box12a, .box13a {
-	width: 180px;
-	height: 160px;
-}
-
-.box1b, .box2b, .box3b, .box4b, .box5b, .box6b, .box7b, .box8b, .box9b, .box10b, .box11b, .box12b, .box13b, .box1c, .box2c, .box3c, .box4c, .box5c, .box6c, .box7c, .box8c, .box9c, .box10c, .box11c, .box12c, .box13c {
-	width: 90px;
-	height: 90px;
+.flex {
+	display: flex;
+	align-items: center;
+	width: 130px;
+	height: 80px;
+	justify-content: center;
+	margin: 0 1em 1em 0;
 	float: left;
 }
-
+.code {
+	font-family: monospace;
+	padding: 1em;
+}
 </style>
 </head>
-
 <body>
-<div class="container">
-<div class="box1a"></div><div class="box1b"></div><div class="box1c"></div>
-<p><strong>Deep rose</strong><br>
-  <em>Color 1</em><br>
-  #a80075; #d335a4; #6d004c;</p>
+<div class="textbox borderbox">
+  <h2>University of Plymouth logos</h2>
+  <a href="images/uoplogo.svg" download><img src="images/uoplogo.svg" alt="University of Plymouth" />
+  <p>Full colour logo for light backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+  </a></div>
+<div class="fullw swatch2">
+  <div class="textbox borderbox"><a href="images/uoplogowhite.svg" download><img src="images/uoplogowhite.svg" alt="University of Plymouth" />
+    <p>Full colour logo for dark backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+    </a></div>
 </div>
-
-<div class="container">
-<div class="box2a"></div><div class="box2b"></div><div class="box2c"></div>
-<p><strong>Brilliant rose</strong><br>
-  <em>Color 2</em><br>#c74a8d; #e378b0; #811850;</p>
+<div class="textbox borderbox"><a href="images/uoplogomono.svg" download><img src="images/uoplogomono.svg" alt="University of Plymouth" />
+  <p>Mono logo for light backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+  </a> </div>
+<div class="fullw swatch2">
+  <div class="textbox borderbox"><a href="images/uoplogomonowhite.svg" download><img src="images/uoplogomonowhite.svg" alt="University of Plymouth" />
+    <p>Mono logo for dark backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
+    </a> </div>
 </div>
-
-<div class="container">
-<div class="box3a"></div><div class="box3b"></div><div class="box3c"></div>
-<p><strong>Raspberry red</strong><br>
-  <em>Color 3</em><br>#c1004a; #e03879; #7d0031;</p>
+<div class="textbox borderbox"><a href="images/uopcrest.svg" download><img src="images/uopcrest.svg" alt="University of Plymouth" class="crest" />
+  <p>Full colour crest for light backgrounds (.svg format, 8 KB <span class="iconfont">%</span>)</p>
+  </a></div>
+<div class="fullw swatch2">
+  <div class="textbox borderbox"><a href="images/uopcrestwhite.svg" download><img src="images/uopcrestwhite.svg" alt="University of Plymouth" class="crest" />
+    <p>Full colour crest for dark backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
+    </a> </div>
 </div>
-
-<div class="container">
-<div class="box4a"></div><div class="box4b"></div><div class="box4c"></div>
-<p><strong>Deep orange</strong><br>
-  <em>Color 4</em><br>#e09e33; #f0bb65; #926011;</p>
+<div class="textbox borderbox"><a href="images/uopcrestmono.svg" download><img src="images/uopcrestmono.svg" alt="University of Plymouth" class="crest" />
+  <p>Mono crest for light backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
+  </a> </div>
+<div class="fullw swatch2">
+  <div class="textbox borderbox"><a href="images/uopcrestmonowhite.svg" download><img src="images/uopcrestmonowhite.svg" alt="University of Plymouth" class="crest" />
+    <p>Mono crest for dark backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
+    </a> </div>
 </div>
-
-<div class="container">
-<div class="box5a"></div><div class="box5b"></div><div class="box5c"></div>
-<p><strong>Butter yellow</strong><br>
-  <em>Color 5</em><br>#f3d213; #f9e04d; #9e8806;</p>
+<div class="textbox borderbox">
+  <h2>Favicon</h2>
+  <a href="images/favicon.png" download><img src="images/favicon.png" alt="University of Plymouth" class="crest" />
+  <p>Favicon for browser tabs (.png format, 4 KB <span class="iconfont">%</span>)</p>
+  </a>
+  <p class="code">&lt;link rel="icon" href="images/favicon.png"&gt;</p>
+  <h2>Apple touch icon</h2>
+  <a href="images/appletouchicon.png" download><img src="images/appletouchicon.png" alt="University of Plymouth" class="crest" />
+  <p>Icon for iOS &amp; Android home screens (.png format, 3 KB <span class="iconfont">%</span>)</p>
+  </a>
+  <p class="code">&lt;link rel="apple-touch-icon" href="images/appletouchicon.png"&gt;</p>
+  <h2>Icon font</h2>
+  <table>
+    <tbody>
+      <tr class="iconcell">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+      </tr>
+      <tr class="iconfont">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+      </tr>
+      <tr class="iconcell">
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr class="iconfont">
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr class="iconcell">
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+      <tr class="iconfont">
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+      <tr class="iconcell">
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+      </tr>
+      <tr class="iconfont">
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+      </tr>
+      <tr class="iconcell">
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconfont">
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconcell">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+      </tr>
+      <tr class="iconfont">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+      </tr>
+      <tr class="iconcell">
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+      </tr>
+      <tr class="iconfont">
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+      </tr>
+      <tr class="iconcell">
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+        <td>&#123;</td>
+        <td>&#124;</td>
+        <td>&#125;</td>
+        <td>&#126;</td>
+        <td>&#196;</td>
+        <td>&#197;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+        <td>&#123;</td>
+        <td>&#124;</td>
+        <td>&#125;</td>
+        <td>&#126;</td>
+        <td>&#196;</td>
+        <td>&#197;</td>
+      </tr>
+      <tr class="iconcell">
+        <td>&#199;</td>
+        <td>&#201;</td>
+        <td>&#209;</td>
+        <td>&#214;</td>
+        <td>&#220;</td>
+        <td>&#225;</td>
+        <td>&#224;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>&#199;</td>
+        <td>&#201;</td>
+        <td>&#209;</td>
+        <td>&#214;</td>
+        <td>&#220;</td>
+        <td>&#225;</td>
+        <td>&#224;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a href="fonts/icon7r-webfont.woff" download>Icon font (.woff format, 34 KB <span class="iconfont">%</span>)</a></p>
+  <p class="code"> &lt;style type="text/css"&gt;<br>
+    @font-face {<br>
+    font-family: icon;<br>
+    src: url('fonts/icon7r-webfont.woff');<br>
+    }<br>
+    .iconfont {<br>
+    font-family: 'icon', sans-serif;<br>
+    font-weight: normal;<br>
+    vertical-align: auto;<br>
+    }<br>
+    &lt;/style&gt; </p>
+  <h2>Colours &amp; font</h2>
+  <div class="flex col01">#00E<br>
+    Standard link</div>
+  <div class="flex col02">#551A8B<br>
+    Visited link</div>
+  <div class="flex col03">#F00<br>
+    Active link</div>
+  <div class="flex col04">#EEE<br>
+    Light</div>
+  <div class="flex col05">#CCC<br>
+    Medium</div>
+  <div class="flex col06">#111<br>
+    Dark</div>
+  <p>Minimum 16px for body text</p>
+  <p>font-family: sans-serif;</p>
+  <p>line-height: 1.5em;</p>
 </div>
-
-<div class="container">
-<div class="box6a"></div><div class="box6b"></div><div class="box6c"></div>
-<p><strong>Dark lavendar</strong><br>
-  <em>Color 6</em><br>#7b77a5; #aaa6d2; #2d276b;</p>
-</div>
-
-<div class="container">
-<div class="box7a"></div><div class="box7b"></div><div class="box7c"></div>
-<p><strong>Bondi blue</strong><br>
-  <em>Color 7</em><br>#5391ca; #80b5e4; #1b5283;</p>
-</div>
-
-<div class="container">
-<div class="box8a"></div><div class="box8b"></div><div class="box8c"></div>
-<p><strong>Turquoise</strong><br>
-  <em>Color 8</em><br>#7fbfd7; #a3d7eb; #29718c;</p>
-</div>
-
-<div class="container">
-<div class="box9a"></div><div class="box9b"></div><div class="box9c"></div>
-<p><strong>Sea green</strong><br>
-  <em>Color 9</em><br>#9fcac5; #c0e4e1; #34837b;</p>
-</div>
-
-<div class="container">
-<div class="box10a"></div><div class="box10b"></div><div class="box10c"></div>
-<p><strong>Fresh green</strong><br>
-  <em>Color 10</em><br>#b4c960; #d2e48b; #6e831f;</p>
-</div>
-
-<div class="container">
-<div class="box11a"></div><div class="box11b"></div><div class="box11c"></div>
-<p><strong>Persian indigo</strong><br>
-  <em>Color 11</em><br>#1d347e; #516abf; #091a52;</p>
-</div>
-
-<div class="container">
-<div class="box12a"></div><div class="box12b"></div><div class="box12c"></div>
-<p><strong>Midnight blue</strong><br>
-  <em>Color 12</em><br>#3c3e6f; #787bb7; #131648;</p>
-</div>
-
-<div class="container">
-<div class="box13a"></div><div class="box13b"></div><div class="box13c"></div>
-<p><strong>Mono</strong><br>
-  <em>Color 13</em><br>#747376; #b6b7b9; #222222;</p>
-</div>
-
 </body>
 </html>
