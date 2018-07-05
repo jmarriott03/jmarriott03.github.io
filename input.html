@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDR</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 20px;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: 700;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+ul {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+li {
+	margin: 0.5em 0 0 0;
+}
+.textbox {
+	max-width: 34em;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 1em;
+}
+input[type="text"], input[type="submit"], input[type="button"] {
+	font-size: 20px;
+	padding: .25em;
+	margin: 0 0.1em;
+}
+input[type=submit] {
+	padding: 0.25em 0.5em;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: #EEE;
+	background-color: #08C;
+}
+</style>
+<script>
+function process()
+{
+var url="https://jmarriott03.github.io/" + document.getElementById("url").value + ".html";
+location.href=url;
+return false;
+}
+</script>
+</head>
+
+<body>
+<div class="textbox">
+  <form onSubmit="return process();">
+    jmarriott03.github.io/
+    <input type="text" name="url" id="url" autofocus>
+    <input type="submit" value="Go">
+  </form>
+</div>
+</body>
+</html>
