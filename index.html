@@ -5,21 +5,9 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name = "viewport" content = "width = device-width">
-<meta name="viewport" content="initial-scale=1">
-<link rel="icon" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/appletouchicon.png">
-<title>University of Plymouth</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDR</title>
 <style type="text/css">
-@font-face {
-	font-family: icon;
-	src: url('fonts/icon7r-webfont.woff');
-}
-.iconfont {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	vertical-align: auto;
-}
 * {
 	margin: 0 auto;
 }
@@ -30,27 +18,19 @@ html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	font-size: 16px;
+	font-size: 20px;
 	font-family: sans-serif;
-	font-weight: normal;
 	line-height: 1.5em;
 	color: #111;
-	background-color: #F8F8F8;
+	background-color: #FAFAFA;
 }
 h2 {
-	font-size: 1.5em;
-	line-height: 1.25em;
-	font-weight: bold;
-	margin-bottom: 1em;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: 700;
 }
 a {
 	color: #00E;
-}
-.visited {
-	color: #551A8B;
-}
-.active {
-	color: #F00;
 }
 p {
 	clear: both;
@@ -61,447 +41,54 @@ strong {
 em {
 	font-style: italic;
 }
-img {
-	border: 0;
-	text-decoration: none;
-	vertical-align: middle;
-	width: 100%;
+ul {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+li {
+	margin: 0.5em 0 0 0;
 }
 .textbox {
 	max-width: 34em;
 	overflow: hidden;
-	padding-top: 0;
-}
-.borderbox {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 2em;
-}
-.nowrap {
-	white-space: nowrap;
-}
-.ellipsis {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin-top: 0;
-}
-.fullw {
-	width: 20em;
-	overflow: hidden;
-	margin: 0;
-}
-.swatch2 {
-	width: 100%;
-	overflow: hidden;
-	background-color: #111;
-	margin-top: 0;
-	color: #F8F8F8;
-}
-.swatch2 a {
-	color: #F8F8F8;
-}
-.crest {
-	width: 16.5%;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	float: left;
-	margin: 0 0 1em 0;
-}
-td, th {
-	padding: 3px 5px;
-	text-align: left;
-	border: 1px dotted #666;
-	vertical-align: top;
-	width: 0%;
-}
-.iconcell td, .iconcell th {
-	text-align: center;
-	background-color: #DDD;
-}
-.iconfont td, .iconfont th {
-	text-align: center;
-	background-color: #F8F8F8;
-	border-bottom: 1px solid #666;
-}
-.col01 {
-	color: #F8F8F8;
-	background-color: #00E;
-}
-.col02 {
-	color: #F8F8F8;
-	background-color: #551A8B;
-}
-.col03 {
-	color: #F8F8F8;
-	background-color: #F00;
-}
-.col04 {
-	color: #111;
-	background-color: #F8F8F8;
-	border: 1px solid #111;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.col05 {
-	color: #111;
-	background-color: #CCC;
-}
-.col06 {
-	color: #F8F8F8;
-	background-color: #111;
-}
-.flex {
-	display: flex;
-	align-items: center;
-	width: 130px;
-	height: 80px;
-	justify-content: center;
-	margin: 0 1em 1em 0;
-	float: left;
-}
-.code {
-	font-family: monospace;
 	padding: 1em;
 }
+input[type="text"], input[type="submit"], input[type="button"] {
+	font-size: 20px;
+	padding: .25em;
+	margin: 0 0.1em;
+}
+input[type=submit] {
+	padding: 0.25em 0.5em;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: #EEE;
+	background-color: #08C;
+}
 </style>
+<script>
+function process()
+{
+var url="https://jmarriott03.github.io/" + document.getElementById("url").value + ".html";
+location.href=url;
+return false;
+}
+</script>
 </head>
+
 <body>
-<div class="textbox borderbox">
-  <h2>University of Plymouth logos</h2>
-  <a href="images/uoplogo.svg" download><img src="images/uoplogo.svg" alt="University of Plymouth" />
-  <p>Full colour logo for light backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
-  </a></div>
-<div class="fullw swatch2">
-  <div class="textbox borderbox"><a href="images/uoplogowhite.svg" download><img src="images/uoplogowhite.svg" alt="University of Plymouth" />
-    <p>Full colour logo for dark backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
-    </a></div>
-</div>
-<div class="textbox borderbox"><a href="images/uoplogomono.svg" download><img src="images/uoplogomono.svg" alt="University of Plymouth" />
-  <p>Mono logo for light backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
-  </a> </div>
-<div class="fullw swatch2">
-  <div class="textbox borderbox"><a href="images/uoplogomonowhite.svg" download><img src="images/uoplogomonowhite.svg" alt="University of Plymouth" />
-    <p>Mono logo for dark backgrounds (.svg format, 24 KB <span class="iconfont">%</span>)</p>
-    </a> </div>
-</div>
-<div class="textbox borderbox"><a href="images/uopcrest.svg" download><img src="images/uopcrest.svg" alt="University of Plymouth" class="crest" />
-  <p>Full colour crest for light backgrounds (.svg format, 8 KB <span class="iconfont">%</span>)</p>
-  </a></div>
-<div class="fullw swatch2">
-  <div class="textbox borderbox"><a href="images/uopcrestwhite.svg" download><img src="images/uopcrestwhite.svg" alt="University of Plymouth" class="crest" />
-    <p>Full colour crest for dark backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
-    </a> </div>
-</div>
-<div class="textbox borderbox"><a href="images/uopcrestmono.svg" download><img src="images/uopcrestmono.svg" alt="University of Plymouth" class="crest" />
-  <p>Mono crest for light backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
-  </a> </div>
-<div class="fullw swatch2">
-  <div class="textbox borderbox"><a href="images/uopcrestmonowhite.svg" download><img src="images/uopcrestmonowhite.svg" alt="University of Plymouth" class="crest" />
-    <p>Mono crest for dark backgrounds (.svg format, 7 KB <span class="iconfont">%</span>)</p>
-    </a> </div>
-</div>
-<div class="textbox borderbox">
-  <h2>Favicon</h2>
-  <a href="images/favicon.png" download><img src="images/favicon.png" alt="University of Plymouth" class="crest" />
-  <p>Favicon for browser tabs (.png format, 4 KB <span class="iconfont">%</span>)</p>
-  </a>
-  <p class="code">&lt;link rel="icon" href="images/favicon.png"&gt;</p>
-  <h2>Apple touch icon</h2>
-  <a href="images/appletouchicon.png" download><img src="images/appletouchicon.png" alt="University of Plymouth" class="crest" />
-  <p>Icon for iOS &amp; Android home screens (.png format, 3 KB <span class="iconfont">%</span>)</p>
-  </a>
-  <p class="code">&lt;link rel="apple-touch-icon" href="images/appletouchicon.png"&gt;</p>
-  <h2>Icon font</h2>
-  <table>
-    <tbody>
-      <tr class="iconcell">
-        <td>!</td>
-        <td>"</td>
-        <td>#</td>
-        <td>$</td>
-        <td>%</td>
-        <td>&amp;</td>
-        <td>'</td>
-        <td>(</td>
-        <td>)</td>
-        <td>*</td>
-        <td>+</td>
-        <td>,</td>
-      </tr>
-      <tr class="iconfont">
-        <td>!</td>
-        <td>"</td>
-        <td>#</td>
-        <td>$</td>
-        <td>%</td>
-        <td>&amp;</td>
-        <td>'</td>
-        <td>(</td>
-        <td>)</td>
-        <td>*</td>
-        <td>+</td>
-        <td>,</td>
-      </tr>
-      <tr class="iconcell">
-        <td>-</td>
-        <td>.</td>
-        <td>/</td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-      </tr>
-      <tr class="iconfont">
-        <td>-</td>
-        <td>.</td>
-        <td>/</td>
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-      </tr>
-      <tr class="iconcell">
-        <td>9</td>
-        <td>:</td>
-        <td>;</td>
-        <td>&lt;</td>
-        <td>=</td>
-        <td>&gt;</td>
-        <td>?</td>
-        <td>@</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-        <td>D</td>
-      </tr>
-      <tr class="iconfont">
-        <td>9</td>
-        <td>:</td>
-        <td>;</td>
-        <td>&lt;</td>
-        <td>=</td>
-        <td>&gt;</td>
-        <td>?</td>
-        <td>@</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-        <td>D</td>
-      </tr>
-      <tr class="iconcell">
-        <td>E</td>
-        <td>F</td>
-        <td>G</td>
-        <td>H</td>
-        <td>I</td>
-        <td>J</td>
-        <td>K</td>
-        <td>L</td>
-        <td>M</td>
-        <td>N</td>
-        <td>O</td>
-        <td>P</td>
-      </tr>
-      <tr class="iconfont">
-        <td>E</td>
-        <td>F</td>
-        <td>G</td>
-        <td>H</td>
-        <td>I</td>
-        <td>J</td>
-        <td>K</td>
-        <td>L</td>
-        <td>M</td>
-        <td>N</td>
-        <td>O</td>
-        <td>P</td>
-      </tr>
-      <tr class="iconcell">
-        <td>Q</td>
-        <td>R</td>
-        <td>S</td>
-        <td>T</td>
-        <td>U</td>
-        <td>V</td>
-        <td>W</td>
-        <td>X</td>
-        <td>Y</td>
-        <td>Z</td>
-        <td>[</td>
-        <td>\</td>
-      </tr>
-      <tr class="iconfont">
-        <td>Q</td>
-        <td>R</td>
-        <td>S</td>
-        <td>T</td>
-        <td>U</td>
-        <td>V</td>
-        <td>W</td>
-        <td>X</td>
-        <td>Y</td>
-        <td>Z</td>
-        <td>[</td>
-        <td>\</td>
-      </tr>
-      <tr class="iconcell">
-        <td>]</td>
-        <td>^</td>
-        <td>_</td>
-        <td>`</td>
-        <td>a</td>
-        <td>b</td>
-        <td>c</td>
-        <td>d</td>
-        <td>e</td>
-        <td>f</td>
-        <td>g</td>
-        <td>h</td>
-      </tr>
-      <tr class="iconfont">
-        <td>]</td>
-        <td>^</td>
-        <td>_</td>
-        <td>`</td>
-        <td>a</td>
-        <td>b</td>
-        <td>c</td>
-        <td>d</td>
-        <td>e</td>
-        <td>f</td>
-        <td>g</td>
-        <td>h</td>
-      </tr>
-      <tr class="iconcell">
-        <td>i</td>
-        <td>j</td>
-        <td>k</td>
-        <td>l</td>
-        <td>m</td>
-        <td>n</td>
-        <td>o</td>
-        <td>p</td>
-        <td>q</td>
-        <td>r</td>
-        <td>s</td>
-        <td>t</td>
-      </tr>
-      <tr class="iconfont">
-        <td>i</td>
-        <td>j</td>
-        <td>k</td>
-        <td>l</td>
-        <td>m</td>
-        <td>n</td>
-        <td>o</td>
-        <td>p</td>
-        <td>q</td>
-        <td>r</td>
-        <td>s</td>
-        <td>t</td>
-      </tr>
-      <tr class="iconcell">
-        <td>u</td>
-        <td>v</td>
-        <td>w</td>
-        <td>x</td>
-        <td>y</td>
-        <td>z</td>
-        <td>&#123;</td>
-        <td>&#124;</td>
-        <td>&#125;</td>
-        <td>&#126;</td>
-        <td>&#196;</td>
-        <td>&#197;</td>
-      </tr>
-      <tr class="iconfont">
-        <td>u</td>
-        <td>v</td>
-        <td>w</td>
-        <td>x</td>
-        <td>y</td>
-        <td>z</td>
-        <td>&#123;</td>
-        <td>&#124;</td>
-        <td>&#125;</td>
-        <td>&#126;</td>
-        <td>&#196;</td>
-        <td>&#197;</td>
-      </tr>
-      <tr class="iconcell">
-        <td>&#199;</td>
-        <td>&#201;</td>
-        <td>&#209;</td>
-        <td>&#214;</td>
-        <td>&#220;</td>
-        <td>&#225;</td>
-        <td>&#224;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr class="iconfont">
-        <td>&#199;</td>
-        <td>&#201;</td>
-        <td>&#209;</td>
-        <td>&#214;</td>
-        <td>&#220;</td>
-        <td>&#225;</td>
-        <td>&#224;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-  <p><a href="fonts/icon7r-webfont.woff" download>Icon font (.woff format, 34 KB <span class="iconfont">%</span>)</a></p>
-  <p class="code"> &lt;style type="text/css"&gt;<br>
-    @font-face {<br>
-    font-family: icon;<br>
-    src: url('fonts/icon7r-webfont.woff');<br>
-    }<br>
-    .iconfont {<br>
-    font-family: 'icon', sans-serif;<br>
-    font-weight: normal;<br>
-    vertical-align: auto;<br>
-    }<br>
-    &lt;/style&gt; </p>
-  <h2>Colours &amp; font</h2>
-  <div class="flex col01">#00E<br>
-    Standard link</div>
-  <div class="flex col02">#551A8B<br>
-    Visited link</div>
-  <div class="flex col03">#F00<br>
-    Active link</div>
-  <div class="flex col04">#F8F8F8<br>
-    Light</div>
-  <div class="flex col05">#CCC<br>
-    Medium</div>
-  <div class="flex col06">#111<br>
-    Dark</div>
-  <p class="code"> font-size: 1em;<br>
-    font-family: sans-serif;<br>
-    line-height: 1.5em;</p>
+<div class="textbox">
+  <form onSubmit="return process();">
+    jmarriott03.github.io/
+    <input type="text" name="url" id="url" autofocus>
+    <input type="submit" value="Go">
+  </form>
 </div>
 </body>
 </html>
