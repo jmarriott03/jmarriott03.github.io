@@ -32,8 +32,8 @@ html, body {
 	font-size: 1em;
 	font-family: sans-serif;
 	line-height: 1.5em;
-	color: #fafafa;
-	background-color: #111;
+	color: #111;
+	background-color: #fafafa;
 }
 h2 {
 	font-size: 1.5em;
@@ -41,7 +41,7 @@ h2 {
 	font-weight: 700;
 }
 a {
-	color: #fafafa;
+	color: #00e;
 }
 p {
 	clear: both;
@@ -73,15 +73,15 @@ img {
 	margin: 0;
 }
 .staffquote {
-	padding: 1em 1em 1em 5em;
+	padding: 1em 1em 0 4.25em;
 	position: relative;
 	max-width: 32em;
 }
 .staffquote img {
 	left: 0;
 	position: absolute;
-	width: 3em;
-	height: 3em;
+	width: 2.5em;
+	height: 2.5em;
 	margin: 0.25em 0 0 1em;
 	border-radius: 50%;
 }
@@ -92,12 +92,15 @@ img {
 	content: "\2022";
 	padding: 0 0.5em;
 }
+.grey {
+	color: #666;
+}
 </style>
 </head>
 <body>
 <div class="staffquote borderbox">
-  <p><a href="#"><strong><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</strong></a><br>
-    <span id="currentdate">1/1/2000</span><span id="timetoread">1</span> min read</p>
+  <p><strong><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</strong><br>
+    <span class="grey" id="currentdate">1/1/2000</span><span class="grey" id="timetoread">1</span><span class="grey"> min read</span></p>
 </div>
 <div class="articlecontent borderbox">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
@@ -116,13 +119,13 @@ var month = dateObj.getUTCMonth();
 var year = dateObj.getUTCFullYear();
 var monthword = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 newdate = day + "&nbsp;" + monthword[month] + "&nbsp;" + year;
+document.getElementById('currentdate').innerHTML = newdate;
 
 var articlecontent = document.getElementsByClassName('articlecontent');
 var totalwords = 0;
 for (i = 0; i < articlecontent.length; i++) {
 	totalwords += articlecontent[i].textContent.trim().split(/\s+/).length;
 	}
-document.getElementById('currentdate').innerHTML = newdate;
 document.getElementById('timetoread').innerHTML = Math.ceil(totalwords/200);
 </script>
 </body>
