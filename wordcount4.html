@@ -83,7 +83,7 @@ input[type="text"], textarea {
 document.getElementById('toCount').addEventListener('input', function () {
 	var text = this.value,
 	count = text.trim().replace(/\s+/g, ' ').split(' ').length;
-	document.getElementById('timetoread').textContent = Math.ceil(count/200);
+	document.getElementById('timetoread').textContent = Math.floor(count/200);
 	document.getElementById('wordcount').textContent = count;
 	});
     </script>
