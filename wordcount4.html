@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+ margin: 0 auto;
+ padding: 0;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 1em;
+	font-size: 16px;
+}
+body {
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+input[type="text"], textarea {
+	width: 470px;
+	border: 1px solid 111;
+	font-size: 1em;
+	padding: 1em;
+	height: auto;
+}
+#timetoread:before {
+	content: "c";
+	padding: 0 0.25em 0 0;
+	font-family: 'icon', sans-serif;
+}
+</style>
+</head>
+<body>
+<div>
+  <h2><span id="timetoread">0</span> min read</h2>
+  <p>Word count <span id="wordcount">0</span></p>
+  <textarea id="toCount" autofocus autocapitalize="none"></textarea>
+</div>
+<script>
+document.getElementById('toCount').addEventListener('input', function () {
+	var text = this.value,
+	count = text.trim().replace(/\s+/g, ' ').split(' ').length;
+	document.getElementById('timetoread').textContent = Math.ceil(count/200);
+	document.getElementById('wordcount').textContent = count;
+	});
+    </script>
+</body>
+</html>
