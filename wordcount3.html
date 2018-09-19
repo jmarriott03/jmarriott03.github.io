@@ -90,7 +90,7 @@ img {
 	margin: 0.25em 0 0 1em;
 	border-radius: 50%;
 }
-.articlecontent {
+.textbox {
 	max-width: 34em;
 }
 #timetoread:before {
@@ -110,7 +110,7 @@ img {
 	padding-left: 0.5em;
 }
 .imagebox {
-	max-width: 1280px;
+	max-width: 48em;
 	overflow: hidden;
 }
 .herotext {
@@ -118,15 +118,13 @@ img {
 	background: rgba(0,0,0,0.6);
 	padding: 1em;
 	position: absolute;
-	bottom: 0;
-	left: 0;
 	color: #eee;
 	width: 34em;
 	left: 0;
 	right: 0;
-	top: 50%;  /* position the top  edge of the element at the middle of the parent */
-	left: 50%; /* position the left edge of the element at the middle of the parent */
-	transform: translate(-50%, -50%);
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 .relative {
 	position: relative;
@@ -165,7 +163,6 @@ h1 {
 body {
 	font-size: 18px;
 }
-}
 </style>
 </head>
 <body>
@@ -179,7 +176,7 @@ body {
     </div>
   </div>
 </div>
-<div class="articlecontent borderbox">
+<div class="textbox borderbox">
   <p>Peninsula Arts is the wide-ranging public arts programme of the University of Plymouth and plays a pivotal role in building culture and art in the city and South West region, supporting established, new and emerging artists from around the world. The programme includes exhibitions, dance, films, music, performance and talks.</p>
   <p class="quoteline">"The House is a state of the art performing arts centre. Providing a 200 seat flexible studio theatre, to provide greater access to performing arts in the city. Our programme of dance, theatre and performances are fresh off the block."</p>
   <p>It hosts the largest contemporary art gallery in Plymouth; a diverse range of classic films and contemporary cinematic masterpieces screened in the Jill Craigie Cinema; a cutting edge theatre and dance programme in The House; musical performances and concerts, and a year-long series of fascinating talks that open up the world of history.</p>
@@ -194,12 +191,13 @@ var monthword = ["January", "February", "March", "April", "May", "June", "July",
 newdate = day + "&nbsp;" + monthword[month] + "&nbsp;" + year;
 document.getElementById('currentdate').innerHTML = newdate;
 
-var articlecontent = document.getElementsByClassName('articlecontent');
+document.body.classList.add("countwords");
+var textbox = document.getElementsByClassName('countwords');
 var totalwords = 0;
-for (i = 0; i < articlecontent.length; i++) {
-	totalwords += articlecontent[i].textContent.trim().split(/\s+/).length;
+for (i = 0; i < textbox.length; i++) {
+	totalwords += textbox[i].textContent.trim().split(/\s+/).length;
 	}
-document.getElementById('timetoread').innerHTML = Math.ceil(totalwords/200);
+document.getElementById('timetoread').innerHTML = Math.floor(totalwords/200);
 </script>
 </body>
 </html>
