@@ -66,6 +66,15 @@ img {
 	width: 100%;
 	margin: 0;
 }
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
 .borderbox {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -123,6 +132,7 @@ img {
 .black {
 	width: 100%;
  overflow-hidden;
+	color: #eee;
 	background-color: #000;
 	margin-top: 0;
 }
@@ -145,6 +155,13 @@ img {
 	left: 0;
 	bottom: 0;
 }
+.fifty {
+	width: 50%;
+	float: left;
+}
+.marginr {
+	margin-right: 0.5em;
+}
 
 /*
    ____               _ _                                
@@ -160,6 +177,9 @@ img {
 	background-color: #111;
 	width: 100%;
 	left: 0;
+}
+.fifty {
+	width: 100%;
 }
 }
 </style>
@@ -190,6 +210,27 @@ img {
       <h2><a href="#">Robots help family stay in shape</a></h2>
       <p>MEng Robotics graduate Ruby-May Benton worked with Professor Tony Belpaeme to programme a robot that would offer advice on food and fitness.</p>
       <p class="smalltext">Image by Bronte Holden</p>
+    </div>
+  </div>
+</div>
+<div class="black hero">
+  <div class="imagebox">
+    <div class="fifty"><img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt=""/></div>
+    <div class="fifty borderbox">
+      <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
+      <p>Conceived by Dr Alexis Kirke and electronic music pioneer Martyn Ware, the piece will be played to audiences at the <a href="#" class="nowrap">Port Eliot Festival.</a></p>
+      <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">;</span> Enquiries</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">t</span> #PORTELIOT</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">%</span> Lyrics</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">R</span> Tickets</a></p>
+    </div>
+  </div>
+</div>
+<div class="black hero">
+  <div class="imagebox">
+    <div class="fifty"><img src="images/720x720research.jpg" alt=""/></div>
+    <div class="fifty borderbox">
+      <h2>Research Festival</h2>
+      <p>Celebrating the very best of Plymouth's rich and varied research through a week-long series of events</p>
+      <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">&amp;</span> 21 - 25 January</a></p>
+      <p class="smalltext">Image by Raya Krause</p>
     </div>
   </div>
 </div>
