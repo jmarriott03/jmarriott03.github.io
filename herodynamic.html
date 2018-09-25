@@ -220,7 +220,7 @@ img {
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
 <script type="text/javascript">
-$( window ).load(function() {
+$(window).bind("load", function() {
 $('.orientation').each(function(){
     $(this).addClass(this.width > this.height ? 'landscape' : 'portrait');
 });
