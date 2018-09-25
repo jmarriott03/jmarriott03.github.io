@@ -32,7 +32,7 @@ html, body {
 	font-family: sans-serif;
 	line-height: 1.5em;
 	color: #111;
-	background-color: #fafafa;
+	background-color: #eee;
 }
 h1 {
 	font-size: 2em;
@@ -134,31 +134,11 @@ img {
 	width: 100%;
 	overflow: hidden;
 	color: #eee;
-	background-color: #000;
+	background-color: #111;
 	margin-top: 0;
 }
 .black a {
 	color: #eee;
-}
-.fixed1 {
-	left: 0;
-	top: 0;
-}
-.fixed2 {
-	right: 0;
-	top: 0;
-}
-.fixed3 {
-	right: 0;
-	bottom: 0;
-}
-.fixed4 {
-	left: 0;
-	bottom: 0;
-}
-.fifty {
-	width: 50%;
-	float: left;
 }
 .marginr {
 	margin-right: 0.5em;
@@ -188,9 +168,6 @@ img {
 	background-color: #111;
 	width: 100%;
 	left: 0;
-}
-.fifty {
-	width: 100%;
 }
 .portrait {
 	width: 100%;
@@ -242,9 +219,11 @@ img {
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
-<script type="text/javascript"> 
+<script type="text/javascript">
+$( document ).ready(function() {
 $('.test').each(function(){
     $(this).addClass(this.width > this.height ? 'landscape' : 'portrait');
+});
 });
 </script>
 </body>
