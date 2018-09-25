@@ -177,7 +177,7 @@ img {
 </head>
 <body>
 <div class="black hero">
-  <div class="imagebox"> <img src="images/720x720research.jpg" alt="" class="test"/>
+  <div class="imagebox"> <img src="images/720x720research.jpg" alt="" class="orientation"/>
     <div class="borderbox">
       <h2>Research Festival</h2>
       <p>Celebrating the very best of Plymouth's rich and varied research through a week-long series of events</p>
@@ -192,7 +192,7 @@ img {
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
 <div class="black hero">
-  <div class="imagebox"> <img src="images/1280x720cs2.jpg" alt="" class="test"/>
+  <div class="imagebox"> <img src="images/1280x720cs2.jpg" alt="" class="orientation"/>
     <div class="borderbox">
       <h2><a href="#">Peninsula Arts</a></h2>
       <p>Plymouth's centre for contemporary art and culture. Open to the public all year round.</p>
@@ -206,7 +206,7 @@ img {
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
 <div class="black hero">
-  <div class="imagebox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt="" class="test"/>
+  <div class="imagebox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt="" class="orientation"/>
     <div class="borderbox">
       <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
       <p>Conceived by Dr Alexis Kirke and electronic music pioneer Martyn Ware, the piece will be played to audiences at the <a href="#" class="nowrap">Port Eliot Festival.</a></p>
@@ -220,10 +220,8 @@ img {
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
 <script type="text/javascript">
-$( document ).ready(function() {
-$('.test').each(function(){
+$('.orientation').each(function(){
     $(this).addClass(this.width > this.height ? 'landscape' : 'portrait');
-});
 });
 </script>
 </body>
