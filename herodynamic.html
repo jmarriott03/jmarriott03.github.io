@@ -28,11 +28,12 @@ html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	font-size: 18px;
+	font-size: 16px;
+	font-size: calc(16px + 0.2vw);
 	font-family: sans-serif;
 	line-height: 1.5em;
 	color: #111;
-	background-color: #eee;
+	background-color: #fafafa
 }
 h1 {
 	font-size: 2em;
@@ -51,13 +52,13 @@ p {
 	clear: both;
 }
 .visited {
-	color: #90f;
+	color: #551A8B;
 }
 strong {
-	font-weight: 700;
+	font-weight: bold;
 }
 em {
-	font-weight: 400i;
+	font-style: italic;
 }
 img {
 	border: 0;
@@ -102,7 +103,7 @@ img {
 	border-radius: 50%;
 }
 .articlecontent {
-	max-width: 34em;
+	max-width: 32em;
 }
 .smalltext {
 	font-size: 14px;
@@ -112,46 +113,19 @@ img {
 	padding-left: 0.5em;
 }
 .imagebox {
-	max-width: 900px;
+	max-width: 48em;
 	overflow: hidden;
 	position: relative;
-}
-.herotext {
-	margin: 0;
-	background: rgba(0,0,0,0.8);
-	padding: 1em;
-	position: absolute;
-	color: #eee;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 50%;
-}
-.herotext a {
-	color: #eee;
-}
-.black {
-	width: 100%;
-	overflow: hidden;
-	color: #eee;
-	background-color: #000;
-	margin-top: 0;
-}
-.black a {
-	color: #eee;
 }
 .marginr {
 	margin-right: 0.5em;
 }
-.portrait {
-	width: 50%;
-	float: right;
-}
 .landscape {
 	width: 100%;
 }
-.smalltext {
-	font-size: 14px;
+.portrait {
+	width: 50%;
+	float: right;
 }
 
 /*
@@ -176,7 +150,7 @@ img {
 </style>
 </head>
 <body>
-<div class="black hero">
+<div class="hero">
   <div class="imagebox"> <img src="images/720x720research.jpg" alt="" class="orientation"/>
     <div class="borderbox">
       <h2>Research Festival</h2>
@@ -191,7 +165,7 @@ img {
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
-<div class="black hero">
+<div class="hero">
   <div class="imagebox"> <img src="images/1280x720cs2.jpg" alt="" class="orientation"/>
     <div class="borderbox">
       <h2><a href="#">Peninsula Arts</a></h2>
@@ -205,7 +179,7 @@ img {
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
-<div class="black hero">
+<div class="hero">
   <div class="imagebox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt="" class="orientation"/>
     <div class="borderbox">
       <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
