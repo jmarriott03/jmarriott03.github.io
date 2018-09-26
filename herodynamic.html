@@ -89,18 +89,12 @@ img {
 	overflow: hidden;
 	margin: 0;
 }
-.staffquote {
-	padding: 1em 1em 0 4.25em;
-	position: position-relative;
-	max-width: 34em;
-}
-.staffquote img {
-	left: 0;
-	position: absolute;
+.staff img {
 	width: 2.5em;
 	height: 2.5em;
-	margin: 0.25em 0 0 1em;
+	margin: 0.25em 0.5em 0 0;
 	border-radius: 50%;
+	float: left;
 }
 .articlecontent {
 	max-width: 32em;
@@ -129,13 +123,9 @@ img {
 }
 
 /*
-   ____               _ _                                
-  / __ \ _ __  ___ __| (_)__ _   ___ __ _ _ ___ ___ _ _  
- / / _` | '  \/ -_) _` | / _` | (_-</ _| '_/ -_) -_) ' \ 
- \ \__,_|_|_|_\___\__,_|_\__,_| /__/\__|_| \___\___|_||_|
-  \____/                                                 
-
+Media screen
 */
+
 @media (max-width: 44em) {
 .herotext {
 	position: inherit;
@@ -175,8 +165,10 @@ img {
   </div>
 </div>
 <div class="articlecontent borderbox">
-  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
+  <p class="staff"><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</a><br>
+    Course leader</strong></p>
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
+  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
 <div class="hero">
