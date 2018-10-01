@@ -105,7 +105,7 @@ img {
 	border-left: 0.25em solid;
 	padding-left: 0.5em;
 }
-.imagebox {
+.herobox {
 	max-width: 48em;
 	overflow: hidden;
 	position: relative;
@@ -133,14 +133,12 @@ Media screen
 </style>
 </head>
 <body>
-<div class="hero">
-  <div class="imagebox"> <img src="images/720x720research.jpg" alt="" class="orientation"/>
-    <div class="borderbox">
-      <h2>Research Festival</h2>
-      <p>Celebrating the very best of Plymouth's rich and varied research through a week-long series of events</p>
-      <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">&amp;</span> 21 - 25 January</a></p>
-      <p class="smalltext">Image by Raya Krause</p>
-    </div>
+<div class="herobox"> <img src="images/720x720research.jpg" alt=""/>
+  <div class="borderbox">
+    <h2>Research Festival</h2>
+    <p>Celebrating the very best of Plymouth's rich and varied research through a week-long series of events</p>
+    <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">&amp;</span> 21 - 25 January</a></p>
+    <p class="smalltext">Image by Raya Krause</p>
   </div>
 </div>
 <div class="articlecontent borderbox">
@@ -148,13 +146,11 @@ Media screen
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
-<div class="hero">
-  <div class="imagebox"> <img src="images/1280x720cs2.jpg" alt="" class="orientation"/>
-    <div class="borderbox">
-      <h2><a href="#">Peninsula Arts</a></h2>
-      <p>Plymouth's centre for contemporary art and culture. Open to the public all year round.</p>
-      <p class="smalltext">Image by Haider Pemberton</p>
-    </div>
+<div class="herobox"> <img src="images/1280x720cs2.jpg" alt=""/>
+  <div class="borderbox">
+    <h2><a href="#">Peninsula Arts</a></h2>
+    <p>Plymouth's centre for contemporary art and culture. Open to the public all year round.</p>
+    <p class="smalltext">Image by Haider Pemberton</p>
   </div>
 </div>
 <div class="articlecontent borderbox">
@@ -164,13 +160,11 @@ Media screen
   <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
 </div>
-<div class="hero">
-  <div class="imagebox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt="" class="orientation"/>
-    <div class="borderbox">
-      <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
-      <p>Conceived by Dr Alexis Kirke and electronic music pioneer Martyn Ware, the piece will be played to audiences at the <a href="#" class="nowrap">Port Eliot Festival.</a></p>
-      <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">;</span> Enquiries</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">t</span> #PORTELIOT</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">%</span> Lyrics</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">R</span> Tickets</a></p>
-    </div>
+<div class="herobox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt=""/>
+  <div class="borderbox">
+    <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
+    <p>Conceived by Dr Alexis Kirke and electronic music pioneer Martyn Ware, the piece will be played to audiences at the <a href="#" class="nowrap">Port Eliot Festival.</a></p>
+    <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">;</span> Enquiries</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">t</span> #PORTELIOT</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">%</span> Lyrics</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">R</span> Tickets</a></p>
   </div>
 </div>
 <div class="articlecontent borderbox">
@@ -180,7 +174,7 @@ Media screen
 </div>
 <script type="text/javascript">
 $(window).bind("load", function() {
-$('.orientation').each(function(){
+$('.herobox > img').each(function(){
     $(this).addClass(this.width > this.height ? 'landscape' : 'portrait');
 });
 });
