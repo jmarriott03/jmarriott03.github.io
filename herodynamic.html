@@ -95,8 +95,14 @@ img {
 	border-radius: 50%;
 	float: left;
 }
-.articlecontent {
+article {
 	max-width: 32em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
 }
 .smalltext {
 	font-size: 0.75em;
@@ -147,11 +153,11 @@ Media screen
     <p class="smalltext">Image by Raya Krause</p>
   </div>
 </div>
-<div class="articlecontent borderbox">
+<article>
   <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
-</div>
+</article>
 <div class="herobox"> <img src="images/1280x720cs2.jpg" alt=""/>
   <div class="borderbox">
     <h2><a href="#">Peninsula Arts</a></h2>
@@ -159,13 +165,13 @@ Media screen
     <p class="smalltext">Image by Haider Pemberton</p>
   </div>
 </div>
-<div class="articlecontent borderbox">
+<article>
   <p class="staff"><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</a><br>
     Course leader</strong></p>
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
-</div>
+</article>
 <div class="herobox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt=""/>
   <div class="borderbox">
     <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
@@ -173,11 +179,11 @@ Media screen
     <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">;</span> Enquiries</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">t</span> #PORTELIOT</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">%</span> Lyrics</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">R</span> Tickets</a></p>
   </div>
 </div>
-<div class="articlecontent borderbox">
+<article>
   <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
   <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
   <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
-</div>
+</article>
 <script type="text/javascript">
 $(window).bind("load", function() {
 $('.herobox > img').each(function(){
