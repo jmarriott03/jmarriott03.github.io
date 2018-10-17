@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+* + * {
+	margin-top: 1rem;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 16px;
+}
+body {
+	font-family: sans-serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #111;
+	background-color: #eee;
+}
+h2 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+a {
+	color: #00f;
+	text-decoration: underline;
+	display: inline-block;
+	margin: 0;
+}
+.visited {
+	color: #90f;
+}
+p {
+	clear: both;
+	margin: 1rem 0 0 0;
+	padding: 0;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.textbox {
+	max-width: 38rem;
+	overflow: hidden;
+}
+.imagebox {
+	max-width: 48rem;
+	overflow: hidden;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	color: #eee;
+	background-color: #111;
+}
+.fullw a {
+	color: #eee;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1rem 0 2rem 0;
+}
+td, th {
+	padding: 0.5rem;
+	margin: 0;
+	text-align: left;
+	border-bottom: 1px solid #111;
+}
+th {
+	border-bottom: 2px solid #111;
+}
+.swatch1 {
+	color: #666;
+}
+button.accordion {
+	background-color: #eee;
+	cursor: pointer;
+	padding: 0.5rem;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1rem;
+	margin: 0;
+}
+button.accordion.active, button.accordion:hover {
+	background-color: #ddd;
+}
+button.accordion:after {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+	content: 'O';
+	float: right;
+	margin-right: 0.5rem;
+}
+button.accordion.active:after {
+	content: "M";
+}
+.panel {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin: 0;
+	border-bottom: 1px solid #111;
+}
+.marbot {
+	margin-bottom: 1rem;
+}
+.typewrite {
+	font-size: 3rem;
+	padding: 1rem;
+}
+</style>
+</head>
+<body>
+<div class="textbox borderbox">
+<div class="typewrite" data-period="2000" data-type='[ "Text1.", "Text2.", "Text3.", "Text4." ]'></div>
+</div>
+<script>
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid }";
+        document.body.appendChild(css);
+    };
+</script>
+</body>
+</html>
