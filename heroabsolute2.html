@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.staffquote {
+	padding: 1em 1em 0 4.25em;
+	position: position-relative;
+	max-width: 34em;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0 0 1em;
+	border-radius: 50%;
+}
+.articlecontent {
+	max-width: 34em;
+}
+.smalltext {
+	font-size: 14px;
+}
+.quoteline {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+}
+.imagebox {
+	max-width: 960px;
+	overflow: hidden;
+	position: relative;
+}
+.herotext {
+	margin: 0;
+	background: rgba(0,0,0,0.8);
+	padding: 1em;
+	position: absolute;
+	color: #eee;
+}
+.herotext a {
+	color: #eee;
+}
+.black {
+	width: 100%;
+ overflow-hidden;
+	background-color: #000;
+	margin-top: 0;
+}
+.black a {
+	color: #eee;
+}
+.fixed1 {
+	left: 0;
+	top: 0;
+}
+.fixed2 {
+	right: 0;
+	top: 0;
+}
+.fixed3 {
+	right: 0;
+	bottom: 0;
+}
+.fixed4 {
+	left: 0;
+	bottom: 0;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 44em) {
+.herotext {
+	position: inherit;
+	background-color: #111;
+	width: 100%;
+	left: 0;
+}
+}
+</style>
+</head>
+<body>
+<div class="black">
+  <div class="imagebox hero"><img src="images/1280x720hot17a.jpg" alt=""/>
+    <div class="herotext fixed4">
+      <h1>Peninsula Arts</h1>
+      <p>Plymouth's centre for contemporary art and culture.<br>
+        Open to the public all year round.</p>
+      <p><a href="#" onclick="reload();">Reload page</a></p>
+    </div>
+  </div>
+</div>
+<div class="black">
+  <div class="imagebox hero"><img src="images/1280x720hot17q.jpg" alt=""/>
+    <div class="herotext fixed3">
+      <h1>Peninsula Arts</h1>
+      <p>Plymouth's centre for contemporary art and culture.<br>
+        Open to the public all year round.</p>
+      <p><a href="#" onclick="reload();">Reload page</a></p>
+    </div>
+  </div>
+</div>
+<div class="black">
+  <div class="imagebox hero"><img src="images/1280x720hot17p.jpg" alt=""/>
+    <div class="herotext fixed4">
+      <h1>Peninsula Arts</h1>
+      <p>Plymouth's centre for contemporary art and culture.<br>
+        Open to the public all year round.</p>
+      <p><a href="#" onclick="reload();">Reload page</a></p>
+    </div>
+  </div>
+</div>
+<div class="black">
+  <div class="imagebox hero"><img src="images/1280x720hot17c.jpg" alt=""/>
+    <div class="herotext fixed1">
+      <h1>Peninsula Arts</h1>
+      <p>Plymouth's centre for contemporary art and culture.<br>
+        Open to the public all year round.</p>
+      <p><a href="#" onclick="reload();">Reload page</a></p>
+    </div>
+  </div>
+</div>
+<div class="articlecontent borderbox">
+  <p> Peninsula Arts is the wide-ranging public arts programme of the University of Plymouth and plays a pivotal role in building culture and art in the city and South West region, supporting established, new and emerging artists from around the world. The programme includes exhibitions, dance, films, music, performance and talks.</p>
+  <p class="quoteline">"The House is a state of the art performing arts centre. Providing a 200 seat flexible studio theatre, to provide greater access to performing arts in the city. Our programme of dance, theatre and performances are fresh off the block."</p>
+  <p>It hosts the largest contemporary art gallery in Plymouth; a diverse range of classic films and contemporary cinematic masterpieces screened in the Jill Craigie Cinema; a cutting edge theatre and dance programme in The House; musical performances and concerts, and a year-long series of fascinating talks that open up the world of history.</p>
+  <p>Open to all University of Plymouth students and the public.</p>
+</div>
+<script type="text/javascript"> 
+var random = Math.floor(Math.random() * $('.hero').length);
+$('.hero').hide().eq(random).show();
+
+function reload() {
+    location.reload();
+}
+</script>
+</body>
+</html>
