@@ -107,6 +107,17 @@ img {
 	background-color: #ccc;
 	margin-bottom: 1em;
 }
+#emwidth60 {
+	max-width: 60em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+	background-color: #ccc;
+	margin-bottom: 1em;
+}
 #chwidth {
 	max-width: 72ch;
 	-webkit-box-sizing: border-box;
@@ -145,21 +156,25 @@ img {
     function displayWindowSize() {
         myWidth = window.innerWidth;
         myHeight = window.innerHeight;
+		emwidth60 = document.getElementById("emwidth60").clientWidth;
 		emwidth = document.getElementById("emwidth").clientWidth;
 		chwidth = document.getElementById("chwidth").clientWidth;
-        document.getElementById("size").innerHTML = "Browser: " + myWidth + "x" + myHeight + "</br>em width: " + emwidth + "px</br>ch width: " + chwidth + "px";
+        document.getElementById("size").innerHTML = "Browser: " + myWidth + "x" + myHeight + "</br>60em width: " + emwidth60 + "px</br>40em width: " + emwidth + "px</br>ch width: " + chwidth + "px";
 		};
 </script>
 </head>
 <body>
 <div id="size"></div>
+<div id="emwidth60">
+  <h2>60em width</h2>
+  <p>1em=16px</p>
+</div>
 <div id="emwidth">
-<h2>40em width</h2>
+  <h2>40em width</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 <div id="chwidth">
-<h2>72ch width</h2>
-
+  <h2>72ch width</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 </body>
