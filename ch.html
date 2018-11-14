@@ -34,6 +34,10 @@ html, body {
 	line-height: 1.5em;
 	color: #111;
 	background-color: #FAFAFA;
+	background-image: url(images/80x80.gif);
+	background-position: center;
+	max-width: 1280px;
+	
 }
 h1 {
 	font-size: 2em;
@@ -97,14 +101,14 @@ img {
 	float: left;
 }
 #emwidth {
-	max-width: 40em;
+	max-width: 30em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
-	background-color: #ccc;
+	background: rgba(204,204,204,0.6);
 	margin-bottom: 1em;
 }
 #emwidth60 {
@@ -115,18 +119,18 @@ img {
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
-	background-color: #ccc;
+	background: rgba(204,204,204,0.6);
 	margin-bottom: 1em;
 }
 #chwidth {
-	max-width: 72ch;
+	max-width: 54ch;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
-	background-color: #ccc;
+	background: rgba(204,204,204,0.6);
 }
 .smalltext {
 	font-size: 0.75em;
@@ -148,6 +152,7 @@ img {
 	font-size: 1em;
 	padding: 1em;
 }
+.
 </style>
 <script type="text/javascript">
     window.onresize = displayWindowSize;
@@ -170,11 +175,11 @@ img {
   <p>1em=16px</p>
 </div>
 <div id="emwidth">
-  <h2>40em width</h2>
+  <h2>30em width</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 <div id="chwidth">
-  <h2>72ch width</h2>
+  <h2>54ch width <span class="nowrap">(63 character line length)</span></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 </body>
