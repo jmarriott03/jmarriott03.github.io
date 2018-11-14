@@ -27,7 +27,6 @@
 html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	margin: 0;
 	font-size: 100%;
 	font-family: sans-serif;
 	font-weight: normal;
@@ -37,7 +36,6 @@ html, body {
 	background-image: url(images/80x80.gif);
 	background-position: center;
 	max-width: 1280px;
-	
 }
 h1 {
 	font-size: 2em;
@@ -153,22 +151,22 @@ img {
 	padding: 1em;
 }
 .col-3 {
-	width: 15em;
+	width: 25%;
 }
 .col-4 {
-	width: 20em;
+	width: 33.33%;
 }
 .col-6 {
-	width: 30em;
+	width: 50%;
 }
 .col-8 {
-	width: 40em;
+	width: 66.66%;
 }
 .col-9 {
-	width: 45em;
+	width: 75%;
 }
 .col-12 {
-	width: 60em;
+	max-width: 60em;
 	background-color: #ccc;
 	overflow: hidden;
 	margin-bottom: 1em;
@@ -183,6 +181,16 @@ img {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0.5em;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.col-3, .col-4, .col-6, .col-8, .col-9 {
+	width: 100%;
+}
 }
 </style>
 <script type="text/javascript">
@@ -213,37 +221,80 @@ img {
   <h2>54ch width <span class="nowrap">(63 character line length)</span></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-
 <div class="col-12">
-<div class="col-3"><p>col-3</p></div><div class="col-9"><p>col-9</p></div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-9">
+    <p>col-9</p>
+  </div>
 </div>
-
-
 <div class="col-12">
-<div class="col-3"><p>col-3</p></div><div class="col-3"><p>col-3</p></div><div class="col-3"><p>col-3</p></div><div class="col-3"><p>col-3</p></div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
 </div>
-
 <div class="col-12">
-<div class="col-3"><p>col-3</p></div><div class="col-3"><p>col-3</p></div><div class="col-6"><p>col-6</p></div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
 </div>
-
 <div class="col-12">
-<div class="col-6"><p>col-6</p></div><div class="col-6"><p>col-6</p></div>
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
 </div>
-
 <div class="col-12">
-<div class="col-4"><p>col-4</p></div><div class="col-4"><p>col-4</p></div><div class="col-4"><p>col-4</p></div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
 </div>
-
 <div class="col-12">
-<div class="col-4"><p>col-4</p></div><div class="col-8"><p>col-8</p></div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-8">
+    <p>col-8</p>
+  </div>
 </div>
-
-<div class="col-3"><p>col-3</p></div>
-<div class="col-4"><p>col-4</p></div>
-<div class="col-6"><p>col-6</p></div>
-<div class="col-8"><p>col-8</p></div>
-<div class="col-9"><p>col-9</p></div>
-
+<div class="col-3">
+  <p>col-3</p>
+</div>
+<div class="col-4">
+  <p>col-4</p>
+</div>
+<div class="col-6">
+  <p>col-6</p>
+</div>
+<div class="col-8">
+  <p>col-8</p>
+</div>
+<div class="col-9">
+  <p>col-9</p>
+</div>
 </body>
 </html>
