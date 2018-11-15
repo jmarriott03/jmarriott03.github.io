@@ -35,7 +35,7 @@ html, body {
 	background-color: #FAFAFA;
 	background-image: url(images/80x80.gif);
 	background-position: center;
-	max-width: 1280px;
+	margin: 0;
 }
 h1 {
 	font-size: 2em;
@@ -79,6 +79,15 @@ img {
 	margin-top: 0;
 }
 .borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+article {
+	max-width: 30em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -281,20 +290,13 @@ Media screen
     <p>col-8</p>
   </div>
 </div>
-<div class="col-3">
-  <p>col-3</p>
-</div>
-<div class="col-4">
-  <p>col-4</p>
-</div>
-<div class="col-6">
-  <p>col-6</p>
-</div>
-<div class="col-8">
-  <p>col-8</p>
-</div>
-<div class="col-9">
-  <p>col-9</p>
-</div>
+<article>
+  <h2>30em article width</h2>
+  <p class="staff"><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</a><br>
+    Course leader</strong></p>
+  <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
+  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
+  <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
+</article>
 </body>
 </html>
