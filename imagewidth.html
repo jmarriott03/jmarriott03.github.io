@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.borderbox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+article {
+	max-width: 30em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+.buttonstyle a {
+	color: #fafafa;
+	background-color: #00e;
+	border-radius: 0.2em;
+	padding: 0.5em;
+	text-decoration: none;
+}
+.alertcol {
+	color: #f00;
+}
+</style>
+<script type="text/javascript">
+function imgSize(){
+	var myImg = document.querySelector("#imagetest1");
+	var realWidth = myImg.naturalWidth;
+	var realHeight = myImg.naturalHeight;
+	document.getElementById("size").innerHTML = "Source image size: " + realWidth + "x" + realHeight;
+	if (realWidth < 1280) {
+		document.getElementById("upload").innerHTML = '<div class="alertcol">Image is too small</div>';
+		}
+
+	var myImg2 = document.querySelector("#imagetest2");
+	var realWidth2 = myImg2.naturalWidth;
+	var realHeight2 = myImg2.naturalHeight;
+	document.getElementById("size2").innerHTML = "Source image size: " + realWidth2 + "x" + realHeight2;
+	if (realWidth2 < 1280) {
+		document.getElementById("upload2").innerHTML = '<div class="alertcol">Image is too small</div>';
+		}
+		}
+
+window.onload = imgSize;
+</script>
+</head>
+<body>
+<article> <img src="images/1280x720-160425c.jpg" id="imagetest1">
+  <div id="size"></div>
+  <div id="upload">
+    <div class="buttonstyle"><a href="#">Upload image</a></div>
+  </div>
+</article>
+<article> <img src="images/600x400research1.jpg" id="imagetest2">
+  <div id="size2"></div>
+  <div id="upload2">
+    <div class="buttonstyle"><a href="#">Upload image</a></div>
+  </div>
+</article>
+</body>
+</html>
