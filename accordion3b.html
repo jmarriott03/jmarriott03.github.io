@@ -20,9 +20,6 @@
 * {
 	margin: 0 auto;
 }
-* + * {
-	margin-top: 1em;
-}
 html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -43,6 +40,7 @@ h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
 	font-weight: bold;
+	margin-bottom: 0.5em;
 }
 a {
 	color: #00E;
@@ -69,7 +67,7 @@ img {
 .textbox {
 	max-width: 30em;
 	overflow: hidden;
-	padding-top: 0;
+	padding-top: 1em;
 }
 .imagebox {
 	max-width: 48em;
@@ -96,49 +94,35 @@ img {
 	overflow: hidden;
 	margin: 0;
 }
-button.accordion {
-	background-color: #fafafa;
+.accordion {
+	color: #444;
 	cursor: pointer;
-	padding: 0.5em;
+	padding: 1em;
 	width: 100%;
 	border: none;
 	text-align: left;
 	outline: none;
-	transition: 0.4s;
 	font-size: 1em;
 	line-height: 1.5em;
-	margin: 0;
+	transition: 0.4s;
+	border: 1px solid #666;
+	border-radius: 0.5em;
+	margin: 0.5em 0;
 }
-button.accordion:focus {
-	background-color: #DDD:;
+button.accordion:hover, button.accordion:focus {
+	background-color: #DDD;
 }
-button.accordion:after {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	vertical-align: auto;
-	content: 'O';
-	float: right;
-	margin-right: 0.5em;
-}
-button.accordion.active:after {
-	content: "M";
-}
-div.panel {
-	padding: 0;
+.panel {
+	padding: 0 1em 0 1em;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
-	margin: 0;
-	border-bottom: 1px solid #ccc;
-}
-div.panel p {
-	padding: 0.5em;
 }
 </style>
 </head>
 <body>
 <div class="textbox borderbox">
-  <h2>People also ask</h2>
+  <h2>Pick a question</h2>
   <button class="accordion">Where is Plymouth?</button>
   <div class="panel">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat.</a></p>
@@ -168,19 +152,6 @@ div.panel p {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat.</a></p>
   </div>
   <button class="accordion">What support is there for international students?</button>
-  <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat.</a></p>
-  </div>
-  <h2>Get in touch</h2>
-  <button class="accordion"><span class="iconfont" aria-hidden="true">0</span> Contact numbers</button>
-  <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat.</a></p>
-  </div>
-  <button class="accordion"><span class="iconfont" aria-hidden="true">c</span> Opening times</button>
-  <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat.</a></p>
-  </div>
-  <button class="accordion"><span class="iconfont" aria-hidden="true">&amp;</span> Calendar dates</button>
   <div class="panel">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat.</a></p>
   </div>
