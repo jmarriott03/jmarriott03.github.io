@@ -49,13 +49,6 @@ img {
 	max-width: 60em;
 	overflow: hidden;
 }
-.borderbox {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 1em;
-}
 .nowrap {
 	white-space: nowrap;
 }
@@ -68,16 +61,12 @@ img {
 .imagebox > p {
 	width: 33%;
 	float: left;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
 	font-size: 0.875em;
 	line-height: 1.5em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0 auto;
+	margin: 0;
 	padding: 1em;
 }
 .imagebox > p:nth-child(3n+1) {
@@ -110,12 +99,6 @@ Media screen
 	clear: none;
 }
 .imagebox > p:nth-child(2n+1) {
-	clear: both;
-}
-}
-
-@media (min-width: 960px) {
-.imagebox > p:nth-child(3n+1) {
 	clear: both;
 }
 }
