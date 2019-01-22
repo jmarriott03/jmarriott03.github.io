@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+	background-image: url(images/80x80.gif);
+	background-position: center;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+article {
+	max-width: 30em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.staff img {
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0.5em 0 0;
+	border-radius: 50%;
+	float: left;
+}
+#emwidth {
+	max-width: 30em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+	background: rgba(204,204,204,0.6);
+	margin-bottom: 1em;
+}
+#emwidth60 {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+	background: rgba(204,204,204,0.6);
+	margin-bottom: 1em;
+}
+#chwidth {
+	max-width: 54ch;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+	background: rgba(204,204,204,0.6);
+}
+.smalltext {
+	font-size: 0.75em;
+}
+.quoteline {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+}
+.marginr {
+	margin-right: 0.5em;
+}
+#size {
+	position: fixed;
+	left: 0;
+	top: 2em;
+	z-index: 100;
+	color: #fafafa;
+	background: rgba(0,0,0,0.8);
+	font-size: 1em;
+	padding: 1em;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33%;
+}
+.col-6 {
+	width: 50%;
+}
+.col-8 {
+	width: 66.66%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-12 {
+	max-width: 60em;
+	background-color: #ccc;
+	overflow: hidden;
+	margin-bottom: 1em;
+}
+.col-12 > div {
+	float: left;
+	margin: 0;
+}
+.col-3, .col-4, .col-6, .col-8, .col-9 {
+	border: 1px solid #666;
+	padding: 0.5em;
+}
+a.skip-main {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+a.skip-main:focus, a.skip-main:active {
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: auto;
+	clip: auto;
+	background-color: #FAFAFA;
+	padding: 0.5em;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.col-3, .col-4, .col-6, .col-8, .col-9 {
+	width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<a class="skip-main" href="#main">Skip to main content</a>
+<div id="emwidth60">
+  <h2>60em width</h2>
+  <p>1em=16px</p>
+</div>
+<div id="emwidth">
+  <h2>30em width</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<main role="main" id="main" tabindex="-1">
+  <div id="chwidth">
+    <h2>54ch width <span class="nowrap">(63 character line length)</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</main>
+<div class="col-12">
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-9">
+    <p>col-9</p>
+  </div>
+</div>
+<div class="col-12">
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+</div>
+<div class="col-12">
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-3">
+    <p>col-3</p>
+  </div>
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
+</div>
+<div class="col-12">
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
+</div>
+<div class="col-12">
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+</div>
+<div class="col-12">
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-8">
+    <p>col-8</p>
+  </div>
+</div>
+<article>
+  <h2>30em article width</h2>
+  <p class="staff"><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</a><br>
+    Course leader</strong></p>
+  <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
+  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
+  <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
+</article>
+</body>
+</html>
