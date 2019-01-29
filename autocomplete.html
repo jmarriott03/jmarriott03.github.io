@@ -139,7 +139,7 @@ input[type=submit] {
   <h2>Autocomplete search</h2>
   <form autocomplete="off" action="#">
     <div class="autocomplete" style="width:300px;">
-      <input id="myInput" type="text" autofocus name="mySearchy">
+      <input id="myInput" type="text" name="search">
     </div>
     <input type="submit" value="Search">
   </form>
@@ -210,8 +210,8 @@ function autocomplete(inp, arr) {
       closeAllLists(e.target);
   });
 }
-var countries = ["About us", "Accommodation", "Alumni", "Applying to Plymouth", "Business", "Careers and employability", "Computing", "Country-specific advice", "Courses and study", "Disclaimer", "Donors", "English Language Centre", "Enterprise Solutions", "Events", "Experts", "Facts & figures", "Faculties and schools", "Fees and student finance", "Fees and student finance", "Help", "International partners", "International students", "Jobs and working here", "Library", "News", "Open days", "Postgraduate", "Professional development", "Prospectus", "Recreation", "Research Experts", "Research Institutes", "Research staff support", "Research students", "Semester dates", "Staff directory", "Student exchanges", "Student jobs", "Student life", "Student services", "Student voice", "Subjects", "Sustainability", "Terms and cookies", "The Arts Institute", "The Plymouth Award", "Undergraduate", "University of Plymouth International College", "Visa information", "Visit, travel &amp; maps"];
-autocomplete(document.getElementById("myInput"), countries);
+var keyword = ["About us", "Accommodation", "Alumni", "Applying to Plymouth", "Business", "Careers and employability", "Computing", "Country-specific advice", "Courses and study", "Disclaimer", "Donors", "English Language Centre", "Enterprise Solutions", "Events", "Experts", "Facts & figures", "Faculties and schools", "Fees and student finance", "Fees and student finance", "Help", "International partners", "International students", "Jobs and working here", "Library", "News", "Open days", "Postgraduate", "Professional development", "Prospectus", "Recreation", "Research Experts", "Research Institutes", "Research staff support", "Research students", "Semester dates", "Staff directory", "Student exchanges", "Student jobs", "Student life", "Student services", "Student voice", "Subjects", "Sustainability", "Terms and cookies", "The Arts Institute", "The Plymouth Award", "Undergraduate", "University of Plymouth International College", "Visa information", "Visit, travel &amp; maps"];
+autocomplete(document.getElementById("myInput"), keyword);
 </script>
 </body>
 </html>
