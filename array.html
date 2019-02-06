@@ -35,6 +35,7 @@ html, body {
 	color: #111;
 	background-color: #FAFAFA;
 	padding: 1em;
+	margin: 0;
 }
 h1 {
 	font-size: 2em;
@@ -79,6 +80,9 @@ img {
 }
 article {
 	max-width: 30em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 }
@@ -102,13 +106,38 @@ button {
 	color: #FAFAFA;
 	background-color: #08C;
 }
+.autocomplete-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	top: 100%;
+	left: 0;
+	right: 0;
+	margin: 0;
+}
+.autocomplete-items div {
+	padding: 0.5em;
+	cursor: pointer;
+	background-color: #FFF;
+	border-bottom: 1px solid #D4D4D4;
+	margin: 0;
+}
+.autocomplete-items div:hover {
+	background-color: #E9E9E9;
+}
+.autocomplete-active {
+	background-color: #08C !important;
+	color: #FFF;
+}
 </style>
 </head>
 <body>
 <button onclick="myFunction()">Sort the array in ascending order</button>
 <p id="demo"></p>
 <script>
-var searchlist = ["Courses and study", "Undergraduate", "Postgraduate", "Professional development", "Our subjects", "Prospectus", "Applying to Plymouth", "Fees and student finance", "Open days", "The Plymouth Award", "Accommodation", "Semester dates", "Fees and student finance", "Careers and employability", "Library", "Recreation", "Student life", "Computing", "Student voice", "Student services", "International students", "Visa information", "English Language Centre", "Student exchanges", "Country-specific advice", "University of Plymouth International College", "International partners", "Research Experts", "Research Institutes", "Research students", "Research staff support", "Enterprise Solutions", "Business", "Alumni", "Donors", "About us", "Faculties and schools", "Visit, travel and maps", "Facts & figures", "News", "Events", "Our experts", "Jobs and working here", "Student jobs", "The Arts Institute", "Sustainability", "Staff directory", "Help", "Disclaimer", "Terms and cookies"];
+var searchlist = ["Architecture", "Archaeology", "Building and construction", "Civil, structural and coastal engineering", "Design (3D, graphic and illustration)", "Landscape design", "Architecture", "Art", "Art history", "Crafts", "Dance", "Design (3D, graphic and illustration)", "Digital art and multimedia", "Drama", "English and creative writing", "Fashion and textiles ", "Film", "Fine art", "History", "Landscape design", "Media", "Music", "Photography", "Publishing and journalism", "Theatre", "Agriculture", "Animal science", "Biological sciences", "Biomedical sciences", "Chemistry", "Crop science", "Ecology and conservation", "Environmental sciences and environmental studies", "Food science, nutrition and dietetics", "Horticulture", "Marine biology", "Marine studies", "Medical technology", "Psychology", "Rural, resource and conservation management", "Sports science", "Zoology", "Accounting, banking and finance", "Business", "Business information management", "Criminology and criminal justice studies", "Economics", "Hospitality and catering", "Human resource management and personnel", "International business", "International relations", "Law", "Leisure, events and sports", "Marketing", "Management and leadership", "Public sector management", "Public services", "Shipping and logistics", "Sports management", "Tourism", "Computing and computer science", "Electrical and electronic engineering", "Mathematics", "Networks and security", "Robotics", "Statistics", "Children", "Continuing professional development", "Educational studies", "Post compulsory education and training", "Teacher education", "Teaching assistants", "Civil, structural and coastal engineering", "Electrical and electronic engineering", "Mechanical, marine and materials engineering", "Networks and security", "Robotics", "Biomedical sciences", "Criminology and criminal justice studies", "Food science, nutrition and dietetics", "Health professions and therapies", "Mental health", "Midwifery", "Nursing", "Psychology", "Social work and community work", "Hospitality and catering", "Leisure, events and sports", "Popular culture", "Tourism", "Art history", "English as a foreign language", "English and creative writing", "History", "Journalism", "Modern languages", "Politics", "Sociology", "Agriculture", "Animal science", "Archaeology", "Crop science", "Earth sciences", "Ecology and conservation", "Mechanical, marine and materials engineering", "Environmental sciences and environmental studies", "Geography", "Geology", "Horticulture", "Landscape design", "Marine biology", "Marine studies", "Rural, resource and conservation management", "Shipping and logistics", "Zoology", "Medicine", "Dentistry", "Biomedical sciences", "Criminology and criminal justice studies", "International relations", "Mental health", "Politics", "Psychology", "Sociology", "Social policy and administration", "Social research", "Social work and community work"];
 var joina = searchlist.join('", "');
 document.getElementById("demo").innerHTML = '"' + joina + '"';
 
