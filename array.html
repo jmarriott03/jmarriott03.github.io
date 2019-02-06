@@ -105,23 +105,17 @@ button {
 </style>
 </head>
 <body>
-<button onclick="myFunction()">Sort the array in ascending order and remove duplicates</button>
-<p id="sort"></p>
+<button onclick="myFunction()">Sort the array in ascending order</button>
+<p id="demo"></p>
 <script>
-var searchlist = ["Courses and study", "About us", "Undergraduate", "About us", "Postgraduate", "Professional development", "About us", "Our subjects", "Prospectus", "Applying to Plymouth", "Fees and student finance", "Open days", "The Plymouth Award", "Accommodation", "Semester dates", "Fees and student finance", "Careers and employability", "Library", "Recreation", "Student life", "Computing", "Student voice", "Student services", "International students", "Visa information", "English Language Centre", "Student exchanges", "Country-specific advice", "University of Plymouth International College", "International partners", "Research Experts", "Research Institutes", "Research students", "Research staff support", "Enterprise Solutions", "Business", "Alumni", "Donors", "About us", "Faculties and schools", "Visit, travel and maps", "Facts & figures", "News", "Events", "Our experts", "Jobs and working here", "Student jobs", "The Arts Institute", "Sustainability", "Staff directory", "Help", "Disclaimer", "Terms and cookies"];
-document.getElementById("sort").innerHTML = searchlist;
+var searchlist = ["Courses and study", "Undergraduate", "Postgraduate", "Professional development", "Our subjects", "Prospectus", "Applying to Plymouth", "Fees and student finance", "Open days", "The Plymouth Award", "Accommodation", "Semester dates", "Fees and student finance", "Careers and employability", "Library", "Recreation", "Student life", "Computing", "Student voice", "Student services", "International students", "Visa information", "English Language Centre", "Student exchanges", "Country-specific advice", "University of Plymouth International College", "International partners", "Research Experts", "Research Institutes", "Research students", "Research staff support", "Enterprise Solutions", "Business", "Alumni", "Donors", "About us", "Faculties and schools", "Visit, travel and maps", "Facts & figures", "News", "Events", "Our experts", "Jobs and working here", "Student jobs", "The Arts Institute", "Sustainability", "Staff directory", "Help", "Disclaimer", "Terms and cookies"];
+var joina = searchlist.join('", "');
+document.getElementById("demo").innerHTML = '"' + joina + '"';
+
 function myFunction() {
 	searchlist.sort();
-	var uniq = searchlist
-	.map((name) => {
-    return {count: 1, name: name}
-	})
-	.reduce((a, b) => {
-		a[b.name] = (a[b.name] || 0) + b.count
-		return a
-	}, {})
-	var sorted = Object.keys(uniq).sort((a, b) => uniq[a] < uniq[b])
-	document.getElementById("sort").innerHTML = sorted;
+	var joinb = searchlist.join('", "');
+	document.getElementById("demo").innerHTML = '"' + joinb + '"';
 }
 </script>
 </body>
