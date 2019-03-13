@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7r-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FAFAFA;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+article {
+	max-width: 30em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+	font-family: sans-serif;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.staff img {
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0.5em 0 0;
+	border-radius: 50%;
+	float: left;
+}
+#emwidth60 {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+	background: rgba(204,204,204,0.6);
+	margin-bottom: 1em;
+}
+.smalltext {
+	font-size: 0.75em;
+}
+.quoteline {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+}
+.marginr {
+	margin-right: 0.5em;
+}
+.col01 {
+	color: #FAFAFA;
+	background-color: #00E;
+}
+.col02 {
+	color: #FAFAFA;
+	background-color: #551A8B;
+}
+.col03 {
+	color: #FAFAFA;
+	background-color: #F00;
+}
+.col04 {
+	color: #111;
+	background-color: #FAFAFA;
+	border: 1px solid #111;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.col05 {
+	color: #111;
+	background-color: #CCC;
+}
+.col06 {
+	color: #FAFAFA;
+	background-color: #111;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	width: 8em;
+	height: 5em;
+	justify-content: center;
+	margin: 1em 1em 0 0;
+	float: left;
+}
+.code {
+	font-family: monospace;
+	padding: 1em;
+	background-color: #CCC;
+}
+</style>
+</head>
+<body>
+<article>
+  <h1>h1 heading 2em</h1>
+	<p class="code">&lt;h1&gt;h1 heading 2em&lt;/h1&gt;</p>
+  <h2>h2 heading 1.5em</h2>
+	<p class="code">&lt;h2&gt;h2 heading 1.5em&lt;/h2&gt;</p>
+  <p>body text 1em</p>
+	<p class="code">&lt;p&gt;body text 1em&lt;/p&gt;</p>
+  <p><strong>bold text</strong></p>
+	<p class="code">&lt;p&gt;&lt;strong&gt;bold text&lt;/strong&gt;&lt;/p&gt;</p>
+  <p><em>italic text</em>.</p>
+	<p class="code">&lt;p&gt;&lt;em&gt;italic text&lt;/em&gt;&lt;/p&gt;</p>
+  <p><a href="#">link</a></p>
+	<p class="code">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</p>
+  <div class="flex col01">#00E<br>
+    Standard link</div>
+  <div class="flex col02">#551A8B<br>
+    Visited link</div>
+  <div class="flex col03">#F00<br>
+    Active link</div>
+  <div class="flex col04">#FAFAFA<br>
+    Light</div>
+  <div class="flex col05">#CCC<br>
+    Medium</div>
+  <div class="flex col06">#111<br>
+    Dark</div>
+</article>
+</body>
+</html>
