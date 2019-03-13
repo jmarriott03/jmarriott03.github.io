@@ -114,6 +114,28 @@ article {
 .marginr {
 	margin-right: 0.5em;
 }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+	margin: 1em 0;
+}
+td, th {
+	padding: 3px 5px;
+	text-align: left;
+	border: 1px dotted #666;
+	vertical-align: top;
+	width: 0%;
+}
+.iconcell td, .iconcell th {
+	text-align: center;
+	background-color: #DDD;
+}
+.iconfont td, .iconfont th {
+	text-align: center;
+	background-color: #FAFAFA;
+	border-bottom: 1px solid #666;
+}
 .col01 {
 	color: #FAFAFA;
 	background-color: #00E;
@@ -130,9 +152,6 @@ article {
 	color: #111;
 	background-color: #FAFAFA;
 	border: 1px solid #111;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 .col05 {
 	color: #111;
@@ -141,49 +160,378 @@ article {
 .col06 {
 	color: #FAFAFA;
 	background-color: #111;
+	margin-bottom: 2em;
 }
 .flex {
-	display: flex;
-	align-items: center;
-	width: 8em;
-	height: 5em;
-	justify-content: center;
-	margin: 1em 1em 0 0;
 	float: left;
+	padding: 1em;
+	width: 100%;
 }
 .code {
 	font-family: monospace;
 	padding: 1em;
 	background-color: #CCC;
+	margin-bottom: 2em;
 }
 </style>
 </head>
 <body>
 <article>
-  <h1>h1 heading 2em</h1>
-	<p class="code">&lt;h1&gt;h1 heading 2em&lt;/h1&gt;</p>
-  <h2>h2 heading 1.5em</h2>
-	<p class="code">&lt;h2&gt;h2 heading 1.5em&lt;/h2&gt;</p>
-  <p>body text 1em</p>
-	<p class="code">&lt;p&gt;body text 1em&lt;/p&gt;</p>
+  <p><strong>Capita style guide suggestion</strong></p>
+  <h1>h1 heading</h1>
+  <p class="code"> h1 &#123;<br>
+    font-size: 2em;<br>
+    line-height: 1.25em;<br>
+    font-weight: bold;<br>
+    &#125; </p>
+  <p class="code"> &lt;h1&gt;h1 heading&lt;/h1&gt;</p>
+  <h2>h2 heading</h2>
+  <p class="code"> h2 &#123;<br>
+    font-size: 1.5em;<br>
+    line-height: 1.25em;<br>
+    font-weight: bold;<br>
+    &#125; </p>
+  <p class="code">&lt;h2&gt;h2 heading&lt;/h2&gt;</p>
+  <p>body text</p>
+	
+	
+	
+	<p class="code">html, body &#123;<br>
+	-ms-text-size-adjust: 100%;<br>
+	-webkit-text-size-adjust: 100%;<br>
+	font-size: 100%;<br>
+	font-family: sans-serif;<br>
+	font-weight: normal;<br>
+	line-height: 1.5em;<br>
+	color: #111;<br>
+	background: #FAFAFA;<br>
+	margin: 0;<br>
+&#125; </p>
+	
+	
+	<p class="code"> p &#123;<br>
+    clear: both;<br>
+    &#125; </p>
+	
+	
+	
+  <p class="code">&lt;p&gt;body text&lt;/p&gt;</p>
   <p><strong>bold text</strong></p>
-	<p class="code">&lt;p&gt;&lt;strong&gt;bold text&lt;/strong&gt;&lt;/p&gt;</p>
+	
+	
+	
+	<p class="code"> strong &#123;<br>
+    font-weight: bold;<br>
+    &#125; </p>
+	
+	
+	
+	
+  <p class="code">&lt;p&gt;&lt;strong&gt;bold text&lt;/strong&gt;&lt;/p&gt;</p>
   <p><em>italic text</em>.</p>
-	<p class="code">&lt;p&gt;&lt;em&gt;italic text&lt;/em&gt;&lt;/p&gt;</p>
-  <p><a href="#">link</a></p>
-	<p class="code">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</p>
-  <div class="flex col01">#00E<br>
-    Standard link</div>
-  <div class="flex col02">#551A8B<br>
-    Visited link</div>
-  <div class="flex col03">#F00<br>
-    Active link</div>
-  <div class="flex col04">#FAFAFA<br>
-    Light</div>
-  <div class="flex col05">#CCC<br>
-    Medium</div>
-  <div class="flex col06">#111<br>
-    Dark</div>
+	
+	
+	
+	<p class="code"> em &#123;<br>
+    font-style: italic;<br>
+    &#125; </p>
+	
+	
+	
+	
+  <p class="code">&lt;p&gt;&lt;em&gt;italic text&lt;/em&gt;&lt;/p&gt;</p>
+  <p><a href="#">standard link</a></p>
+	
+	
+	
+	<p class="code"> a &#123;<br>
+    color: #00E;<br>
+    &#125; </p>
+	
+	
+	
+	
+  <p class="code">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;standard link&lt;/a&gt;&lt;/p&gt;</p>
+  <div class="flex col01">#00E -
+    standard link</div>
+  <div class="flex col02">#551A8B -
+    visited link</div>
+  <div class="flex col03">#F00 -
+    active link</div>
+  <div class="flex col04">#FAFAFA -
+    light</div>
+  <div class="flex col05">#CCC -
+    medium</div>
+  <div class="flex col06">#111 -
+    dark</div>
+  <table>
+    <tbody>
+      <tr class="iconcell">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+      </tr>
+      <tr class="iconfont">
+        <td>!</td>
+        <td>"</td>
+        <td>#</td>
+        <td>$</td>
+        <td>%</td>
+        <td>&amp;</td>
+        <td>'</td>
+        <td>(</td>
+        <td>)</td>
+        <td>*</td>
+        <td>+</td>
+        <td>,</td>
+      </tr>
+      <tr class="iconcell">
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr class="iconfont">
+        <td>-</td>
+        <td>.</td>
+        <td>/</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr class="iconcell">
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+      <tr class="iconfont">
+        <td>9</td>
+        <td>:</td>
+        <td>;</td>
+        <td>&lt;</td>
+        <td>=</td>
+        <td>&gt;</td>
+        <td>?</td>
+        <td>@</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+      <tr class="iconcell">
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+      </tr>
+      <tr class="iconfont">
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>H</td>
+        <td>I</td>
+        <td>J</td>
+        <td>K</td>
+        <td>L</td>
+        <td>M</td>
+        <td>N</td>
+        <td>O</td>
+        <td>P</td>
+      </tr>
+      <tr class="iconcell">
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconfont">
+        <td>Q</td>
+        <td>R</td>
+        <td>S</td>
+        <td>T</td>
+        <td>U</td>
+        <td>V</td>
+        <td>W</td>
+        <td>X</td>
+        <td>Y</td>
+        <td>Z</td>
+        <td>[</td>
+        <td>\</td>
+      </tr>
+      <tr class="iconcell">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+      </tr>
+      <tr class="iconfont">
+        <td>]</td>
+        <td>^</td>
+        <td>_</td>
+        <td>`</td>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+        <td>h</td>
+      </tr>
+      <tr class="iconcell">
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+      </tr>
+      <tr class="iconfont">
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+      </tr>
+      <tr class="iconcell">
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+        <td>&#123;</td>
+        <td>&#124;</td>
+        <td>&#125;</td>
+        <td>&#126;</td>
+        <td>&#196;</td>
+        <td>&#197;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>u</td>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+        <td>&#123;</td>
+        <td>&#124;</td>
+        <td>&#125;</td>
+        <td>&#126;</td>
+        <td>&#196;</td>
+        <td>&#197;</td>
+      </tr>
+      <tr class="iconcell">
+        <td>&#199;</td>
+        <td>&#201;</td>
+        <td>&#209;</td>
+        <td>&#214;</td>
+        <td>&#220;</td>
+        <td>&#225;</td>
+        <td>&#224;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="iconfont">
+        <td>&#199;</td>
+        <td>&#201;</td>
+        <td>&#209;</td>
+        <td>&#214;</td>
+        <td>&#220;</td>
+        <td>&#225;</td>
+        <td>&#224;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><a href="fonts/icon7r-webfont.woff" download>icon font (.woff format, 34 KB <span class="iconfont">%</span>)</a></p>
+  <p class="code"> &lt;style type="text/css"&gt;<br>
+    @font-face {<br>
+    font-family: icon;<br>
+    src: url('fonts/icon7r-webfont.woff');<br>
+    }<br>
+    .iconfont {<br>
+    font-family: 'icon', sans-serif;<br>
+    font-weight: normal;<br>
+    vertical-align: auto;<br>
+    }<br>
+    &lt;/style&gt;</p>
 </article>
 </body>
 </html>
