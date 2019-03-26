@@ -47,7 +47,11 @@ em {
 	font-style: italic;
 }
 img {
-	max-width: 100%;
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
 }
 .nowrap {
 	white-space: nowrap;
@@ -110,6 +114,12 @@ img {
 .ucas {
 	background-color: #E32438;
 }
+.fullw {
+	background-color: #111;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 1em;
+}
 
 /*
 Media screen
@@ -138,7 +148,10 @@ Media screen
 </style>
 </head>
 <body>
-<div class="wrapper"><img src="images/1280x720fineart.jpg" alt="" />
+<div class="fullw">
+  <div class="wrapper"><img src="images/1280x720fineart.jpg" alt="" /></div>
+</div>
+<div class="wrapper">
   <div class="fifty">
     <p><a href="#">School of Art, Design and Architecture</a></p>
     <h2>BA (Hons) Fine Art</h2>
