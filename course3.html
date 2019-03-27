@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-size: calc(1rem + 0.1vw);
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+p {
+	clear: both;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.imagebox {
+	max-width: 60em;
+	overflow: hidden;
+}
+.imagebox > p {
+	width: 33%;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 1em;
+	clear: none;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: both;
+}
+.imagebox img {
+	padding-bottom: 0.5rem;
+}
+.credit {
+	font-size: 0.75rem;
+	width: 100%;
+	float: left;
+}
+.wrapper {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+.fifty {
+	width: 50%;
+	float: left;
+	padding: 1em;
+	margin: 0;
+}
+.buttonstyle a {
+	padding: 0.5em 0.75em;
+	float: left;
+	box-shadow: 0.125em 0.125em 0.125em #ccc;
+	border-radius: 0.5em;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+.openday {
+	background-color: #00E;
+	margin-bottom: 1em;
+}
+.ucas {
+	background-color: #E32438;
+}
+.fullw {
+	background-color: #111;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 1em;
+}
+.absolutebottom {
+	height: 40px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+}
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -moz-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -webkit-transform: translateY(-30px);
+ transform: translateY(-30px);
+}
+ 60% {
+ -webkit-transform: translateY(-15px);
+ transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ -moz-transform: translateY(0);
+ -ms-transform: translateY(0);
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 40% {
+ -moz-transform: translateY(-20px);
+ -ms-transform: translateY(-20px);
+ -webkit-transform: translateY(-20px);
+ transform: translateY(-20px);
+}
+ 60% {
+ -moz-transform: translateY(-10px);
+ -ms-transform: translateY(-10px);
+ -webkit-transform: translateY(-10px);
+ transform: translateY(-10px);
+}
+}
+.bounce {
+	-moz-animation: bounce 2s 2;
+	-webkit-animation: bounce 2s 2;
+	animation: bounce 2s 2;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 639px) {
+.imagebox > p {
+	width: 100%;
+}
+.fifty {
+	width: 100%;
+}
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+.imagebox > p {
+	width: 50%;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: none;
+}
+.imagebox > p:nth-child(2n+1) {
+	clear: both;
+}
+}
+
+@media (max-width: 1280px) {
+.absolutebottom {
+	display: none;
+}
+}
+</style>
+<script type="text/javascript">
+	
+
+$(window).scroll(function () {
+	scrollValue = $(document).scrollTop();
+	if (scrollValue > 0){
+		$(".absolutebottom").fadeOut(200);
+		}
+		else{
+			$(".absolutebottom").fadeIn(200);
+			}
+			});
+</script>
+</head>
+<body>
+<div class="absolutebottom bounce">
+  <p><img src="images/arrowdown2.png" width="50" height="30" alt=""></p>
+</div>
+<img src="images/1280x720fineart.jpg" alt="" />
+<div class="wrapper">
+  <div class="fifty">
+    <p><a href="#">School of Art, Design and Architecture</a></p>
+    <h2>BA (Hons) Fine Art</h2>
+    <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+    <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
+  </div>
+  <div class="fifty buttonstyle">
+    <p><a href="#" class="openday">Register for open day</a></p>
+    <p>UCAS tariff<br>
+      <strong>104</strong><br>
+      UCAS course code<br>
+      <strong>W100</strong><br>
+      Institution code<br>
+      <strong>P60</strong><br>
+      Duration<br>
+      <strong>3 years</strong><br>
+      Course type<br>
+      <strong>Full-time</strong><br>
+      Location<br>
+      <strong>Plymouth</strong></p>
+    <p><a href="#" class="ucas">Apply via UCAS</a></p>
+  </div>
+</div>
+<div class="imagebox">
+  <p><img src="images/171205d.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. Et potentiam expendere occasione tractarem im.</p>
+  <p><img src="images/171205c.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
+  <p><img src="images/171205a.jpg" alt="" />Tur solvendae ego archetypi hoc attentius. <span class="credit">Image by Haider Pemberton</span></p>
+  <p><img src="images/171205g.jpg" alt="" />At potestque ii extitisse in ingeniosi contingit. Partibus vis diversas pauciora actualis vox imo agi. Efficta nec quaedam capacem ita invenit ham.</p>
+  <p><img src="images/mono3.jpg" alt="" />Illis mundo aliis ei ab magna. Illi ut quod si sese esto. Is pauciora im ad possumus absoluta pendeant compages. <span class="credit">Image by Raya Krause</span></p>
+  <p><img src="images/171205bstaff.jpg" alt="" />Chartam ingenii sed scripti fallere res nec caeteri.</p>
+  <p><img src="images/171205e.jpg" alt="" />Scriptura inquirere gi co vi extitisse quadratam pertinent.</p>
+  <p><img src="images/1280x720cs4.jpg" alt="" />Fecto dubio major jam lor operi miror falsi.</p>
+  <p><img src="images/171205a.jpg" alt="" />Ab automata deveniri facturum formemus tollitur si.</p>
+</div>
+</body>
+</html>
