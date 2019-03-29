@@ -167,7 +167,6 @@ img {
 .bounce {
 	animation: bounce 2s 4;
 }
-
 /*
 Media screen
 */
@@ -192,23 +191,20 @@ Media screen
 	clear: both;
 }
 }
-
-@media (max-width: 1280px) {
-.absolutebottom {
-	display: none;
-}
-}
 </style>
 <script type="text/javascript">
-$(window).scroll(function () {
-	scrollValue = $(document).scrollTop();
-	if (scrollValue > 0){
-		$(".absolutebottom").fadeOut(200);
-		}
-		else{
-			$(".absolutebottom").fadeIn(200);
-			}
-			});
+
+$(window).bind("load resize scroll",function(e){
+   var hT = $('#scrollto').offset().top,
+       hH = $('#scrollto').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (hT < wS+wH){
+      $('.absolutebottom').fadeOut(200);
+   } else {
+      $('.absolutebottom').fadeIn(200);
+   }
+});
 </script>
 </head>
 <body>
@@ -216,7 +212,7 @@ $(window).scroll(function () {
   <p><img src="images/arrowdown.png" width="50" height="30" alt=""></p>
 </div>
 <img src="images/1280x720fineart.jpg" alt="" />
-<div class="wrapper">
+<div class="wrapper" id="scrollto">
   <div class="fifty">
     <p><a href="#">School of Art, Design and Architecture</a></p>
     <h2>BA (Hons) Fine Art</h2>
