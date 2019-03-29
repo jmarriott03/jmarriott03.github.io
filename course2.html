@@ -194,6 +194,10 @@ Media screen
 </style>
 <script type="text/javascript">
 
+function goToByScroll(id){
+	$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}
+	
 $(window).bind("load resize scroll",function(e){
    var hT = $('#scrollto').offset().top,
        hH = $('#scrollto').outerHeight(),
@@ -205,11 +209,12 @@ $(window).bind("load resize scroll",function(e){
       $('.absolutebottom').fadeIn(200);
    }
 });
+	
 </script>
 </head>
 <body>
 <div class="absolutebottom bounce">
-  <p><img src="images/arrowdown.png" width="50" height="30" alt=""></p>
+  <p><a href="javascript:void(0)" onclick="goToByScroll('scrollto');"><img src="images/arrowdown.png" width="50" height="30" alt=""></a></p>
 </div>
 <img src="images/1280x720fineart.jpg" alt="" />
 <div class="wrapper" id="scrollto">
