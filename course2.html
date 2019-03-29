@@ -200,15 +200,13 @@ Media screen
 }
 </style>
 <script type="text/javascript">
-	
-
 $(window).scroll(function () {
 	scrollValue = $(document).scrollTop();
-	if (scrollValue < 100 && $("wrapper").is(":visible")){
-		$(".absolutebottom").fadeIn(200);
+	if (scrollValue > 0){
+		$(".absolutebottom").fadeOut(200);
 		}
 		else{
-			$(".absolutebottom").fadeOut(200);
+			$(".absolutebottom").fadeIn(200);
 			}
 			});
 </script>
