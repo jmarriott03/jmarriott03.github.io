@@ -201,6 +201,7 @@ Media screen
 	clear: both;
 }
 }
+
 @media (max-width: 40em) {
 .imagebox > p {
 	width: 100%;
@@ -233,10 +234,12 @@ $(window).bind("load resize scroll",function(e){
 <body>
 <a class="skip-main" href="#main">Skip to main content</a>
 <div class="absolutebottom bounce">
-  <p><a href="javascript:void(0)" onclick="goToByScroll('scrollto');"><svg width="50" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <polyline points="2 2 25 25 48 2" stroke="white" stroke-width="6"
+  <p><a href="javascript:void(0)" onclick="goToByScroll('scrollto');">
+    <svg width="50" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="2 2 25 25 48 2" stroke="white" stroke-width="6"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
-</svg></a></p>
+    </svg>
+    </a></p>
 </div>
 <img src="images/1280x720fineart.jpg" alt="" />
 <article id="scrollto">
