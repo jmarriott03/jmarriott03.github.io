@@ -88,7 +88,7 @@ img {
 	width: 100%;
 	float: left;
 }
-.wrapper {
+article {
 	max-width: 60em;
 	margin: 0 auto;
 	padding: 0;
@@ -167,6 +167,25 @@ img {
 .bounce {
 	animation: bounce 2s 4;
 }
+a.skip-main {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+a.skip-main:focus, a.skip-main:active {
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: auto;
+	clip: auto;
+	color: #00E;
+	background-color: #FAFAFA;
+	padding: 0.5em;
+}
 
 /*
 Media screen
@@ -213,7 +232,7 @@ $(window).bind("load resize scroll",function(e){
 </script>
 </head>
 <body>
-
+<a class="skip-main" href="#main">Skip to main content</a>
 <div class="absolutebottom bounce">
   <p><a href="javascript:void(0)" onclick="goToByScroll('scrollto');"><svg width="50" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <polyline points="2 2 25 25 48 2" stroke="white" stroke-width="6"
@@ -221,9 +240,9 @@ $(window).bind("load resize scroll",function(e){
 </svg></a></p>
 </div>
 <img src="images/1280x720fineart.jpg" alt="" />
-<div class="wrapper" id="scrollto">
+<article id="scrollto">
   <div class="fifty">
-    <p><a href="#">School of Art, Design and Architecture</a></p>
+    <p id="main" tabindex="-1"><a href="#">School of Art, Design and Architecture</a></p>
     <h2>BA (Hons) Fine Art</h2>
     <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
     <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
@@ -244,7 +263,7 @@ $(window).bind("load resize scroll",function(e){
       <strong>Plymouth</strong></p>
     <p><a href="#" class="ucas">Apply via UCAS</a></p>
   </div>
-</div>
+</article>
 <div class="imagebox">
   <p><img src="images/171205d.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. Et potentiam expendere occasione tractarem im.</p>
   <p><img src="images/171205c.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
