@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 1em;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+p {
+	clear: both;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.buttonstyle a {
+	padding: 0.5em 0.75em;
+	float: left;
+	box-shadow: 0.125em 0.125em 0.125em #ccc;
+	border-radius: 0.5em;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	background-color: #00E;
+	margin-bottom: 1em;
+}
+</style>
+<script>
+      function replace(){
+        var text = document.getElementById("textarea").value;
+        var newText = text.replace("‘", "&quot;");
+        document.getElementById("textarea").value = newText;
+		  
+		var text = document.getElementById("textarea").value;
+		var newText = text.replace("’", "&quot;");
+		document.getElementById("textarea").value = newText;
+
+		var text = document.getElementById("textarea").value;
+		var newText = text.replace("＇", "&apos;");
+		document.getElementById("textarea").value = newText;
+
+		var text = document.getElementById("textarea").value;
+		var newText = text.replace("ﬁ", "fi");
+		document.getElementById("textarea").value = newText;
+		
+		var text = document.getElementById("textarea").value;
+		var newText = text.replace("ﬂ", "fl");
+		document.getElementById("textarea").value = newText;
+
+		var text = document.getElementById("textarea").value;
+		var newText = text.replace(". fi", ". Fi");
+		document.getElementById("textarea").value = newText;
+
+		var text = document.getElementById("textarea").value;
+		var newText = text.replace(". fl", ". Fl");
+		document.getElementById("textarea").value = newText;
+
+		var copyText = document.getElementById("textarea");
+		copyText.select();
+		document.execCommand("copy");1
+		document.getElementById("replace").innerHTML = "New text copied to clipboard";
+		setTimeout(function(){ document.getElementById("replace").innerHTML = "&nbsp;"; }, 3000);
+
+      }
+    </script>
+</head>
+<body>
+<h2>Prospectus text ligature &amp; quotation mark replacement</h2>
+<p>Paste text in box and select 'Replace'</p>
+<textarea rows="20" cols="93" id="textarea" autofocus></textarea>
+<p class="buttonstyle"><a href="#" onclick="replace();">Replace</a></p>
+<p id="replace">&nbsp;</p>
+</body>
+</html>
