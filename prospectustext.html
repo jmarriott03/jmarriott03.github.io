@@ -76,43 +76,35 @@ img {
 }
 </style>
 <script>
-      function replace(){
-        var text = document.getElementById("textarea").value;
-        var newText = text.replace("‘", "&quot;");
-        document.getElementById("textarea").value = newText;
-		  
-		var text = document.getElementById("textarea").value;
-		var newText = text.replace("’", "&quot;");
-		document.getElementById("textarea").value = newText;
+function replace(){
 
-		var text = document.getElementById("textarea").value;
-		var newText = text.replace("＇", "&apos;");
-		document.getElementById("textarea").value = newText;
+var myStr = document.getElementById("textarea").value;
+newText = myStr.replace(/‘/g, "'");
+document.getElementById("textarea").value = newText;
 
-		var text = document.getElementById("textarea").value;
-		var newText = text.replace("ﬁ", "fi");
-		document.getElementById("textarea").value = newText;
-		
-		var text = document.getElementById("textarea").value;
-		var newText = text.replace("ﬂ", "fl");
-		document.getElementById("textarea").value = newText;
+var myStr = document.getElementById("textarea").value;
+newText = myStr.replace(/’/g, "'");
+document.getElementById("textarea").value = newText;
 
-		var text = document.getElementById("textarea").value;
-		var newText = text.replace(". fi", ". Fi");
-		document.getElementById("textarea").value = newText;
+var myStr = document.getElementById("textarea").value;
+newText = myStr.replace(/＇/g, "'");
+document.getElementById("textarea").value = newText;
+	
+var myStr = document.getElementById("textarea").value;
+newText = myStr.replace(/ﬁ/ig, "fi");
+document.getElementById("textarea").value = newText;
 
-		var text = document.getElementById("textarea").value;
-		var newText = text.replace(". fl", ". Fl");
-		document.getElementById("textarea").value = newText;
+var myStr = document.getElementById("textarea").value;
+newText = myStr.replace(/ﬂ/ig, "fl");
+document.getElementById("textarea").value = newText;
 
-		var copyText = document.getElementById("textarea");
-		copyText.select();
-		document.execCommand("copy");
-		document.getElementById("replace").innerHTML = "New text copied to clipboard";
-		setTimeout(function(){ document.getElementById("replace").innerHTML = "&nbsp;"; }, 3000);
-
-      }
-    </script>
+var copyText = document.getElementById("textarea");
+copyText.select();
+document.execCommand("copy");
+document.getElementById("replace").innerHTML = "New text copied to clipboard";
+setTimeout(function(){ document.getElementById("replace").innerHTML = "&nbsp;"; }, 3000);
+}
+ </script>
 </head>
 <body>
 <h2>Prospectus text ligature &amp; quotation mark replacement</h2>
