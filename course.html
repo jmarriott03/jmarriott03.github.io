@@ -29,7 +29,7 @@ html, body {
 h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
-	font-weight: 400;
+	font-weight: bold;
 }
 p {
 	clear: both;
@@ -120,6 +120,25 @@ img {
 	overflow: hidden;
 	margin-bottom: 1em;
 }
+a.skip-main {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+a.skip-main:focus, a.skip-main:active {
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: auto;
+	clip: auto;
+	color: #00E;
+	background-color: #FAFAFA;
+	padding: 0.5em;
+}
 
 /*
 Media screen
@@ -148,12 +167,13 @@ Media screen
 </style>
 </head>
 <body>
+<a class="skip-main" href="#main">Skip to main content</a>
 <div class="fullw">
   <div class="wrapper"><img src="images/1280x720fineart.jpg" alt="" /></div>
 </div>
 <div class="wrapper">
   <div class="fifty">
-    <p><a href="#">School of Art, Design and Architecture</a></p>
+    <p id="main" tabindex="-1"><a href="#">School of Art, Design and Architecture</a></p>
     <h2>BA (Hons) Fine Art</h2>
     <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
     <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
