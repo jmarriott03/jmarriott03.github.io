@@ -134,6 +134,17 @@ article {
 	bottom: 20px;
 	float: left;
 }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 1.5em 0;
+	clear: both;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid #111;
+}
 @-moz-keyframes bounce {
  0%, 20%, 50%, 80%, 100% {
  transform: translateY(0);
@@ -255,18 +266,32 @@ $(window).bind("load resize scroll",function(e){
   </div>
   <div class="fifty buttonstyle">
     <p><a href="#" class="openday">Register for open day</a></p>
-    <p>UCAS tariff<br>
-      <strong>104</strong><br>
-      UCAS course code<br>
-      <strong>W100</strong><br>
-      Institution code<br>
-      <strong>P60</strong><br>
-      Duration<br>
-      <strong>3 years</strong><br>
-      Course type<br>
-      <strong>Full-time</strong><br>
-      Location<br>
-      <strong>Plymouth</strong></p>
+    <table>
+      <tr>
+        <td>UCAS tariff</td>
+        <td ><strong>104</strong></td>
+      </tr>
+      <tr>
+        <td>UCAS course code</td>
+        <td><strong>W100</strong></td>
+      </tr>
+      <tr>
+        <td>Institution code</td>
+        <td><strong>P60</strong></td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td><strong>3 years</strong></td>
+      </tr>
+      <tr>
+        <td>Course type</td>
+        <td><strong>Full-time</strong></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td><strong>Plymouth</strong></td>
+      </tr>
+    </table>
     <p><a href="#" class="ucas">Apply via UCAS</a></p>
   </div>
 </article>
