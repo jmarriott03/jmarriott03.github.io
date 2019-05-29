@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7s-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h6 {
+	font-size: 0.75em;
+	line-height: 1.25em;
+	font-weight: normal;
+	padding: 0 1em;
+}
+p {
+	clear: both;
+}
+a {
+	color: #06C;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+ul {
+	padding: 1em;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.marginr {
+	margin-right: 1em;
+}
+.wrapper {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 2em 0;
+	overflow: hidden;
+}
+.fifty {
+	width: 50%;
+	float: left;
+	padding: 0 1em;
+	margin: 0;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: center;
+	color: #FAFAFA;
+	text-decoration: none;
+	background-color: #06C;
+}
+.btn a:visited, .buttonstyle a:active {
+	color: #FAFAFA;
+}
+.heroimage {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+.herotext {
+	margin: 0;
+	background: rgba(0,0,0,0.6);
+	padding: 1em;
+	position: absolute;
+	color: #FAFAFA;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 40em;
+	bottom: 0;
+}
+.herotext a, .herotext a:visited, .herotext a:active {
+	color: #FAFAFA;
+}
+.swatch1 {
+	color: #FF0;
+}
+	.underline {
+		text-decoration: underline;
+	}
+.speech1 h1, .speech2 h1, .speech3 h1 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: normal;
+}
+.speech1 a, .speech2 a, .speech3 a {
+	color: #FAFAFA;
+}
+.speech1 {
+	padding: 0.5em 1em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: left;
+	text-decoration: none;
+	color: #FAFAFA;
+	background-color: #906;
+	position: relative;
+	margin-bottom: 2em;
+}
+.speech1:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 1.5em;
+	width: 0;
+	height: 0;
+	border: 1em solid transparent;
+	border-top-color: #906;
+	border-bottom: 0;
+	margin-bottom: -1em;
+}
+.speech2 {
+	padding: 0.5em 1em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: left;
+	text-decoration: none;
+	color: #FAFAFA;
+	background-color: #066;
+	position: relative;
+	margin-bottom: 2em;
+}
+.speech2:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 1.5em;
+	width: 0;
+	height: 0;
+	border: 1em solid transparent;
+	border-top-color: #066;
+	border-bottom: 0;
+	margin-bottom: -1em;
+}
+.speech3 {
+	padding: 0.5em 1em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: left;
+	text-decoration: none;
+	color: #FAFAFA;
+	background-color: #C30;
+	position: relative;
+	margin-bottom: 2em;
+}
+.speech3:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 1.5em;
+	width: 0;
+	height: 0;
+	border: 1em solid transparent;
+	border-top-color: #C30;
+	border-bottom: 0;
+	margin-bottom: -1em;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.fifty {
+	width: 100%;
+}
+.herotext {
+	position: inherit;
+	background-color: #111;
+}
+}
+</style>
+<script>
+		$(".speech1").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+});
+	</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="fifty"><a href="#">
+    <div class="speech1">
+      <h1>We don't teach students,<br>
+        <span class="swatch1">we make leaders</span></h1>
+      <p class="underline">plym.ac.uk/employability</p>
+    </div></a>
+    <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+    <div class="btn">
+      <p><a href="#" class="openday">Register for open day</a></p>
+    </div>
+  </div>
+  <div class="fifty">
+    <ul>
+      <li><strong>01/05/19</strong> - <a href="#">BETA Enterprise Programme</a> (MAR703)</li>
+      <li><strong>07/05/19</strong> - <a href="#">Department of Accounting, Economics and Finance</a> (MAR708)</li>
+      <li><strong>10/05/10</strong> - <a href="#">Department of International Shipping, Logistics and Operations</a> (MAR709)</li>
+      <li><strong>05/05/19</strong> - <a href="#">Department of People, Marketing and Entrepreneurship</a></li>
+      <li><strong>15/05/19</strong> - <a href="#">Department of Tourism and Hospitality</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="fifty"><a href="#">
+    <div class="speech2">
+      <h1>We don't want you,<br>
+        <span class="swatch1">we want who you'll become</span></h1>
+      <p class="underline">plym.ac.uk/employability</p>
+    </div></a>
+    <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+    <div class="btn">
+      <p><a href="#" class="openday">Register for open day</a></p>
+    </div>
+  </div>
+  <div class="fifty">
+    <ul>
+      <li><strong>01/05/19</strong> - <a href="#">BETA Enterprise Programme</a> (MAR703)</li>
+      <li><strong>07/05/19</strong> - <a href="#">Department of Accounting, Economics and Finance</a> (MAR708)</li>
+      <li><strong>10/05/10</strong> - <a href="#">Department of International Shipping, Logistics and Operations</a> (MAR709)</li>
+      <li><strong>05/05/19</strong> - <a href="#">Department of People, Marketing and Entrepreneurship</a></li>
+      <li><strong>15/05/19</strong> - <a href="#">Department of Tourism and Hospitality</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="fifty"><a href="#">
+    <div class="speech3">
+      <h1>We can't predict the future,<br>
+        <span class="swatch1">we can help you shape it</span></h1>
+      <p class="underline">plym.ac.uk/employability</p>
+    </div></a>
+    <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+    <div class="btn">
+      <p><a href="#" class="openday">Register for open day</a></p>
+    </div>
+  </div>
+  <div class="fifty">
+    <ul>
+      <li><strong>01/05/19</strong> - <a href="#">BETA Enterprise Programme</a> (MAR703)</li>
+      <li><strong>07/05/19</strong> - <a href="#">Department of Accounting, Economics and Finance</a> (MAR708)</li>
+      <li><strong>10/05/10</strong> - <a href="#">Department of International Shipping, Logistics and Operations</a> (MAR709)</li>
+      <li><strong>05/05/19</strong> - <a href="#">Department of People, Marketing and Entrepreneurship</a></li>
+      <li><strong>15/05/19</strong> - <a href="#">Department of Tourism and Hospitality</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
