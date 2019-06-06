@@ -196,6 +196,8 @@ a.skip-main:focus, a.skip-main:active {
 	position: relative;
 	z-index: 1;
 	margin: 0 0 1em 0;
+	background-image: url(images/1280x720gamechanger8.jpg);
+	background-size: contain;
 }
 .herotext {
 	position: absolute;
@@ -286,6 +288,10 @@ $(window).bind("load resize scroll",function(e){
    }
 });
 
+$(window).scroll(function(){
+	$(".snowfade").css("opacity", 1 - $(window).scrollTop() / 150);
+});
+	
 </script>
 </head>
 <body id="pagestart">
@@ -298,14 +304,14 @@ $(window).bind("load resize scroll",function(e){
     </svg>
     </a></p>
 </div>
-<div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" />
+<div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" class="snowfade"/>
   <div class="herotext">
     <p><img src="images/gamechanger.svg" alt="game changer"/>A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
     <p><strong><a href="#">#uopgamechanger</a></strong></p>
   </div>
 </div>
 <div class="imagebox" id="main">
-  <p ><img src="images/720x720gamechanger2.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
+  <p ><img src="images/720x720gamechanger9.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
   <p><img src="images/1280x720gamechanger3.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. Et potentiam expendere occasione tractarem im.</p>
   <p><img src="images/1280x720gamechanger4.jpg" alt="" />Tur solvendae ego archetypi hoc attentius. <span class="credit">Images by Haider Pemberton</span></p>
 </div>
