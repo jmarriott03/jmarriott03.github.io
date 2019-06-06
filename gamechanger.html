@@ -65,16 +65,6 @@ img {
 	width: 100%;
 	margin: 0;
 }
-.darkmode {
-	color: #FAFAFA;
-	background-color: #111;
-}
-.darkmode a {
-	color: #39F;
-}
-.darkmode .openday, .darkmode .darkmodebtn a {
-	background-color: #39F;
-}
 .nowrap {
 	white-space: nowrap;
 }
@@ -114,41 +104,12 @@ article {
 	padding: 1em;
 	overflow: hidden;
 }
-.fifty {
-	width: 50%;
-	float: left;
-	padding: 1em;
-	margin: 0;
-}
 .btn a {
 	padding: 0.5em 0.75em;
 	border-radius: 0.25em;
 	text-align: center;
 	color: #FAFAFA;
 	text-decoration: none;
-}
-.darkmodebtn a {
-	padding: 0.5em 0.75em;
-	border-radius: 1em;
-	text-align: center;
-	color: #FAFAFA;
-	background-color: #06C;
-	font-size: 0.75em;
-	text-decoration: none;
-	margin-right: 1em;
-}
-.openday {
-	background-color: #06C;
-	margin-bottom: 1em;
-}
-.ucas {
-	background-color: #E32438;
-}
-.fullw {
-	background-color: #111;
-	width: 100%;
-	overflow: hidden;
-	margin-bottom: 1em;
 }
 .absolutebottom {
 	height: 40px;
@@ -215,6 +176,7 @@ a.skip-main {
 	overflow: hidden;
 	clip: rect(0,0,0,0);
 	border: 0;
+	z-index: 999;
 }
 a.skip-main:focus, a.skip-main:active {
 	width: auto;
@@ -229,13 +191,13 @@ a.skip-main:focus, a.skip-main:active {
 .marginr {
 	margin-right: 1em;
 }
-.hero {
+.heroimage {
 	width: 100%;
 	position: relative;
 	z-index: 1;
 	margin: 0 0 1em 0;
 }
-.box2 {
+.herotext {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -247,13 +209,13 @@ a.skip-main:focus, a.skip-main:active {
 	font-size: 1.25em;
 	line-height: 1.5em;
 }
-.box2 p {
+.herotext p {
 	max-width: 40em;
 }
-.box2 img {
+.herotext img {
 	margin-bottom: 1em;
 }
-.box2 a {
+.herotext a {
 	color: #FAFAFA;
 }
 article img {
@@ -281,7 +243,7 @@ Media screen
 .imagebox > p:nth-child(2n+1) {
 	clear: both;
 }
-.box2 {
+.herotext {
 	position: relative;
 	width: 100%;
 	background-color: #111;
@@ -341,21 +303,21 @@ function darkmode() {
 <body id="pagestart">
 <a class="skip-main" href="#main">Skip to main content</a>
 <div class="absolutebottom bounce">
-  <p><a href="javascript:void(0)" onclick="goToByScroll('scrollto');">
+  <p><a href="javascript:void(0)" onclick="goToByScroll('main');">
     <svg width="50" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1">
       <polyline points="2 2 25 25 48 2" stroke="#FAFAFA" stroke-width="6"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
     </svg>
     </a></p>
 </div>
-<div class="hero"><img src="images/1280x720gamechanger.jpg" alt="" />
-  <div class="box2">
+<div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" />
+  <div class="herotext">
     <p><img src="images/gamechanger.svg" alt="game changer"/>A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
     <p><strong><a href="#">#uopgamechanger</a></strong></p>
   </div>
 </div>
-<div class="imagebox" id="scrollto">
-  <p><img src="images/720x720gamechanger2.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
+<div class="imagebox" id="main">
+  <p ><img src="images/720x720gamechanger2.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
   <p><img src="images/1280x720gamechanger3.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. Et potentiam expendere occasione tractarem im.</p>
   <p><img src="images/1280x720gamechanger4.jpg" alt="" />Tur solvendae ego archetypi hoc attentius. <span class="credit">Images by Haider Pemberton</span></p>
 </div>
