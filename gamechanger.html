@@ -275,8 +275,8 @@ function goToByScroll(id){
 }
 	
 $(window).bind("load resize scroll",function(e){
-   var hT = $('#scrollto').offset().top,
-       hH = $('#scrollto').outerHeight(),
+   var hT = $('#main').offset().top,
+       hH = $('#main').outerHeight(),
        wH = $(window).height(),
        wS = $(this).scrollTop();
    if (hT < wS+wH){
