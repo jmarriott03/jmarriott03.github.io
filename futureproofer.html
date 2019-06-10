@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #06C;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.imagebox {
+	max-width: 60em;
+	overflow: hidden;
+}
+.imagebox > p {
+	width: 33%;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 1em;
+	clear: none;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: both;
+}
+.imagebox img {
+	padding-bottom: 0.5rem;
+}
+.credit {
+	font-size: 0.75rem;
+	width: 100%;
+	float: left;
+}
+article {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: center;
+	color: #FAFAFA;
+	text-decoration: none;
+}
+.absolutebottom {
+	height: 40px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+	z-index: 99;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 1.5em 0;
+	clear: both;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid #666;
+}
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ transform: translateY(0);
+}
+ 40% {
+ transform: translateY(-30px);
+}
+ 60% {
+ transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ transform: translateY(0);
+}
+ 40% {
+ transform: translateY(-30px);
+}
+ 60% {
+ transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ transform: translateY(0);
+}
+ 40% {
+ transform: translateY(-20px);
+}
+ 60% {
+ transform: translateY(-10px);
+}
+}
+.bounce {
+	animation: bounce 2s 4;
+}
+a.skip-main {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+	z-index: 999;
+}
+a.skip-main:focus, a.skip-main:active {
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: auto;
+	clip: auto;
+	color: #06C;
+	background-color: #FAFAFA;
+	padding: 0.5em;
+}
+.marginr {
+	margin-right: 1em;
+}
+.heroimage {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	margin: 0 0 1em 0;
+}
+.herotext {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 2em;
+	z-index: 2;
+	width: 40%;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+.herotext p {
+	max-width: 40em;
+}
+.herotext img {
+	margin-bottom: 1em;
+}
+.herotext a {
+	color: #FAFAFA;
+}
+article img {
+	width: 20em;
+	float: left;
+	margin: 0 1em 0 0;
+	clear: both;
+}
+.grey {
+	color: #111;
+	font-size: 0.875em;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 60em) {
+.imagebox > p {
+	width: 50%;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: none;
+}
+.imagebox > p:nth-child(2n+1) {
+	clear: both;
+}
+.herotext {
+	position: relative;
+	width: 100%;
+	background-color: #111;
+	left: 0;
+	margin: 0;
+	padding: 1em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transform: translateY(0);
+}
+}
+
+@media (max-width: 40em) {
+.imagebox > p {
+	width: 100%;
+}
+.fifty {
+	width: 100%;
+}
+article img {
+	width: 5em;
+}
+}
+</style>
+<script>
+
+function goToByScroll(id){
+	$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}
+	
+$(window).bind("load resize scroll",function(e){
+   var hT = $('#main').offset().top,
+       hH = $('#main').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (hT < wS+wH){
+      $('.absolutebottom').fadeOut(200);
+   } else {
+      $('.absolutebottom').fadeIn(200);
+   }
+});
+
+</script>
+</head>
+<body id="pagestart">
+<a class="skip-main" href="#main">Skip to main content</a>
+<div class="absolutebottom bounce">
+  <p><a href="javascript:void(0)" onclick="goToByScroll('main');">
+    <svg width="50" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <polyline points="2 2 25 25 48 2" stroke="#FAFAFA" stroke-width="6"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+    </svg>
+    </a></p>
+</div>
+<div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" />
+  <div class="herotext">
+    <p><img src="images/futureproofer.svg" alt="future proofer"/>A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
+    <p><strong><a href="#">#uopfutureproofer</a></strong></p>
+  </div>
+</div>
+<div class="imagebox" id="main">
+  <p><img src="images/720x720gamechanger2.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
+  <p><img src="images/1280x720gamechanger3.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. Et potentiam expendere occasione tractarem im.</p>
+  <p><img src="images/1280x720gamechanger4.jpg" alt="" />Tur solvendae ego archetypi hoc attentius. <span class="credit">Images by Haider Pemberton</span></p>
+</div>
+<article>
+  <h2>Pages tagged with: #uopgamechanger</h2>
+  <p><a href="#"><span class="iconfont" aria-hidden="true">S</span> Share</a></p>
+  <p><a href="#"><img src="images/1280x720gamechanger5.jpg" alt=""/></a><strong><a href="#">Dr Lucy Obolensky</a></strong><br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p class="grey">Last updated: 3 June 2019</p>
+  <p><a href="#"><img src="images/1280x720gamechanger6.jpg" alt=""/></a><strong><a href="#">Professor Mathew Upton</a></strong><br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p class="grey">Last updated: 3 June 2019</p>
+  <p><a href="#"><img src="images/1280x720gamechanger7.jpg" alt=""/></a><strong><a href="#">Imogen Napper - microfibres</a></strong><br>
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <p class="grey">Last updated: 20 May 2019</p>
+  <p><strong><a href="#">Ut enim ad minim veniam, quis nostrud</a></strong><br>
+    Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  <p class="grey">Last updated: 16 May 2019</p>
+</article>
+</body>
+</html>
