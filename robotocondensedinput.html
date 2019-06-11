@@ -250,9 +250,10 @@ input[type=submit] {
 	color: #EEE;
 	background-color: #08C;
 }
-	form {
-		padding: 1em;
-	}
+form {
+	padding: 1em;
+}
+
 /*
 Media screen
 */
@@ -319,11 +320,11 @@ $(window).bind("load resize scroll",function(e){
 
 function process()
 {
-var url=document.getElementById("url").value;
-var herot=document.getElementById("url").value;
-url = url.replace(/ /g, "<br>");
+var heroh=document.getElementById("formtext").value;
+var herot=document.getElementById("formtext").value;
+heroh = heroh.replace(/ /g, "<br>");
 herot = herot.replace(/ /g, "");
-document.getElementById("heroh").innerHTML = url;
+document.getElementById("heroh").innerHTML = heroh;
 document.getElementById("herot").innerHTML = herot;
 
 return false;
@@ -333,16 +334,16 @@ return false;
 <body>
 <div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" />
   <div class="herotext">
-    <h1 id="heroh">Difference<br>
-      maker</h1>
+    <h1 id="heroh">Word1<br>
+      Word2</h1>
     <p>A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
-	  <p><strong><a href="#">#<span id="herot">bethedifference</span></a></strong></p>
+    <p><strong><a href="#">#<span id="herot">word1word2</span></a></strong></p>
   </div>
 </div>
-	<form onSubmit="return process();">
-    New text
-    <input type="text" name="url" id="url" autofocus autocapitalize="none">
-    <input type="submit" value="Go">
-  </form>
+<form onSubmit="return process();">
+  New text
+  <input type="text" name="formtext" id="formtext" autofocus autocapitalize="none">
+  <input type="submit" value="Go">
+</form>
 </body>
 </html>
