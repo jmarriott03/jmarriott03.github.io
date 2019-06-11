@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #06C;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.imagebox {
+	max-width: 60em;
+	overflow: hidden;
+}
+.imagebox > p {
+	width: 33%;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 1em;
+	clear: none;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: both;
+}
+.imagebox img {
+	padding-bottom: 0.5rem;
+}
+.credit {
+	font-size: 0.75rem;
+	width: 100%;
+	float: left;
+}
+article {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: center;
+	color: #FAFAFA;
+	text-decoration: none;
+}
+.absolutebottom {
+	height: 40px;
+	position: fixed;
+	width: 50px;
+	left: 50%;
+	margin-left: -25px;
+	bottom: 20px;
+	float: left;
+	z-index: 99;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 1.5em 0;
+	clear: both;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid #666;
+}
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ transform: translateY(0);
+}
+ 40% {
+ transform: translateY(-30px);
+}
+ 60% {
+ transform: translateY(-15px);
+}
+}
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ transform: translateY(0);
+}
+ 40% {
+ transform: translateY(-30px);
+}
+ 60% {
+ transform: translateY(-15px);
+}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {
+ transform: translateY(0);
+}
+ 40% {
+ transform: translateY(-20px);
+}
+ 60% {
+ transform: translateY(-10px);
+}
+}
+.bounce {
+	animation: bounce 2s 4;
+}
+a.skip-main {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+	z-index: 999;
+}
+a.skip-main:focus, a.skip-main:active {
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: auto;
+	clip: auto;
+	color: #06C;
+	background-color: #FAFAFA;
+	padding: 0.5em;
+}
+.marginr {
+	margin-right: 1em;
+}
+.heroimage {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	margin: 0 0 1em 0;
+}
+.herotext {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 2em;
+	z-index: 2;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+.herotext h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 9vw;
+	line-height: 0.875em;
+	text-transform: uppercase;
+}
+.herotext p {
+	max-width: 30em;
+	margin: 0 0 1em 0;
+}
+.herotext img {
+	margin-bottom: 1em;
+}
+.herotext a {
+	color: #FAFAFA;
+}
+article img {
+	width: 20em;
+	float: left;
+	margin: 0 1em 0 0;
+	clear: both;
+}
+.grey {
+	color: #111;
+	font-size: 0.875em;
+}
+input[type="text"], input[type="submit"], input[type="button"] {
+	font-size: 20px;
+	padding: .25em;
+	margin: 0 0.1em;
+}
+input[type=submit] {
+	padding: 0.25em 0.5em;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: #EEE;
+	background-color: #08C;
+}
+	form {
+		padding: 1em;
+	}
+/*
+Media screen
+*/
+
+@media (max-width: 60em) {
+.imagebox > p {
+	width: 50%;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: none;
+}
+.imagebox > p:nth-child(2n+1) {
+	clear: both;
+}
+.herotext {
+	position: relative;
+	width: 100%;
+	background-color: #111;
+	left: 0;
+	margin: 0;
+	padding: 1em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transform: translateY(0);
+}
+.herotext h1 {
+	font-size: 3em;
+	line-height: 0.875em;
+}
+.herotext p {
+	max-width: 100%;
+}
+}
+
+@media (max-width: 40em) {
+.imagebox > p {
+	width: 100%;
+}
+.fifty {
+	width: 100%;
+}
+article img {
+	width: 5em;
+}
+}
+</style>
+<script>
+
+function goToByScroll(id){
+	$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+}
+	
+$(window).bind("load resize scroll",function(e){
+   var hT = $('#main').offset().top,
+       hH = $('#main').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (hT < wS+wH){
+      $('.absolutebottom').fadeOut(200);
+   } else {
+      $('.absolutebottom').fadeIn(200);
+   }
+});
+
+function process()
+{
+var url=document.getElementById("url").value;
+var herot=document.getElementById("url").value;
+url = url.replace(/ /g, "<br>");
+herot = herot.replace(/ /g, "");
+document.getElementById("heroh").innerHTML = url;
+document.getElementById("herot").innerHTML = herot;
+
+return false;
+}
+</script>
+</head>
+<body>
+<div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" />
+  <div class="herotext">
+    <h1 id="heroh">Difference<br>
+      maker</h1>
+    <p>A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
+	  <p><strong><a href="#">#<span id="herot">bethedifference</span></a></strong></p>
+  </div>
+</div>
+	<form onSubmit="return process();">
+    New text
+    <input type="text" name="url" id="url" autofocus autocapitalize="none">
+    <input type="submit" value="Go">
+  </form>
+</body>
+</html>
