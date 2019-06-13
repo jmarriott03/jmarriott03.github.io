@@ -207,7 +207,7 @@ a.skip-main:focus, a.skip-main:active {
 	z-index: 2;
 	margin: 0;
 	color: #FAFAFA;
-	font-size: calc(16px + 0.5vw);
+	font-size: calc(1rem + 0.5vw);
 	line-height: 1.5em;
 	width: 60%;
 }
@@ -285,7 +285,7 @@ $(window).on("load resize",function(e){
 	if(contentHeight < containerHeight) {
 		var element = document.getElementById("textoverflow");
 		element.classList.remove("overflowtext");
-	}	
+	}
 	var contentHeight = $('.herotext').height()+16;
 	var containerHeight = $('.heroimage').height();
 	if(contentHeight > containerHeight) {
