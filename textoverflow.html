@@ -10,14 +10,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>University of Plymouth</title>
 <style>
-@font-face {
-	font-family: icon;
-	src: url('fonts/icon7t-webfont.woff');
-}
-.iconfont {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-}
 * {
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -75,123 +67,6 @@ img {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-.imagebox {
-	max-width: 60em;
-	overflow: hidden;
-}
-.imagebox > p {
-	width: 33%;
-	float: left;
-	font-size: 0.875em;
-	line-height: 1.5em;
-	margin: 0;
-	padding: 1em;
-	clear: none;
-}
-.imagebox > p:nth-child(3n+1) {
-	clear: both;
-}
-.imagebox img {
-	padding-bottom: 0.5rem;
-}
-.credit {
-	font-size: 0.75rem;
-	width: 100%;
-	float: left;
-}
-article {
-	max-width: 60em;
-	margin: 0 auto;
-	padding: 1em;
-	overflow: hidden;
-}
-.btn a {
-	padding: 0.5em 0.75em;
-	border-radius: 0.25em;
-	text-align: center;
-	color: #FAFAFA;
-	text-decoration: none;
-}
-.absolutebottom {
-	height: 40px;
-	position: fixed;
-	width: 50px;
-	left: 50%;
-	margin-left: -25px;
-	bottom: 20px;
-	float: left;
-	z-index: 99;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin: 1em 0 1.5em 0;
-	clear: both;
-}
-td {
-	padding: 0.5em;
-	text-align: left;
-	border-bottom: 1px solid #666;
-}
-@-moz-keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {
- transform: translateY(0);
-}
- 40% {
- transform: translateY(-30px);
-}
- 60% {
- transform: translateY(-15px);
-}
-}
-@-webkit-keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {
- transform: translateY(0);
-}
- 40% {
- transform: translateY(-30px);
-}
- 60% {
- transform: translateY(-15px);
-}
-}
-@keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {
- transform: translateY(0);
-}
- 40% {
- transform: translateY(-20px);
-}
- 60% {
- transform: translateY(-10px);
-}
-}
-.bounce {
-	animation: bounce 2s 4;
-}
-a.skip-main {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	border: 0;
-	z-index: 999;
-}
-a.skip-main:focus, a.skip-main:active {
-	width: auto;
-	height: auto;
-	margin: 0;
-	overflow: auto;
-	clip: auto;
-	color: #06C;
-	background-color: #FAFAFA;
-	padding: 0.5em;
-}
-.marginr {
-	margin-right: 1em;
-}
 .heroimage {
 	width: 100%;
 	position: relative;
@@ -234,10 +109,6 @@ article img {
 	margin: 0 1em 0 0;
 	clear: both;
 }
-.grey {
-	color: #111;
-	font-size: 0.875em;
-}
 .overflowtext {
 	position: relative;
 	width: 100%;
@@ -248,34 +119,6 @@ article img {
 	font-size: 1em;
 	line-height: 1.5em;
 	transform: translateY(0);
-}
-
-/*
-Media screen
-*/
-
-@media (max-width: 60em) {
-.imagebox > p {
-	width: 50%;
-}
-.imagebox > p:nth-child(3n+1) {
-	clear: none;
-}
-.imagebox > p:nth-child(2n+1) {
-	clear: both;
-}
-}
-	
- @media (max-width: 40em) {
-.imagebox > p {
- width: 100%;
-}
-.fifty {
- width: 100%;
-}
-article img {
- width: 5em;
-}
 }
 </style>
 <script>
