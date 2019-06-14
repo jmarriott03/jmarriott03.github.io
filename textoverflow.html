@@ -125,21 +125,19 @@ $(window).on("load resize",function(e){
 	var contentHeight = $('.herotext').height()+16;
 	var containerHeight = $('.heroimage').height();
 	if(contentHeight < containerHeight) {
-		var element = document.getElementById("textoverflow");
-		element.classList.remove("overflowtext");
+		$( ".herotext" ).removeClass( "overflowtext" );
 	}
 	var contentHeight = $('.herotext').height()+16;
 	var containerHeight = $('.heroimage').height();
 	if(contentHeight > containerHeight) {
-		var element = document.getElementById("textoverflow");
-		element.classList.add("overflowtext");
+		$( ".herotext" ).addClass( "overflowtext" );
 	}
 });
 </script>
 </head>
 <body>
 <div class="heroimage"><img src="images/1280x720gamechanger.jpg" alt="" />
-  <div class="herotext" id="textoverflow">
+  <div class="herotext">
     <h1>Storm chasers defend UK coastline</h1>
     <p>A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
     <p><strong><a href="#">#stormchasers</a></strong></p>
