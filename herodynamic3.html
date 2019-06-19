@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	vertical-align: auto;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+a {
+	color: #00E;
+}
+h1, h2, p {
+	max-width: 32em;
+	margin-left: 0;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.herotext {
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.staff img {
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0.5em 0 0;
+	border-radius: 50%;
+	float: left;
+}
+article {
+	max-width: 32em;
+	padding: 1rem;
+}
+.smalltext {
+	font-size: 0.7em;
+}
+.quoteline {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+}
+.herobox {
+	max-width: 48em;
+	overflow: hidden;
+	position: relative;
+}
+.marginr {
+	margin-right: 0.5em;
+}
+.landscape {
+	width: 100%;
+}
+.portrait {
+	width: 50%;
+	float: right;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 44em) {
+.portrait {
+	width: 100%;
+}
+}
+</style>
+<script>
+$(window).bind("load", function() {
+$('.herobox > img').each(function(){
+    $(this).addClass(this.width > this.height ? 'landscape' : 'portrait');
+});
+});
+</script>
+</head>
+<body>
+<div class="herobox"> <img src="images/720x720research.jpg" alt=""/>
+  <div class="herotext">
+    <h2>Research Festival</h2>
+    <p>Celebrating the very best of Plymouth's rich and varied research through a week-long series of events</p>
+    <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">&amp;</span> 21 - 25 January</a></p>
+    <p class="smalltext">Image by Raya Krause</p>
+  </div>
+</div>
+<article>
+  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
+  <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
+  <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
+</article>
+<div class="herobox"> <img src="images/1280x720cs2.jpg" alt=""/>
+  <div class="herotext">
+    <h2><a href="#">Peninsula Arts</a></h2>
+    <p>Plymouth's centre for contemporary art and culture. Open to the public all year round.</p>
+    <p class="smalltext">Image by Haider Pemberton</p>
+  </div>
+</div>
+<article>
+  <p class="staff"><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</a><br>
+    Course leader</strong></p>
+  <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
+  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
+  <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
+</article>
+<div class="herobox"> <img src="images/david-bowie-poster-martin-gropius-bau-berlin.jpg" alt=""/>
+  <div class="herotext">
+    <h2>Melody, album sales and lyrics provide basis for unique tribute to <span class="nowrap">David Bowie</span></h2>
+    <p>Conceived by Dr Alexis Kirke and electronic music pioneer Martyn Ware, the piece will be played to audiences at the <a href="#" class="nowrap">Port Eliot Festival.</a></p>
+    <p><a href="#" class="marginr nowrap"><span class="iconfont" aria-hidden="true">;</span> Enquiries</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">t</span> #PORTELIOT</a> <a href="#"  class="marginr nowrap"><span class="iconfont" aria-hidden="true">%</span> Lyrics</a> <a href="#" class="nowrap"><span class="iconfont" aria-hidden="true">R</span> Tickets</a></p>
+  </div>
+</div>
+<article>
+  <p>Sed in tortor at nibh mollis consequat eu a mi. Vestibulum varius augue mi, ac porttitor justo dapibus non. Integer congue ut turpis in gravida. Aliquam ultricies erat id odio malesuada cursus.</p>
+  <p class="quoteline">"Sed tincidunt tincidunt diam vel egestas. Aliquam in auctor sapien. Phasellus auctor nunc eu urna pellentesque, ut lacinia justo tempor."</p>
+  <p>Aenean convallis malesuada venenatis. Nam mauris diam, scelerisque quis augue at, lacinia ornare metus. Nam id est quis dolor eleifend cursus quis non orci. Nunc eu venenatis risus. Sed semper velit sed scelerisque lobortis.</p>
+</article></body>
+</html>
