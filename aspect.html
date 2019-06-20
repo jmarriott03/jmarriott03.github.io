@@ -78,6 +78,12 @@ img {
 	margin: 0 auto;
 	overflow: hidden;
 }
+.marginhalf {
+	margin: 0.5em;
+}
+.marginone {
+	margin: 1em;
+}
 .smalltext {
 	font-size: 0.75rem;
 }
@@ -93,7 +99,7 @@ img {
 	margin: 0;
 	padding: 1em;
 }
-.thumbnails > .tagbox:nth-child(3n+1) {
+.thumbnails > .tagbox:nth-child(3n+3) {
 	clear: both;
 }
 
@@ -112,10 +118,10 @@ Media screen
 .tagbox {
 	width: 50%;
 }
-.thumbnails > .tagbox:nth-child(3n+1) {
+.thumbnails > .tagbox:nth-child(3n+3) {
 	clear: none;
 }
-.thumbnails > .tagbox:nth-child(2n+1) {
+.thumbnails > .tagbox:nth-child(2n+3) {
 	clear: both;
 }
 }
@@ -123,6 +129,8 @@ Media screen
 </head>
 <body>
 <div class="thumbnails">
+  <h2 class="marginhalf">Pages tagged with: art</h2>
+  <p class="marginone"><a href="#"><span class="iconfont" aria-hidden="true">S</span> Share</a></p>
   <div class="tagbox"> <a href="images/1280x720fa1.jpg" aria-hidden="true">
     <div class="imagebox" style="background-image: url(images/1280x720fa1.jpg)"></div>
     </a>
