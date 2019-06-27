@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style type="text/css">
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #EEE;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 400;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+#demo {
+	max-width: 80em;
+	overflow: hidden;
+	padding: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+#demo > p {
+	width: 16.6%;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	padding: 1em;
+	margin: 0;
+}
+#demo > p:nth-child(6n+1) {
+	clear: both;
+}
+#demo img {
+	width: 100%;
+	border: 1px solid #CCC;
+}
+.credit {
+	font-size: 0.75rem;
+	width: 100%;
+	float: left;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 639px) {
+#demo > p {
+	width: 100%;
+}
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+#demo > p {
+	width: 50%;
+}
+#demo > p:nth-child(6n+1) {
+	clear: none;
+}
+#demo > p:nth-child(2n+1) {
+	clear: both;
+}
+}
+</style>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+<script>
+var fruits, text, fLen, i;
+fruits = ["aspect2", "darkmode", "employabilitydiv", "gamechanger", "iconfont7", "salesforce", "tags", "telephone", "prospectustext", "ppp", "itrent2b", "capita", "accordion", "accordion2", "accordion3", "accordion3b", "accordion3c", "uoplogo", "textoverflow", "skip", "herodynamic3", "course"];
+fLen = fruits.length;
+text = "";
+
+for (i = 0; i < fLen; i++) {
+  text += "<p><a href=\"" + fruits[i] + ".html\"><img src=\"images/thumbs/" + fruits[i] + ".jpg\" alt=\"\" />" + fruits[i] + "</a></p>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+</html>
