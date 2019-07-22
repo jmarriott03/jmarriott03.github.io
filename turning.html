@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #06C;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.heroimage {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	margin: 0 0 1em 0;
+}
+.herotext {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 2em;
+	z-index: 2;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: calc(1rem + 0.4vw);
+	line-height: 1.5;
+	width: 60%;
+}
+.herotext h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 9vw;
+	line-height: 0.875;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	color: #AB8D3F;
+}
+.herotext p {
+	max-width: 30em;
+	margin: 0 0 1em 0;
+}
+.herotext img {
+	margin-bottom: 1em;
+}
+.herotext a {
+	color: #AB8D3F;
+}
+article img {
+	width: 20em;
+	float: left;
+	margin: 0 1em 0 0;
+	clear: both;
+}
+.overflowtext {
+	position: relative;
+	width: 100%;
+	background-color: #111;
+	left: 0;
+	margin: 0;
+	padding: 1em 1em 0.1em 1em;
+	font-size: 1em;
+	line-height: 1.5;
+	transform: translateY(0);
+}
+</style>
+<script>
+$(window).on("load resize",function(e){
+	var contentHeight = $('.herotext').height()+16;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight < containerHeight) {
+		$( ".herotext" ).removeClass( "overflowtext" );
+	}
+	var contentHeight = $('.herotext').height()+16;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight > containerHeight) {
+		$( ".herotext" ).addClass( "overflowtext" );
+	}
+});
+</script>
+</head>
+<body>
+<div class="heroimage"><img src="images/1280x720makeitcount.jpg" alt="" />
+  <div class="herotext">
+    <h1>Turning<br>
+      the tide</h1>
+    <p>Looking at the sources and fate of plastics within the marine environment in ways we wouldn’t necessarily think.</p>
+    <p><strong><a href="#">#transformingfutures</a></strong></p>
+  </div>
+</div>
+</body>
+</html>
