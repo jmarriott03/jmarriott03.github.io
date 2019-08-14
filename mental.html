@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>University of Plymouth</title>
 <style>
 * {
@@ -152,31 +154,69 @@ td {
 	text-align: left;
 	border-bottom: 1px solid;
 }
-a.skip-main {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	border: 0;
-}
-a.skip-main:focus, a.skip-main:active {
-	width: auto;
-	height: auto;
-	margin: 0;
-	overflow: auto;
-	clip: auto;
-	color: #00E;
-	background-color: #FAFAFA;
-	padding: 0.5em;
-}
 .quotestyle {
 	border-left: 0.25em solid;
 	padding-left: 0.5em;
 	font-weight: bold;
 }
-
+.heroimage {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	background-color: #111;
+}
+/*.heroimage img {
+	opacity: 0.6;
+}*/
+.herotext {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	z-index: 2;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: calc(1rem + 0.4vw);
+	line-height: 1.5em;
+	width: 50%;
+	padding: 1em 1em 0 1em;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.herotext h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 5vw;
+	line-height: 0.875em;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+.herotext p {
+	max-width: 30em;
+	margin: 0 0 1em 0;
+}
+.herotext a {
+	color: #FAFAFA;
+}
+/*.herotext > * {
+	text-shadow: -1px -1px 1px #111, 1px -1px 1px #111, -1px 1px 1px #111, 3px 3px 3px #111;
+}*/
+.overflowtext {
+	position: relative;
+	width: 100%;
+	background-color: #111;
+	left: 0;
+	margin: 0;
+	padding: 1em 1em 0.1em 1em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transform: translateY(0);
+}
+	.overflowtext > h1 {
+		font-family: sans-serif;
+	font-weight: bold;
+		font-size: 1.5em;
+	line-height: 1.25em;
+		text-transform: none;
+	}
 /*
 Media screen
 */
@@ -208,17 +248,29 @@ p {
 }
 }
 </style>
+<script>
+$(window).on("load resize",function(e){
+	var contentHeight = $('.herotext').height()+32;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight < containerHeight) {
+		$( ".herotext" ).removeClass( "overflowtext" );
+	}
+	var contentHeight = $('.herotext').height()+32;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight > containerHeight) {
+		$( ".herotext" ).addClass( "overflowtext" );
+	}
+});
+</script>
 </head>
 <body>
-<a class="skip-main" href="#main">Skip to main content</a>
-<article>
-  <h2 id="main" tabindex="-1">Mental health nursing student insight: Gemma Isaac-Henwood</h2>
-  <p>Current BSc (Hons) Nursing (Mental Health) student Gemma shares an insight into her time studying at Plymouth.</p>
-</article>
-<div class="hero">
-<img src="images/1280x720gemma.jpg" alt="" />
-	</div>
-<article>
+<div class="heroimage"><img src="images/1280x720gemma.jpg" alt="" />
+  <div class="herotext">
+    <h1>Mental health nursing student insight: Gemma Isaac-Henwood</h1>
+    <p>Current BSc (Hons) Nursing (Mental Health) student Gemma shares an insight into her time <a href="#">studying at Plymouth.</a></p>
+  </div>
+</div>
+<article id="main" tabindex="-1">
   <h2>What inspired you to choose to study mental health nursing?</h2>
   <div class="fifty">
     <p> Mental health has always been a subject close to me personally and I am happy that it is finally getting the recognition it needs. Over the years I have had friends and even family suffer with mental health difficulties ranging from eating disorders, OCD to depression and anxiety so I had a good insight, even before I started the course.</p>
