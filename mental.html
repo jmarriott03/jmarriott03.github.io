@@ -106,6 +106,9 @@ article {
 	padding: 1em;
 	overflow: hidden;
 }
+article img {
+	margin-top: 2em;
+}
 .hero {
 	width: 100%;
 	margin: 0 0 1em 0;
@@ -163,7 +166,7 @@ td {
 	width: 100%;
 	position: relative;
 	z-index: 1;
-	background-color: #111;
+	padding-bottom: 1em;
 }
 /*.heroimage img {
 	opacity: 0.6;
@@ -196,6 +199,10 @@ td {
 .herotext a {
 	color: #FAFAFA;
 }
+.tags a {
+	margin-right: 1em;
+	white-space: nowrap;
+}
 /*.herotext > * {
 	text-shadow: -1px -1px 1px #111, 1px -1px 1px #111, -1px 1px 1px #111, 3px 3px 3px #111;
 }*/
@@ -210,13 +217,14 @@ td {
 	line-height: 1.5em;
 	transform: translateY(0);
 }
-	.overflowtext > h1 {
-		font-family: sans-serif;
+.overflowtext > h1 {
+	font-family: sans-serif;
 	font-weight: bold;
-		font-size: 1.5em;
+	font-size: 1.5em;
 	line-height: 1.25em;
-		text-transform: none;
-	}
+	text-transform: none;
+}
+
 /*
 Media screen
 */
@@ -278,6 +286,7 @@ $(window).on("load resize",function(e){
   </div>
   <div class="fifty">
     <p class="quotestyle"><strong>One in four suffer from mental health problems so this course hasn’t just taught me to be a competent practitioner but it has also enabled me to be better equipped to support people in my personal life - friends, family, peers or colleagues - even myself!</strong></p>
+    <p class="tags"><a href="#">#mental-health</a> <a href="#">#current-student</a> <a href="#">#nursing</a></p>
   </div>
 </article>
 <article>
@@ -303,24 +312,33 @@ $(window).on("load resize",function(e){
   </div>
 </article>
 <article>
-  <h2>How do you unwind while studying?</h2>
   <div class="fifty">
-    <p>I have a few hobbies beyond my study: running, art, rock climbing and wild swimming – local beaches and Dartmoor are perfect locations – we are blessed with many amazing surroundings!</p>
-  </div>
-  <div class="fifty">
-    <p>All help me to improve my wellbeing, relax and cope with the stressors of being a parent and studying a degree – I am passionate about each of them. My son enjoys doing the rock climbing and art too!</p>
+    <h2>What advice would you give to future students?</h2>
+    <p><strong>Make time for self-care - this is so important</strong><br>
+      Aside from dedicated study time, make time to see your friends and family and also for hobbies or activities that you love and bring you joy. Even if its walking your dog, spending ‘protected’ time with your children, having a bath or getting up for a run at 6am.</p>
+    <p><strong>Aspire to become more organised</strong><br>
+      Organisational skills and effective time management skills have been a blessing and have really helped me to succeed!</p>
+    <p><strong>Hang in there! It’s not a walk in the park</strong><br>
+      Choosing to study mental health nursing is easily the hardest but equally the best thing I have ever done and I would gladly do it all over again in a heartbeat!</p>
   </div>
 </article>
-<div class="imagebox">
-  <p><img src="images/1280x720fa3.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. Dubitare cur lor experiar extensum.</p>
-  <p><img src="images/1280x720fa2.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. Et potentiam expendere occasione tractarem im.</p>
-  <p><img src="images/1280x720fa4.jpg" alt="" />Tur solvendae ego archetypi hoc attentius. <span class="credit">Image by Haider Pemberton</span></p>
-  <p><img src="images/1280x720fa8.jpg" alt="" />At potestque ii extitisse in ingeniosi contingit. Partibus vis diversas pauciora actualis vox imo agi. Efficta nec quaedam capacem ita invenit ham.</p>
-  <p><img src="images/1280x720fa6.jpg" alt="" />Illis mundo aliis ei ab magna. Illi ut quod si sese esto. Is pauciora im ad possumus absoluta pendeant compages. <span class="credit">Image by Raya Krause</span></p>
-  <p><img src="images/1280x720fa5.jpg" alt="" />Chartam ingenii sed scripti fallere res nec caeteri.</p>
-  <p><img src="images/1280x720fa9.jpg" alt="" />Scriptura inquirere gi co vi extitisse quadratam pertinent.</p>
-  <p><img src="images/1280x720fa11.jpg" alt="" />Fecto dubio major jam lor operi miror falsi.</p>
-  <p><img src="images/1280x720fa10.jpg" alt="" />Ab automata deveniri facturum formemus tollitur si.</p>
-</div>
+<article>
+  <div class="fifty">
+    <h2>How do you unwind while studying?</h2>
+    <p>I have a few hobbies beyond my study: running, art, rock climbing and wild swimming - local beaches and Dartmoor are perfect locations - we are blessed with many amazing surroundings!</p>
+    <p>All help me to improve my wellbeing, relax and cope with the stressors of being a parent and studying a degree - I am passionate about each of them. My son enjoys doing the rock climbing and art too!</p>
+  </div>
+  <div class="fifty">
+    <h2>Also in Nursing (Mental Health)</h2>
+    <ul>
+      <li><a href="#">BSc (Hons) Nursing (Mental Health) - placements</a></li>
+      <li><a href="#">BSc (Hons) Nursing (Mental Health) - student insights</a></li>
+      <li><a href="#">BSc (Hons) Nursing (Mental Health) - student insights</a></li>
+      <li><a href="#">Laura Jackson - student profile</a></li>
+      <li><a href="#">Mental health nursing student insight: Ben Dobson</a></li>
+    </ul>
+  </div>
+</article>
+<img src="images/dartmoor.jpg" alt=""/>
 </body>
 </html>
