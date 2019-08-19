@@ -6,10 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>University of Plymouth</title>
 <style>
+@font-face {
+	font-family: neuzit;
+	src: url('fonts/neuzeitforplymouth-regular-webfont.woff');
+}
 * {
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -174,9 +177,10 @@ td {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 .herotext h1 {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'neuzit', sans-serif;
 	font-size: calc(2rem + 2vw);
-	line-height: 0.875em;
+	line-height: 1em;
+	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	margin-bottom: 1rem;
 }
@@ -205,7 +209,7 @@ td {
 .overflowtext > h1 {
 	font-family: sans-serif;
 	font-weight: bold;
-	font-size: 1.5em;
+	font-size: 2em;
 	line-height: 1.25em;
 	text-transform: none;
 }
@@ -259,7 +263,7 @@ $(window).on("load resize",function(e){
 <body>
 <div class="heroimage"><img src="images/1280x720gemma.jpg" alt="" />
   <div class="herotext">
-    <h1>Mental health nursing student insight: Gemma Isaac-Henwood</h1>
+    <h1 class="iconfont">Mental health nursing student insight: Gemma Isaac-Henwood</h1>
     <p>Current BSc (Hons) Nursing (Mental Health) student Gemma shares an insight into her time <a href="#">studying at Plymouth.</a></p>
   </div>
 </div>
