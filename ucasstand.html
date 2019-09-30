@@ -132,7 +132,6 @@ td {
 	text-align: left;
 	border-bottom: 1px solid #666;
 }
-
 a.skip-main {
 	position: absolute;
 	width: 1px;
@@ -156,35 +155,34 @@ a.skip-main:focus, a.skip-main:active {
 .marginr {
 	margin-right: 1em;
 }
-	.container {
-		width: 1280px;
-			height: 720px;
-		position: relative;
+.container {
+	width: 1280px;
+	height: 720px;
+	position: relative;
 	z-index: 1;
 	background-color: #000;
-	}
-	
+}
 .heroimage {
 	position: absolute;
 	width: 1280px;
-			height: 720px;
+	height: 720px;
 	z-index: 2;
 	background-color: #000;
 }
-	.heroimage img {
-		max-width:1280px;
-  max-height:720px;
-  width: auto;
-  height: auto;
-	}
-	.gradient {
-		position: absolute;
-		z-index: 3;
-		width: 1280px;
-		height: 720px;
-		background-image: linear-gradient(to right,rgba(255,0,0,0), rgba(0,0,0,1) 50%);
-		margin: 0;
-	}
+.heroimage img {
+	max-width: 1280px;
+	max-height: 720px;
+	width: auto;
+	height: auto;
+}
+.gradient {
+	position: absolute;
+	z-index: 3;
+	width: 1280px;
+	height: 720px;
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1) 50%);
+	margin: 0;
+}
 .herotext {
 	position: absolute;
 	top: 50%;
@@ -195,7 +193,6 @@ a.skip-main:focus, a.skip-main:active {
 	color: #FAFAFA;
 	font-size: 1.25em;
 	line-height: 1.5em;
-	border: 2px solid #f06;
 	width: 50%;
 }
 .herotext h1 {
@@ -220,32 +217,10 @@ article img {
 	margin: 0 1em 0 0;
 	clear: both;
 }
-.grey {
-	color: #111;
-	font-size: 0.875em;
+.formcontainer {
+	width: 1280px;
+	padding-bottom: 1em;
 }
-input[type="text"], input[type="submit"], input[type="button"] {
-	font-size: 20px;
-	padding: .25em;
-	margin: 0 0.1em;
-}
-input[type=submit] {
-	padding: 0.25em 0.5em;
-	background: #ccc;
-	border: 0 none;
-	cursor: pointer;
-	-webkit-border-radius: 0.25em;
-	border-radius: 0.25em;
-	color: #EEE;
-	background-color: #08C;
-}
-form {
-	padding: 1em;
-}
-	form {
-		float: left;
-	}
-
 </style>
 <script>
 
@@ -281,9 +256,6 @@ document.getElementById("herotb").innerHTML = herotb;
 return false;
 }
 
-	
-
-
 function resetimg() {
     document.getElementById('canvas1').innerHTML = '<img src="images/1280x720gamechanger.jpg" alt="" />';
 }
@@ -304,36 +276,34 @@ function readURL(){
 window.onload = imgSize;
 }
 
-
-
-
-
 </script>
 </head>
 <body>
-	<div class="container">
-<div class="heroimage"  id="canvas1"><img src="images/1280x720gamechanger.jpg" alt="" /></div>
-		<div class="gradient">
-  <div class="herotext">
-    <h1 id="heroh">Word1</h1>
-    <p id="herotb">A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
-    <p><strong>#PlymouthPioneers</strong></p>
-			</div>
+<div class="container">
+  <div class="heroimage"  id="canvas1"><img src="images/1280x720gamechanger.jpg" alt="" /></div>
+  <div class="gradient">
+    <div class="herotext">
+      <h1 id="heroh">Word1</h1>
+      <p id="herotb">A storm chaser of the coastal protection variety. Changing the way humankind protects our shores as we face rising sea levels and erosion brought about by climate change.</p>
+      <p><strong>#PlymouthPioneers</strong></p>
+    </div>
+  </div>
 </div>
-	</div>
-<form onSubmit="return process();">
-  Heading
-  <input type="text" name="formtext" id="formtext" autofocus autocapitalize="none">
-  <input type="submit" value="Go">
-</form>
-	<form onSubmit="return processb();">
-  Body
-  <input type="text" name="formtextb" id="formtextb" autocapitalize="none">
-  <input type="submit" value="Go">
-</form>
-	<p>Choose a different image</p>
+<div class="formcontainer">
+  <form onSubmit="return process();">
+    Heading
+    <input type="text" name="formtext" id="formtext" autofocus autocapitalize="none">
+    <input type="submit" value="Go">
+  </form>
+  <form onSubmit="return processb();">
+    Body
+    <input type="text" name="formtextb" id="formtextb" autocapitalize="none">
+    <input type="submit" value="Go">
+  </form>
+  <p>Choose a different image</p>
   <input type="file" id="getval" style="color:transparent;"/>
-<p>Default image</p>
+  <p>Reset image</p>
   <button onclick="javascript:resetimg()">Reset image</button>
+</div>
 </body>
 </html>
