@@ -65,15 +65,6 @@ img {
 	vertical-align: top;
 	margin: 0;
 }
-.nowrap {
-	white-space: nowrap;
-}
-.ellipsis {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin-top: 0;
-}
 .container {
 	width: 1280px;
 	height: 720px;
@@ -133,34 +124,12 @@ img {
 .herotext a {
 	color: #FAFAFA;
 }
-article img {
-	width: 20em;
-	float: left;
-	margin: 0 1em 0 0;
-	clear: both;
-}
 .formcontainer {
 	width: 1280px;
 	padding-bottom: 1em;
 }
 </style>
 <script>
-
-function goToByScroll(id){
-	$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
-}
-	
-$(window).bind("load resize scroll",function(e){
-   var hT = $('#main').offset().top,
-       hH = $('#main').outerHeight(),
-       wH = $(window).height(),
-       wS = $(this).scrollTop();
-   if (hT < wS+wH){
-      $('.absolutebottom').fadeOut(200);
-   } else {
-      $('.absolutebottom').fadeIn(200);
-   }
-});
 
 function process()
 {
