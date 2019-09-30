@@ -85,14 +85,13 @@ img {
 	max-height: 720px;
 	width: auto;
 	height: auto;
-	opacity: 0.9;
 }
 .gradient {
 	position: absolute;
 	z-index: 3;
 	width: 1280px;
 	height: 720px;
-	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1) 50%);
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1) 75%);
 	margin: 0;
 }
 .herotext {
@@ -128,6 +127,9 @@ img {
 	width: 1280px;
 	padding-bottom: 1em;
 }
+#herotc {
+	font-weight: bold;
+}
 </style>
 <script>
 
@@ -147,32 +149,39 @@ document.getElementById("herotb").innerHTML = herotb;
 return false;
 }
 
+function processc()
+{
+var herotc=document.getElementById("formtextc").value;
+document.getElementById("herotc").innerHTML = herotc;
+
+return false;
+}
+
 window.onload=function(){
 document.getElementById('getval').addEventListener('change', readURL, true);
 function readURL(){
     var file = document.getElementById("getval").files[0];
     var reader = new FileReader();
     reader.onloadend = function(){
-        document.getElementById('canvas1').innerHTML = '<img src="' + reader.result + '" id="imagetest" width="400" alt="">';  
+        document.getElementById('canvas1').innerHTML = '<img src="' + reader.result + '" alt="">';  
     }
     if(file){
         reader.readAsDataURL(file);
     }else{
     }
 }
-window.onload = imgSize;
 }
 
 </script>
 </head>
 <body>
 <div class="container">
-  <div class="heroimage" id="canvas1"><img src="images/1280x720gamechanger.jpg" alt="" /></div>
+  <div class="heroimage" id="canvas1"><img src="images/1280x720vader.jpg" alt="" /></div>
   <div class="gradient">
     <div class="herotext">
-      <h1 id="heroh">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
-      <p id="herotb">Jane Doe</p>
-      <p><strong>#PlymouthPioneers</strong></p>
+      <h1 id="heroh">I am altering the deal. Pray I don’t alter it any further.</h1>
+      <p id="herotb">Dr Vader</p>
+      <p id="herotc">#nofilter</p>
     </div>
   </div>
 </div>
@@ -185,6 +194,11 @@ window.onload = imgSize;
   <form onSubmit="return processb();">
     Name
     <input type="text" name="formtextb" id="formtextb" autocapitalize="none">
+    <input type="submit" value="Go">
+  </form>
+  <form onSubmit="return processc();">
+    Tag
+    <input type="text" name="formtextc" id="formtextc" autocapitalize="none">
     <input type="submit" value="Go">
   </form>
   <p>Choose a different image</p>
