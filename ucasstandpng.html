@@ -1,14 +1,18 @@
-<!doctype html>
-<html lang="en">
-
-<!--CODE BY JAMIE MARRIOTT-->
-
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<title>University of Plymouth</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+    type="text/javascript"
+    src="//code.jquery.com/jquery-2.1.0.js"
+    
+  ></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 <style>
 @font-face {
 	font-family: icon;
@@ -65,6 +69,10 @@ img {
 	vertical-align: top;
 	margin: 0;
 }
+.editor {
+	width: 1280px;
+	margin-top: 1em;
+}
 .container {
 	width: 1280px;
 	height: 720px;
@@ -80,12 +88,6 @@ img {
 	z-index: 2;
 	background-color: #000;
 }
-.heroimage img {
-	max-width: 1280px;
-	max-height: 720px;
-	width: auto;
-	height: auto;
-}
 .gradient {
 	position: absolute;
 	z-index: 3;
@@ -93,6 +95,12 @@ img {
 	height: 720px;
 	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1) 75%);
 	margin: 0;
+}
+.heroimage img {
+	max-width: 1280px;
+	max-height: 720px;
+	width: auto;
+	height: auto;
 }
 .herotext {
 	position: absolute;
@@ -138,6 +146,8 @@ img {
 	font-weight: bold;
 }
 </style>
+
+<!-- TODO: Missing CoffeeScript 2 -->
 <script>
 
 function process()
@@ -178,10 +188,34 @@ function readURL(){
     }
 }
 }
+/*    $(window).load(function(){
+      
+ html2canvas(document.getElementById('html2canvas'), {
+      onrendered: function(canvas) {
+          document.body.appendChild(canvas);
 
+     }
+  });
+
+    });
+*/
+function rerender()
+{
+ html2canvas(document.getElementById('html2canvas'), {
+      onrendered: function(canvas) {
+          document.body.appendChild(canvas);
+		  window.scrollTo(0,document.body.scrollHeight);
+
+     }
+  });
+}
 </script>
 </head>
 <body>
+<div class="editor">
+  <h2>Editor</h2>
+</div>
+<div id="html2canvas">
 <div class="container">
   <div class="heroimage" id="canvas1"><img src="images/1280x720gemma.jpg" alt="" /></div>
   <div class="gradient">
@@ -211,6 +245,8 @@ function readURL(){
   </form>
   <p>Choose a different image</p>
   <input type="file" id="getval" style="color:transparent;"/>
+  <h2>PNG image</h2>
+  <button onclick="rerender()">Make PNG</button>
 </div>
 </body>
 </html>
