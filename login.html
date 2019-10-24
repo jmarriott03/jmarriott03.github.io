@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+	margin: 1em;
+}
+ul {
+	background: #111;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	color: #fff;
+	background: #111;
+	display: block;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
+}
+li a {
+	color: #fff;
+}
+ li:hover, li:focus-within {
+ background: #666;
+ cursor: pointer;
+}
+ li:focus-within a {
+ outline: none;
+}
+ul li ul {
+	background: #666;
+	visibility: hidden;
+	opacity: 0;
+	min-width: 10rem;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-top: 1rem;
+	left: 0;
+	display: none;
+}
+ ul li:hover > ul, ul li:focus-within > ul, ul li ul:hover, ul li ul:focus {
+ visibility: visible;
+ opacity: 1;
+ display: block;
+}
+ul li ul li {
+	clear: both;
+	width: 100%;
+}
+p {
+	clear: both;
+}
+</style>
+<body>
+<nav role="navigation">
+  <ul>
+    <li><a href="#" aria-haspopup="true"><span class="iconfont" aria-hidden="true">A</span> Login</a>
+      <ul class="dropdown" aria-label="submenu">
+        <li><a href="#">Student</a></li>
+        <li><a href="#">Staff</a></li>
+        <li><a href="#">Job applicant</a></li>
+        <li><a href="#">Course applicant</a></li>
+      </ul>
+    </li>
+    <li><a href="#"><span class="iconfont" aria-hidden="true">B</span> Search</a></li>
+  </ul>
+</nav>
+</body>
+</html>
