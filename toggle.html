@@ -35,17 +35,18 @@ html, body {
 }
 .navbar {
 	overflow: hidden;
-	background-color: #111;
+	background-color: #FAFAFA;
 	font-size: 0.875em;
 	margin: 0 auto;
-	width: 60em;
+	max-width: 60em;
 }
 .navbar a {
 	float: left;
-	color: #FAFAFA;
+	color: #111;
 	text-align: center;
 	padding: 0.75em 1em;
 	text-decoration: none;
+	font-weight: bold;
 }
 .dropdown {
 	float: left;
@@ -55,15 +56,16 @@ html, body {
 	cursor: pointer;
 	border: none;
 	outline: none;
-	color: #FAFAFA;
+	color: #111;
 	padding: 1em;
 	background-color: inherit;
 	font-family: inherit;
 	font-size: inherit;
 	margin: 0;
+	font-weight: bold;
 }
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-	background-color: #666;
+.navbar a:hover, .navbar a:focus, .dropdown:hover .dropbtn, .dropbtn:focus {
+	text-decoration: underline;
 }
 .dropdown-content {
 	display: none;
@@ -90,7 +92,7 @@ html, body {
 </style>
 </head>
 <body>
-<div class="navbar"> <a href="#">Courses</a> <a href="#">University life</a> <a href="#">Research</a> <a href="#">Business</a> <a href="#">Global</a>
+<div class="navbar"> <a href="#">Courses</a> <a href="#">Life</a> <a href="#">Research</a> <a href="#">Business</a> <a href="#">Global</a>
   <div class="dropdown">
     <button class="dropbtn" onclick="myFunction()"><span class="iconfont" aria-hidden="true">A</span> Login <span class="iconfont" aria-hidden="true">O</span></button>
     <div class="dropdown-content" id="myDropdown"> <a href="#">Student/Staff</a> <a href="#">Job applicant</a> <a href="#">Course applicant</a> </div>
