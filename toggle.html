@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+	margin: 0em;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #FAFAFA;
+	font-size: 0.875em;
+	margin: 0 auto;
+	max-width: 60em;
+}
+.navbar a {
+	float: left;
+	color: #111;
+	text-align: center;
+	padding: 0.75em 1em;
+	text-decoration: none;
+	font-weight: bold;
+}
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+.dropdown .dropbtn {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	color: #111;
+	padding: 1em;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	font-weight: bold;
+}
+.navbar a:hover, .navbar a:focus, .dropdown:hover .dropbtn, .dropbtn:focus {
+	text-decoration: underline;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #FAFAFA;
+	min-width: 10em;
+	box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 1em;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropdown-content a:hover {
+	background-color: #CCC;
+}
+.show {
+	display: block;
+}
+</style>
+</head>
+<body>
+<div class="navbar"> <a href="#">Courses</a> <a href="#">Life</a> <a href="#">Research</a> <a href="#">Business</a> <a href="#">Global</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()"><span class="iconfont" aria-hidden="true">A</span> Login <span class="iconfont" aria-hidden="true">O</span></button>
+    <div class="dropdown-content" id="myDropdown"> <a href="#">Student/Staff</a> <a href="#">Job applicant</a> <a href="#">Course applicant</a> </div>
+  </div>
+  <a href="#"><span class="iconfont" aria-hidden="true">B</span> Search</a> </div>
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+	document.getElementsByClassName("toggle").classList.toggle("active");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
