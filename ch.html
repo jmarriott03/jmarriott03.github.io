@@ -20,6 +20,7 @@
 }
 * {
 	margin: 0 auto;
+	box-sizing: border-box;
 }
 * + * {
 	margin-top: 1em;
@@ -32,7 +33,7 @@ html, body {
 	font-weight: normal;
 	line-height: 1.5em;
 	color: #111;
-	background-color: #FAFAFA;
+	background: #FAFAFA;
 	background-image: url(images/80x80.gif);
 	background-position: center;
 	margin: 0;
@@ -78,19 +79,8 @@ img {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-.borderbox {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 1em;
-	overflow: hidden;
-}
 article {
 	max-width: 30em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
@@ -109,9 +99,6 @@ article {
 }
 #emwidth {
 	max-width: 30em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
@@ -120,9 +107,6 @@ article {
 }
 #emwidth60 {
 	max-width: 60em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
@@ -131,9 +115,6 @@ article {
 }
 #chwidth {
 	max-width: 54ch;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: hidden;
@@ -154,7 +135,7 @@ article {
 	left: 0;
 	top: 2em;
 	z-index: 100;
-	color: #fafafa;
+	color: #FAFAFA;
 	background: rgba(0,0,0,0.8);
 	font-size: 1em;
 	padding: 1em;
@@ -176,7 +157,7 @@ article {
 }
 .col-12 {
 	max-width: 60em;
-	background-color: #ccc;
+	background: rgba(204,204,204,0.6);
 	overflow: hidden;
 	margin-bottom: 1em;
 }
@@ -186,9 +167,6 @@ article {
 }
 .col-3, .col-4, .col-6, .col-8, .col-9 {
 	border: 1px solid #666;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	padding: 0.5em;
 }
 
@@ -212,7 +190,7 @@ Media screen
 		emwidth60 = document.getElementById("emwidth60").clientWidth;
 		emwidth = document.getElementById("emwidth").clientWidth;
 		chwidth = document.getElementById("chwidth").clientWidth;
-        document.getElementById("size").innerHTML = "Browser: " + myWidth + "x" + myHeight + "</br>60em max-width: " + emwidth60 + "px</br>40em max-width: " + emwidth + "px</br>ch max-width: " + chwidth + "px";
+        document.getElementById("size").innerHTML = "Browser: " + myWidth + "x" + myHeight + "</br>60em max-width: " + emwidth60 + "px</br>30em max-width: " + emwidth + "px</br>ch max-width: " + chwidth + "px";
 		};
 </script>
 </head>
