@@ -128,10 +128,6 @@ article {
 article img {
 	margin-top: 2em;
 }
-.hero {
-	width: 100%;
-	margin: 0 0 1em 0;
-}
 .fifty {
 	width: 50%;
 	float: left;
@@ -294,7 +290,14 @@ td {
 	font-size: 1rem;
 }
 
+/*
+Media screen
+*/
+	
 @media screen and (max-width: 55em) {
+.topnav {
+	max-width: 100%;
+}
 .topnav a:not(:first-child) {
 	max-width: 100%;
 }
@@ -310,9 +313,6 @@ td {
 	border-bottom: 0;
 	text-decoration: none;
 }
-}
-
-@media screen and (max-width: 55em) {
 .topnav.responsive {
 	position: relative;
 }
@@ -326,15 +326,6 @@ td {
 	display: block;
 	text-align: left;
 }
-}
-
-/*
-Media screen
-*/
-
-
-
-@media (max-width: 40em) {
 .imagebox > p {
 	width: 100%;
 	font-size: 1rem;
