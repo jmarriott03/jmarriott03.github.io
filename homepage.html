@@ -294,6 +294,33 @@ td {
 .share {
 	font-size: 1rem;
 }
+.radio-inline {
+	display: block;
+	float: left;
+	margin: 1em 1em 0 0;
+	vertical-align: middle;
+}
+input[type="radio"] {
+	margin-right: 0.5em;
+}
+input[type="text"], input[type="submit"], input[type="button"] {
+	font-size: 1em;
+	padding: .25em;
+	margin: 0 0.1em;
+}
+input[type=submit] {
+	padding: 0.25em 0.5em;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: #EEE;
+	background-color: #00E;
+	clear: both;
+	float: left;
+	margin-top: 1em;
+}
 
 /*
 Media screen
@@ -387,42 +414,64 @@ function myFunction() {
   <p>We are committed to developing solutions to the planet's most challenging issues.</p>
 </article>
 <div class="imagebox">
-  <p><a href="#"><img src="images/640x320mayflower.jpg" alt="" /><strong>Venturing into a new age of ocean odyssey.</strong></a><br>
+  <p><a href="#"><img src="images/640x320mayflower.jpg" alt="" /><strong>Venturing into a new age of ocean odyssey</strong></a><br>
     What will it take to reach a deeper understanding of our uncharted oceans in an era of environmental crisis?</p>
-  <p><a href="#"><img src="images/1280x720spongesplay.jpg" alt="" /><strong>Discovering new antibiotics in our oceans.</strong></a><br>
+  <p><a href="#"><img src="images/1280x720spongesplay.jpg" alt="" /><strong>Discovering new antibiotics in our oceans</strong></a><br>
     Our work on what has been described by the World Health Organisation as one of the major threats to human health and modern medicine - antibiotic resistance, identifies potential new antimicrobials produced in the microbiome of sponges that live deep beneath the ocean surface.</p>
-  <p><a href="#"><img src="images/1280x720wavegenerator.jpg" alt="" /><strong>Harnessing the oceans' energy.</strong></a><br>
-    Powering new ways of thinking around offshore renewable energy, we innovate to maximise societal value in offshore wind, wave and tidal energy.</p>
+  <p><a href="#"><img src="images/1280x720wavegenerator.jpg" alt="" /><strong>Harnessing the oceans' energy</strong></a><br>
+    What will it take to reach a deeper understanding of our uncharted oceans in an era of environmental crisis?</p>
 </div>
 <div class="swatch2fullw">
   <article>
-    <h2>Join us</h2>
+    <h2>What would you like to study?</h2>
+    <form onSubmit="return process();">
+      <input type="text" name="url" id="url" size="41" autocapitalize="none">
+    </form>
+    <form>
+      <label class="radio-inline">
+        <input type="radio" name="optradio" checked>
+        All </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Undergraduate </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Postgraduate taught </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Postgraduate research </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Professional development </label>
+      <input type="submit" value="Search">
+    </form>
   </article>
-  <div class="imagebox">
-    <p><a href="#"><img src="images/1280x720estilla.jpg" alt="" /><strong>Estilla Hefter: MEng (Hons) Robotics.</strong></a><br>
-      I want every girl to be able to follow their dream and be supported and encouraged to reach it.</p>
-    <p><a href="#"><img src="images/1280x720lighthouse2.jpg" alt="" /><strong>See for yourself:</strong></a><br>
-      Discover a thriving waterfront city at the heart of the stunning South West.</p>
-    <p><a href="#"><img src="images/640x640zoo.jpg" alt="" /><strong>Browse our full prospectus.</strong></a><br>
-      Strength in subjects from architecture to zoology.</p>
-  </div>
+</div>
+<article>
+  <h2>Join us</h2>
+</article>
+<div class="imagebox">
+  <p><a href="#"><img src="images/1280x720estilla.jpg" alt="" /><strong>Estilla Hefter: MEng (Hons) Robotics</strong></a><br>
+    I want every girl to be able to follow their dream and be supported and encouraged to reach it.</p>
+  <p><img src="images/640x640zoo.jpg" alt="" />Cerebella ii du attingere alligatus ac suspicari id eminenter. Ac in remotis exsolvi dicamne proxime ad an. Quam ei inge ea isti data soni ex duce. Tollentur co an im tantumque videlicet. Naturae viderer propria co an se is. Repugnemus ei an ob distinguit propositio id facultatem percipimus. <a href="#">Dubitare cur lor experiar extensum.</a></p>
+  <p><img src="images/640x640zoo.jpg" alt="" />At to perfectior quamprimum deprehendi. Videtur vel angelum poterit junctas eas sentiam. <a href="#">Et potentiam expendere occasione tractarem im.</a></p>
 </div>
 <article>
   <h2>Upcoming events</h2>
 </article>
 <div class="imagebox">
-  <p><a href ="#"><img src="images/1280x720prorocentrum.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 6 January 2020 10:00 - 11:30.</a><br>
+  <p><a href ="#"><img src="images/1280x720prorocentrum.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 6 January 2020 10:00 - 11:30</a><br>
     <br>
     <strong>68th Annual Meeting of the British Phycological Society.</strong><br>
-    Hosted by the University of Plymouth, Marine Biological Association and Plymouth Marine Laboratory.</p>
-  <p><a href ="#"><img src="images/1280x720environment.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 8 January 2020 13:00 - 16:00.</a><br>
+    Hosted by the University of Plymouth, Marine Biological Association and Plymouth Marine Laboratory</p>
+  <p><a href ="#"><img src="images/1280x720environment.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 8 January 2020 13:00 - 16:00</a><br>
     <br>
     <strong>Thin films of life and the challenges of changing environments.</strong><br>
     Phycology Public Lecture - Professor Graham Underwood.</p>
-  <p><a href="#"><img src="images/1280x720geoscienceplay.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 12 January 2020 18:00 - 20:00.</a><br>
+  <p><a href="#"><img src="images/1280x720geoscienceplay.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 12 January 2020 18:00 - 20:00</a><br>
     <br>
     <strong>PEMC Industrial Solutions - geoscience.</strong><br>
-    Discover what Electron Microscopy could do for your business.</p>
+    Discover what Electron Microscopy could do for your business<span class="credit">Image by Haider Pemberton</span></p>
 </div>
 <div class="fullw">
   <div class="imagebox">
@@ -434,14 +483,18 @@ function myFunction() {
       <br>
       <a href="#"><span class="iconfont" aria-hidden="true">b</span> Library</a> <br>
       <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">]</span> Job vacancies</a><br>
+      <br>
       <a href="#"><span class="iconfont" aria-hidden="true">(</span> Maps &amp; directions</a></p>
-    <p> <a href="#"><span class="iconfont" aria-hidden="true">4</span> News RSS feed</a><br>
+    <p> <a href="#">Alumni &amp; friends</a><br>
+      <br>
+      <a href="#">International</a><br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">4</span> News RSS feed</a><br>
       <br>
       <a href="#"><span class="iconfont" aria-hidden="true">&amp;</span> Events iCal feed</a><br>
       <br>
       <a href="#"><span class="iconfont" aria-hidden="true">G</span> About cookies</a><br>
-      <br>
-      <a href="#"><span class="iconfont" aria-hidden="true">]</span> Job vacancies</a><br>
       <br>
       <a href="#">Modern slavery statement</a></p>
     <p><strong>University of Plymouth</strong><br>
