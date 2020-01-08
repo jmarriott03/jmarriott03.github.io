@@ -20,11 +20,23 @@ html, body {
 	color: #111;
 	background-color: #FAFAFA;
 }
+.grid-container {
+	display: grid;
+	grid-template-areas: 'logo login' 'nav1 nav1' 'nav2 nav2' 'hero hero' 'main main' 'footer footer';
+	grid-gap: 10px;
+	background-color: #CCC;
+	padding: 0.5em;
+}
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0.5em;
+}
 .item1 {
 	grid-area: logo;
 }
 .item2 {
 	grid-area: login;
+	text-align: right;
 }
 .item3 {
 	grid-area: nav1;
@@ -55,17 +67,6 @@ html, body {
 	grid-area: rightfill;
 	background-color: #666 !important;
 }
-.grid-container {
-	display: grid;
-	grid-template-areas: 'logo login' 'nav2 nav2' 'hero hero' 'main main' 'nav1 nav1' 'footer footer';
-	grid-gap: 10px;
-	background-color: #CCC;
-	padding: 10px;
-}
-.grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
-	padding: 0.5em;
-}
 .item8 {
 	display: none;
 }
@@ -76,6 +77,9 @@ html, body {
 @media screen and (min-width: 800px) {
 .grid-container {
 	grid-template-areas: 'leftfill nav1 nav1 nav1 rightfill' 'logo nav2 nav2 nav2 login' 'hero hero hero hero hero' '. main main main .' 'footer footer footer footer footer';
+}
+.item2 {
+	text-align: left;
 }
 .item3 {
 	text-align: right;
@@ -94,13 +98,13 @@ html, body {
 </head>
 <body>
 <div class="grid-container">
-  <div class="item1">logo</div>
-  <div class="item2">login</div>
-  <div class="item3">nav1</div>
-  <div class="item4">nav2</div>
-  <div class="item5">hero</div>
-  <div class="item6">main</div>
-  <div class="item7">footer</div>
+  <div class="item1">University of Plymouth</div>
+  <div class="item2">Login &nbsp; &nbsp; Search</div>
+  <div class="item3">Careers &nbsp; &nbsp; Visit &nbsp; &nbsp; Alumni &nbsp; &nbsp; Events &nbsp; &nbsp; News</div>
+  <div class="item4">Study &nbsp; &nbsp; Research &nbsp; &nbsp; International &nbsp; &nbsp; Business &nbsp; &nbsp; About</div>
+  <div class="item5">Hero story</div>
+  <div class="item6">Main content</div>
+  <div class="item7">Footer</div>
   <div class="item8"></div>
   <div class="item9"></div>
 </div>
