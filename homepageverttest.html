@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: neuzit;
+	src: url('fonts/neuzeitforplymouth-regular-webfont.woff');
+}
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+.socialmedia {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	font-size: 1.5em;
+	padding-right: 1em;
+}
+.socialmedia a:hover {
+	text-decoration: none !important;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+	max-width: 40em;
+	margin-left: 0;
+}
+a {
+	color: #00E;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+ul {
+	padding: 0 1em;
+}
+li {
+	margin: 1em;
+	padding: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.imagebox {
+	max-width: 60em;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.imagebox > p {
+	width: 33%;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 1em;
+	clear: none;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: both;
+}
+.imagebox img {
+	padding-bottom: 0.5rem;
+}
+.credit {
+	font-size: 0.75rem;
+	width: 100%;
+	float: left;
+}
+article {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+article img {
+	margin-top: 2em;
+}
+.fifty {
+	width: 50%;
+	float: left;
+	padding: 1em 0 0 1em;
+	margin: 0;
+}
+.fifty:first-of-type {
+	padding: 1em 1em 0 0;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: center;
+	color: #FAFAFA;
+	text-decoration: none;
+}
+.openday {
+	background-color: #00E;
+	margin-bottom: 1em;
+}
+.ucas {
+	background-color: #E32438;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 1.5em 0;
+	clear: both;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid;
+}
+.quotestyle {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+	font-weight: bold;
+}
+.heroimage {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	margin: 0 0 1em 0;
+}
+.herotext {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	z-index: 2;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: calc(1rem + 0.4vw);
+	line-height: 1.5em;
+	width: 40%;
+	padding: 1em 1em 0 1em;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.herotext h1 {
+	font-family: 'Neuzit', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: calc(2rem + 1vw);
+	line-height: 1.1em;
+	letter-spacing: 0.05em;
+	margin-bottom: 1rem;
+}
+.herotext p {
+	max-width: 40em;
+	margin: 0 0 1em 0;
+}
+.herotext a {
+	color: #FAFAFA;
+}
+.tags a {
+	margin-right: 1em;
+	white-space: nowrap;
+}
+.overflowtext {
+	position: relative;
+	width: 100%;
+	background-color: #111;
+	left: 0;
+	margin: 0;
+	padding: 1em 1em 0.1em 1em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transform: translateY(0);
+}
+.swatch1 {
+	color: #AAA;
+}
+.swatch2fullw {
+	background-color: #EEE;
+	width: auto;
+	overflow: hidden;
+}
+.topnav {
+	overflow: hidden;
+	background-color: #FAFAFA;
+	margin-top: 0;
+}
+.fullw {
+	width: auto;
+	overflow: hidden;
+	background-color: #FAFAFA;
+	color: #111;
+	margin: 0;
+}
+.fullw a {
+	color: #111;
+	text-decoration: none;
+}
+.fullw a:hover {
+	text-decoration: underline;
+}
+.fullw img {
+	width: auto;
+	margin-right: 1em;
+}
+.fullw {
+	width: auto;
+	overflow: hidden;
+	background-color: #111;
+	color: #FAFAFA;
+	margin: 0;
+}
+.fullw a {
+	color: #FAFAFA;
+	text-decoration: none;
+}
+.fullw a:hover {
+	text-decoration: underline;
+}
+.topnav a {
+	float: left;
+	display: block;
+	color: #111;
+	text-align: center;
+	padding: 1em;
+	margin-top: 0;
+	text-decoration: none;
+	font-size: 0.875em;
+}
+.grey {
+	color: #666;
+}
+.topnav a:hover {
+	text-decoration: underline;
+}
+.topnav img {
+	width: 120px;
+}
+.topnav .icon {
+	display: none;
+}
+.share {
+	font-size: 1rem;
+}
+.radio-inline {
+	display: block;
+	float: left;
+	margin: 1em 1em 0 0;
+	vertical-align: middle;
+}
+input[type="radio"] {
+	margin-right: 0.5em;
+}
+input[type="text"], input[type="submit"], input[type="button"] {
+	font-size: 1em;
+	padding: .25em;
+	margin: 0 0.1em;
+}
+input[type=submit] {
+	padding: 0.25em 0.5em;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: #EEE;
+	background-color: #00E;
+	clear: both;
+	float: left;
+	margin-top: 1em;
+}
+
+/*
+Media screen
+*/
+	
+@media screen and (max-width: 55em) {
+.topnav {
+	max-width: 100%;
+}
+.topnav a {
+	font-size: 1em;
+}
+.topnav a:not(:first-child) {
+	max-width: 100%;
+}
+.topnav a:not(:first-child) {
+	display: none;
+}
+.topnav a:not(:first-child) {
+	border-bottom: 1px solid #CCC;
+}
+.topnav a.icon {
+	float: right;
+	display: block;
+	border-bottom: 0;
+	text-decoration: none;
+}
+.topnav.responsive {
+	position: relative;
+}
+.topnav.responsive .icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.topnav.responsive a {
+	float: none;
+	display: block;
+	text-align: left;
+}
+.imagebox > p {
+	width: 100%;
+	font-size: 1rem;
+}
+.fifty {
+	width: 100%;
+}
+p {
+	max-width: 100%;
+}
+.fifty {
+	padding: 1em 0 0 0;
+}
+.radio-inline {
+	clear: both;
+}
+}
+</style>
+<script>
+$(window).on("load resize",function(e){
+	var contentHeight = $('.herotext').height()+32;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight < containerHeight) {
+		$( ".herotext" ).removeClass( "overflowtext" );
+	}
+	var contentHeight = $('.herotext').height()+32;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight > containerHeight) {
+		$( ".herotext" ).addClass( "overflowtext" );
+	}
+});
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</head>
+<body>
+<div class="topnav" id="myTopnav"> <a href="#" class="active"><img src="images/uoplogomono.svg" alt=""/></a> <a href="#">Study</a> <a href="#">Research</a> <a href="#">International</a> <a href="#">About</a> <a href="#">About</a> <a href="#" aria-haspopup="true"><span class="iconfont" aria-hidden="true">A</span> Login</a> <a href="#"><span class="iconfont" aria-hidden="true">B</span> Search</a> <a href="#">Careers</a> <a href="#">Visit</a> <a href="#">Alumni</a> <a href="#">Events</a> <a href="#">News</a><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></div>
+<div class="heroimage"><img src="images/1280x720turtle.jpg" alt="" />
+  <div class="herotext">
+    <h1>The university of pioneers, <span class="swatch1">advancing knowledge</span> and <span class="swatch1">transforming lives.</span></h1>
+    <p><a href="#">Our ground-breaking research into microplastics pollution has received the highest honour that can be bestowed upon a higher education institution.</a></p>
+    <p class="share"><a href="#"><span class="iconfont" aria-hidden="true">S</span> Share</a></p>
+  </div>
+</div>
+<article id="main" tabindex="-1">
+  <h2>Groundbreaking discoveries</h2>
+  <p>We are committed to developing solutions to the planet's most challenging issues.</p>
+</article>
+<div class="imagebox">
+  <p><a href="#"><img src="images/640x320mayflower.jpg" alt="" /><strong>Venturing into a new age of ocean odyssey</strong></a><br>
+    What will it take to reach a deeper understanding of our uncharted oceans in an era of environmental crisis?</p>
+  <p><a href="#"><img src="images/1280x720spongesplay.jpg" alt="" /><strong>Discovering new antibiotics in our oceans</strong></a><br>
+    Our work on what has been described by the World Health Organisation as one of the major threats to human health and modern medicine - antibiotic resistance, identifies potential new antimicrobials produced in the microbiome of sponges that live deep beneath the ocean surface.</p>
+  <p><a href="#"><img src="images/1280x720wavegenerator.jpg" alt="" /><strong>Harnessing the oceans' energy</strong></a><br>
+    What will it take to reach a deeper understanding of our uncharted oceans in an era of environmental crisis?</p>
+</div>
+<div class="swatch2fullw">
+  <article>
+    <h2>What would you like to study?</h2>
+    <form onSubmit="return process();">
+      <input type="text" name="url" id="url" autocapitalize="none">
+    </form>
+    <form>
+      <label class="radio-inline">
+        <input type="radio" name="optradio" checked>
+        All </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Undergraduate </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Postgraduate taught </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Postgraduate research </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio">
+        Professional development </label>
+      <input type="submit" value="Search">
+    </form>
+  </article>
+</div>
+<article>
+  <h2>Join us</h2>
+</article>
+<div class="imagebox">
+  <p><a href="#"><img src="images/1280x720estilla.jpg" alt="" /><strong>Estilla Hefter: MEng (Hons) Robotics.</strong></a><br>
+    I want every girl to be able to follow their dream and be supported and encouraged to reach it.</p>
+  <p><a href="#"><img src="images/1280x720lighthouse2.jpg" alt="" /><strong>See for yourself:</strong></a><br>
+    Discover a thriving waterfront city at the heart of the stunning South West.</p>
+  <p><a href="#"><img src="images/640x640zoo.jpg" alt="" /><strong>Browse our full prospectus.</strong></a><br>
+    Strength in subjects from architecture to zoology.</p>
+</div>
+<article>
+  <h2>Upcoming events</h2>
+</article>
+<div class="imagebox">
+  <p><a href ="#"><img src="images/1280x720prorocentrum.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 6 January 2020 10:00 - 11:30.</a><br>
+    <br>
+    <strong>68th Annual Meeting of the British Phycological Society.</strong><br>
+    Hosted by the University of Plymouth, Marine Biological Association and Plymouth Marine Laboratory.</p>
+  <p><a href ="#"><img src="images/1280x720environment.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 8 January 2020 13:00 - 16:00.</a><br>
+    <br>
+    <strong>Thin films of life and the challenges of changing environments.</strong><br>
+    Phycology Public Lecture - Professor Graham Underwood.</p>
+  <p><a href="#"><img src="images/1280x720geoscienceplay.jpg" alt="" /><span class="iconfont" aria-hidden="true">c</span> 12 January 2020 18:00 - 20:00.</a><br>
+    <br>
+    <strong>PEMC Industrial Solutions - geoscience.</strong><br>
+    Discover what Electron Microscopy could do for your business.</p>
+</div>
+<div class="fullw">
+  <div class="imagebox">
+    <p><a href="#">Prospectus</a><br>
+      <br>
+      <a href="#">Open days</a><br>
+      <br>
+      <a href="#">Accommodation</a><br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">b</span> Library</a> <br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">(</span> Maps &amp; directions</a></p>
+    <p> <a href="#"><span class="iconfont" aria-hidden="true">4</span> News RSS feed</a><br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">&amp;</span> Events iCal feed</a><br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">G</span> About cookies</a><br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">]</span> Job vacancies</a><br>
+      <br>
+      <a href="#">Modern slavery statement</a></p>
+    <p><strong>University of Plymouth</strong><br>
+      Drake Circus<br>
+      Plymouth<br>
+      Devon PL4 8AA<br>
+      United Kingdom<br>
+      <br>
+      <a href="#"><span class="iconfont" aria-hidden="true">0</span> <strong>+44 1752 600600</strong></a><br>
+      <br>
+      <span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">i</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">y</a></span><br>
+      <br>
+      <a href="#"><img src="images/crest-white.png" alt=""/></a> <a href="#"><img src="images/tefsilver.png" alt=""/></a></p>
+  </div>
+</div>
+</body>
+</html>
