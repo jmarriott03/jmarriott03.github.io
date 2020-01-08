@@ -29,6 +29,8 @@ html, body {
 .item3 {
 	grid-area: nav1;
 	text-align: left;
+	color: #FAFAFA !important;
+	background-color: #666 !important;
 }
 .item4 {
 	grid-area: nav2;
@@ -42,22 +44,38 @@ html, body {
 }
 .item7 {
 	grid-area: footer;
+	color: #FAFAFA !important;
+	background-color: #666 !important;
+}
+.item8 {
+	grid-area: leftfill;
+	background-color: #666 !important;
+}
+.item9 {
+	grid-area: rightfill;
+	background-color: #666 !important;
 }
 .grid-container {
 	display: grid;
 	grid-template-areas: 'logo login' 'nav2 nav2' 'hero hero' 'main main' 'nav1 nav1' 'footer footer';
 	grid-gap: 10px;
-	background-color: #2196F3;
+	background-color: #CCC;
 	padding: 10px;
 }
 .grid-container > div {
 	background-color: rgba(255, 255, 255, 0.8);
 	padding: 0.5em;
 }
+.item8 {
+	display: none;
+}
+.item9 {
+	display: none;
+}
 
 @media screen and (min-width: 800px) {
 .grid-container {
-	grid-template-areas: '. nav1 nav1 nav1 .' 'logo nav2 nav2 nav2 login' 'hero hero hero hero hero' '. main main main .' 'footer footer footer footer footer';
+	grid-template-areas: 'leftfill nav1 nav1 nav1 rightfill' 'logo nav2 nav2 nav2 login' 'hero hero hero hero hero' '. main main main .' 'footer footer footer footer footer';
 }
 .item3 {
 	text-align: right;
@@ -65,13 +83,12 @@ html, body {
 .item4 {
 	text-align: right;
 }
+.item8 {
+	display: block;
 }
-.fullw {
-	width: auto;
-	overflow: hidden;
-	background-color: #111;
-	color: #FAFAFA;
-	margin: 0;
+.item9 {
+	display: block;
+}
 }
 </style>
 </head>
@@ -84,6 +101,8 @@ html, body {
   <div class="item5">hero</div>
   <div class="item6">main</div>
   <div class="item7">footer</div>
+  <div class="item8"></div>
+  <div class="item9"></div>
 </div>
 </body>
 </html>
