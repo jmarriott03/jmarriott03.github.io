@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content = "width = device-width">
+<meta name="viewport" content="initial-scale=1">
+<link rel="icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/appletouchicon.png">
+<title>University of Plymouth</title>
+<style type="text/css">
+.item1 {
+	grid-area: logo;
+}
+.item2 {
+	grid-area: login;
+}
+.item3 {
+	grid-area: nav1;
+}
+.item4 {
+	grid-area: nav2;
+}
+.item5 {
+	grid-area: hero;
+}
+.item6 {
+	grid-area: main;
+}
+.item7 {
+	grid-area: footer;
+}
+.grid-container {
+	display: grid;
+	grid-template-areas: 'logo login' 'nav2 nav2' 'hero hero' 'main main' 'nav1 nav1' 'footer footer';
+	grid-gap: 10px;
+	background-color: #2196F3;
+	padding: 10px;
+}
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+}
+
+@media screen and (min-width: 800px) {
+.grid-container {
+	grid-template-areas: 'logo nav1 nav1 nav1 .' 'logo nav2 nav2 nav2 login' 'hero hero hero hero hero' '. main main main .' 'footer footer footer footer footer';
+}
+}
+</style>
+</head>
+<body>
+<h1>Grid Layout</h1>
+<div class="grid-container">
+  <div class="item1">logo</div>
+  <div class="item2">login</div>
+  <div class="item3">nav1</div>
+  <div class="item4">nav2</div>
+  <div class="item5">hero</div>
+<div class="item6">main</div>
+	<div class="item7">footer</div>
+</div>
+</body>
+</html>
