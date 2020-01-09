@@ -9,11 +9,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>University of Plymouth</title>
 <style>
+@font-face {
+	font-family: neuzit;
+	src: url('fonts/neuzeitforplymouth-regular-webfont.woff');
+}
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
 html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	margin: 0;
-	font-size: 100%;
+	font-size: 14px;
 	font-family: sans-serif;
 	font-weight: normal;
 	line-height: 1.5em;
@@ -23,13 +36,9 @@ html, body {
 .grid-container {
 	display: grid;
 	grid-template-areas: 'logo login' 'nav1 nav1' 'nav2 nav2' 'hero hero' 'main main' 'footer footer';
-	grid-gap: 10px;
-	background-color: #CCC;
-	padding: 0.5em;
 }
 .grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
-	padding: 0.5em;
+	padding: 1em;
 }
 .item1 {
 	grid-area: logo;
@@ -42,7 +51,7 @@ html, body {
 	grid-area: nav1;
 	text-align: left;
 	color: #FAFAFA !important;
-	background-color: #666 !important;
+	background-color: #111 !important;
 }
 .item4 {
 	grid-area: nav2;
@@ -57,15 +66,15 @@ html, body {
 .item7 {
 	grid-area: footer;
 	color: #FAFAFA !important;
-	background-color: #666 !important;
+	background-color: #111 !important;
 }
 .item8 {
 	grid-area: leftfill;
-	background-color: #666 !important;
+	background-color: #111 !important;
 }
 .item9 {
 	grid-area: rightfill;
-	background-color: #666 !important;
+	background-color: #111 !important;
 }
 .item8 {
 	display: none;
@@ -101,10 +110,10 @@ html, body {
 </head>
 <body>
 <div class="grid-container">
-  <div class="item1">University of Plymouth</div>
-  <div class="item2">Login &nbsp; &nbsp; Search</div>
+  <div class="item1"><img src="images/uoplogomono.svg" width="150px" alt=""/></div>
+  <div class="item2"><span class="iconfont" aria-hidden="true">A</span> <strong>Login</strong> &nbsp; &nbsp;<span class="iconfont" aria-hidden="true">B</span> <strong>Search</strong></div>
   <div class="item3">Careers &nbsp; &nbsp; Visit &nbsp; &nbsp; Alumni &nbsp; &nbsp; Events &nbsp; &nbsp; News</div>
-  <div class="item4">Study &nbsp; &nbsp; Research &nbsp; &nbsp; International &nbsp; &nbsp; <span class="nowrap">Business &nbsp; &nbsp; About</span></div>
+  <div class="item4"><strong>Study &nbsp; &nbsp; Research &nbsp; &nbsp; International &nbsp; &nbsp; <span class="nowrap">Business &nbsp; &nbsp; About</span></strong></div>
   <div class="item5">Hero story</div>
   <div class="item6">Main content</div>
   <div class="item7">Footer</div>
