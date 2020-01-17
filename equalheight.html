@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #111;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+	padding: 1rem 0 0 1rem;
+}
+a {
+	color: #00E;
+}
+p {
+	font-size: 14px;
+	line-height: 1.25em;
+	margin: 1em;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.grid-container {
+	display: grid;
+	/*grid-template-columns: repeat(3, 1fr);*/
+	grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
+	grid-column-gap: 1em;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 60em;
+}
+.grid-item {
+	background-color: #FFF;
+	margin: 0 0 1em 0;
+}
+.grid-item a {
+	color: #111;
+	text-decoration: none;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+}
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="grid-item"><a href="#"><img src="images/1280x720fa1.jpg" alt=""/>
+    <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </a></div>
+  <div class="grid-item"><a href="#"><img src="images/1280x720fa2.jpg" alt=""/>
+    <p>2 Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </a></div>
+  <div class="grid-item"><a href="#"><img src="images/1280x720fa3.jpg" alt=""/>
+    <p>3 Laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </a></div>
+  <div class="grid-item"><a href="#"><img src="images/1280x720fa4.jpg" alt=""/>
+    <p>4 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </a></div>
+  <div class="grid-item"><a href="#"><img src="images/1280x720fa5.jpg" alt=""/>
+    <p>5 Excepteur sint occaecat cupidatat non proident.</p>
+    </a></div>
+  <div class="grid-item"><a href="#"><img src="images/1280x720fa6.jpg" alt=""/>
+    <p>6 Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </a></div>
+</div>
+</body>
+</html>
