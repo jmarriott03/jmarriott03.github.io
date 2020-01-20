@@ -8,6 +8,23 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
 <style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+.socialmedia a {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	font-size: 1em;
+	margin-right: 1em;
+	text-decoration: none;
+}
 * {
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -73,14 +90,25 @@ img {
 	margin: 0 auto;
 	padding: 1em;
 	max-width: 80em;
+	grid-gap: 1em;
 }
 .grid-item {
 	background-color: #EEE;
-	margin: 0 0 1em 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .grid-item p {
 	line-height: 1.5em;
 	margin: 1em;
+}
+.share {
+	width: 100%;
+	margin-top: 0;
+}
+.share p {
+	margin: 0 1em 1em 1em;
 }
 
 /*
@@ -97,24 +125,54 @@ Media screen
 </head>
 <body>
 <div class="grid-container">
-  <div class="grid-item"><a href="#"><img src="images/171205a.jpg" alt=""/></a>
-    <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></p>
+  <div class="grid-item">
+    <div><a href="#"><img src="images/171205a.jpg" alt=""/></a>
+      <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></p>
+    </div>
+    <div class="share">
+      <p><span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">S</a></span></p>
+    </div>
   </div>
-  <div class="grid-item"><a href="#"><img src="images/171205b.jpg" alt=""/>
-    <p>2 Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </a></div>
-  <div class="grid-item"><a href="#"><img src="images/171205c.jpg" alt=""/>
-    <p>3 Laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </a></div>
-  <div class="grid-item"><a href="#"><img src="images/171205d.jpg" alt=""/></a>
-    <p>4 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <a href="#">eu fugiat nulla pariatur.</a></p>
+  <div class="grid-item">
+    <div><a href="#"><img src="images/171205b.jpg" alt=""/>
+      <p>2 Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </a></div>
+    <div class="share">
+      <p><span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">S</a></span></p>
+    </div>
   </div>
-  <div class="grid-item"><a href="#"><img src="images/171205e.jpg" alt=""/>
-    <p>5 Excepteur sint occaecat cupidatat non proident.</p>
-    </a></div>
-  <div class="grid-item"><a href="#"><img src="images/171205f.jpg" alt=""/>
-    <p>6 Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </a></div>
+  <div class="grid-item">
+    <div><a href="#"><img src="images/171205c.jpg" alt=""/>
+      <p>3 Laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </a></div>
+    <div class="share">
+      <p><span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">S</a></span></p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div><a href="#"><img src="images/171205d.jpg" alt=""/></a>
+      <p>4 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <a href="#">eu fugiat nulla pariatur.</a></p>
+    </div>
+    <div class="share">
+      <p><span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">S</a></span></p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div><a href="#"><img src="images/171205e.jpg" alt=""/>
+      <p>5 Excepteur sint occaecat cupidatat non proident.</p>
+      </a></div>
+    <div class="share">
+      <p><span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">S</a></span></p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div><a href="#"><img src="images/171205f.jpg" alt=""/>
+      <p>6 Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+    <div class="share">
+      <p><span class="socialmedia" aria-hidden="true"><a href="#">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#">S</a></span></p>
+    </div>
+  </div>
 </div>
 </body>
 </html>
