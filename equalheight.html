@@ -22,8 +22,8 @@
 	font-weight: normal;
 	line-height: 1em;
 	font-size: 1em;
-	margin-right: 1em;
 	text-decoration: none;
+	margin-right: 0.5em;
 }
 * {
 	margin: 0 auto;
@@ -106,8 +106,6 @@ img {
 .share {
 	width: 100%;
 	margin-top: 0;
-	font-size: 0.875em;
-	line-height: 1.5em;
 }
 .share p {
 	margin: 0 1em 1em 1em;
@@ -135,6 +133,9 @@ img {
 .nomargin {
 	margin: 0;
 }
+.marginr {
+	margin-right: 1em;
+}
 
 /*
 Media screen
@@ -151,55 +152,56 @@ Media screen
 <body>
 <div class="grid-container">
   <div class="grid-item">
-    <div><a href="#"><img src="images/171205a.jpg" alt=""/></a>
-      <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></p>
+    <div>
+      <div class="quoteimage">
+        <p><strong><img src="images/twitter01a.jpg" alt="">Jonathan Coe<br>
+          <a href="#">@oceansciencetec</a></strong></p>
+      </div>
+      <a href="#"><img src="images/twitter01b.jpg" alt=""/></a>
+      <p><a href="#">@EarthEcho</a> Expeditions: What’s the Catch? Launch with a virtual field trip to the University of Plymouth’s Marine Station. Hosted by Dr. Benjamin Ciotti, lecturer in marine biology at the University of Plymouth. </p>
     </div>
     <div class="share">
-      <p><span class="socialmedia" aria-hidden="true"><a href="#" title="Twitter">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Facebook">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Share">S</a></span></p>
-    </div>
-  </div>
-  <div class="grid-item">
-    <div><img src="images/171205b.jpg" alt=""/>
-      <p>2 Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div class="share">
-      <p class="tags"><a href="#">#fine-art</a><a href="#">#creative</a><a href="#">#art</a></p>
-    </div>
-  </div>
-  <div class="grid-item">
-    <div><a href="#"><img src="images/171205c.jpg" alt=""/>
-      <p>3 Laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </a></div>
-    <div class="share">
-      <p><span class="iconfont">c</span> 7 min read</p>
-    </div>
-  </div>
-  <div class="grid-item">
-    <div><a href="#"><img src="images/171205d.jpg" alt=""/></a>
-      <p>4 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <a href="#">eu fugiat nulla pariatur.</a></p>
-    </div>
-    <div class="share">
-      <p><span class="socialmedia" aria-hidden="true"><a href="#" title="Twitter">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Facebook">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Share">S</a></span></p>
-    </div>
-  </div>
-  <div class="grid-item">
-    <div><img src="images/171205e.jpg" alt=""/>
-      <p>5 Excepteur sint occaecat cupidatat non proident.</p>
-    </div>
-    <div class="share">
-      <p>Event: <a href="#">20 Jan 2020</a></p>
+      <p class="ellipsis"><a href="">https://earthecho.org/virtual-events/wtclaunch</a></p>
+      <p class="ellipsis"><a href="">pic.twitter.com/iw4mpVuHRg</a></p>
     </div>
   </div>
   <div class="grid-item">
     <div>
       <div class="quoteimage">
-        <p><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Georgia O'Reilly</a><br>
-          Course leader</strong></p>
+        <p><strong><img src="images/twitter02a.jpg" alt="">Dr Imogen Napper<br>
+          <a href="#">@Imogennapper</a></strong></p>
       </div>
-      <p class="quoteline">"Going to a university based right by the sea made an incredible impact on me. Studying here helped my art grow in so many ways."</p>
+      <a href="#"><img src="images/twitter02b.jpg" alt=""/></a>
+      <p>The amount of <a href="#">#plastic</a> we use is increasing at an unsustainable rate. With no waste management in place, people often burn waste or discard it into a river. Together, we need to think of how to manage and minimise the waste we create</p>
     </div>
     <div class="share">
-      <p class="tags"><a href="#">#fine-art</a><a href="#">#creative</a><a href="#">#art</a></p>
+      <p class="ellipsis"><a href="">#expeditionplastic</a></p>
+      <p class="ellipsis"><a href="">@InsideNatGeo</a></p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div>
+      <div class="quoteimage">
+        <p><strong><img src="images/twitter03a.jpg" alt="">EarthEcho Int'l<br>
+          <a href="#">@EarthEcho</a></strong></p>
+      </div>
+      <a href="#"><img src="images/twitter03b.jpg" alt=""/></a>
+      <p>Excited for the launch of Expedition: What’s the Catch? Today at 2 pm gmt!</p>
+    </div>
+    <div class="share">
+      <p class="ellipsis"><a href="">@PlymUni </a></p>
+      <p class="ellipsis"><a href="">@PlymUniMI</a></p>
+      <p class="ellipsis"><a href="">@NMAPlymouth</a></p>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div>
+      <div class="quoteimage">
+        <p><strong><img src="images/twitter04a.jpg" alt="">University of Plymouth<br>
+          <a href="#">@PlymUni</a></strong></p>
+      </div>
+      <a href="#"><img src="images/twitter04b.jpg" alt=""/></a>
+      <p>What is water security? Dr <a href="#">@Caroline_Clason</a> discusses her research investigating the impact of climate change on glacier-fed rivers and how <a href="#">#watersecurity</a> affects communities in the Peruvian Andes.</p>
     </div>
   </div>
 </div>
