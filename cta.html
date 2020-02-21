@@ -15,6 +15,7 @@ src: url('fonts/icon7t-webfont.woff');
 .iconfont {
 font-family: 'icon', sans-serif;
 text-decoration: none;
+line-height: 1em;
 }
 * {
 margin: 0 auto;
@@ -35,9 +36,9 @@ background: #FAFAFA;
 margin: 0;
 }
 h2 {
-	font-size: 1.5em;
-	line-height: 1.25em;
-	font-weight: bold;
+font-size: 1.5em;
+line-height: 1.25em;
+font-weight: bold;
 }
 a {
 color: #06C;
@@ -80,7 +81,7 @@ margin: 0;
 color: #FAFAFA;
 background-color: #111;
 }
-.fullw a {
+.whitelink a {
 color: #FAFAFA;
 }
 .btn {
@@ -95,7 +96,7 @@ margin-right: 1em;
 }
 .socialmedia a {
 display: inline-block;
-margin:0 1em 0 0;
+margin: 0 1em 0 0;
 }
 .-c-warning {
 color: #F33;
@@ -105,6 +106,14 @@ background-color: #39F;
 }	
 .-c-ucas {
 background-color: #F33;
+}
+.-c-dark1 {
+color: #111!important;
+background-color: #FAFAFA;
+}
+.-c-dark2 {
+color: #111!important;
+background-color: #CCC;
 }
 </style>
 </head>
@@ -120,10 +129,13 @@ background-color: #F33;
 </div>
 <div class="fullw">
 <div class="textbox">
+<div class="whitelink">
 <h2><span class="iconfont" aria-hidden="true">Ñ</span> Where are the toilets?</h2>
 <p>An aeque sonet volutpat cum. Est idque populo ea. At alia omittam sed. Iusto dignissim complectitur an eam, adhuc iusto nec at. <a href="#">Habemus inimicus ad est, solet soluta rationibus in quo.</a></p>
 <p><a href="#"><span class="iconfont" aria-hidden="true">S</span> Share</a></p>
 <p class="socialmedia"><a href="#"><span class="iconfont" aria-hidden="true">f</span> Facebook</a><a href="#"><span class="iconfont" aria-hidden="true">t</span> Twitter</a><a href="#"><span class="iconfont" aria-hidden="true">i</span> Instagram</a><a href="#"><span class="iconfont" aria-hidden="true">l</span> LinkedIn</a></p>
+</div>
+<p><a href="#" class="btn -c-dark1"><span class="iconfont" aria-hidden="true">F</span> Play</a><a href="#" class="btn -c-dark2">More info</a></p>
 </div>
 </div>
 </body>
