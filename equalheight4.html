@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+font-family: icon;
+src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+font-family: 'icon', sans-serif;
+font-weight: normal;
+line-height: 1em;
+}
+.socialmedia a {
+font-family: 'icon', sans-serif;
+font-weight: normal;
+line-height: 1em;
+font-size: 1em;
+margin-right: 1em;
+text-decoration: none;
+}
+* {
+margin: 0 auto;
+box-sizing: border-box;
+}
+* + * {
+margin-top: 1em;
+}
+html, body {
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+font-size: 100%;
+font-family: sans-serif;
+font-weight: normal;
+line-height: 1.5em;
+color: #111;
+background: #FAFAFA;
+margin: 0;
+}
+h1 {
+font-size: 2em;
+line-height: 1.25em;
+font-weight: bold;
+}
+h2 {
+font-size: 1.5em;
+line-height: 1.25em;
+font-weight: bold;
+padding: 1rem 0 0 1rem;
+}
+a {
+color: #00E;
+}
+.visited {
+color: #551A8B;
+}
+strong {
+font-weight: bold;
+}
+em {
+font-style: italic;
+}
+img {
+border: 0;
+text-decoration: none;
+vertical-align: top;
+width: 100%;
+margin: 0;
+}
+.nowrap {
+white-space: nowrap;
+}
+.ellipsis {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.grid-container {
+display: grid;
+/*grid-template-columns: repeat(3, 1fr);*/
+grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
+grid-column-gap: 1em;
+margin: 0 auto;
+padding: 1em;
+max-width: 80em;
+grid-gap: 1em;
+}
+.grid-item {
+margin: 0;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.grid-item p {
+line-height: 1.5em;
+margin: 1em 0;
+}
+.share {
+margin: 0;
+}
+.share p {
+margin: 0 0 1em 0;
+}
+.tags a {
+margin-right: 0.5em;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.grid-container {
+display: grid;
+grid-template-columns: auto;
+}
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+<div class="grid-item">
+<div><a href="#"><img src="images/171205a.jpg" alt=""/></a>
+<p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></p>
+</div>
+<div class="share">
+<p><span class="socialmedia" aria-hidden="true"><a href="#" title="Twitter">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Facebook">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Share">S</a></span></p>
+</div>
+</div>
+<div class="grid-item">
+<div><img src="images/171205b.jpg" alt=""/>
+<p>2 Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+</div>
+<div class="share">
+<p class="tags"><a href="#">#fine-art</a><a href="#">#creative</a><a href="#">#art</a></p>
+</div>
+</div>
+<div class="grid-item">
+<div><a href="#"><img src="images/171205c.jpg" alt=""/>
+<p>3 Laboris nisi ut aliquip ex ea commodo consequat.</p>
+</a></div>
+<div class="share">
+<p><span class="iconfont">c</span> 7 min read</p>
+</div>
+</div>
+<div class="grid-item">
+<div><a href="#"><img src="images/171205d.jpg" alt=""/></a>
+<p>4 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <a href="#">eu fugiat nulla pariatur.</a></p>
+</div>
+<div class="share">
+<p><span class="socialmedia" aria-hidden="true"><a href="#" title="Twitter">t</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Facebook">f</a></span> <span class="socialmedia" aria-hidden="true"><a href="#" title="Share">S</a></span></p>
+</div>
+</div>
+<div class="grid-item">
+<div><img src="images/171205e.jpg" alt=""/>
+<p>5 Excepteur sint occaecat cupidatat non proident.</p>
+</div>
+<div class="share">
+<p class="tags"><a href="#">#photography</a><a href="#">#creative</a><a href="#">#art</a></p>
+</div>
+</div>
+<div class="grid-item">
+<div><a href="#"><img src="images/171205f.jpg" alt=""/>
+<p>6 Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</a></div>
+<div class="share">
+<p>Event: <a href="#">20 Jan 2020</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>
