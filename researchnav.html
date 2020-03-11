@@ -1,68 +1,150 @@
-<!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+font-family: icon;
+src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+font-family: 'icon', sans-serif;
+text-decoration: none;
+line-height: 1em;
+}
+* {
+margin: 0 auto;
+box-sizing: border-box;
+}
+* + * {
+margin-top: 1em;
+}
+html, body {
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+font-size: 100%;
+font-family: sans-serif;
+font-weight: normal;
+line-height: 1.5em;
+color: #111;
+background: #FAFAFA;
+margin: 0;
+}
+h2 {
+font-size: 1.5em;
+line-height: 1.25em;
+font-weight: bold;
+}
+a {
+color: #00E;
+text-decoration: underline;
+}
+.visited {
+color: #639;
+}
+strong {
+font-weight: bold;
+}
+em {
+font-style: italic;
+}
+img {
+border: 0;
+text-decoration: none;
+vertical-align: top;
+width: 100%;
+margin: 0;
+}
+.textbox {
+max-width: 38em;
+padding: 1em;
+overflow: hidden;
+}
+.nowrap {
+white-space: nowrap;
+}
+.ellipsis {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+margin-top: 0;
+}
+.textbox {
+max-width: 38em;
+padding: 1em;
+overflow: hidden;
+}
+.btn {
+padding: 0.5em 0.75em;
+border-radius: 0.25em;
+text-align: center;
+color: #00E;
+background-color: #EEE;
+text-decoration: none;
+display: inline-block;
+margin-right: 0.5em;
+border: none;
+font-size: 0.75em;
+line-height: 1.5em;
+cursor: pointer;
+}
+.activebtn {
+color: #FAFAFA;
+background-color: #666;
+}
+.nextlink {
+font-size: 0.875em;
+}
+</style>
 <body>
-
-<div class="w3-container">
-  <h2>Active Tabs</h2>
-  <p>To highlight the current tab/page the user is on, add a color class, and use JavaScript to update the active link.</p>
-
-  <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'zWebsites')">Websites</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'zPeople')">People</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'zDegrees')">Degrees</button>
-			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,'zResearch')">Research</button>
-			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,'zMedia')">Media</button>
-  </div>
-  
-<div id="zWebsites" class="w3-container city">
-    <h2>Websites</h2>
-    <p>London is the capital city of England.</p>
-    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-  </div>
-
-  <div id="zPeople" class="w3-container city" style="display:none">
-    <h2>People</h2>
-    <p>Paris is the capital of France.</p> 
-    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-  </div>
-
-  <div id="zDegrees" class="w3-container city" style="display:none">
-    <h2>Degrees</h2>
-    <p>Tokyo is the capital of Japan.</p>
-    <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-  </div>
-	
-	  <div id="zResearch" class="w3-container city" style="display:none">
-    <h2>Research</h2>
-    <p>London is the capital city of England.</p>
-    <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-  </div>
-
-  <div id="zMedia" class="w3-container city" style="display:none">
-    <h2>Media</h2>
-    <p>Paris is the capital of France.</p> 
-    <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-  </div>
-	</div>
-
+<div class="textbox">
+<h2>Search results</h2>
+<p>You searched for <strong>Courses</strong></p>
+<button class="btn tablink activebtn" onclick="openBtn(event,'Websites')">Websites</button>
+<button class="btn tablink" onclick="openBtn(event,'People')">People</button>
+<button class="btn tablink" onclick="openBtn(event,'Degrees')">Degrees</button>
+<button class="btn tablink" onclick="openBtn(event,'Research')">Research</button>
+<button class="btn tablink" onclick="openBtn(event,'Media')">Media</button>
+<div id="Websites" class="search">
+<p>1 - 10 of <strong>197</strong> results found for in <strong>Websites</strong>.</p>
+<p><a href="#" class="nextlink">Next</a></p>
+</div>
+<div id="People" class="search" style="display:none">
+<p>1 - 10 of <strong>77</strong> results found for in <strong>People</strong>.</p>
+<p><a href="#" class="nextlink">Next</a></p>
+</div>
+<div id="Degrees" class="search" style="display:none">
+<p>1 - 10 of <strong>14</strong> results found for in <strong>Degrees</strong>.</p>
+<p><a href="#" class="nextlink">Next</a></p>
+</div>
+<div id="Research" class="search" style="display:none">
+<p>1 - 10 of <strong>1,495</strong> results found for in <strong>Research</strong>.</p>
+<p><a href="#" class="nextlink">Next</a></p>
+</div>
+<div id="Media" class="search" style="display:none">
+<p>1 - 10 of <strong>92</strong> results found for in <strong>Media</strong>.</p>
+<p><a href="#" class="nextlink">Next</a></p>
+</div>
+</div>
 <script>
-function openCity(evt, cityName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " w3-red";
+function openBtn(evt, cityName) {
+var i, x, tablinks;
+x = document.getElementsByClassName("search");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < x.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" activebtn", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " activebtn";
 }
 </script>
-
 </body>
 </html>
