@@ -9,173 +9,220 @@
 <title>University of Plymouth</title>
 <style>
 @font-face {
-font-family: icon;
-src: url('fonts/icon7t-webfont.woff');
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
 }
 .iconfont {
-font-family: 'icon', sans-serif;
-text-decoration: none;
-line-height: 1em;
+	font-family: 'icon', sans-serif;
+	text-decoration: none;
+	line-height: 1em;
 }
 * {
-margin: 0 auto;
-box-sizing: border-box;
+	margin: 0 auto;
+	box-sizing: border-box;
 }
 * + * {
-margin-top: 1em;
+	margin-top: 1em;
 }
 html, body {
--ms-text-size-adjust: 100%;
--webkit-text-size-adjust: 100%;
-font-size: 100%;
-font-family: sans-serif;
-font-weight: normal;
-line-height: 1.5em;
-color: #111;
-background: #FAFAFA;
-margin: 0;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FAFAFA;
+	margin: 0;
 }
 h2 {
-font-size: 1.5em;
-line-height: 1.25em;
-font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
 }
 h3 {
-font-size: 1.17em;
-line-height: 1.25em;
-font-weight: bold;
+	font-size: 1.17em;
+	line-height: 1.25em;
+	font-weight: bold;
 }
 a {
-color: #00E;
-text-decoration: underline;
+	color: #00E;
+	text-decoration: underline;
 }
 .visited {
-color: #639;
+	color: #639;
 }
 strong {
-font-weight: bold;
+	font-weight: bold;
 }
 em {
-font-style: italic;
+	font-style: italic;
+}
+p {
+	clear: both;
+	overflow: hidden;
 }
 img {
-border: 0;
-text-decoration: none;
-vertical-align: top;
-width: 100%;
-margin: 0;
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
 }
 .textbox {
-max-width: 38em;
-padding: 1em;
-overflow: hidden;
+	max-width: 38em;
+	padding: 1em;
+	overflow: hidden;
 }
 .nowrap {
-white-space: nowrap;
+	white-space: nowrap;
 }
 .ellipsis {
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-margin-top: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
 }
 .textbox {
-max-width: 38em;
-padding: 1em;
-overflow: hidden;
+	max-width: 38em;
+	padding: 1em;
+	overflow: hidden;
 }
 .btn {
-padding: 0.5em 0.75em;
-border-radius: 0.25em;
-text-align: center;
-color: #00E;
-background-color: #EEE;
-text-decoration: none;
-display: inline-block;
-margin-right: 0.5em;
-border: none;
-font-size: 1em;
-line-height: 1.5em;
-cursor: pointer;
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: center;
+	color: #00E;
+	background-color: #EEE;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 0.5em;
+	border: none;
+	font-size: 1em;
+	line-height: 1.5em;
+	cursor: pointer;
 }
 .activebtn {
-color: #FAFAFA;
-background-color: #666;
+	color: #FAFAFA;
+	background-color: #666;
 }
 .quoteimage {
-padding: 1em 1em 0 3em;
-position: relative;
-width: 100%;
-margin: 0;
+	padding: 1em 1em 0 3em;
+	position: relative;
+	width: 100%;
+	margin: 0;
 }
 .quoteimage img {
-left: 0;
-position: absolute;
-width: 2.5em;
-height: 2.5em;
-margin: 0.25em 0 0 0;
-border-radius: 50%;
+	left: 0;
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0 0 0;
+	border-radius: 50%;
 }
 .margintopno {
-margin-top: 0;
+	margin-top: 0;
+}
+.mediabox {
+	max-width: 40em;
+	margin: 0 auto;
+	padding: 1em 0 0 0;
+	overflow: hidden;
+}
+.mediabox img {
+	width: 10em;
+	float: left;
+	margin: 0 1em 0 0;
+	clear: both;
+}
+.smalltext {
+	font-size: 0.75em;
 }
 </style>
 <body>
 <div class="textbox">
-<h2>Research directory</h2>
-<p>You searched for <strong>ocean</strong></p>
-<button class="btn tablink activebtn" onclick="openBtn(event,'Websites')">Websites</button>
-<button class="btn tablink" onclick="openBtn(event,'People')">People</button>
-<button class="btn tablink" onclick="openBtn(event,'Degrees')">Degrees</button>
-<button class="btn tablink" onclick="openBtn(event,'Media')">Media</button>
-<div id="Websites" class="search">
-<p>1 - 10 of <strong>197</strong> results found for in <strong>Websites</strong>.</p>
-<p><a href="#" class="nextlink">Next</a></p>
-</div>
-<div id="People" class="search" style="display:none">
-<p>1 - 10 of <strong>77</strong> results found for in <strong>People</strong>.</p>
-<div class="quoteimage">
-<p><strong><a href="#"><img src="images/171205bstaff.jpg" alt="">Ayla Sullivan</a></strong><br>
-Head of School</p>
-</div>
-<div class="quoteimage">
-<p><strong><a href="#"><img src="images/people2.jpg" alt="">George Hawkins</a></strong><br>
-Lecturer in Geomechanics (Education)</p>
-</div>
-<div class="quoteimage">
-<p><strong><a href="#"><img src="images/people3.jpg" alt="">Henry Medina</a></strong><br>
-Lecturer in Civil Engineering</p>
-</div>
-<div class="quoteimage">
-<p><strong><a href="#"><img src="images/people4.gif" alt="">Otis O'Brien</a></strong><br>
-Associate Professor of Structural Engineering</p>
-</div>
-<div class="quoteimage">
-<p><strong><a href="#"><img src="images/people5.jpg" alt="">Tyler Chavez</a></strong><br>
-Course leader</p>
-</div>
-<p><a href="#" class="nextlink">Next</a></p>
-</div>
-<div id="Degrees" class="search" style="display:none">
-<p>1 - 10 of <strong>14</strong> results found for in <strong>Degrees</strong>.</p>
-<h3>BSc (Hons) Geography with Ocean Science (Full-time)</h3>
-<p class="margintopno"><a href="#">https://www.plymouth.ac.uk/courses/undergraduate/bsc-geography-with-ocean-science</a></p>
-<p>School of Geography, Earth and Environmental Sciences.</p>
-<p>BSc Geography with Ocean Science explores relationships between people, places and the environment, as well as physical oceanography.</p>
-<h3>BSc (Hons) Ocean Exploration and Surveying (Full-time)</h3>
-<p class="margintopno"><a href="#">https://www.plymouth.ac.uk/courses/undergraduate/bsc-ocean-exploration-and-surveying</a></p>
-<p>School of Biological and Marine Sciences.</p>
-<p>BSc (Hons) Ocean Exploration and Surveying course information.</p>
-<h3>BSc (Hons) Geology with Ocean Science (Full-time)</h3>
-<p class="margintopno"><a href="#">https://www.plymouth.ac.uk/courses/undergraduate/bsc-geology-with-ocean-science</a></p>
-<p>School of Geography, Earth and Environmental Sciences.</p>
-<p>Geology with ocean science will arm you with the theoretical and practical aspects of geology, as well as enabling you to develop an understanding of oceanography and coastal processes.</p>
-<p><a href="#" class="nextlink">Next</a></p>
-</div>
-<div id="Media" class="search" style="display:none">
-<p>1 - 10 of <strong>92</strong> results found for in <strong>Media</strong>.</p>
-<p><a href="#">Next</a></p>
-</div>
+  <h2>Research directory</h2>
+  <p>You searched for <strong>ocean</strong></p>
+  <button class="btn tablink activebtn" onclick="openBtn(event,'Websites')">Websites</button>
+  <button class="btn tablink" onclick="openBtn(event,'People')">People</button>
+  <button class="btn tablink" onclick="openBtn(event,'Degrees')">Degrees</button>
+  <button class="btn tablink" onclick="openBtn(event,'Media')">Media</button>
+  <div id="Websites" class="search">
+    <p>1 - 10 of <strong>197</strong> results found for in <strong>Websites</strong>.</p>
+    <div class="mediabox">
+      <p><a href="#"><img src="images/rd07.jpg" alt=""/><strong>Lorem ipsum dolor sit amet</strong></a><br>
+        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="smalltext">Last updated: 3 June 2020</p>
+      <p><a href="#"><img src="images/rd13.jpg" alt=""/><strong>Ut enim ad minim veniam, quis nostrud</strong></a><br>
+        Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="smalltext">Last updated: 3 June 2020</p>
+      <p><a href="#"><img src="images/rd14.jpg" alt=""/><strong>Duis aute irure dolor in reprehenderit</strong></a><br>
+        In voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+      <p class="smalltext">Last updated: 20 May 2020</p>
+      <p><strong><a href="#">Dolor sit amet, consectetur adipisicing</a></strong><br>
+        Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+      <p class="smalltext">Last updated: 16 May 2020</p>
+    </div>
+    <p><a href="#" class="nextlink">Next</a></p>
+  </div>
+  <div id="People" class="search" style="display:none">
+    <p>1 - 10 of <strong>77</strong> results found for in <strong>People</strong>.</p>
+    <div class="quoteimage">
+      <p><strong><a href="#"><img src="images/rd01.jpg" alt="">Ayla Sullivan</a></strong><br>
+        Head of School</p>
+    </div>
+    <div class="quoteimage">
+      <p><strong><a href="#"><img src="images/rd02.jpg" alt="">George Hawkins</a></strong><br>
+        Lecturer in Geomechanics (Education)</p>
+    </div>
+    <div class="quoteimage">
+      <p><strong><a href="#"><img src="images/rd03.jpg" alt="">Henry Medina</a></strong><br>
+        Lecturer in Civil Engineering</p>
+    </div>
+    <div class="quoteimage">
+      <p><strong><a href="#"><img src="images/people4.gif" alt="">Otis O'Brien</a></strong><br>
+        Associate Professor of Structural Engineering</p>
+    </div>
+    <div class="quoteimage">
+      <p><strong><a href="#"><img src="images/rd06.jpg" alt="">Tyler Chavez</a></strong><br>
+        Course leader</p>
+    </div>
+    <p><a href="#" class="nextlink">Next</a></p>
+  </div>
+  <div id="Degrees" class="search" style="display:none">
+    <p>1 - 10 of <strong>14</strong> results found for in <strong>Degrees</strong>.</p>
+    <h3>BSc (Hons) Geography with Ocean Science (Full-time)</h3>
+    <p class="margintopno"><a href="#">https://www.plymouth.ac.uk/courses/undergraduate/bsc-geography-with-ocean-science</a></p>
+    <p>School of Geography, Earth and Environmental Sciences.</p>
+    <p>BSc Geography with Ocean Science explores relationships between people, places and the environment, as well as physical oceanography.</p>
+    <h3>BSc (Hons) Ocean Exploration and Surveying (Full-time)</h3>
+    <p class="margintopno"><a href="#">https://www.plymouth.ac.uk/courses/undergraduate/bsc-ocean-exploration-and-surveying</a></p>
+    <p>School of Biological and Marine Sciences.</p>
+    <p>BSc (Hons) Ocean Exploration and Surveying course information.</p>
+    <h3>BSc (Hons) Geology with Ocean Science (Full-time)</h3>
+    <p class="margintopno"><a href="#">https://www.plymouth.ac.uk/courses/undergraduate/bsc-geology-with-ocean-science</a></p>
+    <p>School of Geography, Earth and Environmental Sciences.</p>
+    <p>Geology with ocean science will arm you with the theoretical and practical aspects of geology, as well as enabling you to develop an understanding of oceanography and coastal processes.</p>
+    <p><a href="#" class="nextlink">Next</a></p>
+  </div>
+  <div id="Media" class="search" style="display:none">
+    <p>1 - 10 of <strong>92</strong> results found for in <strong>Media</strong>.</p>
+    <div class="mediabox">
+      <p><a href="#"><img src="images/rd11.jpg" alt=""/><strong>Dolor sit amet, consectetur adipisicing</strong></a><br>
+        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="smalltext">Last updated: 3 June 2020</p>
+      <p><a href="#"><img src="images/rd09.jpg" alt=""/><strong>Duis aute irure dolor in reprehenderit</strong></a><br>
+        Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="smalltext">Last updated: 3 June 2020</p>
+      <p><strong><a href="#">Lorem ipsum dolor sit amet</a></strong><br>
+        Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+      <p class="smalltext">Last updated: 16 May 2020</p>
+      <p><a href="#"><img src="images/rd15.jpg" alt=""/><strong>Ut enim ad minim veniam, quis nostrud</strong></a><br>
+        In voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+      <p class="smalltext">Last updated: 20 May 2020</p>
+    </div>
+    <p><a href="#">Next</a></p>
+  </div>
 </div>
 <script>
 function openBtn(evt, cityName) {
