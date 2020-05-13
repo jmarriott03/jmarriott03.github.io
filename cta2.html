@@ -97,10 +97,42 @@ img {
 	font-size: 1em;
 	line-height: 1.5em;
 	cursor: pointer;
+	transition: 0.3s;
+}
+.btn2 {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: center;
+	color: #06C;
+	background-color: none;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 1em;
+	border: none;
+	font-size: 1em;
+	line-height: 1.5em;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.btn2:hover {
+	background-color: #CCC;
+}
+/*https://www.cssfontstack.com/oldsites/hexcolortool/*/
+.btnhov1:hover {
+	background-color: #1A80E6;
+}
+.ucasbtnhov1:hover {
+	background-color: #FF4D4D;
+}
+.btnhov2:hover {
+	background-color: #004DB3;
+}
+.ucasbtnhov2:hover {
+	background-color: #E61A1A;
 }
 .socialmedia a {
 	display: inline-block;
-	margin: 0 1em 0 0;	
+	margin: 0 1em 0 0;
 }
 .-c-warning {
 	color: #F33;
@@ -123,7 +155,24 @@ img {
 </head>
 <body>
 <div class="textbox">
+  <h2>Version 1 blue no hover</h2>
   <p><a href="#" class="btn -c-ucas">Apply vis UCAS</a><a href="#" class="btn"><span class="iconfont" aria-hidden="true">/</span> Admissions enquiry</a><a href="#" class="btn"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn"><span class="iconfont" aria-hidden="true">%</span> Prospectus</a></p>
+</div>
+<div class="textbox">
+  <h2>Version 2 grey no hover</h2>
+  <p><a href="#" class="btn -c-ucas">Apply vis UCAS</a><a href="#" class="btn -c-dark2"><span class="iconfont" aria-hidden="true">/</span> Admissions enquiry</a><a href="#" class="btn -c-dark2"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn -c-dark2"><span class="iconfont" aria-hidden="true">%</span> Prospectus</a></p>
+</div>
+<div class="textbox">
+  <h2>Version 3 lighten hover</h2>
+  <p><a href="#" class="btn -c-ucas ucasbtnhov1">Apply vis UCAS</a><a href="#" class="btn btnhov1"><span class="iconfont" aria-hidden="true">/</span> Admissions enquiry</a><a href="#" class="btn btnhov1"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn btnhov1"><span class="iconfont" aria-hidden="true">%</span> Prospectus</a></p>
+</div>
+<div class="textbox">
+  <h2>Version 4 darken hover</h2>
+  <p><a href="#" class="btn -c-ucas ucasbtnhov2">Apply vis UCAS</a><a href="#" class="btn btnhov2"><span class="iconfont" aria-hidden="true">/</span> Admissions enquiry</a><a href="#" class="btn btnhov2"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn btnhov2"><span class="iconfont" aria-hidden="true">%</span> Prospectus</a></p>
+</div>
+<div class="textbox">
+  <h2>Version 5 button hover</h2>
+  <p><a href="#" class="btn2">Apply vis UCAS</a><a href="#" class="btn2"><span class="iconfont" aria-hidden="true">/</span> Admissions enquiry</a><a href="#" class="btn2"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn2"><span class="iconfont" aria-hidden="true">%</span> Prospectus</a></p>
 </div>
 </body>
 </html>
