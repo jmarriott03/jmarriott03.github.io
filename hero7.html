@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7w-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+.socialmedia {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	font-size: 1.5em;
+	padding-right: 1em;
+}
+.socialmedia a:hover {
+	text-decoration: none !important;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+	max-width: 40em;
+	margin-left: 0;
+}
+a {
+	color: #00E;
+	text-decoration: none;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+ul {
+	padding: 0 1em;
+}
+li {
+	margin: 1em;
+	padding: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.heroimage {
+	max-width: 80em;
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+}
+.herotext {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: calc(1rem + 0.4vw);
+	line-height: 1.5em;
+	width: 50%;
+	padding: 4em 4em 3em 4em;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.herosummary {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 3;
+	margin: 0;
+	color: #FAFAFA;
+	font-size: calc(1rem + 0.4vw);
+	line-height: 1.5em;
+	width: 50%;
+	padding: 2em 2em 1em 2em;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.herotext h1 {
+	font-weight: bold;
+	line-height: 1.25em;
+	margin-bottom: 1rem;
+}
+.herotext p {
+	max-width: 40em;
+	margin: 0 0 1em 0;
+}
+.herotext a {
+	color: #FAFAFA;
+}
+.overflowtext {
+	position: relative;
+	width: 100%;
+	background-color: #111;
+	left: 0;
+	margin: 0;
+	padding: 1em 1em 0.1em 1em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transform: translateY(0);
+}
+.swatch1 {
+	color: #AAA;
+}
+.arrowstyle {
+	color: #39F;
+	font-size: 2em;
+	clear: both;
+	display: block;
+	margin-top: 0;
+	padding-bottom: 1rem;
+}
+</style>
+<script>
+$(window).on("load resize",function(e){
+	var contentHeight = $('.herotext').height()+80;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight < containerHeight) {
+		$( ".herotext" ).removeClass( "overflowtext" );
+		$( ".herosummary" ).removeClass( "overflowtext" );
+	}
+	var contentHeight = $('.herotext').height()+80;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight > containerHeight) {
+		$( ".herotext" ).addClass( "overflowtext" );
+		$( ".herosummary" ).addClass( "overflowtext" );
+	}
+});
+</script>
+</head>
+<body>
+<a href="#">
+<div class="heroimage"><img src="images/1280x720turtle.jpg" alt="" />
+  <div class="herotext">
+    <h1>The university of pioneers, <span class="swatch1">advancing knowledge</span> and <span class="swatch1">transforming lives.</span></h1>
+
+  </div>
+	
+	<div class="herosummary">
+
+    <p>Our ground-breaking research into microplastics pollution has received the highest honour that can be bestowed upon a higher education institution.<span class="iconfont arrowstyle" aria-hidden="true">"</span></p>
+  </div>
+	
+	
+</div>
+</a>
+</body>
+</html>
