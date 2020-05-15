@@ -101,7 +101,7 @@ li {
 	z-index: 1;
 	margin: 0 auto;
 }
-.herotext {
+.herotitle {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -127,16 +127,16 @@ li {
 	padding: 2em 2em 1em 2em;
 	background-color: rgba(0, 0, 0, 0.8);
 }
-.herotext h1 {
+.herotitle h1 {
 	font-weight: bold;
 	line-height: 1.25em;
 	margin-bottom: 1rem;
 }
-.herotext p {
+.herotitle p {
 	max-width: 40em;
 	margin: 0 0 1em 0;
 }
-.herotext a {
+.herotitle a {
 	color: #FAFAFA;
 }
 .overflowtext {
@@ -164,16 +164,26 @@ li {
 </style>
 <script>
 $(window).on("load resize",function(e){
-	var contentHeight = $('.herotext').height()+80;
+	var contentTitle = $('.herotitle').height()+144;
+	var contentSummary = $('.herosummary').height()+32;
 	var containerHeight = $('.heroimage').height();
-	if(contentHeight < containerHeight) {
-		$( ".herotext" ).removeClass( "overflowtext" );
+	if(contentTitle < containerHeight) {
+		$( ".herotitle" ).removeClass( "overflowtext" );
 		$( ".herosummary" ).removeClass( "overflowtext" );
 	}
-	var contentHeight = $('.herotext').height()+80;
+	if(contentSummary < containerHeight) {
+		$( ".herotitle" ).removeClass( "overflowtext" );
+		$( ".herosummary" ).removeClass( "overflowtext" );
+	}
+	var contentTitle = $('.herotitle').height()+144;
+	var contentSummary = $('.herosummary').height()+32;
 	var containerHeight = $('.heroimage').height();
-	if(contentHeight > containerHeight) {
-		$( ".herotext" ).addClass( "overflowtext" );
+	if(contentTitle > containerHeight) {
+		$( ".herotitle" ).addClass( "overflowtext" );
+		$( ".herosummary" ).addClass( "overflowtext" );
+	}
+	if(contentSummary > containerHeight) {
+		$( ".herotitle" ).addClass( "overflowtext" );
 		$( ".herosummary" ).addClass( "overflowtext" );
 	}
 });
@@ -182,7 +192,7 @@ $(window).on("load resize",function(e){
 <body>
 <a href="#">
 <div class="heroimage"><img src="images/1280x720turtle.jpg" alt="" />
-  <div class="herotext">
+  <div class="herotitle">
     <h1>The university of pioneers, <span class="swatch1">advancing knowledge</span> and <span class="swatch1">transforming lives.</span></h1>
   </div>
   <div class="herosummary">
