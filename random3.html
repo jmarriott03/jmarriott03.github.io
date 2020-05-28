@@ -164,14 +164,6 @@ li {
 </style>
 <script>	
 $(window).on("load resize",function(e){
-	var rndnumber = Math.floor((Math.random() * 3) + 1);
-		if (rndnumber == 1){
-			document.getElementById('myImage').src='images/1280x720turtle.jpg';
-		} else if (rndnumber == 2) {
-    document.getElementById('myImage').src='images/1280x720-160425c.jpg';
-		} else if (rndnumber == 3) {
-    document.getElementById('myImage').src='images/1280x720-1914931.jpg';
-		}
 	var contentTitle = $('.herotitle').height()+144;
 	var contentSummary = $('.herosummary').height()+32;
 	var containerHeight = $('.heroimage').height();
@@ -193,6 +185,17 @@ $(window).on("load resize",function(e){
 	if(contentSummary > containerHeight) {
 		$( ".herotitle" ).addClass( "overflowtext" );
 		$( ".herosummary" ).addClass( "overflowtext" );
+	}
+});
+
+$(document).ready(function() {
+	var rndnumber = Math.floor((Math.random() * 3) + 1);
+	if (rndnumber == 1){
+		document.getElementById('myImage').src='images/1280x720turtle.jpg';
+	} else if (rndnumber == 2) {
+		document.getElementById('myImage').src='images/1280x720-160425c.jpg';
+	} else if (rndnumber == 3) {
+		document.getElementById('myImage').src='images/1280x720-1914931.jpg';
 	}
 });
 </script>
