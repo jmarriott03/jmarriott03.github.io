@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <!--CODE BY JAMIE MARRIOTT-->
 
@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
-<style type="text/css">
+<style>
 * {
 	margin: 0 auto;
 }
@@ -39,9 +39,6 @@ strong {
 em {
 	font-style: italic;
 }
-img {
-	max-width: 100%;
-}
 .nowrap {
 	white-space: nowrap;
 }
@@ -63,6 +60,10 @@ img {
 	grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
 	padding: 1em;
 	max-width: 60em;
+}
+.gallery img {
+	max-width: calc(100% + 2em);
+	margin: -1em -1em 0 -1em;
 }
 .gallery p {
 	background-color: #EEE;
