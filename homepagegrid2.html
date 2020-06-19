@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+.grid-container {
+	display: grid;
+	grid-template-areas: 'logo .' 'search search' 'menulogin menulogin' 'main main' 'footer footer';
+	grid-gap: 10px;
+	background-color: #CCC;
+	padding: 0.5em;
+}
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0.5em;
+}
+.item1 {
+	grid-area: logo;
+}
+.item2 {
+	grid-area: menulogin;
+	text-align: left;
+}
+.item3 {
+	grid-area: search;
+}
+.item4 {
+	grid-area: main;
+}
+.item5 {
+	grid-area: footer;
+	color: #FAFAFA !important;
+	background-color: #666 !important;
+}
+.item6 {
+	grid-area: leftfill;
+	display: none;
+}
+	.swatch1 {
+		color: #FFF !important;
+		background-color: #111 !important;
+		overflow: hidden;
+	}
+
+@media screen and (min-width: 800px) {
+.grid-container {
+	grid-template-areas: 'logo . . . .' 'leftfill leftfill menulogin search search' 'main main main main main' 'footer footer footer footer footer';
+}
+.item2 {
+	text-align: right;
+}
+.item6 {
+	display: block;
+}
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1">University of Plymouth</div>
+  <div class="item2 swatch1">Menu&nbsp;&nbsp;Login</div>
+  <div class="item3 swatch1">Search</div>
+  <div class="item4">Main</div>
+  <div class="item5 swatch1">Footer</div>
+  <div class="item6 swatch1">(Leftfill)</div>
+</div>
+</body>
+</html>
