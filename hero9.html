@@ -11,8 +11,14 @@
 <title>University of Plymouth</title>
 <style>
 @font-face {
-	font-family: neuzit;
-	src: url('fonts/neuzeitforplymouth-regular-webfont.woff');
+	font-family: icon;
+	src: url('fonts/icon7w-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: normal;
 }
 * {
 	margin: 0 auto;
@@ -214,6 +220,29 @@ td {
 	line-height: 1.25em;
 	text-transform: none;
 }
+.leftbutton {
+	left: 0;
+}
+.rightbutton {
+	right: 0;
+}
+.leftbutton, .rightbutton {
+	position: absolute;
+	top: 50%;
+	text-shadow: none;
+	border: 0;
+	color: #fff;
+	background-color: #111;
+	width: 2em;
+	height: 4em;
+	margin-top: -2em;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+	font-family: 'icon', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
 
 /*
 Media screen
@@ -266,7 +295,8 @@ $(window).on("load resize",function(e){
   <div class="herotext">
     <h2>The university of pioneers, advancing knowledge and transforming lives</h2>
     <p>Our work on a vaccine designed to prevent outbreaks similar to the <span class="nowrap">COVID-19</span> pandemic.</p><p><a href="#">Read more about our research into vaccination.</a></p>
-  </div>
+  </div><button class="leftbutton" onclick="plusDivs(-1)">P</button>
+    <button class="rightbutton" onclick="plusDivs(1)">N</button>
 </div>
 </body>
 </html>
