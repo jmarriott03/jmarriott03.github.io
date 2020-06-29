@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7w-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.18em;
+	color: #111;
+	background-color: #FFF;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+	max-width: 28em;
+	margin-left: 0;
+}
+a {
+	color: #00E;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+#search-button {
+	width: 2em;
+	height: 2em;
+	background-color: #0070A8;
+	border: none;
+}
+#search-button:hover {
+	background-color: #036;
+}
+svg {
+	width: 1em;
+	height: 1em;
+	margin: 0;
+	padding: 0;
+}
+.fullw {
+	width: 100%;
+	background-color: #111;
+	overflow: hidden;
+}
+.navbar {
+	padding: 0.5em;
+	background-color: #111;
+	color: #FFF;
+	overflow: hidden;
+	float: right;
+}
+.svgwhite {
+	fill: #FFF;
+}
+.searchbox {
+	width: 10em;
+	padding: 0.25em;
+	background-color: #FFF;
+	color: #666;
+	display: inline-block;
+}
+.marginr {
+	margin-right: 1em;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+.uoplogo {
+	width: 12.5em;
+	padding: 0.5em;
+	float: left;
+}
+#menuopen {
+	display: inline-block;
+}
+#menuclose {
+	display: none;
+}
+#megamenu {
+	width: 100%;
+	background-color: #EEE;
+	overflow: hidden;
+	display: none;
+}
+.column {
+	float: left;
+	width: 20%;
+	padding: 1em;
+}
+.column h3 {
+	margin: 0.5rem;
+}
+.column a {
+	float: none;
+	color: black;
+	padding: 0.5em;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.column a:hover {
+	background-color: #CCC;
+}
+.megamenubtn {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	color: #FAFAFA;
+	background-color: #AAA;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0.5em 0 0.5em 0;
+	border: none;
+	font-size: 1em;
+	line-height: 1.5em;
+	cursor: pointer;
+	width: 100%;
+}
+
+@media screen and (max-width: 60em) {
+.column {
+	width: 100%;
+	height: auto;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="uoplogo"> <img src="images/uopqueenlogomono.svg" alt=""/></div>
+<div class="fullw">
+  <div class="navbar">
+    <div id="menuopen"> <span class="marginr"><a href="#" onclick="openmega();">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.08 170.08">
+        <title>burger</title>
+        <path class="svgwhite" d="M0,0H170.08V35.43H0ZM0,67.32H170.08v35.43H0Zm0,67.32H170.08v35.44H0Z"/>
+      </svg>
+      Menu
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.87 99.97">
+        <title>arrowdown</title>
+        <polygon class="svgwhite" points="154.84 0 84.94 69.9 15.03 0 0 15.03 84.94 99.97 169.87 15.03 154.84 0"/>
+      </svg>
+      </a></span> </div>
+    <div id="menuclose"> <span class="marginr"><a href="#" onclick="closemega();">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.08 170.08">
+        <title>burger</title>
+        <path class="svgwhite" d="M0,0H170.08V35.43H0ZM0,67.32H170.08v35.43H0Zm0,67.32H170.08v35.44H0Z"/>
+      </svg>
+      Menu
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169.87 99.97">
+        <title>arrowup</title>
+        <polygon class="svgwhite" points="84.94 0 0 84.94 15.03 99.97 84.94 30.07 154.84 99.97 169.87 84.94 84.94 0"/>
+      </svg>
+      </a></span> </div>
+    <span class="marginr">
+    <div class="searchbox">Search</div><button id="search-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.08 170.08">
+      <title>search</title>
+      <path class="svgwhite" d="M106.3,67.32a39,39,0,1,1-39-39,39,39,0,0,1,39,39m59.63,78.56-42.06-42a67.34,67.34,0,1,0-20,20l42.05,42.06a14.18,14.18,0,0,0,20.05-20.05"/>
+    </svg>
+    </button>
+    </span><span class="marginr"><a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.65 170.08">
+      <title>login</title>
+      <path class="svgwhite" d="M67.32,78a39,39,0,1,0-39-39,39,39,0,0,0,39,39m67.33,67.32h0A67.33,67.33,0,0,0,0,145.27v24.81H134.65Z"/>
+    </svg>
+    Login</a></span></div>
+</div>
+<div id="megamenu">
+  <div class="row">
+    <div class="column">
+      <h3>Study</h3>
+      <a href="#">Courses</a> <a href="#">Subject areas</a> <a href="#">Undergraduate</a> <a href="#">Postgraduate</a> <a href="#">Postgraduate research</a> <a href="#">CPD</a> <a href="#">Student life</a> <a href="#" class="megamenubtn">Book an open day</a> <a href="#" class="megamenubtn">Request a prospectus</a> </div>
+    <div class="column">
+      <h3>Research</h3>
+      <a href="#">Institutes</a> <a href="#">Research areas</a> <a href="#">Impact</a> <a href="#">Expertise</a> <a href="#">Postgraduate research</a> <a href="#" class="megamenubtn">Search the directory</a> <a href="#" class="megamenubtn">Search publications</a> </div>
+    <div class="column">
+      <h3>International</h3>
+      <a href="#">Application advice</a> <a href="#">Exchange opportunities</a> <a href="#">Country guides</a> <a href="#">Advice for international students</a> <a href="#">International partners</a> </div>
+    <div class="column">
+      <h3>Business</h3>
+      <a href="#">CPD</a> <a href="#">Degree apprenticeships</a> <a href="#">Expertise</a> <a href="#" class="megamenubtn">Collaborate</a> </div>
+    <div class="column">
+      <h3>About</h3>
+      <a href="#">Strategy, mission, values, etc.</a> <a href="#">Faculties, schools and departments</a> <a href="#">Governance</a> <a href="#">Visit</a> <a href="#">Living here</a> <a href="#">Working here</a> <a href="#" class="megamenubtn">Contact</a> </div>
+  </div>
+</div>
+<img src="images/1280x720gamechanger.jpg" alt=""/> 
+<script>
+function openmega() {
+	document.getElementById("menuopen").style.display="none";
+	document.getElementById("menuclose").style.display="inline-block";
+	document.getElementById("megamenu").style.display="block";
+}
+function closemega() {
+	document.getElementById("menuclose").style.display="none";
+	document.getElementById("menuopen").style.display="inline-block";
+	document.getElementById("megamenu").style.display="none";
+}	
+</script>
+</body>
+</html>
