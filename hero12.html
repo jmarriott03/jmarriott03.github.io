@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7w-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FFF;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+	max-width: 28em;
+	margin-left: 0;
+}
+a {
+	color: #00E;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+ul {
+	padding: 0 1em;
+}
+li {
+	margin: 1em;
+	padding: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.imagebox {
+	max-width: 60em;
+	overflow: hidden;
+}
+.imagebox > p {
+	width: 33%;
+	float: left;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 1em;
+	clear: none;
+}
+.imagebox > p:nth-child(3n+1) {
+	clear: both;
+}
+.imagebox img {
+	padding-bottom: 0.5rem;
+}
+.credit {
+	font-size: 0.75rem;
+	width: 100%;
+	float: left;
+}
+article {
+	max-width: 60em;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+article img {
+	margin-top: 2em;
+}
+.hero {
+	width: 100%;
+	margin: 0 0 1em 0;
+}
+.fifty {
+	width: 50%;
+	float: left;
+	padding: 1em 0 0 1em;
+	margin: 0;
+}
+.fifty:first-of-type {
+	padding: 1em 1em 0 0;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: center;
+	color: #FFF;
+	text-decoration: none;
+}
+.openday {
+	background-color: #00E;
+	margin-bottom: 1em;
+}
+.ucas {
+	background-color: #E32438;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 1.5em 0;
+	clear: both;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid;
+}
+.quotestyle {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+	font-weight: bold;
+}
+.heroimage {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 1em;
+	background-color: #111;
+}
+.heroimage img {
+	opacity: 0.5;
+}
+.herotext {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 25%;
+	z-index: 2;
+	margin: 0;
+	color: #FFF;
+	font-size: calc(1rem + 0.4vw);
+	line-height: 1.5em;
+	width: 50%;
+	padding: 1em 1em 0 1em;
+}
+.herotext h2 {
+	font-size: calc(1rem + 2vw);
+	line-height: 1.25em;
+	margin-bottom: 1rem;
+}
+.herotext p {
+	max-width: 30em;
+	margin: 0 0 1em 0;
+}
+.herotext a {
+	text-decoration: none;
+}
+.tags a {
+	margin-right: 1em;
+	white-space: nowrap;
+}
+.overflowtext {
+	position: relative;
+	width: 100%;
+	background-color: transparent;
+	left: 0;
+	margin: 0;
+	padding: 1em 1em 0.1em 1em;
+	font-size: 1em;
+	line-height: 1.5em;
+	transform: translateY(0);
+}
+.overflowtext > h2 {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1.25em;
+	text-transform: none;
+}
+.leftbutton {
+	left: 0;
+}
+.rightbutton {
+	right: 0;
+}
+.leftbutton, .rightbutton {
+	position: absolute;
+	top: 50%;
+	text-shadow: none;
+	border: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	font-size: calc(1em + 2vw);
+	margin-top: -2em;
+	padding: calc(1em + 1vw) calc(0.5em + 0.5vw);
+	cursor: pointer;
+	outline: none;
+	font-family: 'icon', sans-serif;	
+	font-weight: 400;
+	text-align: center;
+}
+.btn {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: left;
+	color: #FFF;
+	background-color: #06C;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 1em;
+	border: none;
+	font-size: 1em;
+	line-height: 1.5em;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.btn:hover {
+	background-color: #004DB3;
+}
+</style>
+<script>
+$(window).on("load resize",function(e){
+	var contentHeight = $('.herotext').height()+32;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight < containerHeight) {
+		$( ".herotext" ).removeClass( "overflowtext" );
+	}
+	var contentHeight = $('.herotext').height()+32;
+	var containerHeight = $('.heroimage').height();
+	if(contentHeight > containerHeight) {
+		$( ".herotext" ).addClass( "overflowtext" );
+	}
+});
+</script>
+</head>
+<body>
+<div class="heroimage"><img src="images/1280x720michaeljarvis2.jpg" alt="" />
+  <div class="herotext">
+    <h2>The university of pioneers, advancing knowledge and transforming lives</h2>
+    <p>Our work on a vaccine designed to prevent outbreaks similar to the <span class="nowrap">COVID-19</span> pandemic.</p>
+    <p><a href="#" class="btn">Read more about our research into vaccination.</a></p>
+  </div>
+  <button class="leftbutton" onclick="plusDivs(-1)">P</button>
+  <button class="rightbutton" onclick="plusDivs(1)">N</button>
+</div>
+</body>
+</html>
