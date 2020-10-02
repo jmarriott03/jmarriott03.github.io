@@ -1,67 +1,142 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <!--CODE BY JAMIE MARRIOTT-->
 
 <head>
 <meta charset="UTF-8">
-<meta name = "viewport" content = "width = device-width">
-<meta name="viewport" content="initial-scale=1">
-<link rel="icon" href="images/favicon.png">
-<link rel="apple-touch-icon" href="images/appletouchicon.png">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
-<style type="text/css">
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	text-decoration: none;
+	line-height: 1em;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #EEE;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
 .item1 {
-	grid-area: header;
+	grid-area: item1;
 }
 .item2 {
-	grid-area: menu;
+	grid-area: item2;
 }
 .item3 {
-	grid-area: main;
+	grid-area: item3;
 }
 .item4 {
-	grid-area: right;
+	grid-area: item4;
 }
 .item5 {
-	grid-area: footer;
+	grid-area: item5;
 }
 .grid-container {
 	display: grid;
-	grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
-	grid-gap: 10px;
-	background-color: #2196F3;
-	padding: 10px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-areas: 'item1 item1' 'item2 item3' 'item4 item5';
+	grid-gap: 1em;
+	padding: 1em;
 }
 .grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
-	text-align: center;
-	padding: 20px 0;
-	font-size: 30px;
+	margin-top: 0;
+	padding: 1em;
+	background-color: #FFF;
 }
 
-@media screen and (max-width: 599px) {
+/*
+Media screen
+*/
+
+@media screen and (max-width: 40em) {
 .grid-container {
-	grid-template-areas: 'header' 'menu' 'main' 'right' 'footer';
+	grid-template-columns: none;
+	grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
 }
 }
 
-@media screen and (min-width: 600px) and (min-width: 899px) {
+@media screen and (min-width: 60em) {
 .grid-container {
-	grid-template-areas: '. header header header .' 'menu menu menu menu menu ' '. main main main right' 'footer footer footer footer right';
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-areas: 'item1 item1 item2 item3' 'item1 item1 item4 item5';
 }
 }
 </style>
 </head>
 <body>
-<h1>Grid Layout</h1>
-<p>This grid layout contains six columns and three rows:</p>
 <div class="grid-container">
-  <div class="item1">Header</div>
-  <div class="item2">Menu</div>
-  <div class="item3">Main</div>
-  <div class="item4">Right</div>
-  <div class="item5">Footer</div>
+  <div class="item1"> <a href="#"><img src="images/1280x720pioneer1.jpg" alt=""/></a>
+    <h2><strong>The university of pioneers, advancing knowledge and transforming lives</strong></h2>
+    <p>Plymouth's history is the history of the world<br>
+      <a href="#">Explore human stories behind the pioneers</a></p>
+  </div>
+  <div class="item2"><a href="#"><img src="images/1280x720pioneer2.jpg" alt=""/></a>
+    <p><strong>Can Earth still support us?</strong><br>
+      <a href="#">What lies ahead for humankind?</a></p>
+  </div>
+  <div class="item3"><a href="#"><img src="images/1280x720pioneer3.jpg" alt=""/></a>
+    <p><strong>Pandemic prevention</strong><br>
+      <a href="#">See the science behind the fight</a></p>
+  </div>
+  <div class="item4"><a href="#"><img src="images/1280x720pioneer4.jpg" alt=""/></a>
+    <p><strong>Saving lives</strong><br>
+      <a href="#">Meet graduates changing the world</a></p>
+  </div>
+  <div class="item5"><a href="#"><img src="images/1280x720pioneer5.jpg" alt=""/></a>
+    <p><strong>Oceans in an era of environmental crisis</strong><br>
+      <a href="#">Venture into a new age</a></p>
+  </div>
 </div>
 </body>
 </html>
