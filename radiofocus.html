@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	line-height: 1em;
+	font-weight: normal;
+	color: #666;
+	font-size: 2em;
+	color: darkorange;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FFF;
+	margin: 0;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #06C;
+	text-decoration: underline;
+}
+.visited {
+	color: #639;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.textbox {
+	max-width: 40em;
+	padding: 1em;
+	overflow: hidden;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+</style>
+</head>
+<body>
+<div class="textbox">
+  <h1>Display Radio Buttons</h1>
+  <form action="/action_page.php">
+    <p>Please select your gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+    <br>
+    <p>Please select your age:</p>
+    <input type="radio" id="age1" name="age" value="30">
+    <label for="age1">0 - 30</label>
+    <br>
+    <input type="radio" id="age2" name="age" value="60">
+    <label for="age2">31 - 60</label>
+    <br>
+    <input type="radio" id="age3" name="age" value="100">
+    <label for="age3">61 - 100</label>
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <p><a href="#">This is a link</a></p>
+  <p><a href="#">This is another link</a></p>
+</div>
+</body>
+</html>
