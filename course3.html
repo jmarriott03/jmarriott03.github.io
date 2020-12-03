@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style type="text/css">
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	text-decoration: none;
+	line-height: 1em;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 1em;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #fff;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: 700;
+}
+a {
+	color: #00e;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #90f;
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-weight: 400i;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+.staffquote {
+	padding: 1em 1em 0 4.25em;
+	position: position-relative;
+	max-width: 34em;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0 0 1em;
+	border-radius: 50%;
+}
+.articlecontent {
+	max-width: 40em;
+	padding: 2em;
+	margin-top: 0;
+}
+.smalltext {
+	font-size: 14px;
+}
+.quoteline {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+}
+.imagebox {
+	max-width: 960px;
+	overflow: hidden;
+	position: relative;
+}
+.hero {
+	margin-top: 0;
+}
+.herotext {
+	margin: 0;
+	background: rgba(0,0,0,0.8);
+	padding: 2em;
+	position: absolute;
+	color: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 50%;
+}
+.herotext a {
+	color: #eee;
+}
+.black {
+	width: 100%;
+ overflow-hidden;
+	color: #eee;
+	background-color: #111;
+	margin: 0;
+}
+.black a {
+	color: #eee;
+}
+.fixed1 {
+	left: 0;
+	top: 0;
+}
+.fixed2 {
+	right: 0;
+	top: 0;
+}
+.fixed3 {
+	right: 0;
+	bottom: 0;
+}
+.fixed4 {
+	left: 0;
+	bottom: 0;
+}
+.fifty {
+	width: 50%;
+	float: left;
+}
+.marginr {
+	margin-right: 1em;
+}
+.margintopno {
+	margin-top: 0;
+}
+.-social-facebook a:before {
+	width: 1em;
+	text-align: center;
+	padding-right: 0.25em;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	content: "f";
+	display: inline-block;
+}
+.-social-twitter a:before {
+	width: 1em;
+	text-align: center;
+	padding-right: 0.25em;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	content: "t";
+	display: inline-block;
+}
+.-social-instagram a:before {
+	width: 1em;
+	text-align: center;
+	padding-right: 0.25em;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	content: "i";
+	display: inline-block;
+}
+.-social-linkedin a:before {
+	width: 1em;
+	text-align: center;
+	padding-right: 0.25em;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	content: "l";
+	display: inline-block;
+}
+.-social-share a:before {
+	width: 1em;
+	text-align: center;
+	padding-right: 0.25em;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	content: "S";
+	display: inline-block;
+}
+.nodec {
+	text-decoration: none;
+}
+.btn {
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	text-align: center;
+	color: #FAFAFA;
+	background-color: #06C;
+	text-decoration: none;
+	display: inline-block;
+	margin:0 1em 1em 0;
+	border: none;
+	font-size: 1em;
+	line-height: 1.5em;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.btn:focus {
+	outline: 2px solid #111;
+}
+.btnhov:hover {
+	background-color: #004DB3;
+}
+.ucasbtnhov:hover {
+	background-color: #E61A1A;
+}
+.unibuddyhov:hover {
+	background-color: #04bbb7;
+}
+.socialmedia a {
+	display: inline-block;
+	margin: 0 1em 0 0;
+}
+.-c-warning {
+	color: #F33;
+}
+.-c-secondary {
+	background-color: #39F;
+}
+.-c-ucas {
+	background-color: #F33;
+}
+.-c-unibuddy {color: #111;
+	background-color: #01d4cf;
+}
+.-c-dark1 {
+	color: #111!important;
+	background-color: #FAFAFA;
+}
+.-c-dark2 {
+	color: #111!important;
+	background-color: #CCC;
+}
+	.strongunderline p {
+		/*border-bottom: 2px solid #FFF;*/
+		line-height: 1.2em;
+	}
+/*
+Media screen
+*/
+
+@media (max-width: 50em) {
+.herotext {
+	position: inherit;
+	background-color: #111;
+	max-width: 100%;
+	left: 0;
+}
+.fifty {
+	width: 100%;
+}
+}
+</style>
+</head>
+<body>
+	<div class="articlecontent">
+		<p>/ <a href="#">Home</a> / <a href="#">Courses</a> / <a href="#">Undergraduate</a> / BA (Hons) Fine Art</p>
+  <p><a href="#">School of Art, Design and Architecture</a></p><h2>BA (Hons) Fine Art</h2>
+   
+</div>
+<div class="black">
+  <div class="imagebox">
+    <div class="hero"><img src="images/profile1280x720-07.jpg" alt=""/>
+      <div class="herotext fixed2 strongunderline"><p>
+UCAS tariff<br>
+		  <strong>96 - 144</strong></p><p>
+UCAS course code<br>
+		  <strong>W100</strong></p><p>
+Institution code<br>
+		  <strong>P60</strong></p><p>
+Duration<br>
+		  <strong>3 years</strong></p><p>
+Course type<br>
+		  <strong>Full-time</strong></p><p>
+Location<br>
+<strong>Plymouth</strong>
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="articlecontent">
+	<p><a href="#" class="btn btnhov"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn -c-unibuddy unibuddyhov"><span class="iconfont" aria-hidden="true">/</span> Unibuddy chat</a><a href="#" class="btn -c-ucas ucasbtnhov">Apply vis UCAS</a></p>
+    <p>Realise your artistic potential. Guided by practising artists, you’ll develop creative approaches to making artwork, through opportunities to explore different techniques and technologies in dedicated fine art studios and specialist workshops. You will expand your art practice through a vibrant mix of studio work, and creative and critical thinking, which will deepen your understanding and refine your skills, to enable you to contribute to the expanding field of contemporary fine art.</p><p>With excellent international links offering opportunities to travel and flexible placements, you’ll have everything you need to practice independently as an artist beyond graduation. Graduates in fine art find employment in a diverse range of careers, from practicing artists to art education, working in art galleries to art therapy. We’ll help you fulfil your career aspirations and train for your future.</p>
+</div>
+</body>
+</html>
