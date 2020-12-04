@@ -27,37 +27,38 @@
 html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	margin: 0;
-	font-size: 1em;
+	font-size: 100%;
 	font-family: sans-serif;
+	font-weight: normal;
 	line-height: 1.5em;
 	color: #111;
-	background-color: #fff;
+	background: #FFF;
+	margin: 0;
 }
 h1 {
 	font-size: 2em;
 	line-height: 1.25em;
-	font-weight: 700;
+	font-weight: bold;
 }
 h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
-	font-weight: 700;
+	font-weight: bold;
 }
 a {
-	color: #00e;
+	color: #00E;
 }
 p {
 	clear: both;
 }
 .visited {
-	color: #90f;
+	color: #551A8B;
 }
 strong {
-	font-weight: 700;
+	font-weight: bold;
 }
 em {
-	font-weight: 400i;
+	font-style: italic;
 }
 img {
 	border: 0;
@@ -99,14 +100,14 @@ img {
 	margin-top: 0;
 }
 .smalltext {
-	font-size: 14px;
+	font-size: 0.875em;
 }
 .quoteline {
 	border-left: 0.25em solid;
 	padding-left: 0.5em;
 }
 .imagebox {
-	max-width: 960px;
+	max-width: 60em;
 	overflow: hidden;
 	position: relative;
 }
@@ -118,7 +119,7 @@ img {
 	background: rgba(0,0,0,0.8);
 	padding: 2em;
 	position: absolute;
-	color: #fff;
+	color: #FFF;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -220,11 +221,11 @@ img {
 	padding: 0.5em 0.75em;
 	border-radius: 0.25em;
 	text-align: center;
-	color: #FAFAFA;
+	color: #fff;
 	background-color: #06C;
 	text-decoration: none;
 	display: inline-block;
-	margin:0 1em 1em 0;
+	margin: 0 1em 1em 0;
 	border: none;
 	font-size: 1em;
 	line-height: 1.5em;
@@ -241,7 +242,7 @@ img {
 	background-color: #E61A1A;
 }
 .unibuddyhov:hover {
-	background-color: #04bbb7;
+	background-color: #01D4CF;
 }
 .socialmedia a {
 	display: inline-block;
@@ -256,21 +257,18 @@ img {
 .-c-ucas {
 	background-color: #F33;
 }
-.-c-unibuddy {color: #111;
-	background-color: #01d4cf;
+.-c-unibuddy {
+	border: 2px solid #01D4CF;
+	background-color: #FFF;
 }
-.-c-dark1 {
-	color: #111!important;
-	background-color: #FAFAFA;
+.-c-unibuddy img {
+	height: 1.5em;
 }
-.-c-dark2 {
-	color: #111!important;
-	background-color: #CCC;
+.strongunderline p {
+	/*border-bottom: 2px solid #FFF;*/
+	line-height: 1.2em;
 }
-	.strongunderline p {
-		/*border-bottom: 2px solid #FFF;*/
-		line-height: 1.2em;
-	}
+
 /*
 Media screen
 */
@@ -289,35 +287,35 @@ Media screen
 </style>
 </head>
 <body>
-	<div class="articlecontent">
-		<p>/ <a href="#">Home</a> / <a href="#">Courses</a> / <a href="#">Undergraduate</a> / BA (Hons) Fine Art</p>
-  <p><a href="#">School of Art, Design and Architecture</a></p><h2>BA (Hons) Fine Art</h2>
-   
+<div class="articlecontent">
+  <p>/ <a href="#">Home</a> / <a href="#">Courses</a> / <a href="#">Undergraduate</a> / BA (Hons) Fine Art</p>
+  <p><a href="#">School of Art, Design and Architecture</a></p>
+  <h2>BA (Hons) Fine Art</h2>
 </div>
 <div class="black">
   <div class="imagebox">
     <div class="hero"><img src="images/profile1280x720-07.jpg" alt=""/>
-      <div class="herotext fixed2 strongunderline"><p>
-UCAS tariff<br>
-		  <strong>96 - 144</strong></p><p>
-UCAS course code<br>
-		  <strong>W100</strong></p><p>
-Institution code<br>
-		  <strong>P60</strong></p><p>
-Duration<br>
-		  <strong>3 years</strong></p><p>
-Course type<br>
-		  <strong>Full-time</strong></p><p>
-Location<br>
-<strong>Plymouth</strong>
-</p>
+      <div class="herotext fixed2 strongunderline">
+        <p> UCAS tariff<br>
+          <strong>96 - 144</strong></p>
+        <p> UCAS course code<br>
+          <strong>W100</strong></p>
+        <p> Institution code<br>
+          <strong>P60</strong></p>
+        <p> Duration<br>
+          <strong>3 years</strong></p>
+        <p> Course type<br>
+          <strong>Full-time</strong></p>
+        <p> Location<br>
+          <strong>Plymouth</strong> </p>
       </div>
     </div>
   </div>
 </div>
 <div class="articlecontent">
-	<p><a href="#" class="btn btnhov"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn -c-unibuddy unibuddyhov"><span class="iconfont" aria-hidden="true">/</span> Unibuddy chat</a><a href="#" class="btn -c-ucas ucasbtnhov">Apply vis UCAS</a></p>
-    <p>Realise your artistic potential. Guided by practising artists, you’ll develop creative approaches to making artwork, through opportunities to explore different techniques and technologies in dedicated fine art studios and specialist workshops. You will expand your art practice through a vibrant mix of studio work, and creative and critical thinking, which will deepen your understanding and refine your skills, to enable you to contribute to the expanding field of contemporary fine art.</p><p>With excellent international links offering opportunities to travel and flexible placements, you’ll have everything you need to practice independently as an artist beyond graduation. Graduates in fine art find employment in a diverse range of careers, from practicing artists to art education, working in art galleries to art therapy. We’ll help you fulfil your career aspirations and train for your future.</p>
+  <p><a href="#" class="btn btnhov"><span class="iconfont" aria-hidden="true">&amp;</span> Visit an open day</a><a href="#" class="btn -c-unibuddy unibuddyhov"><img src="images/unibuddy.svg" alt=""/></a><a href="#" class="btn -c-ucas ucasbtnhov">Apply vis UCAS</a></p>
+  <p>Realise your artistic potential. Guided by practising artists, you’ll develop creative approaches to making artwork, through opportunities to explore different techniques and technologies in dedicated fine art studios and specialist workshops. You will expand your art practice through a vibrant mix of studio work, and creative and critical thinking, which will deepen your understanding and refine your skills, to enable you to contribute to the expanding field of contemporary fine art.</p>
+  <p>With excellent international links offering opportunities to travel and flexible placements, you’ll have everything you need to practice independently as an artist beyond graduation. Graduates in fine art find employment in a diverse range of careers, from practicing artists to art education, working in art galleries to art therapy. We’ll help you fulfil your career aspirations and train for your future.</p>
 </div>
 </body>
 </html>
