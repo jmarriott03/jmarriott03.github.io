@@ -111,18 +111,6 @@ img {
 	margin: 0;
 	padding: 1em;
 }
-.heroimage {
-	width: calc(100% - 30em);
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.herotext {
-	width: 30em;
-	float: left;
-	margin: 0;
-	padding: 1em;
-}
 .blackbox {
 	width: 100%;
 	color: #FFF;
@@ -142,6 +130,11 @@ img {
 .quoteline {
 	border-left: 0.25em solid;
 	padding-left: 0.5em;
+}
+.imagebox {
+	max-width: 60em;
+	overflow: hidden;
+	position: relative;
 }
 .black {
 	width: 100%;
@@ -180,16 +173,15 @@ img {
 .btn:focus {
 	outline: 2px solid #111;
 }
-.btngrey {
-	background-color: #666;
-}
-
+	.btngrey {
+		background-color: #666;
+	}
 /*
 Media screen
 */
 
-@media (max-width: 50em) {
-.fifty, .heroimage, .herotext {
+@media (max-width: 40em) {
+.fifty {
 	width: 100%;
 }
 }
@@ -200,8 +192,16 @@ Media screen
   <p>/ <a href="#">Home</a> / <a href="#">Courses</a> / <a href="#">Postgraduate</a> / MA Acting</p>
 </div>
 <div class="black">
-  <div class="heroimage"> <img src="images/1280x720sleep.jpg" alt=""/> </div>
-  <div class="herotext">
+  <div class="imagebox"> <img src="images/1280x720sleep.jpg" alt=""/> </div>
+</div>
+<div class="articlecontent">
+  <div class="fifty">
+    <p><a href="#">School of Humanities and Performing Arts</a></p>
+    <h1>MA Acting</h1>
+    <p>MA Acting is a full time programme that works for you with innovative online modules and intensive advanced acting workshops culminating in a Solo Showcase supported by Theatre Royal Plymouth.</p>
+    <p>Integrated classes with final year students of our Equity and Spotlight approved BA Acting programme enable intergenerational collaboration and make MA Acting students part of the rich cultural life of our vibrant, diverse and accessible Plymouth Conservatoire community.</p>
+  </div>
+  <div class="fifty">
     <p><a href="#" class="btn btngrey">Register for open day</a><a href="#" class="btn btngrey">Unibuddy</a><a href="#" class="btn">Apply now</a></p>
     <p> Duration<br>
       <strong>1 year</strong></p>
@@ -212,12 +212,6 @@ Media screen
   </div>
 </div>
 <div class="articlecontent">
-  <div class="fifty">
-    <p><a href="#">School of Humanities and Performing Arts</a></p>
-    <h1>MA Acting</h1>
-    <p>MA Acting is a full time programme that works for you with innovative online modules and intensive advanced acting workshops culminating in a Solo Showcase supported by Theatre Royal Plymouth.</p>
-    <p>Integrated classes with final year students of our Equity and Spotlight approved BA Acting programme enable intergenerational collaboration and make MA Acting students part of the rich cultural life of our vibrant, diverse and accessible Plymouth Conservatoire community.</p>
-  </div>
   <div class="fifty">
     <div class="blackbox"><a href="#"><img src="images/640x640conservatorire.jpg" alt=""/></a>
       <h2>Join Plymouth Conservatoire</h2>

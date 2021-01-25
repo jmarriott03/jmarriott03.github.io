@@ -136,6 +136,16 @@ img {
 	overflow: hidden;
 	position: relative;
 }
+.herotext {
+	margin: 0;
+	background: rgba(0,0,0,0.8);
+	padding: 2em;
+	position: absolute;
+	color: #FFF;
+	max-width: 30em;
+	top: 0;
+	right: 0;
+}
 .black {
 	width: 100%;
 	overflow: hidden;
@@ -173,14 +183,21 @@ img {
 .btn:focus {
 	outline: 2px solid #111;
 }
-	.btngrey {
-		background-color: #666;
-	}
+.btngrey {
+	background-color: #666;
+}
+
 /*
 Media screen
 */
 
-@media (max-width: 40em) {
+@media (max-width: 60em) {
+.herotext {
+	position: inherit;
+	background-color: #111;
+	max-width: 100%;
+	left: 0;
+}
 .fifty {
 	width: 100%;
 }
@@ -192,7 +209,17 @@ Media screen
   <p>/ <a href="#">Home</a> / <a href="#">Courses</a> / <a href="#">Postgraduate</a> / MA Acting</p>
 </div>
 <div class="black">
-  <div class="imagebox"> <img src="images/1280x720sleep.jpg" alt=""/> </div>
+  <div class="imagebox"> <img src="images/1280x720sleep.jpg" alt=""/>
+    <div class="herotext">
+      <p><a href="#" class="btn btngrey">Register for open day</a><a href="#" class="btn btngrey">Unibuddy</a><a href="#" class="btn">Apply now</a></p>
+      <p>Duration<br>
+        <strong>1 year</strong></p>
+      <p>Course type<br>
+        <strong>Full-time, Part-time route available</strong></p>
+      <p>Location<br>
+        <strong>Plymouth</strong></p>
+    </div>
+  </div>
 </div>
 <div class="articlecontent">
   <div class="fifty">
@@ -201,17 +228,6 @@ Media screen
     <p>MA Acting is a full time programme that works for you with innovative online modules and intensive advanced acting workshops culminating in a Solo Showcase supported by Theatre Royal Plymouth.</p>
     <p>Integrated classes with final year students of our Equity and Spotlight approved BA Acting programme enable intergenerational collaboration and make MA Acting students part of the rich cultural life of our vibrant, diverse and accessible Plymouth Conservatoire community.</p>
   </div>
-  <div class="fifty">
-    <p><a href="#" class="btn btngrey">Register for open day</a><a href="#" class="btn btngrey">Unibuddy</a><a href="#" class="btn">Apply now</a></p>
-    <p> Duration<br>
-      <strong>1 year</strong></p>
-    <p> Course type<br>
-      <strong>Full-time, Part-time route available</strong></p>
-    <p> Location<br>
-      <strong>Plymouth</strong> </p>
-  </div>
-</div>
-<div class="articlecontent">
   <div class="fifty">
     <div class="blackbox"><a href="#"><img src="images/640x640conservatorire.jpg" alt=""/></a>
       <h2>Join Plymouth Conservatoire</h2>
