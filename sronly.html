@@ -65,7 +65,7 @@ img {
 	margin: 0;
 }
 .textbox {
-	max-width: 40em;
+	max-width: 60em;
 	padding: 1em;
 	overflow: hidden;
 }
@@ -93,10 +93,14 @@ img {
 </head>
 <body>
 <div class="textbox">
-  <h2>Share with text visible</h2>
-  <p><a href="#"><span class="iconfont">S</span> Share</a></p>
-  <h2>Share with aria-hidden="true" and class "sr-only"</h2>
-  <p><a href="#"><span class="iconfont" aria-hidden="true">S</span> <span class="sr-only">Share</span></a></p>
+  <h2>Search link with text visible</h2>
+  <p><a href="#"><span class="iconfont">B</span> Search</a></p>
+  <h2>Search link with aria-hidden="true" and class "sr-only"</h2>
+  <p><a href="#"><span class="iconfont" aria-hidden="true">B</span> <span class="sr-only">Search</span></a></p>
+	<h2>Search button with text visible</h2>
+	<button type="button" onclick="alert('Hello world!')"><span class="iconfont">B</span> Search</button>
+	<h2>Search button with aria-hidden="true" and class "sr-only"</h2>
+	<button type="button" onclick="alert('Hello world!')"><span class="iconfont" aria-hidden="true">B</span> <span class="sr-only">Search</span></button>
 </div>
 </body>
 </html>
