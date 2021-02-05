@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+.socialmedia a {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	font-size: 1em;
+	margin-right: 1em;
+	text-decoration: none;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FFF;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+	padding: 1rem 0 0 1rem;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.grid-container {
+	display: grid;
+	/*grid-template-columns: repeat(3, 1fr);*/
+	grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
+	grid-column-gap: 0;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 80em;
+	grid-gap: 0;
+}
+.grid-item {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	max-width: 38em;
+}
+.grid-item > div {
+	width: 100%;
+}
+.grid-item p {
+	margin: 1em;
+}
+.share {
+	margin-top: 0;
+	font-size: 0.875em;
+	line-height: 1.5em;
+}
+.share p {
+	margin: 0 1em 1em 1em;
+}
+.tags a {
+	margin-right: 0.5em;
+}
+.quoteimage {
+	padding: 0 1em 0 3em;
+	position: relative;
+	width: 100%;
+}
+.quoteimage img {
+	left: 0;
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.25em 0 0 1em;
+	border-radius: 50%;
+}
+.quoteline {
+	border-left: 0.25em solid;
+	padding-left: 0.5em;
+}
+.nomargin {
+	margin: 0;
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+.list {
+	list-style: none;
+	padding: 0 1em 1em 1em;
+	margin: 0;
+}
+.list li {
+	margin-top: 1em;
+}
+.fullw {
+	width: 100%;
+	color: #FFF;
+	background-color: #111;
+	overflow: hidden;
+	margin-top: 0;
+}
+.fullw a {
+	color: #FFF;
+	background-color: #111;
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+}
+}
+</style>
+</head>
+<body>
+<div class="fullw">
+  <div class="grid-container">
+    <div class="grid-item">
+      <div>
+        <h2>Column 01</h2>
+        <ul class="list">
+          <li><a href="#">Link 01 something</a></li>
+          <li><a href="#">Link 02 something</a></li>
+          <li><a href="#">Link 03 something</a></li>
+          <li><a href="#">Link 04 something</a></li>
+          <li><a href="#">Link 05 something</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div>
+        <h2>Column 02</h2>
+        <ul class="list">
+          <li><a href="#">Link 06 something</a></li>
+          <li><a href="#">Link 07 something</a></li>
+          <li><a href="#">Link 08 something</a></li>
+          <li><a href="#">Link 09 something</a></li>
+          <li><a href="#">Link 10 something</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div>
+        <h2>Column 03</h2>
+        <ul class="list">
+          <li><a href="#">Link 11 something</a></li>
+          <li><a href="#">Link 12 something</a></li>
+          <li><a href="#">Link 13 something</a></li>
+          <li><a href="#">Link 14 something</a></li>
+          <li><a href="#">Link 15 something</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div>
+        <ul class="list">
+          <li>Address line 01<br>
+            Address line 02<br>
+            Address line 03<br>
+            Address line 04</li>
+          <li><a href="#">Popular links 01</a></li>
+          <li><a href="#">Popular links 02</a></li>
+          <li><a href="#">Popular links 03</a></li>
+          <li><a href="#">Popular links 04</a></li>
+          <li>Logo 01<br>
+            Logo 02</li>
+          <li><a href="#">Social media</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
