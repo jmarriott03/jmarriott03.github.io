@@ -16,6 +16,10 @@
 	font-family: 'icon', sans-serif;
 	font-weight: normal;
 	line-height: 1em;
+	width: 1em;
+	display: inline-block;
+	text-align: center;
+	margin: 0 0.25em 0 0;
 }
 * {
 	margin: 0 auto;
@@ -121,36 +125,6 @@ section {
 	width: 8em;
 	border-radius: 50%;
 }
-.-social-location:before {
-	width: 1em;
-	text-align: center;
-	padding-right: 0.5em;
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	line-height: 1em;
-	content: "(";
-	display: inline-block;
-}
-.-social-telephone:before {
-	width: 1em;
-	text-align: center;
-	padding-right: 0.5em;
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	line-height: 1em;
-	content: "0";
-	display: inline-block;
-}
-.-social-email:before {
-	width: 1em;
-	text-align: center;
-	padding-right: 0.5em;
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	line-height: 1em;
-	content: "/";
-	display: inline-block;
-}
 
 /*
 Media screen
@@ -174,9 +148,9 @@ Media screen
     <h2 class="nomargin">Professor Camille Parmesan</h2>
     <p>Prof: NMA Chair in Public Understanding of Marine Science &amp; Human Health</p>
     <p><a href="#">School of Biological and Marine Sciences (Faculty of Science and Engineering)</a></p>
-    <p class="-social-location">A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
-      <span class="-social-telephone"><a href="#">+44 1752 584993</a></span><br>
-      <span class="-social-email"><a href="#">camille.parmesan@plymouth.ac.uk</a></span></p>
+    <p><span class="iconfont" aria-hidden="true">&#40;</span> A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
+      <span class="iconfont" aria-hidden="true">0</span> +44 1752 584993<br>
+      <span class="iconfont" aria-hidden="true">/</span> <a href="#">camille.parmesan@plymouth.ac.uk</a></p>
   </div>
 </section>
 <section>
