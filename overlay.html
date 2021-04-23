@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FFF;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h3 {
+	font-size: 1.17em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+h4 {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+h5 {
+	font-size: 0.83em;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+h6 {
+	font-size: 0.75em;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+ul, ol {
+	margin: 1em 0 0 0;
+	padding: 0 0 0 2em;
+}
+li {
+	padding: 0;
+	margin: 0.5em 0 0 0;
+}
+.nowrap {
+	white-space: nowrap
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+section {
+	max-width: 40em;
+	overflow: hidden;
+	padding: 1em;
+	margin-top: 0;
+}
+.divide {
+	border-bottom: 1px solid #111;
+}
+#overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(images/24x24.gif);
+	cursor: pointer;
+	opacity: 0;
+}
+</style>
+</head>
+<body>
+<div id="overlay" onclick="myFunction()"></div>
+<div class="divide">
+  <section>
+    <h1>Register for an applicant day (bold)</h1>
+    <p>Some context for the form</p>
+    <h2>Registrant details</h2>
+    <p><strong>Name:</strong> Firsty McLast<br>
+      <strong>Date of birth:</strong> 01/01/2001<br>
+      <strong>Student reference number:</strong> 123456789<br>
+      <strong>Course(s) applied for:</strong> BA (Hons) 3D Design, BSc (Hons) Computing</p>
+    <h2>You have registered for the following event dates:</h2>
+    <ul>
+      <li>Applicant Day: 3 Apr 2021</li>
+      <li>Applicant Day: 10 Oct 2021</li>
+    </ul>
+  </section>
+</div>
+<section>
+  <h1>Register for an applicant day (italic)</h1>
+  <p>Some context for the form</p>
+  <h2>Registrant details</h2>
+  <p><em>Name:</em> Firsty McLast<br>
+    <em>Date of birth:</em> 01/01/2001<br>
+    <em>Student reference number:</em> 123456789<br>
+    <em>Course(s) applied for:</em> BA (Hons) 3D Design, BSc (Hons) Computing</p>
+  <h2>You have registered for the following event dates:</h2>
+  <ul>
+    <li>Applicant Day: 3 Apr 2021</li>
+    <li>Applicant Day: 10 Oct 2021</li>
+  </ul>
+</section>
+<script>
+function myFunction() {
+  var x = document.getElementById("overlay");
+  if (x.style.opacity === "1") {
+    x.style.opacity = "0";
+  } else {
+    x.style.opacity = "1";
+  }
+}
+</script>
+</body>
+</html>
