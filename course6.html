@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+* {
+	box-sizing: border-box;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FFF;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h3 {
+	font-size: 1.17em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+h4 {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+h5 {
+	font-size: 0.83em;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+h6 {
+	font-size: 0.75em;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+ul, ol {
+	margin: 1em 0 0 0;
+	padding: 0 0 0 2em;
+}
+li {
+	padding: 0;
+	margin: 0.5em 0 0 0;
+}
+.nowrap {
+	white-space: nowrap
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.grid-container {
+	display: grid;
+	grid-template-areas: 'title' 'info' 'description';
+	grid-gap: 1em;
+	padding: 1em;
+	max-width: 60em;
+	margin: 0 auto;
+	background-color: #F06;
+}
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.grid-container > div > :first-child {
+	margin-top: 0;
+	color: orange;
+}
+.grid-container > div > :last-child {
+	margin: 0;
+	color: forestgreen;
+	background-color: #DDD;
+}
+.item1 {
+	grid-area: title;
+}
+.item2 {
+	grid-area: description;
+}
+.item3 {
+	grid-area: info;
+}
+.swatch1 {
+	color: #FFF !important;
+	background-color: #111 !important;
+	overflow: hidden;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 1.5em 0;
+	clear: both;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: center;
+	text-decoration: none;
+}
+.openday {
+	color: #FFF;
+	background-color: #00E;
+	margin-bottom: 1em;
+}
+.ucas {
+	color: #FFF;
+	background-color: #E32438;
+}
+
+@media screen and (min-width: 50em) {
+.grid-container {
+	grid-template-areas: 'title info' 'description info';
+}
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1">
+    <p><a href="#">School of Art, Design and Architecture</a></p>
+    <h2>BA (Hons) Fine Art</h2>
+  </div>
+  <div class="item2">
+    <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+    <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
+  </div>
+  <div class="item3 btn">
+    <p><a href="#" class="openday">Register for open day</a></p>
+    <table>
+      <tr>
+        <td>UCAS tariff</td>
+        <td ><strong>104</strong></td>
+      </tr>
+      <tr>
+        <td>UCAS course code</td>
+        <td><strong>W100</strong></td>
+      </tr>
+      <tr>
+        <td>Institution code</td>
+        <td><strong>P60</strong></td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td><strong>3 years</strong></td>
+      </tr>
+      <tr>
+        <td>Course type</td>
+        <td><strong>Full-time</strong></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td><strong>Plymouth</strong></td>
+      </tr>
+    </table>
+    <p><a href="#" class="ucas">Apply via UCAS</a></p>
+  </div>
+</div>
+	
+	
+
+</body>
+</html>
