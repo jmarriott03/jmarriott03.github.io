@@ -89,39 +89,6 @@ img {
 	padding: 0 1em 1em 1em;
 	margin-top: 0;
 }
-.panel {
-	padding: 0;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
-	margin: 0;
-	border-bottom: 1px solid #ccc;
-}
-.accordion a {
-	color : #111;
-	display: block;
-	text-decoration: none;
-	padding: 0.5em;
-}
-.accordionbox > p {
-	margin: 0;
-}
-.accordionbox > a {
-	margin: 0;
-}
-.accordion:before {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	content: 'O';
-	float: right;
-	padding: 0.333em 0.5em;
-}
-.accordion.active:before {
-	content: "M";
-}
-.panel > p {
-	margin: 0.5em 0.5em 1em 0.5em;
-}
 summary {
 	cursor: pointer;
 	padding: 0.5em;
@@ -194,21 +161,5 @@ details[open] summary::before {
     <p><a href="#"><strong>Module 3</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
   </details>
 </div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-	acc[i].onclick = function() {
-		this.classList.toggle("active");
-		var panel = this.nextElementSibling;
-		if (panel.style.maxHeight){
-			panel.style.maxHeight = null;
-		} else {
-			panel.style.maxHeight = panel.scrollHeight + "px";
-		}
-	}
-}
-</script>
 </body>
 </html>
