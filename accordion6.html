@@ -136,8 +136,9 @@ summary > * {
 details > p {
 	margin: 0.5em;
 }
-summary {
-	list-style: none
+details summary::-webkit-details-marker, details summary::marker {
+ display: none;
+ content: "";
 }
 details summary::before {
 	font-family: 'icon', sans-serif;
