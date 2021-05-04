@@ -10,7 +10,7 @@
 <style>
 @font-face {
 	font-family: icon;
-	src: url('fonts/icon7x-webfont.woff');
+	src: url('fonts/icon7t-webfont.woff');
 }
 .iconfont {
 	font-family: 'icon', sans-serif;
@@ -18,7 +18,11 @@
 	line-height: 1em;
 }
 * {
+	margin: 0 auto;
 	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
 }
 html, body {
 	-ms-text-size-adjust: 100%;
@@ -83,16 +87,8 @@ img {
 	width: 100%;
 	margin: 0;
 }
-ul, ol {
-	margin: 1em 0 0 0;
-	padding: 0 0 0 2em;
-}
-li {
-	padding: 0;
-	margin: 0.5em 0 0 0;
-}
 .nowrap {
-	white-space: nowrap
+	white-space: nowrap;
 }
 .ellipsis {
 	white-space: nowrap;
@@ -109,41 +105,45 @@ li {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-.grid-container {
-	display: grid;
-	grid-template-areas: 'title' 'info' 'description';
-	grid-gap: 1em;
-	padding: 1em;
+section {
 	max-width: 60em;
-	margin: 0 auto;
-	background-color: #F06;
-	grid-auto-rows: minmax(min-content, max-content);
-}
-.grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
-}
-.grid-container > div > :first-child {
-	margin-top: 0;
-	color: orange;
-}
-.grid-container > div > :last-child {
-	margin: 0;
-	color: forestgreen;
-	background-color: #DDD;
-}
-.item1 {
-	grid-area: title;
-}
-.item2 {
-	grid-area: description;
-}
-.item3 {
-	grid-area: info;
-}
-.swatch1 {
-	color: #FFF !important;
-	background-color: #111 !important;
 	overflow: hidden;
+}
+section img {
+	margin-bottom: 1em;
+}
+.w33 {
+	width: 33.333%;
+	float: left;
+	padding: 1em;
+	margin: 0;
+}
+.w50 {
+	width: 50%;
+	float: left;
+	padding: 1em;
+	margin: 0;
+}
+.w66 {
+	width: 66.666%;
+	float: left;
+	padding: 1em;
+	margin: 0;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: center;
+	color: #FAFAFA;
+	text-decoration: none;
+}
+.openday {
+	background-color: #00E;
+	margin-bottom: 1em;
+}
+.ucas {
+	background-color: #E32438;
 }
 table {
 	border-collapse: collapse;
@@ -156,41 +156,26 @@ td {
 	text-align: left;
 	border-bottom: 1px solid;
 }
-.btn a {
-	padding: 0.5em 0.75em;
-	float: left;
-	border-radius: 0.5em;
-	text-align: center;
-	text-decoration: none;
-}
-.openday {
-	color: #FFF;
-	background-color: #00E;
-	margin-bottom: 1em;
-}
-.ucas {
-	color: #FFF;
-	background-color: #E32438;
-}
 
-@media screen and (min-width: 50em) {
-.grid-container {
-	grid-template-areas: 'title info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info' 'description info';
+@media (max-width: 44em) {
+.imagebox > p {
+	width: 100%;
+}
+.w33, .w50, .w {
+	width: 100%;
 }
 }
 </style>
 </head>
 <body>
-<div class="grid-container">
-  <div class="item1">
-    <p><a href="#">School of Art, Design and Architecture</a></p>
+<section>
+  <div class="w50">
+    <p id="main" tabindex="-1"><a href="#">School of Art, Design and Architecture</a></p>
     <h2>BA (Hons) Fine Art</h2>
-  </div>
-  <div class="item2">
     <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
     <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
   </div>
-  <div class="item3 btn">
+  <div class="w50 btn">
     <p><a href="#" class="openday">Register for open day</a></p>
     <table>
       <tr>
@@ -220,6 +205,20 @@ td {
     </table>
     <p><a href="#" class="ucas">Apply via UCAS</a></p>
   </div>
-</div>
+</section>
+<section>
+  <div class="w33">
+    <p><a href="#"><img src="images/1280x720fineart1.jpg" alt=""/><strong>Portfolio advice</strong></a><br>
+      A portfolio is a collection of pieces of work that give us an insight into you as an artist. Your portfolio tells us a lot about about how you think and work as a practising artist. We've compiled some helpful tips, portfolio advice and ways to avoid unnecessary stress before you meet with us.</p>
+  </div>
+  <div class="w33">
+    <p><a href="#"><img src="images/1280x720fineart2.jpg" alt=""/><strong>Our facilities</strong></a><br>
+      With two-thirds of your time on the course spent in the studio, the facilities for you to create your own artwork need to be exceptional...and they are. From ceramics workshops to dedicated photography darkrooms, you’ll have access to the tools you need.</p>
+  </div>
+  <div class="w33">
+    <p><a href="#"><img src="images/1280x720fineart3.jpg" alt=""/><strong>Fine art and art history careers</strong></a><br>
+      Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships. </p>
+  </div>
+</section>
 </body>
 </html>
