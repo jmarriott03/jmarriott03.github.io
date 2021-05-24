@@ -85,7 +85,7 @@ img {
 	text-decoration: none;
 	vertical-align: top;
 	width: 100%;
-	margin: 0;
+	margin: 0 auto;
 }
 .nowrap {
 	white-space: nowrap;
@@ -159,6 +159,14 @@ td {
 .padl {
 	padding-left: 1rem;
 }
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	background-color: #EEE;
+}
+.hero {
+	max-width: 60em;
+}
 
 @media (max-width: 44em) {
 .imagebox > p {
@@ -171,7 +179,9 @@ td {
 </style>
 </head>
 <body>
-<img src="images/1280x720fineart4.jpeg" alt=""/>
+<div class="fullw">
+  <div class="hero"><img src="images/1280x720fineart4.jpeg" alt="" /></div>
+</div>
 <section>
   <div class="w50">
     <p><a href="#">School of Art, Design and Architecture</a></p>
