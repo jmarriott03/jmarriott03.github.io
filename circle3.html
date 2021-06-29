@@ -17,9 +17,18 @@
 	font-weight: normal;
 	line-height: 1em;
 }
+.socialmedia a {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	font-size: 1em;
+	margin-right: 1em;
+	text-decoration: none;
+}
 * {
 	margin: 0 auto;
 	box-sizing: border-box;
+	/*background-color:rgba(255,0,0,0.25);*/
 }
 * + * {
 	margin-top: 1em;
@@ -44,29 +53,7 @@ h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
 	font-weight: bold;
-}
-h3 {
-	font-size: 1.17em;
-	line-height: 1.5em;
-	font-weight: bold;
-}
-h4 {
-	font-size: 1em;
-	line-height: 1.5em;
-	font-weight: bold;
-}
-h5 {
-	font-size: 0.83em;
-	line-height: 1.5rem;
-	font-weight: bold;
-}
-h6 {
-	font-size: 0.75em;
-	line-height: 1.5rem;
-	font-weight: bold;
-}
-p {
-	clear: both;
+	padding: 1rem 0 0 1rem;
 }
 a {
 	color: #00E;
@@ -96,37 +83,28 @@ img {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-.nowrap {
-	white-space: nowrap;
+.grid-container {
+	display: grid;
+	/*grid-template-columns: repeat(3, 1fr);*/
+	grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
+	grid-column-gap: 1em;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 80em;
+	grid-gap: 2em;
 }
-.ellipsis {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin-top: 0;
+.grid-item {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 38em;
 }
 section {
-	max-width: 40em;
+	max-width: 80em;
 	overflow: hidden;
-	padding: 1em;
-}
-.codegrey {
-	background-color: #EEE;
-	padding: 1em;
 }
 .circle {
-	color: #FFF;
-	background-color: #111;
-	width: 3em;
-	height: 3em;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	float: left;
-	margin-bottom: 1em;
-}
-.circle2 {
 	color: #FFF;
 	background-color: #111;
 	width: 3em;
@@ -135,19 +113,39 @@ section {
 	border-radius: 50%;
 	text-align: center;
 	float: left;
-	margin-bottom: 1em;
+	margin: 0;
 }
-.mbot1 {
-	margin-bottom: 1em;
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+}
 }
 </style>
 </head>
 <body>
-<section>
-  <div class="circle">50</div>
-  <p class="mbot1"><strong>Circle1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <div class="circle2">1st</div>
-  <p class="mbot1"><strong>Circle2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</section>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="circle">1st</div>
+    <p class="mbot1"><strong>Circle1</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="grid-item">
+    <div class="circle">3rd</div>
+    <p class="mbot1"><strong>Circle2</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="grid-item">
+    <div class="circle">50</div>
+    <p class="mbot1"><strong>Circle3</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="grid-item">
+    <div class="circle">100</div>
+    <p class="mbot1"><strong>Circle4</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
 </body>
 </html>
