@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+}
+.socialmedia a {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	font-size: 1em;
+	margin-right: 1em;
+	text-decoration: none;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FFF;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+	padding: 1rem 0 0 1rem;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(14em, 1fr) );
+	grid-column-gap: 1em;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 80em;
+	grid-gap: 2em;
+}
+.grid-item {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+.circle img {
+	width: 6em;
+	height: 6em;
+	object-fit: contain;
+	margin-bottom: 1em;
+}
+.toggle > *, .toggle > * > *, .toggle > * > * > *, .toggle > * > * > * > *, .toggle > * > * > * > * > * {
+	background-color: rgba(255,0,0,0.25);
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+}
+}
+</style>
+</head>
+<body id="toggle">
+<div class="grid-container"> <a href="#">
+  <div class="grid-item">
+    <div class="circle"><img src="images/accolades01.svg" alt=""/></div>
+    <p>3 Queen's Anniversary Prizes, most recently for our leading work in microplastics</p>
+  </div>
+  </a> <a href="#">
+  <div class="grid-item">
+    <div class="circle"><img src="images/accolades06.svg" alt=""/></div>
+    <p>1st in world for marine, 23rd in world for sustainable development (THE Impact Rankings 2021)</p>
+  </div>
+  </a> <a href="#">
+  <div class="grid-item">
+    <div class="circle"><img src="images/accolades07.svg" alt=""/></div>
+    <p>UK top 25 for teaching quality (The Times and The Sunday Times 2021) </p>
+  </div>
+  </a> <a href="#">
+  <div class="grid-item">
+    <div class="circle"><img src="images/accolades09.svg" alt=""/></div>
+    <p>World top 25% for research citations (World University Rankings 2021)</p>
+  </div>
+  </a> <a href="#">
+  <div class="grid-item">
+    <div class="circle"><img src="images/accolades08.svg" alt=""/></div>
+    <p>Over 95% of our graduates are working or due to start employment or further study fifteen months after graduation (Graduate Outcomes Survey)*</p>
+  </div>
+  </a> </div>
+<script>
+	document.addEventListener("keyup", function(event) {
+		if (event.keyCode === 87) {
+			var element = document.getElementById("toggle");
+			element.classList.toggle("toggle");
+		}
+	});
+</script>
+</body>
+</html>
