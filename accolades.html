@@ -29,6 +29,9 @@
 	margin: 0 auto;
 	box-sizing: border-box;
 }
+* + * {
+	margin-top: 1em;
+}
 html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -88,6 +91,9 @@ img {
 	max-width: 80em;
 	grid-gap: 2em;
 }
+.grid-container > * {
+	margin: 0;
+}
 .grid-item {
 	margin: 0;
 	display: flex;
@@ -101,21 +107,9 @@ section {
 	width: 6em;
 	height: 6em;
 	object-fit: contain;
-	margin-bottom: 1em;
 }
 .toggle > *, .toggle > * > *, .toggle > * > * > *, .toggle > * > * > * > *, .toggle > * > * > * > * > * {
 	background-color: rgba(255,0,0,0.25);
-}
-
-/*
-Media screen
-*/
-
-@media (max-width: 40em) {
-.grid-container {
-	display: grid;
-	grid-template-columns: auto;
-}
 }
 </style>
 </head>
