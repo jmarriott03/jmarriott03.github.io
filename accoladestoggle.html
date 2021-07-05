@@ -28,7 +28,6 @@
 * {
 	margin: 0 auto;
 	box-sizing: border-box;
-	/*background-color:rgba(255,0,0,0.25);*/
 }
 * + * {
 	margin-top: 1em;
@@ -109,9 +108,12 @@ section {
 	height: 6em;
 	object-fit: contain;
 }
+.toggle > *, .toggle > * > *, .toggle > * > * > *, .toggle > * > * > * > *, .toggle > * > * > * > * > * {
+	background-color: rgba(255,0,0,0.25);
+}
 </style>
 </head>
-<body>
+<body id="toggle">
 <div class="grid-container"> <a href="#">
   <div class="grid-item">
     <div class="logobox"><img src="images/accolades01.svg" alt=""/></div>
@@ -138,5 +140,13 @@ section {
     <p>Over 95% of our graduates are working or due to start employment or further study fifteen months after graduation (Graduate Outcomes Survey)*</p>
   </div>
   </a> </div>
+<script>
+	document.addEventListener("keyup", function(event) {
+		if (event.keyCode === 87) {
+			var element = document.getElementById("toggle");
+			element.classList.toggle("toggle");
+		}
+	});
+</script>
 </body>
 </html>
