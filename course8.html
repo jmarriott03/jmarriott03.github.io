@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	text-decoration: none;
+	line-height: 1em;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #EEE;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+a {
+	color: #00E;
+}
+p {
+	clear: both;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+.item1 {
+	grid-area: item1;
+}
+.item2 {
+	grid-area: item2;
+}
+.item3 {
+	grid-area: item3;
+}
+.item4 {
+	grid-area: item4;
+}
+.item5 {
+	grid-area: item5;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-areas: 'item1 item1 item2' 'item3 item3 item3';
+	grid-gap: 1em;
+	padding: 1em;
+	max-width: 80em;
+}
+.grid-container > div {
+	margin-top: 0;
+	padding: 1em;
+	background-color: #FFF;
+	width: 100%;
+}
+.grid-container img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: calc(100% + 2em);
+	margin: -1em;
+	padding-bottom: 1em;
+}
+.btn a {
+	padding: 0.5em 0.75em;
+	float: left;
+	border-radius: 0.5em;
+	text-align: center;
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+}
+.openday {
+	color: #FFF;
+	background-color: #00E;
+}
+.ucas {
+	color: #FFF;
+	background-color: #E32438;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 3em 0 1em 0;
+	clear: both;
+	display: block;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid;
+}
+.maxw40 {
+	max-width: 40em;
+	float: left;
+}
+.mtop0 {
+	margin-top: 0;
+}
+	
+
+/*
+Media screen
+*/
+
+@media screen and (max-width: 120em) {
+.grid-container {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-areas: 'item1 item2' 'item1 item2' 'item3';
+}
+}
+
+@media screen and (max-width: 50em) {
+.grid-container {
+	grid-template-columns: none;
+	grid-template-areas: 'item1' 'item2' 'item3';
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="grid-container">
+    <div class="item1"><img src="images/1280x720fineart6.jpg" alt=""/>
+      <p><a href="#">School of Art, Design and Architecture</a></p>
+      <h1 class="mtop0">BA (Hons) Fine Art</h1>
+      <div class="maxw40">
+        <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+        <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
+      </div>
+    </div>
+    <div class="item2 btn">
+      <p><a href="#" class="openday">Register for open day</a></p>
+      <table>
+        <tr>
+          <td class="nowrap">UCAS course code</td>
+          <td><strong>104</strong></td>
+        </tr>
+        <tr>
+          <td>Institution code</td>
+          <td><strong>W100</strong></td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td><strong>3 years</strong></td>
+        </tr>
+        <tr>
+          <td>Assessment breakdown</td>
+          <td><strong><span class="nowrap">20% practicals</span><br>
+            <span class="nowrap">60% coursework</span><br>
+            <span class="nowrap">5% exams</span><br>
+            <span class="nowrap">15% other</span></strong></td>
+        </tr>
+        <tr>
+          <td>Course type</td>
+          <td><strong>Full time</strong></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><strong>Plymouth</strong></td>
+        </tr>
+      </table>
+      <p><a href="#" class="ucas">Apply via UCAS</a></p>
+    </div>
+    <div class="item3">main content</div>
+  </div>
+</main>
+</body>
+</html>
