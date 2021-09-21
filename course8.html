@@ -138,13 +138,6 @@ td {
 Media screen
 */
 
-@media screen and (max-width: 120em) {
-.grid-container {
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	grid-template-areas: 'item1 item2' 'item3';
-}
-}
-
 @media screen and (max-width: 60em) {
 .grid-container {
 	grid-template-columns: none;
@@ -195,7 +188,9 @@ Media screen
           <td><strong>Plymouth</strong></td>
         </tr>
       </table>
-     <div><p><a href="#" class="ucas">Apply via UCAS</a></p></div>
+      <div>
+        <p><a href="#" class="ucas">Apply via UCAS</a></p>
+      </div>
     </div>
     <div class="item3">main content</div>
   </div>
