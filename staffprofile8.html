@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	width: 1em;
+	display: inline-block;
+	text-align: center;
+	margin: 0 0.25em 0 0;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1rem;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background: #FFF;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+h3 {
+	font-size: 1.17em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+h4 {
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+h5 {
+	font-size: 0.83em;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+h6 {
+	font-size: 0.75em;
+	line-height: 1.5rem;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #00E;
+}
+.visited {
+	color: #551A8B;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+section {
+	max-width: 40em;
+	overflow: hidden;
+	padding: 0 1em;
+}
+.staffquote {
+	padding: 0 0 0 7em;
+	position: relative;
+	min-height: 7em;
+}
+.staffquote img {
+	left: 0;
+	position: absolute;
+	width: 6em;
+	border-radius: 50%;
+}
+.accordionbox {
+	max-width: 40em;
+	overflow: hidden;
+	padding: 0 1em 1em 1em;
+}
+summary {
+	cursor: pointer;
+	padding: 0.5em;
+}
+details {
+	margin: 0;
+	border-bottom: 1px solid #CCC;
+}
+summary > * {
+	display: inline;
+}
+details > p {
+	margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+ display: none;
+ content: "";
+}
+details summary::before {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
+}
+details[open] summary::before {
+	content: "M";
+}
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.staffquote {
+	padding: 1em 0 0 0;
+	margin: 0;
+	min-height: 5em;
+}
+.staffquote img {
+	position: inherit;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="staffquote">
+      <p><img src="images/profile05.jpg" alt=""></p>
+      <h2 class="nomargin">Dr Rafi Goodman</h2>
+      <p>Prof: NMA Chair in Public Understanding of Marine Science &amp; Human Health</p>
+      <p>Lecturer in Marine Molecular Biology</p>
+      <p>Associate Professor in Ecology</p>
+      <p><a href="#">School of Biological and Marine Sciences (Faculty of Science and Engineering)</a></p>
+      <p><span class="iconfont" aria-hidden="true">&#40;</span> A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
+        <span class="iconfont" aria-hidden="true">0</span> +44 1752 584993<br>
+        <span class="iconfont" aria-hidden="true">/</span> <a href="#">camille.parmesan@plymouth.ac.uk</a></p>
+    </div>
+  </section>
+  <div class="accordionbox">
+    <h2>Further details</h2>
+    <details>
+      <summary>Biography</summary>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </details>
+    <details>
+      <summary>Teaching</summary>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </details>
+    <details>
+      <summary>Research</summary>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </details>
+    <details>
+      <summary>Publications</summary>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </details>
+    <details>
+      <summary>Personal</summary>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </details>
+  </div>
+</main>
+</body>
+</html>
