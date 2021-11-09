@@ -103,13 +103,6 @@ td, th {
 th {
 	border-bottom: 2px solid #111;
 }
-.smalltext {
-	font-size: 0.75em;
-}
-.duration > .smalltext {
-	position: relative;
-	top: -2px;
-}
 table a {
 	padding: 0.5em;
 	color: #111;
@@ -132,7 +125,14 @@ table a:hover {
 }
 .duration {
 	border: 2px dotted #111;
-	line-height: 1.375em;
+	line-height: calc(1.5em - 2px);
+}
+.smalltext {
+	font-size: 0.75em;
+}
+.duration > .smalltext {
+	position: relative;
+	top: -2px;
 }
 </style>
 </head>
