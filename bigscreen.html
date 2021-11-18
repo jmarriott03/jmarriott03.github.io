@@ -6,8 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <title>University of Plymouth</title>
 <style>
 @font-face {
@@ -22,13 +20,17 @@
 	font-family: neuzit;
 	src: url('fonts/neuzeitforplymouth-bold-webfont.woff');
 }
+@font-face {
+	font-family: neuzitlight;
+	src: url('fonts/neuzeitforplymouth-light-webfont.woff');
+}
 .neuzit {
 	font-family: 'neuzit', sans-serif;
 	font-weight: normal;
 }
 * {
 	margin: 0 auto;
-	box-sizing: border-box;
+	box-sizing: border-box;/*background-color:rgba(255,0,0,0.25);*/
 }
 * + * {
 	margin-top: 1em;
@@ -36,31 +38,37 @@
 html, body {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	margin: 0;
 	font-size: 100%;
 	font-family: sans-serif;
 	font-weight: normal;
 	line-height: 1.5em;
 	color: #111;
-	background-color: #FAFAFA;
+	background: #FFF;
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+	font-weight: bold;
 }
 h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
 	font-weight: bold;
+	width: 100%;
 }
-p {
-	clear: both;
+h3 {
+	font-size: 1.17em;
+	line-height: 1.5em;
+	font-weight: bold;
+	width: 100%;
 }
 a {
-	color: #06C;
+	color: #00E;
 }
-/*a:visited {
+.visited {
 	color: #551A8B;
 }
-a:active {
-	color: #F00;
-}*/
 strong {
 	font-weight: bold;
 }
@@ -71,7 +79,17 @@ img {
 	border: 0;
 	text-decoration: none;
 	vertical-align: top;
+	width: 100%;
 	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
 }
 .container {
 	width: 360px;
@@ -79,8 +97,8 @@ img {
 	position: relative;
 	z-index: 1;
 	background-color: #000;
-	margin-top: 1em;
-	background-image: url(images/720x1280template.gif);
+	margin: 1em;
+	background-image: url(images/720x1280bigscreenbck.gif);
 	background-size: cover;
 }
 .heroimage {
@@ -89,7 +107,6 @@ img {
 	width: 360px;
 	overflow: hidden;
 	z-index: 2;
-	background-color: #000;
 }
 .heroimage img {
 	max-width: 360px;
@@ -106,7 +123,6 @@ img {
 	line-height: 1.5em;
 	width: 294px;
 	height: 220px;
-	background: red;
 }
 .herotext h1 {
 	font-family: 'neuzit', sans-serif;
@@ -114,36 +130,37 @@ img {
 	font-size: 2em;
 	line-height: 0.86em;
 	text-transform: uppercase;
-	margin-bottom: 0.5em;
-	background: orange;
+	color: #8cdc73;
 }
-.herotext p {
-	max-width: 30em;
-	margin: 0 0 1em 0;
-}
-.herotext img {
-	margin-bottom: 1em;
-}
-.herotext a {
-	color: #FAFAFA;
-}
-.uoplogo {
+.social {
+	font-family: 'neuzitlight', sans-serif;
+	font-weight: normal;
 	position: absolute;
-	bottom: 2em;
-	right: 2em;
+	bottom: 30px;
+	left: 80px;
 	z-index: 5;
-	width: 15em;
+	font-weight: bold;
+	color: #24acc6;
+	font-size: 1.5rem;
+	width: 250px;
 }
 .formcontainer {
-	width: 1280px;
-	padding-bottom: 1em;
+	width: 320px;
+	padding-left: 1em;
+	float: left;
 }
-#herotc {
-	font-weight: bold;
+.fullw {
+	width: 720px;
+	overflow: hidden;
+}
+.fullw > * {
+	float: left;
+}
+.padtophalf {
+	padding-top: 0.5em;
 }
 </style>
 <script>
-
 function process()
 {
 var heroh=document.getElementById("formtext").value;
@@ -155,7 +172,7 @@ return false;
 function processc()
 {
 var herotc=document.getElementById("formtextc").value;
-document.getElementById("herotc").innerHTML = herotc;
+document.getElementById("herotc").innerHTML = '/' + herotc;
 
 return false;
 }
@@ -174,31 +191,36 @@ function readURL(){
     }
 }
 }
-
 </script>
 </head>
 <body>
-<div class="container">
-  <div class="heroimage" id="canvas1"><img src="images/1280x720student1.jpg" alt="" /></div>
-    <div class="herotext">
-      <h1 id="heroh">Lorem ipsum dolor sit consectetur adipisicing elit sed do eiusmod</h1>
-      <p id="herotc">#nofilter</p>
+<main>
+  <div class="fullw">
+    <div class="container">
+      <div class="heroimage" id="canvas1"><img src="images/1280x720student1.jpg" alt="" /></div>
+      <div class="herotext">
+        <h1 id="heroh">Lorem ipsum dolor sit consectetur adipisicing elit sed do eiusmod</h1>
+      </div>
+      <div class="social">
+        <p id="herotc">/PlymUni</p>
+      </div>
     </div>
-    <div class="uoplogo"><img src="images/uoplogomonowhite.svg" alt=""/></div>
-</div>
-<div class="formcontainer">
-  <form onSubmit="return process();">
-    Statement
-    <input type="text" name="formtext" id="formtext" autocapitalize="none">
-    <input type="submit" value="Go">
-  </form>
-  <form onSubmit="return processc();">
-    Tag
-    <input type="text" name="formtextc" id="formtextc" autocapitalize="none">
-    <input type="submit" value="Go">
-  </form>
-  <p>Choose a different image</p>
-  <input type="file" id="getval" style="color:transparent;"/>
-</div>
+    <div class="formcontainer">
+      <form onSubmit="return process();">
+        Text
+        <input type="text" name="formtext" id="formtext" autocapitalize="none">
+        <input type="submit" value="Go">
+      </form>
+      <form onSubmit="return processc();">
+        Social
+        <input type="text" name="formtextc" id="formtextc" autocapitalize="none">
+        <input type="submit" value="Go">
+      </form>
+      <p class="padtophalf">Image
+        <input type="file" id="getval" style="color:transparent;"/>
+      </p>
+    </div>
+  </div>
+</main>
 </body>
 </html>
