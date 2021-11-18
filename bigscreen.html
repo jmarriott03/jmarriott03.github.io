@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>University of Plymouth</title>
+<style>
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: #111;
+	background-color: #FAFAFA;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25em;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: #06C;
+}
+/*a:visited {
+	color: #551A8B;
+}
+a:active {
+	color: #F00;
+}*/
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	margin: 0;
+}
+.container {
+	width: 360px;
+	height: 640px;
+	position: relative;
+	z-index: 1;
+	background-color: #000;
+	margin-top: 1em;
+	background-image: url(images/720x1280template.gif);
+	background-size: cover;
+}
+.heroimage {
+	position: absolute;
+	top: 115px;
+	width: 360px;
+	overflow: hidden;
+	z-index: 2;
+	background-color: #000;
+}
+.heroimage img {
+	max-width: 360px;
+	width: auto;
+}
+.herotext {
+	position: absolute;
+	bottom: 80px;
+	left: 33px;
+	z-index: 4;
+	margin: 0;
+	color: #FFF;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	width: 294px;
+	height: 220px;
+	background: red;
+}
+.herotext h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+	background: orange;
+}
+.herotext p {
+	max-width: 30em;
+	margin: 0 0 1em 0;
+}
+.herotext img {
+	margin-bottom: 1em;
+}
+.herotext a {
+	color: #FAFAFA;
+}
+.uoplogo {
+	position: absolute;
+	bottom: 2em;
+	right: 2em;
+	z-index: 5;
+	width: 15em;
+}
+.formcontainer {
+	width: 1280px;
+	padding-bottom: 1em;
+}
+#herotc {
+	font-weight: bold;
+}
+</style>
+<script>
+
+function process()
+{
+var heroh=document.getElementById("formtext").value;
+document.getElementById("heroh").innerHTML = heroh;
+
+return false;
+}
+
+function processc()
+{
+var herotc=document.getElementById("formtextc").value;
+document.getElementById("herotc").innerHTML = herotc;
+
+return false;
+}
+
+window.onload=function(){
+document.getElementById('getval').addEventListener('change', readURL, true);
+function readURL(){
+    var file = document.getElementById("getval").files[0];
+    var reader = new FileReader();
+    reader.onloadend = function(){
+        document.getElementById('canvas1').innerHTML = '<img src="' + reader.result + '" alt="">';  
+    }
+    if(file){
+        reader.readAsDataURL(file);
+    }else{
+    }
+}
+}
+
+</script>
+</head>
+<body>
+<div class="container">
+  <div class="heroimage" id="canvas1"><img src="images/1280x720student1.jpg" alt="" /></div>
+    <div class="herotext">
+      <h1 id="heroh">Lorem ipsum dolor sit consectetur adipisicing elit sed do eiusmod</h1>
+      <p id="herotc">#nofilter</p>
+    </div>
+    <div class="uoplogo"><img src="images/uoplogomonowhite.svg" alt=""/></div>
+</div>
+<div class="formcontainer">
+  <form onSubmit="return process();">
+    Statement
+    <input type="text" name="formtext" id="formtext" autocapitalize="none">
+    <input type="submit" value="Go">
+  </form>
+  <form onSubmit="return processc();">
+    Tag
+    <input type="text" name="formtextc" id="formtextc" autocapitalize="none">
+    <input type="submit" value="Go">
+  </form>
+  <p>Choose a different image</p>
+  <input type="file" id="getval" style="color:transparent;"/>
+</div>
+</body>
+</html>
