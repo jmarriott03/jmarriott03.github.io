@@ -107,10 +107,8 @@ img {
 	width: 360px;
 	overflow: hidden;
 	z-index: 2;
-}
-.heroimage img {
-	max-width: 360px;
-	width: auto;
+	height: 300px;
+	height: 203px;
 }
 .herotext {
 	position: absolute;
@@ -123,6 +121,7 @@ img {
 	line-height: 1.5em;
 	width: 294px;
 	height: 220px;
+	overflow: hidden;
 }
 .herotext h1 {
 	font-family: 'neuzit', sans-serif;
@@ -201,7 +200,7 @@ function readURL(){
       <div class="herotext">
         <h1 id="heroh">Lorem ipsum dolor sit consectetur adipisicing elit sed do eiusmod</h1>
       </div>
-      <div class="social">
+      <div class="social ellipsis">
         <p id="herotc">/PlymUni</p>
       </div>
     </div>
