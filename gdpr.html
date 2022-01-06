@@ -8,6 +8,15 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
 <style>
+:root {
+ --white: #FFF;
+ --lgrey: #EEE;
+ --mgrey: #CCC;
+ --dgrey: #666;
+ --black: #111;
+ --link: #06c;
+ --visited: #551A8B;
+}
 @font-face {
 	font-family: icon;
 	src: url('fonts/icon7t-webfont.woff');
@@ -16,10 +25,14 @@
 	font-family: 'icon', sans-serif;
 	font-weight: normal;
 	line-height: 1em;
+	width: 1em;
+	display: inline-block;
+	text-align: center;
+	margin: 0 0.25em 0 0;
 }
 * {
 	margin: 0 auto;
-	box-sizing: border-box;
+	box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
 }
 * + * {
 	margin-top: 1em;
@@ -31,8 +44,8 @@ html, body {
 	font-family: sans-serif;
 	font-weight: normal;
 	line-height: 1.5em;
-	color: #111;
-	background: #FAFAFA;
+	color: var(--black);
+	background: var(--white);
 	margin: 0;
 }
 h1 {
@@ -44,21 +57,20 @@ h2 {
 	font-size: 1.5em;
 	line-height: 1.25em;
 	font-weight: bold;
-	padding: 1rem 0 0 1rem;
-}
-a {
-	color: #00E;
 }
 p {
 	width: 25%;
-	padding: 1em;
 	float: left;
+	padding-right: 1em;
 }
 p:nth-child(4n+2) {
 	clear: both;
 }
+a {
+	color: var(--link);
+}
 .visited {
-	color: #551A8B;
+	color: var(--visited);
 }
 strong {
 	font-weight: bold;
@@ -82,170 +94,81 @@ img {
 	text-overflow: ellipsis;
 	margin-top: 0;
 }
-article {
+section {
 	max-width: 80em;
-	margin: 0 auto;
 	overflow: hidden;
-}
-.fullw {
-	width: 100%;
-	overflow: hidden;
-	margin: 0;
-}
-.staff img {
-	width: 2.5em;
-	height: 2.5em;
-	margin: 0.25em 0.5em 0 0;
-	border-radius: 50%;
-	float: left;
-}
-#emwidth {
-	max-width: 40em;
-	margin: 0 auto;
 	padding: 1em;
-	overflow: hidden;
-	background: rgba(204,204,204,0.6);
-	margin-bottom: 1em;
-}
-#emwidth60 {
-	max-width: 60em;
-	margin: 0 auto;
-	padding: 1em;
-	overflow: hidden;
-	background: rgba(204,204,204,0.6);
-	margin-bottom: 1em;
-}
-#chwidth {
-	max-width: 54ch;
-	margin: 0 auto;
-	padding: 1em;
-	overflow: hidden;
-	background: rgba(204,204,204,0.6);
-}
-.smalltext {
-	font-size: 0.75em;
-}
-.quoteline {
-	border-left: 0.25em solid;
-	padding-left: 0.5em;
-}
-.marginr {
-	margin-right: 0.5em;
-}
-#size {
-	position: fixed;
-	left: 0;
-	top: 2em;
-	z-index: 100;
-	color: #FAFAFA;
-	background: rgba(0,0,0,0.8);
-	font-size: 1em;
-	padding: 1em;
-}
-.col-3 {
-	width: 25%;
-}
-.col-4 {
-	width: 33.33%;
-}
-.col-6 {
-	width: 50%;
-}
-.col-8 {
-	width: 66.66%;
-}
-.col-9 {
-	width: 75%;
-}
-.col-12 {
-	max-width: 60em;
-	background: rgba(204,204,204,0.6);
-	overflow: hidden;
-	margin-bottom: 1em;
-}
-.col-12 > div {
-	float: left;
-	margin: 0;
-}
-.col-3, .col-4, .col-6, .col-8, .col-9 {
-	border: 1px solid #666;
-	padding: 0.5em;
-}
-
-/*
-Media screen
-*/
-
-@media (max-width: 40em) {
-.col-3, .col-4, .col-6, .col-8, .col-9 {
-	width: 100%;
-}
 }
 </style>
 </head>
 <body>
-<article>
-  <h2>GDPR</h2>
-  <p><strong>It’s a deadline</strong><br>
-    In a rush to meet an important deadline<br>
-    D</p>
-  <p><strong>Working online</strong><br>
-    Which of the following is a good<br>
-    C &amp; D</p>
-  <p><strong>Working online</strong><br>
-    The practice known as ‘spear phishing’<br>
-    A, B &amp; C</p>
-  <p><strong>What’s the cost?</strong><br>
-    What is the maximum fine that can be<br>
-    C</p>
-  <p><strong>Lawful, fair and transparent</strong><br>
-    One of the principles of the GDPR is<br>
-    A</p>
-  <p><strong>What can you share?</strong><br>
-    Which of the following would be<br>
-    D</p>
-  <p><strong>‘Paper- based’ records</strong><br>
-    Which of the following a good paper-<br>
-    B &amp; C</p>
-  <p><strong>Time to report</strong><br>
-    Under the GDPR, if a breach has<br>
-    D</p>
-  <p><strong>What are Antonio’s rights?</strong><br>
-    Antonio has made an application to<br>
-    A &amp; C</p>
-  <p><strong>Additional rights</strong><br>
-    Which of the following are examples of<br>
-    All are examples A-H</p>
-  <p><strong>What’s the GDPR?</strong><br>
-    Which of the following statements<br>
-    A &amp; B</p>
-  <p><strong>Working outside the office</strong><br>
-    Clara is working at the airport as she is<br>
-    A &amp; D</p>
-  <p><strong>What can you share?</strong><br>
-    Which of the following would be<br>
-    D</p>
-  <p><strong>New rights</strong><br>
-    Which of the following Data Subject<br>
-    Right to be forgotten</p>
-  <p><strong>Personal devices for work</strong><br>
-    When using personal devices for work,<br>
-    A &amp; C</p>
-  <p><strong>New requirements</strong><br>
-    Which of the following is NOT true<br>
-    D</p>
-  <p><strong>Password review</strong><br>
-    The university is reviewing its<br>
-    A, B &amp; D</p>
-  <p><strong>Good password practices</strong><br>
-    Which of the following  are good<br>
-    C</p>
-  <p><strong>Time to report</strong><br>
-    Under the GDPR, if a breach has<br>
-    D</p>
-  <p><strong>Potential breach areas</strong><br>
-    The University is conducting an audit of<br>
-    A, C &amp; D</p>
-</article>
+<main>
+  <section>
+    <h2>GDPR</h2>
+    <p><strong>It’s a deadline</strong><br>
+      In a rush to meet an important deadline<br>
+      D</p>
+    <p><strong>Working online</strong><br>
+      Which of the following is a good<br>
+      C &amp; D</p>
+    <p><strong>Working online</strong><br>
+      The practice known as ‘spear phishing’<br>
+      A, B &amp; C</p>
+    <p><strong>What’s the cost?</strong><br>
+      What is the maximum fine that can be<br>
+      C</p>
+    <p><strong>Lawful, fair and transparent</strong><br>
+      One of the principles of the GDPR is<br>
+      A</p>
+    <p><strong>What can you share?</strong><br>
+      Which of the following would be<br>
+      D</p>
+    <p><strong>‘Paper- based’ records</strong><br>
+      Which of the following a good paper-<br>
+      B &amp; C</p>
+    <p><strong>Time to report</strong><br>
+      Under the GDPR, if a breach has<br>
+      D</p>
+    <p><strong>What are Antonio’s rights?</strong><br>
+      Antonio has made an application to<br>
+      A &amp; C</p>
+    <p><strong>Additional rights</strong><br>
+      Which of the following are examples of<br>
+      All are examples A-H</p>
+    <p><strong>What’s the GDPR?</strong><br>
+      Which of the following statements<br>
+      A &amp; B</p>
+    <p><strong>Working outside the office</strong><br>
+      Clara is working at the airport as she is<br>
+      A &amp; D</p>
+    <p><strong>What can you share?</strong><br>
+      Which of the following would be<br>
+      D</p>
+    <p><strong>New rights</strong><br>
+      Which of the following Data Subject<br>
+      B</p>
+    <p><strong>Personal devices for work</strong><br>
+      When using personal devices for work,<br>
+      A &amp; C</p>
+    <p><strong>New requirements</strong><br>
+      Which of the following is NOT true<br>
+      D</p>
+    <p><strong>Password review</strong><br>
+      The university is reviewing its<br>
+      A, B &amp; D</p>
+    <p><strong>Good password practices</strong><br>
+      Which of the following  are good<br>
+      C</p>
+    <p><strong>Time to report</strong><br>
+      Under the GDPR, if a breach has<br>
+      D</p>
+    <p><strong>Potential breach areas</strong><br>
+      The University is conducting an audit of<br>
+      A, C &amp; D</p>
+    <p><strong>Protecting personal data</strong><br>
+      What is the name of the EU regulation<br>
+      D</p>
+  </section>
+</main>
 </body>
 </html>
