@@ -94,9 +94,40 @@ section {
 	overflow: hidden;
 	padding: 1em;
 }
+.white {
+	color: var(--white);
+}
+.lgrey {
+	color: var(--lgrey);
+}
+.mgrey {
+	color: var(--mgrey);
+}
 .dgrey {
 	color: var(--dgrey);
 }
+.black {
+	color: var(--black);
+}
+.bckwhite {
+	background: var(--white);
+}
+.bcklgrey {
+	background: var(--lgrey);
+}
+.bckmgrey {
+	background: var(--mgrey);
+}
+.bckdgrey {
+	background: var(--dgrey);
+}
+.bckblack {
+	background: var(--black);
+}
+	h2 {
+		padding: 1rem;
+		border: 1px solid #111;
+	}
 </style>
 </head>
 <body>
@@ -105,7 +136,11 @@ section {
     <h1>Root</h1>
     <p>Paragraph</p>
     <p><a href="#">Link</a></p>
-    <h2 class="dgrey">Dark grey #666</h2>
+    <h2 class="black">Black #111</h2>
+	  <h2 class="dgrey">Dark grey #666</h2>
+	  <h2 class="mgrey bckblack">Mid grey #CCC</h2>
+	  <h2 class="lgrey bckblack">Light grey #EEE</h2>
+	  <h2 class="white bckblack">White #FFF</h2>
   </section>
 </main>
 </body>
