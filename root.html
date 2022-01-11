@@ -94,6 +94,10 @@ section {
 	overflow: hidden;
 	padding: 1em;
 }
+.codegrey {
+	background-color: #EEE;
+	padding: 1rem;
+}
 .white {
 	color: var(--white);
 }
@@ -124,23 +128,65 @@ section {
 .bckblack {
 	background: var(--black);
 }
-	h2 {
-		padding: 1rem;
-		border: 1px solid #111;
-	}
+.border {
+	padding: 1rem;
+	border: 1px solid #111;
+}
 </style>
 </head>
 <body>
 <main>
   <section>
     <h1>Root</h1>
-    <p>Paragraph</p>
-    <p><a href="#">Link</a></p>
-    <h2 class="black">Black #111</h2>
-	  <h2 class="dgrey">Dark grey #666</h2>
-	  <h2 class="mgrey bckblack">Mid grey #CCC</h2>
-	  <h2 class="lgrey bckblack">Light grey #EEE</h2>
-	  <h2 class="white bckblack">White #FFF</h2>
+    <p class="border">White #FFF</p>
+    <p class="bcklgrey border">Light grey #EEE</p>
+    <p class="bckmgrey border">Mid grey #CCC</p>
+    <p class="bckdgrey white border">Dark grey #666</p>
+    <p class="bckblack white border">Black #111</p>
+    <div class="codegrey"><code>:root {<br>
+      --white: #FFF;<br>
+      --lgrey: #EEE;<br>
+      --mgrey: #CCC;<br>
+      --dgrey: #666;<br>
+      --black: #111;<br>
+      --link: #06c;<br>
+      --visited: #551A8B;<br>
+      }</code></div>
+    <div class="codegrey"><code>.white {<br>
+      color: var(--white);<br>
+      }<br>
+      .lgrey {<br>
+      color: var(--lgrey);<br>
+      }<br>
+      .mgrey {<br>
+      color: var(--mgrey);<br>
+      }<br>
+      .dgrey {<br>
+      color: var(--dgrey);<br>
+      }<br>
+      .black {<br>
+      color: var(--black);<br>
+      }</code></div>
+    <div class="codegrey"><code>.bckwhite {<br>
+      background: var(--white);<br>
+      }<br>
+      .bcklgrey {<br>
+      background: var(--lgrey);<br>
+      }<br>
+      .bckmgrey {<br>
+      background: var(--mgrey);<br>
+      }<br>
+      .bckdgrey {<br>
+      background: var(--dgrey);<br>
+      }<br>
+      .bckblack {<br>
+      background: var(--black);<br>
+      }</code></div>
+    <div class="codegrey"><code> &#60;p class="border"&#62;White #FFF&#60;/p&#62;<br>
+      &#60;p class="bcklgrey border"&#62;Light grey #EEE&#60;/p&#62;<br>
+      &#60;p class="bckmgrey border"&#62;Mid grey #CCC&#60;/p&#62;<br>
+      &#60;p class="bckdgrey white border"&#62;Dark grey #666&#60;/p&#62;<br>
+      &#60;p class="bckblack white border"&#62;Black #111&#60;/p&#62; </code></div>
   </section>
 </main>
 </body>
