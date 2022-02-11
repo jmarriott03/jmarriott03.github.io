@@ -139,9 +139,10 @@ img {
 	margin: 0 1em 1em 0;
 	float: left;
 }
-.code {
-	font-family: monospace;
+.code-bg {
+	background: #EEE;
 	padding: 1em;
+	clear: both;
 }
 </style>
 </head>
@@ -201,15 +202,15 @@ img {
     <h2>Favicon</h2>
     <a href="images/favicon.png" download><img src="images/favicon.png" alt="University of Plymouth" class="crest" />
     <p>Favicon for browser tabs (.png format, 4 KB <span class="iconfont">%</span>)</p>
-    </a>
-    <p class="code">&lt;link rel="icon" href="images/favicon.png"&gt;</p>
+    </a><div class="code-bg">
+    <code>&lt;link rel="icon" href="images/favicon.png"&gt;</code></div>
     <h2>Apple touch icon</h2>
     <a href="images/appletouchicon.png" download><img src="images/appletouchicon.png" alt="University of Plymouth" class="crest" />
     <p>Icon for iOS &amp; Android home screens (.png format, 3 KB <span class="iconfont">%</span>)</p>
     </a>
-    <p class="code">&lt;link rel="apple-touch-icon" href="images/appletouchicon.png"&gt;</p>
+    <div class="code-bg"><code>&lt;link rel="apple-touch-icon" href="images/appletouchicon.png"&gt;</code></div>
     <p><a href="https://jmarriott03.github.io/iconfont10.html">Icon font</a></p>
-    <p class="code"> &lt;style&gt;<br>
+    <div class="code-bg"><code>&lt;style&gt;<br>
       @font-face {<br>
       font-family: icon;<br>
       src: url('fonts/icon7x-webfont.woff');<br>
@@ -223,7 +224,7 @@ img {
       text-align: center;<br>
       margin: 0 0.25em 0 0;<br>
       }<br>
-      &lt;/style&gt; </p>
+					   &lt;/style&gt; </code></div>
     <h2>Colours &amp; font</h2>
     <div class="flex col01">#00E<br>
       Standard link</div>
@@ -237,9 +238,9 @@ img {
       Medium</div>
     <div class="flex col06">#111<br>
       Dark</div>
-    <p class="code"> font-size: 100%;<br>
+    <div class="code-bg"><code> font-size: 100%;<br>
       font-family: sans-serif;<br>
-      line-height: 1.5;</p>
+		line-height: 1.5;</code></div>
   </div>
 </main>
 </body>
