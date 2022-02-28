@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+ --white: #FFF;
+ --lgrey: #EEE;
+ --mgrey: #CCC;
+ --dgrey: #666;
+ --black: #111;
+ --link: #06C;
+ --visited: purple;
+}
+@font-face {
+	font-family: icon;
+	src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	display: inline-block;
+	text-align: center;
+	margin: 0 0.25em 0 0;
+}
+* {
+	margin: 0 auto;
+	box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+	margin-top: 1em;
+}
+html, body {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: normal;
+	line-height: 1.5;
+	color: var(--black);
+	background: var(--white);
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+	line-height: 1.25;
+	font-weight: bold;
+}
+h2 {
+	font-size: 1.5em;
+	line-height: 1.25;
+	font-weight: bold;
+}
+p {
+	clear: both;
+}
+a {
+	color: var(--link);
+}
+.visited {
+	color: var(--visited);
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+img {
+	border: 0;
+	text-decoration: none;
+	vertical-align: top;
+	width: 100%;
+	margin: 0;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+}
+section {
+	max-width: 40em;
+	overflow: hidden;
+	padding: 1em;
+}
+.codegrey {
+	background: #EEE;
+	padding: 1rem;
+}
+.white {
+	color: var(--white);
+}
+.lgrey {
+	color: var(--lgrey);
+}
+.mgrey {
+	color: var(--mgrey);
+}
+.dgrey {
+	color: var(--dgrey);
+}
+.black {
+	color: var(--black);
+}
+.bg-white {
+	background: var(--white);
+}
+.bg-lgrey {
+	background: var(--lgrey);
+}
+.bg-mgrey {
+	background: var(--mgrey);
+}
+.bg-dgrey {
+	background: var(--dgrey);
+}
+.bg-black {
+	background: var(--black);
+}
+.border {
+	padding: 1em;
+	border: 1px solid #111;
+}
+.positionrelative {
+	position: relative;
+}
+.center {
+	width: 25%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>YouTube absolute center</h1>
+    <div class="positionrelative"><img src="images/1280x720placeholder.gif" alt=""/>
+      <div class="center"><img src="images/youtubeicon.svg" alt=""/></div>
+    </div>
+    <div class="codegrey"><code>.positionrelative {<br>
+      position: relative;<br>
+      }<br>
+      .center {<br>
+      width: 25%;<br>
+      position: absolute;<br>
+      top: 50%;<br>
+      left: 50%;<br>
+      transform: translate(-50%, -50%);<br>
+      margin-top: 0;<br>
+      }</code></div>
+  </section>
+</main>
+</body>
+</html>
