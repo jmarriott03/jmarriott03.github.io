@@ -132,11 +132,13 @@ section {
 }
 .center {
 	display: grid;
-	place-items: center;/*place-content: center;*/
-	padding: 1em;
+	place-content: center;/*place-items: center;*/
 }
 .aspectratio {
 	aspect-ratio: 16 / 9;
+}
+.pad1 {
+	padding: 1rem;
 }
 </style>
 </head>
@@ -144,12 +146,16 @@ section {
 <main>
   <section>
     <h1>Center &amp; aspect-ratio</h1>
-    <p class="bg-black white aspectratio center">Centered items in 16:9 aspect ratio</p>
+    <div class="bg-black white aspectratio center">
+      <div class="pad1">
+        <h2>Center content</h2>
+        <p>16:9 aspect ratio</p>
+      </div>
+    </div>
     <div class="codegrey"><code>.center {<br>
       display: grid;<br>
-      place-items: center;<br>
-      /*place-content: center;*/<br>
-      padding: 1em;<br>
+      place-content: center;<br>
+      /*place-items: center;*/<br>
       }<br>
       .aspectratio {<br>
       aspect-ratio: 16 / 9;<br>
