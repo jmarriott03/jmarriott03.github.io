@@ -96,7 +96,7 @@ section {
 	background: #EEE;
 	padding: 1rem;
 }
-.white {
+.white, .white a {
 	color: var(--white);
 }
 .lgrey {
@@ -140,7 +140,7 @@ section {
     <p class="bg-lgrey border">Light grey #eee</p>
     <p class="bg-mgrey border">Mid grey #ccc</p>
     <p class="bg-dgrey white border">Dark grey #666</p>
-    <p class="bg-black white border">Black #111</p>
+    <p class="bg-black white border"><a href="#">Black</a> #111</p>
     <div class="codegrey"><code>:root {<br>
       --white: #fff;<br>
       --lgrey: #eee;<br>
@@ -150,7 +150,7 @@ section {
       --link: #06c;<br>
       --visited: purple;<br>
       }</code></div>
-    <div class="codegrey"><code>.white {<br>
+    <div class="codegrey"><code>.white, .white a {<br>
       color: var(--white);<br>
       }<br>
       .lgrey {<br>
@@ -180,11 +180,11 @@ section {
       .bg-black {<br>
       background: var(--black);<br>
       }</code></div>
-    <div class="codegrey"><code> &#60;p class="border"&#62;<a href="#">White</a> #fff&#60;/p&#62;<br>
+    <div class="codegrey"><code> &#60;p class="border"&#62;White #fff&#60;/p&#62;<br>
       &#60;p class="bg-lgrey border"&#62;Light grey #eee&#60;/p&#62;<br>
       &#60;p class="bg-mgrey border"&#62;Mid grey #ccc&#60;/p&#62;<br>
       &#60;p class="bg-dgrey white border"&#62;Dark grey #666&#60;/p&#62;<br>
-    &#60;p class="bg-black white border"&#62;Black #111&#60;/p&#62; </code></div>
+      &#60;p class="bg-black white border"&#62;Black #111&#60;/p&#62; </code></div>
   </section>
 </main>
 </body>
