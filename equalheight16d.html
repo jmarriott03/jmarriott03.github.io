@@ -1,13 +1,20 @@
 <!doctype html>
 <html lang="en">
-
-<!--CODE BY JAMIE MARRIOTT-->
-
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
 <style>
+:root {
+ --white: #fff;
+ --lgrey: #eee;
+ --mgrey: #ccc;
+ --dgrey: #666;
+ --black: #111;
+ --link: #00e;
+ --visited: purple;
+}
 @font-face {
 	font-family: icon;
 	src: url('fonts/icon7t-webfont.woff');
@@ -15,19 +22,15 @@
 .iconfont {
 	font-family: 'icon', sans-serif;
 	font-weight: normal;
-	line-height: 1em;
-}
-.socialmedia a {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	line-height: 1em;
-	font-size: 1em;
-	margin-right: 1em;
-	text-decoration: none;
+	line-height: 1;
+	width: 1em;
+	display: inline-block;
+	text-align: center;
+	margin: 0 0.25em 0 0;
 }
 * {
 	margin: 0 auto;
-	box-sizing: border-box;/*background-color:rgba(255,0,0,0.25);*/
+	box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
 }
 * + * {
 	margin-top: 1em;
@@ -38,33 +41,29 @@ html, body {
 	font-size: 100%;
 	font-family: sans-serif;
 	font-weight: normal;
-	line-height: 1.5em;
-	color: #111;
-	background: #FFF;
+	line-height: 1.5;
+	color: var(--black);
+	background: var(--white);
 	margin: 0;
 }
 h1 {
 	font-size: 2em;
-	line-height: 1.25em;
+	line-height: 1.25;
 	font-weight: bold;
 }
 h2 {
 	font-size: 1.5em;
-	line-height: 1.25em;
+	line-height: 1.25;
 	font-weight: bold;
-	width: 100%;
 }
-h3 {
-	font-size: 1.17em;
-	line-height: 1.5em;
-	font-weight: bold;
-	width: 100%;
+p {
+	clear: both;
 }
 a {
-	color: #00E;
+	color: var(--link);
 }
 .visited {
-	color: #551A8B;
+	color: var(--visited);
 }
 strong {
 	font-weight: bold;
@@ -73,10 +72,11 @@ em {
 	font-style: italic;
 }
 img {
-	width: 100%;
-	height: auto;
-	margin: 0;
+	border: 0;
+	text-decoration: none;
 	vertical-align: top;
+	width: 100%;
+	margin: 0;
 }
 .nowrap {
 	white-space: nowrap;
@@ -116,65 +116,49 @@ figcaption {
 	margin: 0;
 	padding: 1rem;
 }
-.position-relative {
-	position: relative;
-}
-.position-absolute-bl {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-.position-absolute-br {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-.video-length {
-	color: #FFF;
-	background-color: #111;
-	border-radius: 0.25em;
-	padding: 0 0.5em;
-	font-size: 0.75em;
-	margin: 1rem;
-}
-.smalltext {
-	font-size: 0.75em;
-}
-.youtube {
-	position: absolute;
-	width: 4rem;
-	left: 50%;
-	margin-left: -2rem;
-	top: 50%;
-	margin-top: -1.5rem;
-}
-.whitetext {
-	color: #FFF;
-	background-color: #111;
-}
-.whitetext a {
-	color: #FFF;
-	background-color: #111;
-}
-.grey {
-	background-color: #EEE;
-}
-.black {
-	background-color: #111;
-}
-.pad1 {
+.codegrey {
+	background: var(--lgrey);
 	padding: 1rem;
 }
-.fullw {
-	width: 100%;
-	overflow: hidden;
-	padding-bottom: 0.5em;
+.white {
+	color: var(--white);
 }
+.lgrey {
+	color: var(--lgrey);
+}
+.mgrey {
+	color: var(--mgrey);
+}
+.dgrey {
+	color: var(--dgrey);
+}
+.black {
+	color: var(--black);
+}
+.bg-white {
+	background: var(--white);
+}
+.bg-lgrey {
+	background: var(--lgrey);
+}
+.bg-mgrey {
+	background: var(--mgrey);
+}
+.bg-dgrey {
+	background: var(--dgrey);
+}
+.bg-black {
+	background: var(--black);
+}
+	.pad1 {
+		padding: 1rem;
+	}
 @media only screen and (max-width: 60em) {
 .grid-container {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 }
+
 @media only screen and (max-width: 40em) {
 .grid-container {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -191,27 +175,27 @@ figcaption {
     <h2>Related research groups</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item grey pad1 column-span2">
+    <div class="grid-item bg-lgrey pad1 column-span2">
       <h3>Robotics 5</h3>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
       <p><a href="#">All related research groups.</a></p>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
@@ -221,22 +205,22 @@ figcaption {
     <h2>Related research groups</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item grey pad1 column-span2">
+    <div class="grid-item bg-lgrey pad1 column-span2">
       <h3>Robotics 4</h3>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
       <p><a href="#">All related research groups.</a></p>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
@@ -246,17 +230,17 @@ figcaption {
     <h2>Related research groups</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item grey pad1 column-span2">
+    <div class="grid-item bg-lgrey pad1 column-span2">
       <h3>Robotics 3</h3>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
       <p><a href="#">All related research groups.</a></p>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
@@ -266,12 +250,12 @@ figcaption {
     <h2>Related research groups</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item grey pad1 column-span2">
+    <div class="grid-item bg-lgrey pad1 column-span2">
       <h3>Robotics 2</h3>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
       <p><a href="#">All related research groups.</a></p>
     </div>
-    <div class="grid-item grey">
+    <div class="grid-item bg-lgrey">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="#"></a>
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
@@ -281,7 +265,7 @@ figcaption {
     <h2>Related research groups</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item grey pad1 column-span2">
+    <div class="grid-item bg-lgrey pad1 column-span2">
       <h3>Robotics 1</h3>
       <p>Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
       <p><a href="#">All related research groups.</a></p>
