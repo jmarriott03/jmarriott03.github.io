@@ -131,23 +131,13 @@ figcaption {
 	padding: 0;
 	margin: 0.5em 0;
 }
-.swatch1 {
+.caption-black {
 	background-color: var(--black);
 	color: var(--white);
 	margin: 0;
 	padding: 1em;
 }
-.swatch1 a {
-	background-color: var(--black);
-	color: var(--white);
-}
-.swatch2 {
-	background-color: var(--black);
-	color: var(--white);
-	margin: 0;
-	padding: 1em 0;
-}
-.swatch2 a {
+.caption-black a {
 	background-color: var(--black);
 	color: var(--white);
 }
@@ -192,25 +182,27 @@ figcaption {
 </style>
 </head>
 <body>
-<section>
-  <h2>Lazy loading image</h2>
-  <figure><a href="#">
-    <div class="position-relative"><img src="images/1280x720student2.jpg" width="1280" height="720" alt="alternate text" loading="lazy">
-      <div class="position-absolute-bl video-length">7:19</div>
-      <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt="YouTube icon"></div>
-    </div>
-    </a>
-    <figcaption class="swatch1">Caption</figcaption>
-  </figure>
-  <div class="codegrey"><code> &#60;figure&#62;<br>
-    &#60;a href="#"&#62;<br>
-    &#60;div class="position-relative"&#62;&#60;img src="images/1280x720creator.jpg" alt="alternate text" width="1280" height="720" loading="lazy"&#62;<br>
-    &#60;div class="position-absolute-bl video-length"&#62;7:19&#60;/div&#62; <br>
-    &#60;div class="youtube" aria-hidden="true"&#62;&#60;img src="images/youtubeicon.svg" alt="YouTube icon"&#62;&#60;/div&#62; <br>
-    &#60;/div&#62; <br>
-    &#60;/a&#62;<br>
-    &#60;figcaption class="swatch1"&#62;Caption&#60;/figcaption&#62; <br>
-    &#60;/figure&#62;</code></div>
-</section>
+<main>
+  <section>
+    <h1>Lazy loading image</h1>
+    <figure><a href="#">
+      <div class="position-relative"><img src="images/1280x720student2.jpg" width="1280" height="720" alt="alternate text" loading="lazy">
+        <div class="position-absolute-bl video-length">7:19</div>
+        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt="YouTube icon"></div>
+      </div>
+      </a>
+      <figcaption class="caption-black">Caption</figcaption>
+    </figure>
+    <div class="codegrey"><code> &#60;figure&#62;<br>
+      &#60;a href="#"&#62;<br>
+      &#60;div class="position-relative"&#62;&#60;img src="images/1280x720creator.jpg" alt="alternate text" width="1280" height="720" loading="lazy"&#62;<br>
+      &#60;div class="position-absolute-bl video-length"&#62;7:19&#60;/div&#62; <br>
+      &#60;div class="youtube" aria-hidden="true"&#62;&#60;img src="images/youtubeicon.svg" alt="YouTube icon"&#62;&#60;/div&#62; <br>
+      &#60;/div&#62; <br>
+      &#60;/a&#62;<br>
+      &#60;figcaption class="swatch1"&#62;Caption&#60;/figcaption&#62; <br>
+      &#60;/figure&#62;</code></div>
+  </section>
+</main>
 </body>
 </html>
