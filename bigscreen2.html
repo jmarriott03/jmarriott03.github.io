@@ -199,16 +199,16 @@ function imagebutton1() {
 
 function process()
 {
-var heroh=document.getElementById("formtext").value;
-document.getElementById("heroh").innerHTML = heroh;
+var herot=document.getElementById("formtext").value;
+document.getElementById("herot").innerHTML = herot;
 
 return false;
 }
 
 function processc()
 {
-var herotc=document.getElementById("formtextc").value;
-document.getElementById("herotc").innerHTML = '/' + herotc;
+var socialt=document.getElementById("formtextb").value;
+document.getElementById("socialt").innerHTML = '/' + socialt;
 
 return false;
 }
@@ -235,10 +235,10 @@ function readURL(){
     <div class="container">
       <div class="heroimage" id="canvas1"><img src="images/720x720bigscreen.jpg" alt="" /></div>
       <div id="herotext">
-        <h1 id="heroh">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
+        <h1 id="herot">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
       </div>
       <div class="social ellipsis">
-        <p id="herotc">/PlymUni</p>
+        <p id="socialt">/PlymUni</p>
       </div>
       <div class="logo"><img src="images/uopqueenlogomonowhite.svg" alt=""/></div>
       <div class="qrcode"></div>
@@ -250,8 +250,8 @@ function readURL(){
         <input type="submit" value="Go">
       </form>
       <form onSubmit="return processc();">
-        <label for="formtextc">Social</label>
-        <input type="text" name="formtextc" id="formtextc" autocapitalize="none">
+        <label for="formtextb">Social</label>
+        <input type="text" name="formtextb" id="formtextb" autocapitalize="none">
         <input type="submit" value="Go">
       </form>
       <p class="padtophalf">
