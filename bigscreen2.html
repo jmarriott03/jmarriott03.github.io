@@ -124,7 +124,7 @@ img {
     position: absolute;
     bottom: 0;
 }
-.herotext {
+#herotext {
     position: absolute;
     bottom: 95px;
     left: 30px;
@@ -134,17 +134,15 @@ img {
     width: 300px;
     overflow: hidden;
     border: 1px dashed white;
+	height: 160px;
 }
-.herotext h1 {
+#herotext h1 {
     font-family: 'neuzitbold', sans-serif;
     font-weight: normal;
     font-size: 1.5em;
     line-height: 1.1em;
     color: #8CDC73;
     width: 100%;
-}
-#heroheight {
-    height: 160px;
 }
 .social {
     font-family: 'neuzitregular', sans-serif;
@@ -186,17 +184,17 @@ img {
 function imagebutton1() {
 	document.getElementById("canvas1").style.height = "202px";
 	document.getElementById("canvas1").style.top = "120px";
-	document.getElementById("heroheight").style.height = "188px";
+	document.getElementById("herotext").style.height = "188px";
 	}
 	function imagebutton2() {
 	document.getElementById("canvas1").style.height = "360px";
 	document.getElementById("canvas1").style.top = "0px";
-	document.getElementById("heroheight").style.height = "160px";
+	document.getElementById("herotext").style.height = "160px";
 	}
 	function imagebutton3() {
 	document.getElementById("canvas1").style.height = "640px";
 	document.getElementById("canvas1").style.top = "0px";
-	document.getElementById("heroheight").style.height = "447px";
+	document.getElementById("herotext").style.height = "447px";
 	}
 
 function process()
@@ -236,7 +234,7 @@ function readURL(){
   <div class="fullw">
     <div class="container">
       <div class="heroimage" id="canvas1"><img src="images/720x720bigscreen.jpg" alt="" /></div>
-      <div id="heroheight" class="herotext">
+      <div id="herotext">
         <h1 id="heroh">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h1>
       </div>
       <div class="social ellipsis">
