@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: bold;
+}
+p {
+    clear: both;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background: var(--lgrey);
+    padding: 1rem;
+}
+.white, .white a {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+.border {
+    padding: 1em;
+    border: 1px solid var(--dgrey);
+}
+article {
+    counter-increment: articles;
+}
+article h2::before {
+    content: counters(articles, ".") ". ";
+}
+aside {
+    counter-increment: notes;
+    border-left: 0.25em solid var(--mgrey);
+    padding: 1em;
+    background: var(--lgrey);
+}
+aside::before {
+    content: "Note " counters(articles, ".")"."counters(notes, ".") ": ";
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>Counters</h1>
+    <article>
+      <h2>Lorem ipsum title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. Mauris quam eros, viverra eget pulvinar at, scelerisque non velit. Morbi tempus tortor sit amet est luctus varius. Sed sed pretium risus. Vestibulum dapibus, libero non venenatis suscipit, elit libero scelerisque odio, nec laoreet ipsum sem sed nibh. Nulla facilisi. Vivamus rhoncus dignissim diam, id dictum lorem tincidunt sit amet. Cras et eros urna. Proin pulvinar enim a congue porttitor. In viverra commodo lacus, at mollis tortor pellentesque et. </p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+      <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis faucibus justo nulla, ut eleifend turpis rutrum sed. Integer massa tellus, mollis non facilisis at, malesuada ut risus. Integer sit amet quam turpis.</p>
+    </article>
+    <article>
+      <h2>Lorem ipsum title</h2>
+      <p>Aliquam erat volutpat. Proin porttitor maximus ante, at convallis urna pulvinar nec. Donec accumsan pulvinar tellus, eu pulvinar tortor commodo vel. </p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+      <p> Nam tincidunt pellentesque nisi sed tempus. Morbi erat mauris, pulvinar sit amet facilisis sit amet, porta eget mauris. Aliquam erat volutpat. Nullam ultricies, ipsum non ornare condimentum, turpis dui fermentum lectus, non rhoncus metus orci et nisl. Donec eleifend cursus tincidunt. In nibh lacus, faucibus ut molestie id, aliquam at arcu. Aenean sed porttitor enim.</p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+    </article>
+    <article>
+      <h2>Lorem ipsum title</h2>
+      <p> Fusce lobortis porta mauris, id efficitur ante dapibus non. Nulla tincidunt nunc vel turpis ultrices, ac fringilla nibh ultricies. Aliquam at ultrices velit, at tincidunt nunc. Ut in lorem mauris. Maecenas eu tincidunt felis, et sodales mi. Maecenas non lectus enim.</p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+      <p> Vestibulum dapibus tortor sollicitudin tellus consequat, quis pretium dolor convallis. Ut erat nulla, facilisis ac erat in, vehicula ullamcorper augue. Quisque ac nunc eget diam vestibulum semper. Etiam vestibulum vitae quam nec tristique. Fusce ut tempus est. Phasellus odio elit, mollis sit amet sollicitudin vel, interdum id felis. Integer at eros dui. </p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+    </article>
+    <article>
+      <h2>Lorem ipsum title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. Mauris quam eros, viverra eget pulvinar at, scelerisque non velit. Morbi tempus tortor sit amet est luctus varius. Sed sed pretium risus. Vestibulum dapibus, libero non venenatis suscipit, elit libero scelerisque odio, nec laoreet ipsum sem sed nibh. Nulla facilisi. Vivamus rhoncus dignissim diam, id dictum lorem tincidunt sit amet. Cras et eros urna. Proin pulvinar enim a congue porttitor. In viverra commodo lacus, at mollis tortor pellentesque et. </p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+      <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis faucibus justo nulla, ut eleifend turpis rutrum sed. Integer massa tellus, mollis non facilisis at, malesuada ut risus. Integer sit amet quam turpis.</p>
+    </article>
+    <article>
+      <h2>Lorem ipsum title</h2>
+      <p>Aliquam erat volutpat. Proin porttitor maximus ante, at convallis urna pulvinar nec. Donec accumsan pulvinar tellus, eu pulvinar tortor commodo vel. </p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+      <p> Nam tincidunt pellentesque nisi sed tempus. Morbi erat mauris, pulvinar sit amet facilisis sit amet, porta eget mauris. Aliquam erat volutpat. Nullam ultricies, ipsum non ornare condimentum, turpis dui fermentum lectus, non rhoncus metus orci et nisl. Donec eleifend cursus tincidunt. In nibh lacus, faucibus ut molestie id, aliquam at arcu. Aenean sed porttitor enim.</p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+    </article>
+    <article>
+      <h2>Lorem ipsum title</h2>
+      <p> Fusce lobortis porta mauris, id efficitur ante dapibus non. Nulla tincidunt nunc vel turpis ultrices, ac fringilla nibh ultricies. Aliquam at ultrices velit, at tincidunt nunc. Ut in lorem mauris. Maecenas eu tincidunt felis, et sodales mi. Maecenas non lectus enim.</p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+      <p> Vestibulum dapibus tortor sollicitudin tellus consequat, quis pretium dolor convallis. Ut erat nulla, facilisis ac erat in, vehicula ullamcorper augue. Quisque ac nunc eget diam vestibulum semper. Etiam vestibulum vitae quam nec tristique. Fusce ut tempus est. Phasellus odio elit, mollis sit amet sollicitudin vel, interdum id felis. Integer at eros dui. </p>
+      <aside> This is an additional note or comment for this section. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor tellus ac tempus sollicitudin. </aside>
+    </article>
+  </section>
+</main>
+</body>
+</html>
