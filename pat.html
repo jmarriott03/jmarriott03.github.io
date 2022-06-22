@@ -7,234 +7,222 @@
 <title>University of Plymouth</title>
 <style>
 :root {
- --white: #fff;
- --lgrey: #eee;
- --mgrey: #ccc;
- --dgrey: #666;
- --black: #111;
- --link: #00e;
- --visited: purple;
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
 }
 @font-face {
-	font-family: icon;
-	src: url('fonts/icon8.woff');
+    font-family: icon;
+    src: url('fonts/icon8.woff');
 }
 .iconfont {
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	line-height: 1;
-	width: 1em;
-	display: inline-block;
-	text-align: center;
-	margin: 0 0.25em 0 0;
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
 }
 * {
-	margin: 0 auto;
-	box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
 }
 * + * {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 html, body {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	font-size: 100%;
-	font-family: sans-serif;
-	font-weight: normal;
-	line-height: 1.5;
-	color: var(--black);
-	background: var(--white);
-	margin: 0;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
 }
 h1 {
-	font-size: 2em;
-	line-height: 1.25;
-	font-weight: bold;
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: bold;
 }
 h2 {
-	font-size: 1.5em;
-	line-height: 1.25;
-	font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: bold;
 }
 p {
-	clear: both;
+    clear: both;
 }
 a {
-	color: var(--link);
+    color: var(--link);
 }
 .visited {
-	color: var(--visited);
+    color: var(--visited);
 }
 strong {
-	font-weight: bold;
+    font-weight: bold;
 }
 em {
-	font-style: italic;
+    font-style: italic;
 }
 img {
-	border: 0;
-	text-decoration: none;
-	vertical-align: top;
-	width: 100%;
-	margin: 0;
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
 }
 .nowrap {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 .ellipsis {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
 }
 section {
-	max-width: 40em;
-	overflow: hidden;
-	padding: 1em;
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
 }
 .codegrey {
-	background: var(--lgrey);
-	padding: 1rem;
+    background: var(--lgrey);
+    padding: 1rem;
 }
 .white, .white a {
-	color: var(--white);
+    color: var(--white);
 }
 .lgrey {
-	color: var(--lgrey);
+    color: var(--lgrey);
 }
 .mgrey {
-	color: var(--mgrey);
+    color: var(--mgrey);
 }
 .dgrey {
-	color: var(--dgrey);
+    color: var(--dgrey);
 }
 .black {
-	color: var(--black);
+    color: var(--black);
 }
 .bg-white {
-	background: var(--white);
+    background: var(--white);
 }
 .bg-lgrey {
-	background: var(--lgrey);
+    background: var(--lgrey);
 }
 .bg-mgrey {
-	background: var(--mgrey);
+    background: var(--mgrey);
 }
 .bg-dgrey {
-	background: var(--dgrey);
+    background: var(--dgrey);
 }
 .bg-black {
-	background: var(--black);
+    background: var(--black);
 }
 .border {
-	padding: 1em;
-	border: 1px solid var(--dgrey);
+    padding: 1em;
+    border: 1px solid var(--dgrey);
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin: 1em 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0;
 }
 td, th {
-	padding: 0.5em;
-	text-align: left;
-	border: 1px solid var(--black);
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid var(--black);
 }
 th {
-	background-color: var(--black);
-	color: var(--lgrey);
+    background-color: var(--black);
+    color: var(--lgrey);
 }
 .staffquote {
-	padding: 0 0 0 5.5em;
-	position: relative;
-	font-size: 1.5em;
+    padding: 0 0 0 7em;
+    position: relative;
+    font-size: 1.25em;
 }
 .staffquote img {
-	left: 0;
-	position: absolute;
-	width: 4.5em;
-	border-radius: 50%;
+    left: 0;
+    position: absolute;
+    width: 6em;
+    border-radius: 50%;
 }
-	.logosize {
-		max-width: 18em;
-	}
-	.bigtext {
-	font-size: 2em;
-	line-height: 1.25;
-	font-weight: bold;
+.logosize {
+    max-width: 18em;
 }
-	.testimonial {
-		padding: 1rem;
-		margin-top: 2rem;
-	}
-	.topnav a {
-		margin-right: 1em;
-		font-weight: bold;
-	}
+.bigtext {
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: bold;
+}
+.testimonial {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.topnav a {
+    margin-right: 1em;
+    font-weight: bold;
+}
+.hero {
+    max-width: 40rem;
+}
+.fullw {
+    width: 100%;
+    color: #b9d7ff;
+    background: var(--link);
+    overflow: hidden;
+    margin: 0;
+}
+.fullw a {
+    color: var(--white);
+}
 </style>
 </head>
 <body>
+<div class="fullw">
+  <section>
+    <p><img src="images/phew.svg" alt="PHEW" class="logosize"/><br>
+      <strong>Physical Health Emotional Well-being</strong></p>
+    <div class="topnav"><a href="#aboutme">About me</a><a href="#qualifications">Qualifications</a><a href="#services">Services</a><a href="#contact">Contact</a> </div>
+  </section>
+</div>
 <main>
   <section>
-
-
-
-
-<p><img src="images/phew.svg" alt="PHEW" class="logosize"/><br>
-<strong>Physical Health Emotional Well-being</strong></p>
-
-    <h1>Patricia Howe</h1>	
-<h2>Personal Trainer,<br>
-Massage Therapist &amp;<br>
-Crystal Therapist</h2>
-
-<div class="topnav">
-  <a href="#aboutme">About me</a>
-  <a href="#qualifications">Qualifications</a>
-  <a href="#services">Services</a>
-  <a href="#testimonial">Testimonial</a>
-	<a href="#contact">Contact</a>
-</div>
-	  
-	  
-<h2>About me</h2>
-
-
-<p>My passion is to help others achieve physical health and emotional wellness grows stronger as I evolve.</p>
-<p><strong>"Search within yourself"</strong></p><p>Massage therapy is one of the oldest health care practices known to history (4,000 years). A therapy that provides both physical and emotional health benefits, in which I trained at School of Bodywork Exeter and gained my qualifications - most recently in advanced work as a Remedial Massage Therapist. </p>
-
-<p>I feel massage beautifully compliments my personal training skills and my 34 years experience in the fitness industry.</p>
-
-<p>In the personal training area of my career,  I very much love the aspect of helping people set and achieve their goals, in a friendly and relaxed atmosphere. I particularly like working with people who don’t like the idea of the gym and supporting them to feel good about themselves. This can be in 1:1 personal training or in small semi-private groups.</p>
-
-<p>Having owned a gymnasium in the centre of Exeter for 20 years, alongside being a level 3 personal trainer in addition to achieving the  ladies British Bodybuilding Championship title twice. a wife, and a mother of two, I found it was time to start slowing down my exciting yet hectic journey and focusing in on the areas that I am most passionate about - helping people to feel good.</p>
-	  <p>Crystal therapy has long been a hobby of mine which not only fascinates me, but drew me to the field of learning and experiencing more. How they are formed? What are their individual structures? Looking at the metaphysical aspect of crystals, and how they may have an effect on our bodies/lives. I eventually studied and gained an ICGT qualification.</p>
-	  <p>Would you like to feel good but don’t know where to start and hate the idea of a gym? Let PHEW be your guiding hand.</p>
-
-
-
-<h2>Qualifications</h2>
-<ul>
-<li>Level 3 Personal Trainer WABBA<br>
-(World Amateur BodyBuilding Association)</li>
-
-<li>Complete Bodyworker and Remedial Massage Therapist APNT<br>
-(Association of Physical and Natural Therapists)</li>
-
-<li>Crystal Therapist ICGT<br>
-(Institute of Crystal and Gem Therapists)</li>
-</ul>
-
-
-
-
-<h2 class="bigtext">Services</h2>
-
-<h2>Massage therapy</h2>
-
-<p>As a qualified complete body worker and remedial massage therapist, my practice offers an holistic approach, incorporating flexibility and mobilisation techniques within your tailor made treatment.</p>
-
-<table>
+    <h1>Patricia Howe</h1>
+    <h2>Personal Trainer,<br>
+      Massage Therapist &amp;<br>
+      Crystal Therapist</h2>
+    <p><img src="images/pat1.jpg" alt="Pat Howe"/></p>
+    <h2 id="aboutme">About me</h2>
+    <p>My passion is to help others achieve physical health and emotional wellness grows stronger as I evolve.</p>
+    <p><strong>"Search within yourself"</strong></p>
+    <p>Massage therapy is one of the oldest health care practices known to history (4,000 years). A therapy that provides both physical and emotional health benefits, in which I trained at School of Bodywork Exeter and gained my qualifications - most recently in advanced work as a Remedial Massage Therapist. </p>
+    <p>I feel massage beautifully compliments my personal training skills and my 34 years experience in the fitness industry.</p>
+    <p>In the personal training area of my career,  I very much love the aspect of helping people set and achieve their goals, in a friendly and relaxed atmosphere. I particularly like working with people who don’t like the idea of the gym and supporting them to feel good about themselves. This can be in 1:1 personal training or in small semi-private groups.</p>
+    <p>Having owned a gymnasium in the centre of Exeter for 20 years, alongside being a level 3 personal trainer in addition to achieving the  ladies British Bodybuilding Championship title twice, a wife, and a mother of two, I found it was time to start slowing down my exciting yet hectic journey and focusing in on the areas that I am most passionate about - helping people to feel good.</p>
+    <p>Crystal therapy has long been a hobby of mine which not only fascinates me, but drew me to the field of learning and experiencing more. How they are formed? What are their individual structures? Looking at the metaphysical aspect of crystals, and how they may have an effect on our bodies/lives. I eventually studied and gained an ICGT qualification.</p>
+    <p>Would you like to feel good but don’t know where to start and hate the idea of a gym? Let PHEW be your guiding hand.</p>
+    <h2 id="qualifications">Qualifications</h2>
+    <ul>
+      <li>Level 3 Personal Trainer WABBA<br>
+        (World Amateur BodyBuilding Association)</li>
+      <li>Complete Bodyworker and Remedial Massage Therapist APNT<br>
+        (Association of Physical and Natural Therapists)</li>
+      <li>Crystal Therapist ICGT<br>
+        (Institute of Crystal and Gem Therapists)</li>
+    </ul>
+    <h2 class="bigtext" id="services">Services</h2>
+    <h2>Massage therapy</h2>
+    <p>As a qualified complete body worker and remedial massage therapist, my practice offers an holistic approach, incorporating flexibility and mobilisation techniques within your tailor made treatment.</p>
+    <table>
       <tr>
         <th scope="col">Duration</th>
         <th scope="col">Price*</th>
@@ -256,23 +244,13 @@ Crystal Therapist</h2>
         <td>£65</td>
       </tr>
     </table>
-
-
-<p>*NHS discount available upon proof of employment</p>
-
-<p>Combination of personal training and massage therapy is a great stress relief package.</p>
-
-<h2>Personal training</h2>
-
-<p>Offering  1-1 sessions in the great outdoors, or creative sessions in a spacious room at Exeter Natural Health Centre for those of you who would prefer privacy during training sessions.</p>
-
-<p>Your programmes are tailored to your ability and goals. Qualified Pre/Post natal wellness practitioner.</p>
-
-<p>Reduced price for first session, packages available.</p>
-
-
-
-	  <table>
+    <p>*NHS discount available upon proof of employment</p>
+    <p>Combination of personal training and massage therapy is a great stress relief package.</p>
+    <h2>Personal training</h2>
+    <p>Offering  1-1 sessions in the great outdoors, or creative sessions in a spacious room at Exeter Natural Health Centre for those of you who would prefer privacy during training sessions.</p>
+    <p>Your programmes are tailored to your ability and goals. Qualified Pre/Post natal wellness practitioner.</p>
+    <p>Reduced price for first session, packages available.</p>
+    <table>
       <tr>
         <th scope="col">Duration</th>
         <th scope="col">Price</th>
@@ -283,27 +261,14 @@ Crystal Therapist</h2>
       </tr>
       <tr>
         <td>Example package 5 personal training sessions<br>
-+ 1 massage therapy session</td>
+          + 1 massage therapy session</td>
         <td>£225</td>
       </tr>
-
-    </table>	  
-	  
-	  
-	  
-
-<h2>Crystal therapy</h2>
-
-<p>This is a very gentle non-intrusive holistic therapy, crystals have been of interest to me for a very long time which prompted me to research and eventually train as a crystal therapist.</p>
-
-<p>Combination of massage therapy and crystal therapy can provide a beautiful sense of relaxation.</p>
-
-First session 45 minutes £30
-Further treatments 30 minutes £25
-Package 45 minute massage treatment incorporating chakra balancing £50
-
-
-	  <table>
+    </table>
+    <h2>Crystal therapy</h2>
+    <p>This is a very gentle non-intrusive holistic therapy, crystals have been of interest to me for a very long time which prompted me to research and eventually train as a crystal therapist.</p>
+    <p>Combination of massage therapy and crystal therapy can provide a beautiful sense of relaxation.</p>
+    <table>
       <tr>
         <th scope="col">Duration</th>
         <th scope="col">Price</th>
@@ -316,46 +281,25 @@ Package 45 minute massage treatment incorporating chakra balancing £50
         <td>Further treatments 30 minutes</td>
         <td>£25</td>
       </tr>
-
       <tr>
-        <td>Package - 45 minute massage treatment incorporating chakra balancing</td>
+        <td>Package - 45 minute massage treatment<br>
+          incorporating chakra balancing</td>
         <td>£50</td>
       </tr>
     </table>
-	  
-	  
-	  <div class="bg-lgrey testimonial">
-<h2>Testimonial</h2>
-
-<p><strong>Session 6</strong></p> 
-
-<p>With new COVID-19 guidance for personal  trainers, Pat has issued covid considerations for 1-1 sessions. These are very reasonable, and it is reassuring to know that she has really thought through all the issues to ensure everyone's safety.</p><p>After 6 sessions with Pat, I am confident with weights, and that my form has improved.</p><p>With Pat's help I have gained shoulder flexibility, focused on my hamstrings and glutes, gained overall strength, and began to gradually develop my running.</p><p>It has helped me understand more fully how important it is to warm up properly, before sustained exertion. I feel positive about continuing to do sessions at home and will plan to check in with Pat every so often for support and review.</p>
-
-<p>Thank you Pat</p>
-
-<p>Deborah Salisbury</p>
-
-</div>
-
-
-
-<h2>Contact</h2>
-	  
-	  <div class="staffquote">
-    <p><img src="images/profile01.jpg" alt=""><strong>Patricia Howe</strong><br>
-		<span class="iconfont" aria-hidden="true">0</span>07930 258747<br>
-<span class="iconfont" aria-hidden="true">&#47;</span><a href="info@phew4u.co.uk">info@phew4u.co.uk</a></p>
-  </div>
-	  
-
-
-<p>I aim to reply to your inquiry within 24 hours.</p>
-
-<p>Exeter Natural Health Centre<br>
-Queens Walk 83/84<br>
-Queens Street<br>
-Exeter<br>
-EX4 3RP</p>
+    <h2 id="contact">Contact</h2>
+    <div class="staffquote">
+      <p><img src="images/pat2.jpg" alt=""><strong>Patricia Howe</strong><br>
+        <span class="iconfont" aria-hidden="true">0</span>07930 258747<br>
+        <span class="iconfont" aria-hidden="true">&#47;</span><a href="info@phew4u.co.uk">mailto:info@phew4u.co.uk</a><br>
+        <span class="iconfont" aria-hidden="true">f</span><a href="https://www.facebook.com/phewhealth">phewhealth</a></p>
+    </div>
+    <p>I aim to reply to your inquiry within 24 hours.</p>
+    <p>Exeter Natural Health Centre<br>
+      Queens Walk 83/84<br>
+      Queens Street<br>
+      Exeter<br>
+      EX4 3RP</p>
   </section>
 </main>
 </body>
