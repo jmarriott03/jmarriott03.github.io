@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: bold;
+}
+p {
+    clear: both;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 50%;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background: var(--lgrey);
+    padding: 1rem;
+}
+.white, .white a {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+.border {
+    padding: 1em;
+    border: 1px solid var(--dgrey);
+}
+#size {
+    position: fixed;
+    left: 0;
+    top: 2em;
+    z-index: 100;
+    color: #fff;
+    background: rgba(0,0,0,0.8);
+    font-size: 1em;
+    padding: 1em;
+}
+picture {
+    display: block;
+}
+</style>
+<script>
+    window.onresize = displayWindowSize;
+    window.onload = displayWindowSize;
+
+    function displayWindowSize() {
+        myWidth = window.innerWidth;
+        myHeight = window.innerHeight;
+        document.getElementById("size").innerHTML = "Browser: " + myWidth + "x" + myHeight + "px";
+		};
+</script>
+</head>
+<body>
+<div id="size"></div>
+<main>
+  <section>
+    <h1>Responsive images</h1>
+    <h2>picture</h2>
+    <picture>
+      <source media="(max-width: 959px)" srcset="images/480w.jpg">
+      <source media="(min-width: 960px)" srcset="images/960w.jpg">
+      <img src="images/960w.jpg" alt="test image"></picture>
+  </section>
+  <section>
+    <h2>img</h2>
+    <p> <img 
+  alt="A baby smiling with a yellow headband."
+  srcset="
+		images/480w.jpg  480w,
+		images/960w.jpg  960w,
+		"
+			 sizes="70vmin"
+></p>
+  </section>
+</main>
+</body>
+</html>
