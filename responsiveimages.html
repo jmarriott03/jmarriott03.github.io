@@ -146,7 +146,6 @@ picture {
 </style>
 <script>
     window.onresize = displayWindowSize;
-    window.onload = displayWindowSize;
 
     function displayWindowSize() {
         myWidth = window.innerWidth;
@@ -155,9 +154,9 @@ picture {
 		};
 </script>
 </head>
-<body>
-<div id="size"></div>
+<body onload="displayWindowSize()">
 <main>
+  <div id="size">Resize browser width</div>
   <section>
     <h1>Responsive images</h1>
     <h2>picture</h2>
