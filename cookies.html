@@ -57,8 +57,7 @@ h2 {
     font-weight: bold;
 }
 p {
-    float: left;
-    margin: 0 1em 1em 0;
+    clear: both;
 }
 a {
     color: var(--link);
@@ -87,11 +86,6 @@ img {
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 0;
-}
-section {
-    overflow: hidden;
-	max-width: 51em;
-    padding: 1em 1em 0 1em;
 }
 .codegrey {
     background: var(--lgrey);
@@ -127,10 +121,6 @@ section {
 .bg-black {
     background: var(--black);
 }
-.border {
-    padding: 1em;
-    border: 1px solid var(--dgrey);
-}
 .btn a {
     padding: 0.5em 0.75em;
     float: left;
@@ -141,9 +131,17 @@ section {
     margin: 0.25em 1em 0 0;
     text-decoration: none;
 }
+.cookies {
+    padding: 1em 1em 0 1em;
+    overflow: hidden;
+}
+.cookies p {
+    float: left;
+    margin: 0 1em 1em 0;
+    clear: none;
+}
 .personalise a {
     color: var(--link);
-    text-decoration: underline;
     margin-top: 0.75em;
     display: block;
 }
@@ -151,12 +149,12 @@ section {
 </head>
 <body>
 <main>
-  <section class="bg-black white">
+  <div class="cookies bg-black white">
     <p>We use cookies to give you the best online experience.<br>
       Please let us know if you agree to all of these cookies.</p>
     <p class="btn"><a href="#">Accept</a><a href="#">Reject</a></p>
     <p class="personalise"><a href="#">Personalise my choices</a></p>
-  </section>
+  </div>
 </main>
 </body>
 </html>
