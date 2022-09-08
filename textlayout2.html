@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(255,0,0,0.25);
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+p {
+    clear: both;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    margin-top: 0;
+    border: 1px dotted #111;
+}
+.codegrey {
+    background: var(--lgrey);
+    padding: 1rem;
+}
+.white, .white a {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+.border {
+    padding: 1em;
+    border: 1px solid var(--dgrey);
+}
+blockquote {
+    border-left: 0.25rem solid;
+    padding: 1rem;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>H1 Text layout</h1>
+    <h2>H2 heading and paragraphs</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </section>
+  <section>
+    <h2>H2 heading and H3 subheadings</h2>
+    <h3>Lorem ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h3>Lorem ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </section>
+  <section>
+    <h2>Basic bullet list</h2>
+    <p>When the bullet points are simple and short, this formatting option works pretty effectively (it's easy to discern the different points at a glance):</p>
+    <ul>
+      <li><strong>Lorem ipsum dolor sit amet</strong></li>
+      <li><strong>Consectetur adipiscing elit</strong></li>
+      <li><strong>Sed do eiusmod tempor incididunt ut labore</strong></li>
+      <li><strong>Dolore magna aliqua</strong></li>
+    </ul>
+    <p>Bold formatting can be an effective way to add extra emphasis to bullet points when the word count is low. Another formatting option is to treat what comes after the bullet list as a new 'chunk' of content.</p>
+  </section>
+  <section>
+    <h2>Complex bullet list</h2>
+    <ul>
+      <li><strong>Gravida neque convallis a cras semper</strong><br>
+        Tortor at auctor urna nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.</li>
+      <li><strong>Vel fringilla est ullamcorper eget</strong><br>
+        Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Sed risus pretium quam vulputate dignissim.</li>
+      <li><strong>Faucibus ornare suspendisse sed nisi</strong><br>
+        Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Ornare lectus sit amet est placerat in egestas erat.</li>
+      <li><strong>Sed lectus vestibulum mattis ullamcorper velit sed</strong><br>
+        Sed faucibus turpis in eu mi bibendum neque egestas congue. Elementum sagittis vitae et leo duis ut diam quam nulla.</li>
+      <li><strong>Massa id neque aliquam vestibulum morbi blandit cursus risus</strong><br>
+        Turpis massa sed elementum tempus egestas sed sed risus. Id nibh tortor id aliquet lectus proin nibh nisl condimentum.</li>
+      <li><strong>Cras tincidunt lobortis feugiat vivamus</strong><br>
+        Sociis natoque penatibus et magnis. Eget sit amet tellus cras. In hac habitasse platea dictumst quisque sagittis purus.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Multi-level bullet list</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ul>
+      <li><strong>Ullamcorper a lacus vestibulum sed arcu non odio</strong>
+        <ul>
+          <li>Ut consequat semper viverra nam</li>
+          <li>Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit</li>
+          <li>Donec adipiscing tristique risus nec feugiat in fermentum</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><strong>Amet mauris commodo quis imperdiet massa</strong>
+        <ul>
+          <li>Nibh sed pulvinar proin gravida</li>
+          <li>A pellentesque sit amet porttitor</li>
+          <li>Habitant morbi tristique senectus et</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><strong>Tellus pellentesque eu tincidunt tortor aliquam</strong>
+        <ul>
+          <li>Tincidunt augue interdum velit euismod in</li>
+          <li>Enim ut sem viverra aliquet eget sit amet</li>
+          <li>Rhoncus urna neque viverra justo</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Complex multi-level bullet list</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Basic numbered list</h2>
+    <p>When the list item are simple and short, this formatting option works pretty effectively (it's easy to discern the different points at a glance):</p>
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Sed do eiusmod tempor incididunt ut labore</li>
+      <li>Dolore magna aliqua</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Complex numbered list</h2>
+    <p>Gravida neque convallis a cras semper. Tortor at auctor urna nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.</p>
+    <ol>
+      <li><strong><a href="#">Vel fringilla est ullamcorper eget</a></strong><br>
+        Proin nibh nisl condimentum id venenatis a condimentum vitae sapien sed risus pretium quam vulputate dignissim</li>
+      <li><strong><a href="#">Faucibus ornare suspendisse sed nisi</a></strong><br>
+        Mattis nunc sed blandit libero volutpat sed cras ornare arcu ornare lectus sit amet est placerat in egestas erat</li>
+      <li><strong><a href="#">Sed lectus vestibulum mattis ullamcorper velit sed</a></strong><br>
+        Sed faucibus turpis in eu mi bibendum neque egestas congue elementum sagittis vitae et leo duis ut diam quam nulla</li>
+      <li><strong><a href="#">Massa id neque aliquam vestibulum morbi blandit cursus risus</a></strong><br>
+        Turpis massa sed elementum tempus egestas sed sed risus id nibh tortor id aliquet lectus proin nibh nisl condimentum</li>
+      <li><strong><a href="#">Cras tincidunt lobortis feugiat vivamus</a></strong><br>
+        Sociis natoque penatibus et magnis. Eget sit amet tellus cras in hac habitasse platea dictumst quisque sagittis purus</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Inset text as additional details</h2>
+    <p>At consectetur lorem donec massa sapien faucibus et molestie ac. Est sit amet facilisis magna etiam tempor. Elit at imperdiet dui accumsan sit amet. In vitae turpis massa sed elementum tempus egestas sed.</p>
+    <blockquote>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</blockquote>
+    <p>Justo donec enim diam vulputate. Diam maecenas ultricies mi eget. Mollis aliquam ut porttitor leo a diam sollicitudin.</p>
+  </section>
+  <section>
+    <h2>Inset text as warning text</h2>
+    <p>At consectetur lorem donec massa sapien faucibus et molestie ac. Est sit amet facilisis magna etiam tempor. Elit at imperdiet dui accumsan sit amet. In vitae turpis massa sed elementum tempus egestas sed.</p>
+    <blockquote><strong>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</strong></blockquote>
+    <p>Justo donec enim diam vulputate. Diam maecenas ultricies mi eget. Mollis aliquam ut porttitor leo a diam sollicitudin.</p>
+  </section>
+  <section>
+    <h2>End-of-paragraph and end-of-section links</h2>
+    <p>At consectetur lorem donec massa sapien faucibus et molestie ac. Est sit amet facilisis magna etiam tempor. Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo. Justo donec enim diam vulputate.</p>
+    <p><a href="#">Link providing more details about what's mentioned above</a></p>
+    <p>Diam maecenas ultricies mi eget. Mollis aliquam ut porttitor leo a diam sollicitudin. Iaculis at erat pellentesque adipiscing. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Nunc non blandit massa enim nec dui nunc. </p>
+    <p><strong><a href="#">Primary call to action</a></strong></p>
+  </section>
+  <section>
+    <h2>Links with descriptions</h2>
+    <p> <strong><a href="#">Lorem ipsum dolor sit amet</a></strong><br>
+      Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><strong><a href="#">Est lorem ipsum dolor sit amet consectetur adipiscing</a></strong><br>
+      Consectetur lorem donec massa sapien faucibus et. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.</p>
+    <p><strong><a href="#">Consequat mauris nunc congue nisi</a></strong><br>
+      Egestas erat imperdiet sed euismod nisi. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio.</p>
+  </section>
+  <section>
+    <h2>Other examples of next-line formatting</h2>
+    <p><strong><a href="#">Professor Joe Bloggs</a></strong><br>
+      Lecturer in Text Formatting</p>
+    <p>Contact Joe by sending a carrier pigeon to this address:</p>
+    <p><strong> Room 101<br>
+      Hepworth House<br>
+      University of Plymouth<br>
+      PL4 8AA</strong></p>
+    <p>Or connect with Joe using more modern methods:</p>
+    <p><strong>Instagram: <a href="#">@joe_bloggs</a><br>
+      Twitter: <a href="#">@OfficialProfJoeBloggs</a><br>
+      Website: <a href="#">www.joe-bloggs-blogs.com</a></strong></p>
+  </section>
+</main>
+</body>
+</html>
