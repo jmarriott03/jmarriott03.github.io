@@ -31,7 +31,7 @@
 * {
     margin: 0 auto;
     box-sizing: border-box;
-	background: rgba(255,0,0,0.25);
+    background: rgba(255,0,0,0.25);
 }
 * + * {
     margin-top: 1em;
@@ -71,7 +71,7 @@ h6 {
     font-size: 0.75em;
     font-weight: bold;
 }
-p {
+p:not(:last-child) {
     clear: both;
     margin-bottom: 2em;
 }
@@ -154,9 +154,6 @@ blockquote {
     border-left: 0.25rem solid;
     padding: 1rem;
     margin-bottom: 2em;
-}
-.largetext {
-    font-size: 1.5em;
 }
 </style>
 </head>
@@ -290,8 +287,6 @@ blockquote {
     <p><strong>Instagram: <a href="#">@joe_bloggs</a><br>
       Twitter: <a href="#">@OfficialProfJoeBloggs</a><br>
       Website: <a href="#">www.joe-bloggs-blogs.com</a></strong></p>
-    <h2>Large text</h2>
-    <p class="largetext">Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</p>
   </section>
 </main>
 </body>
