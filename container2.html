@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    margin-bottom: 2em;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background: var(--lgrey);
+    padding: 1rem;
+}
+.white, .white a {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+.border {
+    padding: 1em;
+    border: 1px solid var(--dgrey);
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.verticalalign {
+    display: table;
+}
+.verticalalign > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.width50 {
+    width: 50%;
+    margin: 0;
+}
+.width67 {
+    width: calc(67% - 1rem);
+    margin: 0;
+    float: left;
+    padding: 0 1em 0 0;
+}
+.width33 {
+    width: 33%;
+    margin: 0;
+    float: left;
+}
+.pad1 {
+    padding: 1em;
+}
+section > div {
+    container-type: inline-size;
+}
+
+@media (max-width: 50em) {
+.width67 {
+    width: 100%;
+    padding: 0 0 1em 0;
+}
+.width33 {
+    width: 100%;
+}
+}
+@container (max-width: 40em) {
+.width50 {
+width: 100%;
+}
+.verticalalign > div {
+display: inherit;
+}
+.flex {
+display: inherit;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="width67">
+      <div class="verticalalign bg-lgrey">
+        <div class="width50"><img src="images/720x720bigscreen.jpg" width="720" height="720"  alt=""/></div>
+        <div class="width50 pad1">
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="width33">
+      <div class="verticalalign bg-lgrey">
+        <div class="width50"><img src="images/720x720bigscreen2.jpg" width="720" height="720"  alt=""/></div>
+        <div class="width50 pad1">
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="codegrey"><code>section &gt; div {<br>
+    container-type: inline-size;<br>
+    }<br>
+    @container (max-width: 40em) {<br>
+    .width50 {<br>
+    width: 100%;<br>
+    }<br>
+    .verticalalign &gt; div {<br>
+    display: inherit;<br>
+    }</code></section>
+</main>
+</body>
+</html>
