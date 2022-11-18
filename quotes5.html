@@ -43,9 +43,6 @@ h3 {
 a {
     color: #00E;
 }
-.visited {
-    color: #551A8B;
-}
 strong {
     font-weight: bold;
 }
@@ -97,25 +94,6 @@ section {
     overflow: hidden;
     padding: 1rem 1rem 0 1rem;
 }
-figcaption {
-    margin: 0;
-    padding: 1rem;
-}
-.black {
-    background-color: #111;
-}
-.pad1 {
-    padding: 1rem;
-}
-.fullw {
-    width: 100%;
-    overflow: hidden;
-    padding-bottom: 0.5em;
-    background: #111;
-}
-.whitetext {
-    color: #FFF;
-}
 .quotestyle:before {
     font-family: "Times New Roman", serif;
     font-size: 3em;
@@ -128,65 +106,272 @@ figcaption {
 .quotestyle {
     font-weight: bold;
     padding: 1em;
-    max-width: 34em;
 }
 .quotestyle p:last-child {
     font-weight: normal;
 }
-.swatch1 {
-    background: #B3E6E6;
+/*Mono*/
+.mono1 {
+    background-color: #FFF;
 }
-.swatch1 a {
+.mono2 {
+    background-color: #EEE;
+}
+.mono3 {
+    background-color: #CCC;
+}
+.mono4 {
+    background-color: #333;
+}
+/*Green*/
+.green1 {
+    background-color: #B3E6E6;
+}
+.green2 {
+    background-color: #6CC;
+}
+.green3 {
+    background-color: #2B8282;
+}
+.green4 {
+    background-color: #066;
+}
+/*Red*/
+.red1 {
+    background-color: #FFB8B8;
+}
+.red2 {
+    background-color: #FF7070;
+}
+.red3 {
+    background-color: #C33;
+}
+.red4 {
+    background-color: #900;
+}
+/*Purple*/
+.purple1 {
+    background-color: #E6CCE6;
+}
+.purple2 {
+    background-color: #C9C;
+}
+.purple3 {
+    background-color: #936293;
+}
+.purple4 {
+    background-color: #636;
+}
+/*Orange*/
+.orange1 {
+    background-color: #FFE6CC;
+}
+.orange2 {
+    background-color: #FC9;
+}
+.orange3 {
+    background-color: #F96;
+}
+.orange4 {
+    background-color: #B45A2D;
+}
+/*Blue*/
+.blue1 {
+    background-color: #B8D0E8;
+}
+.blue2 {
+    background-color: #71A1D0;
+}
+.blue3 {
+    background-color: #369;
+}
+.blue4 {
+    background-color: #036;
+}
+.blacktext, .blacktext a {
     color: #111;
 }
-.swatch2 {
-    color: #FFF;
-    background: #C33;
-}
-.swatch2 a {
-    color: #FFF;
-}
-.swatch3 {
-    color: #FFF;
-    background: #636;
-}
-.swatch3 a {
+.whitetext, .whitetext a {
     color: #FFF;
 }
 </style>
 </head>
 <body>
 <main>
-    <section>
-      <h2>quotes5</h2>
-    </section>
-    <div class="grid-container">
-      <div class="grid-item">
-        <div class="quotestyle">
-          <p>Antarctica is one of the last untouched areas of the world. Many of the factors that control global climate are driven in the Antarctic, such as the down welling of cold water, which drives the rest of the oceans currents.</p>
-          <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="quotestyle swatch1">
-          <p>Antarctica is one of the last untouched areas of the world. Many of the factors that control global climate are driven in the Antarctic, such as the down welling of cold water, which drives the rest of the oceans currents.</p>
-          <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="quotestyle swatch2">
-          <p>Antarctica is one of the last untouched areas of the world. Many of the factors that control global climate are driven in the Antarctic, such as the down welling of cold water, which drives the rest of the oceans currents.</p>
-          <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="quotestyle swatch3">
-          <p>Antarctica is one of the last untouched areas of the world. Many of the factors that control global climate are driven in the Antarctic, such as the down welling of cold water, which drives the rest of the oceans currents.</p>
-          <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
-        </div>
+  <section>
+    <h2>Mono quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="quotestyle mono1">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
       </div>
     </div>
-
+    <div class="grid-item">
+      <div class="quotestyle mono2">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle mono3 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle mono4 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p class="whitetext"><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Green quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="quotestyle green1 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle green2 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle green3 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle green4 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Red quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="quotestyle red1 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle red2 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle red3 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle red4 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Purple quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="quotestyle purple1 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle purple2 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle purple3 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle purple4 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Orange quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="quotestyle orange1 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle orange2 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle orange3 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle orange4 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Blue quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="quotestyle blue1 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle blue2 blacktext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle blue3 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="quotestyle blue4 whitetext">
+        <p>Many of the factors that control global climate are driven in the Antarctic.</p>
+        <p><a href="#">Georgia O'Reilly</a> - Software Engineer at Renishaw</p>
+      </div>
+    </div>
+  </div>
 </main>
 </body>
 </html>
