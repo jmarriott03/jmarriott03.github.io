@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #FFF;
+--lgrey: #EEE;
+--mgrey: #CCC;
+--dgrey: #666;
+--black: #111;
+--link: #00E;
+--visited: #551A8B;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon12.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 0;
+	color: var(--black);
+    background: var(--white);
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5em;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.item1 {
+    grid-area: item1;
+}
+.item2 {
+    grid-area: item2;
+}
+.item3 {
+    grid-area: item3;
+}
+.item4 {
+    grid-area: item4;
+}
+.item5 {
+    grid-area: item5;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: 'item1 item1 item2 item3' 'item1 item1 item4 item5';
+    grid-gap: 1em;
+    padding: 1em;
+    max-width: 80em;
+}
+.grid-container > div {
+    margin-top: 0;
+    padding: 1em;
+    background: var(--white);
+    border-spacing: 0.5rem;
+    width: 100%;
+}
+.grid-container img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: calc(100% + 2em);
+    margin: -1em;
+    padding-bottom: 1em;
+}
+.white {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+.fullw {
+    width: 100%;
+    overflow: auto;
+    background: #71A1D0;
+}
+
+/*
+Media screen
+*/
+
+@media screen and (max-width: 50em) {
+.grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: 'item1 item1' 'item2 item3' 'item4 item5';
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw">
+    <div class="grid-container">
+      <div class="item1"><a href="#"><img src="images/1280x720pioneer1.jpg" alt="picture" width="320"></a>
+        <h2>The university of pioneers, advancing knowledge and transforming lives</h2>
+        <p>Plymouth's history is the history of the world<br>
+          <a href="#">Explore human stories behind the pioneers</a></p>
+      </div>
+      <div class="item2"><a href="#"><img src="images/1280x720pioneer2.jpg" alt="picture" width="320"></a>
+        <p><strong>Can Earth still support us?</strong><br>
+          <a href="#">What lies ahead for humankind?</a></p>
+      </div>
+      <div class="item3"><a href="#"><img src="images/1280x720pioneer3.jpg" alt="picture" width="320"></a>
+        <p><strong>Pandemic prevention</strong><br>
+          <a href="#">See the science behind the fight</a></p>
+      </div>
+      <div class="item4"><a href="#"><img src="images/1280x720pioneer6.jpg" alt="picture" width="320"></a>
+        <p><strong>Invasive species</strong><br>
+          <a href="#">Time for a rethink?</a></p>
+      </div>
+      <div class="item5"><a href="#"><img src="images/1280x720pioneer7.jpg" alt="picture" width="320"></a>
+        <p><strong>Oceans in an era of environmental crisis</strong><br>
+          <a href="#">Venture into a new age</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
