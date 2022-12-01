@@ -154,8 +154,8 @@ blockquote {
 }
 .thumbnail {
     width: 7.75em;
-    float: left;
     margin: 0 0.5rem 0 0;
+    float: left;
     object-fit: cover;
     aspect-ratio: 16 / 9;
 }
@@ -179,6 +179,11 @@ blockquote {
 @media (max-width: 50em) {
 .fifty {
     width: 100%;
+}
+.thumbnail {
+    display: block;
+    margin-bottom: 1rem;
+	float: none;
 }
 }
 </style>
