@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(255,0,0,0.25);
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    font-weight: bold;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    margin-top: 0;
+    border: 1px dotted red;
+}
+.trix-content div {
+    margin-bottom: 2em;
+}
+.trix-content div:last-child {
+    margin: 0;
+}
+.trix-content p:not(:last-child) {
+    clear: both;
+    margin-bottom: 2em;
+}
+.trix-content ul:not(:last-child), .trix-content ol:not(:last-child) {
+    margin-bottom: 2em;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="trix-content">
+    <h1>trix-content ul, ol</h1>
+    <h2>Basic bullet list</h2>
+    <p>When the bullet points are simple and short, this formatting option works pretty effectively (it's easy to discern the different points at a glance):</p>
+    <ul>
+      <li><strong>Lorem ipsum dolor sit amet</strong></li>
+      <li><strong>Consectetur adipiscing elit</strong></li>
+      <li><strong>Sed do eiusmod tempor incididunt ut labore</strong></li>
+      <li><strong>Dolore magna aliqua</strong></li>
+    </ul>
+    <p>Bold formatting can be an effective way to add extra emphasis to bullet points when the word count is low. Another formatting option is to treat what comes after the bullet list as a new 'chunk' of content.</p>
+    <h2>Complex bullet list</h2>
+    <ul>
+      <li><strong>Gravida neque convallis a cras semper</strong><br>
+        Tortor at auctor urna nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.</li>
+      <li><strong>Vel fringilla est ullamcorper eget</strong><br>
+        Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Sed risus pretium quam vulputate dignissim.</li>
+      <li><strong>Faucibus ornare suspendisse sed nisi</strong><br>
+        Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Ornare lectus sit amet est placerat in egestas erat.</li>
+      <li><strong>Sed lectus vestibulum mattis ullamcorper velit sed</strong><br>
+        Sed faucibus turpis in eu mi bibendum neque egestas congue. Elementum sagittis vitae et leo duis ut diam quam nulla.</li>
+      <li><strong>Massa id neque aliquam vestibulum morbi blandit cursus risus</strong><br>
+        Turpis massa sed elementum tempus egestas sed sed risus. Id nibh tortor id aliquet lectus proin nibh nisl condimentum.</li>
+      <li><strong>Cras tincidunt lobortis feugiat vivamus</strong><br>
+        Sociis natoque penatibus et magnis. Eget sit amet tellus cras. In hac habitasse platea dictumst quisque sagittis purus.</li>
+    </ul>
+    <h2>Multi-level bullet list</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ul>
+      <li><strong>Ullamcorper a lacus vestibulum sed arcu non odio</strong>
+        <ul>
+          <li>Ut consequat semper viverra nam</li>
+          <li>Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit</li>
+          <li>Donec adipiscing tristique risus nec feugiat in fermentum</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><strong>Amet mauris commodo quis imperdiet massa</strong>
+        <ul>
+          <li>Nibh sed pulvinar proin gravida</li>
+          <li>A pellentesque sit amet porttitor</li>
+          <li>Habitant morbi tristique senectus et</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><strong>Tellus pellentesque eu tincidunt tortor aliquam</strong>
+        <ul>
+          <li>Tincidunt augue interdum velit euismod in</li>
+          <li>Enim ut sem viverra aliquet eget sit amet</li>
+          <li>Rhoncus urna neque viverra justo</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Complex multi-level bullet list</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Basic numbered list</h2>
+    <p>When the list item are simple and short, this formatting option works pretty effectively (it's easy to discern the different points at a glance):</p>
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Sed do eiusmod tempor incididunt ut labore</li>
+      <li>Dolore magna aliqua</li>
+    </ol>
+    <h2>Complex numbered list</h2>
+    <p>Gravida neque convallis a cras semper. Tortor at auctor urna nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.</p>
+    <ol>
+      <li><strong><a href="#">Vel fringilla est ullamcorper eget</a></strong><br>
+        Proin nibh nisl condimentum id venenatis a condimentum vitae sapien sed risus pretium quam vulputate dignissim</li>
+      <li><strong><a href="#">Faucibus ornare suspendisse sed nisi</a></strong><br>
+        Mattis nunc sed blandit libero volutpat sed cras ornare arcu ornare lectus sit amet est placerat in egestas erat</li>
+      <li><strong><a href="#">Sed lectus vestibulum mattis ullamcorper velit sed</a></strong><br>
+        Sed faucibus turpis in eu mi bibendum neque egestas congue elementum sagittis vitae et leo duis ut diam quam nulla</li>
+      <li><strong><a href="#">Massa id neque aliquam vestibulum morbi blandit cursus risus</a></strong><br>
+        Turpis massa sed elementum tempus egestas sed sed risus id nibh tortor id aliquet lectus proin nibh nisl condimentum</li>
+      <li><strong><a href="#">Cras tincidunt lobortis feugiat vivamus</a></strong><br>
+        Sociis natoque penatibus et magnis. Eget sit amet tellus cras in hac habitasse platea dictumst quisque sagittis purus</li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>
