@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(255,0,0,0.25);
+}
+/** + * {
+    margin-top: 1em;
+}*/
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    margin-top: 0;
+}
+.codegrey {
+    background: var(--lgrey);
+    padding: 1rem;
+}
+.white, .white a {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+.border {
+    padding: 1em;
+    border: 1px solid var(--dgrey);
+}
+blockquote {
+    border-left: 0.25rem solid;
+    padding: 1rem;
+    margin-bottom: 1.5em;
+}
+.largetext {
+    font-size: 1.5em;
+}
+.pad1 {
+    padding: 1rem;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+}
+/* Trix-editor stuff */
+
+.trix-editor h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1em 0 0 0;
+}
+.trix-editor h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 1em 0 0 0;
+}
+.trix-editor p:not(:last-child) {
+    clear: both;
+    margin: 1em 0 1.5em 0;
+}
+.trix-editor ul, .trix-editor ol {
+    margin: 1em 0 1.5em 0;
+}
+.trix-editor li {
+    margin: 1em 0 0 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="trix-editor">
+    <h1>textlayout7</h1>
+    <h2>H2 heading and paragraphs</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2>H2 heading and H3 subheadings</h2>
+    <h3>Lorem ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h3>Lorem ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2>Complex multi-level bullet list letters lowercase (1.5em space)</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ol>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a>
+        <ol type="a">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+        </ol>
+      </li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a>
+        <ol type="a">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>
