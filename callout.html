@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon12.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: bold;
+    clear: both;
+}
+p {
+    clear: both;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    margin: 0;
+    max-width: 39em;
+    text-align: center;
+}
+.grid-item > * {
+    width: 100%;
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+    padding: 1rem 1rem 0 1rem;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 0.5em;
+}
+.bigicon {
+    font-size: 4em;
+    display: block;
+    padding-top : 0;
+    margin-bottom: -1.5rem;
+}
+.grid-item p {
+    padding: 1em;
+    margin: 0;
+    font-weight: bold;
+}
+.whitetxt {
+    color: #fff;
+}
+/*Mono*/
+.mono1 {
+    background-color: #eee;
+}
+.mono2 {
+    background-color: #ccc;
+}
+.mono3 {
+    background-color: #333;
+}
+/*deeprose*/
+.deeprose1 {
+    background-color: #d53fa8;
+}
+.deeprose2 {
+    background-color: #a80075;
+}
+.deeprose3 {
+    background-color: #6d004c;
+}
+/*brilliantrose*/
+.brilliantrose1 {
+    background-color: #e378b0;
+}
+.brilliantrose2 {
+    background-color: #c94f90;
+}
+.brilliantrose3 {
+    background-color: #811850;
+}
+/*raspberryred*/
+.raspberryred1 {
+    background-color: #e03879;
+}
+.raspberryred2 {
+    background-color: #c1004a;
+}
+.raspberryred3 {
+    background-color: #7d0031;
+}
+/*deeporange*/
+.deeporange1 {
+    background-color: #f0bb65;
+}
+.deeporange2 {
+    background-color: #e09e33;
+}
+.deeporange3 {
+    background-color: #926011;
+}
+/*butteryellow*/
+.butteryellow1 {
+    background-color: #f9e04d;
+}
+.butteryellow2 {
+    background-color: #f3d213;
+}
+.butteryellow3 {
+    background-color: #9e8806;
+}
+/*darklavender*/
+.darklavender1 {
+    background-color: #aaa6d2;
+}
+.darklavender2 {
+    background-color: #7b77a5;
+}
+.darklavender3 {
+    background-color: #2d276b;
+}
+/*bondiblue*/
+.bondiblue1 {
+    background-color: #80b5e4;
+}
+.bondiblue2 {
+    background-color: #5391ca;
+}
+.bondiblue3 {
+    background-color: #1b5283;
+}
+/*turquoise*/
+.turquoise1 {
+    background-color: #a3d7eb;
+}
+.turquoise2 {
+    background-color: #7fbfd7;
+}
+.turquoise3 {
+    background-color: #29718c;
+}
+/*seagreen*/
+.seagreen1 {
+    background-color: #c0e4e1;
+}
+.seagreen2 {
+    background-color: #9fcac5;
+}
+.seagreen3 {
+    background-color: #338078;
+}
+/*freshgreen*/
+.freshgreen1 {
+    background-color: #d2e48b;
+}
+.freshgreen2 {
+    background-color: #b4c960;
+}
+.freshgreen3 {
+    background-color: #677c1d;
+}
+/*persianindigo*/	
+.persianindigo1 {
+    background-color: #516abf;
+}
+.persianindigo2 {
+    background-color: #1d347e;
+}
+.persianindigo3 {
+    background-color: #091a52;
+}
+/*midnightblue*/
+.midnightblue1 {
+    background-color: #787bb7;
+}
+.midnightblue2 {
+    background-color: #3c3e6f;
+}
+.midnightblue3 {
+    background-color: #131648;
+}
+.btn a {
+    padding: 0.5em 0.75em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 1em 1em 0;
+}
+.btn a:hover {
+    text-decoration: underline;
+}
+span:first-child {
+    letter-spacing: 0.5em;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>Callout</h1>
+    <h2>Mono</h2>
+    <div class="btn">
+      <p><a href="#" class="mono1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="mono1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="mono2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="mono2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="mono3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="mono3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Deep rose</h2>
+    <div class="btn">
+      <p><a href="#" class="deeprose1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="deeprose1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="deeprose2 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="deeprose2 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="deeprose3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="deeprose3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Brilliant rose</h2>
+    <div class="btn">
+      <p><a href="#" class="brilliantrose1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="brilliantrose1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="brilliantrose2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="brilliantrose2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="brilliantrose3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="brilliantrose3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Raspberry red</h2>
+    <div class="btn">
+      <p><a href="#" class="raspberryred1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="raspberryred1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="raspberryred2 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="raspberryred2 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="raspberryred3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="raspberryred3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Deep orange</h2>
+    <div class="btn">
+      <p><a href="#" class="deeporange1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="deeporange1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="deeporange2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="deeporange2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="deeporange3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="deeporange3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Butter yellow</h2>
+    <div class="btn">
+      <p><a href="#" class="butteryellow1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="butteryellow1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="butteryellow2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="butteryellow2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="butteryellow3"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="butteryellow3"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Dark lavendar</h2>
+    <div class="btn">
+      <p><a href="#" class="darklavender1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="darklavender1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="darklavender2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="darklavender2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="darklavender3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="darklavender3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Bondi blue</h2>
+    <div class="btn">
+      <p><a href="#" class="bondiblue1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="bondiblue1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="bondiblue2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="bondiblue2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="bondiblue3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="bondiblue3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Turquoise</h2>
+    <div class="btn">
+      <p><a href="#" class="turquoise1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="turquoise1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="turquoise2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="turquoise2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="turquoise3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="turquoise3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Sea green</h2>
+    <div class="btn">
+      <p><a href="#" class="seagreen1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="seagreen1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="seagreen2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="seagreen2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="seagreen3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="seagreen3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Fresh green</h2>
+    <div class="btn">
+      <p><a href="#" class="freshgreen1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="freshgreen1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="freshgreen2"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="freshgreen2"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="freshgreen3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="freshgreen3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Persian indigo</h2>
+    <div class="btn">
+      <p><a href="#" class="persianindigo1 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="persianindigo1 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="persianindigo2 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="persianindigo2 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="persianindigo3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="persianindigo3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <h2>Midnight blue</h2>
+    <div class="btn">
+      <p><a href="#" class="midnightblue1"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="midnightblue1"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="midnightblue2 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="midnightblue2 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+    <div class="btn">
+      <p><a href="#" class="midnightblue3 whitetxt"><span class="iconfont">"</span>Modern language opportunities</a> <a href="#" class="midnightblue3 whitetxt"><span class="iconfont">"</span>Tapping into our business expertise</a></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
