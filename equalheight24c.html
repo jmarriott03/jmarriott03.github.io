@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    color: #111;
+    background: #FFF;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+    width: 100%;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.5em;
+    font-weight: bold;
+    width: 100%;
+}
+a {
+    color: #00E;
+}
+.visited {
+    color: #551A8B;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 1em 1em 0 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    margin: 0;
+    max-width: 39em;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+.grid-item > * {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    padding: 1rem 1rem 0 1rem;
+}
+figcaption {
+    margin: 0;
+    padding: 1rem 0;
+}
+.black {
+    background-color: #111;
+}
+.pad1 {
+    padding: 1rem;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+}
+/*Mono*/
+.mono1 {
+    background-color: #eee;
+}
+.mono2 {
+    background-color: #ccc;
+}
+.mono3 {
+    background-color: #333;
+}
+/*deeprose*/
+.deeprose1 {
+    background-color: #d53fa8;
+}
+.deeprose2 {
+    background-color: #a80075;
+}
+.deeprose3 {
+    background-color: #6d004c;
+}
+/*brilliantrose*/
+.brilliantrose1 {
+    background-color: #e378b0;
+}
+.brilliantrose2 {
+    background-color: #c94f90;
+}
+.brilliantrose3 {
+    background-color: #811850;
+}
+/*raspberryred*/
+.raspberryred1 {
+    background-color: #e03879;
+}
+.raspberryred2 {
+    background-color: #c1004a;
+}
+.raspberryred3 {
+    background-color: #7d0031;
+}
+/*deeporange*/
+.deeporange1 {
+    background-color: #f0bb65;
+}
+.deeporange2 {
+    background-color: #e09e33;
+}
+.deeporange3 {
+    background-color: #926011;
+}
+/*butteryellow*/
+.butteryellow1 {
+    background-color: #f9e04d;
+}
+.butteryellow2 {
+    background-color: #f3d213;
+}
+.butteryellow3 {
+    background-color: #9e8806;
+}
+/*darklavender*/
+.darklavender1 {
+    background-color: #aaa6d2;
+}
+.darklavender2 {
+    background-color: #7b77a5;
+}
+.darklavender3 {
+    background-color: #2d276b;
+}
+/*bondiblue*/
+.bondiblue1 {
+    background-color: #80b5e4;
+}
+.bondiblue2 {
+    background-color: #5391ca;
+}
+.bondiblue3 {
+    background-color: #1b5283;
+}
+/*turquoise*/
+.turquoise1 {
+    background-color: #a3d7eb;
+}
+.turquoise2 {
+    background-color: #7fbfd7;
+}
+.turquoise3 {
+    background-color: #29718c;
+}
+/*seagreen*/
+.seagreen1 {
+    background-color: #c0e4e1;
+}
+.seagreen2 {
+    background-color: #9fcac5;
+}
+.seagreen3 {
+    background-color: #338078;
+}
+/*freshgreen*/
+.freshgreen1 {
+    background-color: #d2e48b;
+}
+.freshgreen2 {
+    background-color: #b4c960;
+}
+.freshgreen3 {
+    background-color: #677c1d;
+}
+/*persianindigo*/	
+.persianindigo1 {
+    background-color: #516abf;
+}
+.persianindigo2 {
+    background-color: #1d347e;
+}
+.persianindigo3 {
+    background-color: #091a52;
+}
+/*midnightblue*/
+.midnightblue1 {
+    background-color: #787bb7;
+}
+.midnightblue2 {
+    background-color: #3c3e6f;
+}
+.midnightblue3 {
+    background-color: #131648;
+}
+.blacktext, .blacktext a {
+    color: #111;
+}
+.whitetext, .whitetext a {
+    color: #FFF;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw">
+    <section>
+      <h2>none</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw mono1">
+    <section>
+      <h2>mono1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw mono2 blacktext">
+    <section>
+      <h2>mono2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw mono3 whitetext">
+    <section>
+      <h2>mono3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw deeprose1 blacktext">
+    <section>
+      <h2>deeprose1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw deeprose2 whitetext">
+    <section>
+      <h2>deeprose2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw deeprose3 whitetext">
+    <section>
+      <h2>deeprose3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw brilliantrose1 blacktext">
+    <section>
+      <h2>brilliantrose1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw brilliantrose2 blacktext">
+    <section>
+      <h2>brilliantrose2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw brilliantrose3 whitetext">
+    <section>
+      <h2>brilliantrose3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw raspberryred1 blacktext">
+    <section>
+      <h2>raspberryred1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw raspberryred2 whitetext">
+    <section>
+      <h2>raspberryred2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw raspberryred3 whitetext">
+    <section>
+      <h2>raspberryred3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw deeporange1 blacktext">
+    <section>
+      <h2>deeporange1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw deeporange2 blacktext">
+    <section>
+      <h2>deeporange2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw deeporange3 whitetext">
+    <section>
+      <h2>deeporange3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw butteryellow1 blacktext">
+    <section>
+      <h2>butteryellow1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw butteryellow2 blacktext">
+    <section>
+      <h2>butteryellow2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw butteryellow3 blacktext">
+    <section>
+      <h2>butteryellow3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw darklavender1 blacktext">
+    <section>
+      <h2>darklavender1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw darklavender2 blacktext">
+    <section>
+      <h2>darklavender2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw darklavender3 whitetext">
+    <section>
+      <h2>darklavender3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw bondiblue1 blacktext">
+    <section>
+      <h2>bondiblue1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw bondiblue2 blacktext">
+    <section>
+      <h2>bondiblue2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw bondiblue3 whitetext">
+    <section>
+      <h2>bondiblue3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw turquoise1 blacktext">
+    <section>
+      <h2>turquoise1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw turquoise2 blacktext">
+    <section>
+      <h2>turquoise2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw turquoise3 whitetext">
+    <section>
+      <h2>turquoise3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw seagreen1 blacktext">
+    <section>
+      <h2>seagreen1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw seagreen2 blacktext">
+    <section>
+      <h2>seagreen2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw seagreen3 whitetext">
+    <section>
+      <h2>seagreen3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw freshgreen1 blacktext">
+    <section>
+      <h2>freshgreen1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw freshgreen2 blacktext">
+    <section>
+      <h2>freshgreen2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw freshgreen3 whitetext">
+    <section>
+      <h2>freshgreen3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw persianindigo1 whitetext">
+    <section>
+      <h2>persianindigo1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw persianindigo2 whitetext">
+    <section>
+      <h2>persianindigo2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw persianindigo3 whitetext">
+    <section>
+      <h2>persianindigo3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw midnightblue1 blacktext">
+    <section>
+      <h2>midnightblue1</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw midnightblue2 whitetext">
+    <section>
+      <h2>midnightblue2</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="fullw midnightblue3 whitetext">
+    <section>
+      <h2>midnightblue3</h2>
+    </section>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h2>Lorem ipsum dolor sit</h2>
+        <p>Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item">
+        <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320" loading="lazy"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
