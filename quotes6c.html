@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1.5em;/*background: rgba(255,0,0,0.25);*/
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    color: #111;
+    background: #FFF;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+    width: 100%;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.5em;
+    font-weight: bold;
+    width: 100%;
+}
+a {
+    color: #00E;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    margin: 0 auto;
+    padding: 1.5em;
+    max-width: 80em;
+    grid-gap: 1.5em;
+}
+.grid-item {
+    background-color: #FFF;
+    margin: 0 auto;
+    max-width: 39em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+.grid-item > * {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quotestyle {
+    padding: 1.5em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.25;
+}
+.quoteimage {
+    padding: 0 1.5em 1.5em 5.5em;
+    position: relative;
+    width: 100%;
+}
+.quoteimage img {
+    left: 1.5em;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.25em 0 0 0;
+    border-radius: 50%;
+}
+.pad1 {
+    padding: 1.5rem;
+}
+.blacktext, .blacktext a {
+    color: #111;
+}
+.whitetext, .whitetext a {
+    color: #FFF;
+}
+/*Mono*/
+.mono1 {
+    background-color: #eee;
+}
+.mono2 {
+    background-color: #ccc;
+}
+.mono3 {
+    background-color: #333;
+}
+/*deeprose*/
+.deeprose1 {
+    background-color: #d53fa8;
+}
+.deeprose2 {
+    background-color: #a80075;
+}
+.deeprose3 {
+    background-color: #6d004c;
+}
+/*brilliantrose*/
+.brilliantrose1 {
+    background-color: #e378b0;
+}
+.brilliantrose2 {
+    background-color: #c94f90;
+}
+.brilliantrose3 {
+    background-color: #811850;
+}
+/*raspberryred*/
+.raspberryred1 {
+    background-color: #e03879;
+}
+.raspberryred2 {
+    background-color: #c1004a;
+}
+.raspberryred3 {
+    background-color: #7d0031;
+}
+/*deeporange*/
+.deeporange1 {
+    background-color: #f0bb65;
+}
+.deeporange2 {
+    background-color: #e09e33;
+}
+.deeporange3 {
+    background-color: #926011;
+}
+/*butteryellow*/
+.butteryellow1 {
+    background-color: #f9e04d;
+}
+.butteryellow2 {
+    background-color: #f3d213;
+}
+.butteryellow3 {
+    background-color: #9e8806;
+}
+/*darklavender*/
+.darklavender1 {
+    background-color: #aaa6d2;
+}
+.darklavender2 {
+    background-color: #7b77a5;
+}
+.darklavender3 {
+    background-color: #2d276b;
+}
+/*bondiblue*/
+.bondiblue1 {
+    background-color: #80b5e4;
+}
+.bondiblue2 {
+    background-color: #5391ca;
+}
+.bondiblue3 {
+    background-color: #1b5283;
+}
+/*turquoise*/
+.turquoise1 {
+    background-color: #a3d7eb;
+}
+.turquoise2 {
+    background-color: #7fbfd7;
+}
+.turquoise3 {
+    background-color: #29718c;
+}
+/*seagreen*/
+.seagreen1 {
+    background-color: #c0e4e1;
+}
+.seagreen2 {
+    background-color: #9fcac5;
+}
+.seagreen3 {
+    background-color: #338078;
+}
+/*freshgreen*/
+.freshgreen1 {
+    background-color: #d2e48b;
+}
+.freshgreen2 {
+    background-color: #b4c960;
+}
+.freshgreen3 {
+    background-color: #677c1d;
+}
+/*persianindigo*/	
+.persianindigo1 {
+    background-color: #516abf;
+}
+.persianindigo2 {
+    background-color: #1d347e;
+}
+.persianindigo3 {
+    background-color: #091a52;
+}
+/*midnightblue*/
+.midnightblue1 {
+    background-color: #787bb7;
+}
+.midnightblue2 {
+    background-color: #3c3e6f;
+}
+.midnightblue3 {
+    background-color: #131648;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h2>4 quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item raspberryred1 blacktext">
+      <div class="quotestyle">
+        <p class="largetext"><strong>Many of the factors that control global climate are driven in the Antarctic.</strong></p>
+      </div>
+      <div class="pad1">
+        <p><a href="#">Georgia O'Reilly</a><br>
+          Web application developer</p>
+      </div>
+    </div>
+    <div class="grid-item raspberryred1 blacktext">
+      <div class="quotestyle">
+        <p>How many a dispute could have been deflated into a single paragraph if the disputants had dared to define their terms.</p>
+      </div>
+      <div class="quoteimage">
+        <p><a href="#"><img src="images/640x640quotes01.jpg" alt="">Desirae Juurou</a><br>
+          Project manager</p>
+      </div>
+    </div>
+    <div class="grid-item raspberryred1 blacktext">
+      <div class="quotestyle">
+        <p class="largetext">Education is the best provision for the journey to old age.</p>
+      </div>
+      <div class="quoteimage">
+        <p><a href="#"><img src="images/640x640quotes02.jpg" alt="">Theodor Pallavi</a><br>
+          Systems analyst</p>
+      </div>
+    </div>
+    <div class="grid-item raspberryred1 blacktext">
+      <div class="quotestyle">
+        <p><strong>It is the mark of an educated mind to be able to entertain a thought without accepting it.</strong></p>
+      </div>
+      <div class="quoteimage">
+        <p><a href="#"><img src="images/640x640quotes03.jpg" alt="">Alis Yannic</a><br>
+          Network administrators</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>3 quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item deeporange2 blacktext">
+      <div class="quotestyle">
+        <p class="largetext"><strong>Many of the factors that control global climate are driven in the Antarctic.</strong></p>
+      </div>
+      <div class="pad1">
+        <p><a href="#">Georgia O'Reilly</a><br>
+          Web application developer</p>
+      </div>
+    </div>
+    <div class="grid-item deeporange2 blacktext">
+      <div class="quotestyle">
+        <p>How many a dispute could have been deflated into a single paragraph if the disputants had dared to define their terms.</p>
+      </div>
+      <div class="quoteimage">
+        <p><a href="#"><img src="images/640x640quotes01.jpg" alt="">Desirae Juurou</a><br>
+          Project manager</p>
+      </div>
+    </div>
+    <div class="grid-item deeporange2 blacktext">
+      <div class="quotestyle">
+        <p class="largetext">Education is the best provision for the journey to old age.</p>
+      </div>
+      <div class="quoteimage">
+        <p><a href="#"><img src="images/640x640quotes02.jpg" alt="">Theodor Pallavi</a><br>
+          Systems analyst</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>2 quotes</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item turquoise3 whitetext">
+      <div class="quotestyle">
+        <p class="largetext"><strong>Many of the factors that control global climate are driven in the Antarctic.</strong></p>
+      </div>
+      <div class="pad1">
+        <p><a href="#">Georgia O'Reilly</a><br>
+          Web application developer</p>
+      </div>
+    </div>
+    <div class="grid-item turquoise3 whitetext">
+      <div class="quotestyle">
+        <p>How many a dispute could have been deflated into a single paragraph if the disputants had dared to define their terms.</p>
+      </div>
+      <div class="quoteimage">
+        <p><a href="#"><img src="images/640x640quotes01.jpg" alt="">Desirae Juurou</a><br>
+          Project manager</p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>1 quote</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item freshgreen3 whitetext">
+      <div class="quotestyle">
+        <p class="largetext"><strong>Many of the factors that control global climate are driven in the Antarctic.</strong></p>
+      </div>
+      <div class="pad1">
+        <p><a href="#">Georgia O'Reilly</a><br>
+          Web application developer</p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
