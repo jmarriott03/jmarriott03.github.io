@@ -139,7 +139,7 @@ section img {
     color: var(--white);
 }
 .tag {
-    background-color: var(--mgrey);
+    background-color: var(--lgrey);
     color: var(--black);
     font-size: 0.75em;
     margin: 0 0.5rem 1rem 0;
@@ -193,6 +193,50 @@ td {
     clear: both;
     padding: 1em;
 }
+.bigtext {
+    font-size: 1.125rem;
+}
+button.accordion {
+    background-color: #FFF;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
+}
+button.accordion:focus {
+    background-color: #DDD;
+}
+button.accordion:after {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+    margin-right: 0.5em;
+}
+button.accordion.active:after {
+    content: "M";
+}
+div.panel {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+div.panel p {
+    padding: 0.5em;
+    margin: 0;
+}
+.pad1 {
+    padding: 1rem;
+}
 
 @media (max-width: 50em) {
 .imagebox > p {
@@ -216,7 +260,36 @@ td {
       <p class="btn"><a href="#" class="tag">Undergraduate</a> <a href="#" class="tag">Pre-approval</a></p>
       <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
       <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
-      <img src="images/1280x720fineart12.jpg"  width="1280" height="720" alt="" class="mtop1rem"> </div>
+      <img src="images/1280x720fineart12.jpg"  width="1280" height="720" alt="" class="mtop1rem">
+      <h2>Exit awards</h2>
+      <button class="accordion">Sociology with A</button>
+      <div class="panel">
+        <p><strong>Opportunities</strong><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><strong>Modules required</strong><br>
+          <a href="#"><strong>Module 1</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><a href="#"><strong>Module 2</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><a href="#"><strong>Module 3</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+      </div>
+      <button class="accordion">Sociology with B</button>
+      <div class="panel">
+        <p><strong>Opportunities</strong><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><strong>Modules required</strong><br>
+          <a href="#"><strong>Module 4</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><a href="#"><strong>Module 5</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><a href="#"><strong>Module 6</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+      </div>
+      <button class="accordion">Sociology with C</button>
+      <div class="panel">
+        <p><strong>Opportunities</strong><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><strong>Modules required</strong><br>
+          <a href="#"><strong>Module 7</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><a href="#"><strong>Module 8</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+        <p><a href="#"><strong>Module 9</strong></a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+      </div>
+    </div>
     <div class="w50">
       <section class="btn">
         <p><a href="#" class="openday">Register for open day</a></p>
@@ -286,5 +359,21 @@ td {
     </div>
   </section>
 </main>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+	acc[i].onclick = function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight){
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	}
+}
+</script>
 </body>
 </html>
