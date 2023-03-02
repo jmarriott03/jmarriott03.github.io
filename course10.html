@@ -15,7 +15,7 @@
 --link: #00e;
 --visited: purple;
 --ucas: #e32438;
---alert: red;
+--alert: #f00;
 }
 @font-face {
     font-family: icon;
@@ -168,8 +168,11 @@ td {
 .fullw {
     width: 100%;
     overflow: hidden;
-    background-color: var(--lgrey);
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
+}
+.fullw a {
+    color: var(--white);
 }
 .hero {
     max-width: 60em;
@@ -264,7 +267,7 @@ div.panel p {
 <body>
 <main>
   <div class="fullw">
-    <div class="padalert"><span class="iconfont alert" aria-hidden="true">a</span>June 19 2023 - Accommodation guarantee closes</div>
+    <div class="padalert"><span class="iconfont alert" aria-hidden="true">a</span>June 19 2023 - <a href="#">Accommodation guarantee closes</a></div>
   </div>
   <div class="breadcrumb">
     <p><a href="#">Home</a> &#62; <a href="#">Courses</a> &#62; <a href="#">Undergraduate</a> &#62; <strong>BA (Hons) Fine Art</strong></p>
