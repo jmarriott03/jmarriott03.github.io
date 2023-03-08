@@ -85,10 +85,17 @@ img {
     margin: 0;
 }
 section {
-    max-width: 60em;
+    max-width: 40em;
     overflow: hidden;
     padding: 1rem;
     margin: 0 auto;
+}
+.nobullets {
+    list-style-type: none;
+    padding: 0;
+}
+.boldtext {
+    font-weight: bold;
 }
 .item1 {
     grid-area: item1;
@@ -297,7 +304,7 @@ Media screen
   <div class="item1">
     <div class="keyinfo">
       <h2>Shortcuts</h2>
-      <ul>
+      <ul class="nobullets boldtext">
         <li><a href="#careers">Careers with this subject</a></li>
         <li><a href="#features">Key features</a></li>
         <li><a href="#details">Course details</a></li>
