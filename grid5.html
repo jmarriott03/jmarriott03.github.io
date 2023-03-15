@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon12.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    text-decoration: none;
+    line-height: 1em;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    color: #111;
+    background: #EEE;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+a {
+    color: #00E;
+}
+p {
+    clear: both;
+}
+.visited {
+    color: #551A8B;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+.item1 {
+    grid-area: item1;
+    background: #ddd;
+}
+.item2 {
+    grid-area: item2;
+    background: #ccc;
+}
+.item3 {
+    grid-area: item3;
+    background: #bbb;
+}
+.item4 {
+    grid-area: item4;
+    background: #aaa;
+}
+.item5 {
+    grid-area: item5;
+    background: #999;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: 'item1 item1 item2 item3' 'item1 item1 item4 item5';
+    grid-gap: 0;
+    padding: 0;
+    max-width: 80em;
+}
+.grid-container > div {
+    margin-top: 0;
+    padding: 1em;
+    width: 100%;
+}
+
+/*
+Media screen
+*/
+
+@media screen and (max-width: 60em) {
+.grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: 'item1 item1' 'item2 item3' 'item4 item5';
+}
+}
+
+@media screen and (max-width: 40em) {
+.grid-container {
+    grid-template-columns: none;
+    grid-template-areas: 'item1' 'item2' 'item3' 'item4' 'item5';
+}
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1">
+    <p>item1</p>
+  </div>
+  <div class="item2">
+    <p>item2</p>
+  </div>
+  <div class="item3">
+    <p>item3</p>
+  </div>
+  <div class="item4">
+    <p>item4</p>
+  </div>
+  <div class="item5">
+    <p>item5</p>
+  </div>
+</div>
+</body>
+</html>
