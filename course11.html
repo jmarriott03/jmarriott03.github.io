@@ -96,7 +96,7 @@ section {
 }
 .item1 {
     grid-area: item1;
-    background: red;
+    background: var(--lgrey);
 }
 .item2 {
     grid-area: item2;
@@ -182,7 +182,6 @@ td {
     overflow: hidden;
     padding: 1em;
     margin: 0 auto;
-    background: beige;
 }
 .mtop1rem {
     margin-top: 1rem;
@@ -302,6 +301,14 @@ div.panel p {
 .bckcol1 {
     background: yellow;
 }
+	.gradient {
+	position: absolute;
+	z-index: 3;
+	width: 1280px;
+	height: 720px;
+	background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,0,1) 75%);
+	margin: 0;
+}
 .heroimage {
     width: 100%;
     position: relative;
@@ -317,17 +324,17 @@ div.panel p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 25%;
+    left: 0;
     z-index: 2;
     margin: 0;
     color: #FAFAFA;
-    font-size: calc(1rem + 0.4vw);
+    /*font-size: calc(1rem + 0.4vw);*/
     line-height: 1.5em;
     width: 50%;
     padding: 1em 1em 0 1em;
 }
 .herotext h1 {
-    font-size: calc(2rem + 2vw);
+    /*font-size: calc(2rem + 2vw);*/
     line-height: 1em;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -394,14 +401,14 @@ $(window).on("load resize",function(e){
 </script>
 </head>
 <body>
-<div class="fullw">
+<div class="fullw" id="top">
   <div class="padalert"><span class="iconfont alert" aria-hidden="true">a</span>June 19 2023 - <a href="#">Accommodation guarantee closes</a></div>
 </div>
 <section>
   <div class="breadcrumb">
     <p><a href="#">Home</a> &#62; <a href="#">Courses</a> &#62; <a href="#">Undergraduate</a> &#62; <strong>BA (Hons) Fine Art</strong></p>
   </div>
-  <div class="heroimage"><img src="images/1280x720fineart12.jpg" alt="" />
+  <div class="heroimage"><img src="images/1280x480fineart14.jpg" alt="" />
     <div class="herotext">
       <p><a href="#">School of Art, Design and Architecture</a></p>
       <h1 class="mtop1rem">BA (Hons) Fine Art</h1>
@@ -448,8 +455,6 @@ $(window).on("load resize",function(e){
       </div>
     </div>
     <div class="item2">
-      <p><a href="#">School of Art, Design and Architecture</a></p>
-      <h1 class="mtop1rem">BA (Hons) Fine Art</h1>
       <p class="btn"><a href="#" class="tag">Undergraduate</a><a href="#" class="tag">Pre-approval</a></p>
       <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
       <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
