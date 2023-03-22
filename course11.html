@@ -317,7 +317,7 @@ div.panel p {
     margin: 0;
     overflow: hidden;
 }
-.heroimage img {
+.heroimage > img {
     opacity: 0.5;
 }
 .herotext {
@@ -371,6 +371,70 @@ div.panel p {
 }
 .pad0 {
     padding: 0 !important;
+}
+.gradient {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(0,0,0,1));
+    margin: 0;
+}
+figcaption {
+    padding: 0;
+    margin: 0.5em 0;
+}
+.swatch1 {
+    background-color: #111;
+    color: #FFF;
+    margin: 0;
+    padding: 0.5em;
+}
+.swatch1 a {
+    background-color: #111;
+    color: #FFF;
+}
+.swatch2 {
+    background-color: #111;
+    color: #FFF;
+    margin: 0;
+    padding: 0.5em 0;
+}
+.swatch2 a {
+    background-color: #111;
+    color: #FFF;
+}
+.position-relative {
+    position: relative;
+}
+.position-absolute-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.position-absolute-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.video-length {
+    color: #FFF;
+    background-color: #111;
+    border-radius: 0.25em;
+    padding: 0 0.5em;
+    font-size: 0.75em;
+    margin: 0.5em;
+}
+.smalltext {
+    font-size: 0.75em;
+}
+.youtube {
+    position: absolute;
+    width: 4rem;
+    left: 50%;
+    margin-left: -2rem;
+    top: 50%;
+    margin-top: -1.5rem;
 }
 
 /*
@@ -437,6 +501,10 @@ $(window).on("load resize",function(e){
           <td><strong>Plymouth</strong></td>
         </tr>
       </table>
+      <div class="btn registerpad">
+        <p><a href="#" class="openday">Register for open day</a></p>
+        <p><a href="#" class="ucas">Apply via UCAS</a></p>
+      </div>
     </div>
   </div>
   <div class="grid-container">
@@ -585,36 +653,23 @@ $(window).on("load resize",function(e){
       <h2><span class="iconfont" aria-hidden="true">!</span><a href="#top">Back to top</a></h2>
     </div>
     <div class="item3">
-      <div class="btn registerpad">
-        <p><a href="#" class="openday">Register for open day</a></p>
-        <table>
-          <tr>
-            <td>UCAS tariff</td>
-            <td ><strong>104</strong></td>
-          </tr>
-          <tr>
-            <td>UCAS course code</td>
-            <td><strong>W100</strong></td>
-          </tr>
-          <tr>
-            <td>Institution code</td>
-            <td><strong>P60</strong></td>
-          </tr>
-          <tr>
-            <td>Duration</td>
-            <td><strong>3 years</strong></td>
-          </tr>
-          <tr>
-            <td>Course type</td>
-            <td><strong>Full-time</strong></td>
-          </tr>
-          <tr>
-            <td>Location</td>
-            <td><strong>Plymouth</strong></td>
-          </tr>
-        </table>
-        <p><a href="#" class="ucas">Apply via UCAS</a></p>
-      </div>
+      <h2>Related videos</h2>
+      <figure> <a href="#">
+        <div class="position-relative"><img src="images/1280x720fineart6.jpg" alt="Fine Art Stuedent Alysia Millington">
+          <div class="position-absolute-bl video-length">7:19</div>
+          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""/></div>
+        </div>
+        </a>
+        <figcaption class="swatch1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+      </figure>
+      <figure> <a href="#">
+        <div class="position-relative"><img src="images/1280x720fineart7.jpg" alt="Fine Art Stuedent Alysia Millington">
+          <div class="position-absolute-bl video-length">5:24</div>
+          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""/></div>
+        </div>
+        </a>
+        <figcaption class="swatch1">Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
