@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    color: #111;
+    background: #fff;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+a {
+    color: #333;
+}
+p {
+    clear: both;
+    margin: 1em;
+    font-weight: bold;
+}
+.visited {
+    color: #551A8B;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 1em;
+    overflow: hidden;
+}
+.four {
+    width: 25%;
+    float: left;
+}
+.whitetxt {
+    color: #fff;
+}
+.bluetxt {
+    color: #00e;
+}
+.whitelink {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/*media*/
+@media (max-width: 50em) {
+.four {
+    width: 100%;
+    margin: 0;
+}
+}
+/*Mono*/
+.mono1 {
+    background-color: #eee;
+}
+.mono2 {
+    background-color: #ccc;
+}
+.mono3 {
+    background-color: #333;
+}
+/*deeprose*/
+.deeprose1 {
+    background-color: #d53fa8;
+}
+.deeprose2 {
+    background-color: #a80075;
+}
+.deeprose3 {
+    background-color: #6d004c;
+}
+/*brilliantrose*/
+.brilliantrose1 {
+    background-color: #e378b0;
+}
+.brilliantrose2 {
+    background-color: #c94f90;
+}
+.brilliantrose3 {
+    background-color: #811850;
+}
+/*raspberryred*/
+.raspberryred1 {
+    background-color: #e03879;
+}
+.raspberryred2 {
+    background-color: #c1004a;
+}
+.raspberryred3 {
+    background-color: #7d0031;
+}
+/*deeporange*/
+.deeporange1 {
+    background-color: #f0bb65;
+}
+.deeporange2 {
+    background-color: #e09e33;
+}
+.deeporange3 {
+    background-color: #926011;
+}
+/*butteryellow*/
+.butteryellow1 {
+    background-color: #f9e04d;
+}
+.butteryellow2 {
+    background-color: #f3d213;
+}
+.butteryellow3 {
+    background-color: #9e8806;
+}
+/*darklavender*/
+.darklavender1 {
+    background-color: #aaa6d2;
+}
+.darklavender2 {
+    background-color: #7b77a5;
+}
+.darklavender3 {
+    background-color: #2d276b;
+}
+/*bondiblue*/
+.bondiblue1 {
+    background-color: #80b5e4;
+}
+.bondiblue2 {
+    background-color: #5391ca;
+}
+.bondiblue3 {
+    background-color: #1b5283;
+}
+/*turquoise*/
+.turquoise1 {
+    background-color: #a3d7eb;
+}
+.turquoise2 {
+    background-color: #7fbfd7;
+}
+.turquoise3 {
+    background-color: #29718c;
+}
+/*seagreen*/
+.seagreen1 {
+    background-color: #c0e4e1;
+}
+.seagreen2 {
+    background-color: #9fcac5;
+}
+.seagreen3 {
+    background-color: #338078;
+}
+/*freshgreen*/
+.freshgreen1 {
+    background-color: #d2e48b;
+}
+.freshgreen2 {
+    background-color: #b4c960;
+}
+.freshgreen3 {
+    background-color: #677c1d;
+}
+/*persianindigo*/	
+.persianindigo1 {
+    background-color: #516abf;
+}
+.persianindigo2 {
+    background-color: #1d347e;
+}
+.persianindigo3 {
+    background-color: #091a52;
+}
+/*midnightblue*/
+.midnightblue1 {
+    background-color: #787bb7;
+}
+.midnightblue2 {
+    background-color: #3c3e6f;
+}
+.midnightblue3 {
+    background-color: #131648;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>color9c</h1>
+    <h2>Mono</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four mono1">
+      <p>#eee<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four mono2">
+      <p>#ccc<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four mono3 whitetxt">
+      <p>#333<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Deep rose</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four deeprose1">
+      <p>#d53fa8<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four deeprose2 whitetxt">
+      <p>#a80075<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+    <div class="four deeprose3 whitetxt">
+      <p>#6d004c<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Brilliant rose</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four brilliantrose1">
+      <p>#e378b0<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four brilliantrose2">
+      <p>#c94f90<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four brilliantrose3 whitetxt">
+      <p>#811850<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Raspberry red</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four raspberryred1">
+      <p>#e03879<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four raspberryred2 whitetxt">
+      <p>#c1004a<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+    <div class="four raspberryred3 whitetxt">
+      <p>#7d0031<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Deep orange</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four deeporange1">
+      <p>#f0bb65<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four deeporange2">
+      <p>#e09e33<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four deeporange3 whitetxt">
+      <p>#926011<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Butter yellow</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four butteryellow1">
+      <p>#f9e04d<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four butteryellow2">
+      <p>#f3d213<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four butteryellow3">
+      <p>#9e8806<br>
+        <a href="#">Black</a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Dark lavendar</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four darklavender1">
+      <p>#aaa6d2<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four darklavender2">
+      <p>#7b77a5<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four darklavender3 whitetxt">
+      <p>#2d276b<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Bondi blue</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four bondiblue1">
+      <p>#80b5e4<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four bondiblue2">
+      <p>#5391ca<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four bondiblue3 whitetxt">
+      <p>#1b5283<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Turquoise</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four turquoise1">
+      <p>#a3d7eb<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four turquoise2">
+      <p>#7fbfd7<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four turquoise3 whitetxt">
+      <p>#29718c<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Sea green</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four seagreen1">
+      <p>#c0e4e1<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four seagreen2">
+      <p>#9fcac5<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four seagreen3 whitetxt">
+      <p>#338078<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Fresh green</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four freshgreen1">
+      <p>#d2e48b<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four freshgreen2">
+      <p>#b4c960<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four freshgreen3 whitetxt">
+      <p>#677c1d<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Persian indigo</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four persianindigo1 whitetxt">
+      <p>#516abf<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+    <div class="four persianindigo2 whitetxt">
+      <p>#1d347e<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+    <div class="four persianindigo3 whitetxt">
+      <p>#091a52<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Midnight blue</h2>
+    <div class="four">
+      <p>#fff<br>
+        <a href="#"><span class="bluetxt">Blue</span></a></p>
+    </div>
+    <div class="four midnightblue1">
+      <p>#787bb7<br>
+        <a href="#">Black</a></p>
+    </div>
+    <div class="four midnightblue2 whitetxt">
+      <p>#3c3e6f<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+    <div class="four midnightblue3 whitetxt">
+      <p>#131648<br>
+        <a href="#"><span class="whitelink">White</span></a></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
