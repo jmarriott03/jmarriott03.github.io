@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1em;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111;
+    background: #FFF;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    margin-bottom: 1em;
+}
+a {
+    color: #00E;
+    word-wrap: break-word;
+}
+.visited {
+    color: #551A8B;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    width: 100%;
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 20em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: #EEE;
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    background: black;
+}
+.image, .grid-content, .gradient {
+    grid-row: 1;
+}
+.image {
+    grid-column: 1 / 3;
+    height: 100%;
+    object-fit: cover;/*opacity: 0.5;*/
+}
+.gradient {
+    grid-column: 1 / 3;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,1) 100%);
+    margin: 0;
+}
+.grid-content {
+    grid-column: 1 / 2;
+    align-self: center;
+    margin: 2rem;
+    z-index: 2;
+    color: #fff;
+}
+.grid-content a {
+    color: #fff;
+}
+.grid-content :last-child {
+    margin-bottom: 0;
+}
+.grid-content h1 {
+    font-size: calc(2rem + 2vw);
+    line-height: 1em;
+    margin: 1rem 0;
+}
+.btn a {
+    padding: 0.5em 0.75em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+.btn a:hover, .btn a:focus {
+    text-decoration: underline;
+}
+.openday {
+    background-color: #00e;
+    margin-bottom: 1em;
+    color: #fff;
+}
+.ucas {
+    background-color: #e32438;
+    color: #fff;
+}
+.mtop1 {
+    margin-top: 1rem;
+}
+.bcktint {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0 1.5em 0;
+    clear: both;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 60em) {
+.grid-content {
+    grid-column: 1 / 3;
+}
+.grid-content h1 {
+    font-size: 2em;
+    line-height: 1em;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="grid"><img src="images/1280x720photography.jpg" alt="" class="image"/>
+    <div class="gradient"></div>
+    <div class="grid-content">
+      <p><a href="#">School of Art, Design and Architecture</a></p>
+      <h1 class="mtop1rem">BA (Hons) Photography</h1>
+      <table class="bcktint">
+        <tr>
+          <td>UCAS tariff</td>
+          <td ><strong>104</strong></td>
+        </tr>
+        <tr>
+          <td>UCAS course code</td>
+          <td><strong>W100</strong></td>
+        </tr>
+        <tr>
+          <td>Institution code</td>
+          <td><strong>P60</strong></td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td><strong>3 years</strong></td>
+        </tr>
+        <tr>
+          <td>Course type</td>
+          <td><strong>Full-time</strong></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><strong>Plymouth</strong></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <p><a href="#" class="openday">Register for open day</a></p>
+        <p><a href="#" class="ucas mtop1">Apply via UCAS</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
