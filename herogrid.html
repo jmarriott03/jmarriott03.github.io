@@ -148,8 +148,8 @@ section {
     margin-bottom: 0;
 }
 .grid-content h1 {
-    font-size: calc(2rem + 2vw);
-    line-height: 1em;
+	font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
     margin: 1rem 0;
 }
 .btn a {
@@ -192,10 +192,6 @@ td {
 @media screen and (max-width: 60em) {
 .grid-content {
     grid-column: 1 / 3;
-}
-.grid-content h1 {
-    font-size: 2em;
-    line-height: 1em;
 }
 }
 </style>
