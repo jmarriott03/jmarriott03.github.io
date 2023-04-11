@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+--ucas: #e32438;
+--alert: #f00;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon12.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background: rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+a {
+    color: var(--link);
+}
+p {
+    clear: both;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+section {
+    /*width: 80em;*/
+    overflow: hidden;
+    margin: 0 auto;
+}
+.nobullets {
+    list-style-type: none;
+    padding: 0;
+}
+.boldtext {
+    font-weight: bold;
+}
+.item1 {
+    grid-area: item1;
+    background: var(--lgrey);
+}
+.item2 {
+    grid-area: item2;
+}
+.item3 {
+    grid-area: item3;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas: 'item1 item2 item2 item3' 'item1 item2 item2 item4';
+    grid-gap: 0;
+    padding: 0;
+    margin: 0 auto;/*max-width: 80em;*/
+}
+.grid-container > div {
+    margin-top: 0;
+    padding: 1em;
+    width: 100%;
+}
+.btn a {
+    padding: 0.5em 0.75em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+.btn a:hover, .btn a:focus {
+    text-decoration: underline;
+}
+.openday {
+    background-color: var(--link);
+    margin-bottom: 1em;
+    color: var(--white);
+}
+.ucas {
+    background-color: var(--ucas);
+    color: var(--white);
+}
+.alert {
+    color: var(--alert);
+}
+.tag {
+    background-color: var(--lgrey);
+    color: var(--black);
+    font-size: 0.75em;
+    margin: 0 1rem 1rem 0;
+}
+.tag a {
+    color: var(--black);
+}
+
+.padl {
+    padding-left: 1rem;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--black);
+    color: var(--white);
+}
+.fullw a {
+    color: var(--white);
+}
+.hero {
+    max-width: 60em;
+}
+.breadcrumb {
+    /* max-width: 80em;*/
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.mtop1rem {
+    margin-top: 1rem;
+}
+.positionrelative {
+    position: relative;
+}
+.bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--black);
+    background: var(--white);
+    padding: 1em;
+}
+.keyinfo {
+    background: var(--lgrey);
+    display: block;
+    clear: both;
+    padding: 1em;
+    margin: 0;
+}
+.bigtext {
+    font-size: 1.125rem;
+}
+button.accordion {
+    background-color: #FFF;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
+}
+button.accordion:focus {
+    background-color: #DDD;
+}
+button.accordion:after {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+    margin-right: 0.5em;
+}
+button.accordion.active:after {
+    content: "M";
+}
+div.panel {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin: 0;
+    border-bottom: 1px solid var(--mgrey);
+}
+div.panel p {
+    padding: 0.5em;
+    margin: 0;
+}
+.pad1 {
+    padding: 1rem;
+}
+.padalert {
+    padding: 0.5rem 1rem;/*max-width: 78rem;*/
+}
+.registerpad {
+    padding-bottom: 3rem;
+}
+.costs table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0 0 0;
+}
+.costs td, .costs th {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.costs th {
+    background-color: var(--black);
+    color: var(--lgrey);
+}
+.w25 {
+    width: 25%;
+    float: left;
+    padding: 1em;
+    margin: 0;
+}
+.w33 {
+    width: 33.333%;
+    float: left;
+    padding: 1em;
+    margin: 0;
+}
+.w50 {
+    width: 50%;
+    float: left;
+    padding: 1em;
+    margin: 0;
+}
+.w66 {
+    width: 66.666%;
+    float: left;
+    padding: 1em;
+    margin: 0;
+}
+.w75 {
+    width: 75%;
+    float: left;
+    padding: 1em;
+    margin: 0;
+}
+.bckcol1 {
+    background: yellow;
+}
+
+
+@media (max-width: 50em) {
+.w25, .w33, .w50, .w66, .w75 {
+    width: 100%;
+}
+}
+.pad0 {
+    padding: 0 !important;
+}
+figcaption {
+    padding: 0;
+    margin: 0.5em 0;
+}
+.swatch1 {
+    background-color: #111;
+    color: #FFF;
+    margin: 0;
+    padding: 0.5em;
+}
+.swatch1 a {
+    background-color: #111;
+    color: #FFF;
+}
+.swatch2 {
+    background-color: #111;
+    color: #FFF;
+    margin: 0;
+    padding: 0.5em 0;
+}
+.swatch2 a {
+    background-color: #111;
+    color: #FFF;
+}
+.position-relative {
+    position: relative;
+}
+.position-absolute-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.position-absolute-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.video-length {
+    color: #FFF;
+    background-color: #111;
+    border-radius: 0.25em;
+    padding: 0 0.5em;
+    font-size: 0.75em;
+    margin: 0.5em;
+}
+.smalltext {
+    font-size: 0.75em;
+}
+.youtube {
+    position: absolute;
+    width: 4rem;
+    left: 50%;
+    margin-left: -2rem;
+    top: 50%;
+    margin-top: -1.5rem;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+}
+.image, .grid-content, .gradient {
+    grid-row: 1;
+}
+.image {
+    grid-column: 1 / 3;
+    height: 100%;
+    object-fit: cover;
+}
+.gradient {
+    grid-column: 1 / 3;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,1) 100%);
+    margin: 0;
+}
+.grid-content {
+    grid-column: 1 / 2;
+    align-self: center;
+    margin: 1rem;
+    color: #fff;
+}
+.grid-content a {
+    color: #fff;
+}
+.grid-content :last-child {
+    margin-bottom: 0;
+}
+.grid-content h1 {
+    font-size: 4em;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+.btn a {
+    padding: 0.5em 0.75em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+.btn a:hover, .btn a:focus {
+    text-decoration: underline;
+}
+.openday {
+    background-color: #00e;
+    margin-bottom: 1em;
+    color: #fff;
+}
+.ucas {
+    background-color: #e32438;
+    color: #fff;
+}
+.mtop1 {
+    margin-top: 1rem;
+}
+.bcktint {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0 1.5em 0;
+    clear: both;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 60em) {
+.grid-content {
+    grid-column: 1 / 3;
+}
+.grid-content h1 {
+    font-size: 2em;
+}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+/*
+Media screen
+*/
+
+@media screen and (max-width: 60em) {
+.grid-container {
+    grid-template-columns: none;
+    grid-template-areas: 'item1' 'item2' 'item3';
+}
+}
+</style>
+
+</head>
+<body>
+<div class="fullw" id="top">
+  <div class="padalert"><span class="iconfont alert" aria-hidden="true">a</span>June 19 2023 - <a href="#">Accommodation guarantee closes</a></div>
+</div>
+<section>
+  <div class="breadcrumb">
+    <p><a href="#">Home</a> &#62; <a href="#">Courses</a> &#62; <a href="#">Undergraduate</a> &#62; <strong>BA (Hons) Fine Art</strong></p>
+  </div>
+ <div class="grid"><img src="images/1280x720photography.jpg" alt="" class="image">
+    <div class="gradient"></div>
+    <div class="grid-content">
+      <p><a href="#">School of Art, Design and Architecture</a></p>
+      <h1 class="mtop1rem">BA (Hons) Photography</h1>
+      <table class="bcktint">
+        <tr>
+          <td>Course type label</td>
+          <td ><strong>Undergraduate</strong></td>
+        </tr>
+        <tr>
+          <td>Course award and title</td>
+          <td><strong>BA (Hons) Photography</strong></td>
+        </tr>
+        <tr>
+          <td>UCAS tariff</td>
+          <td><strong>96–120</strong></td>
+        </tr>
+        <tr>
+          <td>UCAS course code</td>
+          <td><strong>W640</strong></td>
+        </tr>
+        <tr>
+          <td>Institution code</td>
+          <td><strong>P60</strong></td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td><strong>3 years (full time)<br>
+            6 years (part time)</strong></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><strong>Plymouth</strong></td>
+        </tr>
+      </table>
+      <div class="btn">
+        <p><a href="#" class="openday">Register for open day</a></p>
+        <p><a href="#" class="ucas mtop1">Apply via UCAS</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="item1 pad0">
+      <div class="keyinfo">
+        <h2>Shortcuts</h2>
+        <ul class="nobullets boldtext">
+          <li><a href="#careers">Careers with this subject</a></li>
+          <li><a href="#features">Key features</a></li>
+          <li><a href="#details">Course details</a></li>
+          <li><a href="#entry">Entry requirements</a></li>
+          <li><a href="#fees">Fees, costs and funding</a></li>
+          <li><a href="#apply">How to apply</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="item2">
+      <p class="btn"><a href="#" class="tag">Undergraduate</a><a href="#" class="tag">Pre-approval</a></p>
+      <p>Realise your artistic potential. Guided by practising artists, you’ll find the freedom to try different techniques and technologies. By analysing artistic influences and inspirations, you’ll deepen your understanding of what makes great art and gain the skills to create it. You’ll develop the expertise to feed your emotions and ideas into your work. And with excellent international links offering opportunities to travel, you’ll have everything you need to make your art the best it can be.</p>
+      <p>Graduates in fine art find employment in a diverse range of careers, from teaching to professional practice, working in museums to art therapy. We’ll help you find your niche and train for it with flexible internships.</p>
+      <img src="images/1280x720fineart11.jpg" width="1280" height="720" alt="" class="mtop1rem">
+      <h2 id="careers">Careers with this subject</h2>
+      <p>BA (Hons) Fine Art will equip you with a diverse range of transferable skills, including independent study, goal setting, workload and deadline management, critical and professional writing, problem-solving, spatial planning, resource management, complex project management and collaboration – skills that are key to contemporary, globalised, flexible working in many different sectors. You'll also graduate with a body of self-directed art practice that demonstrates critical, theoretical and contextual understandings of contemporary fine art.</p>
+      <p>Our mix of seminars and tutorials, placements and residencies, workshops and studio practice and your development of independent, collaborative and social practices will ready you to launch your professional practice, find employment in the cultural sector or act as a catalyst for further post-graduate study.</p>
+      <p><a href="#">What can you do with a fine art degree?</a></p>
+      <h2 id="features">Key features</h2>
+      <ul>
+        <li><strong>Studio culture</strong>. Our main teaching and learning space is the studio and we place emphasis on creating a friendly, supportive, vibrant, creative, critical and reflective studio environment. You will work in dedicated studio spaces and specialist workshops through a mix of practical exercises, one-to-one and group tutorials, seminars and interactive lectures, artist talks, and fieldwork and field trip opportunities.</li>
+        <li><strong>Thinking through doing</strong>. This is a practice-based programme, which means that critical enquiry is at the heart of making work. We encourage you to be exploratory and experimental, to think through making and to embrace uncertainty and not knowing.</li>
+        <li><strong>Facilities</strong>. You will have inductions in and access to a wide range of specialist workshop facilities to advance your artistic enquiry, including letterpress and printmaking, ceramics, woodworking, metal, video, audio, XR and 3D printing.</li>
+        <li><strong>Interdisciplinary</strong>. Studio practice modules and the common challenges and dissertation modules offer you opportunities to work in interdisciplinary research areas across the arts, humanities and sciences.</li>
+        <li><strong>Degree show</strong>. Showcase your final project in a faculty-wide exhibition alongside students from our 12 art and design degrees. The Degree Show is your chance to introduce friends and family, your new creative network and art community, prospective employers and the general public to your work.</li>
+        <li><strong>Collaboration</strong>. You will collaborate with partners through placements in organisations like KARST, The Box, Arts Institute, Marine Institute and you will exhibit work both on- and off-site throughout your degree.</li>
+      </ul>
+      <h2 id="details">Course details</h2>
+      <h2>Year 1</h2>
+      <p>Your first year is about exploration of materials, processes and ideas. You’ll examine the diverse traditions of fine art up to the present day. There’s ample studio time to try out different techniques and technologies from painting to digital media. Building critical analysis skills through interaction with other students and teaching staff will boost your confidence and you will be introduced to interdisciplinary art practices, working in response to the global challenges that we face today.</p>
+      <h3>Core modules</h3>
+      <p><strong>Fine Art Studio 1: Processes and Materials (ART418)</strong><br>
+        This introductory module introduces students to the diverse natures of fine art and the role of the studio within it. It aims to provide students with the skills to identify and investigate individual and collaborative interests and concerns through practical engagement in the studio and through interdisciplinary research; to develop students' capacities for self-criticism through informed debate; to develop student confidence in recognising and using processes and materials relevant to their developing practice; and to introduce practices of documentation. Lectures, seminars, and workshops support students to relate examples of contemporary fine art practice to their own, studio-based explorations of relevant concepts, material processes and techniques.</p>
+      <p><strong>Interdisciplinary Approaches 1 (ART419)</strong><br>
+        This practice-based module introduces students to interdisciplinarity and to how artists have worked collaboratively in multi-disciplinary, interdisciplinary and transdisciplinary ways with researchers and communities. Students will learn a range of approaches and methods and will experiment with and test their artistic responses to themes that draw on interdisciplinary research.</p>
+      <p><strong>Interdisciplinary Approaches 2 (ART420)</strong><br>
+        This practice-based module enables students to consolidate their awareness of ideas and approaches to interdisciplinarity and to how artists have worked collaboratively in multi-disciplinary, interdisciplinary and transdisciplinary ways with researchers and communities. Students will deepen their approaches and methods and will experiment with and test their artistic responses to a theme that draws on interdisciplinary work and develops out of Interdisciplinary Approaches 1.</p>
+      <p><strong>Art Writing 1 (ART421)</strong><br>
+        This module focuses on exhibition visiting and creative review writing to introduce key ideas, methods, and approaches in fine art practice. Students will begin to develop skills in creative-critical writing through being introduced to examples and excerpts of art writing. Students will visit local and online exhibitions as part of this module and will produce a collection of short experiments in art writing.</p>
+      <p><strong>Creative Reading 1 (ART422)</strong><br>
+        This module introduces key ideas, methods, and approaches within contemporary art practices through techniques of creative reading of critical texts. The focus is on concepts, methods and approaches that are current in contemporary art and are relevant to students’ emerging practices and will lead to a coherent expanded essay (choice of written, video, or audio) that evidences a sustained research process.</p>
+      <h2>Year 2</h2>
+      <p>Drawing on your work from the first year, you’ll now have confidence to follow your instincts, choose your own media, use your inspirations and intentions to outline project aims and research strategies. You’ll further develop your critical skills by reflecting on your own work and that of others. In groups, you will curate a selection of work for a public exhibition and engage in a professional placement or interdisciplinary residency. You’ll also make work in response to common challenges – environment, health and equality. There is also an opportunity to take part in an international exchange programme.</p>
+      <h3>Core modules</h3>
+      <p><strong>Fine Art Practice 2: Studio Experimentation and DIY Culture (ART522)</strong><br>
+        This module provides an opportunity for students to develop a negotiated art practice through sustained studio experimentation and a DIY/DIWO (Do It Yourself / Do It With Others) culture, including strategies for navigating collaborative practices. The studio-based module will develop an awareness of contextual frameworks in relation to art practice and enable students to research and experiment with materials, processes, concepts and environments in preparation for a public show of art practice.</p>
+      Interdisciplinary Art Practice 3: audiences and public interaction (ART523)
+      
+      This module provides an opportunity for students to develop an understanding of professional practice or links within a discipline of associated research through placement participation. Develop outputs that can be disseminated to a public audience that are appropriate to the student’s area of professional interaction, introduced through a series of seminars and/or workshops This module also is aimed at developing the student’s professional portfolio.
+      <p><strong>Common Challenge: Interdisciplinary Art Practice 4 (ART524)</strong><br>
+        This module provides an opportunity for students to develop and realise collaborative professional practice through interdisciplinary research grounded in placement and/or residency participation. There will be a specific focus on strategies for collaboration, community-based practice and social practice art. This will be introduced through a series of seminars and/or workshops. Students will work in groups with interdisciplinary partners to develop collaborative outputs that can be disseminated to a public audience.</p>
+      <h3>Optional modules</h3>
+      <p><strong>ADA International Exchange</strong><br>
+        Critical studies 3: Close reading of influential text (ART520)
+        This programme of seminars, tutorials and independent study will examine key theories and ideas which relate to contemporary fine art practice through close reading of selected texts. The influential texts will be used to explore areas of artistic inquiry as well as strategies for researching, writing and engaging in practical research within a group and individual framework.</p>
+      <p><strong>Critical studies 4: writing as cultural practice (ART521)</strong><br>
+        This programme of seminars, presentations, tutorials and independent study continues to explore key theories and ideas which relate to contemporary art practices. Selected works and texts, and modes of writing, will be used to explore areas of inquiry as methods of engaging in practical research within a group and individual framework.</p>
+      <h2>Final year</h2>
+      <p>In your final year, you will produce a comprehensive body of work, exploring its social and cultural context and the relationship between artist and audience. Deepen your knowledge of a specific area of artistic practice and its concepts through the common dissertation module, where you can develop critical and creative skills in an interdisciplinary setting. Continue to prepare for a career in art by developing a research portfolio and art publication for use when you graduate. Develop professional and transferable skills in collaborative arts administration and management through curation, design, marketing and installing your degree show.</p>
+      <h3>Core modules</h3>
+      <p><strong>Fine Art Practice 3: Research and Development for Public Exhibition (ART625)</strong><br>
+        The students will develop a negotiated conceptual framework for individual and/or collaborative creative methods, with reference to contemporary practices, approaches and theories. The module will enable the development of student learning towards an increasingly independent enquiry into source material and appropriate practices, linked to critical research and professional practice.</p>
+      <p><strong>Fine Art Practice 4: Public Exhibition (ART626)</strong><br>
+        The students will realise a negotiated conceptual framework for individual and/or collaborative creative methods, with reference to contemporary practices, approaches and theories. The module will enable the development of student learning towards the realisation of an independent, practice-based enquiry into source material and appropriate professional practices, linked to critical research. This will be developed into a body of work for final presentation that is suitable for public exhibition.</p>
+      <p><strong>Common Dissertation (ADA600)</strong><br>
+        The module engages students in situating practice through research, contextualisation and critical reflection, in relation to their final stage study and post University aspirations. Programmes can offer: a traditional dissertation; preparation for an extended dissertation; situating existing practice; or the construction of a new body of work as practice-based research.</p>
+      <p><strong>Interdisciplinary Art Publication (ART627)</strong><br>
+        In this module students are encouraged to embrace a more open and flexible approach toward the interdisciplinary art publication. This module enables students to expand the possibilities of art publication through individual or the merging of art disciplines and in association with their studio practice.</p>
+      <h3>Core modules</h3>
+      <p><strong>Common Dissertation: Critical Practices (ADA600)</strong><br>
+        The module engages students in situating practice through research, contextualisation and critical reflection, in relation to their final stage study and post University aspirations. Programmes can offer: a traditional dissertation; preparation for an extended dissertation; situating existing practice; or the construction of a new body of work as practice-based research.</p>
+      <p><strong>Fine Art Studio 3: Resolving Practice (ART625)</strong><br>
+        Students will develop a negotiated conceptual framework for individual and/or collaborative creative methods, with reference to contemporary practices, approaches and theories. The module will enable the development of student learning towards an increasingly independent enquiry into source material and appropriate practices, linked to critical research and professional practice. The focus will be on further development of research practices to ground and underpin student practice together with the development of detailed proposals and plans for work to be developed for exhibition at the end this module, which will be carried forward to the subsequent module in Semester 2.</p>
+      <p><strong>Fine Art Studio 4: Going Public (ART626)</strong><br>
+        Students will realise a negotiated conceptual framework for an individual and/or collaborative artistic body of work, with reference to contemporary practices, approaches and theories. The module will enable students to realise independent, practice-based enquiries into source material and appropriate professional practices, linked to critical research. This will be developed into a body of work for final presentation that is suitable for public exhibition. The module also requires students to work together collaboratively to develop a Degree Show, drawing on the full range of professional skills required for the creative industries.</p>
+      <p><strong>Art Publication (ART627)</strong><br>
+        In this studio module, students will develop an art publication that aligns with their current art practice and areas of research. The module questions what constitutes 'publication' - from artist books to 'zines to broadsheets to video essays to performance lectures – and explores the theoretical implications for contemporary art within a network of communication and circulation.</p>
+      <p>Every undergraduate taught course has a detailed programme specification document describing the course aims, the course structure, the teaching and learning methods, the learning outcomes and the rules of assessment.</p>
+      <p>The following programme specification represents the latest course structure and may be subject to change:</p>
+      <p><span class="iconfont" aria-hidden="true">U</span><a href="#">BA (Hons) Fine Art programme specification_0506</a></p>
+      <p>The modules shown for this course are those currently being studied by our students, or are proposed new modules. Please note that programme structures and individual modules are subject to amendment from time to time as part of the University’s curriculum enrichment programme and in line with changes in the University’s policies and requirements.</p>
+      <p>In light of the Coronavirus (COVID-19) pandemic, the changeable nature of the situation and any updates to government guidance, we may need to make further, last minute adjustments to how we deliver our teaching and learning on some or all of our programmes, at any time during the academic year. We want to reassure you that even if we do have to adjust the way in which we teach our programmes, we will be working to maintain the quality of the student learning experience and learning outcomes at all times.</p>
+      <h2 id="entry">Entry requirements</h2>
+      <p><strong>UCAS tariff</strong><br>
+        96 - 144</p>
+      <p><strong>A level</strong><br>
+        A minimum of two A levels; General Studies accepted.</p>
+      <p><strong>International Baccalaureate</strong><br>
+        26 points.</p>
+      <p><strong>18 Unit BTEC National Diploma/QCF Extended Diploma</strong><br>
+        DMM.</p>
+      <p><strong>BTEC National Diploma modules</strong><br>
+        If you hold a BTEC qualification, it is vital that you provide our Admissions team with details of the exact modules you have studied as part of the BTEC. Without this information, we may be unable to process your application quickly and you could experience significant delays in the progress of your application to study with us. Please explicitly state the full list of modules within your qualification at the time of application.</p>
+      <p><strong>All access courses</strong><br>
+        Pass a named Access to Higher Education Diploma (preferably Art and Design or combined) with at least 33 credits at merit and/or distinction.</p>
+      <p><strong>T level</strong><br>
+        Merit in digital production, design and development.</p>
+      <p><strong>GCSE</strong><br>
+        Mathematics and English Language grade C.</p>
+      <p><strong><a href="#">English language requirements</a></strong><br>
+        We welcome applicants with international qualifications. To view other accepted qualifications, please refer to our <a href="#">tariff glossary</a>.</p>
+      <p>Equivalent qualifications may be considered; please contact admissions@plymouth.ac.uk.</p>
+      <p><strong>A portfolio presentation is a requirement for entry onto this course</strong>.<br>
+        <a href="#">Find further information on our portfolio guidance page</a>.</p>
+      <h2 id="fees">Fees, costs and funding</h2>
+      <div class="costs">
+        <table>
+          <tr>
+            <th scope="col">New Student</th>
+            <th scope="col">2022-2023</th>
+            <th scope="col">2023-2024</th>
+          </tr>
+          <tr>
+            <td>Home</td>
+            <td>£9,250</td>
+            <td>£9,250</td>
+          </tr>
+          <tr>
+            <td>International</td>
+            <td>£14,600</td>
+            <td>£16,300</td>
+          </tr>
+          <tr>
+            <td>Part time (Home)</td>
+            <td>£770</td>
+            <td>£770</td>
+          </tr>
+        </table>
+      </div>
+      <p>Full time fees shown are per annum. Part time fees shown are per 10 credits. Please note that fees are reviewed on an annual basis. Fees and the conditions that apply to them shown in the prospectus are correct at the time of going to print. Fees shown on the web are the most up to date but are still subject to change in exceptional circumstances. More information about <a href="#">fees and funding</a>.</p>
+      <h3>Additional costs</h3>
+      <p>This course is delivered by the <a href="#">Faculty of Arts, Humanities and Business</a> and more details of any additional costs associated with the faculty's courses are listed on the following page: <a href="#">Faculty of Arts, Humanities and Business additional costs</a>.</p>
+      <h2 id="apply">How to apply</h2>
+      <p>All applications for undergraduate courses are made through UCAS (Universities and Colleges Admissions Service).</p>
+      <p>UCAS will ask for the information contained in the box at the top of this course page including the UCAS course code and the institution code.</p>
+      <p>To apply for this course and for more information about submitting an application including application deadline dates, please visit the <a href="#">UCAS website</a>.</p>
+      <p>Support is also available to overseas students applying to the University from our International Office via our how to apply webpage or email <a href="#">admissions@plymouth.ac.uk</a>.</p>
+      <p><a href="#">Applicant portfolio advice</a> – find out how to make an impression with your portfolio.</p>
+      <h2><span class="iconfont" aria-hidden="true">!</span><a href="#top">Back to top</a></h2>
+    </div>
+    <div class="item3">
+      <h2>Related videos</h2>
+      <figure> <a href="#">
+        <div class="position-relative"><img src="images/1280x720fineart6.jpg" alt="Fine Art Stuedent Alysia Millington">
+          <div class="position-absolute-bl video-length">7:19</div>
+          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""/></div>
+        </div>
+        </a>
+        <figcaption class="swatch1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+      </figure>
+      <figure> <a href="#">
+        <div class="position-relative"><img src="images/1280x720fineart7.jpg" alt="Fine Art Stuedent Alysia Millington">
+          <div class="position-absolute-bl video-length">5:24</div>
+          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""/></div>
+        </div>
+        </a>
+        <figcaption class="swatch1">Consectetur adipisicing elit, <a href="#">sed do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+</body>
+</html>
