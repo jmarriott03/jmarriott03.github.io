@@ -108,11 +108,64 @@ section {
     font-size: 1.5em;
     line-height: 1.2;
 }
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quotestyle {
+    padding: 1em;
+}
+.quoteimage {
+    padding: 0 1em 1em 4em;
+    position: relative;
+    width: 100%;
+}
+.quoteimage img {
+    left: 1em;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.25em 0 0 0;
+    border-radius: 50%;
+}
+.greybck {
+    background-color: #eee;
+}
+.quotename {
+    padding: 1em;
+    margin: 0;
+}
+.quotename p, .quotestyle p {
+    margin-bottom: 0;
+}
+.pad1 {
+    padding: 1rem;
+}
+.costs table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0 0 0;
+}
+.costs td, .costs th {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #111;
+}
+.costs th {
+    background-color: #111;
+    color: #fff;
+}
 </style>
 </head>
 <body>
 <main>
   <section>
+    
     <h1>Content sections</h1>
     <h2>About the course</h2>
     <p>Make, use and analyse images, engaging directly with the world around you while exploring the medium’s endless potential. Develop a clear understanding of photography in its wider historical, cultural and professional context and be equipped with the skills to achieve and sustain your career ambitions in the creative industry. Our diverse teaching team, purpose-built environment and advanced facilities enable you to establish your unique style and personal visual language.</p>
@@ -125,7 +178,7 @@ section {
       <li>Learn from contemporary professionals to help shape your future via our Artist Talks programme.</li>
       <li>Follow in the footsteps of our prize-winning and successful alumni and achieve a career in various fields of the industry: editorial, commercial, art direction, assisting, styling, curating, picture editing, teaching and arts practice.</li>
     </ul>
-    <p>*KIS widget*</p>
+    <div class="greybck pad1"><img src="images/kisphotography.gif" alt=""/></div>
     <h2>Course structure</h2>
     <h2>Year 1</h2>
     <h3>Experiment &amp; Explore</h3>
@@ -195,8 +248,14 @@ section {
     <h2>Facilities and equipment</h2>
     <p>Photography requires more than a camera. We provide access to an extensive range of high-specification facilities and equipment so that you can focus on developing your creative practice.</p>
     <p><a href="#">Explore photography facilities</a></p>
-    <h2>The quality of creative space and inspirational input has proven to be invaluable to me in developing my artistic practice.</h2>
-    <p>BA (Hons) Photography graduate, Darren</p>
+    <div class="greybck">
+      <div class="quotestyle">
+        <p class="largetext"><strong>The quality of creative space and inspirational input has proven to be invaluable to me in developing my artistic practice.</strong></p>
+      </div>
+      <div class="quotename">
+        <p>BA (Hons) Photography graduate, <a href="#">Darren</a></p>
+      </div>
+    </div>
     <h2>Showcase your work</h2>
     <p>Creative talent and skills need a platform. Every year, our photography students have an opportunity to exhibit their work at the Art, Design and Architecture Graduate Show.</p>
     <p>Through our strong city partnerships, students are able to publicly promote their work to creative industry members and the wider art community.</p>
@@ -246,8 +305,14 @@ section {
     <h3>Postgraduate masters programmes</h3>
     <p><a href="#"><strong>MA Photography</strong></a></p>
     <h2>Career opportunities</h2>
-    <h3>I have been interested in photography for as long as I can remember, but everyone in Plymouth was hugely supportive in helping me to pursue my dream. To win two national prizes when I am still developing my skills as a photographer is incredible, and my job with South West News is offering me some fantastic opportunities and subjects.</h3>
-    <p>Graduate <a href="#">David Hedges</a> is a Staff Press Photographer with South West News Service (SWNS), and has won major awards for his work.</p>
+    <div class="greybck">
+      <div class="quotestyle">
+        <p><strong>I have been interested in photography for as long as I can remember, but everyone in Plymouth was hugely supportive in helping me to pursue my dream. To win two national prizes when I am still developing my skills as a photographer is incredible, and my job with South West News is offering me some fantastic opportunities and subjects.</strong></p>
+      </div>
+      <div class="quotename">
+        <p>Graduate <a href="#">David Hedges</a> is a Staff Press Photographer with South West News Service (SWNS), and has won major awards for his work.</p>
+      </div>
+    </div>
     <p>Throughout the course, students will develop and consolidate their knowledge and understanding of what it takes to be a creative working in the photographic industry and the transferable skills required to be sustainable and ultimately successful.</p>
     <p>The professional practice modules at each stage are designed to contribute to the refinement of students’ contextual understanding of their discipline and enable them to focus this towards identified personal career aspirations and the opportunities offered – directly and indirectly – by the industry.</p>
     <p><a href="#">Where can a photography degree take you in your career?</a></p>
@@ -294,9 +359,36 @@ section {
     <p>We are looking for applicants with good potential including with non-standard qualifications and background, so will consider every application on a case-by-case basis. Alternatively, if you have any questions or concerns about meeting the entry requirements listed above we would encourage you to contact the Admissions Team on <a href="#">+44(0)1752 585858</a> or email <a href="#">admissions@plymouth.ac.uk</a>, where a member of the team can offer you further advice.</p>
     <h2>Fees, costs, and funding</h2>
     <h3>2022 / 2023</h3>
-    <p><strong>Full-time fees (per annum)</strong><br>
-      UK residents £9,250 International students £14,600 Part-time fees (per 10 credits)<br>
-      UK residents £770 International students £770</p>
+<div class="costs">
+      <table>
+        <tr>
+          <th scope="col">Full-time fees (per annum)</th>
+        </tr>
+        <tr>
+          <td>UK residents</td>
+          <td><strong>£9,250</strong></td>
+        </tr>
+        <tr>
+          <td>International students</td>
+          <td><strong>£14,600</strong></td>
+        </tr>
+      </table>
+    </div>
+    <div class="costs">
+      <table>
+        <tr>
+          <th scope="col">Part-time fees (per 10 credits)</th>
+        </tr>
+        <tr>
+          <td>UK residents</td>
+          <td><strong>£770</strong></td>
+        </tr>
+        <tr>
+          <td>International students</td>
+          <td><strong>£770</strong></td>
+        </tr>
+      </table>
+    </div>
     <p>Please note that fees are reviewed on an annual basis. Fees and the conditions that apply to them shown in the prospectus are correct at the time of going to print. Fees shown on the web are the most up to date but are still subject to change in exceptional circumstances.</p>
     <p><a href="#">More information about fees and funding</a></p>
     <h3>Additional costs</h3>
