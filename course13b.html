@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+--ucas: #e32438;
+--alert: #f00;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon12.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background: rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+    scroll-margin-top: 1rem;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: #00e;
+    word-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+section {
+    /*width: 80em;*/
+    overflow: hidden;
+    margin: 0 auto;
+}
+.nobullets {
+    list-style-type: none;
+    padding: 0;
+}
+.boldtext {
+    font-weight: bold;
+}
+.btn a {
+    padding: 0.5em 0.75em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+.btn a:hover, .btn a:focus {
+    text-decoration: underline;
+}
+.openday {
+    background-color: var(--link);
+    margin-bottom: 1em;
+    color: var(--white);
+}
+.ucas {
+    background-color: var(--ucas);
+    color: var(--white);
+}
+.alert {
+    color: var(--alert);
+}
+.tag {
+    background-color: var(--lgrey);
+    color: var(--black);
+    font-size: 0.75em;
+    margin: 0 1rem 1rem 0;
+}
+.tag a {
+    color: var(--black);
+}
+.padl {
+    padding-left: 1rem;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--black);
+    color: var(--white);
+}
+.fullw a {
+    color: var(--white);
+}
+.hero {
+    max-width: 60em;
+}
+.breadcrumb {
+    /* max-width: 80em;*/
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.breadcrumb p {
+    margin: 0;
+}
+.mtop1rem {
+    margin-top: 1rem;
+}
+.positionrelative {
+    position: relative;
+}
+.bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--black);
+    background: var(--white);
+    padding: 1em;
+}
+.keyinfo {
+    background: var(--lgrey);
+    display: block;
+    clear: both;
+    padding: 1em;
+    margin: 0;
+}
+.pad1 {
+    padding: 1rem;
+}
+.padalert {
+    padding: 0.5rem 1rem;
+}
+.registerpad {
+    padding-bottom: 3rem;
+}
+.costs table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0 0 0;
+}
+.costs td, .costs th {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.costs th {
+    background-color: var(--black);
+    color: var(--lgrey);
+}
+figcaption {
+    padding: 0;
+    margin: 0.5em 0;
+}
+.position-relative {
+    position: relative;
+}
+.position-absolute-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.position-absolute-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.video-length {
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 0.25em;
+    padding: 0 0.5em;
+    font-size: 0.75em;
+    margin: 0.5em;
+}
+.smalltext {
+    font-size: 0.75em;
+}
+.youtube {
+    position: absolute;
+    width: 4rem;
+    left: 50%;
+    margin-left: -2rem;
+    top: 50%;
+    margin-top: -1.5rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+}
+.image, .grid-content, .gradient {
+    grid-row: 1;
+}
+.image {
+    grid-column: 1 / 3;
+    height: 100%;
+    object-fit: cover;
+}
+.gradient {
+    grid-column: 1 / 3;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3), rgba(0,0,0,1) 100%);
+    margin: 0;
+}
+.grid-content {
+    grid-column: 1 / 2;
+    align-self: center;
+    margin: 1rem;
+    color: var(--white);
+}
+.grid-content a {
+    color: var(--white);
+}
+.grid-content :last-child {
+    margin-bottom: 0;
+}
+.grid-content h1 {
+    font-size: 4em;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+.btn a {
+    padding: 0.5em 0.75em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+}
+.btn a:hover, .btn a:focus {
+    text-decoration: underline;
+}
+.openday {
+    background-color: var(--link);
+    margin-bottom: 1em;
+    color: var(--white);
+}
+.ucas {
+    background-color: var(--ucas);
+    color: var(--white);
+}
+.mtop1 {
+    margin-top: 1rem;
+}
+.bcktint {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0 1.5em 0;
+    clear: both;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--white);
+}
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: var(--lgrey);
+    padding: 1rem 1rem 0 1rem;
+    margin: 0;
+    overflow: hidden;
+    font-size: 0.875rem;
+    z-index: 99;
+    ;
+}
+.sticky a {
+    line-height: 2em;
+    white-space: nowrap;
+    background-color: var(--white);
+    padding: 0.125em 0.5em;
+    float: left;
+    border-radius: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 1em 1em 0;
+}
+.width60 {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1em;
+}
+.sticky a:hover {
+    text-decoration: underline;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.quoteimage2 {
+    padding: 0 0 0 3em;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+.quoteimage2 img {
+    position: absolute;
+    left: 0;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.25em 0 0 0;
+    border-radius: 50%;
+}
+.padtop1 {
+    padding-top: 1rem;
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quotestyle {
+    padding: 1em;
+}
+.quoteimage {
+    padding: 0 1em 1em 4em;
+    position: relative;
+    width: 100%;
+}
+.quoteimage img {
+    left: 1em;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0.25em 0 0 0;
+    border-radius: 50%;
+}
+.greybck {
+    background-color: var(--lgrey);
+}
+.quotename {
+    padding: 1em;
+    margin: 0;
+}
+.quotename p, .quotestyle p {
+    margin-bottom: 0;
+}
+.wrapper {
+    max-width: 70em;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    margin: 0;
+}
+aside {
+    width: 100%;
+    padding: 1em 1em 0 1em;
+    background-color: var(--white);
+}
+aside ul {
+    padding: 0;
+    list-style-type: none;
+}
+aside li {
+    margin: 0 0 1em 0;
+}
+main {
+    padding: 1em;
+    margin: 0;
+}
+
+@media (min-width: 55em) {
+.wrapper {
+    grid-template-columns: 20em minmax(10px, 1fr);
+    grid-gap: 1rem;
+}
+aside {
+    position: sticky;
+    top: 0;
+    align-self: start;
+}
+}
+
+@media screen and (max-width: 60em) {
+.grid-content {
+    grid-column: 1 / 3;
+}
+.grid-content h1 {
+    font-size: 2em;
+}
+}
+</style>
+</head>
+<body>
+<div class="fullw" id="top">
+  <div class="padalert"><span class="iconfont alert" aria-hidden="true">a</span><a href="#"><strong>Undergraduate open day</strong></a> - Wednesday 21 June 2023</div>
+</div>
+<div class="breadcrumb">
+  <p><a href="#">Home</a> &#62; <a href="#">Courses</a> &#62; <a href="#">Undergraduate</a> &#62; <strong>BA (Hons) Fine Art</strong></p>
+</div>
+<div class="grid"><img src="images/1280x720photography.jpg" alt="" class="image">
+  <div class="gradient"></div>
+  <div class="grid-content">
+    <p><a href="#">School of Art, Design and Architecture</a></p>
+    <h1 class="mtop1rem">BA (Hons) Photography</h1>
+    <table class="bcktint">
+      <tr>
+        <td>Course type label</td>
+        <td ><strong>Undergraduate</strong></td>
+      </tr>
+      <tr>
+        <td>Course award and title</td>
+        <td><strong>BA (Hons) Photography</strong></td>
+      </tr>
+      <tr>
+        <td>UCAS tariff</td>
+        <td><strong>96–120</strong></td>
+      </tr>
+      <tr>
+        <td>UCAS course code</td>
+        <td><strong>W640</strong></td>
+      </tr>
+      <tr>
+        <td>Institution code</td>
+        <td><strong>P60</strong></td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td><strong>3 years (full time)<br>
+          6 years (part time)</strong></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td><strong>Plymouth</strong></td>
+      </tr>
+    </table>
+    <div class="btn">
+      <p><a href="#" class="openday">Register for open day</a></p>
+      <p><a href="#" class="ucas mtop1">Apply via UCAS</a></p>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <aside>
+    <h2>Contents</h2>
+    <nav>
+      <ul>
+        <li><a href="#aboutthecourse">About the course</a></li>
+        <li><a href="#coursestructure">Course structure</a></li>
+        <li><a href="#teachinglearningandassessment">Teaching, learning and assessment</a></li>
+        <li><a href="#studyoptions">Study options</a></li>
+        <li><a href="#careeropportunities">Career opportunities</a></li>
+        <li> <a href="#entryrequirements">Entry requirements</a></li>
+        <li><a href="#feescostsandfunding">Fees, costs, and funding</a></li>
+        <li><a href="#howtoapply">How to apply</a></li>
+        <li><a href="#relatedcourses">Related courses</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <div class="content">
+      <h2 id="aboutthecourse">About the course</h2>
+      <p>Make, use and analyse images, engaging directly with the world around you while exploring the medium’s endless potential. Develop a clear understanding of photography in its wider historical, cultural and professional context and be equipped with the skills to achieve and sustain your career ambitions in the creative industry. Our diverse teaching team, purpose-built environment and advanced facilities enable you to establish your unique style and personal visual language.</p>
+      <ul>
+        <li>Have the freedom to develop your photography using our extensive analogue and digital facilities and resources.</li>
+        <li>Use your photography to raise awareness and promote change in response to global challenges and environmental issues.</li>
+        <li>Work with creative businesses, charities and organisations to gain real-world experience.</li>
+        <li>Experience international opportunities through European field trips and established connections for studying abroad.</li>
+        <li>From making images on Dartmoor National Park in the morning to paddleboarding on the Plymouth Sound in the evening, enjoy the varied and unique quality of life in the city and its coastal location.</li>
+        <li>Learn from contemporary professionals to help shape your future via our Artist Talks programme.</li>
+        <li>Follow in the footsteps of our prize-winning and successful alumni and achieve a career in various fields of the industry: editorial, commercial, art direction, assisting, styling, curating, picture editing, teaching and arts practice.</li>
+      </ul>
+      <div class="greybck pad1"><img src="images/kisphotography.gif" alt=""></div>
+      <h2 id="coursestructure">Course structure</h2>
+      <h2>Year 1</h2>
+      <h3>Experiment &amp; Explore</h3>
+      <ul>
+        <li>Technical workshops and hands-on activities establish an understanding of professional working methods, including studio practice, analogue processes, digital workflow, bookmaking, and digital and traditional printing.</li>
+        <li>Work with new people in new places in new ways. Whether it is making images on the Dartmoor field trip or working collectively on a brief directed by an industry professional, new opportunities will be available to you.</li>
+        <li>Lectures and seminars contextualise your work through the study of contemporary and historical practices.</li>
+      </ul>
+      <h3>Core modules</h3>
+      <p><strong>Essentials</strong><br>
+        PHO401</p>
+      <p>In this module students are introduced to core photographic, technical and methodological processes and principles. Key photographic methodologies are explored through workshops, tutorials and personal photographic exploration. </p>
+      <p><strong>Developing Practice</strong><br>
+        PHO402</p>
+      <p>This module aims to further establish key processes, skills and methodologies fundamental to photographic activity. Students relate contextual knowledge gained through research via the critical analysis of students’ own work and that of contemporary and historical practitioners.</p>
+      <p><strong>Tableaux</strong><br>
+        PHO403</p>
+      <p>This module enables students to begin to establish their understanding of professional contexts by responding to a ‘live brief’ set by a designated industry stakeholder. The brief will engage students to work in groups to produce, construct and photograph an ambitious narrative tableaux in the studio or on location.</p>
+      <p><strong>Storytelling</strong><br>
+        PHO404</p>
+      <p>Students explore the process of storytelling in the form of a photo essay and bookwork, introducing and expanding the practices of editing, sequencing, layout, and design. The principles of ethical representation will be introduced into their contextual understanding. Students will further develop synergies between practice and historical cultural contexts through written and verbal form.</p>
+      <h2>Year 2</h2>
+      <h3>Develop &amp; Collaborate</h3>
+      <ul>
+        <li>Develop new ways of working and thinking about photography through the teaching of new technologies and methods of production and publication.</li>
+        <li>Work across disciplines using one of the United Nations Sustainability Development Goals to engage with and promote awareness of global (environmental) concerns.</li>
+        <li>Begin to consider your future and life after graduation by researching career opportunities and engaging in the Artist Talks programmes with established professionals.</li>
+      </ul>
+      <h3>Core modules</h3>
+      <p><strong>Mediations</strong><br>
+        PHO501</p>
+      <p>This module engages students in forms of contemporary photographic practice involving still and moving image, sound and text. A single multimedia time-based output is constructed over the course of the module. Emphasis is placed on developing work that is informed by an understanding of historical and contemporary lens-based practice and culture and associated contextual research (theoretical and practical).</p>
+      <p><strong>Futures</strong><br>
+        PHO502</p>
+      <p>The module is designed to contribute the development of students’ contextual understanding of their discipline, and focus this towards identifying personal career aspirations, means of sustainable career development, and the opportunities offered, directly and indirectly, by the industry.</p>
+      <p><strong>Common Challenge: Collaboration</strong><br>
+        PHO503</p>
+      <p>The module offers the opportunity to students to look outwards, to engage or work with others collaboratively. Thematically, the research and project focus will relate to UN Sustainable Development Goals incorporating an interdisciplinary agenda. Student practice is developed through interaction, exchanging of ideas and actively researching/collaborating with an external individual, group or organisation.</p>
+      <p><strong>Establishing</strong><br>
+        Practice PHO504</p>
+      <p>In this module, students negotiate a theme from which to develop a series of art/media/design works or artefacts. They are expected to experiment with media/s in order to develop and produce a body of work that explores the practical, theoretical and technical aspects of their individual areas of interest within photography. Students are introduced to and prepare for the Common Dissertation module.</p>
+      <h2>Final year</h2>
+      <h3>Resolve &amp; Exhibit</h3>
+      <ul>
+        <li>Research, produce and resolve a major body of work for publication and exhibition at the Summer Degree Show.</li>
+        <li>Consolidate and refine career ambitions and life after graduation through talks and workshops from graduates and industry speakers.</li>
+        <li>Contextualise and critically articulate your work in relation to various audiences and the opportunities these provide: editorial, commercial, fashion, fine art, postgraduate study and research.</li>
+      </ul>
+      <h3>Core modules</h3>
+      <p><strong>Common Dissertation: Critical Practices</strong><br>
+        ADA600</p>
+      <p>The module engages students in situating practice through research, contextualisation and critical reflection, in relation to their final stage study and post University aspirations. Programmes can offer: a traditional dissertation; preparation for an extended dissertation; situating existing practice; or the construction of a new body of work as practice-based research.</p>
+      <p><strong>Negotiation</strong><br>
+        PHO602</p>
+      <p>In this module each student develops an experimental programme of photographic practice in negotiation with tutors, through careful reflection on personal aims and objectives for the final year of study.</p>
+      <p><strong>Resolution</strong><br>
+        PHO603</p>
+      <p>After an initial period of self-initiated preparation, research and consultation, students prepare and submit a written proposal for the consolidation of a body of work. Subject to the approval of the module team, the student undertakes a period of self-negotiated study leading to the production of a substantial body of work, supported by a critical reflection.</p>
+      <h2>Optional modules</h2>
+      <p><strong>Extended Dissertation</strong><br>
+        PHO604</p>
+      <p>This module completes the Photography research syllabus with an extended essay, researched and written by each student. Students have the opportunity to research and reflect on a subject of their choice, within an area associated with their practice discipline.</p>
+      <p><strong>Professional Futures</strong><br>
+        PHO605</p>
+      <p>Delivered across the third and final year, this module is geared towards students focussing on their career aspirations post university and researching, collating, reflecting and networking to create an ‘exit-strategy’ that will enable them to be ‘ready and able’ and to achieve potential employability.</p>
+      <h2 id="teachinglearningandassessment">Teaching, learning and assessment</h2>
+      <h2>Facilities and equipment</h2>
+      <p>Photography requires more than a camera. We provide access to an extensive range of high-specification facilities and equipment so that you can focus on developing your creative practice.</p>
+      <p><a href="#">Explore photography facilities</a></p>
+      <div class="greybck">
+        <div class="quotestyle">
+          <p class="largetext"><strong>The quality of creative space and inspirational input has proven to be invaluable to me in developing my artistic practice.</strong></p>
+        </div>
+        <div class="quotename">
+          <p>BA (Hons) Photography graduate, <a href="#">Darren</a></p>
+        </div>
+      </div>
+      <h2>Showcase your work</h2>
+      <p>Creative talent and skills need a platform. Every year, our photography students have an opportunity to exhibit their work at the Art, Design and Architecture Graduate Show.</p>
+      <p>Through our strong city partnerships, students are able to publicly promote their work to creative industry members and the wider art community.</p>
+      <p><a href="#">IGNITE Festival of Creativity</a></p>
+      <h2>Examples of student work</h2>
+      <p><strong><a href="#">Highlighting the issue of food poverty</a></strong><br>
+        Harry Gennard captures the stark reality of food poverty in modern Britain.</p>
+      <p><strong><a href="#">Documenting preservationists who rediscover the workings and history of old mines</a></strong> <br>
+        Nicholas Cade discusses his final year project.<br>
+        [https://www.youtube.com/watch?v=To6_n6EOF_s]</p>
+      <p><strong><a href="#">Producing portraits that focus on the emotional wellbeing of a person and the way we react to sudden grief</a></strong><br>
+        Eliza Naish talks about her project – photo therapy for herself, helping her to come to terms with what is happening in her family.<br>
+        [https://www.youtube.com/watch?v=E1AHizhSGPQ]</p>
+      <p>Follow our students and their work on Instagram<br>
+        <a href="#">@photoplymouth</a></p>
+      <h2>Learn from experts</h2>
+      <div class="quoteimage2 padtop1">
+        <p><a href="#"><img src="images/profile01.jpg" alt="">Angus Fraser</a><br>
+          Lecturer in Photography</p>
+      </div>
+      <div class="quoteimage2">
+        <p><a href="#"><img src="images/profile02.jpg" alt="">Heidi Morstang</a><br>
+          Associate Professor in Photography</p>
+      </div>
+      <div class="quoteimage2">
+        <p><a href="#"><img src="images/profile04.jpg" alt="">Simon Standing</a><br>
+          Associate Professor (Senior Lecturer) in Photography</p>
+      </div>
+      <div class="quoteimage2">
+        <p><a href="#"><img src="images/profile03.jpg" alt="">Jessica Lennan</a><br>
+          Lecturer in Photography</p>
+      </div>
+      <div class="quoteimage2">
+        <p><a href="#"><img src="images/profile06.jpg" alt="">Caroline Burke</a><br>
+          Lecturer in Media Arts</p>
+      </div>
+      <div class="quoteimage2">
+        <p><a href="#"><img src="images/profile05.jpg" alt="">Colin Robins</a><br>
+          Lecturer in Photography</p>
+      </div>
+      <h2 id="studyoptions">Study options</h2>
+      <h3>Foundation year</h3>
+      <ul>
+        <li>Develop skills across a range of media and introduces creative best practice in preparation for the first year of the
+          
+          undergraduate programme.</li>
+        <li>Explore creative processes relevant to visual design, animation, illustration, printmaking, fine art, and photography.</li>
+        <li>Gain experience in an engaging and vibrant studio setting.</li>
+      </ul>
+      <p>If you successfully complete the foundation year, you will join year one of BA (Hons) Photography equipped with the skills and knowledge needed to successfully complete an undergraduate degree.</p>
+      <h3>Part-time study</h3>
+      <p>There is an option to study this course part time. The foundation year cannot be studied part time.</p>
+      <h3>International study</h3>
+      <p>This course includes the option for a funded residential trip outside the UK in year one. In the second year, students are supported to complete study abroad for a minimum of 10 weeks.</p>
+      <p><a href="#">Find out more about studying photography abroad</a></p>
+      <h2>Progression routes</h2>
+      <h3>Progression from a partner institution</h3>
+      <p>There are opportunities to progress onto this degree from a course delivered at one of our partner institutions.</p>
+      <p><a href="#"><strong>FdA Photography</strong></a><br>
+        Exeter College</p>
+      <p><a href="#"><strong>FdA Film and Photography</strong></a><br>
+        South Devon College</p>
+      <p><a href="#"><strong>FdA Film, Media and Photography</strong></a><br>
+        Truro and Penwith College</p>
+      <h3>Postgraduate masters programmes</h3>
+      <p><a href="#"><strong>MA Photography</strong></a></p>
+      <h2 id="careeropportunities">Career opportunities</h2>
+      <div class="greybck">
+        <div class="quotestyle">
+          <p><strong>I have been interested in photography for as long as I can remember, but everyone in Plymouth was hugely supportive in helping me to pursue my dream. To win two national prizes when I am still developing my skills as a photographer is incredible, and my job with South West News is offering me some fantastic opportunities and subjects.</strong></p>
+        </div>
+        <div class="quotename">
+          <p>Graduate <a href="#">David Hedges</a> is a Staff Press Photographer with South West News Service (SWNS), and has won major awards for his work.</p>
+        </div>
+      </div>
+      <p>Throughout the course, students will develop and consolidate their knowledge and understanding of what it takes to be a creative working in the photographic industry and the transferable skills required to be sustainable and ultimately successful.</p>
+      <p>The professional practice modules at each stage are designed to contribute to the refinement of students’ contextual understanding of their discipline and enable them to focus this towards identified personal career aspirations and the opportunities offered – directly and indirectly – by the industry.</p>
+      <p><a href="#">Where can a photography degree take you in your career?</a></p>
+      <h2 id="entryrequirements">Entry requirements</h2>
+      <h3>Year one</h3>
+      <p><strong>A portfolio is a requirement for entry onto this course.</strong></p>
+      <p><a href="#">Portfolio advice and support</a></p>
+      <p><strong>UCAS tariff</strong><br>
+        96–120</p>
+      <p><strong>A levels</strong><br>
+        A minimum of two A levels; General Studies accepted.</p>
+      <p><strong>International Baccalaureate</strong><br>
+        26–28 points.</p>
+      <p><strong>18 Unit BTEC National Diploma/QCF Extended Diploma</strong><br>
+        DMM.</p>
+      <p><strong>BTEC National Diploma modules</strong><br>
+        If you hold a BTEC qualification, it is vital that you provide our Admissions team with details of the exact modules you have studied as part of the BTEC. Without this information, we may be unable to process your application quickly and you could experience significant delays in the progress of your application to study with us. Please explicitly state the full list of modules within your qualification at the time of application.</p>
+      <p><strong>All access courses</strong><br>
+        Pass a named Access to Higher Education Diploma (preferably Art and Design or combined) with at least 33 credits at merit and/or distinction.</p>
+      <p><strong>T level</strong><br>
+        Merit in digital production, design and development.</p>
+      <p><strong>GCSE</strong><br>
+        Mathematics and English Language grade C.</p>
+      <p>Equivalent qualifications may be considered; please contact <a href="#">admissions@plymouth.ac.uk</a></p>
+      <p><a href="#">English language requirements</a></p>
+      <p>We welcome applicants with international qualifications. To view other accepted qualifications, please refer to our <a href="#">tariff glossary</a>.</p>
+      <h3>Foundation year</h3>
+      <p><strong>UCAS tariff</strong><br>
+        32–48</p>
+      <p>Don’t have enough UCAS tariff points? We will consider ‘non-standard’ applications on a case-by-case basis.</p>
+      <p><strong>A levels</strong><br>
+        For Level 3 entry the Tariff points entry level will normally be 32–48 points from A level or equivalent. Non-standard applicants will normally be interviewed.</p>
+      <p><strong>BTEC National Diploma/QCF Extended</strong></p>
+      <p><strong>Irish Leaving Certificate</strong><br>
+        Irish Highers, H5 in five subjects equivalent to 32–48 points.</p>
+      <p><strong>International Baccalaureate</strong><br>
+        24 overall</p>
+      <p><strong>T levels</strong><br>
+        Pass in any subject.</p>
+      <p><strong>Proficiency in English</strong><br>
+        Students for whom English is an additional language will need to demonstrate ability in spoken and written English equivalent to an IELTS score of 6.0 and/or successfully complete the university’s special test before entering the foundation year.</p>
+      <p><a href="#">English language requirements</a></p>
+      <p>We welcome applicants with international qualifications. To view other accepted qualifications please refer to our <a href="#">tariff glossary</a>.</p>
+      <p>We are looking for applicants with good potential including with non-standard qualifications and background, so will consider every application on a case-by-case basis. Alternatively, if you have any questions or concerns about meeting the entry requirements listed above we would encourage you to contact the Admissions Team on <a href="#">+44(0)1752 585858</a> or email <a href="#">admissions@plymouth.ac.uk</a>, where a member of the team can offer you further advice.</p>
+      <h2 id="feescostsandfunding">Fees, costs, and funding</h2>
+      <h3>2022 / 2023</h3>
+      <div class="costs">
+        <table>
+          <tr>
+            <th scope="col">Full-time fees (per annum)</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>UK residents</td>
+            <td><strong>£9,250</strong></td>
+          </tr>
+          <tr>
+            <td>International students</td>
+            <td><strong>£14,600</strong></td>
+          </tr>
+        </table>
+      </div>
+      <div class="costs">
+        <table>
+          <tr>
+            <th scope="col">Part-time fees (per 10 credits)</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>UK residents</td>
+            <td><strong>£770</strong></td>
+          </tr>
+          <tr>
+            <td>International students</td>
+            <td><strong>£770</strong></td>
+          </tr>
+        </table>
+      </div>
+      <p>Please note that fees are reviewed on an annual basis. Fees and the conditions that apply to them shown in the prospectus are correct at the time of going to print. Fees shown on the web are the most up to date but are still subject to change in exceptional circumstances.</p>
+      <p><a href="#">More information about fees and funding</a></p>
+      <h3>Additional costs</h3>
+      <p>There is a wide range of technical resources and equipment that students can access. This is covered by the course tuition fees.</p>
+      <p>However, like all visual art disciplines, students will have their own unique way of making their photography and for this reason a student might incur extra costs based on their unique practice and research.</p>
+      <p>This may include:</p>
+      <ul>
+        <li><strong>Books</strong> – the library is well stocked with titles appropriate to the study of photography and visual culture, but specific titles focusing on your specific area of interest might have to be purchased)</li>
+        <li><strong>Printing and photocopying</strong> – even if you primarily use digital cameras and technology, there are requirements to print your work out for assessment</li>
+        <li><strong>Photographic materials</strong> – analogue film and paper, mounting and framin</li>
+        <li><strong>Optional national and international study trips</strong></li>
+        <li><strong>Placements</strong> – if you are on placement, there may be additional costs incurred for subsistence and travel to consider</li>
+      </ul>
+      <h2 id="howtoapply">How to apply</h2>
+      <p>All applications for undergraduate courses are made through UCAS. Further information about application, including deadline dates can be found on the UCAS website.</p>
+      <div class="btn">
+        <p><a href="#" class="openday">Apply now</a></p>
+      </div>
+      <p><a href="#">Admission enquiries</a></p>
+      <p><a href="#">admissions@plymouth.ac.uk</a></p>
+      <p><a href="#">+44(0)1752 585858</a></p>
+      <p><a href="#">School of Art, Design and Architecture</a></p>
+      <h2 id="relatedcourses">Related courses</h2>
+      <p><a href="#">BA (Hons) Fine Art</a></p>
+      <p><a href="#">BA (Hons) Creative Media</a></p>
+      <p><a href="#">BA (Hons) Filmmaking</a></p>
+    </div>
+  </main>
+</div>
+</body>
+</html>
