@@ -6,9 +6,20 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
 <style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+--ucas: #e32438;
+--alert: #f00;
+}
 * {
     margin: 0 auto;
-    box-sizing: border-box;
+    box-sizing: border-box;/*background: rgba(255,0,0,0.25);*/
 }
 * + * {
     margin-top: 1em;
@@ -19,8 +30,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--white);
     margin: 0;
 }
 h1 {
@@ -59,7 +70,7 @@ p {
     margin-bottom: 1.5em;
 }
 a {
-    color: #00e;
+    color: var(--link);
     word-wrap: break-word;
 }
 strong {
@@ -84,22 +95,13 @@ img {
     text-overflow: ellipsis;
     margin-top: 0;
 }
-.nowrap {
-    white-space: nowrap;
-}
-.ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 0;
-}
 section {
-    max-width: 20em;
+    max-width: 40em;
     overflow: hidden;
     padding: 1em;
 }
 .codegrey {
-    background-color: #EEE;
+    background-color: var(--lgrey);
     padding: 1em;
 }
 .largetext {
@@ -107,37 +109,39 @@ section {
     line-height: 1.2;
 }
 .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.btn a {
-    padding: 0.5em 0.75em;
-    float: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
     border-radius: 0.5em;
-    text-align: center;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
     text-decoration: none;
+    cursor: pointer;
+    display: block;
+    border: none;
+    float: left;
 }
-.btn a:hover, .btn a:focus {
+.button:hover, .button:focus {
     text-decoration: underline;
+}
+.whitetext {
+    color: var(--white);
+}
+.linkbackground {
+    background-color: var(--link);
 }
 </style>
 </head>
 <body>
 <main>
- <section><h2>Button</h2>
-
-<p><button>Default Button</button></p>
-<p><a href="#" class="button">Link Button</a></p>
-<p><button class="button">Button</button></p>
-<input type="button" class="button" value="Input Button"></section>
+  <section>
+    <h2>Button</h2>
+    <p>
+      <button>Default Button</button>
+    </p>
+    <a href="#" class="button whitetext linkbackground">Link button</a>
+    <button class="button whitetext linkbackground">Button</button>
+    <input type="button" class="button whitetext linkbackground" value="Input Button">
+  </section>
 </main>
 </body>
 </html>
