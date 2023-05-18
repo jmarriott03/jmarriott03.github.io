@@ -102,15 +102,15 @@ section {
 }
 .codegrey {
     background-color: var(--lgrey);
-    padding: 1em;
+    padding: 1rem;
 }
 .largetext {
     font-size: 1.5em;
     line-height: 1.2;
 }
-.button {
+.btn {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.5;
     border-radius: 0.5em;
     padding: 0.5rem 0.75rem;
     margin: 0 1rem 0 0;
@@ -120,13 +120,13 @@ section {
     border: none;
     float: left;
 }
-.button:hover, .button:focus {
+.btn:hover, .btn:focus {
     text-decoration: underline;
 }
-.whitetext {
+.whitetxt {
     color: var(--white);
 }
-.linkbackground {
+.linkbck {
     background-color: var(--link);
 }
 </style>
@@ -136,11 +136,42 @@ section {
   <section>
     <h2>Button</h2>
     <p>
-      <button>Default Button</button>
+      <button>Default button</button>
     </p>
-    <a href="#" class="button whitetext linkbackground">Link button</a>
-    <button class="button whitetext linkbackground">Button</button>
-    <input type="button" class="button whitetext linkbackground" value="Input Button">
+    <a href="#" class="btn whitetxt linkbck">Link button</a>
+    <button class="btn whitetxt linkbck">Button</button>
+    <input type="button" class="btn whitetxt linkbck" value="Input Button">
+  </section>
+  <section>
+    <div class="codegrey"><code>:root {<br>
+      --white: #fff;<br>
+      --link: #00e;<br>
+      }<br>
+      .btn {<br>
+      font-size: 1rem;<br>
+      line-height: 1.5;<br>
+      border-radius: 0.5em;<br>
+      padding: 0.5rem 0.75rem;<br>
+      margin: 0 1rem 0 0;<br>
+      text-decoration: none;<br>
+      cursor: pointer;<br>
+      display: block;<br>
+      border: none;<br>
+      float: left;<br>
+      }<br>
+      .btn:hover, .btn:focus {<br>
+      text-decoration: underline;<br>
+      }<br>
+      .whitetxt {<br>
+      color: var(--white);<br>
+      }<br>
+      .linkbck {<br>
+      background-color: var(--link);<br>
+      }</code></div>
+    <div class="codegrey"> <code>&lt;p&gt;&lt;button&gt;Default button&lt;/button&gt;&lt;/p&gt;<br>
+      &lt;a href=&quot;#&quot; class=&quot;btn whitetxt linkbck&quot;&gt;Link button&lt;/a&gt;<br>
+      &lt;button class=&quot;btn whitetxt linkbck&quot;&gt;Button&lt;/button&gt;<br>
+      &lt;input type=&quot;button&quot; class=&quot;btn whitetxt linkbck&quot; value=&quot;Input button&quot;&gt;</code></div>
   </section>
 </main>
 </body>
