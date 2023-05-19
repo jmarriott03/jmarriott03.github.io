@@ -13,6 +13,7 @@
 --dgrey: #666;
 --black: #111;
 --link: #00e;
+--dlink: #009;
 --visited: purple;
 --ucas: #e32438;
 --alert: #f00;
@@ -121,15 +122,16 @@ section {
     float: left;
     -webkit-appearance: none;
     outline-offset: 2px;
-}
-.btn:hover, .btn:focus {
-    text-decoration: underline;
+    transition: 0.3s;
 }
 .whitetxt {
     color: var(--white);
 }
 .linkbck {
     background-color: var(--link);
+}
+.linkbck:hover, .linkbck:focus {
+    background-color: var(--dlink);
 }
 </style>
 </head>
@@ -148,6 +150,7 @@ section {
     <div class="codegrey"><code>:root {<br>
       --white: #fff;<br>
       --link: #00e;<br>
+      --dlink: #009;<br>
       }<br>
       .btn {<br>
       font-size: 1rem;<br>
@@ -162,15 +165,16 @@ section {
       float: left;<br>
       -webkit-appearance: none;<br>
       outline-offset: 2px;<br>
-      }<br>
-      .btn:hover, .btn:focus {<br>
-      text-decoration: underline;<br>
+      transition: 0.3s;<br>
       }<br>
       .whitetxt {<br>
       color: var(--white);<br>
       }<br>
       .linkbck {<br>
       background-color: var(--link);<br>
+      }<br>
+      .linkbck:hover, .linkbck:focus {<br>
+      background-color: var(--dlink);<br>
       }</code></div>
     <div class="codegrey"> <code>&lt;p&gt;&lt;button&gt;Default button&lt;/button&gt;&lt;/p&gt;<br>
       &lt;a href=&quot;#&quot; class=&quot;btn whitetxt linkbck&quot;&gt;Link button&lt;/a&gt;<br>
