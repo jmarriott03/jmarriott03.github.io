@@ -97,299 +97,291 @@ section {
     font-size: 1.5em;
     line-height: 1.2;
 }
-
 #myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+    background-image: url('images/search.svg');
+    background-position: 0.5rem 0.5rem;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+	font-size: 1rem;
 }
-
+	#myInput> svg {width: 1rem;}
 #myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-	#myUL li {
-		margin: 0;
-	}
-	
-		.nope {
-		padding: 1rem 0 0 0;
-			background: white;
-	}
-	
+#myUL li {
+    margin: 0;
+}
+.padtop1 {
+    padding: 1rem 0 0 0;
+}
 #myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: var(--black);
-  display: block
+    border-bottom: 1px solid #ccc;
+    margin-top: -1px; /* Prevent double borders */
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--black);
+    display: block
 }
-
 #myUL li a:hover:not(.header) {
-  background-color: #eee;
+    background-color: #eee;
 }
 </style>
 </head>
 <body>
 <section>
-<h1>Undergraduate courses</h1>
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for undergraduate courses.." title="Type in a name">
-
-<ul id="myUL">
-  <li class="nope"><a href="#"><h2>Health</h2></a></li>
-
-<li><a href="#">BSc (Hons) Dietetics (Full-time)</a></li>
-<li><a href="#">MDiet (Hons) Dietetics (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Occupational Therapy (Full-time)</a></li>
-<li><a href="#">MOccTh (Hons) Occupational Therapy (Full-time)</a></li>
-<li><a href="#">MOptom (Hons) Optometry (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Paramedic Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Physiotherapy (Full-time)</a></li>
-<li><a href="#">MPhysio (Hons) Physiotherapy (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Podiatry (Full-time)</a></li>
-<li><a href="#">BA (Hons) Social Work (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Architecture and built environment</h2></a></li>
-
-<li><a href="#">BA (Hons) Architecture (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Architectural Engineering (Full-time)</a></li>
-<li><a href="#">BA (Hons) Game Arts and Design (Full-time)</a></li>
-<li><a href="#">BA (Hons) Interior Design (Full-time)</a></li>
-<li><a href="#">BA (Hons) Digital Media Design (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Digital Media Design (Full-time)</a></li>
-<li><a href="#">MEng (Hons) Marine Technology (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Art</h2></a></li>
-
-<li><a href="#">BA (Hons) Art History (Full-time)</a></li>
-<li><a href="#">BA (Hons) Acting (Full-time)</a></li>
-<li><a href="#">BA (Hons) Acting with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Photography with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Graphic Design with Typography (Full-time)</a></li>
-<li><a href="#">BA (Hons) Graphic Design with Typography with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Filmmaking (Full-time)</a></li>
-<li><a href="#">BA (Hons) Drama (Full-time)</a></li>
-<li><a href="#">BA (Hons) Drama with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Musical Theatre (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Biological sciences</h2></a></li>
-
-<li><a href="#">BSc (Hons) Biological Sciences (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Biological Sciences with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Conservation Biology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Animal Behaviour and Welfare (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Biosciences (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology and Oceanography (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology and Coastal Ecology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Zoology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology with Human Biology (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Business</h2></a></li>
-
-<li><a href="#">BA (Hons) Business (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Business Management (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Maritime Business (Full-time)</a></li>
-<li><a href="#">BA (Hons) International Business Management (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Law with Business (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Business Management with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Business Management with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Maritime Business with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Business Management (2 year fast track) (Full-time)</a></li>
-<li><a href="#">BA (Hons) Human Resource Management (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Chemistry</h2></a></li>
-
-<li><a href="#">BSc (Hons) Chemistry (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Chemistry with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Environmental Science with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Biological Sciences with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Geology with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Ocean Sciences with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Environmental Science (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Computing</h2></a></li>
-
-<li><a href="#">BSc (Hons) Computer Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Computer Science (Artificial Intelligence) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Computer Science (Games Development) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Computer Science (Software Engineering) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Computer Science (Cyber Security) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Mathematics with Computer Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Computer Science with Foundation Year (Full-time)</a></li>
-<li><a href="#">BEng (Hons) Integrated Engineering (Full-time)The BEng (Hons)</a></li>
-<li><a href="#">BSc (Hons) Audio and Music Technology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Mathematics with Theoretical Physics (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Design</h2></a></li>
-
-<li><a href="#">BA (Hons) Interior Design (Full-time)</a></li>
-<li><a href="#">BA (Hons) Digital Media Design (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Digital Media Design (Full-time)</a></li>
-<li><a href="#">BA (Hons) Interior Design with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Product and Furniture Design (Full-time)</a></li>
-<li><a href="#">BA (Hons) Graphic Design with Typography (Full-time)</a></li>
-<li><a href="#">BA (Hons) Game Arts and Design (Full-time)</a></li>
-<li><a href="#">BA (Hons) Product and Furniture Design with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Graphic Design with Typography with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Illustration with Foundation (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Geography</h2></a></li>
-
-<li><a href="#">BA (Hons) Geography (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Geography (Full-time)</a></li>
-<li><a href="#">BA (Hons) Geography with International Relations (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Geography with Ocean Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Physical Geography and Geology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Environmental Management and Sustainability (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Geology with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Environmental Geoscience (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Environmental Science (Full-time)</a></li>
-<li><a href="#">MGeol (Hons) Geology (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Education</h2></a></li>
-
-<li><a href="#">BA (Hons) Education (Full-time)</a></li>
-<li><a href="#">BA (Hons) Education with Foundation (Full-time)</a></li>
-<li><a href="#">BEd (Hons) Primary (Special Educational Needs with QTS) (Full-time)</a></li>
-<li><a href="#">BA (Hons) Early Childhood Studies (Full-time)</a></li>
-<li><a href="#">BEd (Hons) Primary (FS/KS1 with QTS) (Full-time)</a></li>
-<li><a href="#">BEd (Hons) Primary (KS1/KS2 with QTS) (Full-time)</a></li>
-<li><a href="#">BA (Hons) Early Childhood Studies with Foundation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Paramedic Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Podiatry (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Engineering</h2></a></li>
-
-<li><a href="#">BEng (Hons) Civil Engineering (Full-time)</a></li>
-<li><a href="#">MEng (Hons) Civil Engineering (Full-time)</a></li>
-<li><a href="#">BEng (Hons) Mechanical Engineering (Full-time)</a></li>
-<li><a href="#">MEng (Hons) Mechanical Engineering (Full-time)</a></li>
-<li><a href="#">BEng (Hons) Integrated Engineering (Full-time)The BEng (Hons)</a></li>
-<li><a href="#">BSc (Hons) Architectural Engineering (Full-time)</a></li>
-<li><a href="#">BEng (Hons) Electrical and Electronic Engineering (Full-time)</a></li>
-<li><a href="#">MEng (Hons) Electrical and Electronic Engineering (Full-time)</a></li>
-<li><a href="#">MEng (Hons) Civil and Coastal Engineering (Full-time)</a></li>
-<li><a href="#">BEng (Hons) Civil and Coastal Engineering (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Hospitality</h2></a></li>
-
-<li><a href="#">BA (Hons) Hospitality, Tourism and Events Management (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Events Management with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Events Management (Full-time)</a></li>
-<li><a href="#">BSc (Hons) International Tourism Management with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) International Tourism Management (Full-time)</a></li>
-<li><a href="#">BSc (Hons) International Supply Chain and Shipping Management (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Humanitites</h2></a></li>
-
-<li><a href="#">BA (Hons) History with Foundation (Full-time)</a></li>
-
-<li class="nope"><a href="#">Law</a></li>
-
-<li><a href="#">LLB (Hons) Law (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Law with Business (Full-time)</a></li>
-<li><a href="#">LLB (Hons) Law and Criminology (Full-time)</a></li>
-<li><a href="#">LLB (Hons) Law with Foundation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Law with Criminology and Criminal Justice (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology with Foundation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology and Psychology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology and Sociology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Politics and International Relations (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Marine</h2></a></li>
-
-<li><a href="#">MEng (Hons) Marine Technology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology (Full-time)</a></li>
-<li><a href="#">BEng (Hons) Marine Technology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology and Oceanography (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Ocean Science and Marine Conservation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology and Coastal Ecology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Marine Biology with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Ocean Exploration and Surveying (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Oceanography and Coastal Processes (Full-time)</a></li>
-<li><a href="#">FdSc Navigation and Maritime Science (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Mathematical sciences</h2></a></li>
-
-<li><a href="#">BSc (Hons) Mathematics with Computer Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Mathematics (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Mathematics with Theoretical Physics (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Mathematics with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Ocean Sciences with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Biomedical Science with Integrated Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Environmental Science with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Chemistry with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Biological Sciences with Foundation Year (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Geology with Foundation Year (Full-time)</a></li>
-
-<li class="nope"><a href="#">Medicine, dentistry and biomedical sciences</a></li>
-
-<li><a href="#">BSc (Hons) Biomedical Science (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Nutrition, Exercise and Health (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Music</h2></a></li>
-
-<li><a href="#">BA (Hons) Music (Full-time)</a></li>
-<li><a href="#">BA (Hons) Musical Theatre (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Audio and Music Technology (Full-time)</a></li>
-<li><a href="#">BA (Hons) Musical Theatre with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Acting with Foundation (Full-time)</a></li>
-<li><a href="#">BA (Hons) Acting (Full-time)</a></li>
-<li><a href="#">LLB (Hons) Law and Criminology (Full-time)</a></li>
-<li><a href="#">LLB (Hons) Law (Full-time)</a></li>
-<li><a href="#">BA (Hons) Drama (Full-time)</a></li>
-<li><a href="#">BA (Hons) Drama with Foundation (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Nursing</h2></a></li>
-
-<li><a href="#">BSc (Hons) Nursing (Adult Health) (Part-time)</a></li>
-<li><a href="#">BSc (Hons) Nursing (Child Health) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Nursing (Adult Health) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Nursing (Mental Health) (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Nursing (Mental Health) (Part-time)</a></li>
-<li><a href="#">BSc (Hons) Nursing (Child Health) (Part-time)</a></li>
-<li><a href="#">BSc (Hons) Professional Development in Nursing (Part-time)</a></li>
-<li><a href="#">MNurs (Hons) Nursing (Adult Health and Child Health) (Full-time)</a></li>
-<li><a href="#">MNurs (Hons) Nursing (Child Health and Mental Health) (Full-time)</a></li>
-<li><a href="#">MNurs (Hons) Nursing (Adult Health and Mental Health) (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Psychology</h2></a></li>
-
-<li><a href="#">MPsych (Hons) Psychology with Clinical Psychology (Full-time)</a></li>
-<li><a href="#">MPsych (Hons) Psychology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychological Studies (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology with Sociology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology with Criminology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology and Psychology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology with Human Biology (Full-time)</a></li>
-<li><a href="#">MPsych (Hons) Psychology with Human Neuroscience (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology with Integrated Foundation Year (Full-time)</a></li>
-
-<li class="nope"><a href="#"><h2>Sociology</h2></a></li>
-
-<li><a href="#">BSc (Hons) Sociology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Sociology with Foundation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Psychology with Sociology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology and Sociology (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Politics and International Relations (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Politics (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Politics with Foundation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) International Relations (Full-time)</a></li>
-<li><a href="#">BSc (Hons) International Relations with Foundation (Full-time)</a></li>
-<li><a href="#">BSc (Hons) Criminology (Full-time)</a></li>
-</ul>
+  <h1>Undergraduate courses</h1>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for undergraduate courses.." title="Type in a name">
+  <ul id="myUL">
+    <li class="padtop1"><a href="#">
+      <h2>Health</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Dietetics (Full-time)</a></li>
+    <li><a href="#">MDiet (Hons) Dietetics (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Occupational Therapy (Full-time)</a></li>
+    <li><a href="#">MOccTh (Hons) Occupational Therapy (Full-time)</a></li>
+    <li><a href="#">MOptom (Hons) Optometry (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Paramedic Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Physiotherapy (Full-time)</a></li>
+    <li><a href="#">MPhysio (Hons) Physiotherapy (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Podiatry (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Social Work (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Architecture and built environment</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Architecture (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Architectural Engineering (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Game Arts and Design (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Interior Design (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Digital Media Design (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Digital Media Design (Full-time)</a></li>
+    <li><a href="#">MEng (Hons) Marine Technology (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Art</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Art History (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Acting (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Acting with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Photography with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Graphic Design with Typography (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Graphic Design with Typography with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Filmmaking (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Drama (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Drama with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Musical Theatre (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Biological sciences</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Biological Sciences (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Biological Sciences with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Conservation Biology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Animal Behaviour and Welfare (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Biosciences (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology and Oceanography (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology and Coastal Ecology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Zoology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology with Human Biology (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Business</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Business (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Business Management (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Maritime Business (Full-time)</a></li>
+    <li><a href="#">BA (Hons) International Business Management (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Law with Business (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Business Management with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Business Management with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Maritime Business with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Business Management (2 year fast track) (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Human Resource Management (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Chemistry</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Chemistry (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Chemistry with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Environmental Science with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Biological Sciences with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Geology with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Ocean Sciences with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Environmental Science (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Computing</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Computer Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Computer Science (Artificial Intelligence) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Computer Science (Games Development) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Computer Science (Software Engineering) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Computer Science (Cyber Security) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Mathematics with Computer Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Computer Science with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BEng (Hons) Integrated Engineering (Full-time)The BEng (Hons)</a></li>
+    <li><a href="#">BSc (Hons) Audio and Music Technology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Design</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Interior Design (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Digital Media Design (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Digital Media Design (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Interior Design with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Product and Furniture Design (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Graphic Design with Typography (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Game Arts and Design (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Product and Furniture Design with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Graphic Design with Typography with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Illustration with Foundation (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Geography</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Geography (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Geography (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Geography with International Relations (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Geography with Ocean Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Physical Geography and Geology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Environmental Management and Sustainability (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Geology with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Environmental Geoscience (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Environmental Science (Full-time)</a></li>
+    <li><a href="#">MGeol (Hons) Geology (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Education</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Education (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Education with Foundation (Full-time)</a></li>
+    <li><a href="#">BEd (Hons) Primary (Special Educational Needs with QTS) (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Early Childhood Studies (Full-time)</a></li>
+    <li><a href="#">BEd (Hons) Primary (FS/KS1 with QTS) (Full-time)</a></li>
+    <li><a href="#">BEd (Hons) Primary (KS1/KS2 with QTS) (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Early Childhood Studies with Foundation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Paramedic Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Podiatry (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Engineering</h2>
+      </a></li>
+    <li><a href="#">BEng (Hons) Civil Engineering (Full-time)</a></li>
+    <li><a href="#">MEng (Hons) Civil Engineering (Full-time)</a></li>
+    <li><a href="#">BEng (Hons) Mechanical Engineering (Full-time)</a></li>
+    <li><a href="#">MEng (Hons) Mechanical Engineering (Full-time)</a></li>
+    <li><a href="#">BEng (Hons) Integrated Engineering (Full-time)The BEng (Hons)</a></li>
+    <li><a href="#">BSc (Hons) Architectural Engineering (Full-time)</a></li>
+    <li><a href="#">BEng (Hons) Electrical and Electronic Engineering (Full-time)</a></li>
+    <li><a href="#">MEng (Hons) Electrical and Electronic Engineering (Full-time)</a></li>
+    <li><a href="#">MEng (Hons) Civil and Coastal Engineering (Full-time)</a></li>
+    <li><a href="#">BEng (Hons) Civil and Coastal Engineering (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Hospitality</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Hospitality, Tourism and Events Management (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Events Management with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Events Management (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) International Tourism Management with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) International Tourism Management (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) International Supply Chain and Shipping Management (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Humanitites</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) History with Foundation (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Law</h2>
+      </a></li>
+    <li><a href="#">LLB (Hons) Law (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Law with Business (Full-time)</a></li>
+    <li><a href="#">LLB (Hons) Law and Criminology (Full-time)</a></li>
+    <li><a href="#">LLB (Hons) Law with Foundation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Law with Criminology and Criminal Justice (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology with Foundation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology and Psychology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology and Sociology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Politics and International Relations (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Marine</h2>
+      </a></li>
+    <li><a href="#">MEng (Hons) Marine Technology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology (Full-time)</a></li>
+    <li><a href="#">BEng (Hons) Marine Technology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology and Oceanography (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Ocean Science and Marine Conservation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology and Coastal Ecology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Marine Biology with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Ocean Exploration and Surveying (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Oceanography and Coastal Processes (Full-time)</a></li>
+    <li><a href="#">FdSc Navigation and Maritime Science (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Mathematical sciences</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Mathematics with Computer Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Mathematics (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Mathematics with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Ocean Sciences with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Biomedical Science with Integrated Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Environmental Science with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Chemistry with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Biological Sciences with Foundation Year (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Geology with Foundation Year (Full-time)</a></li>
+    <li class="padtop1"><a href="#">Medicine, dentistry and biomedical sciences</a></li>
+    <li><a href="#">BSc (Hons) Biomedical Science (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Nutrition, Exercise and Health (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Music</h2>
+      </a></li>
+    <li><a href="#">BA (Hons) Music (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Musical Theatre (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Audio and Music Technology (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Musical Theatre with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Acting with Foundation (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Acting (Full-time)</a></li>
+    <li><a href="#">LLB (Hons) Law and Criminology (Full-time)</a></li>
+    <li><a href="#">LLB (Hons) Law (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Drama (Full-time)</a></li>
+    <li><a href="#">BA (Hons) Drama with Foundation (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Nursing</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Nursing (Adult Health) (Part-time)</a></li>
+    <li><a href="#">BSc (Hons) Nursing (Child Health) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Nursing (Adult Health) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Nursing (Mental Health) (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Nursing (Mental Health) (Part-time)</a></li>
+    <li><a href="#">BSc (Hons) Nursing (Child Health) (Part-time)</a></li>
+    <li><a href="#">BSc (Hons) Professional Development in Nursing (Part-time)</a></li>
+    <li><a href="#">MNurs (Hons) Nursing (Adult Health and Child Health) (Full-time)</a></li>
+    <li><a href="#">MNurs (Hons) Nursing (Child Health and Mental Health) (Full-time)</a></li>
+    <li><a href="#">MNurs (Hons) Nursing (Adult Health and Mental Health) (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Psychology</h2>
+      </a></li>
+    <li><a href="#">MPsych (Hons) Psychology with Clinical Psychology (Full-time)</a></li>
+    <li><a href="#">MPsych (Hons) Psychology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychological Studies (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology with Sociology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology with Criminology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology and Psychology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology with Human Biology (Full-time)</a></li>
+    <li><a href="#">MPsych (Hons) Psychology with Human Neuroscience (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology with Integrated Foundation Year (Full-time)</a></li>
+    <li class="padtop1"><a href="#">
+      <h2>Sociology</h2>
+      </a></li>
+    <li><a href="#">BSc (Hons) Sociology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Sociology with Foundation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Psychology with Sociology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology and Sociology (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Politics and International Relations (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Politics (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Politics with Foundation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) International Relations (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) International Relations with Foundation (Full-time)</a></li>
+    <li><a href="#">BSc (Hons) Criminology (Full-time)</a></li>
+  </ul>
 </section>
 <script>
 function myFunction() {
@@ -409,6 +401,5 @@ function myFunction() {
     }
 }
 </script>
-
 </body>
 </html>
