@@ -133,6 +133,9 @@ section {
     display: grid;
     place-content: center;/*place-items: center;*/
 }
+.aspectratio {
+    aspect-ratio: 16 / 9;
+}
 .pad1 {
     padding: 1rem;
 }
@@ -166,35 +169,18 @@ section {
 .hero__content > * {
     color: var(--white);
 }
-.hero__content h2, .hero__content p {
-    width: 100%;
+.hero__content h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: left;
+    width: 80%;
+}
+.hero__content p {
+    font-size: clamp(1rem, 2vw, 2rem);
+    width: 80%;
     text-align: left;
 }
 .hero__content a {
     color: var(--white);
-}
-.m0 {
-    margin: 0;
-}
-
-@media screen and (min-width: 40em) {
-.hero__content h2 {
-    font-size: 2.5rem;
-    width: 80%;
-}
-.hero__content p {
-    font-size: 1.25rem;
-    width: 80%;
-}
-}
-
-@media screen and (min-width: 60em) {
-.hero__content h2 {
-    font-size: 3rem;
-}
-.hero__content p {
-    font-size: 1.5rem;
-}
 }
 </style>
 </head>
@@ -204,13 +190,9 @@ section {
     <div class="hero">
       <div class="hero__content">
         <h2>Second carbon-neutral university in the UK verified to PAS 2060 standard</h2>
-        <p>We aim to have a sustainable campus and enable learning to research solutions to the world’s most pressing sustainability challenges</p>
-        <p><a href="#">Sustainability: on the path to net zero</a></p>
+        <p>We aim to have a sustainable campus and enable learning to research solutions to the world’s most pressing sustainability challenges</p><p><a href="#">Sustainability: on the path to net zero</a></p>
       </div>
-      <video width="100%" autoplay>
-        <source src="images/1280x720sustainability.mp4" type="video/mp4" class="m0">
-        Your browser does not support the video tag. </video>
-    </div>
+      <img src="images/1280x720sustainability.jpg" alt=""> </div>
   </section>
 </main>
 </body>
