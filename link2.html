@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    margin-bottom: 1.5rem;
+}
+a {
+    color: #00e;
+    word-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 30em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: #eee;
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+.borderbottomlink {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 1px;
+}
+.borderbottomlink2 {
+    text-decoration: none;
+    border-bottom: 0.1em solid;
+    padding-bottom: 1px;
+}
+.textdecorationskipink {
+    text-decoration-skip-ink: none;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h2>Default link behaviour</h2>
+    <p><span  class="largetext"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+      <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
+    <h2>text-decoration-skip-ink: none;</h2>
+    <p><span class="largetext"><a href="#" class="textdecorationskipink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+      <a href="#" class="textdecorationskipink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
+    <h2>border-bottom: 1px solid;</h2>
+    <p><span  class="largetext"><a href="#" class="borderbottomlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+      <a href="#" class="borderbottomlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
+    <h2>border-bottom: 0.1em solid;</h2>
+    <p><span class="largetext"><a href="#" class="borderbottomlink2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+      <a href="#" class="borderbottomlink2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
+  </section>
+</main>
+</body>
+</html>
