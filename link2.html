@@ -109,17 +109,31 @@ section {
 .textdecorationskipink {
     text-decoration-skip-ink: none;
 }
+.textunderlineoffset {
+    text-underline-offset: 0.3em;
+}
+.textunderlineposition {
+    text-underline-position: under;
+    text-underline-offset: 2px;
+}
 </style>
 </head>
 <body>
 <main>
   <section>
     <h2>Default link behaviour</h2>
-    <p><span  class="largetext"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+    <p><span class="largetext"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
       <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
-    <h2>text-decoration-skip-ink: none;</h2>
+    <h2>text-decoration-skip-ink: none; (original render style)</h2>
     <p><span class="largetext"><a href="#" class="textdecorationskipink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
       <a href="#" class="textdecorationskipink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
+    <h2>text-underline-position: under;<br>
+      text-underline-offset: 2px;</h2>
+    <p class="textunderlineposition"><span class="largetext"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+      <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
+    <h2>text-underline-offset: 0.3em;</h2>
+    <p class="textunderlineoffset"><span class="largetext"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
+      <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
     <h2>border-bottom: 1px solid;</h2>
     <p><span  class="largetext"><a href="#" class="borderbottomlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></span><br>
       <a href="#" class="borderbottomlink">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></p>
