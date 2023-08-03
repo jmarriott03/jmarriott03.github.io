@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<!--CODE BY JAMIE MARRIOTT-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7x-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    text-decoration: none;
+    line-height: 1em;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5em;
+    color: #111;
+    background: #EEE;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: bold;
+}
+a {
+    color: #00E;
+}
+p {
+    clear: both;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+section {
+    max-width: 80rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+.parent {
+    display: grid;
+    /*grid-template-columns: 1fr;
+    grid-auto-rows: auto;*/
+    max-width: 80em;
+}
+.child {
+    grid-area: 1 / 1 / 1 / 2;
+    margin: 0;
+}
+#tint {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 0;
+}
+.tint1 {
+    background: var(--black);
+    opacity: 0;
+}
+.tint2 {
+    background: var(--black);
+    opacity: 0.3;
+}
+.tint3 {
+    background: var(--black);
+    opacity: 0.6;
+}
+.child2 {
+    grid-area: 2 / 1 / 2 / 2;
+    margin: 0;
+    /*background: rgba(255,0,0,0.25);*/
+    display: flex;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    padding: 1rem;
+    background: yellow;
+    z-index: 3;
+}
+.child2 h2, .child2 p {
+    width: 100%;
+}
+.mystyle1 {
+    justify-self: left;
+}
+.mystyle2 {
+    justify-self: center;
+}
+.mystyle3 {
+    justify-self: right;
+}
+.mystyle4 {
+    width: 100%;
+}
+
+@media screen and (min-width: 60em) {
+.child {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 0;
+}
+.child2 {
+    grid-area: 1 / 1 / 2 / 2;
+    background: lime;
+    padding: 2rem;
+}
+.mystyle4 {
+    width: 50%;
+}
+.mystyle5 {
+    width: 75%;
+}
+.mystyle6 {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 60em) {
+.tint1, .tint2, .tint3 {
+    display: none;
+}
+}
+</style>
+</head>
+
+<body>
+<section>
+  <button onclick="myFunction1()">Text left</button>
+  <button onclick="myFunction2()">Text center</button>
+  <button onclick="myFunction3()">Text right</button>
+  <br>
+  <button onclick="myFunction4()">Tint 0%</button>
+  <button onclick="myFunction5()">Tint 30%</button>
+  <button onclick="myFunction6()">Tint 60%</button>
+  <br>
+  <button onclick="myFunction7()">Width 50%</button>
+  <button onclick="myFunction8()">Width 75%</button>
+  <button onclick="myFunction9()">Width 100%</button>
+</section>
+<div class="parent">
+  <div class="child"><img src="images/1280x720fineart11.jpg" width="1280" height="720" alt=""/></div>
+  <div id="tint" class="tint3"></div>
+  <div id="myDIV" class="child2 mystyle1 mystyle4">
+    <h2>Title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Ut enim ad minim veniam</a></p>
+  </div>
+</div>
+<script>
+function myFunction1() {
+   var element = document.getElementById("myDIV");
+	element.classList.add("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+}
+		
+		function myFunction2() {
+   var element = document.getElementById("myDIV");
+	element.classList.remove("mystyle1");
+	element.classList.add("mystyle2");
+	element.classList.remove("mystyle3");
+}
+	function myFunction3() {
+   var element = document.getElementById("myDIV");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.add("mystyle3");
+}
+	
+	
+	
+		function myFunction4() {
+
+			var element = document.getElementById("tint");
+	element.classList.add("tint1");
+	element.classList.remove("tint2");
+	element.classList.remove("tint3");
+}
+			function myFunction5() {
+
+			var element = document.getElementById("tint");
+	element.classList.remove("tint1");
+	element.classList.add("tint2");
+	element.classList.remove("tint3");
+}
+			function myFunction6() {
+
+			var element = document.getElementById("tint");
+	element.classList.remove("tint1");
+	element.classList.remove("tint2");
+	element.classList.add("tint3");
+}
+	
+	
+	function myFunction7() {
+   var element = document.getElementById("myDIV");
+	element.classList.add("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+}
+	
+	function myFunction8() {
+   var element = document.getElementById("myDIV");
+	element.classList.remove("mystyle4");
+	element.classList.add("mystyle5");
+	element.classList.remove("mystyle6");
+}
+	
+	function myFunction9() {
+   var element = document.getElementById("myDIV");
+	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.add("mystyle6");
+}
+	
+	
+	
+	
+	
+			function myFunction99() {
+   var element = document.getElementById("myDIV");
+   element.classList.toggle("mystyle2");
+			element.classList.remove("mystyle1");
+}
+</script>
+</body>
+</html>
