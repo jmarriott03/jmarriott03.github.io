@@ -67,7 +67,7 @@ img {
     width: 100%;
     margin: 0;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 1;
     object-fit: cover;
 }
 section {
@@ -111,7 +111,7 @@ section {
     justify-self: center;
     width: 100%;
     padding: 1rem;
-    background: yellow;
+    background: white;
     z-index: 3;
 }
 .child2 h2, .child2 p {
@@ -137,7 +137,7 @@ section {
 }
 .child2 {
     grid-area: 1 / 1 / 2 / 2;
-    background: lime;
+    background: none;
     padding: 2rem;
 }
 .mystyle4 {
@@ -150,10 +150,37 @@ section {
     width: 100%;
 }
 }
+.child2 p {
+    margin-top: 1.5em;
+}
+.whitetext > * {
+    color: var(--white);
+}
+.whitetext a {
+    color: var(--white);
+}
+.blacktext > * {
+    color: var(--black);
+}
+.blacktext a {
+    color: var(--black);
+}
 
 @media screen and (max-width: 60em) {
 .tint1, .tint2, .tint3 {
     display: none;
+}
+.whitetext > * {
+    color: var(--black);
+}
+.whitetext a {
+    color: var(--link);
+}
+.blacktext > * {
+    color: var(--black);
+}
+.blacktext a {
+    color: var(--link);
 }
 }
 </style>
@@ -172,11 +199,14 @@ section {
   <button onclick="myFunction7()">Width 50%</button>
   <button onclick="myFunction8()">Width 75%</button>
   <button onclick="myFunction9()">Width 100%</button>
+  <br>
+  <button onclick="myFunction10()">Black text</button>
+  <button onclick="myFunction11()">White text</button>
 </section>
 <div class="parent">
   <div class="child"><img src="images/1280x720fineart11.jpg" width="1280" height="720" alt=""/></div>
   <div id="tint" class="tint3"></div>
-  <div id="myDIV" class="child2 mystyle1 mystyle4">
+  <div id="myDIV" class="child2 mystyle1 mystyle4 whitetext">
     <h2>Title</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Ut enim ad minim veniam</a></p>
   </div>
@@ -246,6 +276,22 @@ function myFunction1() {
 	element.classList.remove("mystyle4");
 	element.classList.remove("mystyle5");
 	element.classList.add("mystyle6");
+}
+	
+	
+	
+	
+		function myFunction10() {
+   var element = document.getElementById("myDIV");
+	element.classList.remove("whitetext");
+	element.classList.add("blacktext");
+}
+	
+	
+		function myFunction11() {
+   var element = document.getElementById("myDIV");
+	element.classList.add("whitetext");
+	element.classList.remove("blacktext");
 }
 	
 	
