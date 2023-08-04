@@ -70,10 +70,10 @@ img {
     aspect-ratio: 3 / 1;
     object-fit: cover;
 }
-section {
+.toolbar {
     max-width: 80rem;
     overflow: hidden;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 .parent {
     display: grid;
@@ -129,9 +129,10 @@ section {
 .mystyle4 {
     width: 100%;
 }
-	.blackbck {
-		background: var(--black);
-	}
+.blackbck {
+    background: var(--black);
+}
+
 @media screen and (min-width: 60em) {
 .child {
     grid-area: 1 / 1 / 2 / 2;
@@ -167,17 +168,14 @@ section {
 .blacktext a {
     color: var(--black);
 }
-	.blackbck {
-		display: hide;
-	}
 
 @media screen and (max-width: 60em) {
 .tint1, .tint2, .tint3 {
     display: none;
 }
-	.blackbck {
-		dispaly: show;
-	}
+.blackbck {
+    dispaly: show;
+}
 .blacktext > * {
     color: var(--black);
 }
@@ -189,7 +187,7 @@ section {
 </head>
 
 <body>
-<section>
+<div class="toolbar">
   <button onclick="myFunction1()">Text left</button>
   <button onclick="myFunction2()">Text center</button>
   <button onclick="myFunction3()">Text right</button>
@@ -204,9 +202,9 @@ section {
   <br>
   <button onclick="myFunction10()">Black text</button>
   <button onclick="myFunction11()">White text</button>
-</section>
+</div>
 <div class="parent">
-  <div class="child"><img src="images/1280x720fineart11.jpg" width="1280" height="720" alt=""/></div>
+  <div class="child"><img src="images/1280x720fineart11.jpg" width="1280" height="720" alt=""></div>
   <div id="tint" class="tint3"></div>
   <div id="myDIV" class="child2 mystyle1 mystyle4 whitetext blackbck">
     <h2>Title</h2>
