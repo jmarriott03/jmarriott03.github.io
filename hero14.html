@@ -14,7 +14,7 @@
 --mgrey: #ccc;
 --dgrey: #666;
 --black: #111;
---link: #06c;
+--link: #00e;
 --visited: purple;
 }
 @font-face {
@@ -66,8 +66,7 @@ img {
     vertical-align: top;
     width: 100%;
     margin: 0;
-    height: auto;
-    aspect-ratio: 3 / 1;
+    height: 100%;
     object-fit: cover;
 }
 .toolbar {
@@ -126,11 +125,25 @@ img {
 .mystyle3 {
     justify-self: right;
 }
-.mystyle4 {
-    width: 100%;
-}
 .blackbck {
     background: var(--black);
+}
+.bigtext h2 {
+    font-size: 3rem;
+    line-height: 1.25;
+}
+.bigtext p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.aspect1 {
+    aspect-ratio: 4 / 1;
+}
+.aspect2 {
+    aspect-ratio: 3 / 1;
+}
+.aspect3 {
+    aspect-ratio: 16 / 9;
 }
 
 @media screen and (min-width: 60em) {
@@ -166,7 +179,7 @@ img {
     color: var(--black);
 }
 .blacktext a {
-    color: var(--black);
+    color: var(--link);
 }
 
 @media screen and (max-width: 60em) {
@@ -181,6 +194,12 @@ img {
 }
 .blacktext a {
     color: var(--link);
+}
+.bigtext h2 {
+    font-size: 1.5rem;
+}
+.bigtext p {
+    font-size: 1rem;
 }
 }
 </style>
@@ -202,109 +221,115 @@ img {
   <br>
   <button onclick="myFunction10()">Black text</button>
   <button onclick="myFunction11()">White text</button>
+  <br>
+  <button onclick="myFunction12()">Regular text</button>
+  <button onclick="myFunction13()">Big text</button>
+  <br>
+  <button onclick="myFunction14()">Aspect ratio 4 /1</button>
+  <button onclick="myFunction15()">Aspect ratio 3 /1</button>
+  <button onclick="myFunction16()">Aspect ratio 16 /9</button>
 </div>
 <div class="parent">
-  <div class="child"><img src="images/1280x720fineart11.jpg" width="1280" height="720" alt=""></div>
+  <div class="child"><img src="images/1280x720fineart11.jpg" width="1280" height="720" alt="" id="aspectratio" class="aspect2"></div>
   <div id="tint" class="tint3"></div>
-  <div id="myDIV" class="child2 mystyle1 mystyle4 whitetext blackbck">
+  <div id="heropanel" class="child2 mystyle1 mystyle4 whitetext blackbck bigtext">
     <h2>Title</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#">Ut enim ad minim veniam</a></p>
   </div>
 </div>
 <script>
 function myFunction1() {
-   var element = document.getElementById("myDIV");
+	var element = document.getElementById("heropanel");
 	element.classList.add("mystyle1");
 	element.classList.remove("mystyle2");
 	element.classList.remove("mystyle3");
 }
-		
-		function myFunction2() {
-   var element = document.getElementById("myDIV");
+function myFunction2() {
+	var element = document.getElementById("heropanel");
 	element.classList.remove("mystyle1");
 	element.classList.add("mystyle2");
 	element.classList.remove("mystyle3");
 }
-	function myFunction3() {
-   var element = document.getElementById("myDIV");
+function myFunction3() {
+	var element = document.getElementById("heropanel");
 	element.classList.remove("mystyle1");
 	element.classList.remove("mystyle2");
 	element.classList.add("mystyle3");
 }
-	
-	
-	
-		function myFunction4() {
-
-			var element = document.getElementById("tint");
+function myFunction4() {
+	var element = document.getElementById("tint");
 	element.classList.add("tint1");
 	element.classList.remove("tint2");
 	element.classList.remove("tint3");
 }
-			function myFunction5() {
-
-			var element = document.getElementById("tint");
+	function myFunction5() {
+	var element = document.getElementById("tint");
 	element.classList.remove("tint1");
 	element.classList.add("tint2");
 	element.classList.remove("tint3");
 }
-			function myFunction6() {
-
-			var element = document.getElementById("tint");
+function myFunction6() {
+	var element = document.getElementById("tint");
 	element.classList.remove("tint1");
 	element.classList.remove("tint2");
 	element.classList.add("tint3");
 }
-	
-	
 	function myFunction7() {
-   var element = document.getElementById("myDIV");
+	var element = document.getElementById("heropanel");
 	element.classList.add("mystyle4");
 	element.classList.remove("mystyle5");
 	element.classList.remove("mystyle6");
 }
-	
-	function myFunction8() {
-   var element = document.getElementById("myDIV");
+function myFunction8() {
+	var element = document.getElementById("heropanel");
 	element.classList.remove("mystyle4");
 	element.classList.add("mystyle5");
 	element.classList.remove("mystyle6");
 }
-	
-	function myFunction9() {
-   var element = document.getElementById("myDIV");
+function myFunction9() {
+	var element = document.getElementById("heropanel");
 	element.classList.remove("mystyle4");
 	element.classList.remove("mystyle5");
 	element.classList.add("mystyle6");
 }
-	
-	
-	
-	
-		function myFunction10() {
-   var element = document.getElementById("myDIV");
+function myFunction10() {
+	var element = document.getElementById("heropanel");
 	element.classList.remove("whitetext");
 	element.classList.add("blacktext");
-			element.classList.remove("blackbck");
+	element.classList.remove("blackbck");
 }
-	
-	
-		function myFunction11() {
-   var element = document.getElementById("myDIV");
+function myFunction11() {
+	var element = document.getElementById("heropanel");
 	element.classList.add("whitetext");
 	element.classList.remove("blacktext");
-			element.classList.add("blackbck");
-
+	element.classList.add("blackbck");
 }
-	
-	
-	
-	
-	
-			function myFunction99() {
-   var element = document.getElementById("myDIV");
-   element.classList.toggle("mystyle2");
-			element.classList.remove("mystyle1");
+function myFunction12() {
+	var element = document.getElementById("heropanel");
+	element.classList.remove("bigtext");
+}
+function myFunction13() {
+	var element = document.getElementById("heropanel");
+	element.classList.add("bigtext");
+}
+function myFunction14() {
+	var element = document.getElementById("aspectratio");
+	element.classList.add("aspect1");
+	element.classList.remove("aspect2");
+	element.classList.remove("aspect3");
+}
+
+function myFunction15() {
+	var element = document.getElementById("aspectratio");
+	element.classList.remove("aspect1");
+	element.classList.add("aspect2");
+	element.classList.remove("aspect3");
+}
+function myFunction16() {
+	var element = document.getElementById("aspectratio");
+	element.classList.remove("aspect1");
+	element.classList.remove("aspect2");
+	element.classList.add("aspect3");
 }
 </script>
 </body>
