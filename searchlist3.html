@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--link: #00e;
+--dlink: #009;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: #00e;
+    word-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>Undergraduate courses</h1>
+    <form action="/action_page.php" method="get">
+      <label for="browser">Choose your undergraduate course from the list:</label>
+      <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+        <option value="BSc (Hons) Dietetics (Full-time)">
+        <option value="MDiet (Hons) Dietetics (Full-time)">
+        <option value="BSc (Hons) Occupational Therapy (Full-time)">
+        <option value="MOccTh (Hons) Occupational Therapy (Full-time)">
+        <option value="MOptom (Hons) Optometry (Full-time)">
+        <option value="BSc (Hons) Paramedic Science (Full-time)">
+        <option value="BSc (Hons) Physiotherapy (Full-time)">
+        <option value="MPhysio (Hons) Physiotherapy (Full-time)">
+        <option value="BSc (Hons) Podiatry (Full-time)">
+        <option value="BA (Hons) Social Work (Full-time)">
+        <option value="Architecture and built environment">
+        <option value="BA (Hons) Architecture (Full-time)">
+        <option value="BSc (Hons) Architectural Engineering (Full-time)">
+        <option value="BA (Hons) Game Arts and Design (Full-time)">
+        <option value="BA (Hons) Interior Design (Full-time)">
+        <option value="BA (Hons) Digital Media Design (Full-time)">
+        <option value="BSc (Hons) Digital Media Design (Full-time)">
+        <option value="MEng (Hons) Marine Technology (Full-time)">
+        <option value="Art">
+        <option value="BA (Hons) Art History (Full-time)">
+        <option value="BA (Hons) Acting (Full-time)">
+        <option value="BA (Hons) Acting with Foundation (Full-time)">
+        <option value="BA (Hons) Photography with Foundation (Full-time)">
+        <option value="BA (Hons) Graphic Design with Typography (Full-time)">
+        <option value="BA (Hons) Graphic Design with Typography with Foundation (Full-time)">
+        <option value="BA (Hons) Filmmaking (Full-time)">
+        <option value="BA (Hons) Drama (Full-time)">
+        <option value="BA (Hons) Drama with Foundation (Full-time)">
+        <option value="BA (Hons) Musical Theatre (Full-time)">
+        <option value="Biological sciences">
+        <option value="BSc (Hons) Biological Sciences (Full-time)">
+        <option value="BSc (Hons) Biological Sciences with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Conservation Biology (Full-time)">
+        <option value="BSc (Hons) Animal Behaviour and Welfare (Full-time)">
+        <option value="BSc (Hons) Biosciences (Full-time)">
+        <option value="BSc (Hons) Marine Biology and Oceanography (Full-time)">
+        <option value="BSc (Hons) Marine Biology and Coastal Ecology (Full-time)">
+        <option value="BSc (Hons) Marine Biology (Full-time)">
+        <option value="BSc (Hons) Zoology (Full-time)">
+        <option value="BSc (Hons) Psychology with Human Biology (Full-time)">
+        <option value="Business">
+        <option value="BA (Hons) Business (Full-time)">
+        <option value="BSc (Hons) Business Management (Full-time)">
+        <option value="BSc (Hons) Maritime Business (Full-time)">
+        <option value="BA (Hons) International Business Management (Full-time)">
+        <option value="BSc (Hons) Law with Business (Full-time)">
+        <option value="BSc (Hons) Business Management with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Business Management with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Maritime Business with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Business Management (2 year fast track) (Full-time)">
+        <option value="BA (Hons) Human Resource Management (Full-time)">
+        <option value="Chemistry">
+        <option value="BSc (Hons) Chemistry (Full-time)">
+        <option value="BSc (Hons) Chemistry with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Environmental Science with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Biological Sciences with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Geology with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Marine Biology with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Ocean Sciences with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Environmental Science (Full-time)">
+        <option value="Computing">
+        <option value="BSc (Hons) Computer Science (Full-time)">
+        <option value="BSc (Hons) Computer Science (Artificial Intelligence) (Full-time)">
+        <option value="BSc (Hons) Computer Science (Games Development) (Full-time)">
+        <option value="BSc (Hons) Computer Science (Software Engineering) (Full-time)">
+        <option value="BSc (Hons) Computer Science (Cyber Security) (Full-time)">
+        <option value="BSc (Hons) Mathematics with Computer Science (Full-time)">
+        <option value="BSc (Hons) Computer Science with Foundation Year (Full-time)">
+        <option value="BEng (Hons) Integrated Engineering (Full-time)The BEng (Hons)">
+        <option value="BSc (Hons) Audio and Music Technology (Full-time)">
+        <option value="BSc (Hons) Mathematics with Theoretical Physics (Full-time)">
+        <option value="Design">
+        <option value="BA (Hons) Interior Design (Full-time)">
+        <option value="BA (Hons) Digital Media Design (Full-time)">
+        <option value="BSc (Hons) Digital Media Design (Full-time)">
+        <option value="BA (Hons) Interior Design with Foundation (Full-time)">
+        <option value="BA (Hons) Product and Furniture Design (Full-time)">
+        <option value="BA (Hons) Graphic Design with Typography (Full-time)">
+        <option value="BA (Hons) Game Arts and Design (Full-time)">
+        <option value="BA (Hons) Product and Furniture Design with Foundation (Full-time)">
+        <option value="BA (Hons) Graphic Design with Typography with Foundation (Full-time)">
+        <option value="BA (Hons) Illustration with Foundation (Full-time)">
+        <option value="Geography">
+        <option value="BA (Hons) Geography (Full-time)">
+        <option value="BSc (Hons) Geography (Full-time)">
+        <option value="BA (Hons) Geography with International Relations (Full-time)">
+        <option value="BSc (Hons) Geography with Ocean Science (Full-time)">
+        <option value="BSc (Hons) Physical Geography and Geology (Full-time)">
+        <option value="BSc (Hons) Environmental Management and Sustainability (Full-time)">
+        <option value="BSc (Hons) Geology with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Environmental Geoscience (Full-time)">
+        <option value="BSc (Hons) Environmental Science (Full-time)">
+        <option value="MGeol (Hons) Geology (Full-time)">
+        <option value="Education">
+        <option value="BA (Hons) Education (Full-time)">
+        <option value="BA (Hons) Education with Foundation (Full-time)">
+        <option value="BEd (Hons) Primary (Special Educational Needs with QTS) (Full-time)">
+        <option value="BA (Hons) Early Childhood Studies (Full-time)">
+        <option value="BEd (Hons) Primary (FS/KS1 with QTS) (Full-time)">
+        <option value="BEd (Hons) Primary (KS1/KS2 with QTS) (Full-time)">
+        <option value="BA (Hons) Early Childhood Studies with Foundation (Full-time)">
+        <option value="BSc (Hons) Paramedic Science (Full-time)">
+        <option value="BSc (Hons) Podiatry (Full-time)">
+        <option value="Engineering">
+        <option value="BEng (Hons) Civil Engineering (Full-time)">
+        <option value="MEng (Hons) Civil Engineering (Full-time)">
+        <option value="BEng (Hons) Mechanical Engineering (Full-time)">
+        <option value="MEng (Hons) Mechanical Engineering (Full-time)">
+        <option value="BEng (Hons) Integrated Engineering (Full-time)The BEng (Hons)">
+        <option value="BSc (Hons) Architectural Engineering (Full-time)">
+        <option value="BEng (Hons) Electrical and Electronic Engineering (Full-time)">
+        <option value="MEng (Hons) Electrical and Electronic Engineering (Full-time)">
+        <option value="MEng (Hons) Civil and Coastal Engineering (Full-time)">
+        <option value="BEng (Hons) Civil and Coastal Engineering (Full-time)">
+        <option value="Hospitality">
+        <option value="BA (Hons) Hospitality, Tourism and Events Management (Full-time)">
+        <option value="BSc (Hons) Events Management with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Events Management (Full-time)">
+        <option value="BSc (Hons) International Tourism Management with Foundation Year (Full-time)">
+        <option value="BSc (Hons) International Tourism Management (Full-time)">
+        <option value="BSc (Hons) International Supply Chain and Shipping Management (Full-time)">
+        <option value="Humanitites">
+        <option value="BA (Hons) History with Foundation (Full-time)">
+        <option value="Law">
+        <option value="LLB (Hons) Law (Full-time)">
+        <option value="BSc (Hons) Law with Business (Full-time)">
+        <option value="LLB (Hons) Law and Criminology (Full-time)">
+        <option value="LLB (Hons) Law with Foundation (Full-time)">
+        <option value="BSc (Hons) Law with Criminology and Criminal Justice (Full-time)">
+        <option value="BSc (Hons) Criminology (Full-time)">
+        <option value="BSc (Hons) Criminology with Foundation (Full-time)">
+        <option value="BSc (Hons) Criminology and Psychology (Full-time)">
+        <option value="BSc (Hons) Criminology and Sociology (Full-time)">
+        <option value="BSc (Hons) Politics and International Relations (Full-time)">
+        <option value="Marine">
+        <option value="MEng (Hons) Marine Technology (Full-time)">
+        <option value="BSc (Hons) Marine Biology (Full-time)">
+        <option value="BEng (Hons) Marine Technology (Full-time)">
+        <option value="BSc (Hons) Marine Biology and Oceanography (Full-time)">
+        <option value="BSc (Hons) Ocean Science and Marine Conservation (Full-time)">
+        <option value="BSc (Hons) Marine Biology and Coastal Ecology (Full-time)">
+        <option value="BSc (Hons) Marine Biology with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Ocean Exploration and Surveying (Full-time)">
+        <option value="BSc (Hons) Oceanography and Coastal Processes (Full-time)">
+        <option value="FdSc Navigation and Maritime Science (Full-time)">
+        <option value="Mathematical sciences">
+        <option value="BSc (Hons) Mathematics with Computer Science (Full-time)">
+        <option value="BSc (Hons) Mathematics (Full-time)">
+        <option value="BSc (Hons) Mathematics with Theoretical Physics (Full-time)">
+        <option value="BSc (Hons) Mathematics with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Ocean Sciences with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Biomedical Science with Integrated Foundation Year (Full-time)">
+        <option value="BSc (Hons) Environmental Science with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Chemistry with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Biological Sciences with Foundation Year (Full-time)">
+        <option value="BSc (Hons) Geology with Foundation Year (Full-time)">
+        <option value="Medicine, dentistry and biomedical sciences">
+        <option value="BSc (Hons) Biomedical Science (Full-time)">
+        <option value="BSc (Hons) Nutrition, Exercise and Health (Full-time)">
+        <option value="Music">
+        <option value="BA (Hons) Music (Full-time)">
+        <option value="BA (Hons) Musical Theatre (Full-time)">
+        <option value="BSc (Hons) Audio and Music Technology (Full-time)">
+        <option value="BA (Hons) Musical Theatre with Foundation (Full-time)">
+        <option value="BA (Hons) Acting with Foundation (Full-time)">
+        <option value="BA (Hons) Acting (Full-time)">
+        <option value="LLB (Hons) Law and Criminology (Full-time)">
+        <option value="LLB (Hons) Law (Full-time)">
+        <option value="BA (Hons) Drama (Full-time)">
+        <option value="BA (Hons) Drama with Foundation (Full-time)">
+        <option value="Nursing">
+        <option value="BSc (Hons) Nursing (Adult Health) (Part-time)">
+        <option value="BSc (Hons) Nursing (Child Health) (Full-time)">
+        <option value="BSc (Hons) Nursing (Adult Health) (Full-time)">
+        <option value="BSc (Hons) Nursing (Mental Health) (Full-time)">
+        <option value="BSc (Hons) Nursing (Mental Health) (Part-time)">
+        <option value="BSc (Hons) Nursing (Child Health) (Part-time)">
+        <option value="BSc (Hons) Professional Development in Nursing (Part-time)">
+        <option value="MNurs (Hons) Nursing (Adult Health and Child Health) (Full-time)">
+        <option value="MNurs (Hons) Nursing (Child Health and Mental Health) (Full-time)">
+        <option value="MNurs (Hons) Nursing (Adult Health and Mental Health) (Full-time)">
+        <option value="Psychology">
+        <option value="MPsych (Hons) Psychology with Clinical Psychology (Full-time)">
+        <option value="MPsych (Hons) Psychology (Full-time)">
+        <option value="BSc (Hons) Psychology (Full-time)">
+        <option value="BSc (Hons) Psychological Studies (Full-time)">
+        <option value="BSc (Hons) Psychology with Sociology (Full-time)">
+        <option value="BSc (Hons) Psychology with Criminology (Full-time)">
+        <option value="BSc (Hons) Criminology and Psychology (Full-time)">
+        <option value="BSc (Hons) Psychology with Human Biology (Full-time)">
+        <option value="MPsych (Hons) Psychology with Human Neuroscience (Full-time)">
+        <option value="BSc (Hons) Psychology with Integrated Foundation Year (Full-time)">
+        <option value="Sociology">
+        <option value="BSc (Hons) Sociology (Full-time)">
+        <option value="BSc (Hons) Sociology with Foundation (Full-time)">
+        <option value="BSc (Hons) Psychology with Sociology (Full-time)">
+        <option value="BSc (Hons) Criminology and Sociology (Full-time)">
+        <option value="BSc (Hons) Politics and International Relations (Full-time)">
+        <option value="BSc (Hons) Politics (Full-time)">
+        <option value="BSc (Hons) Politics with Foundation (Full-time)">
+        <option value="BSc (Hons) International Relations (Full-time)">
+        <option value="BSc (Hons) International Relations with Foundation (Full-time)">
+        <option value="BSc (Hons) Criminology (Full-time)"> 
+      </datalist>
+      <input type="submit">
+    </form>
+  </section>
+</main>
+</body>
+</html>
