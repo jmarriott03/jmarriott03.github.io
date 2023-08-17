@@ -8,8 +8,19 @@
 <style>
 :root {
 --white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
 --link: #00e;
 --dlink: #009;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon13.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    line-height: 1em;
+    font-weight: normal;
 }
 * {
     margin: 0 auto;
@@ -142,6 +153,12 @@ background-color: var(--link);
 .linkbck:hover, .linkbck:focus {
 background-color: var(--dlink);
 }
+.backnext {
+background-color: var(--lgrey);
+}
+.backnext:hover, .linkbck:focus {
+background-color: var(--mgrey);
+}
 </style>
 </head>
 <body>
@@ -178,5 +195,8 @@ background-color: var(--dlink);
     <input type="submit" value="Submit" class="btn whitetxt linkbck">
   </form>
 </section>
+	<section>
+	<h2>Back next buttons</h2>
+	<p><button class="btn backnext"><span class="iconfont" aria-hidden="true">P</span> Back</button><button class="btn backnext">Next <span class="iconfont" aria-hidden="true">N</span> </button></p></section>
 </body>
 </html>
