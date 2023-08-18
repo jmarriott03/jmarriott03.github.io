@@ -76,8 +76,10 @@ p {
     margin-bottom: 1.5em;
 }
 a {
-    color: #00e;
+    color: var(--link);
     word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
 }
 strong {
     font-weight: bold;
@@ -131,35 +133,47 @@ section {
     line-height: 2.5rem;
 }
 .btn {
-font-size: 1rem;
-line-height: 1.5;
-border-radius: 0.5rem;
-padding: 0.5rem 0.75rem;
-margin: 0 1rem 0 0;
-text-decoration: none;
-cursor: default;
-display: block;
-border: none;
-float: left;
--webkit-appearance: none;
-outline-offset: 2px;
-transition: 0.3s;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
 }
 .whitetxt {
-color: var(--white);
+    color: var(--white);
 }
 .linkbck {
-background-color: var(--link);
+    background-color: var(--link);
 }
 .linkbck:hover, .linkbck:focus {
-background-color: var(--dlink);
+    background-color: var(--dlink);
 }
 .backnext {
-color: var(--black);
-background-color: var(--lgrey);
+    color: var(--black);
+    background-color: var(--lgrey);
 }
 .backnext:hover, .linkbck:focus {
-background-color: var(--mgrey);
+    background-color: var(--mgrey);
+}
+.lgreybck {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em 1em 0 1em;
+    background-color: var(--lgrey);
+}
+.information {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    border-left: 0.5rem solid var(--lgrey);
 }
 </style>
 </head>
@@ -181,7 +195,7 @@ background-color: var(--mgrey);
   </section>
 </main>
 <section class="checkbox1">
-  <h2>Checkboxes</h2>
+  <h2>Checkboxes &amp; submit button</h2>
   <p>Please select your favorite numbers:</p>
   <form action="/action_page.php">
     <input type="checkbox" id="four" name="four" value="four">
@@ -197,8 +211,22 @@ background-color: var(--mgrey);
     <input type="submit" value="Submit" class="btn whitetxt linkbck">
   </form>
 </section>
-	<section>
-	<h2>Back next buttons</h2>
-	<p><button class="btn backnext"><span class="iconfont" aria-hidden="true">P</span> Back</button><button class="btn backnext">Next <span class="iconfont" aria-hidden="true">N</span> </button></p></section>
+<section>
+  <h2>Back next buttons</h2>
+  <p>
+    <button class="btn backnext"><span class="iconfont" aria-hidden="true">P</span> Back</button>
+    <button class="btn backnext">Next <span class="iconfont" aria-hidden="true">N</span> </button>
+  </p>
+</section>
+<section>
+  <h2>Left border tint </h2>
+  <div class="information">This tool does not include all of the numbers. It will be updated with more types of support. </div>
+</section>
+<section>
+  <h2>Background tint</h2>
+  <div class="lgreybck">
+    <p>Further information about <a href="#">something or other</a></p>
+  </div>
+</section>
 </body>
 </html>
