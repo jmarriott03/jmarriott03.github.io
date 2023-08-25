@@ -121,21 +121,30 @@ figcaption {
 .credit {
     color: var(--white);
     background-color: var(--black);
-    border-radius: 0.25em;
-    padding: 0 0.5em;
-    font-size: 0.75em;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
     margin: 1rem;
 }
-.smalltext {
-    font-size: 0.75em;
+.credit2 {
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+    margin: 0.5rem;
 }
-.youtube {
-    position: absolute;
-    width: 4rem;
-    left: 50%;
-    margin-left: -2rem;
-    top: 50%;
-    margin-top: -1.5rem;
+.credit3 {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+}
+.credit4 {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
 }
 .fullw {
     width: 100%;
@@ -150,7 +159,8 @@ figcaption {
 </head>
 <body>
 <section>
-  <h2>Credit</h2>
+  <h1>Credit</h1>
+  <h2>Type 1</h2>
   <figure> <a href="#">
     <div class="position-relative aspectratio"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington">
       <div class="position-absolute-bl credit">Photo by Dr Rafi Goodman</div>
@@ -158,6 +168,38 @@ figcaption {
     </a>
     <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
   </figure>
+  <div class="codegrey"><code>border-radius: 0.25rem;<br>
+    padding: 0 0.25rem;<br>
+    margin: 0.5rem;</code></div>
+  <h2>Type 2</h2>
+  <figure> <a href="#">
+    <div class="position-relative aspectratio"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington">
+      <div class="position-absolute-bl credit2">Photo by Dr Rafi Goodman</div>
+    </div>
+    </a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+  </figure>
+  <div class="codegrey"><code>border-radius: 0.25rem;<br>
+    padding: 0.25rem 0.5rem;<br>
+    margin: 1rem;</code></div>
+  <h2>Type 3</h2>
+  <figure> <a href="#">
+    <div class="position-relative aspectratio"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington">
+      <div class="position-absolute-bl credit3">Photo by Dr Rafi Goodman</div>
+    </div>
+    </a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+  </figure>
+  <div class="codegrey"><code>padding: 0 0.25rem;</code></div>
+  <h2>Type 4</h2>
+  <figure> <a href="#">
+    <div class="position-relative aspectratio"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington">
+      <div class="position-absolute-bl credit4">Photo by Dr Rafi Goodman</div>
+    </div>
+    </a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+  </figure>
+  <div class="codegrey"><code>padding: 0.25rem 0.5rem;</code></div>
 </section>
 </body>
 </html>
