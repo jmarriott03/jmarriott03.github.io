@@ -121,16 +121,40 @@ figcaption {
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
 }
-.aspectratio {
-    aspect-ratio: 16 / 9;
+.aspectratio3-1 {
+    aspect-ratio: 3 / 1;
+}
+.aspectratio1-1 {
+    aspect-ratio: 1 / 1;
+}
+.captionblack {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    margin: 0;
+}
+.captionblack a {
+    color: var(--white);
 }
 </style>
 </head>
 <body>
 <section>
-  <h2>Image</h2>
+  <h2>Image with caption</h2>
   <figure><a href="#">
-    <div class="position-relative aspectratio"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington" width="1280" height="720" loading="lazy">
+    <div class="position-relative"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington" width="1280" height="720" loading="lazy"> </div>
+    </a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+  </figure>
+  <h2>Aspect ratio 3 / 1 with black caption</h2>
+  <figure><a href="#">
+    <div class="position-relative aspectratio3-1"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington" width="1280" height="720" loading="lazy"> </div>
+    </a>
+    <figcaption class="captionblack">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+  </figure>
+  <h2>Aspect ratio 1 / 1 with credit</h2>
+  <figure><a href="#">
+    <div class="position-relative aspectratio1-1"><img src="images/1280x720student8.jpg" alt="Fine Art Stuedent Alysia Millington" width="1280" height="720" loading="lazy">
       <div class="position-absolute-bl credit">Photo by Dr Rafi Goodman</div>
     </div>
     </a>
