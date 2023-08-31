@@ -38,8 +38,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5em;
-    color: #111;
-    background: #EEE;
+    color: var(--black);
+    background: var(--lgrey);
     margin: 0;
 }
 h1 {
@@ -54,6 +54,8 @@ h2 {
 }
 a {
     color: #00E;
+    text-underline-position: under;
+    text-underline-offset: 1px;
 }
 p {
     clear: both;
@@ -199,7 +201,6 @@ img {
 }
 </style>
 </head>
-
 <body>
 <div class="toolbar">
   <button onclick="myFunction1()">Text left</button>
