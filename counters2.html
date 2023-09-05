@@ -11,8 +11,7 @@
     box-sizing: border-box;
 }
 * + * {
-    margin-top: 1em;
-    background-color: rgba(255,0,0,0.25);
+    margin-top: 1em;/*background-color: rgba(255,0,0,0.25);*/
 }
 html, body {
     text-size-adjust: 100%;
@@ -108,21 +107,20 @@ section {
     content: counters(section, ".") " ";
     font-weight: bold;
 }
+.counters li {
+    margin-top: 1.5rem;
+}
 ol > li::before {
     position: absolute;
     left: 1rem;
-    background: cyan;
 }
 .counters ol {
     margin: 0 0 0 1rem;
-    padding: 1rem 0;
+    padding: 0;
 }
-.counters:first-child {
-    background: yellow;
+.counters li p {
+    margin-top: 1.5rem;
 }
-/*ol > ol > li {
-  background: yellow;
-}*/
 </style>
 </head>
 <body>
@@ -133,18 +131,19 @@ ol > li::before {
     <ol>
       <li><strong>Programme structure</strong>
         <ol>
-          <li>Academic study will be organised into modules, specified in terms of credits. Module sizes may vary from 10 to 70 credits.</li>
-          <ol>
+          <li>Academic study will be organised into modules, specified in terms of credits. Module sizes may vary from 10 to 70 credits.
             <p>The credit weighting of undergraduate awards will be:</p>
-            <li><strong>Bachelor of Medicine, Bachelor of Surgery</strong><br>
-              600 credits total of which 360 should be at Level 6 or above </li>
-            <li><strong>Bachelor of Medical Science</strong><br>
-              360 credits with at least 120 credits at Level 6 or above, and a further 120 at Level 5 or above </li>
-            <li><strong>Diploma of Higher Education</strong><br>
-              240 credits of which 120 are at Level 5 or above (non-registerable)</li>
-            <li><strong>Certificate of Higher Education</strong><br>
-              120 credits at Level 4 (non-registerable)</li>
-          </ol>
+            <ol>
+              <li><strong>Bachelor of Medicine, Bachelor of Surgery</strong><br>
+                600 credits total of which 360 should be at Level 6 or above </li>
+              <li><strong>Bachelor of Medical Science</strong><br>
+                360 credits with at least 120 credits at Level 6 or above, and a further 120 at Level 5 or above </li>
+              <li><strong>Diploma of Higher Education</strong><br>
+                240 credits of which 120 are at Level 5 or above (non-registerable)</li>
+              <li><strong>Certificate of Higher Education</strong><br>
+                120 credits at Level 4 (non-registerable)</li>
+            </ol>
+          </li><li>test</li>
         </ol>
       </li>
       <li>head</li>
