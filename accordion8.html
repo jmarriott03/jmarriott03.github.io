@@ -125,13 +125,13 @@ details summary::-webkit-details-marker, details summary::marker {
 display: none;
 content: "";
 }
-details summary::before {
+details > summary::before {
     font-family: 'icon', sans-serif;
     font-weight: normal;
     content: 'O';
     float: right;
 }
-details[open] summary::before {
+details[open] > summary::before {
     content: "M";
 }
 </style>
