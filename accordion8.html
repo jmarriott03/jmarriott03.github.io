@@ -101,6 +101,10 @@ img {
     padding: 1em;
     margin-top: 0;
 }
+.codegrey {
+    background-color: #EEE;
+    padding: 1em;
+}
 .accordionbox {
     max-width: 40em;
     overflow: hidden;
@@ -166,6 +170,15 @@ details[open] > summary::before {
       <p>Details 4</p>
     </details>
   </details>
+  <div class="codegrey"><code><strong>details &gt; summary</strong>::before {<br>
+    font-family: 'icon', sans-serif;<br>
+    font-weight: normal;<br>
+    content: 'O';<br>
+    float: right;<br>
+    }<br>
+    <strong>details[open] &gt; summary</strong>::before {<br>
+    content: "M";<br>
+    }</code></div>
 </div>
 </body>
 </html>
