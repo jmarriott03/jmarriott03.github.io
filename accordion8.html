@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon13.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-size: 2.5em;
+    line-height: 1em;
+    font-weight: normal;
+    color: #666;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;/*background-color: rgba(255,0,0,0.25);*/
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: #00e;
+    word-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.textbox {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    margin-top: 0;
+}
+.accordionbox {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 0 1em 1em 1em;
+    margin-top: 0;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] summary::before {
+    content: "M";
+}
+</style>
+</head>
+<body>
+<div class="textbox">
+  <h1>Nested accordion using<br>
+    &lt;summary&gt; &lt;details&gt;</h1>
+</div>
+<div class="accordionbox">
+  <details>
+    <summary>
+      <h2>Summary 1</h2>
+    </summary>
+    <p>Details 1</p>
+  </details>
+  <details>
+    <summary>
+      <h2>Summary 2</h2>
+    </summary>
+    <p>Details 2</p>
+    <details>
+      <summary>
+        <h2>Nested summary</h2>
+      </summary>
+      <p>Details 3</p>
+    </details>
+  </details>
+</div>
+</body>
+</html>
