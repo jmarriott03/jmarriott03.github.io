@@ -89,6 +89,7 @@ section {
     overflow: hidden;
     padding: 1em;
     position: relative;
+    background: yellow;
 }
 .codegrey {
     background-color: #eee;
@@ -101,18 +102,26 @@ section {
 .counters ol {
     counter-reset: section;
     list-style-type: none;
-}
+background: orange;}
 .counters li::before {
     counter-increment: section;
     content: counters(section, ".") " ";
     font-weight: bold;
 }
+/*.counters ul li::before {
+    content: "";
+}*/
 .counters li {
     margin-top: 1.5rem;
+    background: lime;
+    left: 1rem;
+	border: 1px dotted black;
+	padding-left: 0.5rem;
 }
 ol > li::before {
     position: absolute;
     left: 1rem;
+    background: red;
 }
 .counters ol {
     margin: 0 0 0 1rem;
@@ -130,26 +139,80 @@ ol > li::before {
     <h2>lkdslkjfhasdl kj</h2>
     <ol>
       <li>
-		  <strong>Programme structure</strong></li>
-      <ol>
-        <li>Academic study will be organised into modules, specified in terms of credits. Module sizes may vary from 10 to 70 credits.
-        <li>The credit weighting of undergraduate awards will be:</li>
+        <h2>Programme structure</h2>
         <ol>
-          <li><strong>Bachelor of Medicine, Bachelor of Surgery</strong><br>
-            600 credits total of which 360 should be at Level 6 or above </li>
-          <li><strong>Bachelor of Medical Science</strong><br>
-            360 credits with at least 120 credits at Level 6 or above, and a further 120 at Level 5 or above </li>
-          <li><strong>Diploma of Higher Education</strong><br>
-            240 credits of which 120 are at Level 5 or above (non-registerable)</li>
-          <li><strong>Certificate of Higher Education</strong><br>
-            120 credits at Level 4 (non-registerable)</li>
-		  </ol></li>
-		  </li><li>Students may not be permitted to vary their programme of study at any Stage or Level due to the need to meet Professional Regulatory Statutory Body requirements.</li></ol>
-        
-      </ol>
+          <li>Academic study will be organised into modules, specified in terms of credits. Module sizes may vary from 10 to 70 credits.</li>
+          <li>The credit weighting of undergraduate awards will be:
+            <ol>
+              <li><strong>Bachelor of Medicine, Bachelor of Surgery</strong><br>
+                600 credits total of which 360 should be at Level 6 or above </li>
+              <li><strong>Bachelor of Medical Science</strong><br>
+                360 credits with at least 120 credits at Level 6 or above, and a further 120 at Level 5 or above </li>
+              <li><strong>Diploma of Higher Education</strong><br>
+                240 credits of which 120 are at Level 5 or above (non-registerable)</li>
+              <li><strong>Certificate of Higher Education</strong><br>
+                120 credits at Level 4 (non-registerable) </li>
+            </ol>
+          </li>
+          <li>Students may not be permitted to vary their programme of study at any Stage or Level due to the need to meet Professional Regulatory Statutory Body requirements.</li>
+        </ol>
       </li>
-      <li>head</li>
-      <li>pe</li>
+      <li>
+        <h2>Student registration</h2>
+        <ol>
+          <li>The minimum duration of the Bachelor of Medicine, Bachelor of Surgery degree is five years full time. Under normal circumstances, a student must satisfactorily complete all assessments and examinations within seven years to qualify for the award of Bachelor of Medicine, Bachelor of Surgery.</li>
+        </ol>
+      </li>
+      <li>
+        <h2>Assessment</h2>
+        <ol>
+          <li>Formal examinations (for example, progress tests) will also be scheduled at set points during the academic year which may not always coincide with the University examination periods.</li>
+        </ol>
+      </li>
+      <li>
+        <h2>Progression</h2>
+        <ol>
+          <li>When considering student progression between stages, the Award Assessment Board will consider student performance in each module. Consideration may also include the professional behaviour of the student, the student’s attendance record, reports from the Academic Review Group and Health and Conduct Review Group. Each student’s case will be considered on its own merits. The Award Assessment Board will take a holistic view of these data sets when making progression decisions.</li>
+          <li>If a student fails in any one module, they will be required to repeat the year in its entirety. However, if a student has been required by the Award Assessment Board to repeat stage 5 but had achieved at least a Satisfactory for their MED654 SSC5 module, they will not normally be required to repeat the MED654 module during their repeat attempt at stage 5.
+            <p>Repeating students would usually not undertake the elective period, and instead, attachments tailored to their specific learning needs would be arranged.</p>
+          </li>
+          <li>Where a student has submitted valid extenuating circumstances for the first or second attempts of a clinical competency, and therefore has not achieved the requisite number of clinical competencies to complete the Stage by the time of the Subject Assessment Panel, the Award Assessment Board will defer a progression decision and will offer a further
+            <p>Page 16 of 18 referral opportunity. Progression to the next Stage of the programme, including the Elective component in Year 5, is dependent on successful completion of the referred assessment by the date set by the Award Assessment Board.</p>
+          </li>
+          <li>If a student achieves fails in more than one module, they may be excluded from the programme.</li>
+          <li>A student will not be allowed to repeat the same year more than once.</li>
+          <li>A student will not be allowed to repeat more than two different years of the programme.</li>
+          <li>A student must submit themselves for all required assessments unless authorised absence or extenuating circumstances have been approved within the appropriate timelines.</li>
+          <li>A student will be expected to pass a stage of study in its entirety before being allowed to progress to the next stage.</li>
+          <li>In order to graduate with a BMBS award, a student must have obtained at least a satisfactory grade in all Stage 5 modules in the same academic year.</li>
+          <li>Module credits will be awarded at the Award Assessment Board, but progression through the programme does not depend only upon credit accumulation because of the requirement for currency of knowledge and skills in the programme.</li>
+        </ol>
+      </li>
+      <li>
+        <h2>Final award</h2>
+        <ol>
+          <li>A <strong>BMBS</strong> award may be awarded to a student who is registered for the award of a Bachelor of Medicine, Bachelor of Surgery and has successfully completed 600 credits with at least 360 credits at level 6 or above.</li>
+          <li>The award of a <strong>BMBS (with Distinction)</strong> will normally be based on a student’s assessment performance in Year 5 of the programme. Students who attain an Excellent in both Medical Knowledge 5 and Clinical and Professional Practice, with no remediation (except ILS and in vitro competencies) in the final year, will be eligible for the award of BMBS (with Distinction).
+            <p>In addition, all students will be ranked on their performance in Medical Knowledge 5 and Clinical and Professional Practice in Year 5. A BMBS (with Distinction) may be awarded, at the discretion of the Award Assessment Board, to students in the top quartile in both Medical Knowledge 5 and Clinical Professional Practice, with no remediation (except ILS and in vitro competencies) in the final year and have all professionalism judgements at least Satisfactory.</p>
+          </li>
+          <li>Students whose ranking falls in the top quartile, with no remediation (except ILS and in vitro competencies) in the final year, will be considered for the award of <strong>BMBS (with Merit)</strong>.
+            <p>BMBS (with Merit) will be confined to those students who are ranked in the top half of both Medical Knowledge 5 and Clinical and Professional Practice 5 and have all professionalism judgements at least Satisfactory. </p>
+          </li>
+          <li>Only students who have passed each year of study at the first attempt will normally be eligible for a BMBS with Distinction or Merit.</li>
+          <li> A <strong>BMedSci (classified)</strong> may be awarded as an exit award to a student who is registered for the award of a Bachelor of Medicine, Bachelor of Surgery and has successfully completed 360 credits, including 120 credits at Level 6 and met all of the module specific requirements for the award.</li>
+          <li>Following successful completion of Year 3, students’ cumulative standardised scores, rounded to one decimal place, will be used to determine their classification for the BMedSci exit award as shown in the table below.
+            <p>The methods of calculating annual z-scores for each student and of aggregating them across stages are set out in the Programme Handbook.</p>
+          </li>
+          <li> Certain module assessments are excluded from calculation of the award. The module assessments used in the calculation of the award are set out in the Programme Specification.</li>
+          <li>Resit data are excluded unless a student has taken these as their first attempt.</li>
+          <li>If a student has repeated a Stage, the data used to calculate assessment z-scores is taken from the first attempt.</li>
+          <li>In determining the levels of award, only the overall z-score may be initially used by the Award Assessment Board. If this score is predicted to be within 3% of a higher award (an unrounded z score in one of the ranges -1.8 ≤ z &lt; -1.5, -0.8 ≤ z &lt; -0.5 or 0.55 ≤ z &lt; 1.0), then z-score data for Stage 3 will be considered. If this meets the required standard, the student should be awarded the higher-level award. The Award Assessment Board may not use other criteria as a means of determining the level of award.</li>
+          <li>No module assessments at Stage 4 or Stage 5 will be used in the calculation of the <strong>Bachelor of Medical Science</strong> degree classification. Any additional module credits beyond the 360 credits achieved at the end of Stage 3 will be noted on the academic transcript.</li>
+          <li>A <strong>Diploma of Higher Education</strong> may be awarded, as an exit award, to a student who is registered for the award of Bachelor of Medicine, Bachelor of Surgery and has successfully completed 240 credits, of which at least 120 are at Level 5 or above.</li>
+          <li>A <strong>Certificate of Higher Education</strong> may be awarded, as an exit award, to a student who is registered for the award of Bachelor of Medicine, Bachelor of Surgery and has successfully completed 120 credits at Level 4 or above. </li>
+          <li>Students awarded the <strong>BMedSci</strong>, <strong>DipHe</strong> or <strong>CertHE</strong>, will not be qualified to register with the General Medical Council, but will receive a transcript of credits achieved. Students leaving the course during Stage 4 or 5 will also be awarded the <strong>BMedSci</strong> with a transcript showing additional credits achieved.</li>
+        </ol>
+      </li>
     </ol>
   </section>
 </main>
