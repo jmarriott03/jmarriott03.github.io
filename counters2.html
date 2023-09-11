@@ -89,7 +89,6 @@ section {
     overflow: hidden;
     padding: 1em;
     position: relative;
-    background: yellow;
 }
 .codegrey {
     background-color: #eee;
@@ -102,7 +101,7 @@ section {
 .counters ol {
     counter-reset: section;
     list-style-type: none;
-background: orange;}
+}
 .counters li::before {
     counter-increment: section;
     content: counters(section, ".") " ";
@@ -113,15 +112,12 @@ background: orange;}
 }*/
 .counters li {
     margin-top: 1.5rem;
-    background: lime;
     left: 1rem;
-	border: 1px dotted black;
-	padding-left: 0.5rem;
+    padding-left: 0.5rem;
 }
 ol > li::before {
     position: absolute;
     left: 1rem;
-    background: red;
 }
 .counters ol {
     margin: 0 0 0 1rem;
