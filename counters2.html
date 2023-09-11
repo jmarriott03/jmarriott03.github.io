@@ -107,9 +107,9 @@ section {
     content: counters(section, ".") " ";
     font-weight: bold;
 }
-/*.counters ul li::before {
+.counters ul li::before {
     content: "";
-}*/
+}
 .counters li {
     margin-top: 1.5rem;
     left: 1rem;
@@ -126,13 +126,39 @@ ol > li::before {
 .counters li p {
     margin-top: 1.5rem;
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+}
+td, th {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid #111;
+}
+th {
+    border-bottom: 2px solid #111;
+}
+/*tr:nth-child(2n+1) {
+	background-color: #ddd;
+}*/
 </style>
 </head>
 <body>
 <main>
   <section class="counters">
-    <h1>aljhkjfl salkhfj lsad</h1>
-    <h2>lkdslkjfhasdl kj</h2>
+    <p>Academic regulations</p>
+    <h1>BMBS Bachelor of Medicine,<br>
+      Bachelor of Surgery</h1>
+    <p>This course has unique academic regulations relating to:</p>
+    <ul>
+      <li>Programme structure</li>
+      <li>Student registration</li>
+      <li>Assessment</li>
+      <li>Progression</li>
+      <li>Final award</li>
+    </ul>
+    <p>These course-level regulations work alongside the University's <a href="#">full academic regulations</a>.</p>
     <ol>
       <li>
         <h2>Programme structure</h2>
@@ -198,6 +224,33 @@ ol > li::before {
           <li> A <strong>BMedSci (classified)</strong> may be awarded as an exit award to a student who is registered for the award of a Bachelor of Medicine, Bachelor of Surgery and has successfully completed 360 credits, including 120 credits at Level 6 and met all of the module specific requirements for the award.</li>
           <li>Following successful completion of Year 3, students’ cumulative standardised scores, rounded to one decimal place, will be used to determine their classification for the BMedSci exit award as shown in the table below.
             <p>The methods of calculating annual z-scores for each student and of aggregating them across stages are set out in the Programme Handbook.</p>
+            <table>
+              <tr>
+                <th scope="col">Cumulative standardised score</th>
+                <th scope="col">Degree class</th>
+                <th scope="col">Equiv % score</th>
+              </tr>
+              <tr>
+                <td>z ≥ +1.0</td>
+                <td>First Class Honours</td>
+                <td>70% or above</td>
+              </tr>
+              <tr>
+                <td>-0.5 ≤ z &lt; +1.0</td>
+                <td>Upper Second Class Honours</td>
+                <td>60–69%</td>
+              </tr>
+              <tr>
+                <td>‐1.5 ≤ z &lt; ‐0.5</td>
+                <td>Lower Second Class Honours</td>
+                <td>50–59%</td>
+              </tr>
+              <tr>
+                <td>z &lt; ‐1.5</td>
+                <td>Third Class Honours</td>
+                <td>49% or below</td>
+              </tr>
+            </table>
           </li>
           <li> Certain module assessments are excluded from calculation of the award. The module assessments used in the calculation of the award are set out in the Programme Specification.</li>
           <li>Resit data are excluded unless a student has taken these as their first attempt.</li>
