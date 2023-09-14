@@ -119,13 +119,10 @@ img {
 .item4 {
     grid-area: item4;
 }
-.item5 {
-    grid-area: item5;
-}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-areas: 'item1 item1 item2 item3' 'item1 item1 item4 item5';
+    grid-template-areas: 'item1 item1 item2 item4' 'item1 item1 item3 item4';
     grid-gap: 1em;
     padding: 1em;
     max-width: 80em;
@@ -152,7 +149,7 @@ Media screen
 @media screen and (max-width: 60em) {
 .grid-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas: 'item1 item1' 'item2 item3' 'item4 item5';
+    grid-template-areas: 'item1 item1' 'item2 item4' 'item3 item4';
 }
 }
 
@@ -175,11 +172,8 @@ Media screen
   <div class="item3"><a href="#"><img src="images/1280x720show3.jpg" alt=""></a>
     <p><strong>Text 3</strong> minim veniam, quis nostrud exercitation ullamco laboris</p>
   </div>
-  <div class="item4"><a href="#"><img src="images/1280x720show4.jpg" alt=""></a>
+  <div class="item4"><a href="#"><img src="images/720x720show6.jpg" alt=""></a>
     <p><strong>Text 4</strong> nisi ut aliquip ex ea commodo consequat</p>
-  </div>
-  <div class="item5"><a href="#"><img src="images/1280x720show5.jpg" alt=""></a>
-    <p><strong>Text 5</strong> duis aute irure dolor in reprehenderit in voluptate velit</p>
   </div>
 </div>
 </body>
