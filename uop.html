@@ -6,6 +6,15 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
 <style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -19,8 +28,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--white);
     margin: 0;
 }
 h1 {
@@ -58,8 +67,9 @@ p:not(:last-child) {
     margin-bottom: 1.5em;
 }
 a {
-    color: #00e;
-    word-wrap: break-word;
+    color: var(--link);
+    text-underline-position: under;
+    text-underline-offset: 1px;
 }
 strong {
     font-weight: bold;
@@ -89,7 +99,7 @@ section {
     padding: 1em;
 }
 .codegrey {
-    background-color: #eee;
+    background-color: var(--lgrey);
     padding: 1em;
 }
 .largetext {
