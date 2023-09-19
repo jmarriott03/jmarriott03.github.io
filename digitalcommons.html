@@ -137,94 +137,103 @@ section {
     width: 10rem;
     padding: 1rem;
 }
+.lighttext {
+    color: var(--dgrey);
+}
 </style>
 </head>
 <body>
 <main>
-<section>
-<div class="logoblock"><img src="images/uoplogomonowhite.svg" alt="University of Plymouth"></div><p>SVG logo on Pearl blue backround (#273e5b)</p>
-<p><a href="#">Standard browser link</a> (#00e)</p>
-<p><a href="#" class="uoplink">University of Plymouth link</a> (#0070a8)</p>
-<p><a href="#" class="pearllink">Pearl link</a> (#667f99)<br>
-  (with at least 3:1 colour contrast ratio against #333 pearl dark grey, #111 dark grey would have greater contrast still)</p>
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
-<p>p</p>
-<p><strong>strong</strong></p>
-<p><em>em</em></p>
-<p class="largetext">Large text</p>
-<p class="codegrey"><code><strong>:root</strong> {<br>
-  --white: #fff;<br>
-  --lgrey: #eee;<br>
-  --mgrey: #ccc;<br>
-  --dgrey: #666;<br>
-  --black: #111;<br>
-  --link: #00e;<br>
-  --pearllink: #667f99;<br>
-  --uoplink: #0070a8;<br>
-  --visited: purple;<br>
-  }<br>
-  <br>
-  <strong>html, body</strong> {<br>
-  text-size-adjust: 100%;<br>
-  font-size: 100%;<br>
-  font-family: sans-serif;<br>
-  font-weight: normal;<br>
-  line-height: 1.5;<br>
-  color: var(--black);<br>
-  background: var(--white);<br>
-  margin: 0;<br>
-  }<br>
-  <strong>h1</strong> {<br>
-  font-size: 2em;<br>
-  line-height: 1.2;<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>h2</strong> {<br>
-  font-size: 1.5em;<br>
-  line-height: 1.2;<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>h3</strong> {<br>
-  font-size: 1.17em;<br>
-  line-height: 1.2;<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>h4</strong> {<br>
-  font-size: 1em;<br>
-  line-height: 1.2;<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>h5</strong> {<br>
-  font-size: 0.83em;<br>
-  line-height: 1.2;<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>h6</strong> {<br>
-  font-size: 0.75em;<br>
-  line-height: 1.2;<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>p</strong> {<br>
-  clear: both;<br>
-  line-height: 1.5;<br>
-  margin-bottom: 1.5em;<br>
-  }<br>
-  <strong>strong</strong> {<br>
-  font-weight: bold;<br>
-  }<br>
-  <strong>em</strong> {<br>
-  font-style: italic;<br>
-  }<br>
-  <strong>.largetext</strong> {<br>
-  font-size: 1.5em;<br>
-  line-height: 1.2;<br>
-  }</code></p>
-</section>
+  <section>
+    <div class="logoblock"><img src="images/uoplogomonowhite.svg" alt="University of Plymouth"></div>
+    <p>SVG logo on Pearl blue backround (#273e5b)</p>
+    <p><a href="#">Standard browser link</a> (#00e)</p>
+    <p><a href="#" class="uoplink">University of Plymouth link</a> (#0070a8)</p>
+    <p><a href="#" class="pearllink">Pearl link</a> (#667f99)<br>
+      (with at least 3:1 colour contrast ratio against #333 pearl dark grey, #111 dark grey would have greater contrast still)</p>
+    <p><span class="lighttext">Suggested colour for light text</span> (#666)</p>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <p>p</p>
+    <p><strong>strong</strong></p>
+    <p><em>em</em></p>
+    <p class="largetext">Large text</p>
+    <p class="codegrey"><code><strong>:root</strong> {<br>
+      --white: #fff;<br>
+      --lgrey: #eee;<br>
+      --mgrey: #ccc;<br>
+      --dgrey: #666;<br>
+      --black: #111;<br>
+      --link: #00e;<br>
+      --pearllink: #667f99;<br>
+      --uoplink: #0070a8;<br>
+      --visited: purple;<br>
+      }<br>
+      <br>
+      <strong>html, body</strong> {<br>
+      text-size-adjust: 100%;<br>
+      font-size: 100%;<br>
+      font-family: sans-serif;<br>
+      font-weight: normal;<br>
+      line-height: 1.5;<br>
+      color: var(--black);<br>
+      background: var(--white);<br>
+      margin: 0;<br>
+      }<br>
+      <strong>h1</strong> {<br>
+      font-size: 2em;<br>
+      line-height: 1.2;<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>h2</strong> {<br>
+      font-size: 1.5em;<br>
+      line-height: 1.2;<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>h3</strong> {<br>
+      font-size: 1.17em;<br>
+      line-height: 1.2;<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>h4</strong> {<br>
+      font-size: 1em;<br>
+      line-height: 1.2;<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>h5</strong> {<br>
+      font-size: 0.83em;<br>
+      line-height: 1.2;<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>h6</strong> {<br>
+      font-size: 0.75em;<br>
+      line-height: 1.2;<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>p</strong> {<br>
+      clear: both;<br>
+      line-height: 1.5;<br>
+      margin-bottom: 1.5em;<br>
+      }<br>
+      <strong>strong</strong> {<br>
+      font-weight: bold;<br>
+      }<br>
+      <strong>em</strong> {<br>
+      font-style: italic;<br>
+      }<br>
+      <strong>.largetext</strong> {<br>
+      font-size: 1.5em;<br>
+      line-height: 1.2;<br>
+      }<br>
+      <br>
+      <strong>.lighttext</strong> {<br>
+      color: var(--dgrey);<br>
+      }</code></p>
+  </section>
 </main>
 </body>
 </html>
