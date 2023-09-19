@@ -146,11 +146,11 @@ section {
 <main>
   <section>
     <div class="logoblock"><img src="images/uoplogomonowhite.svg" alt="University of Plymouth"></div>
-    <p>SVG logo on Pearl blue backround (#273e5b)</p>
+    <p>SVG logo on PEARL blue backround (#273e5b)</p>
     <p><a href="#">Standard browser link</a> (#00e)</p>
     <p><a href="#" class="uoplink">University of Plymouth link</a> (#0070a8)</p>
-    <p><a href="#" class="pearllink">Pearl link slight change to meet minimum contrast</a> (#667f99)<br>
-      (with at least 3:1 colour contrast ratio against #333 pearl dark grey, #111 dark grey would have greater contrast still)</p>
+    <p><a href="#" class="pearllink">PEARL link slight change to meet minimum contrast</a> (#667f99)<br>
+      (with at least 3:1 colour contrast ratio against #333 PEARL dark grey, #111 dark grey would have greater contrast still)</p>
     <p><span class="lighttext">Suggested colour for light text</span> (#666)</p>
     <h1>h1</h1>
     <h2>h2</h2>
@@ -173,7 +173,6 @@ section {
       --uoplink: #0070a8;<br>
       --visited: purple;<br>
       }<br>
-      <br>
       <strong>html, body</strong> {<br>
       text-size-adjust: 100%;<br>
       font-size: 100%;<br>
@@ -219,6 +218,12 @@ section {
       line-height: 1.5;<br>
       margin-bottom: 1.5em;<br>
       }<br>
+      <strong>a</strong> {<br>
+      color: var(--link);<br>
+      word-wrap: break-word;<br>
+      text-underline-position: under;<br>
+      text-underline-offset: 1px;<br>
+      }<br>
       <strong>strong</strong> {<br>
       font-weight: bold;<br>
       }<br>
@@ -229,7 +234,6 @@ section {
       font-size: 1.5em;<br>
       line-height: 1.2;<br>
       }<br>
-      <br>
       <strong>.lighttext</strong> {<br>
       color: var(--dgrey);<br>
       }</code></p>
