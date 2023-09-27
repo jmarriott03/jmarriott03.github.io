@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon14.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+	height: 100%;
+    margin: 0;
+	object-fit: cover;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    background-color: var(--lgrey);
+    margin: 0;
+    max-width: 39em;
+}
+.grid-item > * {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    padding: 1rem 1rem 0 1rem;
+}
+figcaption {
+    margin: 0;
+    padding: 1rem;
+}
+.aspect4-1 {
+    aspect-ratio: 4 / 1;
+}
+.aspect3-1 {
+    aspect-ratio: 3 / 1;
+}
+.aspect16-9 {
+    aspect-ratio: 16 / 9;
+}
+.aspect1-1 {
+    aspect-ratio: 1 / 1;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h2>Different ratios</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show1.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect4-1"></a>
+        <figcaption><strong>Text 1</strong> minim veniam, quis nostrud exercitation ullamco laboris
+          <p>Sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim</a></p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show2.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><strong>Text 2</strong> sed do eiusmod tempor incididunt ut labore et dolore magna</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show3.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><strong>Text 3</strong> lorem ipsum dolor sit amet, consectetur adipisicing elit esse cillum dolore eu fugiat nulla pariatur xcepteur sint occaecat <a href="#">cupidatat non proident</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/720x720show6.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><strong>Text 4</strong> nisi ut aliquip ex ea commodo consequat</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show5.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><strong>Text 5</strong> irure dolor in reprehenderit in voluptate velit</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show4.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect3-1"></a>
+        <figcaption><strong>Text 6</strong> sed do eiusmod tempor incididunt</figcaption>
+      </figure>
+    </div>
+  </div>
+  <section>
+    <h2>Aspect ratio 16/9</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show1.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect16-9"></a>
+        <figcaption><strong>Text 1</strong> minim veniam, quis nostrud exercitation ullamco laboris
+          <p>Sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim</a></p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show2.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect16-9"></a>
+        <figcaption><strong>Text 2</strong> sed do eiusmod tempor incididunt ut labore et dolore magna</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show3.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect16-9"></a>
+        <figcaption><strong>Text 3</strong> lorem ipsum dolor sit amet, consectetur adipisicing elit esse cillum dolore eu fugiat nulla pariatur xcepteur sint occaecat <a href="#">cupidatat non proident</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/720x720show6.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect16-9"></a>
+        <figcaption><strong>Text 4</strong> nisi ut aliquip ex ea commodo consequat</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show5.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect16-9"></a>
+        <figcaption><strong>Text 5</strong> irure dolor in reprehenderit in voluptate velit</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show4.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect16-9"></a>
+        <figcaption><strong>Text 6</strong> sed do eiusmod tempor incididunt</figcaption>
+      </figure>
+    </div>
+  </div>
+  <section>
+    <h2>Aspect ratio 1/1</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show1.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect1-1"></a>
+        <figcaption><strong>Text 1</strong> minim veniam, quis nostrud exercitation ullamco laboris
+          <p>Sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim</a></p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show2.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect1-1"></a>
+        <figcaption><strong>Text 2</strong> sed do eiusmod tempor incididunt ut labore et dolore magna</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show3.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect1-1"></a>
+        <figcaption><strong>Text 3</strong> lorem ipsum dolor sit amet, consectetur adipisicing elit esse cillum dolore eu fugiat nulla pariatur xcepteur sint occaecat <a href="#">cupidatat non proident</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/720x720show6.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect1-1"></a>
+        <figcaption><strong>Text 4</strong> nisi ut aliquip ex ea commodo consequat</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show5.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect1-1"></a>
+        <figcaption><strong>Text 5</strong> irure dolor in reprehenderit in voluptate velit</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720show4.jpg" alt="alternate text" width="1280" height="720" loading="lazy" class="aspect1-1"></a>
+        <figcaption><strong>Text 6</strong> sed do eiusmod tempor incididunt</figcaption>
+      </figure>
+    </div>
+  </div>
+</main>
+</body>
+</html>
