@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon14.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: #00e;
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 0 1em;
+}
+.staffquote {
+    padding: 0 0 0 7em;
+    position: relative;
+    min-height: 7em;
+}
+.staffquote img {
+    left: 0;
+    position: absolute;
+    width: 6em;
+    border-radius: 50%;
+}
+.nodec {
+	text-decoration: none;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	margin: 0 1rem 0 -1rem;
+	/*border: 1px dotted red;*/
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	.grid-container {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+	grid-column-gap: 1em;
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 80em;
+	grid-gap: 1em;
+}
+.grid-item {
+	background-color: #EEE;
+	margin: 0;
+	max-width: 39em;
+}
+.grid-item img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	vertical-align: top;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+.grid-item > * {
+	width: 100%;
+}
+figcaption {
+	margin: 0;
+	padding: 1rem;
+}	
+	
+	
+	
+	
+
+/*
+Media screen
+*/
+
+@media (max-width: 40em) {
+.staffquote {
+    padding: 1em 0 0 0;
+    margin: 0;
+    min-height: 5em;
+}
+.staffquote img {
+    position: inherit;
+}
+	.social a {text-decoration: none;
+	margin-right: 1em}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="staffquote">
+      <p><img src="images/johndoe2.gif" alt=""></p>
+      <h2 class="nomargin">Dr Rafi Goodman <a href="#">Pure profile</a></h2>
+      <p>Prof: NMA Chair in Public Understanding of Marine Science &amp; Human Health</p>
+      <p>Lecturer in Marine Molecular Biology</p>
+      <p>Associate Professor in Ecology</p>
+      <p><a href="#">School of Biological and Marine Sciences (Faculty of Science and Engineering)</a></p>
+      <p>Dr Rafi Goodman is Lecturer in Marine Molecular Biology and Director of the Molecular Institute at the University of Plymouth.</p>
+      <p>Rafi is a world-leading marine scientist and is at the forefront of pioneering research into the causes and effects of molecular biology. He founded and heads the University’s International <a href="#">Molecular Biology Research Unit</a>, which has charted the global distribution of molecules from Arctic sea ice to the deep seas.</p>
+      <p>In 2020, the University was awarded the Queen's Anniversary Prize for the pioneering research of Rafi and his colleagues on molecular biology and its impact on the environment and changing behaviour.</p>
+      <p><span class="iconfont" aria-hidden="true">&#40;</span> A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
+        <span class="iconfont" aria-hidden="true">0</span> +44 1752 584993<br>
+        <span class="iconfont" aria-hidden="true">/</span> <a href="#">rafi.goodman@plymouth.ac.uk</a></p>
+		<p><span class="iconfont marginr"><a href="#" class="nodec">f</a></span><span class="iconfont marginr"><a href="#" class="nodec">t</a></span><span class="iconfont marginr"><a href="#" class="nodec">i</a></span><span class="iconfont"><a href="#" class="nodec">l</a></span></p>
+    </div>
+  </section>
+	
+	
+	
+	
+	<div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/720x720studentoncampus.jpg" alt="images/720x720studentoncampus.jpg" width="320"></a>
+        <figcaption><a href="#">Environmental Cultures</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720studentoncampus.jpg" alt="#" width="320"></a>
+        <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720studentoncampus2.jpg" alt="#" width="320"></a>
+        <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/720x1280studentoncampus.jpg" alt="#" width="320"></a>
+        <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+      </figure>
+    </div>
+  </div>
+	
+	
+	
+	
+	
+</main>
+</body>
+</html>
