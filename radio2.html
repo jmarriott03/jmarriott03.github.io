@@ -16,7 +16,7 @@
 }
 @font-face {
     font-family: icon;
-    src: url('fonts/icon13.woff');
+    src: url('fonts/icon14.woff');
 }
 .iconfont {
     font-family: 'icon', sans-serif;
@@ -115,7 +115,6 @@ section {
     font-size: 1.5em;
     line-height: 1.2;
 }
-
 .btn {
     font-size: 1rem;
     line-height: 1.5;
@@ -159,153 +158,80 @@ section {
     padding: 1em;
     border-left: 0.5rem solid var(--lgrey);
 }
-	
-	
-	
-	
 /* The container */
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
 /* Hide the browser's default radio button */
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
-
 /* Create a custom radio button */
 .checkmark {
-  position: absolute;
-  top: -0.75em;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+    position: absolute;
+    top: -1.125rem;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #eee;
+    border-radius: 50%;
 }
-
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+    background-color: #ccc;
 }
-
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+    background-color: #111;
 }
-
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
-
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
-  display: block;
+    display: block;
 }
-
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #fff;
 }
-	
-	
-	
-
-	
-/* The container */
-.container2 {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-.container2 input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-}
-
 /* On mouse-over, add a grey background color */
 .container2:hover input ~ .checkmark2 {
-  background-color: #ccc;
+    background-color: #ccc;
 }
-
 /* When the checkbox is checked, add a blue background */
 .container2 input:checked ~ .checkmark2 {
-  background-color: #2196F3;
+    background-color: #2196F3;
 }
-
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark2:after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
-
 /* Show the checkmark when checked */
 .container2 input:checked ~ .checkmark2:after {
-  display: block;
+    display: block;
 }
-
-/* Style the checkmark/indicator */
-.container2 .checkmark2:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}	
-	
-	
-	
-	
-	
-	
-	
-
 </style>
 </head>
 <body>
@@ -313,63 +239,19 @@ section {
   <section>
     <h2>Radio buttons</h2>
     <p>Please select your favorite number:</p>
-<label class="container">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
+    <label class="container">One
+      <input type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span> </label>
+    <label class="container">Two
+      <input type="radio" name="radio">
+      <span class="checkmark"></span> </label>
+    <label class="container">Three
+      <input type="radio" name="radio">
+      <span class="checkmark"></span> </label>
+    <label class="container">Four
+      <input type="radio" name="radio">
+      <span class="checkmark"></span> </label>
   </section>
 </main>
-<section class="checkbox1">
-  <h2>Checkboxes &amp; submit button</h2>
-  <p>Please select your favorite numbers:</p>
-<label class="container2">One
-  <input type="checkbox2" checked="checked">
-  <span class="checkmark2"></span>
-</label>
-
-<label class="container2">Two
-  <input type="checkbox2">
-  <span class="checkmark2"></span>
-</label>
-
-<label class="container2">Three
-  <input type="checkbox2">
-  <span class="checkmark2"></span>
-</label>
-
-<label class="container2">Four
-  <input type="checkbox2">
-  <span class="checkmark2"></span>
-</label>
-</section>
-<section>
-  <h2>Back next buttons</h2>
-  <p>
-    <button class="btn backnext"><span class="iconfont" aria-hidden="true">P</span> Back</button>
-    <button class="btn backnext">Next <span class="iconfont" aria-hidden="true">N</span> </button>
-  </p>
-</section>
-<section>
-  <h2>Left border tint </h2>
-  <div class="information">This tool does not include all of the numbers. It will be updated with more types of numbers. </div>
-</section>
-<section>
-  <h2>Background tint</h2>
-  <div class="lgreybck">
-    <p>Further information about <a href="#">something or other</a></p>
-  </div>
-</section>
 </body>
 </html>
