@@ -36,8 +36,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--white);
     margin: 0;
 }
 h1 {
@@ -108,7 +108,7 @@ section {
     padding: 1em;
 }
 .codegrey {
-    background-color: #eee;
+    background-color: var(--lgrey);
     padding: 1em;
 }
 .largetext {
@@ -181,16 +181,16 @@ section {
     left: 0;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #eee;
+    background-color: var(--lgrey);
     border-radius: 50%;
 }
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: var(--mgrey);
 }
 /* When the radio button is checked, add a black background */
 .container input:checked ~ .checkmark {
-    background-color: #111;
+    background-color: var(--black);
 }
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
@@ -209,25 +209,7 @@ section {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background: #fff;
-}
-/* On mouse-over, add a grey background color */
-.container2:hover input ~ .checkmark2 {
-    background-color: #ccc;
-}
-/* When the checkbox is checked, add a blue background */
-.container2 input:checked ~ .checkmark2 {
-    background-color: #2196F3;
-}
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark2:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-/* Show the checkmark when checked */
-.container2 input:checked ~ .checkmark2:after {
-    display: block;
+    background: var(--white);
 }
 </style>
 </head>

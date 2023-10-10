@@ -36,8 +36,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    color: #111;
-    background: #fff;
+    color: var(--black);
+    background: var(--white);
     margin: 0;
 }
 h1 {
@@ -108,7 +108,7 @@ section {
     padding: 1em;
 }
 .codegrey {
-    background-color: #eee;
+    background-color: var(--lgrey);
     padding: 1em;
 }
 .largetext {
@@ -183,16 +183,16 @@ section {
     left: 0.25rem;
     height: 1.75rem;
     width: 1.75rem;
-    background-color: #eee;
+    background-color: var(--lgrey);
     margin-top: 0.25rem;
 }
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: var(--mgrey);
 }
 /* When the checkbox is checked, add a black background */
 .container input:checked ~ .checkmark {
-    background-color: #111;
+    background-color: var(--black);
 }
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -210,7 +210,7 @@ section {
     top: 0.1rem;
     width: 0.5rem;
     height: 1rem;
-    border: solid white;
+    border: solid var(--white);
     border-width: 0 0.25rem 0.25rem 0;
     transform: rotate(45deg);
 }
