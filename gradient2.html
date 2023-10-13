@@ -107,13 +107,6 @@ section {
     min-height: 0;
     object-fit: cover;
 }
-.mystyle1:after {
-    content: "";
-    /*background-color: var(--black);*/
-    background-image: linear-gradient(to right, #900, #069);
-    opacity: 0.6;
-    grid-area: 1/1;
-}
 .hero__content {
     z-index: 1;
     display: flex;
@@ -137,31 +130,70 @@ section {
 .toolbar {
     max-width: 80rem;
     overflow: hidden;
-    margin: 0 1rem;
+    margin: 1rem;
 }
 .mystyle1:after {
     content: "";
     background-image: linear-gradient(to right, #000, #000);
-    opacity: 0.6;
     grid-area: 1/1;
 }
 .mystyle2:after {
     content: "";
     background-image: linear-gradient(to right, #900, #069);
-    opacity: 0.6;
     grid-area: 1/1;
 }
 .mystyle3:after {
     content: "";
-    background-image: linear-gradient(to right, #f06, #000);
-    opacity: 0.6;
+    background-image: linear-gradient(to right, #000, #f06);
     grid-area: 1/1;
 }
 .mystyle4:after {
     content: "";
-    background-image: none;
-    opacity: 0.6;
+    background-image: radial-gradient(circle, #c6f, #003);
     grid-area: 1/1;
+}
+.mystyle5:after {
+    content: "";
+    background-image: linear-gradient(#06c, #000);
+    grid-area: 1/1;
+}
+.mystyle6:after {
+    content: "";
+    background-image: linear-gradient(#f00, #fc3);
+    grid-area: 1/1;
+}
+.mystyle7:after {
+    content: "";
+    background-image: linear-gradient(to right, #030, #9f9);
+    grid-area: 1/1;
+}
+.mystyle8:after {
+    content: "";
+    background-image: linear-gradient(to right, #300, #fc6);
+    grid-area: 1/1;
+}
+.mystyle9:after {
+    content: "";
+    background-image: linear-gradient(#fff, #000);
+    grid-area: 1/1;
+}
+.opacity1:after {
+    opacity: 0.6;
+}
+.opacity2:after {
+    opacity: 0.3;
+}
+.opacity3:after {
+    opacity: 0.15;
+}
+.mixblendmode1:after {
+    mix-blend-mode: normal;
+}
+.mixblendmode2:after {
+    mix-blend-mode: multiply;
+}
+.mixblendmode3:after {
+    mix-blend-mode: hue;
 }
 
 @media screen and (min-width: 60em) {
@@ -188,20 +220,34 @@ section {
 </head>
 <body>
 <main>
-  <div class="toolbar">
-    <button onclick="myFunction1()">Text left</button>
-    <button onclick="myFunction2()">Text left</button>
-    <button onclick="myFunction3()">Text left</button>
-    <button onclick="myFunction4()">Text left</button>
-  </div>
   <section>
-    <div class="hero mystyle1" id="gradientfillafter">
+    <div class="hero mystyle2 opacity1 mixblendmode1" id="gradientfillafter">
       <div class="hero__content">
         <h2>Online enrolment</h2>
         <p>Essential action for new and returning students before a <a href="#" class="nowrap">new year of study</a></p>
       </div>
       <img src="images/1280x720student13.jpg" alt=""></div>
   </section>
+  <div class="toolbar">
+    <p><strong>Primary</strong> (Selecting resets Secondary to Opacity 60%, Mix normal)</p>
+    <button onclick="myFunction1()">Black</button>
+    <button onclick="myFunction2()">Fill 2</button>
+    <button onclick="myFunction3()">Fill 3</button>
+    <button onclick="myFunction4()">Fill 4</button>
+    <button onclick="myFunction5()">Fill 5</button>
+    <button onclick="myFunction6()">Fill 6</button>
+    <button onclick="myFunction7()">Fill 7</button>
+    <button onclick="myFunction8()">Fill 8</button>
+    <button onclick="myFunction9()">Fill 9</button>
+    <p><strong>Secondary</strong></p>
+    <button onclick="myFunction11()">Opacity 60%</button>
+    <button onclick="myFunction12()">Opacity 30%</button>
+    <button onclick="myFunction13()">Opacity 15%</button>
+    <br>
+    <button onclick="myFunction14()">Mix normal</button>
+    <button onclick="myFunction15()">Mix multiply</button>
+    <button onclick="myFunction16()">Mix hue</button>
+  </div>
 </main>
 <script>
 function myFunction1() {
@@ -210,6 +256,17 @@ function myFunction1() {
 	element.classList.remove("mystyle2");
 	element.classList.remove("mystyle3");
 	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
 }
 	function myFunction2() {
 	var element = document.getElementById("gradientfillafter");
@@ -217,6 +274,17 @@ function myFunction1() {
 	element.classList.add("mystyle2");
 	element.classList.remove("mystyle3");
 	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
 }
 	function myFunction3() {
 	var element = document.getElementById("gradientfillafter");
@@ -224,6 +292,17 @@ function myFunction1() {
 	element.classList.remove("mystyle2");
 	element.classList.add("mystyle3");
 	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
 }
 	function myFunction4() {
 	var element = document.getElementById("gradientfillafter");
@@ -231,6 +310,161 @@ function myFunction1() {
 	element.classList.remove("mystyle2");
 	element.classList.remove("mystyle3");
 	element.classList.add("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction5() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+	element.classList.remove("mystyle4");
+	element.classList.add("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction6() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.add("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction7() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.add("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction8() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.add("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction9() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.add("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction10() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mystyle1");
+	element.classList.remove("mystyle2");
+	element.classList.remove("mystyle3");
+	element.classList.remove("mystyle4");
+	element.classList.remove("mystyle5");
+	element.classList.remove("mystyle6");
+	element.classList.remove("mystyle7");
+	element.classList.remove("mystyle8");
+	element.classList.remove("mystyle9");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction11() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.add("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.remove("opacity3");
+}
+	function myFunction12() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("opacity1");
+	element.classList.add("opacity2");
+	element.classList.remove("opacity3");
+}
+	function myFunction13() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("opacity1");
+	element.classList.remove("opacity2");
+	element.classList.add("opacity3");
+}	
+	function myFunction14() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.add("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction15() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mixblendmode1");
+	element.classList.add("mixblendmode2");
+	element.classList.remove("mixblendmode3");
+}
+	function myFunction16() {
+	var element = document.getElementById("gradientfillafter");
+	element.classList.remove("mixblendmode1");
+	element.classList.remove("mixblendmode2");
+	element.classList.add("mixblendmode3");
 }
 	</script>
 </body>
