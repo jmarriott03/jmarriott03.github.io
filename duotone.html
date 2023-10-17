@@ -106,12 +106,18 @@ section {
     height: 100%;
     min-height: 0;
     object-fit: cover;
-    mix-blend-mode: multiply;
+	filter: grayscale(1);
+	mix-blend-mode: darken;
+}
+.hero:before {
+    content: "";
+    background-color: #f33;   
+    grid-area: 1/1;
 }
 .hero:after {
     content: "";
     background-color: #309;
-    mix-blend-mode: screen;
+    mix-blend-mode: lighten;
     grid-area: 1/1;
 }
 .hero__content {
