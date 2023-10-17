@@ -105,12 +105,12 @@ section {
     height: 100%;
     min-height: 0;
     object-fit: cover;
-	filter: grayscale(1);
-	mix-blend-mode: darken;
+    filter: grayscale(1);
+    mix-blend-mode: darken;
 }
 .hero:before {
     content: "";
-    background-color: #c33;   
+    background-color: #c33;
     grid-area: 1/1;
 }
 .hero:after {
@@ -140,7 +140,7 @@ section {
     color: var(--white);
 }
 .codegrey {
-	max-width: 20em;
+    max-width: 20em;
     background-color: #eee;
     padding: 1em;
 }
@@ -172,38 +172,39 @@ section {
   <section>
     <div class="hero">
       <div class="hero__content">
-        <h2>Second carbon-neutral university in the UK verified to PAS 2060 standard</h2>
-        <p>We aim to have a sustainable campus and enable learning to research solutions to the world’s most pressing sustainability challenges</p>
-        <p><a href="#">Sustainability: on the path to net zero</a></p>
+        <h2>Online enrolment</h2>
+        <p>Essential action for new and returning students before a <a href="#" class="nowrap">new year of study</a></p>
       </div>
       <img src="images/1280x720student13.jpg" alt=""> </div>
   </section>
-	<section><div class="codegrey"><code>.hero {<br>
-    display: grid;<br>
-    aspect-ratio: 3 / 1;<br>
-}<br>
-.hero &gt; * {<br>
-    grid-area: 1/1;<br>
-}<br>
-.hero img {<br>
-    width: 100%;<br>
-    height: 100%;<br>
-    min-height: 0;<br>
-    object-fit: cover;<br>
-	filter: grayscale(1);<br>
-	mix-blend-mode: darken;<br>
-}<br>
-.hero:before {<br>
-    content: "";<br>
-    background-color: #c33;<br>  
-    grid-area: 1/1;<br>
-}<br>
-.hero:after {<br>
-    content: "";<br>
-    background-color: #006;<br>
-    mix-blend-mode: lighten;<br>
-    grid-area: 1/1;<br>
-}</code></div></section>
+  <section>
+    <div class="codegrey"><code>.hero {<br>
+      display: grid;<br>
+      aspect-ratio: 3 / 1;<br>
+      }<br>
+      .hero &gt; * {<br>
+      grid-area: 1/1;<br>
+      }<br>
+      .hero img {<br>
+      width: 100%;<br>
+      height: 100%;<br>
+      min-height: 0;<br>
+      object-fit: cover;<br>
+      filter: grayscale(1);<br>
+      mix-blend-mode: darken;<br>
+      }<br>
+      .hero:before {<br>
+      content: "";<br>
+      background-color: #c33;<br>
+      grid-area: 1/1;<br>
+      }<br>
+      .hero:after {<br>
+      content: "";<br>
+      background-color: #006;<br>
+      mix-blend-mode: lighten;<br>
+      grid-area: 1/1;<br>
+      }</code></div>
+  </section>
 </main>
 </body>
 </html>
