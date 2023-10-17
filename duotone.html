@@ -96,7 +96,6 @@ section {
 .hero {
     display: grid;
     aspect-ratio: 3 / 1;
-    background-color: #f33;
 }
 .hero > * {
     grid-area: 1/1;
@@ -140,6 +139,11 @@ section {
 .hero__content a {
     color: var(--white);
 }
+.codegrey {
+	max-width: 20em;
+    background-color: #eee;
+    padding: 1em;
+}
 
 @media screen and (min-width: 60em) {
 .hero__content h2 {
@@ -152,10 +156,6 @@ section {
 }
 .hero {
     grid-area: 1 / 1 / 1 / 2;
-    margin: 0;
-}
-#tint {
-    grid-area: 1 / 1 / 2 / 2;
     margin: 0;
 }
 .hero__content h2 {
@@ -178,6 +178,32 @@ section {
       </div>
       <img src="images/1280x720student13.jpg" alt=""> </div>
   </section>
+	<section><div class="codegrey"><code>.hero {<br>
+    display: grid;<br>
+    aspect-ratio: 3 / 1;<br>
+}<br>
+.hero &gt; * {<br>
+    grid-area: 1/1;<br>
+}<br>
+.hero img {<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    min-height: 0;<br>
+    object-fit: cover;<br>
+	filter: grayscale(1);<br>
+	mix-blend-mode: darken;<br>
+}<br>
+.hero:before {<br>
+    content: "";<br>
+    background-color: #c33;<br>  
+    grid-area: 1/1;<br>
+}<br>
+.hero:after {<br>
+    content: "";<br>
+    background-color: #006;<br>
+    mix-blend-mode: lighten;<br>
+    grid-area: 1/1;<br>
+}</code></div></section>
 </main>
 </body>
 </html>
