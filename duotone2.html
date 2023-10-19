@@ -215,41 +215,39 @@ section {
 </main>
 <script>function myFunction1() {
 	var element = document.getElementById("duotone");
+	removeswatches();
 	element.classList.add("swatch1");
-	element.classList.remove("swatch2");
-	element.classList.remove("swatch3");
-	element.classList.remove("swatch4");
-	var element = document.getElementById("greyimage");
-	element.classList.add("greyscale");
 }	
 	function myFunction2() {
 	var element = document.getElementById("duotone");
-	element.classList.remove("swatch1");
+	removeswatches();
 	element.classList.add("swatch2");
-	element.classList.remove("swatch3");
-	element.classList.remove("swatch4");
-	var element = document.getElementById("greyimage");
-	element.classList.add("greyscale");
 }	
 	function myFunction3() {
 	var element = document.getElementById("duotone");
-	element.classList.remove("swatch1");
-	element.classList.remove("swatch2");
+	removeswatches();
 	element.classList.add("swatch3");
-	element.classList.remove("swatch4");
-	var element = document.getElementById("greyimage");
-	element.classList.add("greyscale");
 }
 	function myFunction4() {
+	var element = document.getElementById("duotone");
+	removeswatches();
+	removegreyscale();
+	element.classList.add("swatch4");
+	element.classList.remove("greyscale");
+}
+	function removeswatches() {
 	var element = document.getElementById("duotone");
 	element.classList.remove("swatch1");
 	element.classList.remove("swatch2");
 	element.classList.remove("swatch3");
-	element.classList.add("swatch4");
+	element.classList.remove("swatch4");
+	var element = document.getElementById("greyimage");
+	element.classList.add("greyscale");
+}
+	function removegreyscale() {
 	var element = document.getElementById("greyimage");
 	element.classList.remove("greyscale");
 }
-	
-	</script>
+</script>
 </body>
 </html>
