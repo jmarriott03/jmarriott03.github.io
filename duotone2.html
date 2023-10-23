@@ -194,6 +194,14 @@ section {
     font-size: 1.5rem;
 }
 }
+.button {
+    width: 1rem;
+    background-color: var(--mgrey);
+    display: inline-block;
+    padding: 0.125em;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+}
 </style>
 </head>
 <body>
@@ -207,10 +215,10 @@ section {
       <img src="images/1280x720student2.jpg" alt="" id="greyimage" class="greyscale"> </div>
   </section>
   <div class="toolbar">
-    <button onclick="myFunction1()">Duotone 1</button>
-    <button onclick="myFunction2()">Duotone 2</button>
-    <button onclick="myFunction3()">Duotone 3</button>
-    <button onclick="myFunction4()">Full colour</button>
+    <button onclick="myFunction1()">Duotone <span class="button">1</span></button>
+    <button onclick="myFunction2()">Duotone <span class="button">2</span></button>
+    <button onclick="myFunction3()">Duotone <span class="button">3</span></button>
+    <button onclick="myFunction4()">Full colour <span class="button">4</span></button>
   </div>
 </main>
 <script>function myFunction1() {
