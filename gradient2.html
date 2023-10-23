@@ -221,7 +221,7 @@ section {
 <body>
 <main>
   <section>
-    <div class="hero mystyle2 opacity1 mixblendmode1" id="gradientfillafter">
+    <div class="hero opacity1 mixblendmode1 mystyle2" id="gradientfillafter">
       <div class="hero__content">
         <h2>Online enrolment</h2>
         <p>Essential action for new and returning students before a <a href="#" class="nowrap">new year of study</a></p>
@@ -387,15 +387,8 @@ function myFunction1() {
 }
 	function removestyles() {
 	var element = document.getElementById("gradientfillafter");
-	element.classList.remove("mystyle1");
-	element.classList.remove("mystyle2");
-	element.classList.remove("mystyle3");
-	element.classList.remove("mystyle4");
-	element.classList.remove("mystyle5");
-	element.classList.remove("mystyle6");
-	element.classList.remove("mystyle7");
-	element.classList.remove("mystyle8");
-	element.classList.remove("mystyle9");
+	const box = document.getElementById('gradientfillafter');
+	box.setAttribute('class', 'hero opacity1 mixblendmode1');
 }
 </script>
 </body>
