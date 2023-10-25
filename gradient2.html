@@ -195,6 +195,14 @@ section {
 .mixblendmode3:after {
     mix-blend-mode: hue;
 }
+.button {
+    width: 1rem;
+    background-color: var(--mgrey);
+    display: inline-block;
+    padding: 0.125em;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+}
 
 @media screen and (min-width: 60em) {
 .hero__content h2 {
@@ -230,23 +238,23 @@ section {
   </section>
   <div class="toolbar">
     <p><strong>Primary</strong> (Selecting resets Secondary to Opacity 60%, Mix normal)</p>
-    <button onclick="myFunction1()">Black</button>
-    <button onclick="myFunction2()">Fill 2</button>
-    <button onclick="myFunction3()">Fill 3</button>
-    <button onclick="myFunction4()">Fill 4</button>
-    <button onclick="myFunction5()">Fill 5</button>
-    <button onclick="myFunction6()">Fill 6</button>
-    <button onclick="myFunction7()">Fill 7</button>
-    <button onclick="myFunction8()">Fill 8</button>
-    <button onclick="myFunction9()">Fill 9</button>
+    <button onclick="myFunction1()">Black <span class="button">1</span></button>
+    <button onclick="myFunction2()">Fill <span class="button">2</span></button>
+    <button onclick="myFunction3()">Fill <span class="button">3</span></button>
+    <button onclick="myFunction4()">Fill <span class="button">4</span></button>
+    <button onclick="myFunction5()">Fill <span class="button">5</span></button>
+    <button onclick="myFunction6()">Fill <span class="button">6</span></button>
+    <button onclick="myFunction7()">Fill <span class="button">7</span></button>
+    <button onclick="myFunction8()">Fill <span class="button">8</span></button>
+    <button onclick="myFunction9()">Fill <span class="button">9</span></button>
     <p><strong>Secondary</strong></p>
-    <button onclick="myFunction10()">Opacity 60%</button>
-    <button onclick="myFunction11()">Opacity 30%</button>
-    <button onclick="myFunction12()">Opacity 15%</button>
+    <button onclick="myFunction10()">Opacity 60% <span class="button">Q</span></button>
+    <button onclick="myFunction11()">Opacity 30% <span class="button">W</span></button>
+    <button onclick="myFunction12()">Opacity 15% <span class="button">E</span></button>
     <br>
-    <button onclick="myFunction13()">Mix normal</button>
-    <button onclick="myFunction14()">Mix multiply</button>
-    <button onclick="myFunction15()">Mix hue</button>
+    <button onclick="myFunction13()">Mix normal <span class="button">A</span></button>
+    <button onclick="myFunction14()">Mix multiply <span class="button">S</span></button>
+    <button onclick="myFunction15()">Mix hue <span class="button">D</span></button>
   </div>
 </main>
 <script>
@@ -309,6 +317,39 @@ function myFunction1() {
 }
 	function resetstyles() {
 	document.getElementById('gradientfillafter').className = "hero opacity1 mixblendmode";
+}
+	onkeydown = function(e){
+    if(e.keyCode == 49){
+	myFunction1();
+	} else if (e.keyCode == 50){
+	myFunction2();
+	} else if (e.keyCode == 51){
+	myFunction3();
+	} else if (e.keyCode == 52){
+	myFunction4();
+	} else if (e.keyCode == 53){
+	myFunction5();
+	} else if (e.keyCode == 54){
+	myFunction6();
+	} else if (e.keyCode == 55){
+	myFunction7();
+	} else if (e.keyCode == 56){
+	myFunction8();
+	} else if (e.keyCode == 57){
+	myFunction9();
+	} else if (e.keyCode == 81){
+	myFunction10();
+	} else if (e.keyCode == 87){
+	myFunction11();
+	} else if (e.keyCode == 69){
+	myFunction12();
+	} else if (e.keyCode == 65){
+	myFunction13();
+	} else if (e.keyCode == 83){
+	myFunction14();
+	} else if (e.keyCode == 68){
+	myFunction15();
+	}
 }
 </script>
 </body>
