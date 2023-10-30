@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: #00e;
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 20em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: #eee;
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.parent {
+display: grid;
+grid-template-columns: 2em 10em repeat(2, 1fr) 2em;
+grid-template-rows: 2em 1fr 10em 1fr 2em;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+	aspect-ratio: 3 / 1;
+}
+
+.div1 { grid-area: 1 / 1 / 6 / 6;
+	 border: 1px solid red;}
+.div2 { grid-area: 3 / 2 / 4 / 3;
+	 border: 1px solid orange;}
+.div3 { grid-area: 3 / 3 / 4 / 5;
+	 border: 1px solid yellow;}
+.div4 { grid-area: 4 / 2 / 5 / 5;
+	 border: 1px solid green;}
+.div1, .div2, .div3, .div4 {
+    margin: 0;
+}
+.div1 > img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+	.purelogo {
+    width: 4.5em;
+    padding: 0.5rem;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+}
+	.div3 {
+		padding-left: 2em;
+	}
+	.div4 {
+		align-items: bottom;
+		padding-top :5em;
+	}
+	.div4 p {margin-bottom: 0;}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent">
+    <div class="div1"><img src="images/1280x720marine4.jpg" alt=""/></div>
+    <div class="div2"><img src="images/profile08.jpg" alt=""/></div>
+    <div class="div3"><h2>asldkjfhls jkfkshdlf kasdjhfal s</h2></div>
+    <div class="div4"><p> social asdfsdkjhgsf kjghs glkjdhgl fjkgsh fsafdf</p></div>
+  </div>
+</main>
+</body>
+</html>
