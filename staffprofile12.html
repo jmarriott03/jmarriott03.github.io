@@ -60,6 +60,7 @@ h3 {
     font-size: 1.17em;
     line-height: 1.2;
     font-weight: bold;
+    margin: 0;
 }
 h4 {
     font-size: 1em;
@@ -181,94 +182,131 @@ section {
     text-decoration: underline;
     color: var(--link);
 }
+.box2 {
+    display: flex;
+    background: yellow;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.box2 > div {
+    margin: 0;
+}
+.profileimage {
+}
+.profileimage img {
+    border-radius: 50%;
+    width: 7rem;
+}
+.profiletext {
+    padding: 0 0 0 1rem;
+}
+
+@media (max-width: 50em) {
+.box2 {
+    width: 100%;
+    display: block;
+    background: red;
+}
+.profiletext {
+    padding: 1rem 0 0 0;
+}
+}
 </style>
 </head>
 <body>
 <main>
-  <section>
-    <h3>Sum of Dr Rafi Goodman metrics research outputs in Pure and updates since last login date.</h3>
-    <div class="box">
-      <div><a href="#">
-        <h2>102<sup>+21</sup></h2>
-        <p>Usage</p>
-        </a></div>
-      <div><a href="#">
-        <h2>11</h2>
-        <p>Captures</p>
-        </a></div>
-      <div><a href="#">
-        <h2>297</h2>
-        <p>Social media</p>
-        </a></div>
-      <div><a href="#">
-        <h2>2</h2>
-        <p>Mentions</p>
-        </a></div>
-      <div><a href="#">
-        <h2>66<sup>+7</sup></h2>
-        <p>Citations</p>
-        </a></div>
-    </div>
-    <p><a href="#">Read more about Dr Rafi Goodman</a></p>
-    <p><a href="#">View research outputs with Dr Rafi Goodman data</a></p>
-    <h3><span class="iconfont" aria-hidden="true">b</span>Research outputs <span class="dgrey">(167)</span></h3>
-    <div class="box">
-      <div><a href="#">
-        <p>Paper</p>
-        <h2>58</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Article</p>
-        <h2>52</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Conference contribution</p>
-        <h2>33</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Editorial</p>
-        <h2>15</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Poster</p>
-        <h2>7</h2>
-        </a></div>
-    </div>
-    <h3><span class="iconfont" aria-hidden="true">]</span>Activities <span class="dgrey">(15)</span></h3>
-    <div class="box">
-      <div><a href="#">
-        <p>Membership of committee</p>
-        <h2>6</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Consultancy</p>
-        <h2>6</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Invited talk</p>
-        <h2>1</h2>
-        </a></div>
-    </div>
-    <h3><span class="iconfont" aria-hidden="true">T</span>Other <span class="dgrey">(6)</span></h3>
-    <div class="box">
-      <div><a href="#">
-        <p>Datasets</p>
-        <h2>3</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Impact for external portal</p>
-        <h2>1</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Election to learned society</p>
-        <h2>1</h2>
-        </a></div>
-      <div><a href="#">
-        <p>Press/Media</p>
-        <h2>1</h2>
-        </a></div>
-    </div>
-  </section>
+<section>
+<div class="box2">
+  <div class="profileimage"><img src="images/720x720marine1.jpg" alt=""></div>
+  <div class="profiletext">
+    <p>Sum of Dr Rafi hadjsl kfhlkjshfljk dhfgkljds hgjkfhglkdjfhd fljkghf dkjghdf kljghf dljkghdf lkjgh dlfkjhglkjfg dhlf gkjdh flgkjd kjdhf slkdjfhlsjfhs jdskhs dfhj</p>
+  </div>
+</div>
+<h3>Sum of Dr Rafi Goodman metrics research outputs in Pure and updates since last login date.</h3>
+<div>
+<div class="box">
+  <div><a href="#">
+    <h2>102<sup>+21</sup></h2>
+    <p>Usage</p>
+    </a></div>
+  <div><a href="#">
+    <h2>11</h2>
+    <p>Captures</p>
+    </a></div>
+  <div><a href="#">
+    <h2>297</h2>
+    <p>Social media</p>
+    </a></div>
+  <div><a href="#">
+    <h2>2</h2>
+    <p>Mentions</p>
+    </a></div>
+  <div><a href="#">
+    <h2>66<sup>+7</sup></h2>
+    <p>Citations</p>
+    </a></div>
+</div>
+<p><a href="#">Read more about Dr Rafi Goodman</a></p>
+<p><a href="#">View research outputs with Dr Rafi Goodman data</a></p>
+<h3><span class="iconfont" aria-hidden="true">b</span>Research outputs <span class="dgrey">(167)</span></h3>
+<div class="box">
+  <div><a href="#">
+    <p>Paper</p>
+    <h2>58</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Article</p>
+    <h2>52</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Conference contribution</p>
+    <h2>33</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Editorial</p>
+    <h2>15</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Poster</p>
+    <h2>7</h2>
+    </a></div>
+</div>
+<h3><span class="iconfont" aria-hidden="true">]</span>Activities <span class="dgrey">(15)</span></h3>
+<div class="box">
+  <div><a href="#">
+    <p>Membership of committee</p>
+    <h2>6</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Consultancy</p>
+    <h2>6</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Invited talk</p>
+    <h2>1</h2>
+    </a></div>
+</div>
+<h3><span class="iconfont" aria-hidden="true">T</span>Other <span class="dgrey">(6)</span></h3>
+<div class="box">
+  <div><a href="#">
+    <p>Datasets</p>
+    <h2>3</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Impact for external portal</p>
+    <h2>1</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Election to learned society</p>
+    <h2>1</h2>
+    </a></div>
+  <div><a href="#">
+    <p>Press/Media</p>
+    <h2>1</h2>
+    </a></div>
+</div>
+</section>
 </main>
 </body>
 </html>
