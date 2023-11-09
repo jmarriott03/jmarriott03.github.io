@@ -115,43 +115,29 @@ section {
 }
 .codegrey {
     background-color: var(--lgrey);
-    padding: 1em;
+    padding: 1rem;
 }
 .largetext {
     font-size: 1.5em;
     line-height: 1.2;
 }
-.metrics h2 sup {
-    color: var(--red);
-    font-size: 0.5em;
-    vertical-align: top;
-    position: relative;
-    top: -0.5em;
-}
-.metrics table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 1em 0 0 0;
-}
-.metrics td, .metrics th {
-    padding: 0.5em;
-    text-align: left;
-    /*	border-bottom: 1px solid #111;*/
-    border-left: 2px solid var(--mgrey);
-}
-.metrics h2, .metrics p {
+.profile {
+    display: flex;
+    width: 100%;
     margin: 0;
 }
-.metrics a {
-    text-decoration: none;
-    color: var(--black);
+.profile > div {
+    margin: 0;
 }
-.metrics a:hover {
-    text-decoration: underline;
-    color: var(--link);
+.profileimage {
+    padding: 0 0 1rem 0;
 }
-.dgrey {
-    color: var(--dgrey);
+.profileimage img {
+    border-radius: 50%;
+    width: 7rem;
+}
+.profiletext {
+    padding: 0 0 0 1rem;
 }
 .metrics {
     display: flex;
@@ -172,32 +158,29 @@ section {
     position: relative;
     top: -0.5em;
 }
+.metrics table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1rem 0 0 0;
+}
+.metrics td, .metrics th {
+    padding: 0.5rem;
+    text-align: left;
+    border-left: 2px solid var(--mgrey);
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
 .metrics a {
-    text-decoration: none;
     color: var(--black);
+    text-decoration: none;
 }
 .metrics a:hover {
-    text-decoration: underline;
     color: var(--link);
+    text-decoration: underline;
 }
-.profile {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-}
-.profile > div {
-    margin: 0;
-}
-.profileimage {
-    padding: 0 0 1rem 0;
-}
-.profileimage img {
-    border-radius: 50%;
-    width: 7rem;
-}
-.profiletext {
-    padding: 0 0 0 1rem;
+.dgrey {
+    color: var(--dgrey);
 }
 .mtop0 {
     margin-top: 0;
@@ -328,6 +311,64 @@ section {
         <h2>1</h2>
         </a></div>
     </div>
+    <div class="codegrey"><code> .profile {<br>
+      display: flex;<br>
+      width: 100%;<br>
+      margin: 0;<br>
+      }<br>
+      .profile &gt; div {<br>
+      margin: 0;<br>
+      }<br>
+      .profileimage {<br>
+      padding: 0 0 1rem 0;<br>
+      }<br>
+      .profileimage img {<br>
+      border-radius: 50%;<br>
+      width: 7rem;<br>
+      }<br>
+      .profiletext {<br>
+      padding: 0 0 0 1rem;<br>
+      }<br>
+      .metrics {<br>
+      display: flex;<br>
+      flex-wrap: wrap;<br>
+      }<br>
+      .metrics &gt; div {<br>
+      border-left: 2px solid var(--mgrey);<br>
+      margin: 0 0 1rem 0;<br>
+      padding: 0.5rem;<br>
+      }<br>
+      .metrics h2, .metrics p {<br>
+      margin: 0;<br>
+      }<br>
+      .metrics h2 sup {<br>
+      color: var(--red);<br>
+      font-size: 0.5em;<br>
+      vertical-align: top;<br>
+      position: relative;<br>
+      top: -0.5em;<br>
+      }<br>
+      .metrics table {<br>
+      border-collapse: collapse;<br>
+      border-spacing: 0;<br>
+      margin: 1rem 0 0 0;<br>
+      }<br>
+      .metrics td, .metrics th {<br>
+      padding: 0.5rem;<br>
+      text-align: left;<br>
+      border-left: 2px solid var(--mgrey);<br>
+      }<br>
+      .metrics h2, .metrics p {<br>
+      margin: 0;<br>
+      }<br>
+      .metrics a {<br>
+      color: var(--black);<br>
+      text-decoration: none;<br>
+      }<br>
+      .metrics a:hover {<br>
+      color: var(--link);<br>
+      text-decoration: underline;<br>
+      }</code></div>
   </section>
 </main>
 </body>
