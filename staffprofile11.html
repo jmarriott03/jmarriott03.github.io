@@ -110,11 +110,13 @@ section {
     max-width: 40em;
     overflow: hidden;
     padding: 1em;
-    margin-bottom: 1rem;
 }
 .codegrey {
-    background-color: #eee;
+	max-width: 40em;
+    overflow: hidden;
+    background-color: var(--lgrey);
     padding: 1em;
+    margin: 0 auto 1rem auto;
 }
 .largetext {
     font-size: 1.5em;
@@ -204,7 +206,7 @@ Media screen
       <p>In 2020, the University was awarded the Queen's Anniversary Prize for the pioneering research of Rafi and her colleagues on molecular biology and its impact on the environment and changing behaviour.</p>
     </div>
   </div>
-  <section class="codegrey"><code>.profilecontainer {<br>
+  <div class="codegrey"><code>.profilecontainer {<br>
     display: grid;<br>
     grid-template-columns: 9rem 1fr;<br>
     grid-template-rows: auto;<br>
@@ -248,7 +250,7 @@ Media screen
     .profiletext {<br>
     grid-area: 2 / 1 / 3 / 3;<br>
     }<br>
-    }</code></section>
+    }</code></div>
 </main>
 </body>
 </html>
