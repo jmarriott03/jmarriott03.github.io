@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+--red: #c00;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+	object-fit: cover;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+	margin: 0 auto;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.profile {
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.profile > div {
+    margin: 0;
+}
+.profileimage {
+    padding: 0 0 1rem 0;
+}
+.profileimage img {
+    border-radius: 50%;
+    width: 7rem;
+}
+.profiletext {
+    padding: 0 0 0 1rem;
+}
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.metrics > div {
+    border-left: 2px solid var(--mgrey);
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
+.metrics h2 sup {
+    color: var(--red);
+    font-size: 0.5em;
+    vertical-align: top;
+    position: relative;
+    top: -0.5em;
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
+.metrics a {
+    color: var(--black);
+    text-decoration: none;
+}
+.metrics a:hover {
+    color: var(--link);
+    text-decoration: underline;
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.mtop0 {
+    margin-top: 0;
+}
+	.ptop0 {
+		padding-top: 0;
+	}
+.purelogo {
+    width: 4.5em;
+    padding: 0.5rem;
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+}
+.nodec {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0 1rem 0 -0.75rem;/*border: 1px dotted red;*/
+}
+.nomargin {
+    margin: 0;
+}
+	.heroimage {
+		margin: 0;
+	}
+	
+.heroimage img {
+	aspect-ratio: 3.5 / 1;
+}
+
+@media (max-width: 50em) {
+.profile {
+    width: 100%;
+    display: block;
+}
+.profiletext {
+    padding: 0;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="profile">
+    <div class="profileimage"><img src="images/720x720richardthompson.jpg" alt=""></div>
+    <div class="profiletext">
+      <p class="nomargin">Academic profile</p>
+      <h2 class="nomargin">Professor Richard Thompson OBE FRS</h2>
+      <h3>Prof: NMA Chair in Public Understanding of Marine Science &amp; Human Health</h3>
+      <h4>Director of the Marine Institute</h4>
+      <h4>Professor of Marine Biology</h4>
+    </div>
+  </div>
+  <div class="heroimage"><img src="images/1280x720richardthompson.jpg" alt=""/></div>
+  <div class="metrics">
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">A</span><sup>+21</sup></h2>
+      <p>Profiles</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Z</span></h2>
+      <p>Research units</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Á</span></h2>
+      <p>Equipment</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Â</span></h2>
+      <p>Projects</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">b</span><sup>+7</sup></h2>
+      <p>Research output</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Ã</span><sup>+7</sup></h2>
+      <p>Datasets</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Æ</span><sup>+7</sup></h2>
+      <p>Student theses</p>
+      </a></div>
+  </div>
+  <section class="ptop0">
+    <h2 class="mtop0">About Richard</h2>
+    <p>Richard continues to set the international agenda on research into the causes and effects of marine litter. Two decades on from his seminal paper, which first described the accumulation of ‘microplastics’ in the oceans, he has mapped out much of the territory upon which our understanding of both the impacts of plastics and the potential solutions are based.</p>
+    <p>Under his leadership, Plymouth has produced more scientific publications about marine plastic than any other university worldwide, with Richard himself having led or co-authored more than 180 scientific papers.</p>
+    <h2>Research expertise</h2>
+    <p>Richard's research focuses on three main topics:</p>
+    <ul>
+      <li>The effects of plastic debris in the marine environment</li>
+      <li>The modification of coastal engineering structures such as coastal defences and off-shore renewable energy devices, to enhance biodiversity</li>
+      <li>The ecology and conservation of shallow water habitats</li>
+    </ul>
+    <p>Richard's broad expertise includes: <strong>marine pollution</strong>, <strong>plastic pollution</strong>, <strong>marine debris</strong>, <strong>microplastics</strong>, <strong>marine biology</strong>, <strong>plastics</strong>, <strong>government policy</strong>, and <strong>marine litter</strong>.</p>
+    <p><a href="#">View Richard's full research profile &gt;</a></p>
+    <p>Richard receiving the University's third Queen’s Anniversary Prize for Higher and Further Education on 20 February 2020 for its pioneering research on microplastics pollution in the oceans and its impact on the environment and changing behaviour.</p>
+    <h2>Teaching</h2>
+    <p>Richard’s teaching interests include:</p>
+    <ul>
+      <li><strong>ecology of shallow water marine habitats</strong></li>
+      <li><strong>experimental marine ecology</strong></li>
+      <li><strong>field ecology</strong></li>
+      <li>and <strong>statistics</strong></li>
+    </ul>
+    <h2>Richard currently has teaching capacity on the following programmes</h2>
+    <p>Shoal of colourful marine fishBSc (Hons) Marine Biology</p>
+    <p>Colourful fishBSc (Hons) Marine Biology and Coastal Ecology</p>
+    <p>Close-up view of jellyfishBSc (Hons) Marine Biology and Oceanography</p>
+    <p>Shoal of fishMSc Marine Conservation</p>
+    <h2>Contact Richard</h2>
+    <ul>
+      <li><a href="#">Media enquiries</a></li>
+      <li><a href="#">Research collaboration</a></li>
+      <li><a href="#">Business solutions</a></li>
+    </ul>
+    <p>Room 308, Marine Building, Drake Circus, Plymouth, PL4 8AA</p>
+    <p>+44(0)1752 584651</p>
+    <p><a href="#">R.C.Thompson@plymouth.ac.uk</a></p>
+    <h4><a href="#">School of Biological and Marine Sciences (Faculty of Science and Engineering)</a></h4>
+    <p><span class="iconfont" aria-hidden="true">&#40;</span> A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
+      <span class="iconfont" aria-hidden="true">0</span> +44 1752 584993<br>
+      <span class="iconfont" aria-hidden="true">/</span> <a href="#">rafi.goodman@plymouth.ac.uk</a></p>
+    <p><span class="iconfont"><a href="#" class="nodec">f</a></span><span class="iconfont"><a href="#" class="nodec">t</a></span><span class="iconfont"><a href="#" class="nodec">i</a></span><span class="iconfont"><a href="#" class="nodec">l</a></span><a href="#"><img src="images/pure.svg" alt="Pure research" class="purelogo"></a></p>
+  </section>
+</main>
+</body>
+</html>
