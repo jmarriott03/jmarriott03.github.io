@@ -26,7 +26,7 @@
     line-height: 1;
     width: 1em;
     text-align: center;
-    margin-right: 0.5rem;
+    letter-spacing: 0.5rem;
 }
 * {
     margin: 0 auto;
@@ -185,17 +185,49 @@ section {
 .ptop0 {
     padding-top: 0;
 }
+figcaption {
+    margin: 0;
+    padding: 1rem;
+}
+.aspect4-1 {
+    aspect-ratio: 4 / 1;
+}
+.aspect3-1 {
+    aspect-ratio: 3 / 1;
+}
+.aspect16-9 {
+    aspect-ratio: 16 / 9;
+}
+.aspect1-1 {
+    aspect-ratio: 1 / 1;
+}
+.svglogo {
+    width: 6em;
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+.mbot0 {
+    margin-bottom: 0;
+}
+.whitebck {
+    background: var(--white);
+}
+.whitebck figcaption {
+    padding: 1rem 0;
+}
 .purelogo {
     width: 4.5em;
     padding: 0.5rem;
-    margin-left: -1rem;
+    margin-left: -0.5rem;
     margin-top: -0.5rem;
 }
-.nodec {
+.social {
     text-decoration: none;
     font-size: 1.5rem;
     padding: 0.5rem;
-    margin: 0 1rem 0 -0.75rem;/*border: 1px dotted red;*/
+    margin: 0 0.75rem 0 -0.75rem;
+	letter-spacing: 0;
+/*	border: 1px dotted red;*/
 }
 .nomargin {
     margin: 0;
@@ -205,6 +237,23 @@ section {
 }
 .heroimage img {
     aspect-ratio: 3 / 1;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    background-color: var(--lgrey);
+    margin: 0;
+    max-width: 39em;
+}
+.grid-item > * {
+    width: 100%;
 }
 
 @media (max-width: 50em) {
@@ -225,8 +274,7 @@ section {
     <div class="profiletext">
       <p class="nomargin">Academic profile</p>
       <h2 class="nomargin">Professor Richard Thompson OBE FRS</h2>
-      <h3>Prof: NMA Chair in Public Understanding of Marine Science &amp; Human Health</h3>
-      <p>Director of the Marine Institute<br>
+      <p>Director of the <a href="#">Marine Institute</a><br>
         Professor of Marine Biology</p>
     </div>
   </div>
@@ -273,7 +321,7 @@ section {
       <li>The ecology and conservation of shallow water habitats</li>
     </ul>
     <p>Richard's broad expertise includes: <strong>marine pollution</strong>, <strong>plastic pollution</strong>, <strong>marine debris</strong>, <strong>microplastics</strong>, <strong>marine biology</strong>, <strong>plastics</strong>, <strong>government policy</strong>, and <strong>marine litter</strong>.</p>
-    <p><a href="#">View Richard's full research profile &gt;</a></p>
+    <p><a href="#">View Richard's full research profile</a></p>
     <p>Richard receiving the University's third Queen’s Anniversary Prize for Higher and Further Education on 20 February 2020 for its pioneering research on microplastics pollution in the oceans and its impact on the environment and changing behaviour.</p>
     <h2>Teaching</h2>
     <p>Richard’s teaching interests include:</p>
@@ -298,11 +346,37 @@ section {
     <p>+44(0)1752 584651</p>
     <p><a href="#">R.C.Thompson@plymouth.ac.uk</a></p>
     <h4><a href="#">School of Biological and Marine Sciences (Faculty of Science and Engineering)</a></h4>
-    <p><span class="iconfont" aria-hidden="true">&#40;</span> A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
-      <span class="iconfont" aria-hidden="true">0</span> +44 1752 584993<br>
-      <span class="iconfont" aria-hidden="true">/</span> <a href="#">rafi.goodman@plymouth.ac.uk</a></p>
-    <p><span class="iconfont"><a href="#" class="nodec">f</a></span><span class="iconfont"><a href="#" class="nodec">t</a></span><span class="iconfont"><a href="#" class="nodec">i</a></span><span class="iconfont"><a href="#" class="nodec">l</a></span><a href="#"><img src="images/pure.svg" alt="Pure research" class="purelogo"></a></p>
+    <p><span class="iconfont" aria-hidden="true">&#40;</span>Room 308, Marine Building, Drake Circus, Plymouth, PL4 8AA<br>
+      <span class="iconfont" aria-hidden="true">0</span>+44(0)1752 584651<br>
+      <span class="iconfont" aria-hidden="true">/</span><a href="#">R.C.Thompson@plymouth.ac.uk</a></p>
+    <p class="mbot0"><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">l</a></span><a href="#"><img src="images/pure.svg" alt="Pure research" class="purelogo"></a></p>
   </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#"><strong>Undergraduate study</strong></a><br>
+          Uncover new passions or dive deep into what you love</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720marine7.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#"><strong>Undergraduate study</strong></a><br>
+          Uncover new passions or dive deep into what you love</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720marine8.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#"><strong>Postgraduate study</strong></a><br>
+          Make a difference with a masters</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720marine9.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#"><strong>Student life</strong></a><br>
+          Accommodation, lifestyle, support, and more</figcaption>
+      </figure>
+    </div>
+  </div>
 </main>
 </body>
 </html>
