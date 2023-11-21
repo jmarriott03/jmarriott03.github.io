@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.icongap1 {
+    letter-spacing: 0.5rem;
+}
+.icongap2 {
+    margin-right: 0.5rem;
+}
+.icongap3 {
+    padding-right: 0.5rem;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>letter-spacing with &lt;span&gt;</h1>
+    <h2>No gap with letter-spacing</h2>
+    <p class="largetext"><a href="#"><span class="iconfont icongap1" aria-hidden="true">A</span>hjskahf jsdhfl sdakjhf</a></p>
+    <h2>Gap with margin</h2>
+    <p class="largetext"><a href="#"><span class="iconfont icongap2" aria-hidden="true">A</span>hjskahf jsdhfl sdakjhf</a></p>
+    <h2>Gap with padding</h2>
+    <p class="largetext"><a href="#"><span class="iconfont icongap3" aria-hidden="true">A</span>hjskahf jsdhfl sdakjhf</a></p>
+    <p class="codegrey"><code><strong>.iconfont</strong> {<br>
+      font-family: 'icon', sans-serif;<br>
+      font-weight: normal;<br>
+      line-height: 1;<br>
+      width: 1em;<br>
+      text-align: center;<br>
+      }<br>
+      <strong>.icongap1</strong> {<br>
+      letter-spacing: 0.5rem;<br>
+      }<br>
+      <strong>.icongap2</strong> {<br>
+      margin-right: 0.5rem;<br>
+      }<br>
+      <strong>.icongap3</strong> {<br>
+      padding-right: 0.5rem;<br>
+      }<br>
+      </code></p>
+  </section>
+</main>
+</body>
+</html>
