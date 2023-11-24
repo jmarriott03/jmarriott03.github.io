@@ -124,13 +124,13 @@ section {
     line-height: 1.2;
 }
 progress {
-    position: absolute;
+    position: relative;
     height: 0.5rem;
     width: 20rem;
     border: none;
 }
 progress::after {
-    content: "Loading: " attr(value) "%";
+    content: "Progress: " attr(value) "%";
     position: absolute;
     width: 100%;
     text-align: center;
@@ -163,6 +163,29 @@ background-color: var(--dgrey)
       <progress value="30" max="100"></progress>
     </section>
   </div>
+  <section class="codegrey"><code><strong>progress</strong> {<br>
+    position: relative;<br>
+    height: 0.5rem;<br>
+    width: 20rem;<br>
+    border: none;<br>
+    }<br>
+    <strong>progress::after</strong> {<br>
+    content: "Progress: " attr(value) "%";<br>
+    position: absolute;<br>
+    width: 100%;<br>
+    text-align: center;<br>
+    font-size: 0.75rem;<br>
+    margin-top: 0.5rem;<br>
+    color: var(--black);<br>
+    }<br>
+    <strong>progress::-webkit-progress-bar</strong> {<br>
+    background-color: var(--mgrey);<br>
+    }<br>
+    <strong>progress::-webkit-progress-value</strong> {
+    background-color: var(--dgrey)<br>
+    }<br>
+    <br>
+    &lt;progress value="30" max="100"&gt;&lt;/progress&gt;</code> </section>
 </main>
 </body>
 </html>
