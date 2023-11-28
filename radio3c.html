@@ -16,9 +16,10 @@
 --dlink: #009;
 --visited: purple;
 --red: #c00;
---lprogress: #d2e48b;
---mprogress: #b4c960;
---dprogress: #677c1d;
+--lprogress: #516abf;
+--mprogress: #1d347e;
+--dprogress: #091a52;
+--progresstxt: var(--white);
 }
 @font-face {
     font-family: icon;
@@ -143,7 +144,7 @@ progress::after {
     text-align: center;
     font-size: 0.75rem;
     margin-top: 0.5rem;
-    color: var(--black);
+    color: var(--progresstxt);
 }
 progress::-webkit-progress-bar {
 background-color: var(--white);
@@ -203,6 +204,9 @@ background-color: var(--black)
 .whitetxt {
     color: var(--white);
 }
+.whitetxt a {
+    color: var(--white);
+}
 .blacktxt {
     color: var(--black);
 }
@@ -213,7 +217,7 @@ background-color: var(--black)
     background-color: var(--dlink);
 }
 .backnext {
-    color: var(--black);
+    color: var(--white);
     background-color: var(--lprogress);
 }
 .backnext:hover, .linkbck:focus {
@@ -259,8 +263,8 @@ background-color: var(--black)
   </section>
   <section>
     <h2>Background tint</h2>
-    <div class="lightbck">
-      <p>Further information about <a href="#" class="blacktxt">something or other</a></p>
+    <div class="lightbck whitetxt">
+      <p>Further information about <a href="#">something or other</a></p>
     </div>
   </section>
   <section>

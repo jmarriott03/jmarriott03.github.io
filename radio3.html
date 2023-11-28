@@ -16,9 +16,6 @@
 --dlink: #009;
 --visited: purple;
 --red: #c00;
---lprogress: #d2e48b;
---mprogress: #b4c960;
---dprogress: #677c1d;
 }
 @font-face {
     font-family: icon;
@@ -167,7 +164,7 @@ background-color: var(--black)
     width: 100%;
     background-color: red;
     overflow: hidden;
-    background-color: var(--lprogress);
+    background-color: var(--lgrey);
 }
 .radio1 input[type='radio'] {
     transform: scale(2);
@@ -214,16 +211,16 @@ background-color: var(--black)
 }
 .backnext {
     color: var(--black);
-    background-color: var(--lprogress);
+    background-color: var(--lgrey);
 }
 .backnext:hover, .linkbck:focus {
-    background-color: var(--mprogress);
+    background-color: var(--mgrey);
 }
 .lightbck {
     max-width: 40em;
     overflow: hidden;
     padding: 1em;
-    background-color: var(--lprogress);
+    background-color: var(--lgrey);
 }
 .lightbck p:last-child {
     margin: 0;
@@ -232,7 +229,7 @@ background-color: var(--black)
     max-width: 40em;
     overflow: hidden;
     padding: 1em;
-    border-left: 0.5rem solid var(--lprogress);
+    border-left: 0.5rem solid var(--lgrey);
 }
 </style>
 </head>
@@ -260,7 +257,7 @@ background-color: var(--black)
   <section>
     <h2>Background tint</h2>
     <div class="lightbck">
-      <p>Further information about <a href="#" class="blacktxt">something or other</a></p>
+      <p>Further information about <a href="#">something or other</a></p>
     </div>
   </section>
   <section>
