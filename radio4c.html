@@ -16,6 +16,10 @@
 --dlink: #009;
 --visited: purple;
 --red: #c00;
+--lprogress: #516abf;
+--mprogress: #1d347e;
+--dprogress: #091a52;
+--progresstxt: var(--white);
 }
 @font-face {
     font-family: icon;
@@ -128,6 +132,27 @@ section {
     line-height: 1.2;
     margin-bottom: 0;
 }
+progress {
+    position: relative;
+    height: 0.5rem;
+    width: 15rem;
+    border: none;
+}
+progress::after {
+    content: "Progress: " attr(value) "%";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    color: var(--progresstxt);
+}
+progress::-webkit-progress-bar {
+background-color: var(--white);
+}
+progress::-webkit-progress-value {
+background-color: var(--black);
+}
 .flex-container {
     display: flex;
     align-items: center;
@@ -144,7 +169,7 @@ section {
     width: 100%;
     background-color: red;
     overflow: hidden;
-    background-color: var(--lgrey);
+    background-color: var(--lprogress);
 }
 .radio1 input[type='radio'] {
     transform: scale(2);
@@ -180,6 +205,9 @@ section {
 .whitetxt {
     color: var(--white);
 }
+.whitetxt a {
+    color: var(--white);
+}
 .blacktxt {
     color: var(--black);
 }
@@ -190,17 +218,17 @@ section {
     background-color: var(--dlink);
 }
 .backnext {
-    color: var(--black);
-    background-color: var(--lgrey);
+    color: var(--white);
+    background-color: var(--lprogress);
 }
 .backnext:hover, .linkbck:focus {
-    background-color: var(--mgrey);
+    background-color: var(--mprogress);
 }
 .lightbck {
     max-width: 40em;
     overflow: hidden;
     padding: 1em;
-    background-color: var(--lgrey);
+    background-color: var(--lprogress);
 }
 .lightbck p:last-child {
     margin: 0;
@@ -209,7 +237,7 @@ section {
     max-width: 40em;
     overflow: hidden;
     padding: 1em;
-    border-left: 0.5rem solid var(--lgrey);
+    border-left: 0.5rem solid var(--lprogress);
 }
 .progressbar {
     width: 15rem;
@@ -227,7 +255,7 @@ section {
     text-align: center;
     font-size: 0.75rem;
     margin-top: 0.5rem;
-    color: var(--black);
+    color: var(--white);
 }
 </style>
 </head>
@@ -257,7 +285,7 @@ section {
   </section>
   <section>
     <h2>Background tint</h2>
-    <div class="lightbck">
+    <div class="lightbck whitetxt">
       <p>Further information about <a href="#">something or other</a></p>
     </div>
   </section>
