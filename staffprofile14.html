@@ -151,7 +151,7 @@ section {
     flex-wrap: wrap;
     max-width: 60rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
 }
 .metrics > div {
     border-left: 2px solid var(--mgrey);
@@ -266,14 +266,6 @@ figcaption {
 .grid-item > * {
     width: 100%;
 }
-.fullw {
-    width: 100%;
-    background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.6));
-    position: -webkit-sticky;
-    position: sticky;
-    backdrop-filter: blur(0.5rem);
-    top: 0;
-}
 
 @media (max-width: 50em) {
 .profile {
@@ -283,27 +275,19 @@ figcaption {
 .profiletext {
     padding: 0;
 }
-.fullw {
-    position: relative;
-}
 }
 </style>
 </head>
 <body>
 <main>
-  <div>
-    <div class="fullw">
-      <div class="profile">
-        <div class="profileimage"><img src="images/720x720richardthompson.jpg" alt=""></div>
-        <div class="profiletext">
-          <p class="nomargin">Academic profile</p>
-          <h2 class="nomargin">Professor Richard Thompson OBE FRS</h2>
-          <p>Director of the <a href="#">Marine Institute</a><br>
-            Professor of Marine Biology</p>
-        </div>
-      </div>
+  <div class="profile">
+    <div class="profileimage"><img src="images/720x720richardthompson.jpg" alt=""></div>
+    <div class="profiletext">
+      <p class="nomargin">Academic profile</p>
+      <h2 class="nomargin">Professor Richard Thompson OBE FRS</h2>
+      <p>Director of the <a href="#">Marine Institute</a><br>
+        Professor of Marine Biology</p>
     </div>
-    <div class="heroimage"><img src="images/1280x427babbage.jpg" alt=""></div>
   </div>
   <div class="metrics">
     <div><a href="#">
@@ -335,7 +319,8 @@ figcaption {
       <p>Student theses</p>
       </a></div>
   </div>
- <section class="pbot0">
+  <div class="heroimage"><img src="images/1280x400babbage.jpg" alt=""></div>
+  <section class="pbot0">
     <h2>About Richard</h2>
     <p>Richard continues to set the international agenda on research into the causes and effects of marine litter. Two decades on from his seminal paper, which first described the accumulation of ‘microplastics’ in the oceans, he has mapped out much of the territory upon which our understanding of both the impacts of plastics and the potential solutions are based.</p>
     <p>Under his leadership, Plymouth has produced more scientific publications about marine plastic than any other university worldwide, with Richard himself having led or co-authored more than 180 scientific papers.</p>
