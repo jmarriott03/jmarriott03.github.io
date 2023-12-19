@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+--red: #c00;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;/*border: 1px dotted red;*/
+}
+html, body {
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+main {
+    margin: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.profile {
+    display: flex;
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 1rem 1rem 0 1rem;
+}
+.profile > div {
+    margin: 0;
+}
+.profileimage {
+    padding: 0 0 1rem 0;
+}
+.profileimage img {
+    border-radius: 50%;
+    width: 10rem;
+}
+.profiletext {
+    padding: 0 0 0 1rem;
+}
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1rem 0.5rem 1rem;
+}
+.metrics > div {
+    border-left: 2px solid var(--mgrey);
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
+.metrics h2 sup {
+    color: var(--red);
+    font-size: 0.5em;
+    vertical-align: top;
+    position: relative;
+    top: -0.5em;
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
+.metrics a {
+    color: var(--black);
+    text-decoration: none;
+}
+.metrics a:hover {
+    color: var(--link);
+    text-decoration: underline;
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.mtop0 {
+    margin-top: 0;
+}
+.ptop0 {
+    padding-top: 0;
+}
+figcaption {
+    margin: 0;
+    padding: 1rem;
+}
+.aspect4-1 {
+    aspect-ratio: 4 / 1;
+}
+.aspect3-1 {
+    aspect-ratio: 3 / 1;
+}
+.aspect16-9 {
+    aspect-ratio: 16 / 9;
+}
+.aspect1-1 {
+    aspect-ratio: 1 / 1;
+}
+.svglogo {
+    width: 6em;
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+.mbot0 {
+    margin-bottom: 0;
+}
+.pbot0 {
+    padding-bottom: 0;
+}
+.gridtitle {
+    max-width: 80rem;
+    overflow: hidden;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 auto;
+}
+.whitebck {
+    background: var(--white);
+}
+.whitebck figcaption {
+    padding: 1rem 0;
+}
+.purelogo {
+    width: 4.5em;
+    padding: 0.5rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+}
+.social {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0 0.75rem 0 -0.75rem;
+    letter-spacing: 0;/*	border: 1px dotted red;*/
+}
+.nomargin {
+    margin: 0;
+}
+.heroimage {
+    margin: 0;
+}
+.heroimage img {
+    aspect-ratio: 3 / 1;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 0 1em 1em 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    background-color: var(--lgrey);
+    margin: 0;
+    max-width: 39em;
+}
+.grid-item > * {
+    width: 100%;
+}
+.accordionbox {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 0 1em 1em 1em;
+    margin-top: 0;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--lgrey);
+}
+
+@media (max-width: 62em) {
+.profile {
+    width: 100%;
+    display: block;
+}
+.profiletext {
+    padding: 0;
+}
+section {
+    margin: 0;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw">
+    <div class="profile">
+      <div class="profileimage"><img src="images/720x720marine1.jpg" alt="alternate text"></div>
+      <div class="profiletext">
+        <p class="nomargin">Academic profile</p>
+        <h2 class="nomargin">Dr Miriam Mariamu</h2>
+        <p>Lecturer in Marine Molecular Biology<br>
+          <a href="#">School of Biological and Marine Sciences (Faculty of Science and Engineering)</a></p>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Biography</h2>
+    <p>Lorem ipsum dolor sit amet. Sit autem nulla est perferendis enim et harum inventore. Qui possimus perspiciatis quo alias dignissimos ea reprehenderit ipsa eum voluptatem illo eos fugiat consequuntur eos eligendi adipisci At distinctio tenetur.</p>
+    <p>Eum nesciunt voluptas sit vero earum id voluptatem expedita sit odit provident et molestiae natus. Non accusamus recusandae ad rerum fuga et galisum reprehenderit ab rerum omnis. Cum quasi voluptate hic internos dolorem quo dolores magni.</p>
+    <h2>Qualifications</h2>
+    <ul>
+      <li>2014. PG Cert Academic Practice, University of Plymouth.</li>
+      <li>2010. PhD. Swansea University &amp; British Antarctic Survey.</li>
+      <li>2005. MSc Shellfish Biology, Fisheries and Culture. Bangor University.</li>
+      <li>2003. BSc Hons. Marine Biology. University of Liverpool</li>
+    </ul>
+    <h2>Professional membership</h2>
+    <ul>
+      <li>Fellow of the Higher Education Academy (since 2015).</li>
+      <li>Member of:
+        <ul>
+          <li>Genetics Society</li>
+          <li>Cell Stress Society International</li>
+          <li>Society of Experimental Biology</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>Senior editor: Cell Stress and Chaperones (official journal of the Cell Stress Society International, Springer-Nature)</li>
+    </ul>
+    <details>
+      <summary>
+        <h2>Teaching</h2>
+      </summary>
+      <p>Ut voluptas vitae et provident architecto sit ullam cumque aut fugiat exercitationem vel error similique. Aut deserunt velit ut consequatur blanditiis ut fuga iste. Aut blanditiis dolores est temporibus exercitationem ut sint expedita nam repellat temporibus. Ut modi officia sed veritatis nostrum id voluptas libero.</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Research</h2>
+      </summary>
+      <p>Vel praesentium sunt et voluptas quidem nam labore soluta aut molestiae doloribus aut nulla molestiae ea ratione consequatur. Ut delectus beatae aut ipsa fuga est voluptates porro sed accusantium omnis id incidunt quam ea omnis molestiae! Et excepturi fugit sed sint iure rem dicta magnam sed voluptas minima eum impedit incidunt non reprehenderit debitis.</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Publications</h2>
+      </summary>
+      <p>Rem esse deleniti hic soluta officia qui dolor internos non iste saepe ab distinctio blanditiis 33 dolores officia. Qui dolor fugiat quo distinctio velit quo soluta beatae qui unde doloremque est quos consequatur et illo repellendus.</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Personal</h2>
+      </summary>
+      <p>Ab nulla repellendus et deleniti eveniet hic corrupti commodi sit illum voluptatem eum fuga dolores eos dolor consectetur ut distinctio Quis. Qui dolores voluptates est accusantium nihil et molestias quod est earum fugiat et dicta suscipit.</p>
+    </details>
+    <h2>Contact</h2>
+    <p><span class="iconfont" aria-hidden="true">&#40;</span>Room 406, Davy Building, Drake Circus, Plymouth, PL4 8AA<br>
+      <span class="iconfont" aria-hidden="true">0</span>+44(0)1752 524288<br>
+      <span class="iconfont" aria-hidden="true">/</span><a href="#">miriam.mariamu@plymouth.ac.uk</a></p>
+    <p class="mbot0"><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">l</a></span></p>
+  </section>
+</main>
+</body>
+</html>
