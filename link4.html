@@ -83,8 +83,7 @@ a {
     color: var(--link);
     text-underline-position: under;
     text-underline-offset: 1px;
-    word-break: break-all;
-	word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 strong {
     font-weight: bold;
@@ -110,18 +109,9 @@ img {
     text-overflow: ellipsis;
     margin-top: 0;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
-    grid-column-gap: 1em;
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 20em;
-    grid-gap: 1em;
-}
 .grid-item {
     background-color: var(--lgrey);
-    margin: 0;
+    margin: 1rem 0 0 0;
     padding: 1rem;
 }
 .grid-item > * {
@@ -209,14 +199,17 @@ figcaption {
     grid-area: 3 / 1 / 4 / 3;
     margin: 0;
 }
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+    max-width: 20rem;
+}
 </style>
 </head>
 <body>
 <main>
   <section>
-    <h2>Learn from experts</h2>
-  </section>
-  <div class="grid-container">
+    <h1>overflow-wrap</h1>
     <div class="grid-item">
       <div class="card">
         <div class="profileimage"><img src="images/profile01.jpg" alt=""></div>
@@ -227,13 +220,18 @@ figcaption {
         <div class="profileinfo">
           <p><span class="iconfont" aria-hidden="true">&#40;</span> A428, 22 Portland Square, Drake Circus, Plymouth, PL4 8AA<br>
             <span class="iconfont" aria-hidden="true">0</span> +44 1752 584993<br>
-            <span class="iconfont" aria-hidden="true">/</span> <a href="#">this.is.an.extremely.long.email.address.angus.fraser@plymouth.ac.uk</a></p>
+            <span class="iconfont" aria-hidden="true">/</span> <a href="#">this.is.an.extremely.long.email.angus.fraser@plymouth.ac.uk</a></p>
           <p class="social"><span class="iconfont"><a href="#" class="nodec">f</a></span><span class="iconfont"><a href="#" class="nodec">t</a></span><span class="iconfont"><a href="#" class="nodec">i</a></span><span class="iconfont"><a href="#" class="nodec">l</a></span><a href="#"><img src="images/pure.svg" alt="Pure research" class="purelogo"></a></p>
         </div>
       </div>
     </div>
- 
-  </div>
+    <div class="codegrey"><code>a {<br>
+      color: var(--link);<br>
+      text-underline-position: under;<br>
+      text-underline-offset: 1px;<br>
+      <strong>overflow-wrap: break-word;</strong><br>
+      }</code></div>
+  </section>
 </main>
 </body>
 </html>
