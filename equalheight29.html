@@ -39,20 +39,25 @@ html, body {
     font-size: 100%;
     font-family: sans-serif;
     font-weight: normal;
-    line-height: 1.5em;
+    line-height: 1.5;
     color: var(--black);
     background: var(--white);
     margin: 0;
 }
 h1 {
     font-size: 2em;
-    line-height: 1.25em;
+    line-height: 1.2;
     font-weight: bold;
 }
 h2 {
     font-size: 1.5em;
-    line-height: 1.25em;
+    line-height: 1.2;
     font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
 }
 a {
     color: var(--link);
@@ -102,47 +107,15 @@ img {
 .grid-item > div {
     width: 100%;
 }
-.grid-item p {
-    margin: 1em;
-}
-.share {
-    margin-top: 0;
-    font-size: 0.875em;
-    line-height: 1.5em;
-}
-.nomargin {
-    margin: 0;
-}
 section {
     max-width: 80em;
     overflow: hidden;
     margin-top: 0;
 }
-.profilecover {
-    position: relative;
-    margin-bottom: 2em;
-}
-.profilepic {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 40%;
-    bottom: -2em;
-}
-.profilepic img {
-    border-radius: 50%;
-    border: 0.25em solid #FFF;
-}
 .swatch1 {
     width: 100%;
     background-color: var(--lgrey);
     overflow: hidden;
-}
-.swatch1card {
-    background-color: var(--white);
-    margin: 0;
-    padding: 1rem;
 }
 .swatch2 {
     width: 100%;
@@ -153,13 +126,16 @@ section {
 .swatch2 a {
     color: var(--white);
 }
-.swatch2card {
-    background-color: var(--black);
-    margin: 0;
-    padding: 0.5rem 0 0 0;
-}
 .swatch1 h2, .swatch2 h2 {
     padding: 1rem 0 0 1rem;
+}
+.differentswatch {
+    padding: 1rem;
+    margin: 0;
+}
+.sameswatch {
+    padding: 0.5rem 0 0 0;
+    margin: 0;
 }
 .codegrey {
     background-color: var(--lgrey);
@@ -171,58 +147,82 @@ section {
 <body>
 <div class="swatch1">
   <section>
-    <h2>Card different colour from background</h2>
+    <h2>Card different colour from background (swatch1)</h2>
   </section>
   <div class="grid-container">
     <div class="grid-item">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="differentswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
       </figure>
     </div>
     <div class="grid-item">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="differentswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
       </figure>
     </div>
     <div class="grid-item">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="differentswatch">Laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
       </figure>
     </div>
     <div class="grid-item">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="differentswatch">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
       </figure>
     </div>
   </div>
 </div>
 <div class="swatch2">
   <section>
-    <h2>Card same colour as background</h2>
+    <h2>Card same colour as background (swatch2)</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item">
+    <div class="grid-item swatch2">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="sameswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
       </figure>
     </div>
-    <div class="grid-item">
+    <div class="grid-item swatch2">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="sameswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
       </figure>
     </div>
-    <div class="grid-item">
+    <div class="grid-item swatch2">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="sameswatch">Laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
       </figure>
     </div>
-    <div class="grid-item">
+    <div class="grid-item swatch2">
       <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
-        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+        <figcaption class="sameswatch">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
       </figure>
     </div>
   </div>
 </div>
-<div class="codegrey"><code>djksfhgl jkghfd gjkhdfls </code></div>
+<div class="codegrey"><code>.swatch1 {<br>
+  width: 100%;<br>
+  background-color: var(--lgrey);<br>
+  overflow: hidden;<br>
+  }<br>
+  .swatch2 {<br>
+  width: 100%;<br>
+  color: var(--white);<br>
+  background-color: var(--black);<br>
+  overflow: hidden;<br>
+  }<br>
+  .swatch2 a {<br>
+  color: var(--white);<br>
+  }<br>
+  .swatch1 h2, .swatch2 h2 {<br>
+  padding: 1rem 0 0 1rem;<br>
+  }<br>
+  .differentswatch {<br>
+  <strong>padding: 1rem;</strong><br>
+  margin: 0;<br>
+  }<br>
+  .sameswatch {<br>
+  <strong>padding: 0.5rem 0 0 0;</strong><br>
+  margin: 0;<br>
+  }</code></div>
 </body>
 </html>
