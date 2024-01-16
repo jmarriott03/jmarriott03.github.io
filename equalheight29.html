@@ -28,14 +28,6 @@
     width: 1em;
     text-align: center;
 }
-.socialmedia a {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    line-height: 1em;
-    font-size: 1em;
-    margin-right: 1em;
-    text-decoration: none;
-}
 * {
     margin: 0 auto;
     box-sizing: border-box;
@@ -50,8 +42,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5em;
-    color: #111;
-    background: #EEE;
+    color: var(--black);
+    background: var(--white);
     margin: 0;
 }
 h1 {
@@ -63,16 +55,12 @@ h2 {
     font-size: 1.5em;
     line-height: 1.25em;
     font-weight: bold;
-    padding: 1rem 0 0 1rem;
 }
 a {
     color: var(--link);
     text-underline-position: under;
     text-underline-offset: 1px;
     overflow-wrap: break-word;
-}
-.visited {
-    color: #551A8B;
 }
 strong {
     font-weight: bold;
@@ -98,16 +86,15 @@ img {
 }
 .grid-container {
     display: grid;
-    /*grid-template-columns: repeat(3, 1fr);*/
     grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
     grid-column-gap: 1em;
     margin: 0 auto;
-    padding: 1em 1em 0 1em;
+    padding: 1em;
     max-width: 80em;
     grid-gap: 1em;
 }
 .grid-item {
-    background-color: #FFF;
+    background-color: var(--white);
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -124,29 +111,6 @@ img {
     margin-top: 0;
     font-size: 0.875em;
     line-height: 1.5em;
-}
-.share p {
-    margin: 0 1em 1em 1em;
-}
-.tags a {
-    margin-right: 0.5em;
-}
-.quoteimage {
-    padding: 0 1em 0 3em;
-    position: relative;
-    width: 100%;
-}
-.quoteimage img {
-    left: 0;
-    position: absolute;
-    width: 2.5em;
-    height: 2.5em;
-    margin: 0.25em 0 0 1em;
-    border-radius: 50%;
-}
-.quoteline {
-    border-left: 0.25em solid;
-    padding-left: 0.5em;
 }
 .nomargin {
     margin: 0;
@@ -172,342 +136,95 @@ section {
     border-radius: 50%;
     border: 0.25em solid #FFF;
 }
-figcaption {
-    padding: 0;
-    margin: 0.5em 0;
-}
 .swatch1 {
-    background-color: #111;
-    color: #FFF;
+    width: 100%;
+    background-color: var(--lgrey);
+    overflow: hidden;
+}
+.swatch1card {
+    background-color: var(--white);
     margin: 0;
     padding: 1rem;
-}
-.swatch1 a {
-    background-color: #111;
-    color: #FFF;
 }
 .swatch2 {
-    background-color: #111;
-    color: #FFF;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+    overflow: hidden;
 }
 .swatch2 a {
-    background-color: #111;
-    color: #FFF;
+    color: var(--white);
 }
-.griditemswatch2 {
-    background-color: #111;
-}
-.griditemswatch3 {
-    background-color: #EEE;
-}
-.swatch3 {
-    background-color: #FFF;
+.swatch2card {
+    background-color: var(--black);
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem 0 0 0;
 }
-.position-relative {
-    position: relative;
+.swatch1 h2, .swatch2 h2 {
+    padding: 1rem 0 0 1rem;
 }
-.position-absolute-bl {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.position-absolute-br {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.video-length {
-    color: #FFF;
-    background-color: #111;
-    border-radius: 0.25em;
-    padding: 0 0.5em;
-    font-size: 0.75em;
-    margin: 1rem;
-}
-.smalltext {
-    font-size: 0.75em;
-}
-.youtube {
-    position: absolute;
-    width: 4rem;
-    left: 50%;
-    margin-left: -2rem;
-    top: 50%;
-    margin-top: -1.5rem;
-}
-.fullw {
-    width: 100%;
-    color: #FFF;
-    background-color: #111;
-    overflow: hidden;
-    padding-bottom: 0.5em;
-}
-.fullw2 {
-    width: 100%;
-    background-color: #FFF;
-    overflow: hidden;
-    padding-bottom: 0.5em;
-}
-.fullw3 {
-    width: 100%;
-    background-color: #EEE;
-    overflow: hidden;
-    padding-bottom: 0.5em;
-    border-bottom: 1em solid #FFF;
-    margin-top: 0;
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+    max-width: 40rem;
 }
 </style>
 </head>
 <body>
-<section>
-  <h2>4 white on grey</h2>
-</section>
-<div class="grid-container">
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">1:19</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">3:28</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">5:37</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">7:46</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-</div>
-<section>
-  <h2>3 white on grey</h2>
-</section>
-<div class="grid-container">
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">1:19</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">3:28</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">5:37</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-</div>
-<section>
-  <h2>2 white on grey</h2>
-</section>
-<div class="grid-container">
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">1:19</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">3:28</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-</div>
-<section>
-  <h2>1 white on grey</h2>
-</section>
-<div class="grid-container">
-  <div class="grid-item">
-    <figure> <a href="#">
-      <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-        <div class="position-absolute-br video-length">1:19</div>
-        <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-      </div>
-      </a>
-      <figcaption class="swatch3">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-    </figure>
-  </div>
-</div>
-<div class="fullw">
+<div class="swatch1">
   <section>
-    <h2>4 black on black</h2>
+    <h2>Card different colour from background</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">1:19</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">3:28</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">5:37</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">7:46</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch1card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
   </div>
 </div>
-<div class="fullw">
+<div class="swatch2">
   <section>
-    <h2>3 black on black</h2>
+    <h2>Card same colour as background</h2>
   </section>
   <div class="grid-container">
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">1:19</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">3:28</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">5:37</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="swatch2card">Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">labore et dolore magna aliqua.</a></figcaption>
       </figure>
     </div>
   </div>
 </div>
-<div class="fullw">
-  <section>
-    <h2>2 black on black</h2>
-  </section>
-  <div class="grid-container">
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">1:19</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-      </figure>
-    </div>
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">3:28</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-<div class="fullw">
-  <section>
-    <h2>1 black on black</h2>
-  </section>
-  <div class="grid-container">
-    <div class="grid-item griditemswatch2">
-      <figure> <a href="#">
-        <div class="position-relative"><img src="images/1280x720placeholder.gif" alt="Fine Art Stuedent Alysia Millington">
-          <div class="position-absolute-br video-length">1:19</div>
-          <div class="youtube" aria-hidden="true"><img src="images/youtubeicon.svg" alt=""></div>
-        </div>
-        </a>
-        <figcaption class="swatch2">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
+<div class="codegrey"><code>djksfhgl jkghfd gjkhdfls </code></div>
 </body>
 </html>
