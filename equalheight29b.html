@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;/*border: 1px dotted red;*/
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    text-underline-position: under;
+    text-underline-offset: 1px;
+    overflow-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    background-color: var(--white);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 38.5em;
+}
+.grid-item > div {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    margin-top: 0;
+}
+.swatch1 {
+    width: 100%;
+    background-color: var(--lgrey);
+    overflow: hidden;
+}
+.swatch2 {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+    overflow: hidden;
+}
+.swatch2 a {
+    color: var(--white);
+}
+.swatch1 h2, .swatch2 h2 {
+    padding: 1rem 0 0 1rem;
+}
+.differentswatch {
+    padding: 1rem;
+    margin: 0;
+}
+.sameswatch {
+    padding: 0.5rem 0;
+    margin: 0;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+    max-width: 40rem;
+}
+</style>
+</head>
+<body>
+<div class="swatch1">
+  <section>
+    <h2>4 x swatch1</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch1">
+  <section>
+    <h2>3 x swatch1</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch1">
+  <section>
+    <h2>2 x swatch1</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch1">
+  <section>
+    <h2>1 x swatch1</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="differentswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch2">
+  <section>
+    <h2>4 x swatch2</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch2">
+  <section>
+    <h2>3 x swatch2</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch2">
+  <section>
+    <h2>2 x swatch2</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="swatch2">
+  <section>
+    <h2>2 x swatch2</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item swatch2">
+      <figure><a href="#"><img src="images/1280x720placeholder.gif" alt="placeholder"></a>
+        <figcaption class="sameswatch">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+</body>
+</html>
