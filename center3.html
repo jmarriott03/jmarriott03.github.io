@@ -235,6 +235,17 @@ section {
     color: var(--lime);
     display: block;
 }
+.uoplogo {
+    width: 10rem;
+    padding: 1rem;
+	border: 1px dotted white;
+}
+.topnav {
+    width: 24rem;
+    padding: 1rem;
+    float: right;
+	border: 1px dotted white;
+}
 
 @media (max-width: 60em) {
 .parent {
@@ -257,12 +268,17 @@ section {
     grid-area: 4 / 1 / 5 / 2;
 }
 }
+	@media (max-width: 35em) {
+		.uoplogo {display: block;}
+.topnav {
+    float: left;
+		}}
 </style>
 </head>
 <body>
 <main>
   <div class="parent">
-    <div class="div1">1</div>
+    <div class="div1 bg-black"><img src="images/uoplogomonowhite.svg" alt="" class="uoplogo"/><img src="images/topnav.svg" alt="" class="topnav"/></div>
     <div class="div2">
       <div class="hero">
         <div class="hero__content">
