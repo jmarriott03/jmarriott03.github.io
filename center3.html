@@ -236,15 +236,19 @@ section {
     display: block;
 }
 .uoplogo {
-    width: 10rem;
+    width: 12rem;
     padding: 1rem;
-	border: 1px dotted white;
+    border: 1px dotted white;
+    float: left;
+}
+.uoplogo img {
+    width: 10rem;
 }
 .topnav {
-    width: 24rem;
+    width: 29rem;
     padding: 1rem;
     float: right;
-	border: 1px dotted white;
+    border: 1px dotted white;
 }
 
 @media (max-width: 60em) {
@@ -268,17 +272,24 @@ section {
     grid-area: 4 / 1 / 5 / 2;
 }
 }
-	@media (max-width: 40em) {
-		.uoplogo {display: block;}
+
+@media (max-width: 42em) {
+.uoplogo {
+    display: block;
+    width: 100%;
+}
 .topnav {
     float: left;
-		}}
+}
+}
 </style>
 </head>
 <body>
 <main>
   <div class="parent">
-    <div class="div1 bg-black"><img src="images/uoplogomonowhite.svg" alt="" class="uoplogo"/><img src="images/topnav.svg" alt="" class="topnav"/></div>
+    <div class="div1 bg-black">
+      <div class="uoplogo"><img src="images/uoplogomonowhite.svg" alt="" class="w10"/></div>
+      <img src="images/topnav.svg" alt="" class="topnav"/></div>
     <div class="div2">
       <div class="hero">
         <div class="hero__content">
