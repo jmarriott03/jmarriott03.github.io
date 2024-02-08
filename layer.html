@@ -157,12 +157,18 @@ section {
 	.tint {
 		background: rgba(0, 0, 0, 0.6);
 	}
-	.white {
+	.white, .white a {
 		color: var(--white);
 	}
-	.mixblendlighten {
+	
+	.black, .black a {
+		color: var(--black);
+	}
+
+	
+	.colormode {
 		background: lime;
-		mix-blend-mode: lighten;
+		mix-blend-mode: multiply;
 		filter: grayscale(1);
 	}
 
@@ -171,7 +177,7 @@ section {
 <body>
 <main>
   <section>
-   <div class="container"><div><img src="images/1280x720international.jpg"  alt="alt text"></div><div class="mixblendlighten"></div><div class="alignselfstart textright pad1">sadfsad</div><div class="alignselfend padhalf tint white mixblendlighten">ghksf khgdf sakdhhh dsjlghkljdshf lgjkdshf glkjdsfhglkjfhgdfklsghd flkhjf dskjhf djkfhdjk fahld jhds fjksal kjgdhls j hs</div><div class="alignselfcenter textcenter">Center</div></div>
+   <div class="container"><div class="colormode"><img src="images/1280x720international.jpg"  alt="alt text"></div><div class="alignselfstart textright pad1 black"><a href="#">topright</a></div><div class="alignselfcenter textcenter">Center</div><div class="alignselfend padhalf tint white"><a href="#">ghksf khgdf sakdhhh</a> dsjlghkljdshf lgjkdshf glkjdsfhglkjfhgdfklsghd flkhjf dskjhf djkfhdjk fahld jhds fjksal kjgdhls j hs</div></div>
   </section>
 </main>
 </body>
