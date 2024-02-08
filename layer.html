@@ -160,12 +160,18 @@ section {
 	.white {
 		color: var(--white);
 	}
+	.mixblendlighten {
+		background: lime;
+		mix-blend-mode: lighten;
+		filter: grayscale(1);
+	}
+
 </style>
 </head>
 <body>
 <main>
   <section>
-   <div class="container"><div><img src="images/1280x720international.jpg"  alt="alt text"></div><div class="alignselfstart textright pad1">sadfsad</div><div class="alignselfend padhalf tint white">ghksf khgdf sakdhhh dsjlghkljdshf lgjkdshf glkjdsfhglkjfhgdfklsghd flkhjf dskjhf djkfhdjk fahld jhds fjksal kjgdhls j hs</div><div class="alignselfcenter textcenter">Center</div></div>
+   <div class="container"><div><img src="images/1280x720international.jpg"  alt="alt text"></div><div class="mixblendlighten"></div><div class="alignselfstart textright pad1">sadfsad</div><div class="alignselfend padhalf tint white mixblendlighten">ghksf khgdf sakdhhh dsjlghkljdshf lgjkdshf glkjdsfhglkjfhgdfklsghd flkhjf dskjhf djkfhdjk fahld jhds fjksal kjgdhls j hs</div><div class="alignselfcenter textcenter">Center</div></div>
   </section>
 </main>
 </body>
