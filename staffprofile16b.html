@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+--red: #c00;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.profile {
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem 1rem 0 1rem;
+}
+.profile > div {
+    margin: 0;
+}
+.profileimage {
+    padding: 0 0 1rem 0;
+}
+.profileimage img {
+    border-radius: 50%;
+    width: 9rem;
+}
+.profiletext {
+    padding: 0 0 0 1rem;
+}
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.metrics > div {
+    border-left: 2px solid var(--mgrey);
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
+.metrics h2 sup {
+    color: var(--red);
+    font-size: 0.5em;
+    vertical-align: top;
+    position: relative;
+    top: -0.5em;
+}
+.metrics h2, .metrics p {
+    margin: 0;
+}
+.metrics a {
+    color: var(--black);
+    text-decoration: none;
+}
+.metrics a:hover {
+    color: var(--link);
+    text-decoration: underline;
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.mtop0 {
+    margin-top: 0;
+}
+.ptop0 {
+    padding-top: 0;
+}
+figcaption {
+    margin: 0;
+    padding: 1rem;
+}
+.aspect4-1 {
+    aspect-ratio: 4 / 1;
+}
+.aspect3-1 {
+    aspect-ratio: 3 / 1;
+}
+.aspect16-9 {
+    aspect-ratio: 16 / 9;
+}
+.aspect1-1 {
+    aspect-ratio: 1 / 1;
+}
+.svglogo {
+    width: 6em;
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+.mtop0 {
+    margin-top: 0;
+}
+.mbot0 {
+    margin-bottom: 0;
+}
+.ptop0 {
+    padding-top: 0;
+}
+.pbot0 {
+    padding-bottom: 0;
+}
+.nomargin {
+    margin: 0;
+}
+.gridtitle {
+    max-width: 80rem;
+    overflow: hidden;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 auto;
+}
+.whitebck {
+    background: var(--white);
+}
+.whitebck figcaption {
+    padding: 1rem 0;
+}
+.social {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0 0.75rem 0 -0.75rem;
+    letter-spacing: 0;/*	border: 1px dotted red;*/
+}
+.heroimage {
+    margin: 0;
+}
+.heroimage img {
+    aspect-ratio: 3 / 1;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 0 1em 1em 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    background-color: var(--lgrey);
+    margin: 0;
+    max-width: 39em;
+}
+.grid-item > * {
+    width: 100%;
+}
+.fullw {
+    width: 100%;
+    background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.6));
+    position: -webkit-sticky;
+    position: sticky;
+    backdrop-filter: blur(0.5rem);
+    top: 0;
+}
+.theglobalgoals img {
+    width: 5rem;
+    margin: 0 1rem 1rem 0;
+}
+
+@media (max-width: 50em) {
+.profile {
+    width: 100%;
+    display: block;
+}
+.profiletext {
+    padding: 0;
+}
+.fullw {
+    position: relative;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <div class="fullw">
+      <div class="profile">
+        <div class="profileimage"><img src="images/720x720marine1.jpg" alt=""></div>
+        <div class="profiletext">
+      <p class="nomargin">Academic profile</p>
+      <h2 class="nomargin">Dr Miriam Mariamu</h2>
+      <p>Lecturer in Diagnostic Radiography<br>
+        Medical School (Faculty of Health)</p>
+    </div>
+      </div>
+    </div>
+    <div class="heroimage"><img src="images/1920x600babbage.jpg" alt=""></div>
+  </div>
+  <div class="metrics">
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">A</span><sup>+21</sup></h2>
+      <p>Profiles</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Z</span></h2>
+      <p>Research units</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Á</span></h2>
+      <p>Equipment</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Â</span></h2>
+      <p>Projects</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">b</span><sup>+7</sup></h2>
+      <p>Research output</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Ã</span><sup>+7</sup></h2>
+      <p>Datasets</p>
+      </a></div>
+    <div><a href="#">
+      <h2><span class="iconfont" aria-hidden="true">Æ</span><sup>+7</sup></h2>
+      <p>Student theses</p>
+      </a></div>
+  </div>
+  <section class="mtop0 ptop0 pbot0">
+    <h2>The Global Goals</h2>
+    <p>In 2015, UN member states agreed to 17 global <a href="#">Sustainable Development Goals (SDGs)</a> to end poverty, protect the planet and ensure prosperity for all. Richard's work contributes towards the following SDG(s):</p>
+    <div class="theglobalgoals"><img src="images/theglobalgoals/theglobalgoals1.svg" alt="Goal 1: No Poverty" title="Goal 1: No Poverty"><img src="images/theglobalgoals/theglobalgoals2.svg" alt="Goal 2: Zero Hunger" title="Goal 2: Zero Hunger"><img src="images/theglobalgoals/theglobalgoals3.svg" alt="Goal 3: Good Health and Well-Being" title="Goal 3: Good Health and Well-Being"><img src="images/theglobalgoals/theglobalgoals18.svg" alt="THE GLOBAL GOALS For Sustainable Development" title="THE GLOBAL GOALS For Sustainable Development"></div>
+    <h2>About Miriam</h2>
+    <p>Lorem ipsum dolor sit amet. Sit autem nulla est perferendis enim et harum inventore. Qui possimus perspiciatis quo alias dignissimos ea reprehenderit ipsa eum voluptatem illo eos fugiat consequuntur eos eligendi adipisci At distinctio tenetur.</p>
+    <p>Eum nesciunt voluptas sit vero earum id voluptatem expedita sit odit provident et molestiae natus. Non accusamus recusandae ad rerum fuga et galisum reprehenderit ab rerum omnis. Cum quasi voluptate hic internos dolorem quo dolores magni.</p>
+    <h2>Research expertise</h2>
+    <p>Miriam's research focuses on three main topics:</p>
+    <ol>
+      <li>Ut fuga ipsa eos labore iure sit laudantium quam</li>
+      <li>Voluptatibus quos sit aliquid nobis et corporis dignissimos</li>
+      <li>Vel suscipit ullam sed adipisci sint est laboriosam corrupti eos dolores</li>
+    </ol>
+    <p>Miriam's broad expertise includes: <strong>reiciendis enim</strong>, <strong>excepturi illo</strong>, <strong>sequi illum</strong>, <strong>perferendis</strong>, <strong>aut officiis</strong>, <strong>architecto</strong>, <strong>tempore illo</strong>, and <strong>marine lnulla saeper</strong>.</p>
+    <p><a href="#">View Miriam's full research profile</a></p>
+    <p>Non obcaecati facere eos rerum voluptatem est accusamus provident est laudantium repellat est sequi necessitatibus. Quo magni doloribus ea perspiciatis eius ab minima animi et itaque necessitatibus.</p>
+    <h2>Teaching</h2>
+    <p>Miriam’s teaching interests include:</p>
+    <ul>
+      <li><strong>Hic reiciendis voluptates eum voluptate galisum aut unde voluptatem</strong></li>
+      <li><strong>Aut suscipit nobis in voluptatem porro sit soluta tempore est natus quisquam</strong></li>
+      <li><strong>Voluptatem dolorem in enim animi</strong></li>
+      <li>and <strong>laudantium</strong></li>
+    </ul>
+  </section>
+  <h2 class="gridtitle">Miriam currently has teaching capacity on the following programmes</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720intercity1.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">BSc (Hons) Soluta Rerum</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720intercity2.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">Soluta Rerum and Quibusdam</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720intercity3.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">Soluta Rerum and Ratione</a></figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <figure><a href="#"><img src="images/1280x720intercity4.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">MSc Soluta</a></figcaption>
+      </figure>
+    </div>
+  </div>
+  <section>
+    <h2>Contact Miriam</h2>
+    <ul>
+      <li><a href="#">Media enquiries</a></li>
+      <li><a href="#">Research collaboration</a></li>
+      <li><a href="#">Business solutions</a></li>
+    </ul>
+    <p><span class="iconfont" aria-hidden="true">&#40;</span>Room 210, Obcaecati Aspernatur, Drake Circus, Plymouth, PL4 8AA<br>
+      <span class="iconfont" aria-hidden="true">0</span>+44(0)1752 524288<br>
+      <span class="iconfont" aria-hidden="true">/</span><a href="#">miriam.mariamu@plymouth.ac.uk</a></p>
+    <p class="mbot0"><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">l</a></span></p>
+  </section>
+</main>
+</body>
+</html>
