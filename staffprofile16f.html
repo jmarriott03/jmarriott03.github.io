@@ -15,6 +15,7 @@
 --link: #00e;
 --visited: purple;
 --red: #c00;
+--cop28: #e2c31b;
 }
 @font-face {
     font-family: icon;
@@ -216,11 +217,17 @@ figcaption {
 .mbot0 {
     margin-bottom: 0;
 }
+.mbot1 {
+    margin-bottom: 1rem;
+}
 .ptop0 {
     padding-top: 0;
 }
 .pbot0 {
     padding-bottom: 0;
+}
+.pad1 {
+    padding: 1rem;
 }
 .nomargin {
     margin: 0;
@@ -279,6 +286,22 @@ figcaption {
     width: 5rem;
     margin: 0 1rem 1rem 0;
 }
+.verticalalign {
+    max-width: 60rem;
+    background-color: var(--cop28);
+    color: var(--black);
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.width50 {
+    width: 50%;
+    margin: 0;
+}
+.black, .black a {
+    color: var(--black);
+}
 
 @media (max-width: 50em) {
 .profile {
@@ -291,21 +314,30 @@ figcaption {
 .fullw {
     position: relative;
 }
+.width50 {
+    width: 100%;
+}
+.flex {
+    display: inherit;
+}
 }
 </style>
 </head>
 <body>
 <main>
   <div>
-    <div class="profile">
-      <div class="profileimage"><img src="images/720x720marine1.jpg" alt=""></div>
-      <div class="profiletext">
-        <p class="nomargin">Academic profile</p>
-        <h2 class="nomargin">Dr Miriam Mariamu</h2>
-        <p>Lecturer in Diagnostic Radiography<br>
-          Medical School (Faculty of Health)</p>
+    <div class="fullw">
+      <div class="profile">
+        <div class="profileimage"><img src="images/720x720richardthompson.jpg" alt=""></div>
+        <div class="profiletext">
+          <p class="nomargin">Academic profile</p>
+          <h2 class="nomargin">Professor Richard Thompson OBE FRS</h2>
+          <p>Director of the <a href="#">Marine Institute</a><br>
+            Professor of Marine Biology</p>
+        </div>
       </div>
     </div>
+    <div class="heroimage"><img src="images/1280x720richardthompson.jpg" alt=""></div>
   </div>
   <div class="metrics">
     <div><a href="#">
@@ -337,65 +369,74 @@ figcaption {
       <p>Student theses</p>
       </a></div>
   </div>
-  <section class="mtop0 ptop0 pbot0">
+  <div class="verticalalign mtop0 mbot1">
+    <div class="flex bg-lgrey">
+      <div class="width50"><img src="images/1280x720cop28.jpg" alt=""></div>
+      <div class="width50 pad1">
+        <h2>United Nations Climate Change Conference of the Parties (COP28)</h2>
+        <p class="mbot0 black">Climate change is a major challenge facing society and the environment. <a href="#">Learn more about the role we played during COP28</a></p>
+      </div>
+    </div>
+  </div>
+  <section class="mtop0 pbot0">
     <h2>The Global Goals</h2>
-    <p>In 2015, UN member states agreed to 17 global <a href="#">Sustainable Development Goals (SDGs)</a> to end poverty, protect the planet and ensure prosperity for all. Miriam's work contributes towards the following SDG(s):</p>
-    <div class="theglobalgoals"><img src="images/theglobalgoals/theglobalgoals1.svg" alt="Goal 1: No Poverty" title="Goal 1: No Poverty"><img src="images/theglobalgoals/theglobalgoals2.svg" alt="Goal 2: Zero Hunger" title="Goal 2: Zero Hunger"><img src="images/theglobalgoals/theglobalgoals3.svg" alt="Goal 3: Good Health and Well-Being" title="Goal 3: Good Health and Well-Being"><img src="images/theglobalgoals/theglobalgoals18.svg" alt="THE GLOBAL GOALS For Sustainable Development" title="THE GLOBAL GOALS For Sustainable Development"></div>
-    <h2>About Miriam</h2>
-    <p>Lorem ipsum dolor sit amet. Sit autem nulla est perferendis enim et harum inventore. Qui possimus perspiciatis quo alias dignissimos ea reprehenderit ipsa eum voluptatem illo eos fugiat consequuntur eos eligendi adipisci At distinctio tenetur.</p>
-    <p>Eum nesciunt voluptas sit vero earum id voluptatem expedita sit odit provident et molestiae natus. Non accusamus recusandae ad rerum fuga et galisum reprehenderit ab rerum omnis. Cum quasi voluptate hic internos dolorem quo dolores magni.</p>
+    <p>In 2015, UN member states agreed to 17 global <a href="#">Sustainable Development Goals (SDGs)</a> to end poverty, protect the planet and ensure prosperity for all. Richard's work contributes towards the following SDG(s):</p>
+    <div class="theglobalgoals"><img src="images/theglobalgoals/theglobalgoals12.svg" alt="Goal 12: Responsible Consumption and Production" title="Goal 12: Responsible Consumption and Production"><img src="images/theglobalgoals/theglobalgoals13.svg" alt="Goal 13: Climate Action" title="Goal 13: Climate Action"><img src="images/theglobalgoals/theglobalgoals14.svg" alt="Goal 14: Life Below Water" title="Goal 14: Life Below Water"><img src="images/theglobalgoals/theglobalgoals18.svg" alt="THE GLOBAL GOALS For Sustainable Development" title="THE GLOBAL GOALS For Sustainable Development"></div>
+    <h2>About Richard</h2>
+    <p>Richard continues to set the international agenda on research into the causes and effects of marine litter. Two decades on from his seminal paper, which first described the accumulation of ‘microplastics’ in the oceans, he has mapped out much of the territory upon which our understanding of both the impacts of plastics and the potential solutions are based.</p>
+    <p>Under his leadership, Plymouth has produced more scientific publications about marine plastic than any other university worldwide, with Richard himself having led or co-authored more than 180 scientific papers.</p>
     <h2>Research expertise</h2>
-    <p>Miriam's research focuses on three main topics:</p>
+    <p>Richard's research focuses on three main topics:</p>
     <ol>
-      <li>Ut fuga ipsa eos labore iure sit laudantium quam</li>
-      <li>Voluptatibus quos sit aliquid nobis et corporis dignissimos</li>
-      <li>Vel suscipit ullam sed adipisci sint est laboriosam corrupti eos dolores</li>
+      <li>The effects of plastic debris in the marine environment</li>
+      <li>The modification of coastal engineering structures such as coastal defences and off-shore renewable energy devices, to enhance biodiversity</li>
+      <li>The ecology and conservation of shallow water habitats</li>
     </ol>
-    <p>Miriam's broad expertise includes: <strong>reiciendis enim</strong>, <strong>excepturi illo</strong>, <strong>sequi illum</strong>, <strong>perferendis</strong>, <strong>aut officiis</strong>, <strong>architecto</strong>, <strong>tempore illo</strong>, and <strong>marine lnulla saeper</strong>.</p>
-    <p><a href="#">View Miriam's full research profile</a></p>
-    <p>Non obcaecati facere eos rerum voluptatem est accusamus provident est laudantium repellat est sequi necessitatibus. Quo magni doloribus ea perspiciatis eius ab minima animi et itaque necessitatibus.</p>
+    <p>Richard's broad expertise includes: <strong>marine pollution</strong>, <strong>plastic pollution</strong>, <strong>marine debris</strong>, <strong>microplastics</strong>, <strong>marine biology</strong>, <strong>plastics</strong>, <strong>government policy</strong>, and <strong>marine litter</strong>.</p>
+    <p><a href="#">View Richard's full research profile</a></p>
+    <p>Richard receiving the University's third Queen’s Anniversary Prize for Higher and Further Education on 20 February 2020 for its pioneering research on microplastics pollution in the oceans and its impact on the environment and changing behaviour.</p>
     <h2>Teaching</h2>
-    <p>Miriam’s teaching interests include:</p>
+    <p>Richard’s teaching interests include:</p>
     <ul>
-      <li><strong>Hic reiciendis voluptates eum voluptate galisum aut unde voluptatem</strong></li>
-      <li><strong>Aut suscipit nobis in voluptatem porro sit soluta tempore est natus quisquam</strong></li>
-      <li><strong>Voluptatem dolorem in enim animi</strong></li>
-      <li>and <strong>laudantium</strong></li>
+      <li><strong>ecology of shallow water marine habitats</strong></li>
+      <li><strong>experimental marine ecology</strong></li>
+      <li><strong>field ecology</strong></li>
+      <li>and <strong>statistics</strong></li>
     </ul>
   </section>
-  <h2 class="gridtitle">Miriam currently has teaching capacity on the following programmes</h2>
+  <h2 class="gridtitle">Richard's featured research</h2>
   <div class="grid-container">
     <div class="grid-item">
-      <figure><a href="#"><img src="images/1280x720intercity1.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
-        <figcaption><a href="#">BSc (Hons) Soluta Rerum</a></figcaption>
+      <figure><a href="#"><img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">International Marine Litter Research Unit</a></figcaption>
       </figure>
     </div>
     <div class="grid-item">
-      <figure><a href="#"><img src="images/1280x720intercity2.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
-        <figcaption><a href="#">Soluta Rerum and Quibusdam</a></figcaption>
+      <figure><a href="#"><img src="images/1280x720marine7.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">Effects of plastic debris in the marine environment</a></figcaption>
       </figure>
     </div>
     <div class="grid-item">
-      <figure><a href="#"><img src="images/1280x720intercity3.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
-        <figcaption><a href="#">Soluta Rerum and Ratione</a></figcaption>
+      <figure><a href="#"><img src="images/1280x720marine8.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">Modification of coastal engineering to enhance biodiversity</a></figcaption>
       </figure>
     </div>
     <div class="grid-item">
-      <figure><a href="#"><img src="images/1280x720intercity4.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
-        <figcaption><a href="#">MSc Soluta</a></figcaption>
+      <figure><a href="#"><img src="images/1280x720marine9.jpg" alt="alternate text" width="1280" height="720" loading="lazy"></a>
+        <figcaption><a href="#">Ecology and conservation of shallow water habitats</a></figcaption>
       </figure>
     </div>
   </div>
   <section>
-    <h2>Contact Miriam</h2>
+    <h2>Contact Richard</h2>
     <ul>
       <li><a href="#">Media enquiries</a></li>
       <li><a href="#">Research collaboration</a></li>
       <li><a href="#">Business solutions</a></li>
     </ul>
-    <p><span class="iconfont" aria-hidden="true">&#40;</span>Room 210, Obcaecati Aspernatur, Drake Circus, Plymouth, PL4 8AA<br>
-      <span class="iconfont" aria-hidden="true">0</span>+44(0)1752 524288<br>
-      <span class="iconfont" aria-hidden="true">/</span><a href="#">miriam.mariamu@plymouth.ac.uk</a></p>
+    <p><span class="iconfont" aria-hidden="true">&#40;</span>Room 308, Marine Building, Drake Circus, Plymouth, PL4 8AA<br>
+      <span class="iconfont" aria-hidden="true">0</span>+44(0)1752 584651<br>
+      <span class="iconfont" aria-hidden="true">/</span><a href="#">R.C.Thompson@plymouth.ac.uk</a></p>
     <p class="mbot0"><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">l</a></span></p>
   </section>
 </main>
