@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon7t-webfont.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background:rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    margin-bottom: 2em;
+}
+a {
+    color: var(--link);
+}
+.visited {
+    color: var(--visited);
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background: var(--lgrey);
+    padding: 1rem;
+}
+.white, .white a {
+    color: var(--white);
+}
+.lgrey {
+    color: var(--lgrey);
+}
+.mgrey {
+    color: var(--mgrey);
+}
+.dgrey {
+    color: var(--dgrey);
+}
+.black {
+    color: var(--black);
+}
+.bg-white {
+    background: var(--white);
+}
+.bg-lgrey {
+    background: var(--lgrey);
+}
+.bg-mgrey {
+    background: var(--mgrey);
+}
+.bg-dgrey {
+    background: var(--dgrey);
+}
+.bg-black {
+    background: var(--black);
+}
+section > div {
+    container-type: inline-size;
+}
+.container {
+    width: 100%;
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+
+@container (min-width: 50em) {
+.container h2 {
+font-size: 4em;
+}
+.container p {
+font-size: 2rem;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="container">
+      <h2>hgldksjfghdflsj</h2>
+      <p>kghl jkshdflgjk dshf glsj</p>
+		<div id="widthDisplay"></div>
+<div id="fontSizeDisplay"></div>
+    </div>
+  </section>
+</main>
+	<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container');
+    const widthDisplay = document.getElementById('widthDisplay');
+    const fontSizeDisplay = document.getElementById('fontSizeDisplay');
+    const h2Element = document.querySelector('h2');
+    const pElement = document.querySelector('p');
+
+    function updateWidth() {
+        const width = container.offsetWidth;
+        widthDisplay.textContent = `Container width: ${width}px`;
+    }
+
+    function updateFontSize() {
+        const h2FontSize = window.getComputedStyle(h2Element).fontSize;
+        const pFontSize = window.getComputedStyle(pElement).fontSize;
+        fontSizeDisplay.textContent = `h2 font size: ${h2FontSize}, p font size: ${pFontSize}`;
+    }
+
+    // Initial calls
+    updateWidth();
+    updateFontSize();
+
+    // Update width on window resize
+    window.addEventListener('resize', updateWidth);
+    // Update font size on window resize
+    window.addEventListener('resize', updateFontSize);
+});
+</script>
+</body>
+</html>
