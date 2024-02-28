@@ -51,10 +51,12 @@ main {
 }
 h1 {
     font-size: 2em;
+    line-height: 1.2;
     font-weight: bold;
 }
 h2 {
     font-size: 1.5em;
+    line-height: 1.2;
     font-weight: bold;
 }
 p:not(:last-child) {
@@ -99,50 +101,39 @@ section {
     background: var(--lgrey);
     padding: 1rem;
 }
-.white, .white a {
-    color: var(--white);
-}
-.lgrey {
-    color: var(--lgrey);
-}
-.mgrey {
-    color: var(--mgrey);
-}
-.dgrey {
-    color: var(--dgrey);
-}
-.black {
-    color: var(--black);
-}
-.bg-white {
-    background: var(--white);
-}
-.bg-lgrey {
-    background: var(--lgrey);
-}
-.bg-mgrey {
-    background: var(--mgrey);
-}
-.bg-dgrey {
-    background: var(--dgrey);
-}
-.bg-black {
-    background: var(--black);
+.mtop0 {
+    margin-top: 0;
 }
 section > div {
     container-type: inline-size;
 }
 .container {
     width: 100%;
-    background-color: var(--lgrey);
     padding: 1rem;
+}
+.container h2 {
+    font-size: 2rem;
+}
+.blacktheme {
+    color: var(--white);
+    background-color: var(--black);
+}
+.blacktheme a {
+    color: var(--white)
+}
+h1, h2, p {
+    max-width: 66ch;
+    margin-left: 0;
 }
 @container (min-width: 50em) {
 .container h2 {
-font-size: 4em;
+font-size: 4rem;
+line-height: 1.2;
+margin-left: 0;
 }
 .container p {
-font-size: 2rem;
+font-size: 1.25rem;
+margin-left: 0;
 }
 }
 </style>
@@ -150,12 +141,16 @@ font-size: 2rem;
 <body>
 <main>
   <section>
-    <div class="container">
-      <h2>hgldksjfghdflsj</h2>
-      <p>kghl jkshdflgjk dshf glsj</p>
-      <div id="widthDisplay"></div>
-      <div id="fontSizeDisplay"></div>
+    <div class="container blacktheme">
+      <h2>Apply for a course starting in 2024</h2>
+      <p>The UCAS application deadline for undergraduate courses is 31 January 2024</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p><a href="#">Apply before the UCAS deadline</a></p>
     </div>
+  </section>
+  <section class="mtop0">
+    <div id="widthDisplay"></div>
+    <div id="fontSizeDisplay"></div>
   </section>
 </main>
 <script>
