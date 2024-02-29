@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--dlink: #039;
+--visited: purple;
+--ucas: #e32438;
+--alert: #f00;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon16.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background: rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.btn {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+.whitetxt {
+    color: var(--white);
+}
+.linkbck {
+    background-color: var(--link);
+}
+.linkbck:hover, .linkbck:focus {
+    background-color: var(--dlink);
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h2>Share</h2>
+    <button class="btn whitetxt linkbck"><span class="iconfont" aria-hidden="true">t</span>Share on X</button>
+    <button class="btn whitetxt linkbck"><span class="iconfont" aria-hidden="true">f</span>Share on Facebook</button>
+    <button class="btn whitetxt linkbck"><span class="iconfont" aria-hidden="true">l</span>Share on LinkedIn</button>
+    <button class="btn whitetxt linkbck"><span class="iconfont" aria-hidden="true">/</span>Share via Email</button>
+  </section>
+  <section>
+    <div class="codegrey"><code>:root {<br>
+      --white: #fff;<br>
+      --link: #06c;<br>
+      --dlink: #039;<br>
+      }<br>
+      @font-face {<br>
+      font-family: icon;<br>
+      src: url('fonts/icon16.woff');<br>
+      }<br>
+      .iconfont {<br>
+      font-family: 'icon', sans-serif;<br>
+      font-weight: normal;<br>
+      line-height: 1;<br>
+      width: 1em;<br>
+      text-align: center;<br>
+      letter-spacing: 0.5rem;<br>
+      }<br>
+      .btn {<br>
+      font-size: 1rem;<br>
+      line-height: 1.5;<br>
+      border-radius: 0.5rem;<br>
+      padding: 0.5rem 0.75rem;<br>
+      margin: 0 1rem 0 0;<br>
+      text-decoration: none;<br>
+      cursor: default;<br>
+      display: block;<br>
+      border: none;<br>
+      float: left;<br>
+      -webkit-appearance: none;<br>
+      outline-offset: 2px;<br>
+      transition: 0.3s;<br>
+      }<br>
+      .whitetxt {<br>
+      color: var(--white);<br>
+      }<br>
+      .linkbck {<br>
+      background-color: var(--link);<br>
+      }<br>
+      .linkbck:hover, .linkbck:focus {<br>
+      background-color: var(--dlink);<br>
+      }</code></div>
+    <div class="codegrey"><code>&lt;button class="btn whitetxt linkbck"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;t&lt;/span&gt;Share on X&lt;/button&gt;</code></div>
+  </section>
+</main>
+</body>
+</html>
