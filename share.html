@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share Button</title>
+<style>
+/* CSS */
+#shareButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#shareButton:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<button id="shareButton">Share</button>
+
+<script>
+// JavaScript
+document.addEventListener("DOMContentLoaded", function() {
+  var shareButton = document.getElementById("shareButton");
+  shareButton.addEventListener("click", function() {
+    var textToCopy = window.location.href; // You can modify this to the desired link
+    var tempInput = document.createElement("input");
+    tempInput.value = textToCopy;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("Link copied to clipboard: " + textToCopy);
+  });
+});
+</script>
+
+</body>
+</html>
