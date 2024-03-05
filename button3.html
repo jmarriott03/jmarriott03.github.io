@@ -137,8 +137,10 @@ section h2 {
     clear: both;
 }
 .codegrey {
+    max-width: 40em;
     background-color: var(--lgrey);
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .largetext {
     font-size: 1.5em;
@@ -233,111 +235,109 @@ section h2 {
     <button class="btn c-btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
     <button class="btn c-btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
   </section>
-  <section>
-    <div class="codegrey"><code>:root {<br>
-      --btn-primary: #06c;<br>
---btn-primary-hov: #004387;<br>
---btn-secondary: #666;<br>
---btn-secondary-hov: #434343;<br>
---btn-success: #008a00;<br>
---btn-success-hov: #063;<br>
---btn-danger: #c33;<br>
---btn-danger-hov: #872222;<br>
---btn-warning: #fc3;<br>
---btn-warning-hov: #ca9700;<br>
---btn-info: #2a7da7;<br>
---btn-info-hov: #1c526e;<br>
---btn-light: #ccc;<br>
---btn-light-hov: #878787;<br>
---btn-dark: #333;<br>
---btn-dark-hov: #111;<br>
-}<br>
-      @font-face {<br>
-      font-family: icon;<br>
-      src: url('fonts/icon16.woff');<br>
-      }<br>
-      .iconfont {<br>
-      font-family: 'icon', sans-serif;<br>
-      font-weight: normal;<br>
-      line-height: 1;<br>
-      width: 1em;<br>
-      text-align: center;<br>
-      letter-spacing: 0.5rem;<br>
-      }<br>
-      .btn {<br>
-      font-size: 1rem;<br>
-      line-height: 1.5;<br>
-      border-radius: 0.25rem;<br>
-      padding: 0.5rem 0.75rem;<br>
-      margin: 0 1rem 0 0;<br>
-      text-decoration: none;<br>
-      cursor: default;<br>
-      display: block;<br>
-      border: none;<br>
-      float: left;<br>
-      -webkit-appearance: none;<br>
-      outline-offset: 2px;<br>
-      transition: 0.3s;<br>
-      }<br>
-     .btn-primary {<br>
+  <div class="codegrey"><code>:root {<br>
+    --btn-primary: #06c;<br>
+    --btn-primary-hov: #004387;<br>
+    --btn-secondary: #666;<br>
+    --btn-secondary-hov: #434343;<br>
+    --btn-success: #008a00;<br>
+    --btn-success-hov: #063;<br>
+    --btn-danger: #c33;<br>
+    --btn-danger-hov: #872222;<br>
+    --btn-warning: #fc3;<br>
+    --btn-warning-hov: #ca9700;<br>
+    --btn-info: #2a7da7;<br>
+    --btn-info-hov: #1c526e;<br>
+    --btn-light: #ccc;<br>
+    --btn-light-hov: #878787;<br>
+    --btn-dark: #333;<br>
+    --btn-dark-hov: #111;<br>
+    }<br>
+    @font-face {<br>
+    font-family: icon;<br>
+    src: url('fonts/icon16.woff');<br>
+    }<br>
+    .iconfont {<br>
+    font-family: 'icon', sans-serif;<br>
+    font-weight: normal;<br>
+    line-height: 1;<br>
+    width: 1em;<br>
+    text-align: center;<br>
+    letter-spacing: 0.5rem;<br>
+    }<br>
+    .btn {<br>
+    font-size: 1rem;<br>
+    line-height: 1.5;<br>
+    border-radius: 0.25rem;<br>
+    padding: 0.5rem 0.75rem;<br>
+    margin: 0 1rem 0 0;<br>
+    text-decoration: none;<br>
+    cursor: default;<br>
+    display: block;<br>
+    border: none;<br>
+    float: left;<br>
+    -webkit-appearance: none;<br>
+    outline-offset: 2px;<br>
+    transition: 0.3s;<br>
+    }<br>
+    .c-btn-primary {<br>
     color: var(--white);<br>
     background-color: var(--btn-primary);<br>
-}<br>
-.btn-primary:hover, .btn-primary:focus {<br>
+    }<br>
+    .c-btn-primary:hover, .btn-primary:focus {<br>
     background-color: var(--btn-primary-hov);<br>
-}<br>
-.btn-secondary {<br>
+    }<br>
+    .c-btn-secondary {<br>
     color: var(--white);<br>
     background-color: var(--btn-secondary);<br>
-}<br>
-.btn-secondary:hover, .btn-secondary:focus {<br>
+    }<br>
+    .c-btn-secondary:hover, .btn-secondary:focus {<br>
     background-color: var(--btn-secondary-hov);<br>
-}<br>
-.btn-success {<br>
+    }<br>
+    .c-btn-success {<br>
     color: var(--white);<br>
     background-color: var(--btn-success);<br>
-}<br>
-.btn-success:hover, .btn-success:focus {<br>
+    }<br>
+    .c-btn-success:hover, .btn-success:focus {<br>
     background-color: var(--btn-success-hov);<br>
-}<br>
-.btn-danger {<br>
+    }<br>
+    .c-btn-danger {<br>
     color: var(--white);<br>
     background-color: var(--btn-danger);<br>
-}<br>
-.btn-danger:hover, .btn-danger:focus {<br>
+    }<br>
+    .c-btn-danger:hover, .btn-danger:focus {<br>
     background-color: var(--btn-danger-hov);<br>
-}<br>
-.btn-warning {<br>
+    }<br>
+    .c-btn-warning {<br>
     color: var(--black);<br>
     background-color: var(--btn-warning);<br>
-}<br>
-.btn-warning:hover, .btn-warning:focus {<br>
+    }<br>
+    .c-btn-warning:hover, .btn-warning:focus {<br>
     background-color: var(--btn-warning-hov);<br>
-}<br>
-.btn-info {<br>
+    }<br>
+    .c-btn-info {<br>
     color: var(--white);<br>
     background-color: var(--btn-info);<br>
-}<br>
-.btn-info:hover, .btn-info:focus {<br>
+    }<br>
+    .c-btn-info:hover, .btn-info:focus {<br>
     background-color: var(--btn-info-hov);<br>
-}<br>
-.btn-light {<br>
+    }<br>
+    .c-btn-light {<br>
     color: var(--black);<br>
     background-color: var(--btn-light);<br>
-}<br>
-.btn-light:hover, .btn-light:focus {<br>
+    }<br>
+    .c-btn-light:hover, .btn-light:focus {<br>
     background-color: var(--btn-light-hov);<br>
-}<br>
-.btn-dark {<br>
+    }<br>
+    .c-btn-dark {<br>
     color: var(--white);<br>
     background-color: var(--btn-dark);<br>
-}<br>
-.btn-dark:hover, .btn-dark:focus {<br>
+    }<br>
+    .c-btn-dark:hover, .btn-dark:focus {<br>
     background-color: var(--btn-dark-hov);<br>
-}
-		</code></div>
-    <div class="codegrey"><code>&lt;button class="btn c-btn-secondary"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;Secondary&lt;/button&gt;</code></div>
-  </section>
+    }<br>
+    </code></div>
+  <div class="codegrey"><code>&lt;button class="btn c-btn-secondary"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;Secondary&lt;/button&gt;</code></div>
 </main>
 </body>
 </html>
