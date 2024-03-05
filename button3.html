@@ -13,9 +13,6 @@
 --dgrey: #666;
 --black: #111;
 --link: #06c;
---link-hov: #039;
---visited: purple;
---alert: #fc0;
 --btn-primary: #06c;
 --btn-primary-hov: #039;
 --btn-secondary: #666;
@@ -164,60 +161,60 @@ section h2 {
 .whitetxt {
     color: var(--white);
 }
-.c-btn-primary {
+.btn-primary {
     color: var(--white);
     background-color: var(--btn-primary);
 }
-.c-btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover, .btn-primary:focus {
     background-color: var(--btn-primary-hov);
 }
-.c-btn-secondary {
+.btn-secondary {
     color: var(--white);
     background-color: var(--btn-secondary);
 }
-.c-btn-secondary:hover, .btn-secondary:focus {
+.btn-secondary:hover, .btn-secondary:focus {
     background-color: var(--btn-secondary-hov);
 }
-.c-btn-success {
+.btn-success {
     color: var(--white);
     background-color: var(--btn-success);
 }
-.c-btn-success:hover, .btn-success:focus {
+.btn-success:hover, .btn-success:focus {
     background-color: var(--btn-success-hov);
 }
-.c-btn-danger {
+.btn-danger {
     color: var(--white);
     background-color: var(--btn-danger);
 }
-.c-btn-danger:hover, .btn-danger:focus {
+.btn-danger:hover, .btn-danger:focus {
     background-color: var(--btn-danger-hov);
 }
-.c-btn-warning {
+.btn-warning {
     color: var(--black);
     background-color: var(--btn-warning);
 }
-.c-btn-warning:hover, .btn-warning:focus {
+.btn-warning:hover, .btn-warning:focus {
     background-color: var(--btn-warning-hov);
 }
-.c-btn-info {
+.btn-info {
     color: var(--white);
     background-color: var(--btn-info);
 }
-.c-btn-info:hover, .btn-info:focus {
+.btn-info:hover, .btn-info:focus {
     background-color: var(--btn-info-hov);
 }
-.c-btn-light {
+.btn-light {
     color: var(--black);
     background-color: var(--btn-light);
 }
-.c-btn-light:hover, .btn-light:focus {
+.btn-light:hover, .btn-light:focus {
     background-color: var(--btn-light-hov);
 }
-.c-btn-dark {
+.btn-dark {
     color: var(--white);
     background-color: var(--btn-dark);
 }
-.c-btn-dark:hover, .btn-dark:focus {
+.btn-dark:hover, .btn-dark:focus {
     background-color: var(--btn-dark-hov);
 }
 </style>
@@ -226,16 +223,18 @@ section h2 {
 <main>
   <section>
     <h2>Button colours</h2>
-    <button class="btn c-btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
-    <button class="btn c-btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
-    <button class="btn c-btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
-    <button class="btn c-btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
-    <button class="btn c-btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
-    <button class="btn c-btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
-    <button class="btn c-btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
-    <button class="btn c-btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+    <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+    <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+    <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+    <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+    <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+    <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+    <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
   </section>
   <div class="codegrey"><code>:root {<br>
+    --white: #fff;<br>
+    --black: #111;<br>
     --btn-primary: #06c;<br>
     --btn-primary-hov: #039;<br>
     --btn-secondary: #666;<br>
@@ -280,64 +279,64 @@ section h2 {
     outline-offset: 2px;<br>
     transition: 0.3s;<br>
     }<br>
-    .c-btn-primary {<br>
+    .btn-primary {<br>
     color: var(--white);<br>
     background-color: var(--btn-primary);<br>
     }<br>
-    .c-btn-primary:hover, .btn-primary:focus {<br>
+    .btn-primary:hover, .btn-primary:focus {<br>
     background-color: var(--btn-primary-hov);<br>
     }<br>
-    .c-btn-secondary {<br>
+    .btn-secondary {<br>
     color: var(--white);<br>
     background-color: var(--btn-secondary);<br>
     }<br>
-    .c-btn-secondary:hover, .btn-secondary:focus {<br>
+    .btn-secondary:hover, .btn-secondary:focus {<br>
     background-color: var(--btn-secondary-hov);<br>
     }<br>
-    .c-btn-success {<br>
+    .btn-success {<br>
     color: var(--white);<br>
     background-color: var(--btn-success);<br>
     }<br>
-    .c-btn-success:hover, .btn-success:focus {<br>
+    .btn-success:hover, .btn-success:focus {<br>
     background-color: var(--btn-success-hov);<br>
     }<br>
-    .c-btn-danger {<br>
+    .btn-danger {<br>
     color: var(--white);<br>
     background-color: var(--btn-danger);<br>
     }<br>
-    .c-btn-danger:hover, .btn-danger:focus {<br>
+    .btn-danger:hover, .btn-danger:focus {<br>
     background-color: var(--btn-danger-hov);<br>
     }<br>
-    .c-btn-warning {<br>
+    .btn-warning {<br>
     color: var(--black);<br>
     background-color: var(--btn-warning);<br>
     }<br>
-    .c-btn-warning:hover, .btn-warning:focus {<br>
+    .btn-warning:hover, .btn-warning:focus {<br>
     background-color: var(--btn-warning-hov);<br>
     }<br>
-    .c-btn-info {<br>
+    .btn-info {<br>
     color: var(--white);<br>
     background-color: var(--btn-info);<br>
     }<br>
-    .c-btn-info:hover, .btn-info:focus {<br>
+    .btn-info:hover, .btn-info:focus {<br>
     background-color: var(--btn-info-hov);<br>
     }<br>
-    .c-btn-light {<br>
+    .btn-light {<br>
     color: var(--black);<br>
     background-color: var(--btn-light);<br>
     }<br>
-    .c-btn-light:hover, .btn-light:focus {<br>
+    .btn-light:hover, .btn-light:focus {<br>
     background-color: var(--btn-light-hov);<br>
     }<br>
-    .c-btn-dark {<br>
+    .btn-dark {<br>
     color: var(--white);<br>
     background-color: var(--btn-dark);<br>
     }<br>
-    .c-btn-dark:hover, .btn-dark:focus {<br>
+    .btn-dark:hover, .btn-dark:focus {<br>
     background-color: var(--btn-dark-hov);<br>
     }<br>
     </code></div>
-  <div class="codegrey"><code>&lt;button class="btn c-btn-secondary"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;Secondary&lt;/button&gt;</code></div>
+  <div class="codegrey"><code>&lt;button class="btn btn-secondary"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;Secondary&lt;/button&gt;</code></div>
 </main>
 </body>
 </html>
