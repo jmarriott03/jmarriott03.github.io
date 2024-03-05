@@ -102,8 +102,10 @@ section {
     padding: 1em;
 }
 .codegrey {
+    max-width: 38em;
     background-color: var(--lgrey);
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .largetext {
     font-size: 1.5em;
@@ -146,41 +148,39 @@ section {
     <button class="btn whitetxt linkbck">Button</button>
     <input type="button" class="btn whitetxt linkbck" value="Input Button">
   </section>
-  <section>
-    <div class="codegrey"><code>:root {<br>
-      --white: #fff;<br>
-      --link: #00e;<br>
-      --dlink: #009;<br>
-      }<br>
-      .btn {<br>
-      font-size: 1rem;<br>
-      line-height: 1.5;<br>
-      border-radius: 0.25rem;<br>
-      padding: 0.5rem 0.75rem;<br>
-      margin: 0 1rem 0 0;<br>
-      text-decoration: none;<br>
-      cursor: default;<br>
-      display: block;<br>
-      border: none;<br>
-      float: left;<br>
-      -webkit-appearance: none;<br>
-      outline-offset: 2px;<br>
-      transition: 0.3s;<br>
-      }<br>
-      .whitetxt {<br>
-      color: var(--white);<br>
-      }<br>
-      .linkbck {<br>
-      background-color: var(--link);<br>
-      }<br>
-      .linkbck:hover, .linkbck:focus {<br>
-      background-color: var(--dlink);<br>
-      }</code></div>
-    <div class="codegrey"> <code>&lt;p&gt;&lt;button&gt;Default button&lt;/button&gt;&lt;/p&gt;<br>
-      &lt;a href=&quot;#&quot; class=&quot;btn whitetxt linkbck&quot;&gt;Link button&lt;/a&gt;<br>
-      &lt;button class=&quot;btn whitetxt linkbck&quot;&gt;Button&lt;/button&gt;<br>
-      &lt;input type=&quot;button&quot; class=&quot;btn whitetxt linkbck&quot; value=&quot;Input button&quot;&gt;</code></div>
-  </section>
+  <div class="codegrey"><code>:root {<br>
+    --white: #fff;<br>
+    --link: #00e;<br>
+    --dlink: #009;<br>
+    }<br>
+    .btn {<br>
+    font-size: 1rem;<br>
+    line-height: 1.5;<br>
+    border-radius: 0.25rem;<br>
+    padding: 0.5rem 0.75rem;<br>
+    margin: 0 1rem 0 0;<br>
+    text-decoration: none;<br>
+    cursor: default;<br>
+    display: block;<br>
+    border: none;<br>
+    float: left;<br>
+    -webkit-appearance: none;<br>
+    outline-offset: 2px;<br>
+    transition: 0.3s;<br>
+    }<br>
+    .whitetxt {<br>
+    color: var(--white);<br>
+    }<br>
+    .linkbck {<br>
+    background-color: var(--link);<br>
+    }<br>
+    .linkbck:hover, .linkbck:focus {<br>
+    background-color: var(--dlink);<br>
+    }</code></div>
+  <div class="codegrey"> <code>&lt;p&gt;&lt;button&gt;Default button&lt;/button&gt;&lt;/p&gt;<br>
+    &lt;a href=&quot;#&quot; class=&quot;btn whitetxt linkbck&quot;&gt;Link button&lt;/a&gt;<br>
+    &lt;button class=&quot;btn whitetxt linkbck&quot;&gt;Button&lt;/button&gt;<br>
+    &lt;input type=&quot;button&quot; class=&quot;btn whitetxt linkbck&quot; value=&quot;Input button&quot;&gt;</code></div>
 </main>
 </body>
 </html>
