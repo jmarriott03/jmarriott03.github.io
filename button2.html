@@ -118,8 +118,10 @@ section {
     padding: 1em;
 }
 .codegrey {
+    max-width: 38em;
     background-color: var(--lgrey);
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .largetext {
     font-size: 1.5em;
@@ -160,50 +162,48 @@ section {
     <button class="btn whitetxt linkbck"><span class="iconfont" aria-hidden="true">l</span>Share on LinkedIn</button>
     <button class="btn whitetxt linkbck"><span class="iconfont" aria-hidden="true">/</span>Share via Email</button>
   </section>
-  <section>
-    <div class="codegrey"><code>:root {<br>
-      --white: #fff;<br>
-      --link: #06c;<br>
-      --dlink: #039;<br>
-      }<br>
-      @font-face {<br>
-      font-family: icon;<br>
-      src: url('fonts/icon16.woff');<br>
-      }<br>
-      .iconfont {<br>
-      font-family: 'icon', sans-serif;<br>
-      font-weight: normal;<br>
-      line-height: 1;<br>
-      width: 1em;<br>
-      text-align: center;<br>
-      letter-spacing: 0.5rem;<br>
-      }<br>
-      .btn {<br>
-      font-size: 1rem;<br>
-      line-height: 1.5;<br>
-      border-radius: 0.25rem;<br>
-      padding: 0.5rem 0.75rem;<br>
-      margin: 0 1rem 0 0;<br>
-      text-decoration: none;<br>
-      cursor: default;<br>
-      display: block;<br>
-      border: none;<br>
-      float: left;<br>
-      -webkit-appearance: none;<br>
-      outline-offset: 2px;<br>
-      transition: 0.3s;<br>
-      }<br>
-      .whitetxt {<br>
-      color: var(--white);<br>
-      }<br>
-      .linkbck {<br>
-      background-color: var(--link);<br>
-      }<br>
-      .linkbck:hover, .linkbck:focus {<br>
-      background-color: var(--dlink);<br>
-      }</code></div>
-    <div class="codegrey"><code>&lt;button class="btn whitetxt linkbck"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;t&lt;/span&gt;Share on X&lt;/button&gt;</code></div>
-  </section>
+  <div class="codegrey"><code>:root {<br>
+    --white: #fff;<br>
+    --link: #06c;<br>
+    --dlink: #039;<br>
+    }<br>
+    @font-face {<br>
+    font-family: icon;<br>
+    src: url('fonts/icon16.woff');<br>
+    }<br>
+    .iconfont {<br>
+    font-family: 'icon', sans-serif;<br>
+    font-weight: normal;<br>
+    line-height: 1;<br>
+    width: 1em;<br>
+    text-align: center;<br>
+    letter-spacing: 0.5rem;<br>
+    }<br>
+    .btn {<br>
+    font-size: 1rem;<br>
+    line-height: 1.5;<br>
+    border-radius: 0.25rem;<br>
+    padding: 0.5rem 0.75rem;<br>
+    margin: 0 1rem 0 0;<br>
+    text-decoration: none;<br>
+    cursor: default;<br>
+    display: block;<br>
+    border: none;<br>
+    float: left;<br>
+    -webkit-appearance: none;<br>
+    outline-offset: 2px;<br>
+    transition: 0.3s;<br>
+    }<br>
+    .whitetxt {<br>
+    color: var(--white);<br>
+    }<br>
+    .linkbck {<br>
+    background-color: var(--link);<br>
+    }<br>
+    .linkbck:hover, .linkbck:focus {<br>
+    background-color: var(--dlink);<br>
+    }</code></div>
+  <div class="codegrey"><code>&lt;button class="btn whitetxt linkbck"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;t&lt;/span&gt;Share on X&lt;/button&gt;</code></div>
 </main>
 </body>
 </html>
