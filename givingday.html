@@ -109,10 +109,16 @@ img {
     text-overflow: ellipsis;
     margin-top: 0;
 }
-section {
+.container {
     max-width: 23rem;
     overflow: hidden;
     padding: 1em;
+    margin: 0 auto;
+}
+.fullw {
+    width: 100%;
+    border-bottom: 2px solid white;
+    margin: 0;
 }
 .codegrey {
     background-color: var(--lgrey);
@@ -126,8 +132,10 @@ section {
 </head>
 <body>
 <main>
-  <section>
-  <img src="images/giving-day-header2.svg" alt="Giving Day"/></section>
+  <div class="fullw">
+    <div class="container"><img src="images/giving-day-header.svg" alt="Giving Day"></div>
+  </div>
+  <div class="container"><img src="images/giving-day-header2.svg" alt="Giving Day"></div>
 </main>
 </body>
 </html>
