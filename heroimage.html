@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon14.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    max-width: 60em;
+    background-color: var(--lgrey);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.aspect3-1 {
+    aspect-ratio: 3 / 1;
+}
+.hero-old {
+    position: relative;
+    background-image: url("images/1280x720nurse.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero-new {
+    position: relative;
+}
+.hero-new img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-new img {
+}
+.herotext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25%;
+    border: 1px dashed white;
+    overflow: hidden;
+    width: 50%;
+    padding: 1rem;
+    margin: 0;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h2>Old 'background-image' way</h2>
+    <div class="hero-old aspect3-1">
+      <div class="herotext">
+        <h2>Study nursing - make it count</h2>
+      </div>
+    </div>
+    <div class="codegrey"><code>.hero-old {<br>
+      position: relative;<br>
+      <strong>background-image: url("images/1280x720nurse.jpg");<br>
+      background-repeat: no-repeat;<br>
+      background-size: cover;<br>
+      background-position: center;</strong><br>
+      }<br>
+      .herotext {<br>
+      position: absolute;<br>
+      top: 50%;<br>
+      transform: translateY(-50%);<br>
+      left: 25%;<br>
+      border: 1px dashed white;<br>
+      overflow: hidden;<br>
+      width: 50%;<br>
+      padding: 1rem;<br>
+      margin: 0;<br>
+      color: var(--white);<br>
+      background-color: rgba(0, 0, 0, 0.3);<br>
+      }<br>
+      .aspect3-1 {<br>
+      aspect-ratio: 3 / 1;<br>
+      }</code></div>
+    <div class="codegrey"><code>&lt;div class="hero-old aspect3-1"&gt;<br>
+      &lt;div class="herotext"&gt;<br>
+      &lt;h2&gt;Study nursing - make it count&lt;/h2&gt;<br>
+      &lt;/div&gt;<br>
+      &lt;/div&gt;<br>
+      </code></div>
+    <h2>New 'object-fit' way</h2>
+    <div class="hero-new aspect3-1"><img src="images/1280x720nurse.jpg" alt=""/>
+      <div class="herotext">
+        <h2>Study nursing - make it count</h2>
+      </div>
+    </div>
+    <div class="codegrey"><code> .hero-new {<br>
+      position: relative;<br>
+      }<br>
+      .hero-new img {<br>
+      <strong>width: 100%;<br>
+      height: 100%;<br>
+      object-fit: cover;</strong><br>
+      }<br>
+      .herotext {<br>
+      position: absolute;<br>
+      top: 50%;<br>
+      transform: translateY(-50%);<br>
+      left: 25%;<br>
+      border: 1px dashed white;<br>
+      overflow: hidden;<br>
+      width: 50%;<br>
+      padding: 1rem;<br>
+      margin: 0;<br>
+      color: var(--white);<br>
+      background-color: rgba(0, 0, 0, 0.3);<br>
+      }<br>
+      .aspect3-1 {<br>
+      aspect-ratio: 3 / 1;<br>
+      }</code></div>
+    <div class="codegrey"><code> &lt;div class="hero-new aspect3-1"&gt;<strong>&lt;img src="images/1280x720nurse.jpg" alt=""/&gt;</strong><br>
+      &lt;div class="herotext"&gt;<br>
+      &lt;h2&gt;Study nursing - make it count&lt;/h2&gt;<br>
+      &lt;/div&gt;<br>
+      &lt;/div&gt; </code></div>
+  </section>
+</main>
+</body>
+</html>
