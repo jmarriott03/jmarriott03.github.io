@@ -17,7 +17,7 @@
 }
 @font-face {
     font-family: icon;
-    src: url('fonts/icon14.woff');
+    src: url('fonts/icon16.woff');
 }
 .iconfont {
     font-family: 'icon', sans-serif;
@@ -112,7 +112,6 @@ img {
     text-overflow: ellipsis;
     margin-top: 0;
 }
-
 .codegrey {
     background-color: var(--lgrey);
     padding: 1em;
@@ -129,54 +128,6 @@ img {
     position: relative;
     height: 100vh;
 }
-.loader {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-.loader:before, .loader:after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    animation: pulsOut 2s ease-in-out infinite;
-    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
-}
-.loader:before {
-    width: 100%;
-    padding-bottom: 100%;
-    box-shadow: inset 0 0 0 1rem #fff;
-    animation-name: pulsIn;
-}
-.loader:after {
-    width: calc(100% - 2rem);
-    padding-bottom: calc(100% - 2rem);
-    box-shadow: 0 0 0 0 #fff;
-}
-@keyframes pulsIn {
-0% {
-box-shadow: inset 0 0 0 1rem #fff;
-opacity: 1;
-}
-50%, 100% {
-box-shadow: inset 0 0 0 0 #fff;
-opacity: 0;
-}
-}
-@keyframes pulsOut {
-0%, 50% {
-box-shadow: 0 0 0 0 #fff;
-opacity: 0;
-}
-100% {
-box-shadow: 0 0 0 1rem #fff;
-opacity: 1;
-}
-}
 .ptop1 {
     padding-top: 1rem;
 }
@@ -186,6 +137,25 @@ opacity: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.loader {
+    width: 4rem;
+    padding: 0.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--white);
+--_m: 
+conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 2s infinite linear;
+}
+@keyframes l3 {
+to {
+transform: rotate(1turn)
+}
 }
 </style>
 </head>

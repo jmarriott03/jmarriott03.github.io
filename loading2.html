@@ -42,8 +42,8 @@ html, body {
     font-family: sans-serif;
     font-weight: normal;
     line-height: 1.5;
-    color: var(--black);
-    background: var(--white);
+    color: var(--white);
+    background: var(--black);
     margin: 0;
 }
 main {
@@ -112,11 +112,6 @@ img {
     text-overflow: ellipsis;
     margin-top: 0;
 }
-section {
-    max-width: 60em;
-    overflow: hidden;
-    padding: 1em;
-}
 .codegrey {
     background-color: var(--lgrey);
     padding: 1em;
@@ -125,78 +120,82 @@ section {
     font-size: 1.5em;
     line-height: 1.2;
 }
+.loadercontainer {
+    max-width: 60em;
+    overflow: hidden;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+}
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.loader:before, .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #fff;
+    animation-name: pulsIn;
+}
+.loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #fff;
+}
+@keyframes pulsIn {
+0% {
+box-shadow: inset 0 0 0 1rem #fff;
+opacity: 1;
+}
+50%, 100% {
+box-shadow: inset 0 0 0 0 #fff;
+opacity: 0;
+}
+}
+@keyframes pulsOut {
+0%, 50% {
+box-shadow: 0 0 0 0 #fff;
+opacity: 0;
+}
+100% {
+box-shadow: 0 0 0 1rem #fff;
+opacity: 1;
+}
+}
+.ptop1 {
+    padding-top: 1rem;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 </style>
 </head>
 <body>
 <main>
-  <section>
-    <h1>h1</h1>
-    <h2>h2</h2>
-    <h3>h3</h3>
-    <h4>h4</h4>
-    <h5>h5</h5>
-    <h6>h6</h6>
-    <p>p</p>
-    <p><strong>strong</strong></p>
-    <p><a href="#">link</a></p>
-    <p><em>em</em></p>
-    <p class="largetext">Large text</p>
-    <p class="codegrey"><code> <strong>html, body</strong> {<br>
-      text-size-adjust: 100%;<br>
-      font-size: 100%;<br>
-      font-family: sans-serif;<br>
-      font-weight: normal;<br>
-      line-height: 1.5;<br>
-      color: #111;<br>
-      background: #fff;<br>
-      margin: 0;<br>
-      }<br>
-      <strong>h1</strong> {<br>
-      font-size: 2em;<br>
-      line-height: 1.2;<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>h2</strong> {<br>
-      font-size: 1.5em;<br>
-      line-height: 1.2;<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>h3</strong> {<br>
-      font-size: 1.17em;<br>
-      line-height: 1.2;<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>h4</strong> {<br>
-      font-size: 1em;<br>
-      line-height: 1.2;<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>h5</strong> {<br>
-      font-size: 0.83em;<br>
-      line-height: 1.2;<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>h6</strong> {<br>
-      font-size: 0.75em;<br>
-      line-height: 1.2;<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>p</strong> {<br>
-      clear: both;<br>
-      line-height: 1.5;<br>
-      margin-bottom: 1.5em;<br>
-      }<br>
-      <strong>strong</strong> {<br>
-      font-weight: bold;<br>
-      }<br>
-      <strong>em</strong> {<br>
-      font-style: italic;<br>
-      }<br>
-      <strong>.largetext</strong> {<br>
-      font-size: 1.5em;<br>
-      line-height: 1.2;<br>
-      }</code></p>
-  </section>
+  <div class="loadercontainer">
+    <div class="center">
+      <div class="loader"></div>
+      <p class="ptop1">We are working on your prospectus</p>
+    </div>
+  </div>
 </main>
 </body>
 </html>
