@@ -53,7 +53,7 @@ html, body {
     scroll-behavior: smooth;
 }
 main {
-    margin-top: 0;
+    margin: 0;
 }
 h1 {
     font-size: 2em;
@@ -64,7 +64,6 @@ h2 {
     font-size: 1.5em;
     line-height: 1.2;
     font-weight: bold;
-    scroll-margin-top: 1rem;
 }
 h3 {
     font-size: 1.17em;
@@ -86,17 +85,16 @@ h6 {
     line-height: 1.2;
     font-weight: bold;
 }
-p {
+p:not(:last-child) {
     clear: both;
     line-height: 1.5;
     margin-bottom: 1.5em;
 }
-ul {
-    margin-bottom: 1.5em;
-}
 a {
-    color: #00e;
+    color: var(--link);
     word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
 }
 strong {
     font-weight: bold;
@@ -112,69 +110,6 @@ img {
     height: auto;
     margin: 0;
 }
-section {
-    /*width: 80em;*/
-    overflow: hidden;
-    margin: 0 auto;
-}
-.nobullets {
-    list-style-type: none;
-    padding: 0;
-}
-.boldtext {
-    font-weight: bold;
-}
-.btn a {
-    padding: 0.5em 0.75em;
-    float: left;
-    border-radius: 0.5em;
-    text-align: center;
-    text-decoration: none;
-}
-.btn a:hover, .btn a:focus {
-    text-decoration: underline;
-}
-.openday {
-    background-color: var(--link);
-    margin-bottom: 1em;
-    color: var(--white);
-}
-.ucas {
-    background-color: var(--ucas);
-    color: var(--white);
-}
-.alert {
-    color: var(--alert);
-}
-.tag {
-    background-color: var(--lgrey);
-    color: var(--black);
-    font-size: 0.75em;
-    margin: 0 1rem 1rem 0;
-}
-.tag a {
-    color: var(--black);
-}
-.padl {
-    padding-left: 1rem;
-}
-.clearing-strap {
-    width: 100%;
-    overflow: hidden;
-    background-color: var(--ucas);
-    color: var(--white);
-    padding: 1rem;
-    margin: 0;
-}
-.clearing-strap a {
-    color: var(--white);
-}
-.clearing-strap p {
-    margin: 0;
-}
-.hero {
-    max-width: 60em;
-}
 .breadcrumb {
     /* max-width: 80em;*/
     overflow: hidden;
@@ -183,83 +118,6 @@ section {
 }
 .breadcrumb > p {
     margin: 0;
-}
-.positionrelative {
-    position: relative;
-}
-.bottomright {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: var(--black);
-    background: var(--white);
-    padding: 1em;
-}
-.keyinfo {
-    background: var(--lgrey);
-    display: block;
-    clear: both;
-    padding: 1em;
-    margin: 0;
-}
-.pad1 {
-    padding: 1rem;
-}
-.padalert {
-    padding: 0.5rem 1rem;
-}
-.registerpad {
-    padding-bottom: 3rem;
-}
-.costs table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin: 1em 0 0 0;
-}
-.costs td, .costs th {
-    padding: 0.5em;
-    text-align: left;
-    border: 1px solid var(--black);
-}
-.costs th {
-    background-color: var(--black);
-    color: var(--lgrey);
-}
-figcaption {
-    padding: 0;
-    margin: 0.5em 0;
-}
-.position-relative {
-    position: relative;
-}
-.position-absolute-bl {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-.position-absolute-br {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.video-length {
-    color: var(--white);
-    background-color: var(--black);
-    border-radius: 0.25em;
-    padding: 0 0.5em;
-    font-size: 0.75em;
-    margin: 0.5em;
-}
-.smalltext {
-    font-size: 0.75em;
-}
-.youtube {
-    position: absolute;
-    width: 4rem;
-    left: 50%;
-    margin-left: -2rem;
-    top: 50%;
-    margin-top: -1.5rem;
 }
 .grid {
     display: grid;
@@ -304,30 +162,6 @@ figcaption {
     max-width: 60ch;
     margin-left: 0;
 }
-/*
-.btn a {
-    padding: 0.5em 0.75em;
-    float: left;
-    border-radius: 0.5em;
-    text-align: center;
-    text-decoration: none;
-}
-.btn a:hover, .btn a:focus {
-    text-decoration: underline;
-}
-*/
-.openday {
-    background-color: var(--link);
-    margin-bottom: 1em;
-    color: var(--white);
-}
-.ucas {
-    background-color: var(--ucas);
-    color: var(--white);
-}
-.mtop1 {
-    margin-top: 1rem;
-}
 .bcktint {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -342,25 +176,9 @@ td {
     text-align: left;
     border-bottom: 1px solid var(--white);
 }
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-color: var(--lgrey);
-    padding: 1rem 1rem 0 1rem;
-    margin: 0;
-    overflow: hidden;
-    font-size: 0.875rem;
-    z-index: 99;
-    ;
-}
-.width60 {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 1em;
-}
 .padtop1 {
     padding-top: 1rem;
+	clear: both;
 }
 .btn {
     font-size: 1rem;
