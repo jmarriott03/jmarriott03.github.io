@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon16.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;/*border: 1px dotted red;*/
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    background: green;
+}
+a {
+    color: var(--link);
+    text-underline-position: under;
+    text-underline-offset: 1px;
+    overflow-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(4.5em, 1fr) );
+    /*    grid-column-gap: 1em;*/
+    margin: 0 auto;
+    max-width: 80em;
+    grid-gap: 0.25em;
+	padding: 1rem;
+}
+.grid-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 38.5em;
+    text-align: center;
+	background-color: var(--white);
+	padding: 0.5em;
+}
+.grid-item > div {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    margin-top: 0;
+}
+.swatch1 {
+    width: 100%;
+    background-color: var(--lgrey);
+    overflow: hidden;
+}
+.swatch2 {
+    width: 100%;
+    color: var(--black);
+    background-color: var(--mgrey);
+    overflow: hidden;
+}
+.swatch2 a {
+    color: var(--white);
+}
+.swatch1 h2, .swatch2 h2 {
+    padding: 1rem 0 0 1rem;
+}
+.differentswatch {
+    padding: 1rem;
+    margin: 0;
+}
+.sameswatch {
+    padding: 0.5rem 0 0 0;
+    margin: 0;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+    max-width: 40rem;
+    margin-bottom: 1rem;
+}
+.iconfont2 {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+}
+</style>
+</head>
+<body>
+<div class="swatch2">
+  <section>
+    <h2>4 x swatch1</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item"><span class="iconfont2">!</span>!</div>
+    <div class="grid-item"><span class="iconfont2">"</span>"</div>
+    <div class="grid-item"><span class="iconfont2">#</span>#</div>
+    <div class="grid-item"><span class="iconfont2">$</span>$</div>
+    <div class="grid-item"><span class="iconfont2">%</span>%</div>
+    <div class="grid-item"><span class="iconfont2">&amp;</span>&amp;</div>
+    <div class="grid-item"><span class="iconfont2">'</span>'</div>
+    <div class="grid-item"><span class="iconfont2">(</span>(</div>
+    <div class="grid-item"><span class="iconfont2">)</span>)</div>
+    <div class="grid-item"><span class="iconfont2">*</span>*</div>
+    <div class="grid-item"><span class="iconfont2">+</span>+</div>
+    <div class="grid-item"><span class="iconfont2">,</span>,</div>
+    <div class="grid-item"><span class="iconfont2">-</span>-</div>
+    <div class="grid-item"><span class="iconfont2">.</span>.</div>
+    <div class="grid-item"><span class="iconfont2">/</span>/</div>
+    <div class="grid-item"><span class="iconfont2">0</span>0</div>
+    <div class="grid-item"><span class="iconfont2">1</span>1</div>
+    <div class="grid-item"><span class="iconfont2">2</span>2</div>
+    <div class="grid-item"><span class="iconfont2">3</span>3</div>
+    <div class="grid-item"><span class="iconfont2">4</span>4</div>
+    <div class="grid-item"><span class="iconfont2">5</span>5</div>
+    <div class="grid-item"><span class="iconfont2">6</span>6</div>
+    <div class="grid-item"><span class="iconfont2">7</span>7</div>
+    <div class="grid-item"><span class="iconfont2">8</span>8</div>
+    <div class="grid-item"><span class="iconfont2">9</span>9</div>
+    <div class="grid-item"><span class="iconfont2">:</span>:</div>
+    <div class="grid-item"><span class="iconfont2">;</span>;</div>
+    <div class="grid-item"><span class="iconfont2">&lt;</span>&lt;</div>
+    <div class="grid-item"><span class="iconfont2">=</span>=</div>
+    <div class="grid-item"><span class="iconfont2">&gt;</span>&gt;</div>
+    <div class="grid-item"><span class="iconfont2">?</span>?</div>
+    <div class="grid-item"><span class="iconfont2">@</span>@</div>
+    <div class="grid-item"><span class="iconfont2">A</span>A</div>
+    <div class="grid-item"><span class="iconfont2">B</span>B</div>
+    <div class="grid-item"><span class="iconfont2">C</span>C</div>
+    <div class="grid-item"><span class="iconfont2">D</span>D</div>
+    <div class="grid-item"><span class="iconfont2">E</span>E</div>
+    <div class="grid-item"><span class="iconfont2">F</span>F</div>
+    <div class="grid-item"><span class="iconfont2">G</span>G</div>
+    <div class="grid-item"><span class="iconfont2">H</span>H</div>
+    <div class="grid-item"><span class="iconfont2">I</span>I</div>
+    <div class="grid-item"><span class="iconfont2">J</span>J</div>
+    <div class="grid-item"><span class="iconfont2">K</span>K</div>
+    <div class="grid-item"><span class="iconfont2">L</span>L</div>
+    <div class="grid-item"><span class="iconfont2">M</span>M</div>
+    <div class="grid-item"><span class="iconfont2">N</span>N</div>
+    <div class="grid-item"><span class="iconfont2">O</span>O</div>
+    <div class="grid-item"><span class="iconfont2">P</span>P</div>
+    <div class="grid-item"><span class="iconfont2">Q</span>Q</div>
+    <div class="grid-item"><span class="iconfont2">R</span>R</div>
+    <div class="grid-item"><span class="iconfont2">S</span>S</div>
+    <div class="grid-item"><span class="iconfont2">T</span>T</div>
+    <div class="grid-item"><span class="iconfont2">U</span>U</div>
+    <div class="grid-item"><span class="iconfont2">V</span>V</div>
+    <div class="grid-item"><span class="iconfont2">W</span>W</div>
+    <div class="grid-item"><span class="iconfont2">X</span>X</div>
+    <div class="grid-item"><span class="iconfont2">Y</span>Y</div>
+    <div class="grid-item"><span class="iconfont2">Z</span>Z</div>
+    <div class="grid-item"><span class="iconfont2">[</span>[</div>
+    <div class="grid-item"><span class="iconfont2">\</span>\</div>
+    <div class="grid-item"><span class="iconfont2">]</span>]</div>
+    <div class="grid-item"><span class="iconfont2">^</span>^</div>
+    <div class="grid-item"><span class="iconfont2">_</span>_</div>
+    <div class="grid-item"><span class="iconfont2">`</span>`</div>
+    <div class="grid-item"><span class="iconfont2">a</span>a</div>
+    <div class="grid-item"><span class="iconfont2">b</span>b</div>
+    <div class="grid-item"><span class="iconfont2">c</span>c</div>
+    <div class="grid-item"><span class="iconfont2">d</span>d</div>
+    <div class="grid-item"><span class="iconfont2">e</span>e</div>
+    <div class="grid-item"><span class="iconfont2">f</span>f</div>
+    <div class="grid-item"><span class="iconfont2">g</span>g</div>
+    <div class="grid-item"><span class="iconfont2">h</span>h</div>
+    <div class="grid-item"><span class="iconfont2">i</span>i</div>
+    <div class="grid-item"><span class="iconfont2">j</span>j</div>
+    <div class="grid-item"><span class="iconfont2">k</span>k</div>
+    <div class="grid-item"><span class="iconfont2">l</span>l</div>
+    <div class="grid-item"><span class="iconfont2">m</span>m</div>
+    <div class="grid-item"><span class="iconfont2">n</span>n</div>
+    <div class="grid-item"><span class="iconfont2">o</span>o</div>
+    <div class="grid-item"><span class="iconfont2">p</span>p</div>
+    <div class="grid-item"><span class="iconfont2">q</span>q</div>
+    <div class="grid-item"><span class="iconfont2">r</span>r</div>
+    <div class="grid-item"><span class="iconfont2">s</span>s</div>
+    <div class="grid-item"><span class="iconfont2">t</span>t</div>
+    <div class="grid-item"><span class="iconfont2">u</span>u</div>
+    <div class="grid-item"><span class="iconfont2">v</span>v</div>
+    <div class="grid-item"><span class="iconfont2">w</span>w</div>
+    <div class="grid-item"><span class="iconfont2">x</span>x</div>
+    <div class="grid-item"><span class="iconfont2">y</span>y</div>
+    <div class="grid-item"><span class="iconfont2">z</span>z</div>
+    <div class="grid-item"><span class="iconfont2">{</span>{</div>
+    <div class="grid-item"><span class="iconfont2">|</span>|</div>
+    <div class="grid-item"><span class="iconfont2">}</span>}</div>
+    <div class="grid-item"><span class="iconfont2">~</span>~</div>
+    <div class="grid-item"><span class="iconfont2">Ä</span>Ä</div>
+    <div class="grid-item"><span class="iconfont2">Å</span>Å</div>
+    <div class="grid-item"><span class="iconfont2">Ç</span>Ç</div>
+    <div class="grid-item"><span class="iconfont2">É</span>É</div>
+    <div class="grid-item"><span class="iconfont2">Ñ</span>Ñ</div>
+    <div class="grid-item"><span class="iconfont2">Ö</span>Ö</div>
+    <div class="grid-item"><span class="iconfont2">Ü</span>Ü</div>
+    <div class="grid-item"><span class="iconfont2">á</span>á</div>
+    <div class="grid-item"><span class="iconfont2">à</span>à</div>
+    <div class="grid-item"><span class="iconfont2">â</span>â</div>
+    <div class="grid-item"><span class="iconfont2">ä</span>ä</div>
+    <div class="grid-item"><span class="iconfont2">ã</span>ã</div>
+    <div class="grid-item"><span class="iconfont2">ç</span>ç</div>
+    <div class="grid-item"><span class="iconfont2">å</span>å</div>
+    <div class="grid-item"><span class="iconfont2">é</span>é</div>
+    <div class="grid-item"><span class="iconfont2">ê</span>ê</div>
+    <div class="grid-item"><span class="iconfont2">ë</span>ë</div>
+    <div class="grid-item"><span class="iconfont2">À</span>À</div>
+    <div class="grid-item"><span class="iconfont2">Á</span>Á</div>
+    <div class="grid-item"><span class="iconfont2">Â</span>Â</div>
+    <div class="grid-item"><span class="iconfont2">Ã</span>Ã</div>
+    <div class="grid-item"><span class="iconfont2">Æ</span>Æ</div>
+    <div class="grid-item"><span class="iconfont2">È</span>È</div>
+  </div>
+</div>
+</body>
+</html>
