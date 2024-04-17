@@ -6,366 +6,264 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <title>University of Plymouth</title>
 <style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+}
 @font-face {
     font-family: icon;
     src: url('fonts/icon16.woff');
 }
 .iconfont {
     font-family: 'icon', sans-serif;
-    font-size: 2.5em;
-    line-height: 1em;
     font-weight: normal;
-    color: #666;
-}
-.iconfontdownload {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
 }
 * {
     margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
 }
 html, body {
-    height: 100%;
-}
-html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: 100%;
+    font-size: 100%;
     font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-body {
-    font-family: sans-serif;
-    font-size: 1em;
-    line-height: 1.5em;
-    color: #111;
-    background-color: #fff;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--lgrey);
+    margin: 0;
 }
 main {
     margin-top: 0;
 }
-h2, p {
-    padding: 1em;
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
 }
 a {
-    color: #06c;
+    color: var(--link);
     text-underline-position: under;
     text-underline-offset: 1px;
+    overflow-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
 }
 img {
     border: 0;
     text-decoration: none;
     vertical-align: top;
+    width: 100%;
+    margin: 0;
 }
-.container {
-    width: 53em;
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
 }
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    float: left;
-    margin: 1em;
+.w80 {
+    max-width: 80em;
+    overflow: hidden;
+    margin-top: 0;
 }
-td, th {
-    padding: 0.2em;
-    text-align: left;
-    border: 1px dotted #666;
-    vertical-align: top;
-    width: 0%;
+.pad1 {
+    padding: 1rem;
 }
-.iconcell td, .iconcell th {
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(4em, 1fr) );
+    margin: 0 auto;
+    max-width: 80em;
+    grid-gap: 0.25em;
+    padding: 1rem;
+}
+.grid-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 38.5em;
     text-align: center;
-    background-color: #eee;
+    background-color: var(--white);
+    padding: 0.25em;
 }
-.iconfont td, .iconfont th {
-    text-align: center;
-    background-color: #fff;
-    border-bottom: 1px solid #666;
+.grid-item > div {
+    width: 100%;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+    max-width: 40rem;
+    margin-bottom: 1rem;
+}
+.iconfontbig {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 3rem;
+    width: 100%;
+    padding-top: 0.5rem;
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <p><a href="fonts/icon16.woff" download>icon16 (.woff format, 17 KB <span class="iconfontdownload">%</span>) </a><br>
-    <a href="fonts/icon16.ttf" download>icon16 (.ttf format, 60 KB <span class="iconfontdownload">%</span>) </a></p>
-  <table>
-    <tbody>
-      <tr class="iconcell">
-        <td>!</td>
-        <td>"</td>
-        <td>#</td>
-        <td>$</td>
-        <td>%</td>
-        <td>&amp;</td>
-        <td>'</td>
-        <td>(</td>
-        <td>)</td>
-        <td>*</td>
-        <td>+</td>
-        <td>,</td>
-        <td>-</td>
-        <td>.</td>
-        <td>/</td>
-      </tr>
-      <tr class="iconfont">
-        <td>!</td>
-        <td>"</td>
-        <td>#</td>
-        <td>$</td>
-        <td>%</td>
-        <td>&amp;</td>
-        <td>'</td>
-        <td>(</td>
-        <td>)</td>
-        <td>*</td>
-        <td>+</td>
-        <td>,</td>
-        <td>-</td>
-        <td>.</td>
-        <td>/</td>
-      </tr>
-      <tr class="iconcell">
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>:</td>
-        <td>;</td>
-        <td>&lt;</td>
-        <td>=</td>
-        <td>&gt;</td>
-      </tr>
-      <tr class="iconfont">
-        <td>0</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>:</td>
-        <td>;</td>
-        <td>&lt;</td>
-        <td>=</td>
-        <td>&gt;</td>
-      </tr>
-      <tr class="iconcell">
-        <td>?</td>
-        <td>@</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-        <td>D</td>
-        <td>E</td>
-        <td>F</td>
-        <td>G</td>
-        <td>H</td>
-        <td>I</td>
-        <td>J</td>
-        <td>K</td>
-        <td>L</td>
-        <td>M</td>
-      </tr>
-      <tr class="iconfont">
-        <td>?</td>
-        <td>@</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-        <td>D</td>
-        <td>E</td>
-        <td>F</td>
-        <td>G</td>
-        <td>H</td>
-        <td>I</td>
-        <td>J</td>
-        <td>K</td>
-        <td>L</td>
-        <td>M</td>
-      </tr>
-      <tr class="iconcell">
-        <td>N</td>
-        <td>O</td>
-        <td>P</td>
-        <td>Q</td>
-        <td>R</td>
-        <td>S</td>
-        <td>T</td>
-        <td>U</td>
-        <td>V</td>
-        <td>W</td>
-        <td>X</td>
-        <td>Y</td>
-        <td>Z</td>
-        <td>[</td>
-        <td>\</td>
-      </tr>
-      <tr class="iconfont">
-        <td>N</td>
-        <td>O</td>
-        <td>P</td>
-        <td>Q</td>
-        <td>R</td>
-        <td>S</td>
-        <td>T</td>
-        <td>U</td>
-        <td>V</td>
-        <td>W</td>
-        <td>X</td>
-        <td>Y</td>
-        <td>Z</td>
-        <td>[</td>
-        <td>\</td>
-      </tr>
-      <tr class="iconcell">
-        <td>]</td>
-        <td>^</td>
-        <td>_</td>
-        <td>`</td>
-        <td>a</td>
-        <td>b</td>
-        <td>c</td>
-        <td>d</td>
-        <td>e</td>
-        <td>f</td>
-        <td>g</td>
-        <td>h</td>
-        <td>i</td>
-        <td>j</td>
-        <td>k</td>
-      </tr>
-      <tr class="iconfont">
-        <td>]</td>
-        <td>^</td>
-        <td>_</td>
-        <td>`</td>
-        <td>a</td>
-        <td>b</td>
-        <td>c</td>
-        <td>d</td>
-        <td>e</td>
-        <td>f</td>
-        <td></td>
-        <td>h</td>
-        <td>i</td>
-        <td>j</td>
-        <td>k</td>
-      </tr>
-      <tr class="iconcell">
-        <td>l</td>
-        <td>m</td>
-        <td>n</td>
-        <td>o</td>
-        <td>p</td>
-        <td>q</td>
-        <td>r</td>
-        <td>s</td>
-        <td>t</td>
-        <td>u</td>
-        <td>v</td>
-        <td>w</td>
-        <td>x</td>
-        <td>y</td>
-        <td>z</td>
-      </tr>
-      <tr class="iconfont">
-        <td>l</td>
-        <td>m</td>
-        <td>n</td>
-        <td>o</td>
-        <td>p</td>
-        <td>q</td>
-        <td>r</td>
-        <td>s</td>
-        <td>t</td>
-        <td>u</td>
-        <td>v</td>
-        <td>w</td>
-        <td>x</td>
-        <td>y</td>
-        <td>z</td>
-      </tr>
-      <tr class="iconcell">
-        <td>&#123;</td>
-        <td>&#124;</td>
-        <td>&#125;</td>
-        <td>&#126;</td>
-        <td>&#196;</td>
-        <td>&#197;</td>
-        <td>&#199;</td>
-        <td>&#201;</td>
-        <td>&#209;</td>
-        <td>&#214;</td>
-        <td>&#220;</td>
-        <td>&#225;</td>
-        <td>&#224;</td>
-        <td>&#226;</td>
-        <td>&#228;</td>
-      </tr>
-      <tr class="iconfont">
-        <td>&#123;</td>
-        <td>&#124;</td>
-        <td>&#125;</td>
-        <td>&#126;</td>
-        <td>&#196;</td>
-        <td>&#197;</td>
-        <td>&#199;</td>
-        <td>&#201;</td>
-        <td>&#209;</td>
-        <td>&#214;</td>
-        <td>&#220;</td>
-        <td>&#225;</td>
-        <td>&#224;</td>
-        <td>&#226;</td>
-        <td>&#228;</td>
-      </tr>
-      <tr class="iconcell">
-        <td>&#227;</td>
-        <td>&#231;</td>
-        <td>&#229;</td>
-        <td>&#233;</td>
-        <td>&#234;</td>
-        <td>&#235;</td>
-        <td>&#192;</td>
-        <td>&#193;</td>
-        <td>&#194;</td>
-        <td>&#195;</td>
-        <td>&#198;</td>
-        <td>&#200;</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr class="iconfont">
-        <td>&#227;</td>
-        <td>&#231;</td>
-        <td>&#229;</td>
-        <td>&#233;</td>
-        <td>&#234;</td>
-        <td>&#235;</td>
-        <td>&#192;</td>
-        <td>&#193;</td>
-        <td>&#194;</td>
-        <td>&#195;</td>
-        <td>&#198;</td>
-        <td>&#200;</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="w80 pad1">
+  <h1>University of Plymouth icon font</h1>
+  <p><a href="fonts/icon16.woff" download>icon16 (.woff format, 17 KB <span class="iconfont" aria-hidden="true">%</span>) </a><br>
+    <a href="fonts/icon16.ttf" download>icon16 (.ttf format, 60 KB <span class="iconfont" aria-hidden="true">%</span>) </a></p>
+</div>
+<div class="grid-container">
+  <div class="grid-item"><span class="iconfontbig">!</span>!</div>
+  <div class="grid-item"><span class="iconfontbig">"</span>"</div>
+  <div class="grid-item"><span class="iconfontbig">#</span>#</div>
+  <div class="grid-item"><span class="iconfontbig">$</span>$</div>
+  <div class="grid-item"><span class="iconfontbig">%</span>%</div>
+  <div class="grid-item"><span class="iconfontbig">&amp;</span>&amp;</div>
+  <div class="grid-item"><span class="iconfontbig">'</span>'</div>
+  <div class="grid-item"><span class="iconfontbig">(</span>(</div>
+  <div class="grid-item"><span class="iconfontbig">)</span>)</div>
+  <div class="grid-item"><span class="iconfontbig">*</span>*</div>
+  <div class="grid-item"><span class="iconfontbig">+</span>+</div>
+  <div class="grid-item"><span class="iconfontbig">,</span>,</div>
+  <div class="grid-item"><span class="iconfontbig">-</span>-</div>
+  <div class="grid-item"><span class="iconfontbig">.</span>.</div>
+  <div class="grid-item"><span class="iconfontbig">/</span>/</div>
+  <div class="grid-item"><span class="iconfontbig">0</span>0</div>
+  <div class="grid-item"><span class="iconfontbig">1</span>1</div>
+  <div class="grid-item"><span class="iconfontbig">2</span>2</div>
+  <div class="grid-item"><span class="iconfontbig">3</span>3</div>
+  <div class="grid-item"><span class="iconfontbig">4</span>4</div>
+  <div class="grid-item"><span class="iconfontbig">5</span>5</div>
+  <div class="grid-item"><span class="iconfontbig">6</span>6</div>
+  <div class="grid-item"><span class="iconfontbig">7</span>7</div>
+  <div class="grid-item"><span class="iconfontbig">8</span>8</div>
+  <div class="grid-item"><span class="iconfontbig">9</span>9</div>
+  <div class="grid-item"><span class="iconfontbig">:</span>:</div>
+  <div class="grid-item"><span class="iconfontbig">;</span>;</div>
+  <div class="grid-item"><span class="iconfontbig">&lt;</span>&lt;</div>
+  <div class="grid-item"><span class="iconfontbig">=</span>=</div>
+  <div class="grid-item"><span class="iconfontbig">&gt;</span>&gt;</div>
+  <div class="grid-item"><span class="iconfontbig">?</span>?</div>
+  <div class="grid-item"><span class="iconfontbig">@</span>@</div>
+  <div class="grid-item"><span class="iconfontbig">A</span>A</div>
+  <div class="grid-item"><span class="iconfontbig">B</span>B</div>
+  <div class="grid-item"><span class="iconfontbig">C</span>C</div>
+  <div class="grid-item"><span class="iconfontbig">D</span>D</div>
+  <div class="grid-item"><span class="iconfontbig">E</span>E</div>
+  <div class="grid-item"><span class="iconfontbig">F</span>F</div>
+  <div class="grid-item"><span class="iconfontbig">G</span>G</div>
+  <div class="grid-item"><span class="iconfontbig">H</span>H</div>
+  <div class="grid-item"><span class="iconfontbig">I</span>I</div>
+  <div class="grid-item"><span class="iconfontbig">J</span>J</div>
+  <div class="grid-item"><span class="iconfontbig">K</span>K</div>
+  <div class="grid-item"><span class="iconfontbig">L</span>L</div>
+  <div class="grid-item"><span class="iconfontbig">M</span>M</div>
+  <div class="grid-item"><span class="iconfontbig">N</span>N</div>
+  <div class="grid-item"><span class="iconfontbig">O</span>O</div>
+  <div class="grid-item"><span class="iconfontbig">P</span>P</div>
+  <div class="grid-item"><span class="iconfontbig">Q</span>Q</div>
+  <div class="grid-item"><span class="iconfontbig">R</span>R</div>
+  <div class="grid-item"><span class="iconfontbig">S</span>S</div>
+  <div class="grid-item"><span class="iconfontbig">T</span>T</div>
+  <div class="grid-item"><span class="iconfontbig">U</span>U</div>
+  <div class="grid-item"><span class="iconfontbig">V</span>V</div>
+  <div class="grid-item"><span class="iconfontbig">W</span>W</div>
+  <div class="grid-item"><span class="iconfontbig">X</span>X</div>
+  <div class="grid-item"><span class="iconfontbig">Y</span>Y</div>
+  <div class="grid-item"><span class="iconfontbig">Z</span>Z</div>
+  <div class="grid-item"><span class="iconfontbig">[</span>[</div>
+  <div class="grid-item"><span class="iconfontbig">\</span>\</div>
+  <div class="grid-item"><span class="iconfontbig">]</span>]</div>
+  <div class="grid-item"><span class="iconfontbig">^</span>^</div>
+  <div class="grid-item"><span class="iconfontbig">_</span>_</div>
+  <div class="grid-item"><span class="iconfontbig">`</span>`</div>
+  <div class="grid-item"><span class="iconfontbig">a</span>a</div>
+  <div class="grid-item"><span class="iconfontbig">b</span>b</div>
+  <div class="grid-item"><span class="iconfontbig">c</span>c</div>
+  <div class="grid-item"><span class="iconfontbig">d</span>d</div>
+  <div class="grid-item"><span class="iconfontbig">e</span>e</div>
+  <div class="grid-item"><span class="iconfontbig">f</span>f</div>
+  <div class="grid-item"><span class="iconfontbig">g</span>g</div>
+  <div class="grid-item"><span class="iconfontbig">h</span>h</div>
+  <div class="grid-item"><span class="iconfontbig">i</span>i</div>
+  <div class="grid-item"><span class="iconfontbig">j</span>j</div>
+  <div class="grid-item"><span class="iconfontbig">k</span>k</div>
+  <div class="grid-item"><span class="iconfontbig">l</span>l</div>
+  <div class="grid-item"><span class="iconfontbig">m</span>m</div>
+  <div class="grid-item"><span class="iconfontbig">n</span>n</div>
+  <div class="grid-item"><span class="iconfontbig">o</span>o</div>
+  <div class="grid-item"><span class="iconfontbig">p</span>p</div>
+  <div class="grid-item"><span class="iconfontbig">q</span>q</div>
+  <div class="grid-item"><span class="iconfontbig">r</span>r</div>
+  <div class="grid-item"><span class="iconfontbig">s</span>s</div>
+  <div class="grid-item"><span class="iconfontbig">t</span>t</div>
+  <div class="grid-item"><span class="iconfontbig">u</span>u</div>
+  <div class="grid-item"><span class="iconfontbig">v</span>v</div>
+  <div class="grid-item"><span class="iconfontbig">w</span>w</div>
+  <div class="grid-item"><span class="iconfontbig">x</span>x</div>
+  <div class="grid-item"><span class="iconfontbig">y</span>y</div>
+  <div class="grid-item"><span class="iconfontbig">z</span>z</div>
+  <div class="grid-item"><span class="iconfontbig">{</span>{</div>
+  <div class="grid-item"><span class="iconfontbig">|</span>|</div>
+  <div class="grid-item"><span class="iconfontbig">}</span>}</div>
+  <div class="grid-item"><span class="iconfontbig">~</span>~</div>
+  <div class="grid-item"><span class="iconfontbig">Ä</span>Ä</div>
+  <div class="grid-item"><span class="iconfontbig">Å</span>Å</div>
+  <div class="grid-item"><span class="iconfontbig">Ç</span>Ç</div>
+  <div class="grid-item"><span class="iconfontbig">É</span>É</div>
+  <div class="grid-item"><span class="iconfontbig">Ñ</span>Ñ</div>
+  <div class="grid-item"><span class="iconfontbig">Ö</span>Ö</div>
+  <div class="grid-item"><span class="iconfontbig">Ü</span>Ü</div>
+  <div class="grid-item"><span class="iconfontbig">á</span>á</div>
+  <div class="grid-item"><span class="iconfontbig">à</span>à</div>
+  <div class="grid-item"><span class="iconfontbig">â</span>â</div>
+  <div class="grid-item"><span class="iconfontbig">ä</span>ä</div>
+  <div class="grid-item"><span class="iconfontbig">ã</span>ã</div>
+  <div class="grid-item"><span class="iconfontbig">ç</span>ç</div>
+  <div class="grid-item"><span class="iconfontbig">å</span>å</div>
+  <div class="grid-item"><span class="iconfontbig">é</span>é</div>
+  <div class="grid-item"><span class="iconfontbig">ê</span>ê</div>
+  <div class="grid-item"><span class="iconfontbig">ë</span>ë</div>
+  <div class="grid-item"><span class="iconfontbig">À</span>À</div>
+  <div class="grid-item"><span class="iconfontbig">Á</span>Á</div>
+  <div class="grid-item"><span class="iconfontbig">Â</span>Â</div>
+  <div class="grid-item"><span class="iconfontbig">Ã</span>Ã</div>
+  <div class="grid-item"><span class="iconfontbig">Æ</span>Æ</div>
+  <div class="grid-item"><span class="iconfontbig">È</span>È</div>
+</div>
+<div class="w80 pad1">
+  <h2>Useful links</h2>
   <p><a href="https://ascii.cl/htmlcodes.htm">https://ascii.cl/htmlcodes.htm</a><br>
-  <a href="https://transfonter.org/">https://transfonter.org/</a><br>
-  <a href="https://birdfont.org/">https://birdfont.org/</a></p>
+    <a href="https://transfonter.org/">https://transfonter.org/</a><br>
+    <a href="https://birdfont.org/">https://birdfont.org/</a></p>
 </div>
 </body>
 </html>
