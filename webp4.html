@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon16.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1.5em 0 0 0;
+}
+td, th {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+}
+th {
+    border-bottom: 2px solid var(--black);
+}
+.lgreybck {
+    background-color: var(--lgrey);
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>WebP compression compared to JPG</h1>
+    <p>I've highlighted high compression as this appears to be the sweet spot for WebP quality and small file size.</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Compression</th>
+          <th>Picture 1</th>
+          <th>Picture 2</th>
+          <th>Picture 3</th>
+        </tr>
+        <tr>
+          <td>WebP lossless</td>
+          <td>1 MB</td>
+          <td>786 KB</td>
+          <td>1.1 MB</td>
+        </tr>
+        <tr>
+          <td>WebP maximum</td>
+          <td>348 KB</td>
+          <td>282 KB</td>
+          <td>403 KB</td>
+        </tr>
+        <tr class="lgreybck">
+          <td>WebP high </td>
+          <td>78 KB</td>
+          <td>68 KB</td>
+          <td>96 KB</td>
+        </tr>
+        <tr>
+          <td>WebP medium</td>
+          <td>57 KB</td>
+          <td>50 KB</td>
+          <td>68 KB</td>
+        </tr>
+        <tr>
+          <td>WebP low</td>
+          <td>39 KB</td>
+          <td>33 KB</td>
+          <td>40 KB</td>
+        </tr>
+        <tr>
+          <td>WebP minimum</td>
+          <td>14 KB</td>
+          <td>11 KB</td>
+          <td>12 KB</td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <tbody>
+        <tr>
+          <th>Compression</th>
+          <th>Picture 1</th>
+          <th>Picture 2</th>
+          <th>Picture 3</th>
+        </tr>
+        <tr>
+          <td>JPG maximum</td>
+          <td>673 KB</td>
+          <td>624 KB</td>
+          <td>740 KB</td>
+        </tr>
+        <tr>
+          <td>JPG very high </td>
+          <td>311 KB</td>
+          <td>288 KB</td>
+          <td>340 KB</td>
+        </tr>
+        <tr class="lgreybck">
+          <td>JPG high </td>
+          <td>182 KB</td>
+          <td>169 KB</td>
+          <td>192 KB</td>
+        </tr>
+        <tr>
+          <td>JPG medium</td>
+          <td>89 KB</td>
+          <td>85 KB</td>
+          <td>90 KB</td>
+        </tr>
+        <tr>
+          <td>JPG low</td>
+          <td>57 KB</td>
+          <td>53 KB</td>
+          <td>53 KB</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+</body>
+</html>
