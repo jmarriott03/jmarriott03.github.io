@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon16.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.width80 {
+    max-width: 80em;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+.div2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.div3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+.div4 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+.div5 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+.div1, .div2, .div3, .div4, .div5 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.div1 p:first-of-type, .div2 p:first-of-type, .div3 p:first-of-type, .div4 p:first-of-type, .div5 p:first-of-type {
+    margin: 0;
+}
+.black-white {
+    color: var(--black);
+    background-color: var(--white);
+    margin: 0;
+}
+.black-white a {
+    color: var(--link);
+}
+.black-lgrey {
+    color: var(--black);
+    background-color: var(--lgrey);
+    margin: 0;
+}
+.black-lgrey a {
+    color: var(--link);
+}
+.white-black {
+    color: var(--white);
+    background-color: var(--black);
+    margin: 0;
+}
+.white-black a {
+    color: var(--white);
+}
+.white-back {
+    background: var(--white);
+    margin: 0;
+}
+.lgrey-back {
+    background: var(--lgrey);
+    margin: 0;
+}
+.mgrey-back {
+    background: var(--mgrey);
+    margin: 0;
+}
+.dgrey-back {
+    background: var(--dgrey);
+    margin: 0;
+}
+.black-back {
+    background: var(--black);
+    margin: 0;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.pad1 {
+    padding: 1rem;
+    margin: 0 auto;
+}
+.padtop-half {
+    padding-top: 0.5rem;
+}
+.aspect16-9 {
+    aspect-ratio: 16 / 9;
+    border: 5px green;
+}
+.aspect1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+@media screen and (max-width: 60em) {
+.parent {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.div3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.div4 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.div5 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+}
+
+@media screen and (max-width: 40em) {
+.parent {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.div3 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.div4 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.div5 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw lgrey-back">
+    <div class="width80 pad1">
+      <h2>Black text on white cards with light grey background</h2>
+      <div class="parent">
+        <div class="div1 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student1.jpg" alt=""></div>
+          <p class="pad1">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></p>
+        </div>
+        <div class="div2 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student2.jpg" alt=""></div>
+          <p class="pad1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</p>
+        </div>
+        <div class="div3 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student3.jpg" alt=""></div>
+          <p class="pad1">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="div4 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student4.jpg" alt=""></div>
+          <p class="pad1">Laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="div5 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student7.jpg" alt=""></div>
+          <p class="pad1">Dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+	  <div class="fullw lgrey-back">
+    <div class="width80 pad1">
+      <h2>Card with text only</h2>
+      <div class="parent">
+        <div class="div1 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student1.jpg" alt=""></div>
+          <p class="pad1">Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua.</a></p>
+        </div>
+        <div class="div2 black-white pad1">
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <a href="#">tempor incididunt ut labore</a> et dolore magna aliqua.</p>
+        </div>
+        <div class="div3 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student3.jpg" alt=""></div>
+          <p class="pad1">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="div4 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student4.jpg" alt=""></div>
+          <p class="pad1">Laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="div5 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student7.jpg" alt=""></div>
+          <p class="pad1">Dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <div class="fullw lgrey-back">
+    <div class="width80 pad1">
+      <h2>Images with object-fit: cover</h2>
+      <div class="parent">
+        <div class="div1 black-white"> <img src="images/1280x720student1.jpg" alt=""> </div>
+        <div class="div2 black-white"><img src="images/1280x720student2.jpg" alt=""></div>
+        <div class="div3 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student3.jpg" alt=""></div>
+          <p class="pad1">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="div4 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student4.jpg" alt=""></div>
+          <p class="pad1">Laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="div5 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student7.jpg" alt=""></div>
+          <p class="pad1">Dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fullw lgrey-back">
+    <div class="width80 pad1">
+      <h2>Images with aspect-ratio: 16 / 9</h2>
+      <div class="parent">
+        <div class="div1">
+          <div class="aspect16-9"><img src="images/1280x720student1.jpg" alt=""></div>
+        </div>
+        <div class="div2">
+          <div class="aspect16-9"><img src="images/1280x720student2.jpg" alt=""></div>
+        </div>
+        <div class="div3 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student3.jpg" alt=""></div>
+          <p class="pad1">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="div4 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student4.jpg" alt=""></div>
+          <p class="pad1">Laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="div5 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student7.jpg" alt=""></div>
+          <p class="pad1">Dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fullw lgrey-back">
+    <div class="width80 pad1">
+      <h2>Images with aspect-ratio: 1 / 1</h2>
+      <div class="parent">
+        <div class="div1">
+          <div class="aspect1-1"><img src="images/1280x720student1.jpg" alt=""></div>
+        </div>
+        <div class="div2">
+          <div class="aspect1-1"><img src="images/1280x720student2.jpg" alt=""></div>
+        </div>
+        <div class="div3 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student3.jpg" alt=""></div>
+          <p class="pad1">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="div4 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student4.jpg" alt=""></div>
+          <p class="pad1">Laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="div5 black-white">
+          <div class="aspect16-9"><img src="images/1280x720student7.jpg" alt=""></div>
+          <p class="pad1">Dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
