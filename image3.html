@@ -211,7 +211,7 @@ td {
     grid-area: 1 / 1 / 2 / 3;
 }
 .hero-image, .hero-gradient, .hero-text {
-/*    border: 1px solid red;*/
+    /*    border: 1px solid red;*/
     width: 100%;
     margin: 0;
 }
@@ -263,16 +263,17 @@ td {
 <body>
 <main>
   <div class="hero-container">
-    <div class="hero-image"><picture>
-  <!-- WebP image -->
-  <source srcset="images/webp/1280x720creator.webp" type="image/webp">
-  <!-- Fallback for browsers that don't support WebP -->
-  <img src="images/1280x720creator.jpg" width="1280" height="720" alt="">
-</picture></div>
+    <div class="hero-image">
+      <picture> 
+        <!-- WebP image -->
+        <source srcset="images/webp/1280x720creator.webp" type="image/webp">
+        <!-- Fallback for browsers that don't support WebP --> 
+        <img src="images/1280x720creator.jpg" width="1280" height="720" alt=""></picture>
+    </div>
     <div class="hero-gradient"></div>
     <div class="hero-text">
-      <h2>Visit us at undergraduate open day: 19 June 2024</h2>
-      <p>Experience our campus and city, meet lecturers and learn more about studying here</p>
+      <h2>&lt;picture&gt; webp with jpg fallback</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p><a href="#">Book your place</a></p>
     </div>
   </div>
