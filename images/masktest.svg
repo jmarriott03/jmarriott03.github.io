@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1768.9 808.5">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: #1d1d1b;
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-2" cx="1210.6" cy="254.3" r="254.3"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-127.1" y1="20.3" x2="-126.6" y2="20.3" gradientTransform="translate(133552.5 -20957.9) scale(1043.1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1d1d1b"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-4" d="M0,808.5h1768.9v-373.2L0,186.6v621.9Z"/>
+  <g class="cls-1">
+    <path class="cls-3" d="M956.3,0h508.6v508.6h-508.6V0Z"/>
+  </g>
+</svg>
