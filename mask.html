@@ -101,6 +101,8 @@ img {
     text-decoration: none;
     vertical-align: top;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin: 0;
 }
 ul, ol {
@@ -128,12 +130,22 @@ section {
     font-size: 1.5em;
     line-height: 1.2;
 }
+	.herocolour {background-image: linear-gradient(to right, #900, #069);}
+.mask1 {
+    -webkit-mask-image: url("images/mask1.svg");
+    mask-image: url(images/mask1.svg);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+	mask-repeat: no-repeat;
+	mask-position: bottom;
+	
+}
 </style>
 </head>
 <body>
 <main>
-  <section>
-
+  <section><div class="herocolour">
+    <div class="mask1"><img src="images/1280x1280jodieoreilly.jpg" alt="Cinque Terre" width="1280" height="720"></div></div>
   </section>
 </main>
 </body>
