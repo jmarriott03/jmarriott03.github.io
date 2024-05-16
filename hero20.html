@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--gradient1: #6c3;
+--gradient2: #360;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon16.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;/*background: rgba(255,0,0,0.25);*/
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+    padding: 1em;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.div1 {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+}
+.div2 {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    ;
+}
+.div2 > * {
+    width: 100%;
+}
+.paddingresize {
+    padding: 1em 1em 3em 1em;
+}
+.black {
+    color: var(--black);
+}
+.white {
+    color: var(--white);
+}
+.div2 h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.div2 p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.div2 h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+.div2 p {
+    font-size: 1.25rem;
+}
+.letterspacing-small {
+    letter-spacing: 0.125rem;
+}
+.gradient {
+/*    background: radial-gradient( circle at top right, var(--gradient1), var(--gradient2) );*/
+	background-image: linear-gradient(var(--gradient1), var(--gradient1), var(--gradient2));
+
+}
+.mask1 {
+    -webkit-mask-image: url("images/masktest.svg");
+    mask-image: url(images/masktest.svg);
+    width: 100%;
+    mask-repeat: no-repeat;
+    mask-position: bottom;
+}
+.mask2 {
+    -webkit-mask-image: url("images/masktest4.svg");
+    mask-image: url(images/masktest4.svg);
+    mask-repeat: no-repeat;
+    mask-position: bottom;
+	mask-size: contain;
+}
+.mask3 {
+	-webkit-mask-image: url("images/masktest3.svg");
+    mask-image: url(images/masktest3.svg);
+	mask-size: 100%;
+    -webkit-mask-size: 100%;
+/*
+height: 100%;
+	width: 20%;
+*/
+	mask-position: right;
+}
+.mask4 {
+	-webkit-mask-image: url("images/masktest5.svg");
+    mask-image: url(images/masktest5.svg);
+	mask-size: 100%;
+    -webkit-mask-size: 100%;
+	-webkit-mask-composite: exclude;
+	mask-composite: exclude;
+}
+	.rounded {
+		border-radius: 50% / 2em;
+	}
+	.m1 {margin: 1em;}
+@media (min-width: 60em) {
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.paddingresize {
+    padding: 2rem;
+}
+.mask1 {
+    -webkit-mask-image: url("images/masktest2.svg");
+    mask-image: url(images/masktest2.svg);
+}
+.rounded {
+		border-radius: 2em / 50%;
+	}
+	.gradient {
+/*    background: radial-gradient( circle at top right, var(--gradient1), var(--gradient2) );*/
+	background-image: linear-gradient(var(--gradient1), var(--gradient2));
+
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent gradient rounded m1">
+    <div class="div1"><img src="images/1280x720student4.jpg" alt="" class="rounded"></div>
+    <div class="div2 paddingresize white">
+      <p>It's your future - make it count</p>
+      <h2>Call our clearing hotline<br>
+        <span class="iconfont letterspacing-small" aria-hidden="true">0</span>01752 585 858 </h2>
+      <p><a href="#" class="white">Register for clearing</a></p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
