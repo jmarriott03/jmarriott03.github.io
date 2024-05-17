@@ -13,8 +13,8 @@
 --dgrey: #666;
 --black: #111;
 --link: #06c;
---ucas: #e00023;
---ucas-hov: #903;
+--clearing: #d3e9f1;
+--clearing-text: #29718c;
 }
 @font-face {
     font-family: icon;
@@ -164,6 +164,13 @@ section {
 .white {
     color: var(--white);
 }
+.clearing-text {
+    color: var(--clearing-text);
+	background-color: var(--clearing);
+}
+.clearing {
+	background-color: var(--clearing);
+}
 .div2 h2 {
     font-size: 1.5rem;
     line-height: 1.2;
@@ -220,13 +227,13 @@ section {
 </head>
 <body>
 <main>
-  <div class="parent">
+  <div class="parent clearing">
     <div class="div1"><img src="images/1280x720student4.jpg" alt=""></div>
-    <div class="div2 paddingresize white">
+    <div class="div2 paddingresize clearing-text">
       <p>It's your future - make it count</p>
       <h2>Call our clearing hotline<br>
         <span class="iconfont letterspacing-small" aria-hidden="true">0</span>01752 585 858 </h2>
-      <p><a href="#" class="white">Explore clearing options</a></p>
+      <p><a href="#" class="clearing-text">Explore clearing options</a></p>
     </div>
   </div>
 </main>
