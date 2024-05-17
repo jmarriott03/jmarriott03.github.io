@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <title>University of Plymouth</title>
 <style>
 :root {
@@ -155,8 +156,8 @@ section {
 .div2 > * {
     width: 100%;
 }
-.paddingresize {
-    padding: 1rem;
+.pad2 {
+    padding: 2rem;
 }
 .black {
     color: var(--black);
@@ -179,29 +180,8 @@ section {
     font-size: 1rem;
     line-height: 1.5;
 }
-.btn {
-    margin: 0;
-}
-.btn a {
-    padding: 0.5em 0.75em;
-    border-radius: 0.25em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border: 2px solid;
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.5em;
-    margin: 0 1em 0 0;
-    transition: 0.3s;
-    color: var(--white);
-}
-.btnlighthover a:hover {
-    color: var(--ucas);
-    background: var(--white);
-}
 .div2 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.2;
     margin-top: 0;
 }
@@ -220,10 +200,6 @@ section {
 .m1 {
     margin: 1em;
 }
-a[href^=tel] {
-    text-decoration: inherit;
-    color: inherit;
-}
 
 @media (min-width: 60em) {
 .div1 {
@@ -232,11 +208,11 @@ a[href^=tel] {
 .div2 {
     grid-area: 1 / 2 / 2 / 3;
 }
-.paddingresize {
-    padding: 2rem;
-}
 .rounded-image {
     border-radius: 2em 0 0 2em;
+}
+.div2 h2 {
+    font-size: 2.5rem;
 }
 }
 </style>
@@ -246,10 +222,10 @@ a[href^=tel] {
   <div class="clearing rounded m1">
     <div class="parent">
       <div class="div1"><img src="images/1280x720studentoncampus2.jpg" alt="" class="rounded-image"></div>
-      <div class="div2 paddingresize clearing-text">
+      <div class="div2 pad2 clearing-text rounded">
         <p>It's your future - make it count</p>
         <h2>Call our clearing hotline<br>
-          <span class="iconfont letterspacing-small" aria-hidden="true">0</span>01752&nbsp;585&nbsp;858 </h2>
+          <span class="iconfont letterspacing-small" aria-hidden="true">0</span>01752 585 858 </h2>
         <p><a href="#" class="clearing-text">Register for clearing</a></p>
       </div>
     </div>
