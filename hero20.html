@@ -183,47 +183,19 @@ section {
     letter-spacing: 0.125rem;
 }
 .gradient {
-/*    background: radial-gradient( circle at top right, var(--gradient1), var(--gradient2) );*/
-	background-image: linear-gradient(var(--gradient1), var(--gradient1), var(--gradient2));
+    background-image: linear-gradient(var(--gradient1), var(--gradient2));
+}
+.rounded {
+    border-radius: 50% / 2em;
+}
+.m1 {
+    margin: 1em;
+}
+.phone-text {
+    color: var(--white);
+    text-decoration: none;
+}
 
-}
-.mask1 {
-    -webkit-mask-image: url("images/masktest.svg");
-    mask-image: url(images/masktest.svg);
-    width: 100%;
-    mask-repeat: no-repeat;
-    mask-position: bottom;
-}
-.mask2 {
-    -webkit-mask-image: url("images/masktest4.svg");
-    mask-image: url(images/masktest4.svg);
-    mask-repeat: no-repeat;
-    mask-position: bottom;
-	mask-size: contain;
-}
-.mask3 {
-	-webkit-mask-image: url("images/masktest3.svg");
-    mask-image: url(images/masktest3.svg);
-	mask-size: 100%;
-    -webkit-mask-size: 100%;
-/*
-height: 100%;
-	width: 20%;
-*/
-	mask-position: right;
-}
-.mask4 {
-	-webkit-mask-image: url("images/masktest5.svg");
-    mask-image: url(images/masktest5.svg);
-	mask-size: 100%;
-    -webkit-mask-size: 100%;
-	-webkit-mask-composite: exclude;
-	mask-composite: exclude;
-}
-	.rounded {
-		border-radius: 50% / 2em;
-	}
-	.m1 {margin: 1em;}
 @media (min-width: 60em) {
 .div1 {
     grid-area: 1 / 1 / 2 / 2;
@@ -234,17 +206,8 @@ height: 100%;
 .paddingresize {
     padding: 2rem;
 }
-.mask1 {
-    -webkit-mask-image: url("images/masktest2.svg");
-    mask-image: url(images/masktest2.svg);
-}
 .rounded {
-		border-radius: 2em / 50%;
-	}
-	.gradient {
-/*    background: radial-gradient( circle at top right, var(--gradient1), var(--gradient2) );*/
-	background-image: linear-gradient(var(--gradient1), var(--gradient2));
-
+    border-radius: 2em / 50%;
 }
 }
 </style>
@@ -256,7 +219,7 @@ height: 100%;
     <div class="div2 paddingresize white">
       <p>It's your future - make it count</p>
       <h2>Call our clearing hotline<br>
-        <span class="iconfont letterspacing-small" aria-hidden="true">0</span>01752 585 858 </h2>
+        <span class="iconfont letterspacing-small" aria-hidden="true">0</span><span class="phone-text">01752 585 858</span></h2>
       <p><a href="#" class="white">Register for clearing</a></p>
     </div>
   </div>
