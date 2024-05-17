@@ -13,8 +13,10 @@
 --dgrey: #666;
 --black: #111;
 --link: #06c;
---gradient1: #b4c960;
---gradient2: #677c1d;
+--gradient1: #b4b6d7;
+--gradient2: #3c3e6f;
+--btn-primary1: #b4b6d7;
+--btn-primary2: #3c3e6f;
 }
 @font-face {
     font-family: icon;
@@ -172,7 +174,7 @@ section {
     line-height: 1.5;
 }
 .div2 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.2;
     margin-top: 0;
 }
@@ -209,6 +211,36 @@ section {
 .rounded {
     border-radius: 2em / 50%;
 }
+.div2 h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+}
+.btn {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+    width: 10.5em;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary2);
+}
+.btn-primary:hover, .btn-primary:focus {
+    color: var(--black);
+    background-color: var(--btn-primary1);
+}
 }
 </style>
 </head>
@@ -220,7 +252,7 @@ section {
       <p>It's your future - make it count</p>
       <h2>Call our clearing hotline<br>
         <span class="iconfont letterspacing-small" aria-hidden="true">0</span><span class="phone-text">01752 585 858</span></h2>
-      <p><a href="#" class="white">Register for clearing</a></p>
+      <button class="btn btn-primary">Register for clearing</button>
     </div>
   </div>
 </main>
