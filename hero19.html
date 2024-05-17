@@ -15,6 +15,8 @@
 --link: #06c;
 --ucas: #e00023;
 --ucas-hov: #903;
+--radial1: #b4c960;
+--radial2: #677c1d;
 }
 @font-face {
     font-family: icon;
@@ -168,29 +170,8 @@ section {
     font-size: 1.5rem;
     line-height: 1.2;
 }
-.btn {
-    margin: 0;
-}
-.btn a {
-    padding: 0.5em 0.75em;
-    border-radius: 0.25em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border: 2px solid;
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.5em;
-    margin: 0 1em 0 0;
-    transition: 0.3s;
-    color: var(--white);
-}
-.btnlighthover a:hover {
-    color: var(--ucas);
-    background: var(--white);
-}
 .div2 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.2;
     margin-top: 0;
 }
@@ -210,6 +191,12 @@ figcaption {
     color: var(--black);
     padding: 1rem;
 }
+.rounded {
+    border-radius: 2em 0;
+}
+.radial {
+    background: radial-gradient(ellipse at top right, var(--radial1), var(--radial2));
+}
 
 @media (min-width: 60em) {
 .div1 {
@@ -221,6 +208,12 @@ figcaption {
 .paddingresize {
     padding: 2rem;
 }
+.rounded {
+    border-radius: 5em 0;
+}
+.div2 h2 {
+    font-size: 2.5rem;
+}
 }
 </style>
 </head>
@@ -228,7 +221,7 @@ figcaption {
 <main>
   <div class="parent">
     <div class="div1">
-      <figure><img src="images/1280x720student4.jpg" width="1280" height="720" alt="">
+      <figure><img src="images/1280x720student14.jpg" width="1280" height="720" alt="">
         <figcaption>
           <h2>Visit us at undergraduate open day: 27 April 2024</h2>
           <p>Experience our campus and city, meet lecturers and learn more about studying here</p>
@@ -236,7 +229,7 @@ figcaption {
         </figcaption>
       </figure>
     </div>
-    <div class="div2 paddingresize white">
+    <div class="div2 paddingresize white rounded radial">
       <div>
         <p>It's your future - make it count</p>
         <h2>Call our clearing hotline<br>
