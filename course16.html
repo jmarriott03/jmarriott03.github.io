@@ -367,6 +367,11 @@ details[open] summary::before {
 .mbot1 {
     margin-bottom: 1rem;
 }
+.pointer {
+    cursor: pointer;
+    color: var(--link);
+    text-decoration: underline;
+}
 
 @media (min-width: 60em) {
 .parent {
@@ -451,6 +456,7 @@ details[open] summary::before {
     </div>
   </div>
   <div class="accordion">
+    <p><a id="openAll" class="pointer">Open all</a> | <a id="closeAll" class="pointer">Close all</a></p>
     <details>
       <summary>
         <h2>About the course</h2>
@@ -754,5 +760,20 @@ details[open] summary::before {
     </details>
   </div>
 </main>
+<script>
+        document.getElementById('openAll').addEventListener('click', function() {
+            let details = document.querySelectorAll('details');
+            details.forEach(detail => {
+                detail.open = true;
+            });
+        });
+
+        document.getElementById('closeAll').addEventListener('click', function() {
+            let details = document.querySelectorAll('details');
+            details.forEach(detail => {
+                detail.open = false;
+            });
+        });
+    </script>
 </body>
 </html>
