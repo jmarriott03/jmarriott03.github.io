@@ -372,7 +372,9 @@ details[open] summary::before {
     color: var(--link);
     text-decoration: underline;
 }
-
+.a:focus {
+            outline: 2px solid blue;
+        }
 @media (min-width: 60em) {
 .parent {
     display: grid;
@@ -456,7 +458,7 @@ details[open] summary::before {
     </div>
   </div>
   <div class="accordion">
-    <p><a id="openAll" class="pointer">Open all</a> | <a id="closeAll" class="pointer">Close all</a></p>
+    <p><a href="#closeAll" id="openAll" class="pointer">Open all</a> | <a href="#openAll" id="closeAll" class="pointer">Close all</a></p>
     <details>
       <summary>
         <h2>About the course</h2>
