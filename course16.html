@@ -213,8 +213,8 @@ td {
 .mtop1rem {
     margin-top: 1rem;
 }
-.black {
-    color: var(--black);
+.blacklinkblue {
+    color: var(--link);
 }
 .div2 p {
     max-width: 60ch;
@@ -373,8 +373,9 @@ details[open] summary::before {
     text-decoration: underline;
 }
 .a:focus {
-            outline: 2px solid blue;
-        }
+    outline: 2px solid blue;
+}
+
 @media (min-width: 60em) {
 .parent {
     display: grid;
@@ -386,6 +387,9 @@ details[open] summary::before {
 }
 .div2 {
     grid-area: 1 / 1 / 2 / 2;
+}
+.blacklinkblue {
+    color: var(--black);
 }
 }
 
@@ -412,7 +416,7 @@ details[open] summary::before {
     <div class="div1"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
     <div class="div2">
       <div class="frosted pad1">
-        <p><a href="#" class="black">School of Art, Design and Architecture</a></p>
+        <p><a href="#" class="blacklinkblue">School of Art, Design and Architecture</a></p>
         <h2>BA (Hons) Fine Art</h2>
         <div>
           <button class="btn btn-primary pad">Register for clearing</button>
