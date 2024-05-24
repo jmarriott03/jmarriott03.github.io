@@ -1,0 +1,198 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&display=swap" rel="stylesheet">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    text-underline-position: under;
+    text-underline-offset: 1px;
+    overflow-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+	
+	
+	
+	
+	
+body {
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    position: relative;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: filter 0s, transform 0s;
+    filter: blur(0);
+    transform-origin: center;
+}
+body.scrolled .background {
+    filter: blur(2px);
+    transform: scale(1.01); /* Adjust the zoom level as needed */
+}
+.content {
+    padding: 20px;
+    color: white;
+    /*    background: rgba(0, 0, 0, 0.5);*/
+	/* Optional: Adds a semi-transparent background to content for better readability */
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+/* Add a scrollable height */
+.spacer {
+    height: 2000px;
+}
+.roboto {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: calc(1em + 3vw);
+    line-height: 1;
+    text-transform: uppercase;
+    color: white;
+}
+.white {
+    color: white;
+}
+.black {
+    color: black;
+}
+.fullw {
+    width: 100%;
+    padding: 1em;
+    background-color: white;
+}
+.bigtext {
+    font-size: calc(1em + 1vw);
+}
+.text-container {
+    width: 60%;
+}
+.shadow {
+    text-shadow: 2px 2px 2px black;
+}
+</style>
+</head>
+<body>
+<img src="images/1280x720cop28.jpg" alt="Background Image" class="background"> <!-- Replace with your image URL -->
+<div class="content white bigtext text-container shadow">
+  <h2 class="roboto">Second carbon-neutral university in the UK verified to PAS 2060 standard</h2>
+  <p>We aim to have a sustainable campus and enable learning to research solutions to the world’s most pressing sustainability challenges</p>
+  <p><a href="#" class="white">Sustainability: on the path to net zero</a></p>
+</div>
+<div class="fullw">
+  <div class="bigtext text-container">
+    <h2>Text below the fold</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+<!--<div class="spacer"></div>--> 
+<script>
+        document.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            const scaleFactor = 1 + scrollY * 0.0001; /* Adjust the factor to control the zoom speed */
+            document.querySelector('.background').style.transform = `scale(${scaleFactor})`;
+            if (scrollY > 0) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
