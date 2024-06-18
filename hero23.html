@@ -14,10 +14,12 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
+--btn-primary: #06c;
+--btn-primary-hov: #039;
 }
 @font-face {
     font-family: icon;
-    src: url('fonts/icon16.woff');
+    src: url('fonts/icon17.woff');
 }
 .iconfont {
     font-family: 'icon', sans-serif;
@@ -170,7 +172,31 @@ section {
 }
 	.box {border: 1px dotted pink;margin: 0;}
 	
-	
+	.btn {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--btn-primary-hov);
+}
+.mtop1 {
+    margin-top: 1em;
+}
 	
 	@media (max-width: 60em) {
             .inner-container {
@@ -192,7 +218,10 @@ section {
       <div class="div2"></div>
       <div class="div3">
         <div class="inner-container">
-          <div class="box">Column 1</div>
+          <div class="box"><h1 class="largetext">Start a course this September.<br>
+          It's your future.<br>
+          Make it count.</h1>
+        <button class="btn btn-primary mtop1"><span class="iconfont" aria-hidden="true">6</span>Register for clearing</button></div>
           <div class="box">Column 2</div>
         </div>
       </div>
