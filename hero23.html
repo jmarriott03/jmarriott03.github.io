@@ -162,7 +162,6 @@ section {
     width: 100%;
     height: 100%;
     align-items: center;
-    padding: 1rem;
 }
 .box {
     z-index: 1;
@@ -211,6 +210,23 @@ section {
 .div2, .div3, .box {
     border: 1px dotted var(--white);
 }
+.rounded {
+    border-radius: 1rem;
+}
+.pad1 {
+    padding: 1rem;
+}
+.pad2 {
+    padding: 2rem;
+}
+.background-mrfrosty {
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,1));
+    backdrop-filter: blur(0.5rem);
+}
+.background-white {
+    background-color: var(--white);
+}
+
 @media (max-width: 60em) {
 .inner-container {
     grid-template-columns: 1fr;
@@ -228,16 +244,23 @@ section {
       <div class="div1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
       <div class="div2"></div>
       <div class="div3">
-        <div class="inner-container">
+        <div class="inner-container pad1">
           <div class="box">
             <h1 class="largetext white">Start a course this September.<br>
               It's your future.<br>
               Make it count.</h1>
             <button class="btn btn-primary mtop1"><span class="iconfont" aria-hidden="true">6</span>Register for clearing</button>
           </div>
-          <div class="box rounded white">
-            <h2><span class="iconfont" aria-hidden="true">B</span>Search course vacancies</h2>
-            <input type="text" class="search-box" placeholder="Search courses...">
+          <div class="box">
+            <div class="rounded background-mrfrosty pad1">
+              <p>It's your future. Make it count.</p>
+              <h1 class="mtop0">Call our Clearing hotline today<br>
+                <span class="iconfont letterspacing-small" aria-hidden="true">0</span><strong>01752 585 858</strong> </h1>
+            </div>
+            <div class="rounded background-white pad1">
+              <h2><span class="iconfont" aria-hidden="true">B</span>Search course vacancies</h2>
+              <input type="text" class="search-box" placeholder="Search courses...">
+            </div>
           </div>
         </div>
       </div>
