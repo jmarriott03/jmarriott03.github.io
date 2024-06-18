@@ -16,6 +16,7 @@
 --visited: purple;
 --btn-primary: #06c;
 --btn-primary-hov: #039;
+--highlight: #fc6;
 }
 @font-face {
     font-family: icon;
@@ -28,7 +29,6 @@
     width: 1em;
     display: inline-block;
     text-align: center;
-    margin: 0 0.25em 0 0;
 }
 * {
     margin: 0 auto;
@@ -140,17 +140,17 @@ section {
 .div1 {
     grid-area: 1 / 1 / 2 / 4;
 }
-.div2 {
+.hero-gradient {
     grid-area: 1 / 1 / 2 / 4;
 }
 .div3 {
     grid-area: 1 / 2 / 2 / 3;
 }
-.div1, .div2, .div3 {
+.div1, .hero-gradient, .div3 {
     width: 100%;
     margin-top: 0;
 }
-.div2 {
+.hero-gradient {
     background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
     mix-blend-mode: multiply;
     z-index: 0;
@@ -189,6 +189,16 @@ section {
 .btn-primary:hover, .btn-primary:focus {
     background-color: var(--btn-primary-hov);
 }
+.btn-hollow {
+    color: var(--white);
+    border: 2px solid var(--white);
+	background: none;
+	font-weight: bold;
+}
+.btn-hollow:hover, .btn-primary:focus {
+	color: var(--black);
+    background-color: var(--white);
+}
 .mtop1 {
     margin-top: 1rem;
 }
@@ -207,7 +217,7 @@ section {
     border-radius: 0.25rem;
     outline: none;
 }
-.div2, .div3, .box {
+.hero-gradient, .div3, .box {
     border: 1px dotted var(--white);
 }
 .rounded {
@@ -226,12 +236,17 @@ section {
 .background-white {
     background-color: var(--white);
 }
-
+.letterspacing-small {
+    letter-spacing: 0.125rem;
+}
+.highlight {
+    color: var(--highlight);
+}
 @media (max-width: 60em) {
 .inner-container {
     grid-template-columns: 1fr;
 }
-.div2 {
+.hero-gradient {
     background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 }
 }
@@ -242,14 +257,14 @@ section {
   <section>
     <div class="parent">
       <div class="div1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
-      <div class="div2"></div>
+      <div class="hero-gradient"></div>
       <div class="div3">
         <div class="inner-container pad1">
           <div class="box">
-            <h1 class="largetext white">Start a course this September.<br>
-              It's your future.<br>
-              Make it count.</h1>
-            <button class="btn btn-primary mtop1"><span class="iconfont" aria-hidden="true">6</span>Register for clearing</button>
+            <h1 class="largetext">Start a course this September.<br>
+          <span class="highlight">It's your future.<br>
+          Make it count.</span></h1>
+            <button class="btn btn-hollow mtop1"><span class="iconfont letterspacing-small" aria-hidden="true">6</span>Register for clearing</button>
           </div>
           <div class="box">
             <div class="rounded background-mrfrosty pad1">
@@ -258,7 +273,7 @@ section {
                 <span class="iconfont letterspacing-small" aria-hidden="true">0</span><strong>01752 585 858</strong> </h1>
             </div>
             <div class="rounded background-white pad1">
-              <h2><span class="iconfont" aria-hidden="true">B</span>Search course vacancies</h2>
+              <h2><span class="iconfont letterspacing-small" aria-hidden="true">B</span>Search course vacancies</h2>
               <input type="text" class="search-box" placeholder="Search courses...">
             </div>
           </div>
