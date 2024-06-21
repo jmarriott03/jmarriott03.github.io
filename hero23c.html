@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+--btn-primary: #06c;
+--btn-primary-hov: #039;
+--highlight: #fc6;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 100%;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 80em) 1fr;
+    grid-template-rows: auto;
+    margin: 0;
+}
+.image-container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.gradient-container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.content-container {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.image-container, .gradient-container, .content-container {
+    width: 100%;
+    margin-top: 0;
+}
+.gradient-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    mix-blend-mode: multiply;
+    z-index: 0;
+}
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.box {
+    z-index: 1;
+    margin: 0;
+}
+.btn {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--btn-primary-hov);
+}
+.btn-hollow {
+    color: var(--white);
+    border: 2px solid var(--white);
+    background: none;
+    font-weight: bold;
+}
+.btn-hollow:hover, .btn-primary:focus {
+    color: var(--black);
+    background-color: var(--white);
+}
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+.white {
+    color: var(--white);
+}
+.search {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--mgrey);
+    border-radius: 0.25rem;
+    outline: none;
+}
+.rounded {
+    border-radius: 1rem;
+}
+.frost {
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,1));
+    backdrop-filter: blur(0.5rem);
+}
+.background-white {
+    background-color: var(--white);
+}
+.letterspacing-small {
+    letter-spacing: 0.125rem;
+}
+.highlight {
+    color: var(--highlight);
+}
+.gradient-container, .content-container, .box {
+    border: 1px dotted var(--white);
+}
+.bg-black {
+    background-color: var(--black);
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.bg-ucas {
+    background-color: var(--ucas);
+    width: 100%;
+    overflow: hidden;
+}
+.uoplogo {
+    width: 12rem;
+    float: left;
+}
+.uoplogo img {
+    width: 8rem;
+}
+.topnav {
+    max-width: 24rem;
+    float: right;
+}
+.breadcrumb {
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.breadcrumb p {
+    margin: 0;
+}
+
+@media (max-width: 60em) {
+.columns {
+    grid-template-columns: 1fr;
+}
+.gradient-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.topnav {
+    float: left;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent bg-black">
+    <div class="content-container">
+      <div class="columns p-2">
+        <div class="box">
+          <div class="uoplogo"><img src="images/uoplogomonowhite.svg" alt="" class="w10"></div>
+        </div>
+        <div class="box"> <img src="images/topnav.svg" alt="" class="topnav"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="parent">
+    <div class="image-container"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+    <div class="gradient-container"></div>
+    <div class="content-container">
+      <div class="columns p-2">
+        <div class="box">
+          <h2 class="white largetext3">Start a course this September.<br>
+            <span class="highlight">It's your future.<br>
+            Make it count.</span></h2>
+          <button class="btn btn-hollow mt-1"><span class="iconfont letterspacing-small" aria-hidden="true">6</span>Register for clearing</button>
+        </div>
+        <div class="box">
+          <div class="rounded frost p-1">
+            <p>It's your future. Make it count.</p>
+            <h2 class="largetext2 mt-0">Call our Clearing hotline today<br>
+              <span class="iconfont letterspacing-small" aria-hidden="true">0</span><strong>01752 585 858</strong></h2>
+          </div>
+          <div class="rounded background-white p-1 mt-2">
+            <h2><span class="iconfont letterspacing-small" aria-hidden="true">B</span>Search course vacancies</h2>
+            <input type="text" class="search" placeholder="Search courses...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
