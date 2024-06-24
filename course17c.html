@@ -335,6 +335,19 @@ td {
 .radial-seagreen {
     background: radial-gradient(ellipse at top right, var(--radial1-seagreen), var(--radial2-seagreen));
 }
+.fadein {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 2s forwards;
+    margin: 2em;
+}
+@keyframes fadeIn {
+to {
+opacity: 1;
+}
+}
+.seagreen {
+    color: var(--btn-seagreen);
+}
 
 @media (max-width: 60em) {
 .columns {
@@ -409,7 +422,7 @@ td {
           </table>
           <p>Our friendly studio-centred programme will support you to understand and participate in the expanded forms of making, thinking and writing that reflect art practice today. Be guided by practising artists, curators, producers and writers to explore concepts, contexts, techniques, and technologies across sculpture, installation, performance, video and digital media, painting and drawing.</p>
         </div>
-        <div class="box">
+        <div class="box fadein">
           <div class="rounded frost shadow p-2 clearing-box">
             <p><strong>Clearing places still available</strong></p>
           </div>
