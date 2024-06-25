@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+--btn-primary: #06c;
+--btn-primary-hov: #039;
+--highlight: #fc6;
+--btn-seagreen: #338078;
+--btn-seagreen-hov: #9fcac5;
+--radial1-seagreen: #9fcac5;
+--radial2-seagreen: #338078;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+    height: 220vh; /* to ensure there is enough space to scroll */
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 100%;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 80em) 1fr;
+    grid-template-rows: auto;
+    margin: 0;
+}
+.image-container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.gradient-container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.content-container {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.image-container, .gradient-container, .content-container {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+.gradient-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    mix-blend-mode: multiply;
+    z-index: 0;
+}
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.box {
+    z-index: 1;
+    margin: 0;
+}
+.btn {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--btn-primary-hov);
+}
+.btn-seagreen {
+    color: var(--white);
+    background-color: var(--btn-seagreen);
+}
+.btn-seagreen:hover, .btn-seagreen:focus {
+    color: var(--black);
+    background-color: var(--btn-seagreen-hov);
+}
+.btn-hollow {
+    color: var(--white);
+    border: 2px solid var(--white);
+    background: none;
+    font-weight: bold;
+}
+.btn-hollow:hover, .btn-primary:focus {
+    color: var(--black);
+    background-color: var(--white);
+}
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+.white {
+    color: var(--white);
+}
+.search {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--mgrey);
+    border-radius: 0.25rem;
+    outline: none;
+}
+.rounded {
+    border-radius: 1rem;
+}
+.rounded2 {
+    border-radius: 2rem;
+}
+.mrfrosty {
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,1));
+    backdrop-filter: blur(0.5rem);
+}
+.background-white {
+    background-color: var(--white);
+}
+.background-seagreen {
+    background-color: var(--seagreen);
+}
+.letterspacing-small {
+    letter-spacing: 0.125rem;
+}
+.highlight {
+    color: var(--highlight);
+}
+.bg-black {
+    background-color: var(--black);
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.uoplogo {
+    width: 12rem;
+    float: left;
+}
+.uoplogo img {
+    width: 8rem;
+}
+.topnav {
+    max-width: 24rem;
+    float: right;
+}
+.breadcrumb {
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.breadcrumb p {
+    margin: 0;
+}
+.image-container {
+    overflow: hidden;
+    margin: 0;
+}
+.zoom-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    transition: transform ease-in-out;
+    margin: 0;
+}
+.shadow {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.3);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 1.5em 0;
+    clear: both;
+    display: block;
+    padding-top: 1rem;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+.black {
+    color: var(--black);
+}
+.radial-seagreen {
+    background: radial-gradient(ellipse at top right, var(--radial1-seagreen), var(--radial2-seagreen));
+}
+.seagreen {
+    color: var(--btn-seagreen);
+}
+.fadein {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 2s forwards;
+    margin: 2em;
+}
+@keyframes fadeIn {
+to {
+opacity: 1;
+}
+}
+.clearing-text {
+    float: left;
+    padding: 0.5em 2em 0.5em 0;
+    color: var(--btn-seagreen);
+    font-weight: bold;
+}
+.badge {
+    display: block;
+    float: right;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 2em;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.relative {
+    position: relative;
+}
+.badge-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+    transform: rotate(20deg);
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+}
+.onlymobile {
+    display: none;
+}
+.breadcrumb {
+    overflow: hidden;
+    padding: 2em;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+.breadcrumb > p {
+    max-width: 76em;
+    margin: 0 auto;
+}
+.clearing-strap {
+    background-color: var(--btn-seagreen);
+    overflow: hidden;
+    padding: 2em;
+    margin: -2em -2em 0 -2em;
+    border-radius: 2rem 2rem 0 0;
+    font-weight: bold;
+    color: var(--white);
+}
+.school-text {
+    margin-top: 0;
+}
+@media (max-width: 60em) {
+.columns {
+    grid-template-columns: 1fr;
+}
+.gradient-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.topnav {
+    float: left;
+}
+.largetext2 {
+    font-size: 1.5em;
+}
+.largetext3 {
+    font-size: 1.5em;
+}
+.badge {
+    display: none;
+}
+.onlymobile {
+    display: block;
+}
+.school-text {
+    margin-top: 2em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent bg-black">
+    <div class="content-container">
+      <div class="columns p-2">
+        <div class="box">
+          <div class="uoplogo"><img src="images/uoplogomonowhite.svg" alt="" class="w10"></div>
+        </div>
+        <div class="box"> <img src="images/topnav.svg" alt="" class="topnav"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcrumb">
+    <p><a href="#">Home</a> &#62; <a href="#">Courses</a> &#62; <strong>BA (Hons) Fine Art</strong></p>
+  </div>
+  <div class="parent relative">
+    <div class="image-container relative"><img src="images/1280x720fineart14.jpg" width="1280" height="720" alt="" class="zoom-image"></div>
+    <div class="badge radial-seagreen shadow fadein"><span class="badge-text">Course starting<br>
+      September 2024</span></div>
+    <!--<div class="gradient-container"></div>-->
+    <div class="content-container">
+      <div class="columns p-2">
+        <div class="box rounded2 mrfrosty shadow p-2">
+          <div class="clearing-strap onlymobile mb-2">
+            <p>Course starting September 2024</p>
+          </div>
+          <p class="school-text"><a href="#" class="black">School of Art, Design and Architecture</a></p>
+          <h2 class="largetext3 mt-0">BA (Hons) Fine Art</h2>
+          <p><span class="clearing-text"><span class="iconfont letterspacing-small" aria-hidden="true">6</span>Places still available</span>
+            <button class="btn btn-seagreen">Register for clearing</button>
+          </p>
+          <table>
+            <tr>
+              <td>UCAS tariff</td>
+              <td ><strong>96 - 144</strong></td>
+            </tr>
+            <tr>
+              <td>UCAS course code</td>
+              <td><strong>W100</strong></td>
+            </tr>
+            <tr>
+              <td>Institution code</td>
+              <td><strong>P60</strong></td>
+            </tr>
+            <tr>
+              <td>Duration</td>
+              <td><strong>3 years<br>
+                </strong></td>
+            </tr>
+            <tr>
+              <td>Assessment breakdown</td>
+              <td><strong>100% coursework<br>
+                </strong></td>
+            </tr>
+            <tr>
+              <td>Course type</td>
+              <td><strong>Full-time</strong></td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+          <p>Our friendly studio-centred programme will support you to understand and participate in the expanded forms of making, thinking and writing that reflect art practice today. Be guided by practising artists, curators, producers and writers to explore concepts, contexts, techniques, and technologies across sculpture, installation, performance, video and digital media, painting and drawing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const zoomImage = document.querySelector('.zoom-image');
+            
+            // Adjust the zoom level based on scroll position
+            const zoomLevel = 1 + scrollPosition / 2000;
+            zoomImage.style.transform = `translate(-50%, -50%) scale(${zoomLevel})`;
+        });
+    </script>
+</body>
+</html>
