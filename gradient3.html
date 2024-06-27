@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+    height: 220vh; /* to ensure there is enough space to scroll */
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+.grid-item {
+    color: var(--white);
+    background-color: var(--black);
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+.gradient-parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+.layer {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    align-content: center;
+}
+.gradient-container {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    z-index: 0;
+    margin: 0;
+}
+.gradient-type-right-light {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+.gradient-type-right-medium {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+.gradient-type-right-dark {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+.gradient-type-top-light {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+.gradient-type-top-medium {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+.gradient-type-top-dark {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+.gradient-type-left-light {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+.gradient-type-left-medium {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+.gradient-type-left-dark {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+.gradient-type-bottom-light {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+.gradient-type-bottom-medium {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+.gradient-type-bottom-dark {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+.gradient-type-tint-light {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+.gradient-type-tint-medium {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.gradient-type-tint-dark {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+.zindex {
+    z-index: 1;
+    margin-top: 0;
+}
+</style>
+</head>
+<body>
+<section>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-right-light"></div>
+        <div class="layer zindex">
+          <p>To right light</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-right-medium"></div>
+        <div class="layer zindex">
+          <p>To right medium</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-right-dark"></div>
+        <div class="layer zindex">
+          <p>To right dark</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-top-light"></div>
+        <div class="layer zindex">
+          <p>To top light</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-top-medium"></div>
+        <div class="layer zindex">
+          <p>To top medium</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-top-dark"></div>
+        <div class="layer zindex">
+          <p>To top dark</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-left-light"></div>
+        <div class="layer zindex">
+          <p>To left light</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-left-medium"></div>
+        <div class="layer zindex">
+          <p>To left medium</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-left-dark"></div>
+        <div class="layer zindex">
+          <p>To left dark</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-bottom-light"></div>
+        <div class="layer zindex">
+          <p>To bottom light</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-bottom-medium"></div>
+        <div class="layer zindex">
+          <p>To bottom medium</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-bottom-dark"></div>
+        <div class="layer zindex">
+          <p>To bottom dark</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-tint-light"></div>
+        <div class="layer zindex">
+          <p>Tint light</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-tint-medium"></div>
+        <div class="layer zindex">
+          <p>Tint medium</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="gradient-parent">
+        <div class="layer"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""/></div>
+        <div class="layer gradient-container gradient-type-tint-dark"></div>
+        <div class="layer zindex">
+          <p>Tint dark</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
