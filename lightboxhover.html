@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #00e;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon15.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;/*border: 1px dotted red;*/
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    text-underline-position: under;
+    text-underline-offset: 1px;
+    overflow-wrap: break-word;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    margin: 0;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 80em;
+    grid-gap: 1em;
+}
+.grid-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 38.5em;
+}
+.grid-item > div {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+    margin-top: 0;
+}
+.swatch1 {
+    width: 100%;
+    background-color: var(--lgrey);
+    overflow: hidden;
+}
+.swatch2 {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+    overflow: hidden;
+}
+.swatch2 a {
+    color: var(--white);
+}
+.swatch1 h2, .swatch2 h2 {
+    padding: 1rem 0 0 1rem;
+}
+.differentswatch {
+    padding: 1rem;
+    margin: 0;
+}
+.sameswatch {
+    padding: 0.5rem 0 0 0;
+    margin: 0;
+}
+.bck-white {
+    background-color: var(--white);
+}
+.lightbox-hover1 a:hover {
+    border: 2px solid var(--black);
+    transition: 0.3s;
+}
+.lightbox-hover2 a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.lightbox-hover3 a:hover {
+    border: 2px solid var(--black);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+</style>
+</head>
+<body>
+<div class="swatch1">
+  <section>
+    <h2>Lightbox border on hover</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item lightbox-hover1"><a href="#">
+      <figure><img src="images/1280x720student4.jpg" alt="">
+        <figcaption class="differentswatch bck-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+      </a></div>
+    <div class="grid-item lightbox-hover1"><a href="#"><img src="images/1280x720student1.jpg" alt=""></a></div>
+    <div class="grid-item lightbox-hover1"><a href="#"><img src="images/1280x720student2.jpg" alt=""></a></div>
+    <div class="grid-item lightbox-hover1"><a href="#"><img src="images/1280x720student3.jpg" alt=""></a></div>
+  </div>
+</div>
+<div class="swatch1">
+  <section>
+    <h2>Lightbox opacity on hover</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item lightbox-hover2"><a href="#">
+      <figure><img src="images/1280x720student4.jpg" alt="">
+        <figcaption class="differentswatch bck-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+      </a></div>
+    <div class="grid-item lightbox-hover2"><a href="#"><img src="images/1280x720student1.jpg" alt=""></a></div>
+    <div class="grid-item lightbox-hover2"><a href="#"><img src="images/1280x720student2.jpg" alt=""></a></div>
+    <div class="grid-item lightbox-hover2"><a href="#"><img src="images/1280x720student3.jpg" alt=""></a></div>
+  </div>
+</div>
+<div class="swatch1">
+  <section>
+    <h2>Lightbox border and opacity on hover</h2>
+  </section>
+  <div class="grid-container">
+    <div class="grid-item lightbox-hover3"><a href="#">
+      <figure><img src="images/1280x720student4.jpg" alt="">
+        <figcaption class="differentswatch bck-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</figcaption>
+      </figure>
+      </a></div>
+    <div class="grid-item lightbox-hover3"><a href="#"><img src="images/1280x720student1.jpg" alt=""></a></div>
+    <div class="grid-item lightbox-hover3"><a href="#"><img src="images/1280x720student2.jpg" alt=""></a></div>
+    <div class="grid-item lightbox-hover3"><a href="#"><img src="images/1280x720student3.jpg" alt=""></a></div>
+  </div>
+</div>
+</body>
+</html>
