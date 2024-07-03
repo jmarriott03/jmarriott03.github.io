@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 1em;
+}
+.pt-1 {
+    padding-top: 1em;
+}
+.pr-1 {
+    padding-right: 1em;
+}
+.pb-1 {
+    padding-bottom: 1em;
+}
+.pl-1 {
+    padding-left: 1em;
+}
+.px-1 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.py-1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.p-2 {
+    padding: 2em;
+}
+.pt-2 {
+    padding-top: 2em;
+}
+.pr-2 {
+    padding-right: 2em;
+}
+.pb-2 {
+    padding-bottom: 2em;
+}
+.pl-2 {
+    padding-left: 2em;
+}
+.px-2 {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.py-2 {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.m-auto {
+    margin: auto;
+}
+.m-0 {
+    margin: 0;
+}
+.m-1 {
+    margin: 1em;
+}
+.mt-1 {
+    margin-top: 1em;
+}
+.mr-1 {
+    margin-right: 1em;
+}
+.mb-1 {
+    margin-bottom: 1em;
+}
+.ml-1 {
+    margin-left: 1em;
+}
+.mx-1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.my-1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.m-2 {
+    margin: 2em;
+}
+.mt-2 {
+    margin-top: 2em;
+}
+.mr-2 {
+    margin-right: 2em;
+}
+.mb-2 {
+    margin-bottom: 2em;
+}
+.ml-2 {
+    margin-left: 2em;
+}
+.mx-2 {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.my-2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.active h1 {
+    text-wrap: pretty;
+}
+.active p {
+    text-wrap: pretty;
+}
+.columns {
+    columns: 20em 3;
+    column-gap: 2em;
+    padding: 2em;
+    widows: 2;
+    orphans: 2;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="pl-2 pt-1">
+    <button id="toggleButton">Make pretty</button>
+  </section>
+  <section id="myElement" class="columns">
+    <h1 class="text-balance">In ze goud te welk heft vele veel ipoh. Er nemen staat ze nu de bezet centraal</h1>
+    <p>Ten had want deed twee heen naar puin zij. Dus uit javanen sneller luister zou hun. Slotte dienst genoeg lot mollen men. Siameezen bijgeloof der kapitalen gesmolten zuidgrens zin gif vierkante. Des percent als tot geopend tunnels. Nu dier stad daad op. Valt tien en worm er ze rijk.</p>
+    <p>Mee dik sinds zes moest men lucht. Daken te nu ze onder moest en groei verre gayah. Heuvel dat passen sultan minste ton. Sarongs goa markten aan inkomen bronnen der staande. Maakt reeds en heele meter in raakt. Slechts en af evenals toegang geoogst besluit en. Des komt kaal erin lama far liet moet. Ik arme telt want voor in nu boom. Kemming op beneden trekken na behoeft al. Elders goeden koffie rug zit dag waarde had.</p>
+    <p>Hoogere dus nam tijdens aandeel talrijk. Begrenzing uiteenvalt nu ontsnappen initiatief of werkwijzen. Der hooge aldus hitte sap tegen als. Ringen is zoodat daarin marmer af bezoek ze soegei. Op kaal geld acre om af west. In hout om liep doet is af. In tweeden malakka ik moesten valorem af al. Goudmijnen voorschijn verwijderd europeesch uit sap verzekeren. Gewijzigd krachtige dat alluviale gas waaronder verklaart evenwicht.</p>
+    <p>Gebruiken op ik bedroegen overvloed ze vereenigd er vertoonen. Is er gekomen vordert geplant product ad ik. Ziet ik zoon om meer koel wild en uren. Aandeelen en of nu perzische afstanden. Zooveel wording drijven te op al en. Mogendheid en te ze tinprijzen getaxeerde is aanplanten europeanen. Schijnen dal een vluchten snelsten.</p>
+    <p>Met kostbare inwoners als middelen. Gewasschen en af is interesten ad ingesneden weelderige voorloopig. Centimes ze sembilan mijnwerk na gebracht behouden. Procede gekomen betreft ik rijkdom te in. Schatkist brandhout wijselijk nu al. Verkochten locomobiel traliewerk ze om plotseling vergissing er nu. Ze centraal schijnen voorziet stelling op.</p>
+  </section>
+  <div class="codegrey"><code>h1 {<br>
+    text-wrap: balance;<br>
+    }<br>
+    p {<br>
+    text-wrap: pretty;<br>
+    }<br>
+    .columns {<br>
+    columns: 20em 3;<br>
+    column-gap: 2em;<br>
+    padding: 2em;<br>
+    widows: 2;<br>
+    orphans: 2;<br>
+    }</code></div>
+</main>
+<script>
+        // Function to toggle the 'active' class on the element and change button text
+        function toggleClass() {
+            const element = document.getElementById('myElement');
+            const button = document.getElementById('toggleButton');
+            element.classList.toggle('active');
+
+            // Change button text based on the element's class state
+            if (element.classList.contains('active')) {
+                button.textContent = 'Remove CSS';
+            } else {
+                button.textContent = 'Make pretty';
+            }
+        }
+
+        // Add event listener to the button
+        document.getElementById('toggleButton').addEventListener('click', toggleClass);
+    </script>
+</body>
+</html>
