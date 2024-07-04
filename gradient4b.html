@@ -15,6 +15,7 @@
 --link: #06c;
 --visited: purple;
 --btn-light: #ccc;
+--btn-active: #999;
 }
 @font-face {
     font-family: icon;
@@ -182,15 +183,17 @@ section {
     float: left;
     -webkit-appearance: none;
     outline-offset: 2px;
-    transition: 0.3s;
     cursor: pointer;
-}
-br {
-    clear: both;
 }
 .btn-light {
     color: var(--black);
     background-color: var(--btn-light);
+}
+.btn.active {
+    background-color: var(--btn-active); /* Active button background color */
+}
+br {
+    clear: both;
 }
 .gradient-type-right-light {
     background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0));
@@ -256,78 +259,41 @@ br {
     </div>
     <h2>Gradients/tints</h2>
     <div class="button-big mt-0">
-      <button onclick="myFunction1()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">!</span>light</button>
-      <button onclick="myFunction2()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">!</span>medium</button>
-      <button onclick="myFunction3()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">!</span>dark</button>
+      <button onclick="myFunction(this, 'gradient-type-top-light')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">!</span>light</button>
+      <button onclick="myFunction(this, 'gradient-type-top-medium')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">!</span>medium</button>
+      <button onclick="myFunction(this, 'gradient-type-top-dark')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">!</span>dark</button>
       <br>
-      <button onclick="myFunction4()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">&quot;</span>light</button>
-      <button onclick="myFunction5()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">&quot;</span>medium</button>
-      <button onclick="myFunction6()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">&quot;</span>dark</button>
+      <button onclick="myFunction(this, 'gradient-type-right-light')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">&quot;</span>light</button>
+      <button onclick="myFunction(this, 'gradient-type-right-medium')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">&quot;</span>medium</button>
+      <button onclick="myFunction(this, 'gradient-type-right-dark')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">&quot;</span>dark</button>
       <br>
-      <button onclick="myFunction7()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">#</span>light</button>
-      <button onclick="myFunction8()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">#</span>medium</button>
-      <button onclick="myFunction9()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">#</span>dark</button>
+      <button onclick="myFunction(this, 'gradient-type-bottom-light')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">#</span>light</button>
+      <button onclick="myFunction(this, 'gradient-type-bottom-medium')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">#</span>medium</button>
+      <button onclick="myFunction(this, 'gradient-type-bottom-dark')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">#</span>dark</button>
       <br>
-      <button onclick="myFunction10()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">$</span>light</button>
-      <button onclick="myFunction11()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">$</span>medium</button>
-      <button onclick="myFunction12()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">$</span>dark</button>
+      <button onclick="myFunction(this, 'gradient-type-left-light')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">$</span>light</button>
+      <button onclick="myFunction(this, 'gradient-type-left-medium')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">$</span>medium</button>
+      <button onclick="myFunction(this, 'gradient-type-left-dark')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">$</span>dark</button>
       <br>
-      <button onclick="myFunction13()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">ä</span>light</button>
-      <button onclick="myFunction14()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">ä</span>medium</button>
-      <button onclick="myFunction15()" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">ä</span>dark</button>
+      <button onclick="myFunction(this, 'gradient-type-tint-light')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">ä</span>light</button>
+      <button onclick="myFunction(this, 'gradient-type-tint-medium')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">ä</span>medium</button>
+      <button onclick="myFunction(this, 'gradient-type-tint-dark')" class="btn btn-light"><span class="iconfont letterspacing-small" aria-hidden="true">ä</span>dark</button>
       <br>
-      <button onclick="myFunction16()" class="btn btn-light">none</button>
+      <button onclick="myFunction(this, '')" class="btn btn-light">none</button>
     </div>
   </div>
 </section>
 <script>
-function myFunction1() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-top-light";
-}
-function myFunction2() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-top-medium";
-}
-function myFunction3() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-top-dark";
-}
-function myFunction4() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-right-light";
-}
-function myFunction5() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-right-medium";
-}
-function myFunction6() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-right-dark";
-}
-function myFunction7() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-bottom-light";
-}
-function myFunction8() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-bottom-medium";
-}
-function myFunction9() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-bottom-dark";
-}
-function myFunction10() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-left-light";
-}
-function myFunction11() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-left-medium";
-}
-function myFunction12() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-left-dark";
-}
-function myFunction13() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-tint-light";
-}
-function myFunction14() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-tint-medium";
-}
-function myFunction15() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container gradient-type-tint-dark";
-}
-function myFunction16() {
-	document.getElementById('gradientfillafter').className = "layer gradient-container";
+function myFunction(button, gradientClass) {
+  // Remove active class from all buttons
+  var buttons = document.querySelectorAll('.btn');
+  buttons.forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+  // Add active class to the clicked button
+  button.classList.add('active');
+  // Update the gradient class
+  document.getElementById('gradientfillafter').className = "layer gradient-container " + gradientClass;
 }
 </script>
 </body>
