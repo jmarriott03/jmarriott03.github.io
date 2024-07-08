@@ -14,6 +14,7 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
+--btn-primary: #06c;
 }
 @font-face {
     font-family: icon;
@@ -238,8 +239,29 @@ section {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-.active h1 {
-    text-wrap: pretty;
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 1rem 0.2rem 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.active h1, .active h2, .active h3, .active h4, .active h5, .active h6 {
+    text-wrap: balance;
 }
 .active p {
     text-wrap: pretty;
@@ -256,7 +278,8 @@ section {
 <body>
 <main>
   <section class="pl-2 pt-1">
-    <button id="toggleButton">Make pretty</button>
+    <h1>Widows, orphans and runts</h1>
+    <button id="toggleButton" class="btn btn-primary">Make pretty</button>
   </section>
   <section id="myElement" class="columns">
     <h1 class="text-balance">In ze goud te welk heft vele veel ipoh. Er nemen staat ze nu de bezet centraal</h1>
@@ -266,7 +289,7 @@ section {
     <p>Gebruiken op ik bedroegen overvloed ze vereenigd er vertoonen. Is er gekomen vordert geplant product ad ik. Ziet ik zoon om meer koel wild en uren. Aandeelen en of nu perzische afstanden. Zooveel wording drijven te op al en. Mogendheid en te ze tinprijzen getaxeerde is aanplanten europeanen. Schijnen dal een vluchten snelsten.</p>
     <p>Met kostbare inwoners als middelen. Gewasschen en af is interesten ad ingesneden weelderige voorloopig. Centimes ze sembilan mijnwerk na gebracht behouden. Procede gekomen betreft ik rijkdom te in. Schatkist brandhout wijselijk nu al. Verkochten locomobiel traliewerk ze om plotseling vergissing er nu. Ze centraal schijnen voorziet stelling op.</p>
   </section>
-  <div class="codegrey"><code>h1 {<br>
+  <div class="codegrey"><code>h1, h2, h3, h4, h5, h6 {<br>
     text-wrap: balance;<br>
     }<br>
     p {<br>
@@ -281,22 +304,20 @@ section {
     }</code></div>
 </main>
 <script>
-        // Function to toggle the 'active' class on the element and change button text
-        function toggleClass() {
-            const element = document.getElementById('myElement');
-            const button = document.getElementById('toggleButton');
-            element.classList.toggle('active');
-
-            // Change button text based on the element's class state
-            if (element.classList.contains('active')) {
-                button.textContent = 'Remove CSS';
-            } else {
-                button.textContent = 'Make pretty';
-            }
-        }
-
-        // Add event listener to the button
-        document.getElementById('toggleButton').addEventListener('click', toggleClass);
-    </script>
+	// Function to toggle the 'active' class on the element and change button text
+	function toggleClass() {
+		const element = document.getElementById('myElement');
+		const button = document.getElementById('toggleButton');
+		element.classList.toggle('active');
+		// Change button text based on the element's class state
+		if (element.classList.contains('active')) {
+			button.textContent = 'Remove CSS';
+		} else {
+			button.textContent = 'Make pretty';
+		}
+	}
+	// Add event listener to the button
+	document.getElementById('toggleButton').addEventListener('click', toggleClass);
+</script>
 </body>
 </html>
