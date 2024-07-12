@@ -274,42 +274,27 @@ section {
     margin-top: 0;
     min-width: 100%;
 }
-.b-parent {
+.pie-parent {
     display: grid;
     grid-template-columns: 2em 1fr;
     grid-template-rows: 2em;
     gap: 0.5em;
 }
-.b-div1 {
+.pie-div1 {
     grid-area: 1 / 1 / 2 / 2;
     background: var(--lgrey);
     border-radius: 1em;
 }
-.b-div2 {
+.pie-div2 {
     grid-area: 1 / 2 / 2 / 3;
 }
-.b-div1, .b-div2 {
+.pie-div1, .pie-div2 {
     width: 100%;
     margin: 0;
     line-height: 2em;
 }
-.conic100 {
-    background: var(--pie-dark);
-}
-.conic70 {
-    background: conic-gradient( var(--pie-dark) 0% 70%, var(--pie-light) 70% 100% );
-}
-.conic60 {
-    background: conic-gradient( var(--pie-dark) 0% 60%, var(--pie-light) 60% 100% );
-}
-.conic50 {
-    background: conic-gradient( var(--pie-dark) 0% 50%, var(--pie-light) 50% 100% );
-}
-.conic30 {
-    background: conic-gradient( var(--pie-dark) 0% 30%, var(--pie-light) 30% 100% );
-}
-.conic10 {
-    background: conic-gradient( var(--pie-dark) 0% 10%, var(--pie-light) 10% 100% );
+.pie-circle {
+    background: conic-gradient(var(--pie-dark) var(--percentage), var(--pie-light) var(--percentage) 100%);
 }
 
 @media (max-width: 60em) {
@@ -339,17 +324,17 @@ section {
           What is History? – provides an overview of how the discipline of history operates, and looks at some of the key skills associated with the subject.</p>
       </div>
       <div class="div2">
-        <div class="b-parent">
-          <div class="b-div1 conic60"></div>
-          <div class="b-div2"><strong>60%</strong> remotely delivered assessment</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 70%;"></div>
+          <div class="pie-div2"><strong>60%</strong> remotely delivered assessment</div>
         </div>
-        <div class="b-parent">
-          <div class="b-div1 conic30"></div>
-          <div class="b-div2"><strong>30%</strong> generic assessment</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 30%;"></div>
+          <div class="pie-div2"><strong>30%</strong> generic assessment</div>
         </div>
-        <div class="b-parent">
-          <div class="b-div1 conic10"></div>
-          <div class="b-div2"><strong>10%</strong> clinical exam</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 10%;"></div>
+          <div class="pie-div2"><strong>10%</strong> clinical exam</div>
         </div>
       </div>
     </div>
@@ -359,13 +344,13 @@ section {
           This module aims to provide an introduction to major themes in the political, social and cultural evolution of the United States from 1492 to the end of the 19th Century. It aims to emphasise links to Europe and to give students a broad perspective on their historical studies. It will also provide students with an introduction to use of electronic sources in the study of American history and to the development of vital skills in critical thinking and academic writing.</p>
       </div>
       <div class="div2">
-        <div class="b-parent">
-          <div class="b-div1 conic70"></div>
-          <div class="b-div2"><strong>70%</strong> exam</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 70%;"></div>
+          <div class="pie-div2"><strong>70%</strong> exam</div>
         </div>
-        <div class="b-parent">
-          <div class="b-div1 conic30"></div>
-          <div class="b-div2"><strong>30%</strong> clinical</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 30%;"></div>
+          <div class="pie-div2"><strong>30%</strong> clinical</div>
         </div>
       </div>
     </div>
@@ -375,13 +360,13 @@ section {
           This module is an introduction to major themes in the political, social and cultural history of the modern world beyond Europe.</p>
       </div>
       <div class="div2">
-        <div class="b-parent">
-          <div class="b-div1 conic50"></div>
-          <div class="b-div2"><strong>50%</strong> test</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+          <div class="pie-div2"><strong>50%</strong> test</div>
         </div>
-        <div class="b-parent">
-          <div class="b-div1 conic50"></div>
-          <div class="b-div2"><strong>50%</strong> remotely delivered assessment</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+          <div class="pie-div2"><strong>50%</strong> remotely delivered assessment</div>
         </div>
       </div>
     </div>
@@ -391,13 +376,13 @@ section {
           The module is an introduction to the major themes in political, social and cultural history of Britain and Ireland in the period 1640-1900. This module will include 2, 2 hour talks that introduce our School and programme level employability related opportunities and support, including details of the optional placement year.</p>
       </div>
       <div class="div2">
-        <div class="b-parent">
-          <div class="b-div1 conic50"></div>
-          <div class="b-div2"><strong>50%</strong> coursework</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+          <div class="pie-div2"><strong>50%</strong> coursework</div>
         </div>
-        <div class="b-parent">
-          <div class="b-div1 conic50"></div>
-          <div class="b-div2"><strong>50%</strong> generic assessment</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+          <div class="pie-div2"><strong>50%</strong> generic assessment</div>
         </div>
       </div>
     </div>
@@ -407,9 +392,9 @@ section {
           This module introduces students to the political, social, cultural and religious history of Early Modern Europe, 1450-1700.</p>
       </div>
       <div class="div2">
-        <div class="b-parent">
-          <div class="b-div1 conic100"></div>
-          <div class="b-div2"><strong>100%</strong> practical</div>
+        <div class="pie-parent">
+          <div class="pie-div1 pie-circle" style="--percentage: 100%;"></div>
+          <div class="pie-div2"><strong>100%</strong> practical</div>
         </div>
       </div>
     </div>
