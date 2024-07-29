@@ -239,22 +239,22 @@ section {
     margin-top: 2em;
     margin-bottom: 2em;
 }
-.container {
+.grid {
     display: inline-grid;
     grid-template-columns: auto auto;
     gap: 1em;
 }
-.card {
+.grid-item {
     grid-template-columns: subgrid;
     border: 1px dotted var(--mgrey);
     margin: 0;
 }
-.card > * {
+.grid-item > * {
     border: 1px dotted var(--red);
 }
 
 @media (max-width: 60em) {
-.container {
+.grid {
     grid-template-columns: auto;
 }
 }
@@ -264,17 +264,17 @@ section {
 <main>
   <section class="p-1">
     <h1>subgrid</h1>
-    <div class="container">
-      <div class="card">
+    <div class="grid">
+      <div class="grid-item">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <div class="card">
+      <div class="grid-item">
         <p>Excepteur sint occaecat cupidatat non proident</p>
       </div>
-      <div class="card">
+      <div class="grid-item">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
       </div>
-      <div class="card">
+      <div class="grid-item">
         <p>Excepteur sint occaecat cupidatat</p>
       </div>
     </div>
