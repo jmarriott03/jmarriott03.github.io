@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+--red: #f00;
+--pie-dark: #338078;
+--pie-light: #9fcac5;
+--pie-background: #deedeb;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+    background: var(--pie-background);
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 1em;
+}
+.pt-1 {
+    padding-top: 1em;
+}
+.pr-1 {
+    padding-right: 1em;
+}
+.pb-1 {
+    padding-bottom: 1em;
+}
+.pl-1 {
+    padding-left: 1em;
+}
+.px-1 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.py-1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.p-2 {
+    padding: 2em;
+}
+.pt-2 {
+    padding-top: 2em;
+}
+.pr-2 {
+    padding-right: 2em;
+}
+.pb-2 {
+    padding-bottom: 2em;
+}
+.pl-2 {
+    padding-left: 2em;
+}
+.px-2 {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.py-2 {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.m-auto {
+    margin: auto;
+}
+.m-0 {
+    margin: 0;
+}
+.m-1 {
+    margin: 1em;
+}
+.mt-1 {
+    margin-top: 1em;
+}
+.mr-1 {
+    margin-right: 1em;
+}
+.mb-1 {
+    margin-bottom: 1em;
+}
+.ml-1 {
+    margin-left: 1em;
+}
+.mx-1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.my-1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.m-2 {
+    margin: 2em;
+}
+.mt-2 {
+    margin-top: 2em;
+}
+.mr-2 {
+    margin-right: 2em;
+}
+.mb-2 {
+    margin-bottom: 2em;
+}
+.ml-2 {
+    margin-left: 2em;
+}
+.mx-2 {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.my-2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1.5em;
+}
+.grid-item {
+    margin: 0;
+}
+.pie-parent {
+    display: grid;
+    grid-template-columns: 2em 1fr;
+    grid-template-rows: 2em;
+    gap: 0.5em;
+	
+}
+.pie-div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: var(--pie-background);
+    border-radius: 1em;
+}
+.pie-div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.pie-div1, .pie-div2 {
+    width: 100%;
+    margin: 0;
+    line-height: 2em;
+}
+.pie-circle {
+    background: conic-gradient(var(--pie-dark) var(--percentage), var(--pie-light) var(--percentage) 100%);
+}
+.pie-bck {
+    border-radius: 1em;
+    background-color: var(--pie-background);
+    padding: 1em;
+}
+.module-bck {
+    border-radius: 1em;
+    background-color: var(--white);
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
+    padding: 1em;
+}
+.shadow {
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.3);
+}
+.div2 {
+    background: var(--pie-background);
+    padding: 1em;
+    border-radius: 1em;
+    background-image: linear-gradient(rgba(255,255,255,0.6), var(--pie-background));
+    -webkit-backdrop-filter: blur(0.5rem);
+    backdrop-filter: blur(0.5rem);
+}
+.credits {
+    color: var(--black);
+    background-color: var(--pie-background);
+    padding: 0.125rem 0.25rem;
+    margin-left: 0.25rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 60em) {
+.grid {
+    grid-template-columns: auto;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-1">
+    <h2>Course details</h2>
+    <h2>Year 1</h2>
+    <p>In your first year, you’ll get to know the key concepts of history, studying six module designed to give you a firm foundation in historical methodology while helping you develop practical skills. You’ll study the subject from a broad range of perspectives exploring developments in world, US, European and British history.</p>
+    <h3>Core module</h3>
+    <div class="module-bck">
+      <div class="grid">
+        <div class="grid-item">
+          <p><strong>What is History? (HIS4001)</strong> <span class="credits">3 credits</span><br>
+            What is History? – provides an overview of how the discipline of history operates, and looks at some of the key skills associated with the subject.</p>
+        </div>
+        <div class="grid-item pie-bck">
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 60%;"></div>
+            <div class="pie-div2"><strong>60%</strong> remotely delivered assessment</div>
+          </div>
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 30%;"></div>
+            <div class="pie-div2"><strong>30%</strong> generic assessment</div>
+          </div>
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 10%;"></div>
+            <div class="pie-div2"><strong>10%</strong> clinical exam</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module-bck">
+      <div class="grid">
+        <div class="grid-item">
+          <p><strong>America from Settlement to Empire (HIS4002)</strong> <span class="credits">3 credits</span><br>
+            This module aims to provide an introduction to major themes in the political, social and cultural evolution of the United States from 1492 to the end of the 19th Century. It aims to emphasise links to Europe and to give students a broad perspective on their historical studies. It will also provide students with an introduction to use of electronic sources in the study of American history and to the development of vital skills in critical thinking and academic writing.</p>
+        </div>
+        <div class="grid-item pie-bck">
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 70%;"></div>
+            <div class="pie-div2"><strong>70%</strong> exam</div>
+          </div>
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 30%;"></div>
+            <div class="pie-div2"><strong>30%</strong> clinical</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module-bck">
+      <div class="grid">
+        <div class="grid-item">
+          <p><strong>World History since 1850 (HIS4003)</strong> <span class="credits">3 credits</span><br>
+            This module is an introduction to major themes in the political, social and cultural history of the modern world beyond Europe.</p>
+        </div>
+        <div class="grid-item pie-bck">
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+            <div class="pie-div2"><strong>50%</strong> test</div>
+          </div>
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+            <div class="pie-div2"><strong>50%</strong> remotely delivered assessment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module-bck">
+      <div class="grid">
+        <div class="grid-item">
+          <p><strong>Fractured Isles: Britain and Ireland 1640-1990 (HIS4004)</strong> <span class="credits">2 credits</span><br>
+            The module is an introduction to the major themes in political, social and cultural history of Britain and Ireland in the period 1640-1900. This module will include 2, 2 hour talks that introduce our School and programme level employability related opportunities and support, including details of the optional placement year.</p>
+        </div>
+        <div class="grid-item pie-bck">
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+            <div class="pie-div2"><strong>50%</strong> coursework</div>
+          </div>
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 50%;"></div>
+            <div class="pie-div2"><strong>50%</strong> generic assessment</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="module-bck">
+      <div class="grid">
+        <div class="grid-item">
+          <p><strong>Fighting for Survival: Living and Dying in Early Modern Europe, 1450-1700 (HIS4005) </strong><span class="credits">1 credit</span><br>
+            This module introduces students to the political, social, cultural and religious history of Early Modern Europe, 1450-1700.</p>
+        </div>
+        <div class="grid-item pie-bck">
+          <div class="pie-parent">
+            <div class="pie-div1 pie-circle" style="--percentage: 100%;"></div>
+            <div class="pie-div2"><strong>100%</strong> practical</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const div2s = document.querySelectorAll('.div2');
+  let maxWidth = 0;
+
+  div2s.forEach(div2 => {
+    const width = div2.getBoundingClientRect().width;
+    if (width > maxWidth) {
+      maxWidth = width;
+    }
+  });
+
+  div2s.forEach(div2 => {
+    div2.style.width = `${maxWidth}px`;
+  });
+});
+</script>
+</body>
+</html>
