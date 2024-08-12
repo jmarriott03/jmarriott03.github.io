@@ -273,8 +273,8 @@ section {
 .div2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Center content vertically */
-    align-items: flex-start;  /* Align content to the left */
+    justify-content: center;
+    align-items: flex-start;
     border: 1px dotted red;
     width: 100%;
 }
@@ -286,6 +286,9 @@ section {
 }
 .white {
     color: var(--white);
+}
+.black {
+    color: var(--black);
 }
 .p-2-p-1 {
     padding: 2rem;
@@ -356,11 +359,17 @@ p {
 .div7 {
     grid-area: 4 / 2 / 5 / 3;
 }
+.largetext {
+    font-size: 1em;
+}
 .largetext2 {
     font-size: 1.5em;
 }
 .largetext3 {
     font-size: 2em;
+}
+.div3 {
+    opacity: 1
 }
 }
 </style>
@@ -372,8 +381,8 @@ p {
       <div class="div1"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt=""></div>
       <div class="div2 p-2-p-1">
         <h1 class="largetext3">Make Plymouth your choice</h1>
-        <p class="pt-1">Secure your place on an undergraduate course for September 2025 entry</p>
-        <p><a href="#">Search course vacancies</a></p>
+        <p class="pt-1 largetext">Secure your place on an undergraduate course for September 2025 entry</p>
+        <p class="largetext"><a href="#" class="black">Search course vacancies</a></p>
       </div>
       <div class="div3"></div>
       <div class="div4 p-1 white">
