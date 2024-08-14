@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <title>University of Plymouth</title>
 <style>
 :root {
@@ -48,12 +49,6 @@ html, body {
 }
 main {
     margin-top: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-}
-p {
-    text-wrap: pretty;
 }
 h1 {
     font-size: 2em;
@@ -244,55 +239,18 @@ section {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.background-black {
+    background-color: var(--black);
+}
+.white {
+    color: var(--white);
+}
 </style>
 </head>
 <body>
 <main>
   <section class="p-1">
-    <h1>h1</h1>
-    <h2>h2</h2>
-    <h3>h3</h3>
-    <h4>h4</h4>
-    <h5>h5</h5>
-    <h6>h6</h6>
-    <p>p</p>
-    <p><strong>strong</strong></p>
-    <p><a href="#">link</a></p>
-    <p><em>em</em></p>
-    <p class="largetext">largetext</p>
-    <p class="largetext2">largetext2</p>
-    <p class="largetext3">largetext3</p>
-    <p><strong>.p-0</strong> {padding: 0;}<br>
-      <strong>.p-1</strong> {padding: 1rem;}<br>
-      <strong>.pt-1</strong> {padding-top: 1rem;}<br>
-      <strong>.pr-1</strong> {padding-right: 1rem;}<br>
-      <strong>.pb-1</strong> {padding-bottom: 1rem;}<br>
-      <strong>.pl-1</strong> {padding-left: 1rem;}<br>
-      <strong>.px-1</strong> {padding-left: 1rem; padding-right: 1rem;}<br>
-      <strong>.py-1</strong> {padding-top: 1rem; padding-bottom: 1rem;}<br>
-      <strong>.p-2</strong> {padding: 2rem;}<br>
-      <strong>.pt-2</strong> {padding-top: 2rem;}<br>
-      <strong>.pr-2</strong> {padding-right: 2rem;}<br>
-      <strong>.pb-2</strong> {padding-bottom: 2rem;}<br>
-      <strong>.pl-2</strong> {padding-left: 2rem;}<br>
-      <strong>.px-2</strong> {padding-left: 2rem; padding-right: 2rem;}<br>
-      <strong>.py-2</strong> {padding-top: 2rem; padding-bottom: 2rem;}<br>
-      <strong>.m-auto</strong> {margin: auto;}<br>
-      <strong>.m-0</strong> {margin: 0;}<br>
-      <strong>.m-1</strong> {margin: 1rem;}<br>
-      <strong>.mt-1</strong> {margin-top: 1rem;}<br>
-      <strong>.mr-1</strong> {margin-right: 1rem;}<br>
-      <strong>.mb-1</strong> {margin-bottom: 1rem;}<br>
-      <strong>.ml-1</strong> {margin-left: 1rem;}<br>
-      <strong>.mx-1</strong> {margin-left: 1rem; margin-right: 1rem;}<br>
-      <strong>.my-1</strong> {margin-top: 1rem; margin-bottom: 1rem;}<br>
-      <strong>.m-2</strong> {margin: 2rem;}<br>
-      <strong>.mt-2</strong> {margin-top: 2rem;}<br>
-      <strong>.mr-2</strong> {margin-right: 2rem;}<br>
-      <strong>.mb-2</strong> {margin-bottom: 2rem;}<br>
-      <strong>.ml-2</strong> {margin-left: 2rem;}<br>
-      <strong>.mx-2 </strong>{margin-left: 2rem; margin-right: 2rem;}<br>
-      <strong>.my-2</strong> {margin-top: 2rem; margin-bottom: 2rem;}</p>
+    <div class="background-black p-2"><a href="tel:+1-555-555-5555" class="white largetext3"><span class="iconfont" aria-hidden="true">0</span>01752-555-555-5555</a></div>
   </section>
 </main>
 </body>
