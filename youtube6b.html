@@ -14,6 +14,7 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
+--highlight: #b4c960;
 }
 @font-face {
     font-family: icon;
@@ -257,18 +258,12 @@ section {
 .div2 {
     grid-area: 1 / 2 / 2 / 3;
 }
+/*
 .div1, .div2 {
-    border: 1px dotted red;
     width: 100%;
     margin: 0;
 }
-.parent {
-    border: 1px dotted var(--black);
-    background-color: var(--lgrey);
-}
-.div1 {
-    background-color: var(--mgrey);
-}
+*/
 .div2 {
     display: flex;
     flex-direction: column;
@@ -278,6 +273,16 @@ section {
 }
 .div2 p {
     max-width: 40ch;
+}
+.div2 a {
+    color: var(--black);
+}
+.background-highlight {
+    background-color: var(--highlight)
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 50em) {
@@ -297,23 +302,25 @@ section {
 </head>
 <body>
 <main>
-  <section class="p-1">
-    <div class="parent p-2">
-      <div class="div1">
-        <iframe width="315" height="560" 
+  <div class="fullw background-highlight">
+    <section>
+      <div class="parent p-2 white background-highlight">
+        <div class="div1">
+          <iframe width="315" height="560" 
 src="https://www.youtube.com/embed/2FrVFQVzKTQ" 
 title="YouTube video player" style="border:0; width:100%;" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture;
 web-share"
 allowfullscreen></iframe>
+        </div>
+        <div class="div2">
+          <p class="largetext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <a href="#">sunt in culpa qui</a> officia deserunt mollit anim id est laborum.</p>
+        </div>
       </div>
-      <div class="div2">
-        <p class="largetext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>
 </body>
 </html>
