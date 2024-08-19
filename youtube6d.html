@@ -268,17 +268,19 @@ section {
 }
 .div1 {
     background-color: var(--mgrey);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .div2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    padding-left: 10vw;
-    padding-right: 10vw;
+}
+.columns {
+    columns: 20em 3;
+    column-gap: 2em;
+    widows: 2;
+    orphans: 2;
 }
 
 @media (max-width: 55em) {
@@ -312,9 +314,21 @@ web-share"
 allowfullscreen></iframe>
     </div>
     <div class="div2">
-      <h2 class="m-0 largetext3">We're hands down practical</h2>
-      <p class="largetext"><strong>While others are still hands-up, asking questions in class, you'll be out on the water gaining essential leadership skills at Mount Batten Watersports Centre.</strong></p>
-      <p class="largetext">Making the most of our waterside location, we develop your leadership skills in a unique and unforgettable way.</p>
+      <div class="columns">
+        <h2 class="m-0">We're hands down practical</h2>
+        <p><strong>While others are still hands-up, asking questions in class, you'll be out on the water gaining essential leadership skills at Mount Batten Watersports Centre.</strong></p>
+        <p>Making the most of our waterside location, we develop your leadership skills in a unique and unforgettable way.</p>
+        <p>While classroom learning provides a solid foundation, practical experiences play a crucial role in shaping effective leaders. During the first semester of the business management programme, you are challenged to start developing these leadership and management competencies and reflect on your current capacity to lead and motivate one another through a series of challenges at <a href="#">Mount Batten Watersports Centre</a>.</p>
+        <p><strong>Our starting premise on the business management programme is that effective leaders are not born; they are made.</strong> Developing key competencies empowers individuals to mobilise teams, make informed decisions, and create positive work environments. Team building activities provide hands-on experiences that enhance leadership, communication, and influence skills which can be transposed into business or workplace environments.</p>
+        <p>You do this through challenges including:</p>
+        <ul>
+          <li>Rock climbing and abseiling</li>
+          <li>Bell boating</li>
+          <li>Orienteering</li>
+        </ul>
+        <p>Participating in these activities equips you with practical skills that directly impact your employability.</p>
+        <p><strong>These experiences not only enrich your learning but also prepare you for future leadership roles in the dynamic business world.</strong></p>
+      </div>
     </div>
   </div>
 </main>
