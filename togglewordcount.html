@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Word Count Class</title>
+<style>
+.small-content {
+    background-color: lightblue;
+    color: darkblue;
+}
+.large-content {
+    background-color: lightcoral;
+    color: darkred;
+}
+h2 {
+    font-size: 1.5em;
+}
+#toggle-btn {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h2>Toggle Content Example</h2>
+<div id="content" class="small-content">
+  <h2>Small Content</h2>
+  <p>This is some small content.</p>
+</div>
+<button id="toggle-btn">Toggle Content</button>
+<script>
+        const smallContent = `
+            <h2>Small Content</h2>
+            <p>This is some small content.</p>
+        `;
+        
+        const largeContent = `
+            <h2>Large Content</h2>
+            <p>This is some large content. It has a lot more words than the small content. 
+            The purpose of this content is to demonstrate how a different class can be applied 
+            based on the word count.</p>
+        `;
+
+        const contentDiv = document.getElementById('content');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        function applyClassBasedOnWordCount(text) {
+            const wordCount = text.split(/\s+/).length;
+            if (wordCount > 10) {
+                contentDiv.className = 'large-content';
+            } else {
+                contentDiv.className = 'small-content';
+            }
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            if (contentDiv.classList.contains('small-content')) {
+                contentDiv.innerHTML = largeContent;
+                applyClassBasedOnWordCount(contentDiv.textContent);
+            } else {
+                contentDiv.innerHTML = smallContent;
+                applyClassBasedOnWordCount(contentDiv.textContent);
+            }
+        });
+
+        // Initial class application
+        applyClassBasedOnWordCount(contentDiv.textContent);
+    </script>
+</body>
+</html>
