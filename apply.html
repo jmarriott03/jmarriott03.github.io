@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Widget</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .apply-widget {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .apply-widget h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .apply-widget label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .apply-widget select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .apply-widget button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .apply-widget button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="apply-widget">
+        <h2>Apply Now</h2>
+
+        <label for="mode-of-study">Mode of Study:</label>
+        <select id="mode-of-study" name="mode-of-study">
+            <option value="">Select Mode</option>
+            <option value="full-time">Full Time</option>
+            <option value="part-time">Part Time</option>
+        </select>
+
+        <label for="year-of-entry">Year of Entry:</label>
+        <select id="year-of-entry" name="year-of-entry">
+            <option value="">Select Year</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+        </select>
+
+        <label for="month-of-entry">Month of Entry:</label>
+        <select id="month-of-entry" name="month-of-entry">
+            <option value="">Select Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <select id="location" name="location">
+            <option value="">Select Location</option>
+            <option value="Plymouth">Plymouth</option>
+            <option value="Exeter">Exeter</option>
+            <option value="Truro">Truro</option>
+        </select>
+
+        <button id="apply-button">Apply</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modeOfStudy = document.getElementById('mode-of-study');
+            const yearOfEntry = document.getElementById('year-of-entry');
+            const monthOfEntry = document.getElementById('month-of-entry');
+            const location = document.getElementById('location');
+            const applyButton = document.getElementById('apply-button');
+
+            const availability = {
+                "2025": {
+                    "01": {
+                        "full-time": ["Plymouth", "Exeter"],
+                        "part-time": ["Exeter", "Truro"]
+                    },
+                    "09": {
+                        "full-time": ["Plymouth", "Exeter"],
+                        "part-time": ["Exeter", "Truro"]
+                    }
+                },
+                "2026": {
+                    "01": {
+                        "full-time": ["Plymouth", "Truro"],
+                        "part-time": ["Plymouth", "Exeter"]
+                    },
+                    "09": {
+                        "full-time": ["Plymouth", "Truro"],
+                        "part-time": ["Plymouth", "Exeter"]
+                    }
+                },
+                "2027": {
+                    "01": {
+                        "full-time": ["Exeter", "Truro"],
+                        "part-time": ["Plymouth", "Exeter", "Truro"]
+                    },
+                    "09": {
+                        "full-time": ["Exeter", "Truro"],
+                        "part-time": ["Plymouth", "Exeter", "Truro"]
+                    }
+                }
+            };
+
+            function updateLocations() {
+                const selectedYear = yearOfEntry.value;
+                const selectedMonth = monthOfEntry.value;
+                const selectedMode = modeOfStudy.value;
+
+                location.innerHTML = '<option value="">Select Location</option>';
+
+                if (selectedYear && selectedMonth && selectedMode) {
+                    const locations = availability[selectedYear][selectedMonth][selectedMode];
+                    locations.forEach(loc => {
+                        const option = document.createElement('option');
+                        option.value = loc;
+                        option.textContent = loc.charAt(0).toUpperCase() + loc.slice(1);
+                        location.appendChild(option);
+                    });
+                }
+            }
+
+            modeOfStudy.addEventListener('change', updateLocations);
+            yearOfEntry.addEventListener('change', updateLocations);
+            monthOfEntry.addEventListener('change', updateLocations);
+
+            applyButton.addEventListener('click', () => {
+                const selectedMode = modeOfStudy.value;
+                const selectedYear = yearOfEntry.value;
+                const selectedMonth = monthOfEntry.value;
+                const selectedLocation = location.value;
+
+                if (selectedMode && selectedYear && selectedMonth && selectedLocation) {
+                    alert(`Applying for ${selectedMode}, starting in ${selectedMonth}/${selectedYear}, at ${selectedLocation}`);
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
