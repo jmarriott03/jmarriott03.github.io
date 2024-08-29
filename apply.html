@@ -1,188 +1,483 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply Widget</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+--btn-primary: #06c;
+--btn-primary-hov: #039;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.25em 0 0;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1rem;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+    scroll-behavior: smooth;
+}
+main {
+    margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+p {
+    text-wrap: pretty;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5rem;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 60em;
+    overflow-x: auto;
+    padding: 1rem;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+.largetext {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 1rem;
+}
+.pt-1 {
+    padding-top: 1rem;
+}
+.pr-1 {
+    padding-right: 1rem;
+}
+.pb-1 {
+    padding-bottom: 1rem;
+}
+.pl-1 {
+    padding-left: 1rem;
+}
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.pt-2 {
+    padding-top: 2rem;
+}
+.pr-2 {
+    padding-right: 2rem;
+}
+.pb-2 {
+    padding-bottom: 2rem;
+}
+.pl-2 {
+    padding-left: 2rem;
+}
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.m-auto {
+    margin: auto;
+}
+.m-0 {
+    margin: 0;
+}
+.m-1 {
+    margin: 1rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mr-1 {
+    margin-right: 1rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.ml-1 {
+    margin-left: 1rem;
+}
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.m-2 {
+    margin: 2rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mr-2 {
+    margin-right: 2rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.mx-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em;
+}
+th {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--black);
+    color: var(--white);
+    background-color: var(--black);
+    border-right: 1px solid var(--white);
+}
+th:last-child {
+    border-right: 1px solid var(--black);
+}
+td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.grey {
+    color: var(--mgrey);
+}
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+    display: block;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--btn-primary-hov);
+}
+summary {
+    cursor: pointer;
+    padding: 1em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 1em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
 
-        .apply-widget {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-
-        .apply-widget h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
-        }
-
-        .apply-widget label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .apply-widget select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-        }
-
-        .apply-widget button {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: none;
-            background-color: #28a745;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .apply-widget button:hover {
-            background-color: #218838;
-        }
-    </style>
+/* Media query for smaller screens */
+@media (max-width: 40em) {
+table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+td {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    border-bottom: 1px solid var(--black);
+    padding: 0.5rem;
+}
+th {
+    display: none;
+}
+td::before {
+    content: attr(data-label);
+    font-weight: normal;
+    display: inline-block;
+    width: 8em;
+}
+td:last-child {
+    margin-bottom: 2em;
+    border-bottom: 1px solid var(--black);
+}
+}
+</style>
 </head>
 <body>
-    <div class="apply-widget">
-        <h2>Apply Now</h2>
-
-        <label for="mode-of-study">Mode of Study:</label>
-        <select id="mode-of-study" name="mode-of-study">
-            <option value="">Select Mode</option>
-            <option value="full-time">Full Time</option>
-            <option value="part-time">Part Time</option>
-        </select>
-
-        <label for="year-of-entry">Year of Entry:</label>
-        <select id="year-of-entry" name="year-of-entry">
-            <option value="">Select Year</option>
-            <option value="2025">2025</option>
-            <option value="2026">2026</option>
-            <option value="2027">2027</option>
-        </select>
-
-        <label for="month-of-entry">Month of Entry:</label>
-        <select id="month-of-entry" name="month-of-entry">
-            <option value="">Select Month</option>
-            <option value="01">January</option>
-            <option value="02">February</option>
-            <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-        </select>
-
-        <label for="location">Location:</label>
-        <select id="location" name="location">
-            <option value="">Select Location</option>
-            <option value="Plymouth">Plymouth</option>
-            <option value="Exeter">Exeter</option>
-            <option value="Truro">Truro</option>
-        </select>
-
-        <button id="apply-button">Apply</button>
+<main>
+  <section class="p-1">
+    <h1>Apply accordion</h1>
+    <div>
+      <button class="btn btn-primary" onClick="openDetailsAndScroll();"><span class="iconfont" aria-hidden="true">6</span>Apply now</button>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const modeOfStudy = document.getElementById('mode-of-study');
-            const yearOfEntry = document.getElementById('year-of-entry');
-            const monthOfEntry = document.getElementById('month-of-entry');
-            const location = document.getElementById('location');
-            const applyButton = document.getElementById('apply-button');
-
-            const availability = {
-                "2025": {
-                    "01": {
-                        "full-time": ["Plymouth", "Exeter"],
-                        "part-time": ["Exeter", "Truro"]
-                    },
-                    "09": {
-                        "full-time": ["Plymouth", "Exeter"],
-                        "part-time": ["Exeter", "Truro"]
-                    }
-                },
-                "2026": {
-                    "01": {
-                        "full-time": ["Plymouth", "Truro"],
-                        "part-time": ["Plymouth", "Exeter"]
-                    },
-                    "09": {
-                        "full-time": ["Plymouth", "Truro"],
-                        "part-time": ["Plymouth", "Exeter"]
-                    }
-                },
-                "2027": {
-                    "01": {
-                        "full-time": ["Exeter", "Truro"],
-                        "part-time": ["Plymouth", "Exeter", "Truro"]
-                    },
-                    "09": {
-                        "full-time": ["Exeter", "Truro"],
-                        "part-time": ["Plymouth", "Exeter", "Truro"]
-                    }
-                }
-            };
-
-            function updateLocations() {
-                const selectedYear = yearOfEntry.value;
-                const selectedMonth = monthOfEntry.value;
-                const selectedMode = modeOfStudy.value;
-
-                location.innerHTML = '<option value="">Select Location</option>';
-
-                if (selectedYear && selectedMonth && selectedMode) {
-                    const locations = availability[selectedYear][selectedMonth][selectedMode];
-                    locations.forEach(loc => {
-                        const option = document.createElement('option');
-                        option.value = loc;
-                        option.textContent = loc.charAt(0).toUpperCase() + loc.slice(1);
-                        location.appendChild(option);
-                    });
-                }
-            }
-
-            modeOfStudy.addEventListener('change', updateLocations);
-            yearOfEntry.addEventListener('change', updateLocations);
-            monthOfEntry.addEventListener('change', updateLocations);
-
-            applyButton.addEventListener('click', () => {
-                const selectedMode = modeOfStudy.value;
-                const selectedYear = yearOfEntry.value;
-                const selectedMonth = monthOfEntry.value;
-                const selectedLocation = location.value;
-
-                if (selectedMode && selectedYear && selectedMonth && selectedLocation) {
-                    alert(`Applying for ${selectedMode}, starting in ${selectedMonth}/${selectedYear}, at ${selectedLocation}`);
-                } else {
-                    alert('Please fill in all fields.');
-                }
-            });
-        });
-    </script>
+    <div class="grey p-1">
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <details>
+      <summary>
+        <h2>Summary 1</h2>
+      </summary>
+      <p>Details 1</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Summary 2</h2>
+      </summary>
+      <p>Details 1</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Summary 3</h2>
+      </summary>
+      <p>Details 1</p>
+    </details>
+    <details id="applyDetails">
+      <summary>
+        <h2>How to apply</h2>
+      </summary>
+      <p>Select the course you are interested in applying for.</p>
+      <table>
+        <tr>
+          <th scope="col">Course</th>
+          <th scope="col">Mode of study</th>
+          <th scope="col">Point of entry</th>
+          <th scope="col">Location</th>
+          <th scope="col">Course code</th>
+        </tr>
+        <tr>
+          <td data-label="Course"><a href="#">MA Maths</a></td>
+          <td data-label="Mode of study">Full-time</td>
+          <td data-label="Point of entry">September 2025</td>
+          <td data-label="Location">Plymouth</td>
+          <td data-label="Course code">006818</td>
+        </tr>
+        <tr>
+          <td data-label="Course"><a href="#">MA Maths</a></td>
+          <td data-label="Mode of study">Part-time</td>
+          <td data-label="Point of entry">September 2025</td>
+          <td data-label="Location">Plymouth</td>
+          <td data-label="Course code">006818</td>
+        </tr>
+        <tr>
+          <td data-label="Course"><a href="#">MA Maths</a></td>
+          <td data-label="Mode of study">Full-time</td>
+          <td data-label="Point of entry">September 2025</td>
+          <td data-label="Location">Truro</td>
+          <td data-label="Course code">007497</td>
+        </tr>
+        <tr>
+          <td data-label="Course"><a href="#">MA Maths</a></td>
+          <td data-label="Mode of study">Full-time</td>
+          <td data-label="Point of entry">January 2026</td>
+          <td data-label="Location">Plymouth</td>
+          <td data-label="Course code">006818</td>
+        </tr>
+      </table>
+    </details>
+    <div class="grey p-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+    </div>
+  </section>
+</main>
+<script>
+  function openDetailsAndScroll() {
+    var details = document.getElementById('applyDetails');
+    details.open = true;  // Open the details section
+    details.scrollIntoView({ behavior: 'smooth' });  // Scroll into view
+  }
+</script>
 </body>
 </html>
