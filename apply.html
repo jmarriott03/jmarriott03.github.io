@@ -404,7 +404,7 @@ td:last-child {
       </summary>
       <p>Details 3</p>
     </details>
-    <details id="applyDetails">
+    <details id="applyDetails" tabindex="-1">
       <summary>
         <h2>How to apply</h2>
       </summary>
@@ -477,6 +477,7 @@ td:last-child {
     var details = document.getElementById('applyDetails');
     details.open = true;  // Open the details section
     details.scrollIntoView({ behavior: 'smooth' });  // Scroll into view
+    details.focus();  // Set focus on the details element
   }
 </script>
 </body>
