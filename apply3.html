@@ -47,6 +47,8 @@ html, body {
     color: var(--black);
     background: var(--white);
     margin: 0;
+/*	Smooth scroll*/
+    scroll-behavior: smooth;
 }
 main {
     margin-top: 0;
@@ -246,12 +248,36 @@ section {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+    display: block;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--btn-primary-hov);
+}
 .apply-widget {
     background-color: var(--lgrey);
     padding: 2rem;
     border-radius: 2rem;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.3);
     width: 20rem;
+    margin: 0 0 1.5rem 1rem;
 }
 .apply-widget label {
     display: block;
@@ -286,90 +312,202 @@ section {
     display: none;
     margin-top: 10px;
 }
+summary {
+    cursor: pointer;
+    padding: 1em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 1em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+.grey {
+    color: var(--mgrey);
+}
 </style>
 </head>
 <body>
 <main>
   <section class="p-1">
-    <div class="apply-widget">
-      <h2>Apply online</h2>
-      <form id="selectionForm">
-        <label for="dateOfEntry">Date of entry:</label>
-        <select id="dateOfEntry" name="dateOfEntry" onchange="updateSelections()">
-          <option value="">--Select Date of Entry--</option>
-          <option value="jan-mar-25">Jan-Mar 25 entry</option>
-          <option value="apr-jul-25">Apr-Jul 25</option>
-          <option value="aug-25">Aug 25</option>
-          <option value="sep-25">Sep 25</option>
-          <option value="jan-mar-26">Jan-Mar 26</option>
-          <option value="apr-jul-26">Apr-Jul 26</option>
-        </select>
-        <div id="programmeSelection">
-          <label for="programme">Select programme:</label>
-          <select id="programme" name="programme" onchange="updateSelections()">
-            <option value="">--Select Programme--</option>
-            <option value="full-time">Full-time</option>
-            <option value="part-time">Part-time</option>
+    <h1>Apply accordion</h1>
+    <div>
+      <button class="btn btn-primary" onClick="openDetailsAndScroll();"><span class="iconfont" aria-hidden="true">6</span>Apply now</button>
+    </div>
+    <div class="grey p-1">
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <details>
+      <summary>
+        <h2>Summary 1</h2>
+      </summary>
+      <p>Details 1</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Summary 2</h2>
+      </summary>
+      <p>Details 2</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Summary 3</h2>
+      </summary>
+      <p>Details 3</p>
+    </details>
+    <details id="applyDetails" tabindex="-1">
+      <summary>
+        <h2>How to apply</h2>
+      </summary>
+      <div class="apply-widget">
+        <h2>Apply online</h2>
+        <form id="selectionForm">
+          <label for="dateOfEntry">Date of entry:</label>
+          <select id="dateOfEntry" name="dateOfEntry" onchange="updateSelections()">
+            <option value="">--Select Date of Entry--</option>
+            <option value="jan-mar-25">Jan-Mar 25 entry</option>
+            <option value="apr-jul-25">Apr-Jul 25</option>
+            <option value="aug-25">Aug 25</option>
+            <option value="sep-25">Sep 25</option>
+            <option value="jan-mar-26">Jan-Mar 26</option>
+            <option value="apr-jul-26">Apr-Jul 26</option>
           </select>
-        </div>
-        <div id="locationSelection">
-          <label for="location">Location:</label>
-          <select id="location" name="location" onchange="updateSelections()">
-            <option value="">--Select Location--</option>
-            <option value="plymouth">Plymouth</option>
-            <option value="truro">Truro</option>
-            <option value="exeter">Exeter</option>
-          </select>
-        </div>
-        <div id="applyButton">
-          <button type="submit">Apply</button>
-        </div>
-      </form>
+          <div id="programmeSelection">
+            <label for="programme">Select programme:</label>
+            <select id="programme" name="programme" onchange="updateSelections()">
+              <option value="">--Select Programme--</option>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+            </select>
+          </div>
+          <div id="locationSelection">
+            <label for="location">Location:</label>
+            <select id="location" name="location" onchange="updateSelections()">
+              <option value="">--Select Location--</option>
+              <option value="plymouth">Plymouth</option>
+              <option value="truro">Truro</option>
+              <option value="exeter">Exeter</option>
+            </select>
+          </div>
+          <div id="applyButton">
+            <button type="submit">Apply</button>
+          </div>
+        </form>
+      </div>
+    </details>
+    <div class="grey p-1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
+      <h2>Content</h2>
     </div>
   </section>
 </main>
 <script>
-        function updateSelections() {
-            var dateOfEntry = document.getElementById("dateOfEntry").value;
-            var programme = document.getElementById("programme").value;
-            var location = document.getElementById("location").value;
+    function openDetailsAndScroll() {
+        var details = document.getElementById('applyDetails');
+        details.open = true; // Open the details section
+        details.scrollIntoView({
+            behavior: 'smooth'
+        }); // Scroll into view
+        details.focus(); // Set focus on the details element
+    }
 
-            var programmeSelection = document.getElementById("programmeSelection");
-            var locationSelection = document.getElementById("locationSelection");
-            var applyButton = document.getElementById("applyButton");
+    function updateSelections() {
+        var dateOfEntry = document.getElementById("dateOfEntry").value;
+        var programme = document.getElementById("programme").value;
+        var location = document.getElementById("location").value;
 
-            // Show programme dropdown if date of entry is selected
-            if (dateOfEntry) {
-                programmeSelection.style.display = "block";
-            } else {
-                programmeSelection.style.display = "none";
-                locationSelection.style.display = "none";
-                applyButton.style.display = "none";
-                return;
-            }
+        var programmeSelection = document.getElementById("programmeSelection");
+        var locationSelection = document.getElementById("locationSelection");
+        var applyButton = document.getElementById("applyButton");
 
-            // Show location dropdown if programme is selected
-            if (programme) {
-                locationSelection.style.display = "block";
-                applyButton.style.display = "none";
-            } else {
-                locationSelection.style.display = "none";
-                applyButton.style.display = "none";
-            }
-			
-			// Show apply button only if location is selected
-            if (location) {
-                applyButton.style.display = "block";
-            } else {
-                applyButton.style.display = "none";
-            }
+        // Show programme dropdown if date of entry is selected
+        if (dateOfEntry) {
+            programmeSelection.style.display = "block";
+        } else {
+            programmeSelection.style.display = "none";
+            locationSelection.style.display = "none";
+            applyButton.style.display = "none";
+            return;
         }
 
-        // Prevent form submission for demo
-        document.getElementById('selectionForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('This is a demo. The Apply button does nothing.');
-        });
-    </script>
+        // Show location dropdown if programme is selected
+        if (programme) {
+            locationSelection.style.display = "block";
+            applyButton.style.display = "none";
+        } else {
+            locationSelection.style.display = "none";
+            applyButton.style.display = "none";
+        }
+
+        // Show apply button only if location is selected
+        if (location) {
+            applyButton.style.display = "block";
+        } else {
+            applyButton.style.display = "none";
+        }
+    }
+
+    // Prevent form submission for demo
+    document.getElementById('selectionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('This is a demo. The Apply button does nothing.');
+    });
+</script>
 </body>
 </html>
