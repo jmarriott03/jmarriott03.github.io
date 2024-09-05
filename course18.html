@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+--btn-primary: #06c;
+--btn-primary-hov: #039;
+--highlight: #fc6;
+--btn-seagreen: #338078;
+--btn-seagreen-hov: #9fcac5;
+--radial1-seagreen: #9fcac5;
+--radial2-seagreen: #338078;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+* + * {
+    margin-top: 1em;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+    height: 220vh; /* to ensure there is enough space to scroll */
+    /*	Smooth scroll*/
+    scroll-behavior: smooth;
+}
+main {
+    margin-top: 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5em;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 1rem;
+}
+.pt-1 {
+    padding-top: 1rem;
+}
+.pr-1 {
+    padding-right: 1rem;
+}
+.pb-1 {
+    padding-bottom: 1rem;
+}
+.pl-1 {
+    padding-left: 1rem;
+}
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.pt-2 {
+    padding-top: 2rem;
+}
+.pr-2 {
+    padding-right: 2rem;
+}
+.pb-2 {
+    padding-bottom: 2rem;
+}
+.pl-2 {
+    padding-left: 2rem;
+}
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.m-auto {
+    margin: auto;
+}
+.m-0 {
+    margin: 0;
+}
+.m-1 {
+    margin: 1rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mr-1 {
+    margin-right: 1rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.ml-1 {
+    margin-left: 1rem;
+}
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.m-2 {
+    margin: 2rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mr-2 {
+    margin-right: 2rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.mx-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+section {
+    max-width: 40rem;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 80em) 1fr;
+    grid-template-rows: auto;
+    margin: 0;
+}
+.image-container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.gradient-container {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.content-container {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.image-container, .gradient-container, .content-container {
+    width: 100%;
+    margin-top: 0;
+}
+.gradient-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    mix-blend-mode: multiply;
+    z-index: 0;
+}
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.box {
+    z-index: 1;
+    margin: 0;
+}
+.btn {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--btn-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--btn-primary-hov);
+}
+.btn-seagreen {
+    color: var(--white);
+    background-color: var(--btn-seagreen);
+}
+.btn-seagreen:hover, .btn-seagreen:focus {
+    color: var(--black);
+    background-color: var(--btn-seagreen-hov);
+}
+.btn-hollow {
+    color: var(--white);
+    border: 2px solid var(--white);
+    background: none;
+    font-weight: bold;
+}
+.btn-hollow:hover, .btn-primary:focus {
+    color: var(--black);
+    background-color: var(--white);
+}
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.mt-0 {
+    margin-top: 0;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.largetext {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2em;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+.white {
+    color: var(--white);
+}
+.search {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--mgrey);
+    border-radius: 0.25rem;
+    outline: none;
+}
+.rounded {
+    border-radius: 1rem;
+}
+.rounded2 {
+    border-radius: 2rem;
+}
+.frost {
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,1));
+    backdrop-filter: blur(0.5rem);
+}
+.background-white {
+    background-color: var(--white);
+}
+.letterspacing-small {
+    letter-spacing: 0.125rem;
+}
+.highlight {
+    color: var(--highlight);
+}
+.bg-black {
+    background-color: var(--black);
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.bg-ucas {
+    background-color: var(--ucas);
+    width: 100%;
+    overflow: hidden;
+}
+.uoplogo {
+    width: 12rem;
+    float: left;
+}
+.uoplogo img {
+    width: 8rem;
+}
+.topnav {
+    max-width: 24rem;
+    float: right;
+}
+.breadcrumb {
+    overflow: hidden;
+    padding: 1em;
+    margin: 0 auto;
+}
+.breadcrumb p {
+    margin: 0;
+}
+.image-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.zoom-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    transition: transform ease-in-out;
+    margin: 0;
+}
+.shadow {
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 1.5em 0;
+    clear: both;
+    display: block;
+    padding-top: 1rem;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+.clearing-box {
+    width: 18em;
+}
+.black {
+    color: var(--black);
+}
+.radial-seagreen {
+    background: radial-gradient(ellipse at top right, var(--radial1-seagreen), var(--radial2-seagreen));
+}
+.fadein {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 2s forwards;
+    margin: 2em;
+}
+@keyframes fadeIn {
+to {
+opacity: 1;
+}
+}
+.seagreen {
+    color: var(--btn-seagreen);
+}
+summary {
+    cursor: pointer;
+    padding: 1em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 1em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+.grey {
+    color: var(--mgrey);
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 0.5rem;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    color: var(--white);
+    background-color: var(--black);
+    text-align: left;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 20rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 1.5rem;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+    outline-offset: 2px;
+}
+.tooltip:focus .tooltiptext, .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 60em) {
+.columns {
+    grid-template-columns: 1fr;
+}
+.gradient-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.topnav {
+    float: left;
+}
+.image-container {
+    height: auto;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent bg-black">
+    <div class="content-container">
+      <div class="columns p-2">
+        <div class="box">
+          <div class="uoplogo"><img src="images/uoplogomonowhite.svg" alt="" class="w10"></div>
+        </div>
+        <div class="box"> <img src="images/topnav.svg" alt="" class="topnav"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="parent">
+    <div class="image-container"><img src="images/1280x720fineart9.jpg" width="1280" height="720" alt="" class="zoom-image"></div>
+    <!--<div class="gradient-container"></div>-->
+    <div class="content-container">
+      <div class="columns p-2">
+        <div class="box rounded frost shadow p-2">
+          <p><a href="#" class="black">School of Art, Design and Architecture</a></p>
+          <h2 class="largetext3 mt-0">BA (Hons) Fine Art</h2>
+          <p>
+            <button class="btn btn-seagreen">Register for clearing</button>
+          </p>
+          <table>
+            <tr>
+              <td>UCAS tariff</td>
+              <td ><strong>96 - 144</strong></td>
+            </tr>
+            <tr>
+              <td>UCAS course code</td>
+              <td><strong>W100</strong>
+                <div class="tooltip" tabindex="0" aria-describedby="tooltip-text"><a href="#" onClick="openDetailsAndScroll();">Contextual offers</a><span id="tooltip-text" class="tooltiptext" role="tooltip">A contextual offer recognises the potential of students whose personal circumstances may affect their grades. Lower than our standard offer, it is made to students who meet specific criteria linked to low participation in higher education.</span></div></td>
+            </tr>
+            <tr>
+              <td>Institution code</td>
+              <td><strong>P60</strong></td>
+            </tr>
+            <tr>
+              <td>Duration</td>
+              <td><strong>3 years<br>
+                </strong></td>
+            </tr>
+            <tr>
+              <td>Assessment breakdown</td>
+              <td><strong>100% coursework<br>
+                </strong></td>
+            </tr>
+            <tr>
+              <td>Course type</td>
+              <td><strong>Full-time</strong></td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+          <p>Our friendly studio-centred programme will support you to understand and participate in the expanded forms of making, thinking and writing that reflect art practice today. Be guided by practising artists, curators, producers and writers to explore concepts, contexts, techniques, and technologies across sculpture, installation, performance, video and digital media, painting and drawing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <details>
+      <summary>
+        <h2>Summary 1</h2>
+      </summary>
+      <p>Details 1</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Summary 2</h2>
+      </summary>
+      <p>Details 2</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Summary 3</h2>
+      </summary>
+      <p>Details 3</p>
+    </details>
+    <details id="applyDetails" tabindex="-1">
+      <summary>
+        <h2>Contextual offers</h2>
+      </summary>
+      <div class="p-1 pt-0 m-0">
+        <h3>What is a contextual offer?</h3>
+        <p>A contextual offer is an offer to study at university that takes into account individual circumstances that are beyond your control, and that can potentially impact your learning and your exam results, or your confidence in applying to university. We recognise that not everyone has had access to an equal standard of education for a variety of reasons, and contextual offers help to make education more accessible for all.</p>
+        <p>At the University of Plymouth, we believe in building a welcoming and inclusive community that supports every student to achieve their full potential. We include this in our admissions process so that we can be as fair as possible to all of our applicants. When reviewing your application, contextual offers enable us to consider factors such as your socioeconomic status, family background, and the quality of the schools you attended, rather than focusing solely on your academic achievements.</p>
+        <p>This means we are able to offer some places that require a lower set of grades, or tariff points, than you may see advertised in our standard entry requirements. This personalised offer will be tailored to your individual circumstances to help you on your way to University, giving you equal opportunity from the start.</p>
+      </div>
+    </details>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </section>
+</main>
+<script>
+    function openDetailsAndScroll() {
+        var details = document.getElementById('applyDetails');
+        details.open = true; // Open the details section
+        details.scrollIntoView({
+            behavior: 'smooth'
+        }); // Scroll into view
+        details.focus(); // Set focus on the details element
+    }
+
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const zoomImage = document.querySelector('.zoom-image');
+
+        // Adjust the zoom level based on scroll position
+        const zoomLevel = 1 + scrollPosition / 2000;
+        zoomImage.style.transform = `translate(-50%, -50%) scale(${zoomLevel})`;
+    });
+</script>
+</body>
+</html>
