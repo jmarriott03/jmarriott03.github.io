@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the text */
+    left: 50%;
+    margin-left: -60px;
+    /* Tooltip arrow */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext, .tooltip:focus .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+section {
+    max-width: 40rem;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<section>
+  <h2>fdsg</h2>
+  <h2>fdsg</h2>
+  <h2>fdsg</h2>
+  <h2>fdsg</h2>
+  <h2>fdsg</h2>
+  <h2>fdsg</h2>
+  <div class="tooltip" tabindex="0">Tap me <span class="tooltiptext">Tooltip on tap!</span> </div>
+</section>
+</body>
+</html>
