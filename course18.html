@@ -528,7 +528,7 @@ details[open] > summary::before {
             </tr>
             <tr>
               <td>UCAS course code</td>
-              <td><strong>W100</strong> <a href="#applyDetails" class="black" onClick="openDetailsAndScroll();">Contextual offers</a></td>
+              <td><strong>W100</strong> <a href="#contextual" class="black" onClick="openDetailsAndScroll();">Contextual offers</a></td>
             </tr>
             <tr>
               <td>Institution code</td>
@@ -578,7 +578,7 @@ details[open] > summary::before {
       </summary>
       <p>Details 3</p>
     </details>
-    <details id="applyDetails" tabindex="-1">
+    <details id="contextual" tabindex="-1">
       <summary>
         <h2>Contextual offers</h2>
       </summary>
@@ -594,11 +594,8 @@ details[open] > summary::before {
 </main>
 <script>
     function openDetailsAndScroll() {
-        var details = document.getElementById('applyDetails');
+        var details = document.getElementById('contextual');
         details.open = true; // Open the details section
-        details.scrollIntoView({
-            behavior: 'smooth'
-        }); // Scroll into view
         details.focus(); // Set focus on the details element
     }
 
