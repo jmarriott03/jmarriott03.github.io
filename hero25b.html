@@ -14,7 +14,7 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
---highlight: #b4c960;
+--highlight: #fc6;
 }
 @font-face {
     font-family: icon;
@@ -44,19 +44,14 @@ html, body {
     background: var(--white);
     margin: 0;
 }
-main {
-    margin-top: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
-	margin: 0 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
 }
 p {
     text-wrap: pretty;
-	max-width: 75ch;
-}
-p:last-child {
-    margin-bottom: 0;
+    max-width: 75ch;
+    margin: 0 0 1.5rem 0;
 }
 h1 {
     font-size: 2em;
@@ -264,6 +259,9 @@ section {
     height: 100%;
     flex-direction: column;
 }
+.centered > :last-child {
+    margin-bottom: 0;
+}
 .p-resize {
     padding: 4rem;
 }
@@ -273,21 +271,23 @@ section {
 .text-resize p {
     font-size: 1.25rem;
 }
-	.white-text {
-		color: var(--white);
-	}
-	.white-text a {
-		color: var(--white);
-	}
-	.black-text {
-		color: var(--black);
-	}
-	.black-text a {
-		color: var(--black);
-	}
-	.background-highlight {
-		background-color: var(--highlight);
-	}
+.white-text {
+    color: var(--white);
+}
+.white-text a {
+    color: var(--white);
+}
+.black-text {
+    color: var(--black);
+}
+.black-text a {
+    color: var(--black);
+}
+.background-highlight {
+    background-color: var(--highlight);
+}
+
+
 /*Media queries*/
 @media (max-width: 80em) {
 .parent {
@@ -341,7 +341,7 @@ section {
         <p><a href="#">Explore our facilities</a></p>
       </div>
     </div>
-    <div class="div2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+    <div class="div2"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""></div>
   </div>
 </main>
 </body>
