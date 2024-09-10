@@ -40,7 +40,7 @@ html, body {
     font-weight: normal;
     line-height: 1.5;
     color: var(--black);
-    background: var(--white);
+    background: var(--mgrey);
     margin: 0;
 }
 main {
@@ -244,12 +244,68 @@ section {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-	.topnav {min-width: 100%;border: 1px dotted red;}
+.parent {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.parent > div {
+    /*    border: 1px dotted red;*/
+    min-width: 100%;
+}
+.logo {
+    width: 8rem;
+}
+.search {
+    width: 24rem;
+}
+.w80 {
+    max-width: 80rem;
+}
+.white-background {
+    background-color: var(--white);
+}
+
+@media (max-width: 60em) {
+.parent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+}
 </style>
 </head>
 <body>
 <main>
-<div class="topnav">lskj dfhkjsh ldsjkaf djk </div>
+  <div class="white-background">
+    <div class="w80">
+      <div class="parent">
+        <div class="div1 p-1"><img src="images/uoplogo.svg" alt="" class="logo"/></div>
+        <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
+      </div>
+      <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
+    </div>
+  </div>
+  <div class="white-background mt-2">
+    <div class="w80">
+      <div class="parent">
+        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"/></div>
+        <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
+      </div>
+      <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
+    </div>
+  </div>
 </main>
 </body>
 </html>
