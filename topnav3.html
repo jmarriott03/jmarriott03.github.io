@@ -14,6 +14,9 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
+	--highlight-light: #b4c960;
+	--highlight-dark: #a80075;
+;
 }
 @font-face {
     font-family: icon;
@@ -271,6 +274,12 @@ section {
 .white-background {
     background-color: var(--white);
 }
+.highlight-light-background {
+    background-color: var(--highlight-light);
+}
+	.highlight-dark-background {
+    background-color: var(--highlight-dark);
+}
 
 @media (max-width: 60em) {
 .parent {
@@ -306,6 +315,34 @@ section {
       <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
     </div>
   </div>
+	
+	
+	
+	<div class="highlight-light-background mt-2">
+    <div class="w80">
+      <div class="parent">
+        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"/></div>
+        <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
+      </div>
+      <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
+    </div>
+  </div>
+	
+	
+	
+	
+		<div class="highlight-dark-background mt-2">
+    <div class="w80">
+      <div class="parent">
+        <div class="div1 p-1"><img src="images/uoplogomonowhite.svg" alt="" class="logo"/></div>
+        <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
+      </div>
+      <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
+    </div>
+  </div>
+	
+	
+	
 </main>
 </body>
 </html>
