@@ -14,9 +14,8 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
-	--highlight-light: #b4c960;
-	--highlight-dark: #a80075;
-;
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;;
 }
 @font-face {
     font-family: icon;
@@ -277,8 +276,20 @@ section {
 .highlight-light-background {
     background-color: var(--highlight-light);
 }
-	.highlight-dark-background {
+.highlight-dark-background {
     background-color: var(--highlight-dark);
+}
+.white-text {
+    color: var(--white);
+}
+.white-text a {
+    color: var(--white);
+}
+.black-text {
+    color: var(--black);
+}
+.black-text a {
+    color: var(--black);
 }
 
 @media (max-width: 60em) {
@@ -300,49 +311,67 @@ section {
   <div class="white-background">
     <div class="w80">
       <div class="parent">
-        <div class="div1 p-1"><img src="images/uoplogo.svg" alt="" class="logo"/></div>
+        <div class="div1 p-1"><img src="images/uoplogo.svg" alt="" class="logo"></div>
         <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
       </div>
       <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
     </div>
   </div>
-  <div class="white-background mt-2">
+  <div class="w80 p-1"> <code>Colour logo, white background, white background</code> </div>
+  <div class="white-background">
     <div class="w80">
       <div class="parent">
-        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"/></div>
+        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"></div>
         <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
       </div>
       <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
     </div>
   </div>
-	
-	
-	
-	<div class="highlight-light-background mt-2">
-    <div class="w80">
+  <div class="w80 p-1"> <code>Mono logo, white background, white background</code> </div>
+  <div class="highlight-light-background">
+    <div class="w80 black-text">
       <div class="parent">
-        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"/></div>
-        <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
+        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"></div>
+        <div class="div2 p-1"><img src="images/topnav2b.svg" alt="" class="search"></div>
       </div>
       <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
     </div>
   </div>
-	
-	
-	
-	
-		<div class="highlight-dark-background mt-2">
-    <div class="w80">
+  <div class="w80 p-1"> <code>Mono logo, light background, light background</code> </div>
+  <div class="highlight-light-background">
+    <div class="w80 black-text">
       <div class="parent">
-        <div class="div1 p-1"><img src="images/uoplogomonowhite.svg" alt="" class="logo"/></div>
-        <div class="div2 p-1"><img src="images/topnav2.svg" alt="" class="search"></div>
+        <div class="div1 p-1"><img src="images/uoplogomono.svg" alt="" class="logo"></div>
+        <div class="div2 p-1"><img src="images/topnav2b.svg" alt="" class="search"></div>
+      </div>
+    </div>
+  </div>
+  <div class="white-background">
+    <div class="p-1 w80"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
+  </div>
+  <div class="w80 p-1"> <code>Mono logo, light background, white background</code> </div>
+  <div class="highlight-dark-background">
+    <div class="w80 white-text">
+      <div class="parent">
+        <div class="div1 p-1"><img src="images/uoplogomonowhite.svg" alt="" class="logo"></div>
+        <div class="div2 p-1"><img src="images/topnav2c.svg" alt="" class="search"></div>
       </div>
       <div class="p-1"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
     </div>
   </div>
-	
-	
-	
+  <div class="w80 p-1"> <code>Mono white logo, dark background, dark background</code> </div>
+  <div class="highlight-dark-background">
+    <div class="w80 white-text">
+      <div class="parent">
+        <div class="div1 p-1"><img src="images/uoplogomonowhite.svg" alt="" class="logo"></div>
+        <div class="div2 p-1"><img src="images/topnav2c.svg" alt="" class="search"></div>
+      </div>
+    </div>
+  </div>
+  <div class="white-background">
+    <div class="p-1 w80"><a href="#">Home</a> &gt; <a href="#">Explore our services</a> &gt; <strong>Accommodation</strong></div>
+  </div>
+  <div class="w80 p-1"> <code>Mono white logo, dark background, white background</code> </div>
 </main>
 </body>
 </html>
