@@ -43,15 +43,14 @@ html, body {
     background: var(--white);
     margin: 0;
 }
-main {
-    margin-top: 0;
-}
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
-	margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem 0;
 }
 p {
     text-wrap: pretty;
+    max-width: 75ch;
+    margin: 0 0 1.5rem 0;
 }
 h1 {
     font-size: 2em;
@@ -82,11 +81,6 @@ h6 {
     font-size: 0.75em;
     line-height: 1.2;
     font-weight: bold;
-}
-p:not(:last-child) {
-    clear: both;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
 }
 a {
     color: var(--link);
@@ -255,21 +249,19 @@ section {
     grid-area: 1 / 2 / 2 / 4;
 }
 .parent > div {
-    border: 1px dotted red;
+	border: 1px dotted red;
     min-width: 100%;
-    margin: 0
 }
 .centered {
-    border: 1px dotted red;
+	border: 1px dotted red;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%;
     flex-direction: column;
 }
-.centered > * {
-    width: 100%;
-}
+.centered > :last-child {
+    margin-bottom: 0;
+}	
 .p-resize {
     padding: 4rem;
 }
@@ -279,6 +271,7 @@ section {
 .text-resize p {
     font-size: 1.25rem;
 }
+
 /*Media queries*/
 @media (max-width: 80em) {
 .parent {
@@ -332,7 +325,7 @@ section {
         <p><a href="#">Explore our facilities</a></p>
       </div>
     </div>
-    <div class="div2"><img src="images/1280x720-rlb0723312.jpg" width="1280" height="720" alt=""></div>
+    <div class="div2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
   </div>
 </main>
 </body>
