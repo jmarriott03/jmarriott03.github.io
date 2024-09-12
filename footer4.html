@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<title>University of Plymouth</title>
+<style>
+:root {
+--white: #fff;
+--lgrey: #eee;
+--mgrey: #ccc;
+--dgrey: #666;
+--black: #111;
+--link: #06c;
+--visited: purple;
+--highlight: #fc6;
+}
+@font-face {
+    font-family: icon;
+    src: url('fonts/icon17.woff');
+}
+.iconfont {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+html, body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--black);
+    background: var(--white);
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    margin: 0 0 1.5rem 0;
+}
+p {
+    text-wrap: pretty;
+    max-width: 75ch;
+    margin: 0 0 1.5rem 0;
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.17em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h5 {
+    font-size: 0.83em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+p:not(:last-child) {
+    clear: both;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+a {
+    color: var(--link);
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 1px;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+img {
+    border: 0;
+    text-decoration: none;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+ul, ol {
+    margin-bottom: 1.5rem;
+}
+.nowrap {
+    white-space: nowrap;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0;
+}
+section {
+    max-width: 82em;
+    overflow: hidden;
+}
+.codegrey {
+    background-color: var(--lgrey);
+    padding: 1rem;
+}
+.largetext {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.largetext2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.largetext3 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 1rem;
+}
+.pt-1 {
+    padding-top: 1rem;
+}
+.pr-1 {
+    padding-right: 1rem;
+}
+.pb-1 {
+    padding-bottom: 1rem;
+}
+.pl-1 {
+    padding-left: 1rem;
+}
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+.pt-2 {
+    padding-top: 2rem;
+}
+.pr-2 {
+    padding-right: 2rem;
+}
+.pb-2 {
+    padding-bottom: 2rem;
+}
+.pl-2 {
+    padding-left: 2rem;
+}
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.m-auto {
+    margin: auto;
+}
+.m-0 {
+    margin: 0;
+}
+.m-1 {
+    margin: 1rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mr-1 {
+    margin-right: 1rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.ml-1 {
+    margin-left: 1rem;
+}
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.m-2 {
+    margin: 2rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mr-2 {
+    margin-right: 2rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.mx-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fullw {
+    width: 100%;
+    color: #FFF;
+    background-color: #111;
+    overflow: hidden;
+    margin-top: 0;
+}
+.fullw a {
+    color: #FFF;
+    background-color: #111;
+}
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    padding: 0;
+    margin: 0;
+}
+.list li {
+    padding: 1em 1em 0 0;
+    margin: 0;
+}
+.list a {
+    text-decoration: none;
+}
+.list a:hover, a:focus {
+    text-decoration: underline;
+}
+.crest {
+    width: 5rem;
+    height: auto;
+}
+.social {
+    text-decoration: none;
+    font-size: 1.5rem;
+    /*    padding: 0.5rem;*/
+
+    margin: 0 0.75rem 0 -0.75rem;
+    /*	border: 1px dotted red;*/
+    letter-spacing: 0;
+    padding: 0.5rem;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw">
+    <section class="p-1">
+      <h2>Popular links</h2>
+      <ul class="list">
+        <li><a href="#">Link 01 something</a></li>
+        <li><a href="#">Link 02 something</a></li>
+        <li><a href="#">Link 03 something</a></li>
+        <li><a href="#">Link 04 something</a></li>
+        <li><a href="#">Link 05 something</a></li>
+        <li><a href="#">Link 06 something</a></li>
+        <li><a href="#">Link 07 something</a></li>
+        <li><a href="#">Link 08 something</a></li>
+        <li><a href="#">Link 09 something</a></li>
+        <li><a href="#">Link 10 something</a></li>
+        <li><a href="#">Link 11 something</a></li>
+        <li><a href="#">Link 12 something</a></li>
+        <li><a href="#">Link 13 something</a></li>
+        <li><a href="#">Link 14 something</a></li>
+        <li><a href="#">Link 15 something</a></li>
+        <li><a href="#">Link 16 something</a></li>
+      </ul>
+    </section>
+    <section class="p-1">
+      <h2>Contact us</h2>
+      <ul class="list">
+        <li>Address line 01<br>
+          Address line 02<br>
+          Address line 03<br>
+          Address line 04</li>
+        <li><a href="#">Popular links 01</a><br>
+          <a href="#">Popular links 02</a><br>
+          <a href="#">Popular links 03</a><br>
+          <a href="#">Popular links 04</a></li>
+        <li><img src="images/crest-white.svg" alt="" class="crest"/></li>
+        <li><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">l</a></span></li>
+      </ul>
+    </section>
+  </div>
+</main>
+</body>
+</html>
