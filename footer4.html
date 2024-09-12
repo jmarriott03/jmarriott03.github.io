@@ -240,14 +240,14 @@ section {
 }
 .fullw {
     width: 100%;
-    color: #FFF;
-    background-color: #111;
+    color: var(--white);
+    background-color: var(--black);
     overflow: hidden;
     margin-top: 0;
 }
 .fullw a {
-    color: #FFF;
-    background-color: #111;
+    color: var(--white);
+    background-color: var(--black);
 }
 .list {
     list-style: none;
@@ -298,13 +298,16 @@ section {
 .black-text a {
     color: var(--black);
 }
+.fullw2 {
+    max-width: 82em;
+}
 </style>
 </head>
 <body>
 <main>
-  <section class="p-1"><code>Black background</code></section>
+  <div class="fullw2 p-1"><code>Black background</code></div>
   <div class="fullw">
-    <section class="p-1">
+    <div class="fullw2 p-1">
       <h2>Popular links</h2>
       <ul class="list">
         <li><a href="#">Link 01 something</a></li>
@@ -324,7 +327,7 @@ section {
         <li><a href="#">Link 15 something</a></li>
         <li><a href="#">Link 16 something</a></li>
       </ul>
-    </section>
+    </div>
     <section class="px-1 pt-0">
       <h2>Contact us</h2>
       <ul class="list">
@@ -336,14 +339,14 @@ section {
           <a href="#">Popular links 02</a><br>
           <a href="#">Popular links 03</a><br>
           <a href="#">Popular links 04</a></li>
-        <li><img src="images/crest-white.svg" alt="" class="crest"/></li>
+        <li><img src="images/crest-white.svg" alt="" class="crest"></li>
         <li><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">y</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">p</a></span><span class="iconfont"><a href="#" class="social">Ü</a></span><span class="iconfont"><a href="#" class="social">l</a></span></li>
       </ul>
-    </section>
+    </div>
   </div>
-  <section class="p-1"><code>Dark highlight background</code></section>
+  <div class="fullw2 p-1"><code>Dark highlight background</code></div>
   <div class="highlight-dark-background white-text">
-    <section class="p-1">
+    <div class="fullw2 p-1">
       <h2>Popular links</h2>
       <ul class="list">
         <li><a href="#">Link 01 something</a></li>
@@ -363,7 +366,7 @@ section {
         <li><a href="#">Link 15 something</a></li>
         <li><a href="#">Link 16 something</a></li>
       </ul>
-    </section>
+    </div>
     <section class="px-1 pt-0">
       <h2>Contact us</h2>
       <ul class="list">
@@ -375,14 +378,14 @@ section {
           <a href="#">Popular links 02</a><br>
           <a href="#">Popular links 03</a><br>
           <a href="#">Popular links 04</a></li>
-        <li><img src="images/crest-white.svg" alt="" class="crest"/></li>
+        <li><img src="images/crest-white.svg" alt="" class="crest"></li>
         <li><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">y</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">p</a></span><span class="iconfont"><a href="#" class="social">Ü</a></span><span class="iconfont"><a href="#" class="social">l</a></span></li>
       </ul>
-    </section>
+    </div>
   </div>
-  <section class="p-1"><code>Light highlight background</code></section>
+  <div class="fullw2 p-1"><code>Light highlight background</code></div>
   <div class="highlight-light-background black-text">
-    <section class="p-1">
+    <div class="fullw2 p-1">
       <h2>Popular links</h2>
       <ul class="list">
         <li><a href="#">Link 01 something</a></li>
@@ -402,7 +405,7 @@ section {
         <li><a href="#">Link 15 something</a></li>
         <li><a href="#">Link 16 something</a></li>
       </ul>
-    </section>
+    </div>
     <section class="px-1 pt-0">
       <h2>Contact us</h2>
       <ul class="list">
@@ -414,14 +417,14 @@ section {
           <a href="#">Popular links 02</a><br>
           <a href="#">Popular links 03</a><br>
           <a href="#">Popular links 04</a></li>
-        <li><img src="images/crest-black.svg" alt="" class="crest"/></li>
+        <li><img src="images/crest-black.svg" alt="" class="crest"></li>
         <li><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">y</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">p</a></span><span class="iconfont"><a href="#" class="social">Ü</a></span><span class="iconfont"><a href="#" class="social">l</a></span></li>
       </ul>
-    </section>
+    </div>
   </div>
-  <section class="p-1"><code>White background &#40;crest-col.svg, 220 KB&#41;</code></section>
+  <div class="fullw2 p-1"><code>White background &#40;crest-col.svg, 220 KB&#41;</code></div>
   <div class="black-text">
-    <section class="p-1">
+    <div class="fullw2 p-1">
       <h2>Popular links</h2>
       <ul class="list">
         <li><a href="#">Link 01 something</a></li>
@@ -441,8 +444,8 @@ section {
         <li><a href="#">Link 15 something</a></li>
         <li><a href="#">Link 16 something</a></li>
       </ul>
-    </section>
-    <section class="px-1 pt-0">
+    </div>
+    <div class="fullw2 px-1 pt-0">
       <h2>Contact us</h2>
       <ul class="list">
         <li>Address line 01<br>
@@ -453,10 +456,10 @@ section {
           <a href="#">Popular links 02</a><br>
           <a href="#">Popular links 03</a><br>
           <a href="#">Popular links 04</a></li>
-        <li><img src="images/crest-col.svg" alt="" class="crest"/></li>
+        <li><img src="images/crest-col.svg" alt="" class="crest"></li>
         <li><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">y</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">p</a></span><span class="iconfont"><a href="#" class="social">Ü</a></span><span class="iconfont"><a href="#" class="social">l</a></span></li>
       </ul>
-    </section>
+    </div>
   </div>
 </main>
 </body>
