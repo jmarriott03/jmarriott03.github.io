@@ -4,251 +4,83 @@
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
 <title>University of Plymouth</title>
 <style>
-:root {
---white: #fff;
---lgrey: #eee;
---mgrey: #ccc;
---dgrey: #666;
---black: #111;
---link: #06c;
---visited: purple;
-}
-@font-face {
-    font-family: icon;
-    src: url('fonts/icon17.woff');
-}
-.iconfont {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    line-height: 1;
-    width: 1em;
-    display: inline-block;
-    text-align: center;
-    margin: 0 0.25em 0 0;
-}
-* {
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-* + * {
-    margin-top: 1rem;
-}
-html, body {
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    font-size: 100%;
-    font-family: sans-serif;
-    font-weight: normal;
-    line-height: 1.5;
-    color: var(--black);
-    background: var(--white);
-    margin: 0;
-}
-main {
-    margin-top: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-}
-p {
-    text-wrap: pretty;
-}
-h1 {
-    font-size: 2em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h2 {
-    font-size: 1.5em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h3 {
-    font-size: 1.17em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h4 {
-    font-size: 1em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h5 {
-    font-size: 0.83em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h6 {
-    font-size: 0.75em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-p:not(:last-child) {
-    clear: both;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
-}
-a {
-    color: var(--link);
-    word-wrap: break-word;
-    text-underline-position: under;
-    text-underline-offset: 1px;
-}
-strong {
-    font-weight: bold;
-}
-em {
-    font-style: italic;
-}
-img {
-    border: 0;
-    text-decoration: none;
-    vertical-align: top;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-}
-ul, ol {
-    margin-bottom: 1.5rem;
-}
-.nowrap {
-    white-space: nowrap;
-}
-.ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 0;
-}
-section {
-    max-width: 60em;
-    overflow: hidden;
-}
-.codegrey {
-    background-color: var(--lgrey);
-    padding: 1rem;
-}
-.largetext {
-    font-size: 1.5rem;
-    line-height: 1.2;
-}
-.largetext2 {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-.largetext3 {
-    font-size: 3rem;
-    line-height: 1.2;
-}
-.p-0 {
-    padding: 0;
-}
-.p-1 {
-    padding: 1rem;
-}
-.pt-1 {
-    padding-top: 1rem;
-}
-.pr-1 {
-    padding-right: 1rem;
-}
-.pb-1 {
-    padding-bottom: 1rem;
-}
-.pl-1 {
-    padding-left: 1rem;
-}
-.px-1 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-.py-1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.p-2 {
-    padding: 2rem;
-}
-.pt-2 {
-    padding-top: 2rem;
-}
-.pr-2 {
-    padding-right: 2rem;
-}
-.pb-2 {
-    padding-bottom: 2rem;
-}
-.pl-2 {
-    padding-left: 2rem;
-}
-.px-2 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.py-2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.m-auto {
-    margin: auto;
-}
-.m-0 {
-    margin: 0;
-}
-.m-1 {
-    margin: 1rem;
-}
-.mt-1 {
-    margin-top: 1rem;
-}
-.mr-1 {
-    margin-right: 1rem;
-}
-.mb-1 {
-    margin-bottom: 1rem;
-}
-.ml-1 {
-    margin-left: 1rem;
-}
-.mx-1 {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-.my-1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.m-2 {
-    margin: 2rem;
-}
-.mt-2 {
-    margin-top: 2rem;
-}
-.mr-2 {
-    margin-right: 2rem;
-}
-.mb-2 {
-    margin-bottom: 2rem;
-}
-.ml-2 {
-    margin-left: 2rem;
-}
-.mx-2 {
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-.my-2 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
 }
 </style>
 </head>
 <body>
 <main>
   <section class="p-1">
+    <div class="centered stroke p-1">
+      <h2>centered stroke</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered stroke p-2 rounded-1 shadow">
+      <h2>centered stroke p-2 rounded-1 shadow</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered stroke p-2 rounded-2 shadow bck-lgrey">
+      <h2>centered stroke p-2 rounded-2 shadow bck-lgrey</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="bck-lgrey p-2">
+      <div class="centered p-2 rounded-2 shadow bck-white">
+        <h2>centered p-2 rounded-2 shadow bck-white</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="backgroundimage p-2">
+      <div class="centered p-2 rounded-2 shadow mrfrosty">
+        <h2>centered p-2 rounded-2 shadow mrfrosty</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="text-resize stroke p-1">
+      <h2>text resize h2 (max-width: 60em)</h2>
+      <p>text resize p (max-width: 60em)</p>
+    </div>
+    <div class="stroke p-1">
+      <h2>Accordion</h2>
+      <details>
+        <summary>
+          <h3>Summary 1</h3>
+        </summary>
+        <p>Details 1</p>
+      </details>
+      <details>
+        <summary>
+          <h3>Summary 2</h3>
+        </summary>
+        <p>Details 2</p>
+        <details>
+          <summary>
+            <h4>Nested summary 1</h4>
+          </summary>
+          <p>Details 3</p>
+        </details>
+        <details>
+          <summary>
+            <h4>Nested summary 2</h4>
+          </summary>
+          <p>Details 4</p>
+        </details>
+      </details>
+    </div>
+    <div class="stroke pt-1 px-1">
+      <h2 class="mb-1">Button colours</h2>
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+      <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+      <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+      <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+      <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+      <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+      <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+    </div>
     <h1>h1</h1>
     <h2>h2</h2>
     <h3>h3</h3>
