@@ -7,8 +7,18 @@
 <link rel="stylesheet" href="css/reset.css">
 <title>University of Plymouth</title>
 <style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
 .backgroundimage {
     background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
 }
 </style>
 </head>
@@ -17,7 +27,15 @@
   <section class="p-1">
     <div class="centered stroke p-1">
       <h2>centered stroke p-1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-2 rounded-1 shadow">
+      <h2>centered black-text bck-highlight-light p-2 rounded-1 shadow</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered white-text bck-highlight-dark p-2 rounded-1 shadow">
+      <h2>centered white-text bck-highlight-dark p-2 rounded-1 shadow</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
     </div>
     <div class="centered stroke p-2 rounded-1 shadow">
       <h2>centered stroke p-2 rounded-1 shadow</h2>
