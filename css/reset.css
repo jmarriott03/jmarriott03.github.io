@@ -401,6 +401,18 @@ details > summary::before {
 details[open] > summary::before {
     content: "M";
 }
+.white-text {
+    color: var(--white);
+}
+.white-text a {
+    color: var(--white);
+}
+.black-text {
+    color: var(--black);
+}
+.black-text a {
+    color: var(--black);
+}
 
 @media (max-width: 60em) {
 .p-resize {
