@@ -14,6 +14,8 @@
 --black: #111;
 --link: #06c;
 --visited: purple;
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
 }
 @font-face {
     font-family: icon;
@@ -264,6 +266,27 @@ ul, ol {
 .stroke {
     border: 2px solid var(--lgrey);
 }
+.bck-white {
+    background-color: var(--white);
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.white-text {
+    color: var(--white);
+}
+.white-text a {
+    color: var(--white);
+}
+.black-text {
+    color: var(--black);
+}
+.black-text a {
+    color: var(--black);
+}
 </style>
 </head>
 <body>
@@ -286,11 +309,11 @@ ul, ol {
         <p><a href="#">Applying from your country</a><br>
           Check our regional entry requirements and contact local agents for support</p>
       </div>
-      <div class="card bck-white rounded-2 stroke p-2">
+      <div class="card black-text bck-highlight-light rounded-2 p-2">
         <p><a href="#">English language requirements</a><br>
           Information about the minimum language ability you need, and English courses</p>
       </div>
-      <div class="card bck-white rounded-2 stroke p-2">
+      <div class="card white-text bck-highlight-dark rounded-2 p-2">
         <p><a href="#">Scholarships for international students</a><br>
           Find out about the funding options available for funding your studies</p>
       </div>
@@ -407,7 +430,7 @@ ul, ol {
   <div class="bck-lgrey">
     <div class="w-80">
       <div class="card-container p-2">
-        <div class="card bck-white rounded-2 stroke shadow p-2">
+        <div class="card black-text bck-highlight-light rounded-2 shadow p-2">
           <h2>Online enrolment for new students</h2>
           <p>If you are:</p>
           <ul>
@@ -419,7 +442,7 @@ ul, ol {
             <li>an exchange student.</li>
           </ul>
         </div>
-        <div class="card bck-white rounded-2 stroke shadow p-2">
+        <div class="card white-text bck-highlight-dark rounded-2 stroke p-2">
           <h2>Online enrolment for returning students</h2>
           <p>If you are:</p>
           <ul>
