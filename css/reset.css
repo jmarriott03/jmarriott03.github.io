@@ -256,18 +256,6 @@ section {
 .mb-reg {
     margin-bottom: 1.5rem;
 }
-.centered {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    flex-direction: column;
-}
-.centered :last-child {
-    margin-bottom: 0;
-}
-.centered > * {
-    margin-left: 0;
-}
 .p-resize {
     padding: 4rem;
 }
