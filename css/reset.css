@@ -253,6 +253,9 @@ section {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.mb-reg {
+    margin-bottom: 1.5rem;
+}
 .centered {
     display: flex;
     justify-content: center;
