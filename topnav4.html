@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+.centered :last-child {
+    margin-bottom: 0;
+}
+.centered > * {
+    margin-left: 0;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.logo {
+    width: 20em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 20em 1fr 4em 30em 4em;
+    grid-template-rows: 4em;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    max-width: 80rem;
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.div3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+.div4 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+.div1, .div2, .div3, .div4, .div5 {
+    width: 100%;
+}
+/* Style for the button */
+.circular-btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--btn-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 2rem; /* Sets the size of the "X" */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Hover effect for the button */
+.circular-btn:hover {
+    background-color: var(--btn-secondary-hov);
+}
+.icon-btn {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+}
+/* Style for the search input */
+.search-container {
+    display: flex;
+    justify-content: left;
+}
+input[type="text"] {
+    padding: 1rem;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 2rem;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-right: 0.5rem;
+    background-color: var(--lgrey);
+}
+input[type="text"]:focus {
+    border-color: var(--link);
+}
+/* Style for the search button */
+button {
+    background-color: var(--btn-primary);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 4rem;
+    width: 4rem;
+}
+button:hover {
+    background-color: var(--btn-primary-hov);
+}
+.w80 {
+    max-width: 80rem;
+}
+.w60 {
+    max-width: 60rem;
+}
+.lastchild :last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 80em) {
+.parent {
+    grid-template-columns: 1fr repeat(2, 4em);
+    grid-template-rows: repeat(2, 4em);
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+.div3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.div4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+}
+
+@media (max-width: 60em) {
+.parent {
+    grid-template-columns: 1fr repeat(2, 4em);
+    grid-template-rows: repeat(3, 4em);
+}
+.div1 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+.div3 {
+    grid-area: 2 / 1 / 3 / 4;
+}
+.div4 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="bck-white">
+    <div class="parent p-2">
+      <div class="div1"><img src="images/uoplogo.svg" alt="" class="logo"/></div>
+      <div class="div2">
+        <button class="circular-btn"><span class="icon-btn">C</span></button>
+      </div>
+      <div class="div3">
+        <div class="search-container">
+          <input type="text" placeholder="Search...">
+          <button>Search</button>
+        </div>
+      </div>
+      <div class="div4">
+        <button class="circular-btn"><span class="icon-btn">A</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="bck-lgrey">
+    <div class="w80 p-2"><a href="#">Home</a> &gt; <a href="#">Students and family</a> &gt; <strong>Sustainability</strong></div>
+  </div>
+  <div class="bck-highlight-light">
+    <div class="w60 bck-white p-2 lastchild">
+      <h2>Sustainability: on the path to net zero</h2>
+      <p>We're a leading, award-winning university for sustainability – establishing ourselves as the sustainable university</p>
+      <p>The University is recognised as an innovative leader in higher education for sustainability, across teaching and learning, research and our University operations. We have three main goals:</p>
+      <ul>
+        <li>to have a sustainable campus</li>
+        <li>to enable learning about sustainability and to pioneer research solutions to the world’s most pressing sustainability challenges</li>
+        <li>to motivate the next generation of students to go out and tackle the sustainability challenges they'll find in their workplaces</li>
+      </ul>
+    </div>
+  </div>
+</main>
+</body>
+</html>
