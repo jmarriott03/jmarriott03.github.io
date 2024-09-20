@@ -41,9 +41,6 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
-* + * {
-    margin-top: 1rem;
-}
 html, body {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
@@ -55,14 +52,14 @@ html, body {
     background: var(--white);
     margin: 0;
 }
-main {
-    margin-top: 0;
-}
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+    margin: 0 0 1.5rem 0;
 }
 p {
     text-wrap: pretty;
+    max-width: 75ch;
+    margin: 0 0 1.5rem 0;
 }
 h1 {
     font-size: 2em;
@@ -93,11 +90,6 @@ h6 {
     font-size: 0.75em;
     line-height: 1.2;
     font-weight: bold;
-}
-p:not(:last-child) {
-    clear: both;
-    line-height: 1.5;
-    margin-bottom: 1.5rem;
 }
 a {
     color: var(--link);
