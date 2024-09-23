@@ -33,12 +33,14 @@
     background-color: var(--highlight-dark);
 }
 .logo {
-    width: 20em;
+    width: 15rem;
+	height: 3rem;
+	border: 1px dotted red;
 }
 .parent {
     display: grid;
-    grid-template-columns: 20em 1fr 4em 30em 4em;
-    grid-template-rows: 4em;
+    grid-template-columns: 20em 1fr 3em 30em 3em;
+    grid-template-rows: 3em;
     grid-column-gap: 32px;
     grid-row-gap: 32px;
     max-width: 80rem;
@@ -57,68 +59,9 @@
 }
 .div1, .div2, .div3, .div4, .div5 {
     width: 100%;
+	border: 1px dotted lime;
 }
-/* Style for the button */
-.circular-btn {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: var(--btn-secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    font-size: 2rem; /* Sets the size of the "X" */
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-/* Hover effect for the button */
-.circular-btn:hover {
-    background-color: var(--btn-secondary-hov);
-}
-.icon-btn {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    -webkit-appearance: none;
-    appearance: none;
-}
-/* Style for the search input */
-.search-container {
-    display: flex;
-    justify-content: left;
-}
-input[type="text"] {
-    padding: 1rem;
-    width: 250px;
-    border: 2px solid #ccc;
-    border-radius: 2rem;
-    outline: none;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-right: 0.5rem;
-    background-color: var(--lgrey);
-}
-input[type="text"]:focus {
-    border-color: var(--link);
-}
-/* Style for the search button */
-button {
-    background-color: var(--btn-primary);
-    color: white;
-    border: none;
-    border-radius: 2rem;
-    font-size: 2rem;
-    line-height: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    height: 4rem;
-    width: 4.5rem;
-}
-button:hover {
-    background-color: var(--btn-primary-hov);
-}
+
 .w80 {
     max-width: 80rem;
 }
@@ -129,10 +72,103 @@ button:hover {
     margin-bottom: 0;
 }
 
+	
+	
+
+	
+	
+	
+	 button {
+            width: 3rem;
+            height: 3rem;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+
+
+
+        /* Button 1: Default fill color */
+        .st0 {
+            fill: #676766;
+            transition: fill 0.3s ease;
+        }
+
+        /* Button 2: Default fill color */
+        .st1 {
+            fill: #2764AE;
+            transition: fill 0.3s ease;
+        }
+
+        /* Button 3: Default fill color */
+        .st2 {
+            fill: #676766;
+            transition: fill 0.3s ease;
+        }
+
+        /* Hover and focus effect for all buttons */
+        button:hover .st0, button:focus .st0 {
+            fill: #111;
+        }
+
+        button:hover .st1, button:focus .st1 {
+            fill: #f06;
+        }
+
+        button:hover .st2, button:focus .st2 {
+            fill: #111;
+        }
+
+        /* Remove focus outline */
+        button:focus {
+            outline: none;
+        }
+
+        /* For layout: display buttons side by side */
+        .button-container {
+            display: flex;
+            gap: 1em; /* Add space between the buttons */
+        }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 .search-box {
+      height: 3rem; /* Set the height to 3rem */
+      border: 2px solid #ccc; /* 2px solid border */
+      border-radius: 1.5rem; /* Rounded corners */
+      padding: 0 1rem; /* Padding inside the input */
+      box-sizing: border-box; /* Include padding and border in total width/height */
+ width: calc(100% - 3.5rem); /* Width calculation */      font-size: 1rem; /* Adjust font size */
+		 vertical-align: top;
+    }
+
+    .search-box::placeholder {
+      color: #888; /* Placeholder text color */
+    }
+
+    /* Optional: Focus state style */
+    .search-box:focus {
+      outline: none; /* Remove default outline */
+      border-color: #999; /* Change border color on focus */
+    }
+	
+	
+	
+	
+	
+	
+	
 @media (max-width: 80em) {
 .parent {
-    grid-template-columns: 1fr repeat(2, 4em);
-    grid-template-rows: repeat(2, 4em);
+    grid-template-columns: 1fr repeat(2, 3em);
+    grid-template-rows: repeat(2, 3em);
 }
 .div1 {
     grid-area: 1 / 1 / 2 / 4;
@@ -150,8 +186,8 @@ button:hover {
 
 @media (max-width: 60em) {
 .parent {
-    grid-template-columns: 1fr repeat(2, 4em);
-    grid-template-rows: repeat(3, 4em);
+    grid-template-columns: 1fr repeat(2, 3em);
+    grid-template-rows: repeat(3, 3em);
 }
 .div1 {
     grid-area: 1 / 1 / 2 / 4;
@@ -174,16 +210,55 @@ button:hover {
     <div class="parent p-2">
       <div class="div1"><img src="images/uoplogo.svg" alt="" class="logo"></div>
       <div class="div2">
-        <button class="circular-btn"><span class="icon-btn">C</span></button>
+       <!-- First button -->
+        <button>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#676766;}
+                </style>
+                <g>
+                    <path class="st0" d="M255.1,255.1H85v-35.4h170.1V255.1z M255.1,187.8H85v-35.4h170.1V187.8z M255.1,120.5H85V85h170.1V120.5z
+                        M340.2,170.1C340.2,76.1,264,0,170.1,0S0,76.1,0,170.1s76.1,170.1,170.1,170.1S340.2,264,340.2,170.1"/>
+                </g>
+            </svg>
+        </button>
       </div>
       <div class="div3">
         <div class="search-container">
-          <input type="text" placeholder="Search...">
-          <button><span class="icon-btn">B</span></button>
+          <input type="text" class="search-box" placeholder="Search...">
+           <!-- Second button -->
+        <button>
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+                <style type="text/css">
+                    .st1{fill:#2764AE;}
+                </style>
+                <g>
+                    <path class="st1" d="M191.3,152.4c0-21.5-17.4-39-39-39s-39,17.5-39,39c0,21.5,17.5,39,39,39S191.3,173.9,191.3,152.4 M251,251
+                        c-5.5,5.5-14.5,5.5-20,0l-42.1-42.1c-10.5,6.8-23,10.8-36.5,10.8c-37.2,0-67.3-30.1-67.3-67.3c0-37.2,30.1-67.3,67.3-67.3
+                        c37.2,0,67.3,30.1,67.3,67.3c0,13.5-4,26-10.8,36.5l42.1,42.1C256.5,236.5,256.5,245.4,251,251 M340.2,170.1
+                        C340.2,76.1,264,0,170.1,0C76.1,0,0,76.1,0,170.1s76.1,170.1,170.1,170.1C264,340.2,340.2,264,340.2,170.1"/>
+                </g>
+            </svg>
+        </button>
         </div>
       </div>
       <div class="div4">
-        <button class="circular-btn"><span class="icon-btn">A</span></button>
+         <!-- Third button -->
+        <button>
+            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+                <style type="text/css">
+                    .st2{fill:#676766;}
+                </style>
+                <g>
+                    <path class="st2" d="M237.4,230.3v24.8H102.8v-24.8c0-37.2,30.1-67.3,67.3-67.3c-21.5,0-39-17.4-39-39s17.4-39,39-39
+                        s39,17.5,39,39s-17.5,39-39,39C207.3,163,237.4,193.1,237.4,230.3z M340.2,170.1C340.2,76.1,264,0,170.1,0S0,76.1,0,170.1
+                        s76.1,170.1,170.1,170.1S340.2,264,340.2,170.1"/>
+                </g>
+            </svg>
+        </button>
       </div>
     </div>
   </div>
