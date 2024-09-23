@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Button with Hover, Focus, and Transition</title>
+    <title>SVG Buttons with Hover, Focus, and Transition</title>
     <style>
         button {
             width: 4em;
@@ -12,7 +12,6 @@
             background-color: transparent;
             padding: 0;
             cursor: pointer;
-			outline-offset: 2px;
         }
 
         svg {
@@ -20,35 +19,97 @@
             height: 100%;
         }
 
-        /* Default fill color */
+        /* Button 1: Default fill color */
         .st0 {
             fill: #676766;
-            transition: fill 0.3s ease; /* Adds the fade effect on color change */
+            transition: fill 0.3s ease;
         }
 
-        /* Hover and focus effect */
-        button:hover .st0,
-        button:focus .st0 {
+        /* Button 2: Default fill color */
+        .st1 {
+            fill: #2764AE;
+            transition: fill 0.3s ease;
+        }
+
+        /* Button 3: Default fill color */
+        .st2 {
+            fill: #676766;
+            transition: fill 0.3s ease;
+        }
+
+        /* Hover and focus effect for all buttons */
+        button:hover .st0, button:focus .st0 {
+            fill: #111;
+        }
+
+        button:hover .st1, button:focus .st1 {
             fill: #f06;
         }
 
+        button:hover .st2, button:focus .st2 {
+            fill: #111;
+        }
 
+        /* Remove focus outline */
+        button:focus {
+            outline: none;
+        }
+
+        /* For layout: display buttons side by side */
+        .button-container {
+            display: flex;
+            gap: 1em; /* Add space between the buttons */
+        }
     </style>
 </head>
 <body>
 
-    <button>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	         viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
-            <style type="text/css">
-                .st0{fill:#676766;}
-            </style>
-            <g>
-                <path class="st0" d="M255.1,255.1H85v-35.4h170.1V255.1z M255.1,187.8H85v-35.4h170.1V187.8z M255.1,120.5H85V85h170.1V120.5z
-                    M340.2,170.1C340.2,76.1,264,0,170.1,0S0,76.1,0,170.1s76.1,170.1,170.1,170.1S340.2,264,340.2,170.1"/>
-            </g>
-        </svg>
-    </button>
+    <div class="button-container">
+        <!-- First button -->
+        <button>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#676766;}
+                </style>
+                <g>
+                    <path class="st0" d="M255.1,255.1H85v-35.4h170.1V255.1z M255.1,187.8H85v-35.4h170.1V187.8z M255.1,120.5H85V85h170.1V120.5z
+                        M340.2,170.1C340.2,76.1,264,0,170.1,0S0,76.1,0,170.1s76.1,170.1,170.1,170.1S340.2,264,340.2,170.1"/>
+                </g>
+            </svg>
+        </button>
+
+        <!-- Second button -->
+        <button>
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+                <style type="text/css">
+                    .st1{fill:#2764AE;}
+                </style>
+                <g>
+                    <path class="st1" d="M191.3,152.4c0-21.5-17.4-39-39-39s-39,17.5-39,39c0,21.5,17.5,39,39,39S191.3,173.9,191.3,152.4 M251,251
+                        c-5.5,5.5-14.5,5.5-20,0l-42.1-42.1c-10.5,6.8-23,10.8-36.5,10.8c-37.2,0-67.3-30.1-67.3-67.3c0-37.2,30.1-67.3,67.3-67.3
+                        c37.2,0,67.3,30.1,67.3,67.3c0,13.5-4,26-10.8,36.5l42.1,42.1C256.5,236.5,256.5,245.4,251,251 M340.2,170.1
+                        C340.2,76.1,264,0,170.1,0C76.1,0,0,76.1,0,170.1s76.1,170.1,170.1,170.1C264,340.2,340.2,264,340.2,170.1"/>
+                </g>
+            </svg>
+        </button>
+
+        <!-- Third button -->
+        <button>
+            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+                <style type="text/css">
+                    .st2{fill:#676766;}
+                </style>
+                <g>
+                    <path class="st2" d="M237.4,230.3v24.8H102.8v-24.8c0-37.2,30.1-67.3,67.3-67.3c-21.5,0-39-17.4-39-39s17.4-39,39-39
+                        s39,17.5,39,39s-17.5,39-39,39C207.3,163,237.4,193.1,237.4,230.3z M340.2,170.1C340.2,76.1,264,0,170.1,0S0,76.1,0,170.1
+                        s76.1,170.1,170.1,170.1S340.2,264,340.2,170.1"/>
+                </g>
+            </svg>
+        </button>
+    </div>
 
 </body>
 </html>
