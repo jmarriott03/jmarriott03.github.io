@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Button with Hover, Focus, and Transition</title>
+    <style>
+        button {
+            width: 4em;
+            height: 4em;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+			outline-offset: 2px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Default fill color */
+        .st0 {
+            fill: #676766;
+            transition: fill 0.3s ease; /* Adds the fade effect on color change */
+        }
+
+        /* Hover and focus effect */
+        button:hover .st0,
+        button:focus .st0 {
+            fill: #f06;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <button>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	         viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#676766;}
+            </style>
+            <g>
+                <path class="st0" d="M255.1,255.1H85v-35.4h170.1V255.1z M255.1,187.8H85v-35.4h170.1V187.8z M255.1,120.5H85V85h170.1V120.5z
+                    M340.2,170.1C340.2,76.1,264,0,170.1,0S0,76.1,0,170.1s76.1,170.1,170.1,170.1S340.2,264,340.2,170.1"/>
+            </g>
+        </svg>
+    </button>
+
+</body>
+</html>
