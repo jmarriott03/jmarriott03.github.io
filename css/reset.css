@@ -265,6 +265,10 @@ section {
     background-color: var(--lgrey);
     width: 100%;
 }
+.bck-black {
+    background-color: var(--black);
+    width: 100%;
+}
 .rounded-1 {
     border-radius: 1rem;
 }
