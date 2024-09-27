@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #d3e9f1;
+--highlight-medium: #7fbfd7;
+--highlight-dark: #29718c;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+.centered :last-child {
+    margin-bottom: 0;
+}
+.centered > * {
+    margin-left: 0;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-medium {
+    background-color: var(--highlight-medium);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    gap: 1em;
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.w-60 {
+    max-width: 60em;
+    overflow: hidden;
+}
+.staff-container {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-column-gap: 0.5rem;
+    padding: 1rem;
+}
+.staff-pic {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.staff-text {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.staff-pic img {
+    border-radius: 50%;
+    height: auto;
+}
+.staff-text {
+    width: 100%;
+}
+.hidden {
+    display: none;
+    border: 1px dotted red;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80">
+    <h2 class="pl-2 pt-2 m-0">Meet your lecturers</h2>
+    <div class="card-container p-2">
+      <div class="card bck-lgrey rounded-1">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile01.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong><a href="#">Angus Fraser</a></strong><br>
+              Lecturer in Photography<br>
+              <span class="smalltext">Programme Lead</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card bck-lgrey rounded-1">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile02.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong><a href="#">Heidi Morstang</a></strong><br>
+              Associate Professor in Photography</p>
+          </div>
+        </div>
+      </div>
+      <div class="card bck-lgrey rounded-1">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile04.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong><a href="#">Simon Standing</a></strong><br>
+              Associate Professor (Senior Lecturer) in Photography</p>
+          </div>
+        </div>
+      </div>
+      <div class="card bck-lgrey rounded-1 hidden">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile03.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong><a href="#">Jessica Lennan</a></strong><br>
+              Lecturer in Photography</p>
+          </div>
+        </div>
+      </div>
+      <div class="card bck-lgrey rounded-1 hidden">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile06.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong><a href="#">Caroline Burke</a></strong><br>
+              Lecturer in Media Arts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="ml-2"><a href="#" id="showMoreBtn">Show more lecturers</a></p>
+  </div>
+</main>
+<script>
+        // Add event listener to the button
+        document.getElementById("showMoreBtn").addEventListener("click", function() {
+            // Select all hidden lecturers
+            const hiddenLecturers = document.querySelectorAll(".lecturer.hidden");
+
+            // Loop through them and remove the hidden class
+            hiddenLecturers.forEach(function(lecturer) {
+                lecturer.classList.remove("hidden");
+            });
+
+            // Optionally hide the button after showing all lecturers
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
