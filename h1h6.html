@@ -11,18 +11,6 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
-.centered {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    flex-direction: column;
-}
-.centered :last-child {
-    margin-bottom: 0;
-}
-.centered > * {
-    margin-left: 0;
-}
 .backgroundimage {
     background-image: url("images/1920x600babbage.jpg");
 }
@@ -69,9 +57,10 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </div>
-    <div class="text-resize stroke p-1 mb-reg">
-      <h2>text resize h2 (max-width: 60em)</h2>
-      <p>text resize p (max-width: 60em)</p>
+    <div class="text-resize stroke p-resize centered mb-reg">
+      <h2>text-resize h2</h2>
+      <p>text-resize p</p>
+      <p>p-resize</p>
     </div>
     <div class="stroke p-1 mb-reg">
       <h2>Accordion</h2>
