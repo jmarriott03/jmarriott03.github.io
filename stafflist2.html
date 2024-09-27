@@ -38,7 +38,7 @@
 }
 .card-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     gap: 1em;
 }
 .card {
@@ -79,7 +79,6 @@
 }
 .hidden {
     display: none;
-    border: 1px dotted red;
 }
 </style>
 </head>
@@ -135,23 +134,18 @@
         </div>
       </div>
     </div>
-    <p class="ml-2"><a href="#" id="showMoreBtn">Show more lecturers</a></p>
+    <p class="ml-2"><a href="#" id="showMore">Show all lecturers</a></p>
   </div>
 </main>
 <script>
-        // Add event listener to the button
-        document.getElementById("showMoreBtn").addEventListener("click", function() {
-            // Select all hidden lecturers
-            const hiddenLecturers = document.querySelectorAll(".lecturer.hidden");
-
-            // Loop through them and remove the hidden class
-            hiddenLecturers.forEach(function(lecturer) {
-                lecturer.classList.remove("hidden");
-            });
-
-            // Optionally hide the button after showing all lecturers
-            this.style.display = 'none';
-        });
-    </script>
+  document.getElementById('showMore').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+    const hiddenCards = document.querySelectorAll('.card.hidden');
+    hiddenCards.forEach(card => {
+      card.classList.remove('hidden'); // Remove 'hidden' class to make them visible
+    });
+    this.style.display = 'none'; // Hide the "Show more" link after click
+  });
+</script>
 </body>
 </html>
