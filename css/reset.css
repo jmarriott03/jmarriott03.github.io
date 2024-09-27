@@ -404,7 +404,30 @@ details[open] > summary::before {
 .black-text a {
     color: var(--black);
 }
-
+.centered {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+.centered :last-child {
+    margin-bottom: 0;
+}
+.centered > * {
+    margin-left: 0;
+}
+/*Media queries*/
+@media (max-width: 80em) {
+.p-resize {
+    padding: 2rem;
+}
+.text-resize h2 {
+    font-size: 2rem;
+}
+.text-resize p {
+    font-size: 1rem;
+}
+}
 @media (max-width: 60em) {
 .p-resize {
     padding: 1rem;
