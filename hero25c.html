@@ -16,10 +16,10 @@
     grid-template-rows: 1fr;
     gap: 0;
 }
-.div1 {
+.left-box {
     grid-area: 1 / 1 / 2 / 2;
 }
-.div2 {
+.right-box {
     grid-area: 1 / 2 / 2 / 4;
 }
 .parent > div {
@@ -42,10 +42,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
 }
-.div1 {
+.left-box {
     grid-area: 2 / 1 / 3 / 2;
 }
-.div2 {
+.right-box {
     grid-area: 1 / 1 / 2 / 2;
 }
 }
@@ -54,14 +54,14 @@
 <body>
 <main>
   <div class="parent background-highlight">
-    <div class="div1 p-resize">
+    <div class="left-box p-resize">
       <div class="centered text-resize black-text">
         <h2>Teaching, research and support facilities</h2>
         <p>At Plymouth, we are dedicated to your success and to ensuring that your university experience is exceptional from beginning to end.</p>
         <p><a href="#">Explore our facilities</a></p>
       </div>
     </div>
-    <div class="div2"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""></div>
+    <div class="right-box"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""></div>
   </div>
 </main>
 </body>
