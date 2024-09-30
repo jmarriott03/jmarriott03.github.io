@@ -275,9 +275,11 @@ section {
 }
 .rounded-1 {
     border-radius: 1rem;
+	overflow: hidden;
 }
 .rounded-2 {
     border-radius: 2rem;
+	overflow: hidden;
 }
 .shadow {
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
