@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #f90;
+--highlight-light: #fc6;
+}
+.hero-2col {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0;
+}
+.l-66 {
+    grid-area: 1 / 1 / 2 / 5;
+}
+.r-33 {
+    grid-area: 1 / 5 / 2 / 7;
+}
+.hero-2col > div {
+    min-width: 100%;
+    container-type: inline-size;
+}
+.background-highlight {
+    background-color: var(--highlight);
+    overflow: hidden;
+}
+.background-highlight-light {
+    background-color: var(--highlight-light);
+    overflow: hidden;
+}
+.card {
+    width: calc(50% - 1rem);
+    margin: 0 1rem 1rem 0;
+    float: left;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+
+/*Media queries*/
+@media (max-width: 80em) {
+.l-33, .l-66 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.r-66, .r-33 {
+    grid-area: 1 / 4 / 2 / 7;
+}
+}
+
+@media (max-width: 60em) {
+.hero-2col {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+}
+.l-66 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.r-33 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+}
+
+/*Container queries*/
+@container (max-width: 35em) {
+.card {
+width: calc(100% - 1rem);
+float: left;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero-2col background-highlight">
+    <div class="l-66 p-resize">
+      <div class="centered text-resize black-text">
+        <h2>Main content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+        <p><a href="#">Anim id est laborum</a></p>
+      </div>
+    </div>
+    <div class="r-33">
+      <div class="card-container pt-2 pr-1 pb-2 pl-2 background-highlight-light">
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><span class="largetext"><strong>Card 1</strong></span><br>
+            Lorem ipsum dolor</p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><span class="largetext"><strong>Card 2</strong></span><br>
+            Lorem ipsum dolor</p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><span class="largetext"><strong>Card 3</strong></span><br>
+            Lorem ipsum dolor</p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><span class="largetext"><strong>Card 4</strong></span><br>
+            Lorem ipsum dolor</p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><span class="largetext"><strong>Card 5</strong></span><br>
+            Lorem ipsum dolor</p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><span class="largetext"><strong>Card 6</strong></span><br>
+            Lorem ipsum dolor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
