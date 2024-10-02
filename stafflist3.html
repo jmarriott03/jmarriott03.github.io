@@ -138,5 +138,15 @@
     <p class="ml-2"><a href="#" id="showMore">Show all lecturers</a></p>
   </div>
 </main>
+<script>
+  document.getElementById('showMore').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+    const hiddenCards = document.querySelectorAll('.card.hidden');
+    hiddenCards.forEach(card => {
+      card.classList.remove('hidden'); // Remove 'hidden' class to make them visible
+    });
+    this.style.display = 'none'; // Hide the "Show more" link after click
+  });
+</script>
 </body>
 </html>
