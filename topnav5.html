@@ -95,7 +95,7 @@ button:hover .st2, button:focus .st2 {
     box-sizing: border-box;
     font-size: 1rem;
     vertical-align: top;
-    transition: width 0.5s ease;
+    transition: width 1s ease, opacity 0.8s ease;
     outline: none;
     opacity: 0;
 }
@@ -123,6 +123,10 @@ button:hover .st2, button:focus .st2 {
 }
 .div4 {
     grid-area: 3 / 2 / 4 / 3;
+}
+.search-box {
+    width: calc(100% - 3.4rem);
+    opacity: 1;
 }
 }
 </style>
@@ -176,18 +180,7 @@ button:hover .st2, button:focus .st2 {
   <div class="bck-lgrey">
     <div class="w80 p-2"><a href="#">Home</a> &gt; <a href="#">Students and family</a> &gt; <strong>Sustainability</strong></div>
   </div>
-  <div class="bck-highlight-light">
-    <div class="w60 bck-white p-2 lastchild">
-      <h2>Sustainability: on the path to net zero</h2>
-      <p>We're a leading, award-winning university for sustainability – establishing ourselves as the sustainable university</p>
-      <p>The University is recognised as an innovative leader in higher education for sustainability, across teaching and learning, research and our University operations. We have three main goals:</p>
-      <ul>
-        <li>to have a sustainable campus</li>
-        <li>to enable learning about sustainability and to pioneer research solutions to the world’s most pressing sustainability challenges</li>
-        <li>to motivate the next generation of students to go out and tackle the sustainability challenges they'll find in their workplaces</li>
-      </ul>
-    </div>
-  </div>
+  <div class="bck-highlight-light"> <img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""> </div>
 </main>
 <script>
     const searchBtn = document.getElementById('searchBtn');
