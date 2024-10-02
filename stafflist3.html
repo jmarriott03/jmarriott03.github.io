@@ -12,9 +12,6 @@
 --highlight-medium: #7fbfd7;
 --highlight-dark: #29718c;
 }
-.backgroundimage {
-    background-image: url("images/1920x600babbage.jpg");
-}
 .bck-highlight-light {
     background-color: var(--highlight-light);
 }
@@ -31,7 +28,7 @@
 }
 .card {
     width: 100%;
-	transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 .card :last-child {
     margin-bottom: 0;
@@ -72,9 +69,17 @@
     color: var(--black);
     text-decoration: none;
 }
-.card:hover, .card:focus {
+.card:hover {
     background-color: var(--mgrey);
-	cursor: pointer;
+    cursor: pointer;
+}
+.card:focus-within {
+	background-color: var(--mgrey);
+	border: 2px solid var(--link);
+}
+.card a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
 }
 </style>
 </head>
@@ -93,9 +98,7 @@
           </div>
         </div>
         </a></div>
-		
-		
-		<div class="card bck-lgrey rounded-1"><a href="#">
+      <div class="card bck-lgrey rounded-1"><a href="#">
         <div class="staff-container">
           <div class="staff-pic"><img src="images/profile02.jpg" alt=""></div>
           <div class="staff-text">
@@ -104,8 +107,7 @@
           </div>
         </div>
         </a></div>
-		
-	<div class="card bck-lgrey rounded-1"><a href="#">
+      <div class="card bck-lgrey rounded-1"><a href="#">
         <div class="staff-container">
           <div class="staff-pic"><img src="images/profile04.jpg" alt=""></div>
           <div class="staff-text">
@@ -114,9 +116,7 @@
           </div>
         </div>
         </a></div>
-		
-		
-		<div class="card bck-lgrey rounded-1 hidden"><a href="#">
+      <div class="card bck-lgrey rounded-1 hidden"><a href="#">
         <div class="staff-container">
           <div class="staff-pic"><img src="images/profile03.jpg" alt=""></div>
           <div class="staff-text">
@@ -125,8 +125,7 @@
           </div>
         </div>
         </a></div>
-		
-		<div class="card bck-lgrey rounded-1 hidden"><a href="#">
+      <div class="card bck-lgrey rounded-1 hidden"><a href="#">
         <div class="staff-container">
           <div class="staff-pic"><img src="images/profile06.jpg" alt=""></div>
           <div class="staff-text">
@@ -135,27 +134,9 @@
           </div>
         </div>
         </a></div>
-		
-
-		
-		
-		
-		
-
-
     </div>
     <p class="ml-2"><a href="#" id="showMore">Show all lecturers</a></p>
   </div>
 </main>
-<script>
-  document.getElementById('showMore').addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent the default action of the link
-    const hiddenCards = document.querySelectorAll('.card.hidden');
-    hiddenCards.forEach(card => {
-      card.classList.remove('hidden'); // Remove 'hidden' class to make them visible
-    });
-    this.style.display = 'none'; // Hide the "Show more" link after click
-  });
-</script>
 </body>
 </html>
