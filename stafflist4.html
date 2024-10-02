@@ -88,13 +88,14 @@
             background-size: 200% 200%;
             transition: background-position 2s ease;
 	}
-	.radial:hover {
+	.radial:hover, .radial:focus-within {
 		background-position: 100% 100%;
 	}
 	
-	.radial:hover > * {
-		color: var(--white);
-	}
+	.radial:hover > *,
+.radial:focus-within > * {
+    color: var(--white);
+}
 </style>
 </head>
 <body>
