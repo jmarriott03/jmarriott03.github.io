@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #d3e9f1;
+--highlight-medium: #7fbfd7;
+--highlight-dark: #29718c;
+--transition: 1s;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-medium {
+    background-color: var(--highlight-medium);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: 1em;
+}
+.card {
+    width: 100%;
+    transition: 0.3s ease;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.staff-container {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-column-gap: 0.5rem;
+    padding: 1rem;
+}
+.staff-pic {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.staff-text {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.staff-pic img {
+    border-radius: 50%;
+    height: auto;
+}
+.staff-text {
+    width: 100%;
+	transition: color var(--transition) ease;
+}
+.hidden {
+    display: none;
+}
+.fake-link {
+    text-decoration: underline;
+}
+.card > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card:hover {
+    background-color: var(--mgrey);
+    cursor: pointer;
+}
+.card:focus-within {
+	background-color: var(--mgrey);
+	border: 2px solid var(--link);
+}
+.card a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+	.radial {
+		background: radial-gradient(circle at top left, var(--lgrey), var(--black));
+            background-size: 200% 200%;
+            transition: background-position 2s ease;
+	}
+	.radial:hover {
+		background-position: 100% 100%;
+	}
+	
+	.radial:hover > * {
+		color: var(--white);
+	}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80">
+    <h2 class="pl-2 pt-2 m-0">Meet your lecturers</h2>
+    <div class="card-container p-2">
+      <div class="card bck-lgrey rounded-1 radial shadow"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile01.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Angus Fraser</strong><br>
+              Lecturer in Photography<br>
+              <span class="iconfont largetext2" aria-hidden="true">Ë</span><span class="smalltext">Programme Lead</span></p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card bck-lgrey rounded-1 radial shadow"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile02.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Heidi Morstang</strong><br>
+              Associate Professor in Photography</p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card bck-lgrey rounded-1 radial shadow"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile04.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Simon Standing</strong><br>
+              Associate Professor (Senior Lecturer) in Photography</p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card bck-lgrey rounded-1 radial shadow hidden"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile03.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Jessica Lennan</strong><br>
+              Lecturer in Photography</p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card bck-lgrey rounded-1 radial shadow hidden"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile06.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Caroline Burke</strong><br>
+              Lecturer in Media Arts</p>
+          </div>
+        </div>
+        </a></div>
+    </div>
+    <p class="ml-2"><a href="#" id="showMore">Show all lecturers</a></p>
+  </div>
+</main>
+<script>
+  document.getElementById('showMore').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+    const hiddenCards = document.querySelectorAll('.card.hidden');
+    hiddenCards.forEach(card => {
+      card.classList.remove('hidden'); // Remove 'hidden' class to make them visible
+    });
+    this.style.display = 'none'; // Hide the "Show more" link after click
+  });
+</script>
+</body>
+</html>
