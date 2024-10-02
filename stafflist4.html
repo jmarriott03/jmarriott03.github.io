@@ -29,7 +29,9 @@
 }
 .card {
     width: 100%;
-    transition: 0.3s ease;
+    background: radial-gradient(circle at top left, var(--lgrey), var(--black));
+    background-size: 200% 200%;
+    transition: background-position var(--transition) ease;
 }
 .card :last-child {
     margin-bottom: 0;
@@ -59,7 +61,7 @@
 }
 .staff-text {
     width: 100%;
-	transition: color var(--transition) ease;
+    transition: color var(--transition) ease;
 }
 .hidden {
     display: none;
@@ -72,29 +74,19 @@
     text-decoration: none;
 }
 .card:hover {
-    background-color: var(--mgrey);
+    background-position: 100% 100%;
     cursor: pointer;
 }
+.card:hover > *, .c:focus-within > * {
+color: var(--white);
+}
 .card:focus-within {
-	background-color: var(--mgrey);
-	border: 2px solid var(--link);
+background-position: 100% 100%;
+border: 2px solid var(--link);
+color: var(--white);
 }
 .card a:focus {
     outline: 2px solid var(--link);
-    outline-offset: 5px;
-}
-	.radial {
-		background: radial-gradient(circle at top left, var(--lgrey), var(--black));
-            background-size: 200% 200%;
-            transition: background-position 2s ease;
-	}
-	.radial:hover, .radial:focus-within {
-		background-position: 100% 100%;
-	}
-	
-	.radial:hover > *,
-.radial:focus-within > * {
-    color: var(--white);
 }
 </style>
 </head>
