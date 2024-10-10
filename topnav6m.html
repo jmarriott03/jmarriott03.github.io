@@ -23,6 +23,9 @@
 .w60 {
     max-width: 60rem;
 }
+.w40 {
+    max-width: 40rem;
+}
 .parent {
     display: grid;
     grid-template-columns: auto 1fr repeat(3, auto);
@@ -214,6 +217,33 @@ li {
 	margin-right: 1rem;
 }
 
+	
+	
+	
+	
+	.search-box {
+    height: 2.9rem;
+    width: 100%;
+    border: 2px solid var(--mgrey);
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    vertical-align: top;
+}
+.search-box::placeholder {
+color: var(--dgrey);
+}
+.search-box:focus {
+    outline: none;
+    border-color: var(--dgrey);
+}
+	
+	
+	
+	
+	
+	
 @media (max-width: 40em) {
 .parent {
     display: grid;
@@ -287,8 +317,25 @@ li {
     
     <!-- Areas that will toggle on/off -->
     <div class="div5 p-2">
-      <h2>Search</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		
+		<h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+		
+		<div class="w40">
+		 <div class="search-container">
+          <input type="text" class="search-box" placeholder="Search...">
+          <!-- Second button -->
+
+        </div>
+		
+		</div>
+		
+		
+		
+		
+		
+      
+
     </div>
     <div class="div6">
       <div class="p-2">
