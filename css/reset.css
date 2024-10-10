@@ -252,6 +252,9 @@ section {
 .mb-reg {
     margin-bottom: 1.5rem;
 }
+.pb-reg {
+    padding-bottom: 1.5rem;
+}
 .p-resize {
     padding: 4rem;
 }
