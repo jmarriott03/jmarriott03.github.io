@@ -31,7 +31,9 @@
     grid-template-columns: auto 1fr repeat(3, auto);
     grid-template-rows: auto;
     max-width: 80rem;
+	overflow: auto;
 }
+
 .div1 {
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -292,7 +294,6 @@ color: var(--dgrey);
 .parent {
     display: grid;
     grid-template-columns: auto repeat(3, 1fr);
-    grid-template-rows: repeat(5, auto);
 }
 .div1 {
     grid-area: 1 / 1 / 2 / 5;
