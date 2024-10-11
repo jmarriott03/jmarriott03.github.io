@@ -436,58 +436,61 @@ color: var(--dgrey);
   </div>
 </main>
 <script>
-// Function to toggle area with smooth transition
-function toggleArea(areaToToggle) {
-    const currentlyShown = document.querySelector('.show');
-    const area = document.querySelector(`.${areaToToggle}`);
+    // Function to toggle area with smooth transition
+    function toggleArea(areaToToggle) {
+        const currentlyShown = document.querySelector('.show');
+        const area = document.querySelector(`.${areaToToggle}`);
 
-    if (currentlyShown && currentlyShown !== area) {
-        // Hide the currently shown area with transition
-        currentlyShown.classList.remove('show');
+        if (currentlyShown && currentlyShown !== area) {
+            // Hide the currently shown area with transition
+            currentlyShown.classList.remove('show');
 
-        // Fade out the currently shown area
-        currentlyShown.style.opacity = '0';
+            // Fade out the currently shown area
+            currentlyShown.style.opacity = '0';
 
-        // Wait for the opacity and max-height transitions to finish before hiding completely
-        setTimeout(() => {
-            currentlyShown.style.display = 'none'; // Hide after fade-out completes
-        }, 500); // Match the duration of your CSS transition (1 second)
+            // Wait for the opacity and max-height transitions to finish before hiding completely
+            setTimeout(() => {
+                currentlyShown.style.display = 'none'; // Hide after fade-out completes
+            }, 500); // Match the duration of your CSS transition (1 second)
 
-        // Show the new area
-        area.style.display = 'block'; // Make the new area visible first
-        setTimeout(() => {
-            area.classList.add('show'); // Trigger the transition effect
-            area.style.opacity = '1'; // Fade in
-        }, 10); // Small delay to ensure display change is applied before animation
-    } else if (!currentlyShown) {
-        // If no area is currently shown, show the clicked area
-        area.style.display = 'block';
-        setTimeout(() => {
-            area.classList.add('show');
-            area.style.opacity = '1'; // Fade in
-        }, 10);
-    } else {
-        // If the clicked area is already open, close it
-        currentlyShown.classList.remove('show');
-        currentlyShown.style.opacity = '0'; // Start the fade-out
+            // Show the new area
+            area.style.display = 'block'; // Make the new area visible first
+            setTimeout(() => {
+                area.classList.add('show'); // Trigger the transition effect
+                area.style.opacity = '1'; // Fade in
+            }, 10); // Small delay to ensure display change is applied before animation
+        } else if (!currentlyShown) {
+            // If no area is currently shown, show the clicked area
+            area.style.display = 'block';
+            setTimeout(() => {
+                area.classList.add('show');
+                area.style.opacity = '1'; // Fade in
+            }, 10);
+        } else {
+            // If the clicked area is already open, close it
+            currentlyShown.classList.remove('show');
+            currentlyShown.style.opacity = '0'; // Start the fade-out
 
-        // Wait for the fade-out transition to complete
-        setTimeout(() => {
-            currentlyShown.style.display = 'none'; // Hide after fade-out
-        }, 500); // Match the duration of your CSS transition
+            // Wait for the fade-out transition to complete
+            setTimeout(() => {
+                currentlyShown.style.display = 'none'; // Hide after fade-out
+            }, 500); // Match the duration of your CSS transition
+        }
     }
-}
 
-// Add event listeners to buttons
-document.getElementById('button1').addEventListener('click', function() {
-    toggleArea('div5');
-});
-document.getElementById('button2').addEventListener('click', function() {
-    toggleArea('div6');
-});
-document.getElementById('button3').addEventListener('click', function() {
-    toggleArea('div7');
-});
+    // Add event listeners to buttons
+    document.getElementById('button1').addEventListener('click', function() {
+        toggleArea('div5');
+    });
+    document.getElementById('button2').addEventListener('click', function() {
+        toggleArea('div6');
+    });
+    document.getElementById('button3').addEventListener('click', function() {
+        toggleArea('div7');
+    });
+    document.getElementById('button1').addEventListener('click', function() {
+        document.querySelector('.search-box').focus(); // Focus on the search box when search button is clicked
+    });
 </script>
 </body>
 </html>
