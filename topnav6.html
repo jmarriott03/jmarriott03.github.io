@@ -104,6 +104,9 @@ button span {
     fill: var(--btn-primary);
     transition: fill 0.3s ease;
 }
+
+/* Apply :hover styles only on devices that are not touch-enabled */
+@media (hover: hover) and (pointer: fine) {
 /* Hover for all buttons */
 button:hover .st0 {
     fill: var(--btn-primary-hov);
@@ -113,6 +116,7 @@ button:hover .st1 {
 }
 button:hover .st2 {
     fill: var(--btn-primary-hov);
+}
 }
 .list {
     list-style: none;
@@ -180,7 +184,7 @@ button:hover .st2 {
 .xparent {
     display: grid;
     grid-template-columns: 1fr repeat(2, auto) 1fr;
-    grid-template-rows: auto;/*    grid-column-gap: 2em;*/
+    grid-template-rows: auto;
 }
 .xdiv1 {
     grid-area: 1 / 2 / 2 / 3;
@@ -220,7 +224,7 @@ color: var(--dgrey);
     padding: 0.5rem;
     margin: 0 0.75rem 0 -0.75rem;
     letter-spacing: 0;
-	transition: transform 0.3s ease, fill 0.3s ease;
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 .topstroke {
     border-top: 1px solid var(--mgrey);
@@ -249,7 +253,7 @@ color: var(--dgrey);
 .div7 {
     grid-area: 4 / 1 / 5 / 5;
 }
-.div6 {
+.div {
     grid-area: 5 / 1 / 6 / 5;
 }
 .div2, .div3, .div4 {
