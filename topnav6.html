@@ -11,17 +11,8 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
-.bck-highlight-light {
-    background-color: var(--highlight-light);
-}
-.bck-highlight-dark {
-    background-color: var(--highlight-dark);
-}
 .w80 {
     max-width: 80rem;
-}
-.w60 {
-    max-width: 60rem;
 }
 .w40 {
     max-width: 40rem;
@@ -57,6 +48,9 @@
 .parent > * {
     width: 100%;
 }
+.div2, .div3, .div4 {
+    padding: 2rem
+}
 .div5, .div6, .div7 {
     display: none;
     opacity: 0;
@@ -87,8 +81,8 @@ button {
 }
 /* Optimize transitions for buttons */
 button svg {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 button span {
@@ -254,7 +248,7 @@ color: var(--dgrey);
 <main>
   <div class="parent">
     <div class="div1 p-2"><a href="#"><img src="images/uoplogo.svg" alt="#" class="logo"></a></div>
-    <div class="div2 p-2">
+    <div class="div2">
       <button aria-label="Search" id="button1">
       <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
@@ -278,7 +272,7 @@ color: var(--dgrey);
       </svg>
       <span>Menu</span></button>
     </div>
-    <div class="div4 p-2">
+    <div class="div4">
       <button aria-label="Log in" id="button3">
       <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 340.2 340.2" style="enable-background:new 0 0 340.2 340.2;" xml:space="preserve">
