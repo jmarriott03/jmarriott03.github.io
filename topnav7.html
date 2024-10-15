@@ -89,9 +89,11 @@
     padding: 0.18rem 0 0 0.46rem;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
-/* When the button is hovered, change the color of the circle */
+
+/* Apply :hover styles only on devices that are not touch-enabled */
+@media (hover: hover) and (pointer: fine) {
 .button:hover .circle {
-    background-color: var(--btn-primary-hov); /* Change background color when button is hovered */
+    background-color: var(--btn-primary-hov);
 }
 .search-box {
     height: 3rem;
@@ -102,6 +104,7 @@
     box-sizing: border-box;
     font-size: 1rem;
     vertical-align: top;
+}
 }
 .search-box::placeholder {
 color: var(--dgrey);
