@@ -164,23 +164,18 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
     background-color: var(--btn-primary-hov);
     text-decoration: none;
 }
-.xparent {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, auto) 1fr;
-    grid-template-rows: auto;
+.login-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between the buttons */
     margin-bottom: 2rem;
 }
-.xdiv1 {
-    grid-area: 1 / 2 / 2 / 3;
+.login-container .button {
+    flex: 0 1 auto; /* Ensure buttons take up only the required width */
 }
-.xdiv2 {
-    grid-area: 1 / 3 / 2 / 4;
-    margin-left: 1rem;
-}
-.xdiv1 {
+.divider-black {
     border-right: 0.25rem solid var(--black);
     padding-right: 1rem;
-    margin-right: 1rem;
 }
 .social {
     text-decoration: none;
@@ -381,11 +376,11 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 <div id="content3" class="content">
   <div class="div7">
     <h2>Log in</h2>
-    <div class="xparent">
-      <div class="xdiv1">
+    <div class="login-container">
+      <div class="login-student divider-black">
         <button class="button" id="btn4"><span class="iconfont largetext circle">A</span>Student</button>
       </div>
-      <div class="xdiv2">
+      <div class="login-staff">
         <button class="button" id="btn5"><span class="iconfont largetext circle">A</span>Staff</button>
       </div>
     </div>
