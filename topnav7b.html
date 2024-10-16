@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<!--<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="stylesheet" href="css/reset.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&display=swap" rel="stylesheet">
 <title>University of Plymouth</title>
@@ -109,13 +110,14 @@
 */
 input[type="text"].search-box {
     -webkit-appearance: none; /* Disable iOS default styling */
+    appearance: none; /* For non-WebKit browsers */
     width: 100%; /* Ensure full width */
     height: 3rem; /* Force height */
     padding: 0 1rem; /* Add padding */
     border: 2px solid var(--mgrey);
     border-radius: 1.5rem;
     font-size: 16px;
-}
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
 }
 .search-box::placeholder {
 color: var(--dgrey);
