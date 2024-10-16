@@ -95,7 +95,6 @@
 .button:hover .circle {
     background-color: var(--btn-primary-hov);
 }
-/*
 .search-box {
     height: 3rem;
     width: 100%;
@@ -106,17 +105,6 @@
     font-size: 16px;
     vertical-align: top;
 }
-*/
-input[type="text"].search-box {
-    -webkit-appearance: none; /* Disable iOS default styling */
-    appearance: none; /* For non-WebKit browsers */
-    width: 100%; /* Ensure full width */
-    height: 3rem; /* Force height */
-    padding: 0 1rem; /* Add padding */
-    border: 2px solid var(--mgrey);
-    border-radius: 1.5rem;
-    font-size: 16px;
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
 }
 .search-box::placeholder {
 color: var(--dgrey);
@@ -136,7 +124,6 @@ color: var(--dgrey);
     grid-column-gap: 2rem;
     grid-row-gap: 1.5rem;
     margin-bottom: 0.5rem;
-	padding-top: 2px; /* H2 focus outline was being clipped */
 }
 .newcol > * {
     width: 100%;
