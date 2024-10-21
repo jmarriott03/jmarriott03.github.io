@@ -27,9 +27,46 @@
     overflow: hidden;
 }
 
+
+	
+	
+		table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin-left: 0;
+	width: 100%;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+	width: auto;
+}
+	
+	.card-white-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    gap: 1em;
+}
+.card-white {
+   width: 100%;
+	max-width: 30em;
+    transition: 0.3s ease;
+	
+	margin: 0;
+    max-width: 37em;
+
+}
 .card-white > * {
     color: var(--black);
     text-decoration: none;
+}
+.card-white :last-child {
+    margin-bottom: 0;
+}
+.card-white > * {
+    margin-left: 0;
 }
 .card-white:hover {
     background-color: var(--lgrey);
@@ -43,41 +80,7 @@
     outline: 2px solid var(--link);
     outline-offset: 5px;
 }
-	
-	
-		table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    clear: both;
-    display: block;
-}
-td {
-    padding: 0.5em;
-    text-align: left;
-    border-bottom: 1px solid var(--black);
-	width: 100%;
-}
-	
-	.card-white-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-    gap: 1em;
-}
-.card-white {
-   width: 100%;
-	max-width: 30em;
-    transition: 0.3s ease;
-	
-	margin: 0;
-    max-width: 30em;
 
-}
-.card-white :last-child {
-    margin-bottom: 0;
-}
-.card-white > * {
-    margin-left: 0;
-}
 	
 	
 	
@@ -179,12 +182,13 @@ td {
 		
 		
 		<div class="card-white rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MA Fine Art</h3>
+        <h3 class="blue-link">PhD Art History</h3>
 	<table>
 		
 		<tr>
               <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
-              <td><strong>Full-time</strong></td>
+              <td><strong>Full time: 2-4 years<br>
+Part time: 4-8 years</strong></td>
             </tr>
 		
 		
