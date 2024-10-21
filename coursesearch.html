@@ -21,63 +21,25 @@
 .bck-highlight-dark {
     background-color: var(--highlight-dark);
 }
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-    gap: 1em;
-}
-.card {
-    width: 100%;
-    transition: 0.3s ease;
-}
-.card :last-child {
-    margin-bottom: 0;
-}
-.card > * {
-    margin-left: 0;
-}
+
 .w-80 {
     max-width: 80em;
     overflow: hidden;
 }
-.staff-container {
-    display: grid;
-    grid-template-columns: 3rem 1fr;
-    grid-column-gap: 0.5rem;
-    padding: 1rem;
-}
-.staff-pic {
-    grid-area: 1 / 1 / 2 / 2;
-}
-.staff-text {
-    grid-area: 1 / 2 / 2 / 3;
-}
-.staff-pic img {
-    border-radius: 50%;
-    height: auto;
-}
-.staff-text {
-    width: 100%;
-}
-.hidden {
-    display: none;
-}
-.fake-link {
-    text-decoration: underline;
-}
-.card > * {
+
+.card-white > * {
     color: var(--black);
     text-decoration: none;
 }
-.card:hover {
+.card-white:hover {
     background-color: var(--lgrey);
     cursor: pointer;
 }
-.card:focus-within {
+.card-white:focus-within {
 	background-color: var(--lgrey);
 	border: 2px solid var(--link);
 }
-.card a:focus {
+.card-white a:focus {
     outline: 2px solid var(--link);
     outline-offset: 5px;
 }
@@ -96,7 +58,26 @@ td {
 	width: 100%;
 }
 	
+	.card-white-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+}
+.card-white {
+   width: 100%;
+	max-width: 30em;
+    transition: 0.3s ease;
 	
+	margin: 0;
+    max-width: 30em;
+
+}
+.card-white :last-child {
+    margin-bottom: 0;
+}
+.card-white > * {
+    margin-left: 0;
+}
 	
 	
 	
@@ -117,9 +98,9 @@ td {
 <body>
 <main>
   <div class="w-80">
-    <h2 class="pl-2 pt-2 m-0">Course search</h2>
-    <div class="card-container p-2">
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+    <h2 class="pl-2 pt-2 m-0">Course search (single result)</h2>
+    <div class="card-white-container p-2">
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#">
         <h3 class="blue-link">MA Fine Art</h3>
 	<table>
 		
@@ -149,43 +130,126 @@ td {
 
           </table>
         </a></div>
-      <div class="card bck-lgrey rounded-1"><a href="#">
-        <div class="staff-container">
-          <div class="staff-pic"><img src="images/profile02.jpg" alt=""></div>
-          <div class="staff-text">
-            <p><strong class="fake-link">Heidi Morstang</strong><br>
-              Associate Professor in Photography</p>
-          </div>
-        </div>
-        </a></div>
-      <div class="card bck-lgrey rounded-1"><a href="#">
-        <div class="staff-container">
-          <div class="staff-pic"><img src="images/profile04.jpg" alt=""></div>
-          <div class="staff-text">
-            <p><strong class="fake-link">Simon Standing</strong><br>
-              Associate Professor (Senior Lecturer) in Photography</p>
-          </div>
-        </div>
-        </a></div>
-      <div class="card bck-lgrey rounded-1 hidden"><a href="#">
-        <div class="staff-container">
-          <div class="staff-pic"><img src="images/profile03.jpg" alt=""></div>
-          <div class="staff-text">
-            <p><strong class="fake-link">Jessica Lennan</strong><br>
-              Lecturer in Photography</p>
-          </div>
-        </div>
-        </a></div>
-      <div class="card bck-lgrey rounded-1 hidden"><a href="#">
-        <div class="staff-container">
-          <div class="staff-pic"><img src="images/profile06.jpg" alt=""></div>
-          <div class="staff-text">
-            <p><strong class="fake-link">Caroline Burke</strong><br>
-              Lecturer in Media Arts</p>
-          </div>
-        </div>
-        </a></div>
+     
+
     </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <h2 class="pl-2 m-0">Course search (multiple results)</h2>
+    <div class="card-white-container p-2">
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link">MA Fine Art</h3>
+	<table>
+		
+		<tr>
+              <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
+              <td><strong>Full-time</strong></td>
+            </tr>
+		
+		
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">'</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">&amp;</span>Duration</td>
+              <td><strong>3 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">,</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">.</span>UCAS code</td>
+              <td><strong>K100<br>
+                </strong></td>
+            </tr>
+
+          </table>
+        </a></div>
+		
+		
+		
+		
+		<div class="card-white rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link">MA Fine Art</h3>
+	<table>
+		
+		<tr>
+              <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
+              <td><strong>Full-time</strong></td>
+            </tr>
+		
+		
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">'</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">&amp;</span>Duration</td>
+              <td><strong>3 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">,</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">.</span>UCAS code</td>
+              <td><strong>K100<br>
+                </strong></td>
+            </tr>
+
+          </table>
+        </a></div>
+		
+		
+		
+		
+		<div class="card-white rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link">MA Fine Art</h3>
+	<table>
+		
+		<tr>
+              <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
+              <td><strong>Full-time</strong></td>
+            </tr>
+		
+		
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">'</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">&amp;</span>Duration</td>
+              <td><strong>3 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">,</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">.</span>UCAS code</td>
+              <td><strong>K100<br>
+                </strong></td>
+            </tr>
+
+          </table>
+        </a></div>
+     
+
+    </div>
+	  
+	  
+	  
+	  
+	  
   </div>
 </main>
 
