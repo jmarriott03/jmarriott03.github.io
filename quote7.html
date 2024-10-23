@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #fc6;
+}
+.hero-2col {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0;
+}
+.bck-highlight {
+    background-color: var(--highlight);
+}
+.btn-rounded-resize {
+    color: currentColor;
+    border: 2px solid currentColor;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+}
+.btn-rounded-resize:hover {
+    cursor: pointer;
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quote-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.quote-image {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+    font-size: 1rem;
+}
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--highlight);
+}
+/* Use CSS variables to manage layout widths */
+.container {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<main> 
+  
+  <!-- Option 1: Layout with 33%-67% split -->
+  <div class="container layout-33-67 mb-reg">
+    <div class="left-column"> <img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""> </div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize black-text quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"> <img src="images/640x640quotes01.jpg" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Option 2: Layout with 50%-50% split -->
+  <div class="container mb-reg">
+    <div class="left-column"> <img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""> </div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize black-text">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Option 3: Layout with 67%-33% split -->
+  <div class="container layout-67-33 mb-reg">
+    <div class="left-column"> <img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""> </div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize black-text">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
