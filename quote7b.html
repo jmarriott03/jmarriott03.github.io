@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #29718c;
+}
+	.w80 {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.hero-2col {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0;
+}
+.bck-highlight {
+    background-color: var(--highlight);
+}
+.btn-rounded-resize {
+    color: currentColor;
+    border: 2px solid currentColor;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+}
+.btn-rounded-resize:hover {
+    cursor: pointer;
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quote-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.quote-image {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+    font-size: 1rem;
+}
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--highlight);
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<main> 
+  
+  <!-- Option 1: Layout with 50%-50% split -->
+  <div class="hero-2col text-resize  white-text mb-reg">
+    <div class="left-column p-resize">
+      <div class="centered">
+        <h1>Alumni data protection</h1>
+        <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="James Wadham" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">James Wadham</a><br>
+              Database officer </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column p-resize pt-0">
+      <div class="centered">
+        <p>Find out about how we collect and manage your data so that we can stay in touch with you</p>
+      </div>
+    </div>
+  </div>
+	
+	
+	
+	  <!-- Option 2: Layout with 50%-50% split and max width 80rem -->
+	<div class="bck-black mb-reg">
+  <div class="hero-2col text-resize white-text w80">
+    <div class="left-column p-resize">
+      <div class="centered">
+        <h1>Alumni data protection</h1>
+        <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="James Wadham" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">James Wadham</a><br>
+              Database officer </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column p-resize pt-0">
+      <div class="centered">
+        <p>Find out about how we collect and manage your data so that we can stay in touch with you</p>
+      </div>
+    </div>
+  </div>
+	</div>
+	
+	
+	
+</main>
+</body>
+</html>
