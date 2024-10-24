@@ -10,7 +10,7 @@
 :root {
 --highlight: #29718c;
 }
-	.w80 {
+.w80 {
     max-width: 80rem;
     margin: 0 auto;
 }
@@ -65,7 +65,6 @@
 .hero-2col {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--highlight);
 }
 /* Use CSS variables to manage layout widths */
 .hero-2col {
@@ -88,11 +87,19 @@
 .right-column {
     width: var(--right-width);
 }
-
+.p-right-column-resize {
+    padding: 4rem;
+}
+/* Responsive behavior: at 60em, 2rem padding but not top so stacks with less space */
+@media (max-width: 60em) {
+.p-right-column-resize {
+    padding: 0 2rem 2rem 2rem;
+}
+	
 /* Responsive behavior: at 60em, stack columns vertically */
 @media (max-width: 60em) {
 .left-column, .right-column {
-    width: 100%;
+width: 100%;
 }
 }
 </style>
@@ -101,51 +108,48 @@
 <main> 
   
   <!-- Option 1: Layout with 50%-50% split -->
-  <div class="hero-2col text-resize  white-text mb-reg">
-    <div class="left-column p-resize">
-      <div class="centered">
-        <h1>Alumni data protection</h1>
-        <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="James Wadham" class="quote-image">
-          <div class="quote-text">
-            <p><a href="#">James Wadham</a><br>
-              Database officer </p>
+ <div class="bck-highlight mb-reg">
+    <div class="hero-2col text-resize white-text w80">
+      <div class="left-column p-resize">
+        <div class="centered">
+          <h1>Alumni data protection</h1>
+          <div class="quote-container"><img src="images/640x640quotes02.jpg" alt="James Wadham" class="quote-image">
+            <div class="quote-text">
+              <p><a href="#">James Wadham</a><br>
+                Database officer </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="right-column p-resize pt-0">
-      <div class="centered">
-        <p>Find out about how we collect and manage your data so that we can stay in touch with you</p>
-      </div>
-    </div>
-  </div>
-	
-	
-	
-	  <!-- Option 2: Layout with 50%-50% split and max width 80rem -->
-	<div class="bck-black mb-reg">
-  <div class="hero-2col text-resize white-text w80">
-    <div class="left-column p-resize">
-      <div class="centered">
-        <h1>Alumni data protection</h1>
-        <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="James Wadham" class="quote-image">
-          <div class="quote-text">
-            <p><a href="#">James Wadham</a><br>
-              Database officer </p>
-          </div>
+      <div class="right-column p-right-column-resize">
+        <div class="centered">
+          <p>Find out about how we collect and manage your data so that we can stay in touch with you</p>
         </div>
       </div>
     </div>
-    <div class="right-column p-resize pt-0">
-      <div class="centered">
-        <p>Find out about how we collect and manage your data so that we can stay in touch with you</p>
+  </div>
+  
+  <!-- Option 2: Layout with 50%-50% split and different colour over 80rem -->
+  <div class="bck-black">
+    <div class="hero-2col text-resize white-text bck-highlight w80">
+      <div class="left-column p-resize">
+        <div class="centered">
+          <h1>Alumni data protection</h1>
+          <div class="quote-container"><img src="images/640x640quotes02.jpg" alt="James Wadham" class="quote-image">
+            <div class="quote-text">
+              <p><a href="#">James Wadham</a><br>
+                Database officer </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-column p-right-column-resize">
+        <div class="centered">
+          <p>Find out about how we collect and manage your data so that we can stay in touch with you</p>
+        </div>
       </div>
     </div>
   </div>
-	</div>
-	
-	
-	
 </main>
 </body>
 </html>
