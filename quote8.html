@@ -10,6 +10,18 @@
 :root {
 --highlight: #fc6;
 }
+.w80 {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.w60 {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.w40 {
+    max-width: 40rem;
+    margin: 0 auto;
+}
 .quotestyle:before {
     font-family: "Times New Roman", serif;
     font-size: 3em;
@@ -29,27 +41,27 @@
     border-radius: 50%;
     margin-right: 1em;
 }
-.parent {
+.hero-2col {
     display: grid;
     grid-template-columns: 32px 1fr repeat(2, 32px) 1fr 32px;
     grid-template-rows: 32px repeat(3, auto) 32px;
 }
-.div1 {
+.left-column {
     grid-area: 1 / 1 / 6 / 7;
 }
-.div2 {
+.right-column {
     grid-area: 3 / 2 / 4 / 3;
 }
-.div1, .div2 {
+.left-column, .right-column {
     width: 100%;
 }
-.div2 > * {
+.right-column > * {
     width: 100%;
 }
 .rounded-2-rounded-0 {
     border-radius: 2rem;
 }
-.div2 :last-child {
+.right-column :last-child {
     margin: 0;
 }
 .bck-highlight {
@@ -58,14 +70,14 @@
 
 /*Responsive behavior: at 80em, resize button*/
 @media (max-width: 60em) {
-.parent {
+.hero-2col {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
 }
-.div1 {
+.left-column {
     grid-area: 1 / 1 / 2 / 2;
 }
-.div2 {
+.right-column {
     grid-area: 2 / 1 / 3 / 2;
 }
 .rounded-2-rounded-0 {
@@ -76,54 +88,52 @@
 </head>
 <body>
 <main>
-  <div class="parent mb-reg">
-    <div class="div1"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
-    <div class="div2 bck-highlight black-text p-2 quotestyle text-resize">
+  <div class="hero-2col mb-reg">
+    <div class="left-column"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
+    <div class="right-column bck-highlight black-text p-2 quotestyle text-resize">
       <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
       <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="Desirae Juurou" class="quote-image">
         <div class="quote-text">
           <p><a href="#">Desirae Juurou</a><br>
-            Project manager
-          </p>
+            Project manager </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="parent mb-reg">
-    <div class="div1"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
-    <div class="div2 bck-highlight black-text rounded-2-rounded-0 p-2 quotestyle text-resize">
+  <div class="hero-2col mb-reg">
+    <div class="left-column"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
+    <div class="right-column bck-highlight black-text rounded-2-rounded-0 p-2 quotestyle text-resize">
       <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
       <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="Desirae Juurou" class="quote-image">
         <div class="quote-text">
           <p><a href="#">Desirae Juurou</a><br>
-            Project manager
-          </p>
+            Project manager </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="parent mb-reg">
-    <div class="div1"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
-    <div class="div2 mrfrosty black-text p-2 quotestyle text-resize">
+  <div class="hero-2col mb-reg">
+    <div class="left-column"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
+    <div class="right-column mrfrosty black-text p-2 quotestyle text-resize">
       <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
       <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="Desirae Juurou" class="quote-image">
         <div class="quote-text">
           <p><a href="#">Desirae Juurou</a><br>
-            Project manager
-          </p>
+            Project manager </p>
         </div>
       </div>
     </div>
   </div>
-	<div class="parent">
-    <div class="div1"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
-    <div class="div2 mrfrosty black-text rounded-2-rounded-0 p-2 quotestyle text-resize">
-      <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
-      <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="Desirae Juurou" class="quote-image">
-        <div class="quote-text">
-          <p><a href="#">Desirae Juurou</a><br>
-            Project manager
-          </p>
+  <div class="bck-highlight">
+    <div class="hero-2col w80 bck-white">
+      <div class="left-column"><img src="images/1920x1080babbage.webp" width="1920" height="1080" alt=""/></div>
+      <div class="right-column mrfrosty black-text rounded-2-rounded-0 p-2 quotestyle text-resize">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/1280x720marine1.jpg" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
         </div>
       </div>
     </div>
