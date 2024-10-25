@@ -258,6 +258,9 @@ section {
 .p-resize {
     padding: 4rem;
 }
+.text-resize h1 {
+    font-size: 3rem;
+}
 .text-resize h2 {
     font-size: 2.5rem;
 }
@@ -426,6 +429,9 @@ details[open] > summary::before {
 .p-resize {
     padding: 2rem;
 }
+.text-resize h1 {
+    font-size: 2.5rem;
+}
 .text-resize h2 {
     font-size: 2rem;
 }
@@ -434,6 +440,9 @@ details[open] > summary::before {
 }
 }
 @media (max-width: 60em) {
+.text-resize h1 {
+    font-size: 2rem;
+}
 .text-resize h2 {
     font-size: 1.5rem;
 }
