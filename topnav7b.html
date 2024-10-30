@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&display=swap" rel="stylesheet">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #3b7a57;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.roboto {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 5rem;
+    line-height: 0.875em;
+    text-transform: uppercase;
+}
+.w80 {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.w40 {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.logo {
+    float: left;
+    width: 15rem;
+    height: 3rem;
+}
+.links {
+    float: right;
+}
+.links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--black);
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.5rem 0 0;
+    margin: 0 0.5rem 0 0;
+    cursor: pointer;
+    color: var(--black);
+    border: none;
+    transition: background-color 0.3s;
+    background: none;
+    font-size: 1rem;
+}
+.caret {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+.content {
+    opacity: 0; /* Start with hidden content */
+    height: 0; /* Start with height of 0 */
+    overflow: hidden; /* Prevent overflow */
+    transition: opacity 0.3s ease, height 0.3s ease; /* Transition for opacity and height */
+    padding: 0 2rem 0 2rem;
+}
+.active {
+    opacity: 1; /* Show content */
+    height: auto; /* Fixed height when active */
+}
+.open .caret {
+    transform: rotate(90deg);
+}
+.circle {
+    background: var(--btn-primary);
+    color: var(--white);
+    border-radius: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    padding: 0.18rem 0 0 0.46rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Apply :hover styles only on devices that are not touch-enabled */
+@media (hover: hover) and (pointer: fine) {
+.button:hover .circle {
+    background-color: var(--btn-primary-hov);
+}
+}
+.search-box {
+    height: 3rem;
+    width: 100%;
+    border: 2px solid var(--mgrey);
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    vertical-align: top;
+}
+.search-box::placeholder {
+color: var(--dgrey);
+}
+.search-box:focus {
+    outline: none;
+    border-color: var(--black);
+}
+.search-box-container {
+    max-width: 76em;
+    margin: 0 auto;
+}
+.newcol {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(13em, 1fr) );
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1.5rem;
+    margin: 0 auto 0.5rem auto;
+    max-width: 76rem;
+    padding-top: 2px;
+}
+.newcol > * {
+    width: 100%;
+}
+.newcol a {
+    text-decoration: none;
+}
+.newcol a:hover, a:focus {
+    text-decoration: underline;
+}
+.newcol ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.newcol li:last-child {
+    margin-bottom: 1.5rem;
+}
+.newcol li {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+.megamenu-btn {
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
+    color: var(--white);
+    background-color: var(--btn-primary);
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    font-size: 1em;
+    line-height: 1.5;
+    width: 100%;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+a.megamenu-btn:hover, a.megamenu-btn:focus {
+    background-color: var(--btn-primary-hov);
+    text-decoration: none;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between the buttons */
+    margin-bottom: 2rem;
+}
+.login-container .button {
+    flex: 0 1 auto; /* Ensure buttons take up only the required width */
+}
+.divider-black {
+    border-right: 0.25rem solid var(--black);
+    padding-right: 1rem;
+}
+.social {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0 0.75rem 0 -0.75rem;
+    letter-spacing: 0;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+.footerlogo {
+    width: auto;
+    height: 6rem;
+}
+.footerlist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+    padding: 0;
+    margin: 0;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+}
+.footerlist a {
+    text-decoration: none;
+}
+.footerlist a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* Media Query for screens smaller than 45rem */
+@media (max-width: 45rem) {
+.container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.links {
+    float: left;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+}
+/*Hero image*/
+.hero-2col {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0;
+}
+.l-33 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+.r-66 {
+    grid-area: 1 / 3 / 2 / 7;
+}
+.l-50 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.r-50 {
+    grid-area: 1 / 4 / 2 / 7;
+}
+.l-66 {
+    grid-area: 1 / 1 / 2 / 5;
+}
+.r-33 {
+    grid-area: 1 / 5 / 2 / 7;
+}
+.hero-2col > div {
+    min-width: 100%;
+}
+.bck-highlight {
+    background-color: var(--highlight);
+}
+
+/*Media queries*/
+@media (max-width: 80em) {
+.l-33, .l-66 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.r-66, .r-33 {
+    grid-area: 1 / 4 / 2 / 7;
+}
+.btn-rounded-resize {
+    font-size: 1rem;
+}
+}
+
+@media (max-width: 60em) {
+.hero-2col {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+}
+.l-33 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.r-66 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.l-50 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.r-50 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.l-66 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.r-33 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+}
+</style>
+</head>
+<body>
+<div class="container w80 dotted">
+  <div class="logo dotted"> <img src="images/uoplogo.svg" alt=""></div>
+  <div class="links dotted">
+    <button class="button" id="btn1" onclick="toggleContent(1)"><span class="iconfont largetext circle">B</span>Search<span class="caret iconfont">N</span></button>
+    <button class="button" id="btn2" onclick="toggleContent(2)"><span class="iconfont largetext circle">C</span>Menu<span class="caret iconfont">N</span></button>
+    <button class="button" id="btn3" onclick="toggleContent(3)"><span class="iconfont largetext circle">A</span>Log in<span class="caret iconfont">N</span></button>
+  </div>
+</div>
+<div id="content1" class="content"> 
+  <!--  <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>-->
+  <div class="w40 pb-2 dotted">
+    <input type="text" class="search-box" placeholder="Search plymouth.ac.uk">
+  </div>
+</div>
+<div id="content2" class="content"> 
+  <!--  <h2>Quick links</h2>-->
+  <div class="newcol dotted">
+    <div>
+      <h3><a href="#">Study</a></h3>
+      <ul>
+        <li><a href="#">Undergraduate</a></li>
+        <li><a href="#">Postgraduate</a></li>
+        <li><a href="#">Postgraduate research</a></li>
+        <li><a href="#">Professional development</a></li>
+        <li><a href="#">Student life</a></li>
+        <li><a href="#">Accommodation</a></li>
+        <li><a href="#">Library services</a></li>
+        <li><a href="#">Important dates</a></li>
+        <li><a href="#" class="megamenu-btn">Register for an open day</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">Research</a></h3>
+      <ul>
+        <li><a href="#">Institutes</a></li>
+        <li><a href="#">Impact</a></li>
+        <li><a href="#">Postgraduate research</a></li>
+        <li><a href="#" class="megamenu-btn">Library services</a></li>
+        <li><a href="#">Research Excellence Framework 2021</a></li>
+        <li><a href="#">Public Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">International</a></h3>
+      <ul>
+        <li><a href="#">Application advice</a></li>
+        <li><a href="#">Exchange and free mover opportunities</a></li>
+        <li><a href="#">Country guides</a></li>
+        <li><a href="#">Advice for international students</a></li>
+        <li><a href="#">Accommodation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">Business</a></h3>
+      <ul>
+        <li><a href="#">Professional development</a></li>
+        <li><a href="#">Degree apprenticeships</a></li>
+        <li><a href="#">Knowledge Transfer Partnerships</a></li>
+        <li><a href="#">Academic partnerships</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#" class="megamenu-btn">Collaborate</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">About</a></h3>
+      <ul>
+        <li><a href="#">Strategy, mission and vision</a></li>
+        <li><a href="#">Governance</a></li>
+        <li><a href="#">Alumni</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Visit</a></li>
+        <li><a href="#">Working here</a></li>
+        <li><a href="#">Public arts programme</a></li>
+        <li><a href="#" class="megamenu-btn">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="content3" class="content">
+  <div class="div7"> 
+    <!-- <h2>Log in</h2>-->
+    <div class="login-container dotted">
+      <div class="login-student divider-black">
+        <button class="button" id="btn4"><span class="iconfont largetext circle">A</span>Student</button>
+      </div>
+      <div class="login-staff">
+        <button class="button" id="btn5"><span class="iconfont largetext circle">A</span>Staff</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bck-lgrey">
+  <div class="w80 p-2 dotted"><a href="#">Home</a> &gt; <a href="#">Students and family</a> &gt; <strong>Sustainability</strong></div>
+</div>
+<div class="mb-reg"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/> </div>
+<div class="p-2 topstroke">
+  <div class="search-box-container pb-reg dotted">
+    <h2>Popular links</h2>
+    <ul class="footerlist">
+      <li> <a href="/study">Courses and study</a> </li>
+      <li> <a href="/student-life">Student life</a> </li>
+      <li> <a href="/students-and-family">Students and family</a> </li>
+      <li> <a href="/international">International Plymouth</a> </li>
+      <li> <a href="/research">Research and expertise</a> </li>
+      <li> <a href="/business-partners">Business and partners</a> </li>
+      <li> <a href="/business-partners/academic-partnerships">Academic Partnerships</a> </li>
+      <li> <a href="/alumni">Alumni</a> </li>
+      <li> <a href="/about-us">About us</a> </li>
+      <li> <a href="https://www.plymouth.ac.uk/feeds/news"><span class="iconfont" aria-hidden="true">4</span>News RSS feed</a> </li>
+      <li> <a href="/whats-on"><span class="iconfont" aria-hidden="true">&amp;</span>What's on</a> </li>
+      <li> <a href="https://www.plymouth.ac.uk/help"><span class="iconfont" aria-hidden="true">G</span>Accessibility and help</a> </li>
+      <li> <a href="/about-us/university-structure/service-areas/procurement/modern-slavery-statement">Modern slavery statement</a> </li>
+    </ul>
+  </div>
+  <div class="search-box-container dotted">
+    <h2>Contact us</h2>
+    <ul class="footerlist">
+      <li><strong>University of Plymouth</strong><br>
+        Plymouth<br>
+        Devon PL4 8AA<br>
+        United Kingdom</li>
+      <li><a href="#"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">(</span>Maps &amp; directions</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">A</span>Visit us</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">]</span>Job vacancies</a></li>
+      <li><img src="images/crest-col.svg" alt="" class="footerlogo"><img src="images/tefgold.gif" alt="" class="footerlogo ml-2"></li>
+      <li>
+        <p><span class="iconfont"><a href="#" class="social">f</a></span> <span class="iconfont"><a href="#" class="social">t</a></span> <span class="iconfont"><a href="#" class="social">y</a></span> <span class="iconfont"><a href="#" class="social">i</a></span> <span class="iconfont"><a href="#" class="social">p</a></span> <span class="iconfont"><a href="#" class="social">Ü</a></span> <span class="iconfont"><a href="#" class="social">l</a></span> </p>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+function toggleContent(buttonNumber) {
+    // Get all content divs
+    const contents = document.querySelectorAll('.content');
+    const buttons = document.querySelectorAll('.button');
+    const focusableSelectors = 'a, button, input, textarea, select'; // Common focusable elements
+
+    contents.forEach((content, index) => {
+        const focusableElements = content.querySelectorAll(focusableSelectors);
+
+        // Show or hide content based on button click
+        if (index === buttonNumber - 1) {
+            if (content.classList.contains('active')) {
+                // Fade out the active content
+                content.classList.remove('active'); // Remove active to fade out
+
+                // Disable focus for hidden content
+                focusableElements.forEach(element => {
+                    element.setAttribute('tabindex', '-1');
+                });
+            } else {
+                // Fade out any other content
+                const activeContent = document.querySelector('.content.active');
+                if (activeContent) {
+                    activeContent.classList.remove('active'); // Remove active to fade out
+
+                    // Disable focus for the currently active content
+                    const activeFocusableElements = activeContent.querySelectorAll(focusableSelectors);
+                    activeFocusableElements.forEach(element => {
+                        element.setAttribute('tabindex', '-1');
+                    });
+                }
+
+                // Fade-in the selected content
+                setTimeout(() => {
+                    content.classList.add('active'); // Add active to fade in
+
+                    // Enable focus for visible content, except for content1 (handled separately)
+                    if (buttonNumber !== 1) {
+                        focusableElements.forEach(element => {
+                            element.removeAttribute('tabindex');
+                        });
+                    }
+                }, 300); // Wait for fade-out to complete
+            }
+            buttons[index].classList.toggle('open'); // Toggle the open class for the button
+        } else {
+            // Remove active class from other contents
+            content.classList.remove('active'); // Remove active from other contents
+            buttons[index].classList.remove('open'); // Remove open class from other buttons
+
+            // Disable focus for hidden content
+            focusableElements.forEach(element => {
+                element.setAttribute('tabindex', '-1');
+            });
+        }
+    });
+}
+// Special case for btn1: Search box should receive focus when button1 is clicked
+document.getElementById('btn1').addEventListener('click', function () {
+    const searchBox = document.querySelector('#content1 .search-box');
+    if (searchBox) {
+        searchBox.removeAttribute('tabindex'); // Ensure it's focusable
+        searchBox.focus(); // Set focus to the search box
+    }
+});
+</script>
+</body>
+</html>
