@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="University of Plymouth - Course Contextual Offers">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- New stylesheet for main styles -->
+<title>University of Plymouth</title>
+<style>
+/* CSS Variables */
+:root {
+--info: #ccc;
+--info-highlight: #999;
+--warning: #fc3;
+--warning-highlight: #c93;
+--danger: #c33;
+--danger-highlight: #933;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+}
+.w-80 {
+    max-width: 80rem;
+    overflow: hidden;
+}
+.callout {
+    max-width: 40rem;
+    border-left: 0.5em solid;
+    background-color: var(--info);
+    border-radius: 0.5rem;
+    margin-left: 0;
+}
+.callout > :last-child {
+    margin-bottom: 0;
+}
+.callout-info {
+    background-color: var(--info);
+    border-color: var(--info-highlight);
+}
+.callout-warning {
+    background-color: var(--warning);
+    border-color: var(--warning-highlight);
+}
+.callout-danger {
+    background-color: var(--danger);
+    border-color: var(--danger-highlight);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw bck-lgrey">
+    <div class="w-80 p-2 bck-white">
+      <h1>Callouts</h1>
+      <section class="callout callout-info black-text p-1 mb-reg">
+        <h2>Info</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </section>
+      <section class="callout callout-warning black-text p-1 mb-reg">
+        <h2>Warning</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </section>
+      <section class="callout callout-danger white-text p-1">
+        <h2>Danger</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>
