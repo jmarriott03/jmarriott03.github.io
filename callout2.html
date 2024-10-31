@@ -48,6 +48,18 @@
     background-color: var(--danger);
     border-color: var(--danger-highlight);
 }
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+.callout-lgrey {
+    max-width: 40rem;
+    border-left: 0.5em solid var(--mgrey);
+    background-color: var(--lgrey);
+    margin-left: 0;
+}
+.callout-lgrey > :last-child {
+    margin-bottom: 0;
+}
 </style>
 </head>
 <body>
@@ -65,8 +77,19 @@
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
       </section>
-      <section class="callout callout-danger white-text p-1">
+      <section class="callout callout-danger white-text p-1 mb-reg">
         <h2>Danger</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </section>
+      <div class="topstroke mb-reg"></div>
+      <section class="callout-lgrey p-1 mb-reg">
+        <h2>Light grey not rounded padding 1rem</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </section>
+      <section class="callout-lgrey p-2">
+        <h2>Light grey not rounded padding 2rem</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
       </section>
