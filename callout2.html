@@ -60,6 +60,35 @@
 .callout-lgrey > :last-child {
     margin-bottom: 0;
 }
+.callout-lgrey-2col {
+    min-width: 100%;
+    border-left: 0.5em solid var(--mgrey);
+    background-color: var(--lgrey);
+    margin-left: 0;
+}
+.callout-lgrey-2col > :last-child {
+    margin-bottom: 0;
+}
+.container {
+    display: flex; /* Use Flexbox for the layout */
+    gap: 2rem; /* Column gap */
+}
+.column {
+    flex: 1; /* Make each column equal width */
+    display: flex; /* Use Flexbox for child elements */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align all children to the left */
+    width: 100%;
+}
+.column > :last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 60rem) {
+.container {
+    flex-direction: column; /* Stack columns vertically */
+}
+}
 </style>
 </head>
 <body>
@@ -67,32 +96,46 @@
   <div class="fullw bck-lgrey">
     <div class="w-80 p-2 bck-white">
       <h1>Callouts</h1>
-      <section class="callout callout-info black-text p-1 mb-reg">
+      <div class="callout callout-info black-text p-1 mb-reg">
         <h2>Info</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </section>
-      <section class="callout callout-warning black-text p-1 mb-reg">
+      </div>
+      <div class="callout callout-warning black-text p-1 mb-reg">
         <h2>Warning</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </section>
-      <section class="callout callout-danger white-text p-1 mb-reg">
+      </div>
+      <div class="callout callout-danger white-text p-1 mb-reg">
         <h2>Danger</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </section>
+      </div>
       <div class="topstroke mb-reg"></div>
-      <section class="callout-lgrey p-1 mb-reg">
-        <h2>Light grey not rounded padding 1rem</h2>
+      <div class="callout-lgrey p-1 mb-reg">
+        <h2>Light grey, not rounded, padding 1rem</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </section>
-      <section class="callout-lgrey p-2">
-        <h2>Light grey not rounded padding 2rem</h2>
+      </div>
+      <div class="callout-lgrey p-2 mb-reg">
+        <h2>Light grey, not rounded, padding 2rem</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </section>
+      </div>
+      <div class="topstroke mb-reg"></div>
+      <div class="container">
+        <div class="column">
+          <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+          <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="column">
+          <div class="callout-lgrey-2col p-2">
+            <h2>Light grey, not rounded, padding 2rem, 2 column</h2>
+            <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+            <p><a href="#">Check your eligibility for a contextual offer</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </main>
