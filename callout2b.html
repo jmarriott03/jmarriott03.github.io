@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="University of Plymouth - Course Contextual Offers">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- New stylesheet for main styles -->
+<title>University of Plymouth</title>
+<style>
+/* CSS Variables */
+:root {
+--info: #ccc;
+--info-highlight: #999;
+--warning: #fc3;
+--warning-highlight: #c93;
+--danger: #c33;
+--danger-highlight: #933;
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+}
+.w-80 {
+    max-width: 80rem;
+    overflow: hidden;
+}
+.w-37 {
+    max-width: 37rem;
+    overflow: hidden;
+}
+.callout {
+    max-width: 37rem;
+    border-left: 0.5em solid;
+    background-color: var(--info);
+    border-radius: 0.5rem;
+    margin-left: 0;
+}
+.callout > :last-child {
+    margin-bottom: 0;
+}
+.callout-info {
+    background-color: var(--info);
+    border-color: var(--info-highlight);
+}
+.callout-warning {
+    background-color: var(--warning);
+    border-color: var(--warning-highlight);
+}
+.callout-danger {
+    background-color: var(--danger);
+    border-color: var(--danger-highlight);
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+.callout-lgrey {
+    border-left: 0.5em solid var(--mgrey);
+    background-color: var(--lgrey);
+    border-radius: 0.5rem;
+    margin-left: 0;
+}
+.callout-lgrey > :last-child {
+    margin-bottom: 0;
+}
+.container {
+    display: flex; /* Use Flexbox for the layout */
+    gap: 2rem; /* Column gap */
+}
+.column {
+    flex: 1; /* Make each column equal width */
+    display: flex; /* Use Flexbox for child elements */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align all children to the left */
+    width: 100%;
+}
+.column > :last-child {
+    margin-bottom: 0;
+}
+h2, p, .column {
+    border: 1px dotted red;
+}
+
+@media (max-width: 60rem) {
+.container {
+    flex-direction: column; /* Stack columns vertically */
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw bck-lgrey">
+    <div class="w-80 p-2 bck-white">
+      <h1>Callouts</h1>
+      <div class="callout callout-info black-text p-1 mb-reg">
+        <h2>Info</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </div>
+      <div class="callout callout-warning black-text p-1 mb-reg">
+        <h2>Warning</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </div>
+      <div class="callout callout-danger white-text p-1 mb-reg">
+        <h2>Danger</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </div>
+      <div class="topstroke mb-reg"></div>
+      <div class="callout-lgrey w-37 p-1 mb-reg">
+        <h2>Light grey, padding 1rem, 37rem width</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </div>
+      <div class="callout-lgrey w-37 p-2 mb-reg">
+        <h2>Light grey, padding 2rem, 37rem width</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </div>
+      <div class="callout-lgrey p-2 mb-reg">
+        <h2>Light grey, padding 2rem, full width</h2>
+        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+        <p><a href="#">Check your eligibility for a contextual offer</a></p>
+      </div>
+      <div class="topstroke mb-reg"></div>
+      <div class="container">
+        <div class="column">
+          <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+          <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="column">
+          <div class="callout-lgrey fullw p-2">
+            <h2>Light grey, not rounded, padding 2rem, 2 column</h2>
+            <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
+            <p><a href="#">Check your eligibility for a contextual offer</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
