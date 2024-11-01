@@ -79,6 +79,13 @@
     margin-bottom: 0;
 }
 
+/*
+h2, p, .column {
+    border: 1px dotted red;
+	box-sizing: border-box;
+}
+*/
+
 @media (max-width: 60rem) {
 .container {
     flex-direction: column; /* Stack columns vertically */
@@ -90,47 +97,21 @@
 <main>
   <div class="fullw bck-lgrey">
     <div class="w-80 p-2 bck-white">
-      <h1>Callouts</h1>
-      <div class="callout callout-info black-text p-1 mb-reg">
-        <h2>Info</h2>
-        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
-        <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </div>
-      <div class="callout callout-warning black-text p-1 mb-reg">
-        <h2>Warning</h2>
-        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
-        <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </div>
-      <div class="callout callout-danger white-text p-1 mb-reg">
-        <h2>Danger</h2>
-        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
-        <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </div>
-      <div class="topstroke mb-reg"></div>
-      <div class="callout-lgrey w-37 p-1 mb-reg">
-        <h2>Light grey, padding 1rem, 37rem width</h2>
-        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
-        <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </div>
-      <div class="callout-lgrey w-37 p-2 mb-reg">
-        <h2>Light grey, padding 2rem, 37rem width</h2>
-        <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
-        <p><a href="#">Check your eligibility for a contextual offer</a></p>
-      </div>
+      <h1 id="container-width">Container width:</h1>
       <div class="callout-lgrey p-1 mb-reg">
-        <h2>Light grey, padding 1rem, full width</h2>
+        <h2 id="full-width">Full width:</h2>
         <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
         <p><a href="#">Check your eligibility for a contextual offer</a></p>
       </div>
       <div class="topstroke mb-reg"></div>
       <div class="container">
         <div class="column">
-          <h2>Lorem ipsum dolor sit amet, consectetur</h2>
+          <h2 id="col1-width">Column 1 width:</h2>
           <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="column">
           <div class="callout-lgrey fullw p-1">
-            <h2>Light grey, padding 1rem, 2 column</h2>
+            <h2 id="col2-width">Column 2 width:</h2>
             <p>Contextual offers: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer considers individual circumstances that can impact learning and exam results.</p>
             <p><a href="#">Check your eligibility for a contextual offer</a></p>
           </div>
@@ -139,5 +120,40 @@
     </div>
   </div>
 </main>
+<script>
+    // Function to update the width in the headers
+    function updateColumnWidths() {
+        const container = document.querySelector('#container-width');
+		const full = document.querySelector('#full-width');
+        const col1 = document.querySelector('#col1-width');
+        const col2 = document.querySelector('#col2-width');
+
+        // Get the computed width of each id in pixels
+        const containerWidthPx = container.parentElement.offsetWidth;
+		const fullWidthPx = full.parentElement.offsetWidth;
+        const col1WidthPx = col1.parentElement.offsetWidth;
+        const col2WidthPx = col2.parentElement.offsetWidth;
+
+        // Convert pixel width to rems (assuming 1rem = 16px)
+        const containerWidthRem = (containerWidthPx / 16)
+            .toFixed(2);
+		const fullWidthRem = (fullWidthPx / 16)
+            .toFixed(2);
+        const col1WidthRem = (col1WidthPx / 16)
+            .toFixed(2);
+        const col2WidthRem = (col2WidthPx / 16)
+            .toFixed(2);
+
+        // Update the headers with both px and rem values
+        container.textContent = `Container width: ${containerWidthPx}px (${containerWidthRem}rem)`;
+		full.textContent = `Full width: ${fullWidthPx}px (${fullWidthRem}rem)`;
+        col1.textContent = `Column 1 width: ${col1WidthPx}px (${col1WidthRem}rem)`;
+        col2.textContent = `Column 2 Width: ${col2WidthPx}px (${col2WidthRem}rem)`;
+    }
+
+    // Update column widths on load and on window resize
+    window.addEventListener('load', updateColumnWidths);
+    window.addEventListener('resize', updateColumnWidths);
+</script>
 </body>
 </html>
