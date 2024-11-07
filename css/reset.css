@@ -291,7 +291,8 @@ section {
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.2);
 }
 .stroke {
-    border: 2px solid var(--lgrey);
+	outline: 2px solid var(--lgrey);
+    outline-offset: -2px;
     overflow: hidden;
 }
 .dotted {
