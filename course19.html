@@ -382,9 +382,31 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
     }	
 	
 	
+	.btn-rounded-resize {
+	    color: currentColor;
+    border: 2px solid currentColor;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+		-webkit-appearance: none;
+    outline-offset: 2px;
+		transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+}
+.btn-rounded-resize:hover, .btn-rounded-resize:focus {
+    cursor: pointer;
+	background-color: var(--black);
 	
-	
-	
+}
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+    font-size: 1rem;
+}
+}	
 	
 	
 	
@@ -514,7 +536,15 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
       <div class="centered white-text">
         <h2 class="roboto">Study engineering<br>
           <span class="black-text">Make it count</span></h2>
-        <div class="text-resize"><p>Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</p><p><a href="#">Apply now</a></p>
+        <div class="text-resize"><p>Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</p>
+			
+			
+			
+			<button class="btn-rounded-resize">Apply now</button>
+			
+			
+			
+			
       </div></div>
     </div>
     <div class="right-column"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
