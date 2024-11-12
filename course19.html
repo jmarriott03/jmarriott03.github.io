@@ -10,6 +10,13 @@
 <style>
 :root {
 --highlight: #3b7a57;
+	
+	
+	--highlight-light: #d3e9f1;
+--highlight-medium: #7fbfd7;
+--highlight-dark: #29718c;
+	
+	
 }
 * {
     margin: 0;
@@ -25,6 +32,19 @@
     line-height: 0.875em;
     text-transform: uppercase;
 }
+	
+	
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-medium {
+    background-color: var(--highlight-medium);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+	
+	
 .w80 {
     max-width: 80rem;
     margin: 0 auto;
@@ -215,7 +235,7 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 .bck-highlight {
     background-color: var(--highlight);
 }
-
+	.highlight { color: var(--highlight-light)}
 
 		/* Media Query for screens smaller than 45rem */
 @media (max-width: 45rem) {
@@ -239,7 +259,6 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 	.hero-2col {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--highlight);
 }
 /* Use CSS variables to manage layout widths */
 .hero-2col {
@@ -333,15 +352,28 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 	
 	
 	
-	
+	.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    gap: 1em;
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
 
 	
 	
 	      /* Media Query for screen width less than 768px */
     @media screen and (max-width: 55rem) {
       .sticky {
-        position: relative; /* Remove sticky position */
-/*		  display: none;*/
+/*        position: relative;  Remove sticky position */
+		  display: none;
       }
     }	
 	
@@ -473,19 +505,47 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 	
 	<section id="introduction">
 <div class="mb-reg">
-  <div class="hero-2col bck-highlight layout-33-67 mb-reg">
-    <div class="left-column p-resize">
+  <div class="hero-2col bck-highlight-dark">
+    <div class="left-column p-2">
       <div class="centered white-text">
-        <h2 class="roboto">Study nursing<br>
+        <h2 class="roboto">Study engineering<br>
           <span class="black-text">Make it count</span></h2>
-        <p><a href="#">Apply for a course in nursing</a></p>
-      </div>
+        <div class="text-resize"><p><a href="#">Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</a></p>
+      </div></div>
     </div>
-    <div class="right-column"><img src="images/1280x720nurse.webp" width="1280" height="720" alt=""></div>
+    <div class="right-column"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
   </div>
 </div>
 	
 	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!--	stats-->
+	 <div class="bck-highlight-dark">
+    <div class="w80">
+      <div class="card-container p-2">
+        <div class="card bck-highlight-light black-text rounded-2 p-2">
+          <div class="centered"><span class="text-resize"><h2><span class="counter">98</span>%</h2></span>
+          <p>of Plymouth engineering graduates are employed or in further study within six months of graduation</p>
+        </div></div>
+        <div class="card bck-highlight-light black-text rounded-2 p-2">
+			<div class="centered"><span class="text-resize"><h2>Over <span class="counter">100</span></h2></span>
+          <p>industry collaborations ensure students gain hands-on experience through live projects, preparing you for the workforce</p></div>
+        </div>
+        <div class="card bck-highlight-light black-text rounded-2 p-2">
+			<div class="centered"><h3>State-of-the-Art Facilities</h3>
+          <p>Access to advanced engineering labs and the renowned Marine Station, offering cutting-edge resources for practical learning in fields like renewable energy and marine engineering</p>
+			</div></div>
+      </div>
+    </div>
+  </div>
 	
 	
 	
@@ -658,7 +718,7 @@ document.getElementById('btn1').addEventListener('click', function () {
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section"); // Adjust if different
     const navLinks = document.querySelectorAll("nav ul li a");
-    const stickyHeight = 96; // Height of the sticky nav
+    const stickyHeight = 88; // Height of the sticky nav
 
     function changeActiveLink() {
         let fromTop = window.scrollY + stickyHeight;
@@ -700,7 +760,38 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 	
 	
-	
+	  // Counter animation function for individual counters
+  function animateCounter(counter) {
+    const target = +counter.innerText;
+    const increment = target / 100; // Adjust the speed of counting
+    let count = 0;
+
+    function updateCounter() {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target;
+      }
+    }
+    updateCounter();
+  }
+
+  // Intersection Observer to detect when each counter comes into view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target); // Animate the specific counter
+        observer.unobserve(entry.target); // Stop observing once animation starts
+      }
+    });
+  }, { threshold: 0.5 }); // Adjust threshold as needed for earlier or later trigger
+
+  // Observe each counter individually
+  document.querySelectorAll('.counter').forEach(counter => {
+    observer.observe(counter);
+  });
 </script>
 </body>
 </html>
