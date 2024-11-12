@@ -124,10 +124,6 @@ ul, ol {
     text-overflow: ellipsis;
     margin-top: 0;
 }
-section {
-    max-width: 60em;
-    overflow: hidden;
-}
 .codegrey {
     background-color: var(--lgrey);
     padding: 1rem;
