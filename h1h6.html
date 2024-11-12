@@ -20,11 +20,18 @@
 .bck-highlight-dark {
     background-color: var(--highlight-dark);
 }
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
 </style>
 </head>
 <body>
 <main>
-  <section class="p-1">
+  <section class="p-2">
     <div class="centered stroke p-1 mb-reg">
       <h2>centered stroke p-1 mb-reg</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
