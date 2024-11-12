@@ -28,11 +28,15 @@
     }
 .roboto {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 5rem;
-    line-height: 0.875em;
+    font-size: 4rem;
+    line-height: 0.875;
     text-transform: uppercase;
 }
-	
+@media (max-width: 45rem) {
+.roboto {
+    font-size: 3rem;
+    line-height: 0.875;
+	}}
 	
 .bck-highlight-light {
     background-color: var(--highlight-light);
@@ -505,12 +509,12 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 	
 	<section id="introduction">
 <div class="mb-reg">
-  <div class="hero-2col bck-highlight-dark">
+  <div class="hero-2col layout-33-67 bck-highlight-dark">
     <div class="left-column p-2">
       <div class="centered white-text">
         <h2 class="roboto">Study engineering<br>
           <span class="black-text">Make it count</span></h2>
-        <div class="text-resize"><p><a href="#">Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</a></p>
+        <div class="text-resize"><p>Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</p><p><a href="#">Apply now</a></p>
       </div></div>
     </div>
     <div class="right-column"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
@@ -537,7 +541,7 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
         </div></div>
         <div class="card bck-highlight-light black-text rounded-2 p-2">
 			<div class="centered"><span class="text-resize"><h2>Over <span class="counter">100</span></h2></span>
-          <p>industry collaborations ensure students gain hands-on experience through live projects, preparing you for the workforce</p></div>
+          <p>industry collaborations ensure you gain hands-on experience through live projects, preparing you for the workforce</p></div>
         </div>
         <div class="card bck-highlight-light black-text rounded-2 p-2">
 			<div class="centered"><h3>State-of-the-Art Facilities</h3>
