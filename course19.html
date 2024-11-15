@@ -382,34 +382,164 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
     }	
 	
 	
-	.btn-rounded-resize {
-	    color: currentColor;
+
+	
+	section :last-child {margin-bottom: 0;}
+	div :last-child {margin-bottom: 0;}
+	
+	
+	
+	
+	
+	
+	
+	
+.staff-container {	
+	    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-column-gap: 0.5rem;
+    padding: 1rem;
+}
+.staff-pic {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.staff-text {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.staff-pic img {
+    border-radius: 50%;
+    height: auto;
+}
+.staff-text {
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+.fake-link {
+    text-decoration: underline;
+}
+	
+	
+	
+	.card-hov > * {
+    color: var(--black);
+    text-decoration: none;
+}
+	
+	.card-hov:hover {
+    background-color: var(--mgrey);
+    cursor: pointer;
+}
+.card-hov:focus-within {
+	background-color: var(--mgrey);
+	border: 2px solid var(--link);
+}
+.card-hov a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+	.card-hov {
+    transition: 0.3s ease;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.card-white {
+    width: 100%;
+    max-width: 30em;
+    transition: 0.3s ease;
+    margin: 0;
+    max-width: 40em;
+}
+.card-white > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card-white :last-child {
+    margin-bottom: 0;
+}
+.card-white > * {
+    margin-left: 0;
+}
+.card-white:hover {
+    background-color: var(--lgrey);
+    cursor: pointer;
+}
+.card-white:focus-within {
+background-color: var(--lgrey);
+border: 2px solid var(--link);
+}
+.card-white a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+.card-white img {
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: -1rem -1rem 1.5rem -1rem;
+    mix-blend-mode: multiply;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card-white:focus-within *:focus {
+outline: none;
+}
+	
+	
+	
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin-left: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);	width: auto;
+}	
+
+.btn-rounded {
+    color: currentColor;
     border: 2px solid currentColor;
-    font-size: 1.25rem;
     border-radius: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     background: none;
     line-height: 1.5;
     text-align: left;
-		-webkit-appearance: none;
-    outline-offset: 2px;
-		transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
-.btn-rounded-resize:hover, .btn-rounded-resize:focus {
+.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
     cursor: pointer;
-	background-color: var(--black);
-	
+    color: var(--white);
+    background-color: var(--black);
 }
+.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+}
+.text-resize > .btn-rounded {
+    font-size: 1.25rem;
+}
+
 /*Responsive behavior: at 80em, resize button*/
 @media (max-width: 80em) {
-.btn-rounded-resize {
+.text-resize > .btn-rounded {
     font-size: 1rem;
 }
-}	
-	
-	section :last-child {margin-bottom: 0;}
-	
+}
 	
 </style>
 </head>
@@ -522,11 +652,11 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
       <div class="centered white-text">
         <h2 class="roboto">Study engineering<br>
           <span class="black-text">Make it count</span></h2>
-        <div class="text-resize"><p>Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</p>
+        <div class="text-resize white-text"><p>Study engineering at Plymouth University for hands-on learning, industry partnerships, and a clear path to employability</p>
 			
 			
 			
-			<button class="btn-rounded-resize">Apply now</button>
+			<button class="btn-rounded">Apply now</button>
 			
 			
 			
@@ -603,6 +733,66 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 	
 	
 	
+	
+<!--	staff list-->
+	  <div class="w80 p-2">
+    <h2>Meet your lecturers</h2>
+    <div class="card-container">
+      <div class="card card-hov bck-lgrey rounded-1"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile01.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Angus Fraser</strong><br>
+              Lecturer in Photography<br>
+              <span class="iconfont largetext2" aria-hidden="true">Ë</span><span class="smalltext">Programme Lead</span></p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card card-hov bck-lgrey rounded-1"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile02.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Heidi Morstang</strong><br>
+              Associate Professor in Photography</p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card card-hov bck-lgrey rounded-1"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile04.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Simon Standing</strong><br>
+              Associate Professor (Senior Lecturer) in Photography</p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card card-hov bck-lgrey rounded-1 hidden"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile03.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Jessica Lennan</strong><br>
+              Lecturer in Photography</p>
+          </div>
+        </div>
+        </a></div>
+      <div class="card card-hov bck-lgrey rounded-1 hidden"><a href="#">
+        <div class="staff-container">
+          <div class="staff-pic"><img src="images/profile06.jpg" alt=""></div>
+          <div class="staff-text">
+            <p><strong class="fake-link">Caroline Burke</strong><br>
+              Lecturer in Media Arts</p>
+          </div>
+        </div>
+        </a></div>
+    </div><p  id="showMore" class="mt-1"><a href="#">Show all lecturers</a></p>
+    
+  </div>
+	
+	
+	
+	
+	
+	
 	<div class="bck-highlight-medium">
     <section id="structure" class="w80 p-2">
       <h1>Structure</h1>
@@ -610,6 +800,97 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
       <p>Pellentesque convallis, risus nec dignissim lacinia, urna erat malesuada justo, sit amet lacinia eros magna id orci. Fusce feugiat ante vel turpis fermentum, sed varius felis facilisis.</p>
     </section>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!--	course search-->
+	<div class="w80 p-2">
+    <h2>Course search (multiple results)</h2>
+    <div class="card-container mb-reg">
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720architecture.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">BA (Hons) Architecture</h3>
+        <table>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
+            <td><strong>Undergraduate</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">'</span>Course type</td>
+            <td ><strong>Full time</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">&amp;</span>Duration</td>
+            <td><strong>3 years</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">,</span>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">.</span>UCAS code</td>
+            <td><strong>K100</strong></td>
+          </tr>
+        </table>
+        </a></div>
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720arthistory.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">PhD Art History</h3>
+        <table>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
+            <td><strong>Full time: 2-4 years<br>
+              Part time: 4-8 years</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">'</span>Course type</td>
+            <td ><strong>Full-time, Part-time route available</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">,</span>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+        </table>
+        </a></div>
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720art.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">BA (Hons) Art History</h3>
+        <table>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">b</span>Study level</td>
+            <td><strong>Undergraduate</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">'</span>Course type</td>
+            <td ><strong>Full time</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">&amp;</span>Duration</td>
+            <td><strong>3 years (+ optional placement)</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">,</span>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+          <tr>
+            <td><span class="iconfont" aria-hidden="true">.</span>UCAS code</td>
+            <td><strong>V350</strong></td>
+          </tr>
+        </table>
+        </a></div>
+    </div><p><a href="#">See more engineering courses</a></p>
+  </div>
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -852,6 +1133,20 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.counter').forEach(counter => {
     observer.observe(counter);
   });
+	
+	
+	
+	// Staff list
+	document.getElementById('showMore').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+    const hiddenCards = document.querySelectorAll('.card.hidden');
+    hiddenCards.forEach(card => {
+      card.classList.remove('hidden'); // Remove 'hidden' class to make them visible
+    });
+    this.style.display = 'none'; // Hide the "Show more" link after click
+  });
+	
+	
 </script>
 </body>
 </html>
