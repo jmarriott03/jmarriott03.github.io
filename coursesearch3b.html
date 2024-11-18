@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #d3e9f1;
+--highlight-medium: #7fbfd7;
+--highlight-dark: #29718c;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-medium {
+    background-color: var(--highlight-medium);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin-left: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+td {
+    padding: 0.5em 0;
+    text-align: left;
+    border-bottom: 1px solid var(--black);/*	width: auto;*/
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+    gap: 1em;
+}
+.card-white {
+    width: 100%;
+    max-width: 30em;
+    transition: 0.3s ease;
+    margin: 0;
+    max-width: 40em;
+}
+.card-white > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card-white :last-child {
+    margin-bottom: 0;
+}
+.card-white > * {
+    margin-left: 0;
+}
+.card-white:hover {
+    background-color: var(--lgrey);
+    cursor: pointer;
+}
+.card-white:focus-within {
+background-color: var(--lgrey);
+border: 2px solid var(--link);
+}
+.card-white a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+.card-white img {
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: -1rem -1rem 1.5rem -1rem;
+    mix-blend-mode: multiply;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card-white:focus-within *:focus {
+outline: none;
+}
+.card-lgrey {
+    background-color: var(--lgrey);
+    width: 100%;
+    max-width: 30em;
+    transition: 0.3s ease;
+    margin: 0;
+    max-width: 40em;
+}
+.card-lgrey > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card-lgrey :last-child {
+    margin-bottom: 0;
+}
+.card-lgrey > * {
+    margin-left: 0;
+}
+.card-lgrey:hover {
+    background-color: var(--mgrey);
+    cursor: pointer;
+}
+.card-lgrey:focus-within {
+background-color: var(--mgrey);
+border: 2px solid var(--link);
+}
+.card-lgrey a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+.card-lgrey:focus-within *:focus {
+outline: none;
+}
+.blue-link {
+    color: var(--link);
+    text-decoration: underline;
+}
+.black-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.white-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80">
+    <h2 class="px-2 pt-2 m-0">Course search (single result)</h2>
+    <div class="card-container p-2">
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720architecture.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">BA (Hons) Architecture</h3>
+        <table>
+          <tr>
+            <td>Study level</td>
+            <td><strong>Undergraduate</strong></td>
+          </tr>
+          <tr>
+            <td>Course type</td>
+            <td ><strong>Full time</strong></td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td><strong>3 years</strong></td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+          <tr>
+            <td>UCAS code</td>
+            <td><strong>K100</strong></td>
+          </tr>
+        </table>
+        </a></div>
+    </div>
+  </div>
+  <div class="w-80">
+    <h2 class="px-2 m-0">Course search (multiple results)</h2>
+    <div class="card-container p-2">
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720architecture.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">BA (Hons) Architecture</h3>
+        <table>
+          <tr>
+            <td>Study level</td>
+            <td><strong>Undergraduate</strong></td>
+          </tr>
+          <tr>
+            <td>Course type</td>
+            <td ><strong>Full time</strong></td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td><strong>3 years</strong></td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+          <tr>
+            <td>UCAS code</td>
+            <td><strong>K100</strong></td>
+          </tr>
+        </table>
+        </a></div>
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720arthistory.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">PhD Art History</h3>
+        <table>
+          <tr>
+            <td>Study level</td>
+            <td><strong>Full time: 2-4 years<br>
+              Part time: 4-8 years</strong></td>
+          </tr>
+          <tr>
+            <td>Course type</td>
+            <td ><strong>Full-time, Part-time route available</strong></td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+        </table>
+        </a></div>
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720art.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">BA (Hons) Art History</h3>
+        <table>
+          <tr>
+            <td>Study level</td>
+            <td><strong>Undergraduate</strong></td>
+          </tr>
+          <tr>
+            <td>Course type</td>
+            <td ><strong>Full time</strong></td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td><strong>3 years (+ optional placement)</strong></td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+          <tr>
+            <td>UCAS code</td>
+            <td><strong>V350</strong></td>
+          </tr>
+        </table>
+        </a></div>
+      <div class="card-white rounded-1 p-1 stroke shadow"><a href="#"><img src="images/1280x720student2.jpg" width="1280" height="720" alt="">
+        <h3 class="blue-link">PhD Performing Arts</h3>
+        <table>
+          <tr>
+            <td>Course type</td>
+            <td ><strong>Full-time, Part-time route available</strong></td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td><strong>Full time: 2-4 years<br>
+              Part time: 4-8 years</strong></td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td><strong>Plymouth</strong></td>
+          </tr>
+        </table>
+        </a></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
