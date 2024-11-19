@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
   margin: 0 0 1.5rem 0;
 }
-p {
+p, ul, ol {
   text-wrap: pretty;
   max-width: 75ch;
   margin: 0 0 1.5rem 0;
@@ -262,6 +262,9 @@ li {
 .text-resize h2 {
   font-size: 2.5rem;
 }
+.text-resize h3 {
+  font-size: 1.5rem;
+}
 .text-resize p {
   font-size: 1.25rem;
 }
@@ -432,11 +435,14 @@ details[open] > summary::before {
     padding: 2rem;
   }
   .text-resize h1 {
-    font-size: 2.5rem;
-  }
-  .text-resize h2 {
     font-size: 2rem;
   }
+  .text-resize h2 {
+    font-size: 1.5rem;
+  }
+	.text-resize h3 {
+	font-size: 1.17em;
+	}
   .text-resize p {
     font-size: 1rem;
   }
