@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #d3e9f1;
+--highlight-medium: #7fbfd7;
+--highlight-dark: #29718c;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-medium {
+    background-color: var(--highlight-medium);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.column-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;
+    border: 1px dotted red;
+}
+.column-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;
+    border: 1px dotted red;
+}
+.column-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;
+    border: 1px dotted red;
+}
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;
+    border: 1px dotted red;
+}
+.container-80 {
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;
+    border: 1px dotted red;
+}
+.container-80 :last-child {
+    margin-bottom: 0;
+}
+.container-60 {
+    max-width: 60rem;
+    padding: 0 2rem 1.5rem 2rem;
+    border: 1px dotted red;
+}
+.container-60 :last-child {
+    margin-bottom: 0;
+}
+.card {
+    width: 100%;
+    transition: 0.3s ease;
+    margin: 0;/*    max-width: 40em;*/
+}
+.card > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.card:hover {
+    background-color: var(--lgrey);
+    cursor: pointer;
+}
+.card:focus-within {
+background-color: var(--lgrey);
+border: 2px solid var(--link);
+}
+.card a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card:focus-within *:focus {
+outline: none;
+}
+.blue-link {
+    color: var(--link);
+    text-decoration: underline;
+}
+.black-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.white-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="column-5">
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p class="blue-link">content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+  </div>
+  <div class="column-4">
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p class="blue-link">content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+  </div>
+  <div class="column-3">
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p class="blue-link">content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+  </div>
+  <div class="column-2">
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p class="blue-link">content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+    <div class="card rounded-1 p-1 stroke columns-4"><a href="#">
+      <h3>Heading</h3>
+      <p>content</p>
+      </a></div>
+  </div>
+  <div class="container-80">
+    <h3>One column container</h3>
+    <p><a href="#">Container</a></p>
+  </div>
+  <div class="container-60">
+    <h3>One column container</h3>
+    <p><a href="#">Container</a></p>
+  </div>
+</main>
+</body>
+</html>
