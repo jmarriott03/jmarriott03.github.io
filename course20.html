@@ -324,6 +324,7 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
       position: sticky;
       top: 0;
       z-index: 1000;
+		
     }
 
     nav ul {
@@ -331,10 +332,11 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
       display: flex;
       justify-content: left;
       flex-wrap: wrap;
+		
     }
 
     nav ul li {
-      margin: 1rem;
+      margin: 0 1rem 0 -1rem;
     }
 
     nav ul li a {
@@ -380,7 +382,7 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 	
 	
 	      /* Media Query for screen width less than 768px */
-    @media screen and (max-width: 55rem) {
+    @media screen and (max-width: 78rem) {
       .sticky {
 /*        position: relative;  Remove sticky position */
 		  display: none;
@@ -839,12 +841,38 @@ orphans: 2;
 	
 	
 	
+	
+	
+	
+	
+	
+	.btn2 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+/*  margin: 0 1rem 1rem 0;*/
+  text-decoration: none;
+  cursor: default;
+  display: block;
+  border: none;
+/*  float: left;*/
+  -webkit-appearance: none;
+  outline-offset: 2px;
+  transition: 0.3s;
+		margin: 0.5rem;
+}
+	
+	
+
+	
 </style>
 </head>
 <body>
-<div class="container w80 dotted">
-  <div class="logo dotted m-0"> <img src="images/uoplogo.svg" alt=""></div>
-  <div class="links dotted m-0">
+<div class="container w80">
+  <div class="logo m-0"> <img src="images/uoplogo.svg" alt=""></div>
+  <div class="links m-0">
     <button class="button" id="btn1" onclick="toggleContent(1)"><span class="iconfont largetext circle">B</span>Search<span class="caret iconfont">N</span></button>
     <button class="button" id="btn2" onclick="toggleContent(2)"><span class="iconfont largetext circle">C</span>Menu<span class="caret iconfont">N</span></button>
     <button class="button" id="btn3" onclick="toggleContent(3)"><span class="iconfont largetext circle">A</span>Log in<span class="caret iconfont">N</span></button>
@@ -923,16 +951,21 @@ orphans: 2;
 <div id="content3" class="content">
   <div class="div7"> 
     <!--    <h2>Log in</h2>-->
-    <div class="login-container">
-      <div class="login-student divider-black">
+    <div class="login-container pb-reg">
+      <div class="login-student divider-black m-0">
         <button class="button" id="btn4"><span class="iconfont largetext circle">A</span>Student</button>
       </div>
-      <div class="login-staff">
+      <div class="login-staff m-0">
         <button class="button" id="btn5"><span class="iconfont largetext circle">A</span>Staff</button>
       </div>
     </div>
   </div>
 </div>
+	
+	
+	
+<!--
+	Breadcrumb
 <div class="bck-lgrey">
   <div class="w80 p-2">
 	  
@@ -940,6 +973,7 @@ orphans: 2;
 	</div>
 </div>
 	
+-->
 	
 
 	
@@ -947,7 +981,6 @@ orphans: 2;
 	
 	
 	<section>
-<div class="mb-reg">
   <div class="hero-2col layout-33-67 bck-highlight-dark">
     <div class="left-column p-2">
       <div class="centered white-text">
@@ -966,7 +999,6 @@ orphans: 2;
     </div>
     <div class="right-column"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
   </div>
-</div>
 	
 	</section>
 	
@@ -1005,12 +1037,9 @@ orphans: 2;
   </div>
 	
 	
-	
-	
-	
-		<div class="sticky dotted">
+<!--
+			<div class="sticky dotted">
 	 <nav class="mrfrosty">
-
     <ul class="m-0 w80">
       <li><a href="#introduction">Introduction</a></li>
       <li><a href="#structure">Structure</a></li>
@@ -1021,12 +1050,57 @@ orphans: 2;
       <li><a href="#entry">Entry</a></li>
     </ul>
   </nav>
+	</div>
+-->
 	
+	
+<!--
+		<div class="sticky dotted">
+	 <nav class="mrfrosty">
+    <ul class="m-0 w80 dotted">
+      <li class="dotted"><a href="#overview">Overview</a></li>
+      <li><a href="#structure">Structure</a></li>
+<li><a href="#teaching">Teaching</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#entry">Entry</a></li>
+		 <li class="dotted"><button class="btn2 btn-primary">Register for open day</button></li>
+		  <li><button class="btn2 btn-danger">Apply at UCAS.com</button></li>
+    </ul>
+  </nav>
+	</div>
+-->
+	
+	
+	
+			<div class="sticky">
+	 <nav class="mrfrosty">
+    <ul class="m-0 w80">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#structure">Structure</a></li>
+		<li><a href="#teaching">Teaching and learning</a></li>
+      <li><a href="#careers">Career opportunities</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#entry">Entry requirements</a></li>
+		 <li><button class="btn2 btn-primary">Register for open day</button></li>
+		  <li><button class="btn2 btn-danger">Apply at UCAS.com</button></li>
+    </ul>
+  </nav>
 	</div>
 	
 	
 	
 	
+<!--
+	
+	Overview
+Structure
+Teaching and learning
+Career opportunities
+Fees, costs and funding
+Entry requirements
+	
+-->
 	
 	
 	
@@ -1069,10 +1143,12 @@ orphans: 2;
     </table>
 	  
 
+<!--
 	  <div class="mb-1 fullw">
 	  <button class="btn btn-primary">Register for open day</button>
 		  <button class="btn btn-danger">Apply at UCAS.com</button>
 	  </div>
+-->
 		  
 
 	  <p>Are you fascinated by technology and design? Primarily problem solvers, mechanical engineers design, create and use tools and methods in every industry from atomic physics to space exploration. They play a vital role in tackling problems that affect us all such as energy security; efficient manufacturing and smart cities. Our engineering students are taught by enthusiastic staff with strong industry links who use laboratory sessions and physical demonstrations to reinforce academic learning.</p>
@@ -1557,7 +1633,7 @@ Sometimes I have to take a step back to remind myself that at the other end of t
 	  
 	  
 	  
-	<div class="container-80 dotted">
+	<div class="container-80">
 		<div class="topstroke mb-reg"></div>
 		<h2>Learn from our experts</h2>
 	  <div class="text-2columns">
@@ -2147,6 +2223,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     this.style.display = 'none'; // Hide the "Show more" link after click
   });
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
 	
 	
 </script>
