@@ -69,7 +69,6 @@ html {
 .button {
     display: inline-flex;
     align-items: center;
-    padding: 0 0.5rem 0 0;
     margin: 0 0.5rem 0 0;
     cursor: pointer;
     color: var(--black);
@@ -77,6 +76,8 @@ html {
     transition: background-color 0.3s;
     background: none;
     font-size: 1rem;
+    border: 1px dotted red;
+    padding: 0;
 }
 .caret {
     margin-left: 0.5rem;
@@ -293,12 +294,7 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 .sticky {
     position: sticky;
     top: 0;
-    z-index: 1000;
-}
-Navigation nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    z-index: 1000;/*	padding: 1rem;*/
 }
 nav ul {
     list-style: none;
@@ -307,12 +303,13 @@ nav ul {
     flex-wrap: wrap;
 }
 nav ul li {
-    margin: 0 1rem 0 -1rem;
+    margin-bottom: 0;
+    margin-left: -2rem;
 }
 nav ul li a {
     color: var(--black);
     text-decoration: none;
-    padding: 1rem;
+    padding: 1.5rem;
     display: block;
 }
 nav ul li a:focus {
@@ -705,7 +702,7 @@ outline: none;
     -webkit-appearance: none;
     outline-offset: 2px;
     transition: 0.3s;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    margin: 1rem 0.5rem 1rem 0;
     float: left;
 }
 .text-highlight {
@@ -866,10 +863,10 @@ outline: none;
     <ul class="m-0 w80">
       <li><a href="#overview">Overview</a></li>
       <li><a href="#structure">Structure</a></li>
-      <li><a href="#teaching">Teaching and learning</a></li>
-      <li><a href="#careers">Career opportunities</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#careers">Careers</a></li>
       <li><a href="#fees">Fees</a></li>
-      <li><a href="#entry">Entry requirements</a></li>
+      <li><a href="#entry">Entry</a></li>
       <li>
         <button class="btn6 btn-primary">Register for open day</button>
       </li>
