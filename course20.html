@@ -218,6 +218,11 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
     margin: 0;
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
+    min-width: 100%;
+    ;
+}
+.footerlist li {
+    width: 100%;
 }
 .footerlist a {
     text-decoration: none;
@@ -335,12 +340,18 @@ nav ul li a.current {
 .card > * {
     margin-left: 0;
 }
+.btn-hide {
+    display: none;
+}
 
 /* Media Query for screen width less than 768px */
 @media screen and (max-width: 78rem) {
 .sticky {
     /*        position: relative;  Remove sticky position */
     display: none;
+}
+.btn-hide {
+    display: block;
 }
 }
 section :last-child {
@@ -432,20 +443,6 @@ border: 2px solid var(--link);
 .card-white:focus-within *:focus {
 outline: none;
 }
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    clear: both;
-    margin-left: 0;
-    width: 100%;
-    table-layout: fixed;
-}
-td {
-    padding: 0.5em;
-    text-align: left;
-    border-bottom: 1px solid var(--black);
-    width: auto;
-}
 .btn-rounded {
     color: currentColor;
     border: 2px solid currentColor;
@@ -486,12 +483,12 @@ td {
 .bck-highlight-dark {
     background-color: var(--highlight-dark);
 }
-/*	check in duplicate*/
 table {
     border-collapse: collapse;
     border-spacing: 0;
     padding: 2rem;
     margin: 0 0 1.5rem 0;
+    width: 100%;
 }
 td, th {
     padding: 0.5em;
@@ -532,48 +529,42 @@ div :last-child {
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
     gap: 1em;
     max-width: 80rem;
-    padding: 0 2rem 1.5rem 2rem;
-/*    border: 1px dotted red;*/
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
 .column-4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     gap: 1em;
     max-width: 80rem;
-    padding: 0 2rem 1.5rem 2rem;
-/*    border: 1px dotted red;*/
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
 .column-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
     gap: 1em;
     max-width: 80rem;
-    padding: 0 2rem 1.5rem 2rem;
-/*    border: 1px dotted red;*/
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
 .column-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
     gap: 1em;
     max-width: 80rem;
-    padding: 0 2rem 1.5rem 2rem;
-/*    border: 1px dotted red;*/
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
 .column4 > * {
     width: 100%;
 }
 .container-80 {
     max-width: 80rem;
-    padding: 0 2rem 1.5rem 2rem;
-/*    border: 1px dotted red;*/
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
 .container-80 :last-child {
     margin-bottom: 0;
 }
 .container-60 {
     max-width: 60rem;
-    padding: 0 2rem 1.5rem 2rem;
-/*    border: 1px dotted red;*/
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
 .container-60 :last-child {
     margin-bottom: 0;
@@ -701,22 +692,21 @@ outline: none;
     width: 3em;
     border-radius: 50%;
 }
-.btn2 {
+.btn6 {
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.5;
     border-radius: 0.25rem;
     padding: 0.5rem 0.75rem;
-    /*  margin: 0 1rem 1rem 0;*/
     text-decoration: none;
     cursor: default;
     display: block;
     border: none;
-    /*  float: left;*/
     -webkit-appearance: none;
     outline-offset: 2px;
     transition: 0.3s;
-    margin: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    float: left;
 }
 .text-highlight {
     color: var(--highlight-light)
@@ -881,13 +871,17 @@ outline: none;
       <li><a href="#fees">Fees</a></li>
       <li><a href="#entry">Entry requirements</a></li>
       <li>
-        <button class="btn2 btn-primary">Register for open day</button>
+        <button class="btn6 btn-primary">Register for open day</button>
       </li>
       <li>
-        <button class="btn2 btn-danger">Apply at UCAS.com</button>
+        <button class="btn6 btn-danger">Apply at UCAS.com</button>
       </li>
     </ul>
   </nav>
+</div>
+<div class="container-80 btn-hide p-2">
+  <button class="btn6 btn-primary">Register for open day</button>
+  <button class="btn6 btn-danger">Apply at UCAS.com</button>
 </div>
 <section id="overview">
   <div class="fullw bck-highlight-dark mb-reg">
@@ -906,7 +900,7 @@ outline: none;
         <table>
           <tr>
             <td>UCAS tariff</td>
-            <td> 112 - 128 <a href="#">Contextual offers</a> <span class="iconfont" aria-hidden="true">G</span></td>
+            <td> 112 - 128 <span class="nowrap"><a href="#">Contextual offers</a> <span class="iconfont" aria-hidden="true">G</span></span></td>
           </tr>
           <tr>
             <td>UCAS course code</td>
@@ -1027,86 +1021,43 @@ outline: none;
     <p><a href="#"><span class="iconfont" aria-hidden="true">U</span>BEng Mechanical Engineering Programme Specification September 2025 0138</a></p>
   </div>
 </section>
-<section id="entry">
-  <div class="container-60">
+<section id="teaching">
+  <div class="container-80">
     <div class="topstroke mb-reg"></div>
-    <h2>Entry requirements</h2>
-    <p><strong>UCAS tariff</strong></p>
-    <p>112 - 128</p>
-    <div class="rounded-1 p-1 bck-lgrey mb-reg">
-      <p><strong>Contextual offers</strong>: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer is an offer to study at university that takes into account individual circumstances that are beyond your control, and that can potentially impact your learning and your exam results, or your confidence in applying to university.</p>
-      <p><a href="#">Check your eligibility for a contextual offer</a></p>
+    <h2>Learn from our experts</h2>
+    <div class="text-2columns">
+      <p>The School of Engineering, Computing and Mathematics is a collaborative and interdisciplinary community of world-leading academics and researchers focused on creating knowledge and innovative solutions that positively impact society.</p>
+      <p>Our <a href="#">technical staff</a> are integral to the delivery of all our programmes and bring a diverse range of expertise and skills to support students in laboratories and workshops.</p>
     </div>
-    <p><strong>A level</strong>:<br>
-      Typical offer will be 112 points including Grade C at Maths and Grade C at second relevant subject: Applied ICT, Applied Science, Applied Business, Biology, Business/Business Studies, Chemistry, Computing, Computer Science, DT (Product Design Resistant Materials), DT (systems and Control Tech), DT Product Design (Textiles Tech), Economics, Economics and Business, Electronics, Engineering, Environmental Science, Design and Technology, ICT, Physics, Science, Statistics, Further Maths, Use of Maths, Pure Maths. Excluding General Studies.</p>
-    <p><strong>BTEC National Diploma/QCF Extended Diploma</strong>:<br>
-      DDD in a relevant science or engineering subject.</p>
-    <p><strong>BTEC National Diploma modules</strong><br>
-      If you hold a BTEC qualification it is vital that you provide our Admissions team with details of the exact modules you have studied as part of the BTEC. Without this information we may be unable to process your application quickly and you could experience significant delays in the progress of your application to study with us. Please explicitly state the full list of modules within your qualification at the time of application.</p>
-    <p><strong>International Baccalaureate</strong>:<br>
-      26-30 overall to include 5 at Higher Level Maths and 5 at Higher Level second relevant subject.</p>
-    <p><strong>Access to HE Diploma in a Science or Engineering</strong>:<br>
-      Pass Access in engineering to include 45 credits at level 3. Must include 33 credits including at least 12 credits at level 3 in mathematics with distinction and 12 credits at level 3 in a second relevant subject with merit. Must have GCSE English and Maths grade C/4 or above or equivalent.</p>
-    <p><strong>GCSE</strong>:<br>
-      Mathematics and English at grade C or above is required.</p>
-    <p>For other qualifications, please enquire.</p>
-    <p><a href="#">English language requirements</a></p>
-    <p>We welcome applicants with international qualifications. To view other accepted qualifications please refer to our <a href="#">tariff glossary</a>.</p>
-    <p><strong>Please note: We understand that many applicants remain anxious about meeting the exact terms of our standard conditional offers. We will look again at your application and revise our offer for those applicants who we continue to believe are a good match for our courses, once we have the certainty of your actual results in August.</strong></p>
+  </div>
+  <div class="column-3">
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile01.jpg" alt=""><span class="blue-link">Angus Fraser</span></strong><br>
+          Associate Professor in Mechanical and Medical Engineering</p>
+      </div>
+      </a> </div>
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile02.jpg" alt=""><span class="blue-link">Heidi Morstang</span></strong><br>
+          Lecturer in Control Systems Engineering</p>
+      </div>
+      </a> </div>
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile04.jpg" alt=""><span class="blue-link">Simon Standing</span></strong><br>
+          Lecturer in Mechanical Engineering</p>
+      </div>
+      </a> </div>
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile03.jpg" alt=""><span class="blue-link">Jessica Lennan</span></strong><br>
+          Associate Professor of Mechanical Engineering (Education)</p>
+      </div>
+      </a> </div>
   </div>
 </section>
-<section id="fees">
-  <div class="container-60">
-    <div class="topstroke mb-reg"></div>
-    <h2>Fees, costs and funding</h2>
-    <table>
-      <tr>
-        <th><strong>Student</strong></th>
-        <th><strong>2024-2025</strong></th>
-        <th><strong>2025-2026 *</strong></th>
-      </tr>
-      <tr>
-        <td><strong>Home</strong></td>
-        <td>£9,250</td>
-        <td>£9,250</td>
-      </tr>
-      <tr>
-        <td><strong>International</strong></td>
-        <td>£18,100</td>
-        <td>£18,650</td>
-      </tr>
-      <tr>
-        <td><strong>Part time (Home)</strong></td>
-        <td>£770</td>
-        <td>£770</td>
-      </tr>
-    </table>
-    <p>Full time fees shown are per annum. Part time fees shown are per 10 credits. Please note that fees are reviewed on an annual basis. Fees and the conditions that apply to them shown in the prospectus are correct at the time of going to print. Fees shown on the web are the most up to date but are still subject to change in exceptional circumstances. More information about fees and funding.</p>
-    <p><strong>* UK Government announcement on tuition fees</strong></p>
-    <p>On Monday 4 November 2024 the UK Government announced a proposal to increase tuition fees for home undergraduate students from £9,250 to £9,535 per annum from September 2025 onwards. The University of Plymouth intends to apply this new fee from September 2025. However, implementation of this increase will be subject to Parliamentary procedure. The University will give further details to both prospective and current students as soon as more information becomes available.</p>
-    <h2>Undergraduate scholarships for international students</h2>
-    <div class="p-1 left-stroke mb-reg">
-      <p>To reward outstanding achievement the University of Plymouth offers scholarship schemes to help towards funding your studies.</p>
-    </div>
-    <p><a href="#">Find out whether you are eligible and how you can apply</a></p>
-    <h2>Additional costs</h2>
-    <p>This course is delivered by the <a href="#">Faculty of Science and Engineering</a> and more details of any additional costs associated with the faculty's courses are listed on the following page: <a href="#">Additional fieldwork and equipment costs</a>.</p>
-    <h2>Tuition fees for optional placement years</h2>
-    <p><strong>The fee for all undergraduate students completing any part of their placement year in the UK in 2024/2025 is £1,850.</strong></p>
-    <p><strong>The fee for all undergraduate students completing their whole placement year outside the UK in 2024/2025 is £1,385.</strong></p>
-    <p><a href="#">Learn more about placement year tuition fees</a></p>
-  </div>
-</section>
-<div class="container-60">
-  <div class="topstroke mb-reg"></div>
-  <h2>How to apply</h2>
-  <p>All applications for undergraduate courses are made through <strong>UCAS</strong> (Universities and Colleges Admissions Service).</p>
-  <p>UCAS will ask for the information contained in the box at the top of this course page including the UCAS course code and the institution code.</p>
-  <p>To apply for this course and for more information about submitting an application including application deadline dates, please visit the <a href="#">UCAS website</a>.</p>
-  <p>Support is also available to overseas students applying to the University from our International Office via 
-    our <a href="#">how to apply webpage</a> or email <a href="#">admissions@plymouth.ac.uk</a>.</p>
-</div>
-<section id="careers">
+<section id="careers" class="mb-reg">
   <div class="container-60">
     <div class="topstroke mb-reg"></div>
     <h2>Progression routes</h2>
@@ -1122,7 +1073,6 @@ outline: none;
       <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">%</span>Prospectus</button>
     </div>
   </div>
-  <div class="topstroke mb-reg"></div>
   <div class="hero-2col bck-highlight-dark mb-reg">
     <div class="left-column p-2">
       <div class="centered white-text">
@@ -1182,7 +1132,7 @@ outline: none;
       <p>Our relationship with a range of industries, and our local Industry Advisory Group ensure our courses are relevant to industry needs.</p>
     </div>
   </div>
-  <div class="hero-2col bck-highlight-dark mb-reg">
+  <div class="hero-2col bck-highlight-dark">
     <div class="left-column p-2">
       <div class="centered white-text">
         <div class="quotestyle"></div>
@@ -1197,6 +1147,85 @@ outline: none;
     <div class="right-column"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
   </div>
 </section>
+<section id="fees">
+  <div class="container-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>Fees, costs and funding</h2>
+    <table>
+      <tr>
+        <th><strong>Student</strong></th>
+        <th><strong>2024-2025</strong></th>
+        <th><strong>2025-2026 *</strong></th>
+      </tr>
+      <tr>
+        <td><strong>Home</strong></td>
+        <td>£9,250</td>
+        <td>£9,250</td>
+      </tr>
+      <tr>
+        <td><strong>International</strong></td>
+        <td>£18,100</td>
+        <td>£18,650</td>
+      </tr>
+      <tr>
+        <td><strong>Part time (Home)</strong></td>
+        <td>£770</td>
+        <td>£770</td>
+      </tr>
+    </table>
+    <p>Full time fees shown are per annum. Part time fees shown are per 10 credits. Please note that fees are reviewed on an annual basis. Fees and the conditions that apply to them shown in the prospectus are correct at the time of going to print. Fees shown on the web are the most up to date but are still subject to change in exceptional circumstances. More information about fees and funding.</p>
+    <p><strong>* UK Government announcement on tuition fees</strong></p>
+    <p>On Monday 4 November 2024 the UK Government announced a proposal to increase tuition fees for home undergraduate students from £9,250 to £9,535 per annum from September 2025 onwards. The University of Plymouth intends to apply this new fee from September 2025. However, implementation of this increase will be subject to Parliamentary procedure. The University will give further details to both prospective and current students as soon as more information becomes available.</p>
+    <h2>Undergraduate scholarships for international students</h2>
+    <div class="p-1 left-stroke mb-reg">
+      <p>To reward outstanding achievement the University of Plymouth offers scholarship schemes to help towards funding your studies.</p>
+    </div>
+    <p><a href="#">Find out whether you are eligible and how you can apply</a></p>
+    <h2>Additional costs</h2>
+    <p>This course is delivered by the <a href="#">Faculty of Science and Engineering</a> and more details of any additional costs associated with the faculty's courses are listed on the following page: <a href="#">Additional fieldwork and equipment costs</a>.</p>
+    <h2>Tuition fees for optional placement years</h2>
+    <p><strong>The fee for all undergraduate students completing any part of their placement year in the UK in 2024/2025 is £1,850.</strong></p>
+    <p><strong>The fee for all undergraduate students completing their whole placement year outside the UK in 2024/2025 is £1,385.</strong></p>
+    <p><a href="#">Learn more about placement year tuition fees</a></p>
+  </div>
+</section>
+<section id="entry">
+  <div class="container-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>Entry requirements</h2>
+    <p><strong>UCAS tariff</strong></p>
+    <p>112 - 128</p>
+    <div class="rounded-1 p-1 bck-lgrey mb-reg">
+      <p><strong>Contextual offers</strong>: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer is an offer to study at university that takes into account individual circumstances that are beyond your control, and that can potentially impact your learning and your exam results, or your confidence in applying to university.</p>
+      <p><a href="#">Check your eligibility for a contextual offer</a></p>
+    </div>
+    <p><strong>A level</strong>:<br>
+      Typical offer will be 112 points including Grade C at Maths and Grade C at second relevant subject: Applied ICT, Applied Science, Applied Business, Biology, Business/Business Studies, Chemistry, Computing, Computer Science, DT (Product Design Resistant Materials), DT (systems and Control Tech), DT Product Design (Textiles Tech), Economics, Economics and Business, Electronics, Engineering, Environmental Science, Design and Technology, ICT, Physics, Science, Statistics, Further Maths, Use of Maths, Pure Maths. Excluding General Studies.</p>
+    <p><strong>BTEC National Diploma/QCF Extended Diploma</strong>:<br>
+      DDD in a relevant science or engineering subject.</p>
+    <p><strong>BTEC National Diploma modules</strong><br>
+      If you hold a BTEC qualification it is vital that you provide our Admissions team with details of the exact modules you have studied as part of the BTEC. Without this information we may be unable to process your application quickly and you could experience significant delays in the progress of your application to study with us. Please explicitly state the full list of modules within your qualification at the time of application.</p>
+    <p><strong>International Baccalaureate</strong>:<br>
+      26-30 overall to include 5 at Higher Level Maths and 5 at Higher Level second relevant subject.</p>
+    <p><strong>Access to HE Diploma in a Science or Engineering</strong>:<br>
+      Pass Access in engineering to include 45 credits at level 3. Must include 33 credits including at least 12 credits at level 3 in mathematics with distinction and 12 credits at level 3 in a second relevant subject with merit. Must have GCSE English and Maths grade C/4 or above or equivalent.</p>
+    <p><strong>GCSE</strong>:<br>
+      Mathematics and English at grade C or above is required.</p>
+    <p>For other qualifications, please enquire.</p>
+    <p><a href="#">English language requirements</a></p>
+    <p>We welcome applicants with international qualifications. To view other accepted qualifications please refer to our <a href="#">tariff glossary</a>.</p>
+    <p><strong>Please note: We understand that many applicants remain anxious about meeting the exact terms of our standard conditional offers. We will look again at your application and revise our offer for those applicants who we continue to believe are a good match for our courses, once we have the certainty of your actual results in August.</strong></p>
+  </div>
+</section>
+<div class="container-60">
+  <div class="topstroke mb-reg"></div>
+  <h2>How to apply</h2>
+  <p>All applications for undergraduate courses are made through <strong>UCAS</strong> (Universities and Colleges Admissions Service).</p>
+  <p>UCAS will ask for the information contained in the box at the top of this course page including the UCAS course code and the institution code.</p>
+  <p>To apply for this course and for more information about submitting an application including application deadline dates, please visit the <a href="#">UCAS website</a>.</p>
+  <p>Support is also available to overseas students applying to the University from our International Office via 
+    our <a href="#">how to apply webpage</a> or email <a href="#">admissions@plymouth.ac.uk</a>.</p>
+</div>
 <div class="hero-2col bck-highlight-light mb-reg">
   <div class="left-column"> <img src="images/engineering/720x405engineering1.jpg" width="720" height="405" alt=""> </div>
   <div class="right-column p-2">
@@ -1211,42 +1240,6 @@ outline: none;
     </div>
   </div>
 </div>
-<section id="teaching">
-  <div class="container-80">
-    <div class="topstroke mb-reg"></div>
-    <h2>Learn from our experts</h2>
-    <div class="text-2columns">
-      <p>The School of Engineering, Computing and Mathematics is a collaborative and interdisciplinary community of world-leading academics and researchers focused on creating knowledge and innovative solutions that positively impact society.</p>
-      <p>Our <a href="#">technical staff</a> are integral to the delivery of all our programmes and bring a diverse range of expertise and skills to support students in laboratories and workshops.</p>
-    </div>
-  </div>
-  <div class="column-3">
-    <div class="card rounded-1 p-1 stroke"> <a href="#">
-      <div class="staffquote">
-        <p><strong><img src="images/profile01.jpg" alt=""><span class="blue-link">Angus Fraser</span></strong><br>
-          Associate Professor in Mechanical and Medical Engineering</p>
-      </div>
-      </a> </div>
-    <div class="card rounded-1 p-1 stroke"> <a href="#">
-      <div class="staffquote">
-        <p><strong><img src="images/profile02.jpg" alt=""><span class="blue-link">Heidi Morstang</span></strong><br>
-          Lecturer in Control Systems Engineering</p>
-      </div>
-      </a> </div>
-    <div class="card rounded-1 p-1 stroke"> <a href="#">
-      <div class="staffquote">
-        <p><strong><img src="images/profile04.jpg" alt=""><span class="blue-link">Simon Standing</span></strong><br>
-          Lecturer in Mechanical Engineering</p>
-      </div>
-      </a> </div>
-    <div class="card rounded-1 p-1 stroke"> <a href="#">
-      <div class="staffquote">
-        <p><strong><img src="images/profile03.jpg" alt=""><span class="blue-link">Jessica Lennan</span></strong><br>
-          Associate Professor of Mechanical Engineering (Education)</p>
-      </div>
-      </a> </div>
-  </div>
-</section>
 <div class="container-80">
   <div class="topstroke mb-reg"></div>
   <h2>Accreditation and accolades</h2>
@@ -1297,6 +1290,43 @@ outline: none;
 <div class="container-60">
   <div class="topstroke mb-reg"></div>
   <p>*These are the latest results from the National Student Survey. Please note that the data published on <a href="#">Discover Uni is updated annually in September. The results of the National Student Survey (NSS) and the Graduate Outcomes survey (GO</a>) are made available to prospective students and their advisors through the Unistats website.</p>
+</div>
+<div class="p-2 topstroke">
+  <div class="search-box-container pb-reg">
+    <h2>Popular links</h2>
+    <ul class="footerlist">
+      <li> <a href="/study">Courses and study</a> </li>
+      <li> <a href="/student-life">Student life</a> </li>
+      <li> <a href="/students-and-family">Students and family</a> </li>
+      <li> <a href="/international">International Plymouth</a> </li>
+      <li> <a href="/research">Research and expertise</a> </li>
+      <li> <a href="/business-partners">Business and partners</a> </li>
+      <li> <a href="/business-partners/academic-partnerships">Academic Partnerships</a> </li>
+      <li> <a href="/alumni">Alumni</a> </li>
+      <li> <a href="/about-us">About us</a> </li>
+      <li> <a href="https://www.plymouth.ac.uk/feeds/news"><span class="iconfont" aria-hidden="true">4</span>News RSS feed</a> </li>
+      <li> <a href="/whats-on"><span class="iconfont" aria-hidden="true">&amp;</span>What's on</a> </li>
+      <li> <a href="https://www.plymouth.ac.uk/help"><span class="iconfont" aria-hidden="true">G</span>Accessibility and help</a> </li>
+      <li> <a href="/about-us/university-structure/service-areas/procurement/modern-slavery-statement">Modern slavery statement</a> </li>
+    </ul>
+  </div>
+  <div class="search-box-container">
+    <h2>Contact us</h2>
+    <ul class="footerlist">
+      <li><strong>University of Plymouth</strong><br>
+        Plymouth<br>
+        Devon PL4 8AA<br>
+        United Kingdom</li>
+      <li><a href="#"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">(</span>Maps &amp; directions</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">A</span>Visit us</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">]</span>Job vacancies</a></li>
+      <li><img src="images/crest-col.svg" alt="" class="footerlogo"><img src="images/tefgold.gif" alt="" class="footerlogo ml-2"></li>
+      <li>
+        <p class="m-0"><span class="iconfont"><a href="#" class="social">f</a></span> <span class="iconfont"><a href="#" class="social">t</a></span> <span class="iconfont"><a href="#" class="social">y</a></span> <span class="iconfont"><a href="#" class="social">i</a></span> <span class="iconfont"><a href="#" class="social">p</a></span> <span class="iconfont"><a href="#" class="social">Ü</a></span> <span class="iconfont"><a href="#" class="social">l</a></span> </p>
+      </li>
+    </ul>
+  </div>
 </div>
 <script>
 function toggleContent(buttonNumber) {
