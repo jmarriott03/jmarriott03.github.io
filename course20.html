@@ -76,7 +76,6 @@ html {
     transition: background-color 0.3s;
     background: none;
     font-size: 1rem;
-    border: 1px dotted red;
     padding: 0;
 }
 .caret {
@@ -245,11 +244,11 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
     align-items: flex-start;
 }
 .links {
-    float: left;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: flex-start;
 }
 }
 .hero-2col {
@@ -276,6 +275,15 @@ a.megamenu-btn:hover, a.megamenu-btn:focus {
 }
 .right-column {
     width: var(--right-width);
+}
+.hero-zoom {
+    position: relative;
+    overflow: hidden;
+}
+.hero-zoom img {
+    /*  width: 100%;*/
+    transform: scale(1); /* Default scale */
+    transition: transform ease; /* Smooth zooming */
 }
 
 /* Responsive behavior: at 80em, both columns are 50% */
@@ -825,7 +833,7 @@ outline: none;
         <button class="btn-rounded">Apply now</button>
       </div>
     </div>
-    <div class="right-column"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
+    <div class="right-column hero-zoom"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
   </div>
 </section>
 
@@ -1054,22 +1062,22 @@ outline: none;
       </a> </div>
   </div>
 </section>
-<section id="careers" class="mb-reg">
-  <div class="container-60">
-    <div class="topstroke mb-reg"></div>
-    <h2>Progression routes</h2>
-    <h3>International progression routes</h3>
-    <p>The <a href="#">University of Plymouth International College (UPIC)</a> offers foundation, first-year and pre-masters programmes that lead to University of Plymouth degrees. Courses are specially designed for EU and international students who are missing the grades for direct entry to the University, and include full duration visa sponsorship. You can start in January, May or September, benefitting from small class sizes, top-quality tuition and 24/7 student support.</p>
-    <p><a href="#">Foundation in Engineering &amp; Robotics</a></p>
-    <p>Find out more at <a href="#">plymouth.ac.uk/upic</a> or contact our team at <a href="#">info@upic.plymouth.ac.uk</a></p>
-    <div class="topstroke mb-reg"></div>
-    <div class="mb-1 fullw">
-      <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">T</span>Apply now</button>
-      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Admissions enquiry</button>
-      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">&amp;</span>Visit an open day</button>
-      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">%</span>Prospectus</button>
-    </div>
+<div class="container-60">
+  <div class="topstroke mb-reg"></div>
+  <h2>Progression routes</h2>
+  <h3>International progression routes</h3>
+  <p>The <a href="#">University of Plymouth International College (UPIC)</a> offers foundation, first-year and pre-masters programmes that lead to University of Plymouth degrees. Courses are specially designed for EU and international students who are missing the grades for direct entry to the University, and include full duration visa sponsorship. You can start in January, May or September, benefitting from small class sizes, top-quality tuition and 24/7 student support.</p>
+  <p><a href="#">Foundation in Engineering &amp; Robotics</a></p>
+  <p>Find out more at <a href="#">plymouth.ac.uk/upic</a> or contact our team at <a href="#">info@upic.plymouth.ac.uk</a></p>
+  <div class="topstroke mb-reg"></div>
+  <div class="mb-1 fullw">
+    <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">T</span>Apply now</button>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Admissions enquiry</button>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">&amp;</span>Visit an open day</button>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">%</span>Prospectus</button>
   </div>
+</div>
+<section id="careers" class="mb-reg">
   <div class="hero-2col bck-highlight-dark mb-reg">
     <div class="left-column p-2">
       <div class="centered white-text">
@@ -1487,7 +1495,36 @@ document.addEventListener("DOMContentLoaded", function () {
 //    this.style.display = 'none'; // Hide the "Show more" link after click
 //  });
 //	
+
 	
+	
+document.addEventListener("scroll", () => {
+  const heroImages = document.querySelectorAll('.hero-zoom img');
+  
+  heroImages.forEach(image => {
+    const rect = image.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // Ensure zooming starts only when the image reaches the top of the viewport
+    if (rect.top <= 0 && rect.bottom >= 0) {
+      // Calculate the scroll progress
+      const scrollPercent = Math.min(1, Math.abs(rect.top) / rect.height);
+      
+      // Use scrollPercent to determine zoom (adjust scale range as needed)
+      const minScale = 1; // No zoom
+      const maxScale = 1.5; // Maximum zoom
+      const scale = minScale + scrollPercent * (maxScale - minScale);
+      
+      // Apply scaling to the image
+      image.style.transform = `scale(${scale})`;
+    } else {
+      // Reset scale if the image is not at the top of the viewport
+      image.style.transform = 'scale(1)';
+    }
+  });
+});
+
+
 </script>
 </body>
 </html>
