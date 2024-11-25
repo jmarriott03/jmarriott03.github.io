@@ -1,0 +1,1493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@900&display=swap" rel="stylesheet">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #f06;
+--highlight-light: #c5daed;
+--highlight-medium: #5391ca;
+--highlight-dark: #1b5283;
+}
+html {
+    scroll-behavior: smooth;
+}
+.roboto {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4rem;
+    line-height: 0.875;
+    text-transform: uppercase;
+}
+
+@media (max-width: 45rem) {
+.roboto {
+    font-size: 3rem;
+    line-height: 0.875;
+}
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-medium {
+    background-color: var(--highlight-medium);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.w80 {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.w40 {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.logo {
+    float: left;
+    width: 15rem;
+    height: 3rem;
+}
+.links {
+    float: right;
+}
+.links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--black);
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.5rem 0 0;
+    cursor: pointer;
+    color: var(--black);
+    border: none;
+    transition: background-color 0.3s;
+    background: none;
+    font-size: 1rem;
+    border: 1px dotted red;
+    padding: 0;
+}
+.caret {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+}
+.content {
+    opacity: 0; /* Start with hidden content */
+    height: 0; /* Start with height of 0 */
+    overflow: hidden; /* Prevent overflow */
+    transition: opacity 0.3s ease, height 0.3s ease; /* Transition for opacity and height */
+    padding: 0 2rem 0 2rem;
+}
+.active {
+    opacity: 1; /* Show content */
+    height: auto; /* Fixed height when active */
+}
+.open .caret {
+    transform: rotate(90deg);
+}
+.circle {
+    background: var(--btn-primary);
+    color: var(--white);
+    border-radius: 2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    padding: 0.18rem 0 0 0.46rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Apply :hover styles only on devices that are not touch-enabled */
+@media (hover: hover) and (pointer: fine) {
+.button:hover .circle {
+    background-color: var(--btn-primary-hov);
+}
+}
+.search-box {
+    height: 3rem;
+    width: 100%;
+    border: 2px solid var(--mgrey);
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    vertical-align: top;
+}
+.search-box::placeholder {
+color: var(--dgrey);
+}
+.search-box:focus {
+    outline: none;
+    border-color: var(--black);
+}
+.search-box-container {
+    max-width: 76em;
+    margin: 0 auto;
+}
+.newcol {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(13em, 1fr) );
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1.5rem;
+    margin: 0 auto 0.5rem auto;
+    max-width: 76rem;
+    padding-top: 2px;
+}
+.newcol > * {
+    width: 100%;
+}
+.newcol a {
+    text-decoration: none;
+}
+.newcol a:hover, a:focus {
+    text-decoration: underline;
+}
+.newcol ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.newcol li:last-child {
+    margin-bottom: 1.5rem;
+}
+.newcol li {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+.megamenu-btn {
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
+    color: var(--white);
+    background-color: var(--btn-primary);
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    font-size: 1em;
+    line-height: 1.5;
+    width: 100%;
+    outline-offset: 2px;
+    transition: 0.3s;
+}
+a.megamenu-btn:hover, a.megamenu-btn:focus {
+    background-color: var(--btn-primary-hov);
+    text-decoration: none;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between the buttons */
+    margin-bottom: 2rem;
+}
+.login-container .button {
+    flex: 0 1 auto; /* Ensure buttons take up only the required width */
+}
+.divider-black {
+    border-right: 0.25rem solid var(--black);
+    padding-right: 1rem;
+}
+.social {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0 0.75rem 0 -0.75rem;
+    letter-spacing: 0;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+.footerlogo {
+    width: auto;
+    height: 6rem;
+}
+.footerlist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+    padding: 0;
+    margin: 0;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    min-width: 100%;
+    ;
+}
+.footerlist li {
+    width: 100%;
+}
+.footerlist a {
+    text-decoration: none;
+}
+.footerlist a:hover, a:focus {
+    text-decoration: underline;
+}
+.bck-highlight {
+    background-color: var(--highlight);
+}
+.highlight {
+    color: var(--highlight-light)
+}
+
+/* Media Query for screens smaller than 45rem */
+@media (max-width: 45rem) {
+.container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.links {
+    float: left;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;/*	padding: 1rem;*/
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin-bottom: 0;
+    margin-left: -2rem;
+}
+nav ul li a {
+    color: var(--black);
+    text-decoration: none;
+    padding: 1.5rem;
+    display: block;
+}
+nav ul li a:focus {
+    /*    outline: none;  Optional: removes focus outline */
+    text-decoration: none; /* Removes underline from focused link */
+}
+nav ul li a.current {
+    text-decoration: underline;
+    word-wrap: break-word;
+    text-underline-position: under;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 2px;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    gap: 1em;
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.btn-hide {
+    display: none;
+}
+
+/* Media Query for screen width less than 768px */
+@media screen and (max-width: 78rem) {
+.sticky {
+    /*        position: relative;  Remove sticky position */
+    display: none;
+}
+.btn-hide {
+    display: block;
+}
+}
+section :last-child {
+    margin-bottom: 0;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.staff-container {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-column-gap: 0.5rem;
+    padding: 1rem;
+}
+.staff-pic {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.staff-text {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.staff-pic img {
+    border-radius: 50%;
+    height: auto;
+}
+.staff-text {
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+.fake-link {
+    text-decoration: underline;
+}
+.card-hov > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card-hov:hover {
+    background-color: var(--mgrey);
+    cursor: pointer;
+}
+.card-hov:focus-within {
+background-color: var(--mgrey);
+border: 2px solid var(--link);
+}
+.card-hov a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+.card-hov {
+    transition: 0.3s ease;
+}
+.card-white {
+    width: 100%;
+    max-width: 30em;
+    transition: 0.3s ease;
+    margin: 0;
+    max-width: 40em;
+}
+.card-white > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card-white :last-child {
+    margin-bottom: 0;
+}
+.card-white > * {
+    margin-left: 0;
+}
+.card-white:hover {
+    background-color: var(--lgrey);
+    cursor: pointer;
+}
+.card-white:focus-within {
+background-color: var(--lgrey);
+border: 2px solid var(--link);
+}
+.card-white a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+.card-white img {
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: -1rem -1rem 1.5rem -1rem;
+    mix-blend-mode: multiply;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card-white:focus-within *:focus {
+outline: none;
+}
+.btn-rounded {
+    color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--black);
+}
+.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+}
+.text-resize > .btn-rounded {
+    font-size: 1.25rem;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.text-resize > .btn-rounded {
+    font-size: 1rem;
+}
+}
+/*	new code*/
+	
+	
+
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 2rem;
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+}
+td, th {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+    max-width: 75ch;
+}
+th {
+    border-bottom: 2px solid var(--black);
+    background-color: var(--lgrey);
+}
+.fullw {
+    width: 100%;
+    overflow: hidden;
+}
+.w-80 {
+    max-width: 80rem;
+    overflow: hidden;
+}
+.w-60 {
+    max-width: 60rem;
+    overflow: hidden;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.left-stroke {
+    border-left: 0.25rem solid var(--black);
+}
+.left-stroke-white {
+    border-left: 0.25rem solid var(--white);
+}
+.column-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
+}
+.column-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
+}
+.column-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
+}
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
+}
+.column4 > * {
+    width: 100%;
+}
+.container-80 {
+    max-width: 80rem;
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
+}
+.container-80 :last-child {
+    margin-bottom: 0;
+}
+.container-60 {
+    max-width: 60rem;
+    padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
+}
+.container-60 :last-child {
+    margin-bottom: 0;
+}
+.card {
+    width: 100%;
+    transition: 0.3s ease;
+    margin: 0;/*    max-width: 40em;*/
+}
+.card > * {
+    color: var(--black);
+    text-decoration: none;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.card:hover {
+    background-color: var(--lgrey);
+    cursor: pointer;
+}
+.card img {
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: -1rem -1rem 1.5rem -1rem;
+    mix-blend-mode: multiply;
+}
+.img-inset {
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: -1rem -1rem 1.5rem -1rem;
+}
+.card:focus-within {
+background-color: var(--lgrey);
+border: 2px solid var(--link);
+}
+.card a:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 5px;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card:focus-within *:focus {
+outline: none;
+}
+.blue-link {
+    color: var(--link);
+    text-decoration: underline;
+}
+.black-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.white-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.text-2columns {
+    columns: 20em 2;
+    column-gap: 2em;
+    widows: 2;
+    orphans: 2;
+}
+.staffquote {
+    padding: 0 0 0 3.5em;
+    position: relative;
+    min-height: 3em;
+}
+.staffquote :last-child {
+    margin-bottom: 0;
+}
+.staffquote img {
+    left: 1rem;
+    top: 1rem;
+    position: absolute;
+    width: 3em;
+    border-radius: 50%;
+}
+.btn6 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+    margin: 1rem 0.5rem 1rem 0;
+    float: left;
+}
+.text-highlight {
+    color: var(--highlight-light)
+}
+</style>
+</head>
+<body>
+<div class="container w80">
+  <div class="logo m-0"> <img src="images/uoplogo.svg" alt=""></div>
+  <div class="links m-0">
+    <button class="button" id="btn1" onclick="toggleContent(1)"><span class="iconfont largetext circle">B</span>Search<span class="caret iconfont">N</span></button>
+    <button class="button" id="btn2" onclick="toggleContent(2)"><span class="iconfont largetext circle">C</span>Menu<span class="caret iconfont">N</span></button>
+    <button class="button" id="btn3" onclick="toggleContent(3)"><span class="iconfont largetext circle">A</span>Log in<span class="caret iconfont">N</span></button>
+  </div>
+</div>
+<div id="content1" class="content"> 
+  <!--  <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>-->
+  <div class="w40 pb-2">
+    <input type="text" class="search-box" placeholder="Search plymouth.ac.uk">
+  </div>
+</div>
+<div id="content2" class="content"> 
+  <!--  <h2>Quick links</h2>-->
+  <div class="newcol">
+    <div>
+      <h3><a href="#">Study</a></h3>
+      <ul>
+        <li><a href="#">Undergraduate</a></li>
+        <li><a href="#">Postgraduate</a></li>
+        <li><a href="#">Postgraduate research</a></li>
+        <li><a href="#">Professional development</a></li>
+        <li><a href="#">Student life</a></li>
+        <li><a href="#">Accommodation</a></li>
+        <li><a href="#">Library services</a></li>
+        <li><a href="#">Important dates</a></li>
+        <li><a href="#" class="megamenu-btn">Register for an open day</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">Research</a></h3>
+      <ul>
+        <li><a href="#">Institutes</a></li>
+        <li><a href="#">Impact</a></li>
+        <li><a href="#">Postgraduate research</a></li>
+        <li><a href="#" class="megamenu-btn">Library services</a></li>
+        <li><a href="#">Research Excellence Framework 2021</a></li>
+        <li><a href="#">Public Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">International</a></h3>
+      <ul>
+        <li><a href="#">Application advice</a></li>
+        <li><a href="#">Exchange and free mover opportunities</a></li>
+        <li><a href="#">Country guides</a></li>
+        <li><a href="#">Advice for international students</a></li>
+        <li><a href="#">Accommodation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">Business</a></h3>
+      <ul>
+        <li><a href="#">Professional development</a></li>
+        <li><a href="#">Degree apprenticeships</a></li>
+        <li><a href="#">Knowledge Transfer Partnerships</a></li>
+        <li><a href="#">Academic partnerships</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#" class="megamenu-btn">Collaborate</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3><a href="#">About</a></h3>
+      <ul>
+        <li><a href="#">Strategy, mission and vision</a></li>
+        <li><a href="#">Governance</a></li>
+        <li><a href="#">Alumni</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Visit</a></li>
+        <li><a href="#">Working here</a></li>
+        <li><a href="#">Public arts programme</a></li>
+        <li><a href="#" class="megamenu-btn">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="content3" class="content">
+  <div class="div7"> 
+    <!--    <h2>Log in</h2>-->
+    <div class="login-container pb-reg">
+      <div class="login-student divider-black m-0">
+        <button class="button" id="btn4"><span class="iconfont largetext circle">A</span>Student</button>
+      </div>
+      <div class="login-staff m-0">
+        <button class="button" id="btn5"><span class="iconfont largetext circle">A</span>Staff</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+	Breadcrumb
+<div class="bck-lgrey">
+  <div class="w80 p-2">
+	  
+	  <p><a href="#">Home</a> &gt; <a href="#">Courses</a> &gt; <strong>BEng (Hons) Mechanical Engineering</strong></p>
+	</div>
+</div>
+	
+-->
+
+<section>
+  <div class="hero-2col layout-33-67 bck-highlight-dark">
+    <div class="left-column p-2">
+      <div class="centered white-text text-resize">
+        <h3 class="m-0 text-highlight">BEng (Hons)</h3>
+        <h1>Electrical and Electronic
+          Engineering</h1>
+        <p>Study engineering at the University of Plymouth for hands-on learning, industry partnerships, and a clear path to employability</p>
+        <button class="btn-rounded">Apply now</button>
+      </div>
+    </div>
+    <div class="right-column"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
+  </div>
+</section>
+
+<!--	stats-->
+<div class="bck-highlight-medium">
+  <div class="w80">
+    <div class="card-container p-2">
+      <div class="bck-highlight-light black-text rounded-2 p-2">
+        <div class="centered">
+          <div class="text-resize">
+            <h2><span class="counter">98</span>%</h2>
+          </div>
+          <p>of Plymouth engineering graduates are employed or in further study within six months of graduation</p>
+        </div>
+      </div>
+      <div class="bck-highlight-light black-text rounded-2 p-2">
+        <div class="centered">
+          <div class="text-resize">
+            <h2>Over <span class="counter">100</span></h2>
+          </div>
+          <p>industry collaborations ensure you gain hands-on experience through live projects, preparing you for the workforce</p>
+        </div>
+      </div>
+      <div class="bck-highlight-light black-text rounded-2 p-2">
+        <div class="centered">
+          <h3>State-of-the-Art Facilities</h3>
+          <p>Access to advanced engineering labs and the renowned Marine Station, offering cutting-edge resources for practical learning in fields like renewable energy and marine engineering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sticky">
+  <nav class="mrfrosty">
+    <ul class="m-0 w80">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#structure">Structure</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#entry">Entry</a></li>
+      <li>
+        <button class="btn6 btn-primary">Register for open day</button>
+      </li>
+      <li>
+        <button class="btn6 btn-danger">Apply at UCAS.com</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="container-80 btn-hide p-2">
+  <button class="btn6 btn-primary">Register for open day</button>
+  <button class="btn6 btn-danger">Apply at UCAS.com</button>
+</div>
+<section id="overview">
+  <div class="fullw bck-highlight-dark mb-reg">
+    <div class="hero-2col layout-67-33 bck-highlight-light black-text mb-reg w-80">
+      <div class="left-column p-2 bck-highlight-dark">
+        <div class="centered white-text">
+          <div class="largetext mb-reg">
+            <p>Are you fascinated by technology and design? Primarily problem solvers, mechanical engineers design, create and use tools and methods in every industry from atomic physics to space exploration. They play a vital role in tackling problems that affect us all such as energy security; efficient manufacturing and smart cities.</p>
+            <p>Our engineering students are taught by enthusiastic staff with strong industry links who use laboratory sessions and physical demonstrations to reinforce academic learning.</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-column p-2"> 
+        
+        <!--		<h1>BEng (Hons) Mechanical Engineering</h1>-->
+        <table>
+          <tr>
+            <td>UCAS tariff</td>
+            <td> 112 - 128 <span class="nowrap"><a href="#">Contextual offers</a> <span class="iconfont" aria-hidden="true">G</span></span></td>
+          </tr>
+          <tr>
+            <td>UCAS course code</td>
+            <td>H300</td>
+          </tr>
+          <tr>
+            <td>Institution code</td>
+            <td>P60</td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td>3 years<br>
+              (+ optional placement)</td>
+          </tr>
+          <tr>
+            <td>Course type</td>
+            <td><p>Full-time</p></td>
+          </tr>
+          <tr>
+            <td>Study location</td>
+            <td>Plymouth</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container-60">
+    <h2>Key features</h2>
+    <h3>Facilities at your fingertips</h3>
+    <p>From the start of your studies at Plymouth, you'll be in the labs and using industry equipment to apply your skills with confidence.</p>
+    <h3>Discover your passion</h3>
+    <p>Try everything to see where your passion lies. Our combined first year allows you to switch to Marine Technology or Civil Engineering in line with your career ambitions.</p>
+    <h3>Learn hands-on</h3>
+    <p>We offer the latest industry-standard software, laboratory sessions and practical classes.</p>
+    <h3>Be unique</h3>
+    <p>Stand out from the crowd with our named 'with composites' pathway - the only one in the country - which allows you to focus on the design and manufacture of specialist materials.</p>
+    <h3>Aim higher</h3>
+    <p>You may progress onto the MEng course at the end of your second year if you are doing well.</p>
+  </div>
+</section>
+<section id="structure">
+  <div class="container-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>Course details</h2>
+    <h2>Year 1</h2>
+    <p>In the first year of your mechanical engineering course, you will study alongside other engineering students to learn about the fundamental principles underpinning the subjects studied throughout the course. You will develop your mathematical skills and study engineering materiasls, structural mechanics and fluid mechanics. You will learn about generic design processes and computer-aided design, and work in a team to undertake a real-world design challenge. Laboratory sessions will form an important part of your learning.</p>
+    <h3>Core modules</h3>
+    <p><strong>BPIE115 Stage 1 Mechanical Placement Preparation</strong><br>
+      This module is aimed at students who may be undertaking an industrial placement in the third year of their programme. It is designed to assist students in their search for a placement and in their preparation for the placement itself.</p>
+    <p><strong>ENGR101 Engineering Design</strong><br>
+      This module introduces students to engineering design practice appropriate to civil, marine and mechanical engineering disciplines. Students will develop sketching and technical drawing skills and use computer-aided design (CAD) tools to create digital models of technical systems. Working in a team, students will be tasked to create sustainable solutions to real-world technical design challenges.</p>
+    <p><strong>ENGR102 Engineering Practice and Experimental Techniques</strong><br>
+      The mainly experimental basis of this module allows students to extend their engineering knowledge and practical competence using a guided, student-centred, and laboratory-based approach to develop fundamental understanding of a range of engineering topics. The module will help students acquire good study skills and competency in technical communication.</p>
+    <p><strong>ENGR103 Engineering Science</strong><br>
+      This module introduces students to the fundamental scientific principles of fluid mechanics appropriate for civil, marine and mechanical engineering applications; the fundamental concepts of thermodynamics relating to the interaction between systems and their surroundings, including both flow and non-flow processes, heat engines, and mechanisms of heat transfer; and the fundamental principles of electrical engineering.</p>
+    <p><strong>ENGR104 Engineering Mathematics</strong><br>
+      This module provides students with a number of fundamental mathematical skills, and techniques, which are essential for the analysis of engineering problems.</p>
+    <p><strong>ENGR105 Mechanics and Structures</strong><br>
+      This module introduces students to the fundamental scientific principles of engineering mechanics and structures appropriate for civil, marine and mechanical engineering applications. Deeper understanding of these scientific principles will be developed through practical applications using hand calculations and computer software tools as appropriate.</p>
+    <p><strong>ENGR106 Engineering Materials</strong><br>
+      This module introduces students to a broad range of engineering materials appropriate for civil, marine and mechanical engineering applications. The module will consider the relationship between structure, manufacture and properties, presenting practical applications wherever appropriate. Students will also be introduced to standard material test methods.</p>
+    <h2>Year 2</h2>
+    <p>The second year introduces subjects like control systems engineering and quality management while further developing your thermodynamics, fluid mechanics, mathematics and design skills. These subjects are explored in lectures, in laboratory sessions and workshops. At this point, you can opt in to the 'with composites' pathway.</p>
+    <h3>Core modules</h3>
+    <p><strong>MATS235 Materials &amp; Structural Integrity</strong><br>
+      This module introduces students to the structural assessment of a range of engineering materials. It includes both a study of the materials themselves as well as their likely failure mechanisms under load. The module will also develop the underpinning mathematical analysis required to quantify these effects in an appropriate manner.</p>
+    <p><strong>MECH233 Manufacturing Processes</strong><br>
+      This module provides students with a comprehensive introduction to manufacturing. It will cover both the fundamentals of forming, shaping, joining and traditional machining processes in relation to a range of engineering materials and the relationship between structure, manufacture and properties. It will also include hands-on workshop activities to reinforce understanding and to develop additional engineering competences.</p>
+    <p><strong>CONT222 Engineering Maths &amp; Control</strong><br>
+      This module provides engineering mathematical techniques and methods (Laplace transform and linear algebra) for the analysis of practical engineering problems and introduces classical control systems theory.</p>
+    <p><strong>MECH235 Mechanical Engineering Design &amp; Commercialisation</strong><br>
+      In this module, students develop and apply their engineering science knowledge in a practical design context. They learn to follow a structured design process to enhance creativity, logical analysis/decision making and commercial awareness. They apply this process to solve a design challenge. They also learn to use parametric calculations to optimise components/systems for specific design constraints. </p>
+    <p><strong>MECH234 Thermo-Fluids</strong><br>
+      This module will introduce student’s key concepts in thermodynamics and fluids mechanics theory (1st and 2nd laws) pertaining to mechanical engineering. It will also include an introduction to heat transfer and its application in design and performance of heat engines and other applications.</p>
+    <p><strong>MFRG209 Engineering Quality Management</strong><br>
+      This module provides the student with an understanding of the importance of Total Quality to a manufacturer, its measurement and some of the tools available to the designer/manager to ensure it is profitably achieved. It introduces the concept of the World-Class organisation, its culture and management as well as the international (ISO) management systems (quality, environment and H&amp;S) involved.</p>
+    <p><strong>BPIE215 Stage 2 Mechanical Placement Preparation</strong></p>
+    <h2>Optional placement year</h2>
+    <p>By taking the opportunity to spend an optional year in paid employment whilst still a student engineer, you will obtain recordable professional experience, build a network of industry contacts and often obtain offers of summer work, sponsorship or employment on graduation. Our placements team will support you in finding a placement, and we have an extensive network of employers across all sectors.</p>
+    <p><strong>Optional modules BPIE335 Engineering Related Placement</strong></p>
+    <h2>Final year</h2>
+    <p>In your final year, you will deepen your understanding of computer aided engineering tools and control systems. You will also focus your specialism choosing to further your understanding of thermofluids and design methodology or choosing to study the theoretical and practical aspects of composites engineering on the 'with composites' pathway. Your dissertation project enables you to research the topics that interest you and will allow you to bring together all you have learnt so far.</p>
+    <p><strong>Pure mechanical engineering pathway</strong></p>
+    <h3>Core modules</h3>
+    <p><strong>PRME307 ME Honours Project</strong><br>
+      In this module students will carry out Independent project work closely aligned to their programme of study. This will be carried out under the guidance of an appointed supervisor.</p>
+    <p><strong>MECH341 Computer Aided Engineering (FEA/CFD)</strong><br>
+      In this module, students learn to use two of the Computer Aided Engineering methods that are most commonly used in industry; finite volume Computational Fluid Dynamics (to solve fluid flow problems) and Finite Element Analysis (to solve structural problems). Students gain an overview of the theory that underpins these methods, and learn how to use a validation process to assess reliability of simulation results.</p>
+    <p><strong>CONT317 Control and Intelligent Systems Design</strong><br>
+      This module explores the application of control engineering and artificial intelligence techniques in the design of engineering control systems.</p>
+    <p><strong>THER307 Thermo-Fluid Engineering</strong><br>
+      This module provides further studies in thermal and fluid engineering relating to specific topics relevant to mechanical engineering.</p>
+    <p><strong>MECH342 Mechanical Engineering Design in Practice</strong><br>
+      This module further develops a methodical approach to engineering design. Students will create solutions to a complex engineering problem, embodiment designs using CAD tools, validate functionality, optimise technical performance and consider design for excellence targets across the product lifecycle. The module also considers the professional responsibilities of engineers, codes of conduct and typical ethical issues.</p>
+    <p><strong>Mechanical engineering with composites pathway</strong></p>
+    <h3>Core modules</h3>
+    <p><strong>PRME307 MEC Honours Project</strong><br>
+      In this module students will carry out Independent project work closely aligned to their programme of study. This will be carried out under the guidance of an appointed supervisor.</p>
+    <p><strong>MECH341 Computer Aided Engineering (FEA/CFD)</strong><br>
+      In this module, students learn to use two of the Computer Aided Engineering methods that are most commonly used in industry; finite volume Computational Fluid Dynamics (to solve fluid flow problems) and Finite Element Analysis (to solve structural problems). Students gain an overview of the theory that underpins these methods, and learn how to use a validation process to assess reliability of simulation results.</p>
+    <p><strong>CONT317 Control and Intelligent Systems Design</strong><br>
+      This module explores the application of control engineering and artificial intelligence techniques in the design of engineering control systems.</p>
+    <p><strong>MATS347 Composites Design and Manufacture</strong><br>
+      The module provides an integrated approach to design, materials and processing selection for engineering composite materials.</p>
+    <p><strong>MATS348 Composites Engineering</strong><br>
+      This module introduces stress analysis and appropriate numerical methods in the context of composite materials and integrates the learning in a practical assignment to produce a prototype composite component.</p>
+    <div class="rounded-1 p-1 bck-lgrey mb-reg">
+      <h3>Course-specific academic regulations</h3>
+      <p>This course has unique rules relating to:</p>
+      <ul>
+        <li>Passing a module</li>
+      </ul>
+      <p><a href="#">View the full regulations for this course</a></p>
+    </div>
+    <p>The modules shown for this course are those currently being studied by our students, or are proposed new modules. Please note that programme structures and individual modules are subject to amendment from time to time as part of the University’s curriculum enrichment programme and in line with changes in the University’s policies and requirements.</p>
+    <p>Every undergraduate taught course has a detailed programme specification document describing the course aims, the course structure, the teaching and learning methods, the learning outcomes and the rules of assessment.</p>
+    <p>The following programme specification represents the latest course structure and may be subject to change:</p>
+    <p><a href="#"><span class="iconfont" aria-hidden="true">U</span>BEng Mechanical Engineering Programme Specification September 2025 0138</a></p>
+  </div>
+</section>
+<section id="teaching">
+  <div class="container-80">
+    <div class="topstroke mb-reg"></div>
+    <h2>Learn from our experts</h2>
+    <div class="text-2columns">
+      <p>The School of Engineering, Computing and Mathematics is a collaborative and interdisciplinary community of world-leading academics and researchers focused on creating knowledge and innovative solutions that positively impact society.</p>
+      <p>Our <a href="#">technical staff</a> are integral to the delivery of all our programmes and bring a diverse range of expertise and skills to support students in laboratories and workshops.</p>
+    </div>
+  </div>
+  <div class="column-3">
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile01.jpg" alt=""><span class="blue-link">Angus Fraser</span></strong><br>
+          Associate Professor in Mechanical and Medical Engineering</p>
+      </div>
+      </a> </div>
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile02.jpg" alt=""><span class="blue-link">Heidi Morstang</span></strong><br>
+          Lecturer in Control Systems Engineering</p>
+      </div>
+      </a> </div>
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile04.jpg" alt=""><span class="blue-link">Simon Standing</span></strong><br>
+          Lecturer in Mechanical Engineering</p>
+      </div>
+      </a> </div>
+    <div class="card rounded-1 p-1 stroke"> <a href="#">
+      <div class="staffquote">
+        <p><strong><img src="images/profile03.jpg" alt=""><span class="blue-link">Jessica Lennan</span></strong><br>
+          Associate Professor of Mechanical Engineering (Education)</p>
+      </div>
+      </a> </div>
+  </div>
+</section>
+<section id="careers" class="mb-reg">
+  <div class="container-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>Progression routes</h2>
+    <h3>International progression routes</h3>
+    <p>The <a href="#">University of Plymouth International College (UPIC)</a> offers foundation, first-year and pre-masters programmes that lead to University of Plymouth degrees. Courses are specially designed for EU and international students who are missing the grades for direct entry to the University, and include full duration visa sponsorship. You can start in January, May or September, benefitting from small class sizes, top-quality tuition and 24/7 student support.</p>
+    <p><a href="#">Foundation in Engineering &amp; Robotics</a></p>
+    <p>Find out more at <a href="#">plymouth.ac.uk/upic</a> or contact our team at <a href="#">info@upic.plymouth.ac.uk</a></p>
+    <div class="topstroke mb-reg"></div>
+    <div class="mb-1 fullw">
+      <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">T</span>Apply now</button>
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Admissions enquiry</button>
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">&amp;</span>Visit an open day</button>
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">%</span>Prospectus</button>
+    </div>
+  </div>
+  <div class="hero-2col bck-highlight-dark mb-reg">
+    <div class="left-column p-2">
+      <div class="centered white-text">
+        <p class="largetext2">This course is for you if...</p>
+        <ul>
+          <li>you want to design things, systems and processes</li>
+          <li>you want to try everything to find where your passion lies</li>
+          <li>you can't wait to put ideas into practice</li>
+          <li>your inventive nature drives your ambition</li>
+          <li>you get a buzz from solving problems for others</li>
+        </ul>
+        <p><a href="#">Dr Keri Collins</a> - Lecturer in Mechanical Engineering</p>
+      </div>
+    </div>
+    <div class="right-column"><img src="images/engineering/1280x720engineering8.jpg" width="1280" height="720" alt=""></div>
+  </div>
+  <div class="column-4">
+    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/1280x720engineering11.jpg" width="1280" height="720" alt="">
+      <div class="quotestyle"></div>
+      <p class="largetext">I envision a career as a Mechanical Engineer, concentrating on critical environmental projects. My aspiration is to make a positive change</p>
+      <p>BEng Mechanical Engineering student <span class="blue-link">Elena Brake</span></p>
+      </a></div>
+    <div class="bck-lgrey"><a href="#"> <img src="images/720x1280placeholder-mgrey.gif" width="720" height="1280" alt="Placeholder image"> </a></div>
+    <div class="rounded-1 p-1 stroke bck-highlight-light black-text">
+      <div class="centered">
+        <p class="largetext">Breaking, twisting, and snapping metal in our STEAM Material Testing Lab.</p>
+        <p>The <a href="#">Babbage Building</a> brings STEAM subjects together under one roof, including:</p>
+        <ul>
+          <li><strong><a href="#">active learning spaces</a></strong></li>
+          <li><strong><a href="#">energy and Sustainability Laboratory</a></strong></li>
+          <li><strong><a href="#">heavy Structures and Geotechnics Laboratory</a></strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rounded-1 p-1 stroke"><img src="images/engineering/720x405engineering2.jpg" width="720" height="405" alt="" class="img-inset">
+      <div class="quotestyle"></div>
+      <p><strong>I can say with 100 per cent certainty that I wouldn’t be in the position I am today without my placement year. It made a huge difference to not only my CV, but my confidence and general business know-how</strong></p>
+      <p>University of Plymouth graduate Jack Williams spent four months with the Bloodhound Supersonic Car (SSC) land-speed record project team.</p>
+    </div>
+  </div>
+  <div class="container-80">
+    <div class="topstroke mb-reg"></div>
+    <h2>Industry connections</h2>
+    <p>As a course focused on employability, we’ve developed a number of relationships with industry to help provide you with the connections and opportunities you need to begin your career.</p>
+  </div>
+  <div class="column-3">
+    <div class="rounded-1 p-1 stroke"><img src="images/engineering/1280x720engineering7.jpg" width="1280" height="720" alt="" class="img-inset">
+      <p><strong>Put learning into practice</strong></p>
+      <p>Take a paid year in industry to help consolidate and develop your engineering knowledge.</p>
+    </div>
+    <div class="rounded-1 p-1 stroke"><img src="images/engineering/1280x720engineering6.jpg" width="1280" height="720" alt="" class="img-inset">
+      <p><strong>Industry mentors</strong></p>
+      <p>Our industry partners offer placements and visits; support and sponsorship for project work; and graduate employment.</p>
+    </div>
+    <div class="rounded-1 p-1 stroke"><img src="images/engineering/1280x720engineering5.jpg" width="1280" height="720" alt="" class="img-inset">
+      <p><strong>Relevant, contemporary learning</strong></p>
+      <p>Our relationship with a range of industries, and our local Industry Advisory Group ensure our courses are relevant to industry needs.</p>
+    </div>
+  </div>
+  <div class="hero-2col bck-highlight-dark">
+    <div class="left-column p-2">
+      <div class="centered white-text">
+        <div class="quotestyle"></div>
+        <div class="largetext mb-reg">
+          <p>Sometimes I have to take a step back to remind myself that at the other end of this antenna I’m controlling a spacecraft around Mars or another spacecraft in deep space, it’s literally out of this world.</p>
+        </div>
+        <p><a href="#">Mechanical Engineering Graduate, Jamie Williams</a>,
+          took his deep interest in science, engineering and space and landed the career he always dreamed of.</p>
+        <p>Senior Deep Space Operator at Goonhilly Earth Station, Cornwall.</p>
+      </div>
+    </div>
+    <div class="right-column"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+  </div>
+</section>
+<section id="fees">
+  <div class="container-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>Fees, costs and funding</h2>
+    <table>
+      <tr>
+        <th><strong>Student</strong></th>
+        <th><strong>2024-2025</strong></th>
+        <th><strong>2025-2026 *</strong></th>
+      </tr>
+      <tr>
+        <td><strong>Home</strong></td>
+        <td>£9,250</td>
+        <td>£9,250</td>
+      </tr>
+      <tr>
+        <td><strong>International</strong></td>
+        <td>£18,100</td>
+        <td>£18,650</td>
+      </tr>
+      <tr>
+        <td><strong>Part time (Home)</strong></td>
+        <td>£770</td>
+        <td>£770</td>
+      </tr>
+    </table>
+    <p>Full time fees shown are per annum. Part time fees shown are per 10 credits. Please note that fees are reviewed on an annual basis. Fees and the conditions that apply to them shown in the prospectus are correct at the time of going to print. Fees shown on the web are the most up to date but are still subject to change in exceptional circumstances. More information about fees and funding.</p>
+    <p><strong>* UK Government announcement on tuition fees</strong></p>
+    <p>On Monday 4 November 2024 the UK Government announced a proposal to increase tuition fees for home undergraduate students from £9,250 to £9,535 per annum from September 2025 onwards. The University of Plymouth intends to apply this new fee from September 2025. However, implementation of this increase will be subject to Parliamentary procedure. The University will give further details to both prospective and current students as soon as more information becomes available.</p>
+    <h2>Undergraduate scholarships for international students</h2>
+    <div class="p-1 left-stroke mb-reg">
+      <p>To reward outstanding achievement the University of Plymouth offers scholarship schemes to help towards funding your studies.</p>
+    </div>
+    <p><a href="#">Find out whether you are eligible and how you can apply</a></p>
+    <h2>Additional costs</h2>
+    <p>This course is delivered by the <a href="#">Faculty of Science and Engineering</a> and more details of any additional costs associated with the faculty's courses are listed on the following page: <a href="#">Additional fieldwork and equipment costs</a>.</p>
+    <h2>Tuition fees for optional placement years</h2>
+    <p><strong>The fee for all undergraduate students completing any part of their placement year in the UK in 2024/2025 is £1,850.</strong></p>
+    <p><strong>The fee for all undergraduate students completing their whole placement year outside the UK in 2024/2025 is £1,385.</strong></p>
+    <p><a href="#">Learn more about placement year tuition fees</a></p>
+  </div>
+</section>
+<section id="entry">
+  <div class="container-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>Entry requirements</h2>
+    <p><strong>UCAS tariff</strong></p>
+    <p>112 - 128</p>
+    <div class="rounded-1 p-1 bck-lgrey mb-reg">
+      <p><strong>Contextual offers</strong>: Typically, the contextual offer for this course is <strong>8 points below the advertised tariff</strong>. A contextual offer is an offer to study at university that takes into account individual circumstances that are beyond your control, and that can potentially impact your learning and your exam results, or your confidence in applying to university.</p>
+      <p><a href="#">Check your eligibility for a contextual offer</a></p>
+    </div>
+    <p><strong>A level</strong>:<br>
+      Typical offer will be 112 points including Grade C at Maths and Grade C at second relevant subject: Applied ICT, Applied Science, Applied Business, Biology, Business/Business Studies, Chemistry, Computing, Computer Science, DT (Product Design Resistant Materials), DT (systems and Control Tech), DT Product Design (Textiles Tech), Economics, Economics and Business, Electronics, Engineering, Environmental Science, Design and Technology, ICT, Physics, Science, Statistics, Further Maths, Use of Maths, Pure Maths. Excluding General Studies.</p>
+    <p><strong>BTEC National Diploma/QCF Extended Diploma</strong>:<br>
+      DDD in a relevant science or engineering subject.</p>
+    <p><strong>BTEC National Diploma modules</strong><br>
+      If you hold a BTEC qualification it is vital that you provide our Admissions team with details of the exact modules you have studied as part of the BTEC. Without this information we may be unable to process your application quickly and you could experience significant delays in the progress of your application to study with us. Please explicitly state the full list of modules within your qualification at the time of application.</p>
+    <p><strong>International Baccalaureate</strong>:<br>
+      26-30 overall to include 5 at Higher Level Maths and 5 at Higher Level second relevant subject.</p>
+    <p><strong>Access to HE Diploma in a Science or Engineering</strong>:<br>
+      Pass Access in engineering to include 45 credits at level 3. Must include 33 credits including at least 12 credits at level 3 in mathematics with distinction and 12 credits at level 3 in a second relevant subject with merit. Must have GCSE English and Maths grade C/4 or above or equivalent.</p>
+    <p><strong>GCSE</strong>:<br>
+      Mathematics and English at grade C or above is required.</p>
+    <p>For other qualifications, please enquire.</p>
+    <p><a href="#">English language requirements</a></p>
+    <p>We welcome applicants with international qualifications. To view other accepted qualifications please refer to our <a href="#">tariff glossary</a>.</p>
+    <p><strong>Please note: We understand that many applicants remain anxious about meeting the exact terms of our standard conditional offers. We will look again at your application and revise our offer for those applicants who we continue to believe are a good match for our courses, once we have the certainty of your actual results in August.</strong></p>
+  </div>
+</section>
+<div class="container-60">
+  <div class="topstroke mb-reg"></div>
+  <h2>How to apply</h2>
+  <p>All applications for undergraduate courses are made through <strong>UCAS</strong> (Universities and Colleges Admissions Service).</p>
+  <p>UCAS will ask for the information contained in the box at the top of this course page including the UCAS course code and the institution code.</p>
+  <p>To apply for this course and for more information about submitting an application including application deadline dates, please visit the <a href="#">UCAS website</a>.</p>
+  <p>Support is also available to overseas students applying to the University from our International Office via 
+    our <a href="#">how to apply webpage</a> or email <a href="#">admissions@plymouth.ac.uk</a>.</p>
+</div>
+<div class="hero-2col bck-highlight-light mb-reg">
+  <div class="left-column"> <img src="images/engineering/720x405engineering1.jpg" width="720" height="405" alt=""> </div>
+  <div class="right-column p-2">
+    <div class="centered black-text">
+      <h2>Your clubs and societies</h2>
+      <p>UPSU offer a range of opportunities for you to connect with others. We're sure there will be a group for you, if it’s about your course, passion or just trying something completely new.</p>
+      <div class="left-stroke p-1 mb-reg">
+        <p>The University's Engineering Society provides a platform for you to meet, socialise with and learn from from fellow students.</p>
+        <p>The club aims to promote links across all engineering disciplines and between all year groups from foundation year to masters year.</p>
+        <p>Socials and events are hosted throughout the year so come and get involved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-80">
+  <div class="topstroke mb-reg"></div>
+  <h2>Accreditation and accolades</h2>
+  <p>Our accredited BEng (Hons) Mechanical Engineering is designed to start your journey to becoming a qualified professional mechanical engineer.</p>
+  <p>Achieving TEF Gold is recognition of the University's excellence in teaching, learning, and achieving positive student outcomes.</p>
+</div>
+<div class="column-5">
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260engineering.gif" width="460" height="260" alt="">
+    <p class="blue-link">Engineering Council accredited degree</p>
+    </a></div>
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260imech3.gif" width="460" height="260" alt="">
+    <p class="blue-link">Institution of Mechanical Engineers (IMechE) accredited degree</p>
+    </a></div>
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260iom3.gif" width="460" height="260" alt="">
+    <p class="blue-link">Composites pathway: Accredited by the Institute of Materials, Minerals and Mining (IoM3)</p>
+    </a></div>
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260tef.gif" width="460" height="260" alt="">
+    <p class="blue-link">Teaching Excellence Framework Gold</p>
+    </a></div>
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260cash.gif" width="460" height="260" alt="">
+    <p class="blue-link">Tamar Engineering Project</p>
+    </a></div>
+</div>
+<div class="container-80">
+  <div class="topstroke mb-reg"></div>
+  <h2>Compare courses</h2>
+</div>
+<div class="column-3">
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/1280x720engineering3.jpg" width="1280" height="720" alt="">
+    <p class="blue-link">MEng (Hons) Mechanical Engineering</p>
+    </a></div>
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/1280x720engineering9.jpg" width="1280" height="720" alt="">
+    <p class="blue-link">BEng (Hons) Marine Technology</p>
+    </a></div>
+  <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/1280x720engineering10.jpg" width="1280" height="720" alt="">
+    <p class="blue-link">MEng (Hons) Marine Technology</p>
+    </a></div>
+</div>
+<div class="container-60">
+  <div class="topstroke mb-reg"></div>
+  <h2>Help &amp; enquiries</h2>
+  <p><strong>Admission enquiries</strong></p>
+  <p><a href="#"><span class="iconfont" aria-hidden="true">/</span>admissions@plymouth.ac.uk</a></p>
+  <p><a href="#"><span class="iconfont" aria-hidden="true">0</span>+44 1752 585858</a></p>
+  <p><a href="#"><span class="iconfont" aria-hidden="true">f</span>PlymUniApply</a></p>
+  <p><a href="#">School of Engineering, Computing and Mathematics</a></p>
+</div>
+<div class="container-60">
+  <div class="topstroke mb-reg"></div>
+  <p>*These are the latest results from the National Student Survey. Please note that the data published on <a href="#">Discover Uni is updated annually in September. The results of the National Student Survey (NSS) and the Graduate Outcomes survey (GO</a>) are made available to prospective students and their advisors through the Unistats website.</p>
+</div>
+<div class="p-2 topstroke">
+  <div class="search-box-container pb-reg">
+    <h2>Popular links</h2>
+    <ul class="footerlist">
+      <li> <a href="/study">Courses and study</a> </li>
+      <li> <a href="/student-life">Student life</a> </li>
+      <li> <a href="/students-and-family">Students and family</a> </li>
+      <li> <a href="/international">International Plymouth</a> </li>
+      <li> <a href="/research">Research and expertise</a> </li>
+      <li> <a href="/business-partners">Business and partners</a> </li>
+      <li> <a href="/business-partners/academic-partnerships">Academic Partnerships</a> </li>
+      <li> <a href="/alumni">Alumni</a> </li>
+      <li> <a href="/about-us">About us</a> </li>
+      <li> <a href="https://www.plymouth.ac.uk/feeds/news"><span class="iconfont" aria-hidden="true">4</span>News RSS feed</a> </li>
+      <li> <a href="/whats-on"><span class="iconfont" aria-hidden="true">&amp;</span>What's on</a> </li>
+      <li> <a href="https://www.plymouth.ac.uk/help"><span class="iconfont" aria-hidden="true">G</span>Accessibility and help</a> </li>
+      <li> <a href="/about-us/university-structure/service-areas/procurement/modern-slavery-statement">Modern slavery statement</a> </li>
+    </ul>
+  </div>
+  <div class="search-box-container">
+    <h2>Contact us</h2>
+    <ul class="footerlist">
+      <li><strong>University of Plymouth</strong><br>
+        Plymouth<br>
+        Devon PL4 8AA<br>
+        United Kingdom</li>
+      <li><a href="#"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">(</span>Maps &amp; directions</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">A</span>Visit us</a><br>
+        <a href="#"><span class="iconfont" aria-hidden="true">]</span>Job vacancies</a></li>
+      <li><img src="images/crest-col.svg" alt="" class="footerlogo"><img src="images/tefgold.gif" alt="" class="footerlogo ml-2"></li>
+      <li>
+        <p class="m-0"><span class="iconfont"><a href="#" class="social">f</a></span> <span class="iconfont"><a href="#" class="social">t</a></span> <span class="iconfont"><a href="#" class="social">y</a></span> <span class="iconfont"><a href="#" class="social">i</a></span> <span class="iconfont"><a href="#" class="social">p</a></span> <span class="iconfont"><a href="#" class="social">Ü</a></span> <span class="iconfont"><a href="#" class="social">l</a></span> </p>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+function toggleContent(buttonNumber) {
+    // Get all content divs
+    const contents = document.querySelectorAll('.content');
+    const buttons = document.querySelectorAll('.button');
+    const focusableSelectors = 'a, button, input, textarea, select'; // Common focusable elements
+
+    contents.forEach((content, index) => {
+        const focusableElements = content.querySelectorAll(focusableSelectors);
+
+        // Show or hide content based on button click
+        if (index === buttonNumber - 1) {
+            if (content.classList.contains('active')) {
+                // Fade out the active content
+                content.classList.remove('active'); // Remove active to fade out
+
+                // Disable focus for hidden content
+                focusableElements.forEach(element => {
+                    element.setAttribute('tabindex', '-1');
+                });
+            } else {
+                // Fade out any other content
+                const activeContent = document.querySelector('.content.active');
+                if (activeContent) {
+                    activeContent.classList.remove('active'); // Remove active to fade out
+
+                    // Disable focus for the currently active content
+                    const activeFocusableElements = activeContent.querySelectorAll(focusableSelectors);
+                    activeFocusableElements.forEach(element => {
+                        element.setAttribute('tabindex', '-1');
+                    });
+                }
+
+                // Fade-in the selected content
+                setTimeout(() => {
+                    content.classList.add('active'); // Add active to fade in
+
+                    // Enable focus for visible content, except for content1 (handled separately)
+                    if (buttonNumber !== 1) {
+                        focusableElements.forEach(element => {
+                            element.removeAttribute('tabindex');
+                        });
+                    }
+                }, 300); // Wait for fade-out to complete
+            }
+            buttons[index].classList.toggle('open'); // Toggle the open class for the button
+        } else {
+            // Remove active class from other contents
+            content.classList.remove('active'); // Remove active from other contents
+            buttons[index].classList.remove('open'); // Remove open class from other buttons
+
+            // Disable focus for hidden content
+            focusableElements.forEach(element => {
+                element.setAttribute('tabindex', '-1');
+            });
+        }
+    });
+}
+// Special case for btn1: Search box should receive focus when button1 is clicked
+document.getElementById('btn1').addEventListener('click', function () {
+    const searchBox = document.querySelector('#content1 .search-box');
+    if (searchBox) {
+        searchBox.removeAttribute('tabindex'); // Ensure it's focusable
+        searchBox.focus(); // Set focus to the search box
+    }
+});
+
+	
+	
+// JavaScript for active scroll tracking with sticky header offset
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section"); // Adjust if different
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const stickyHeight = 55; // Height of the sticky nav
+
+    function changeActiveLink() {
+        let fromTop = window.scrollY + stickyHeight;
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
+                navLinks.forEach((link) => link.classList.remove("current"));
+                const currentLink = document.querySelector(`nav ul li a[href="#${section.id}"]`);
+                if (currentLink) {
+                    currentLink.classList.add("current");
+                }
+            }
+        });
+    }
+
+	
+	
+    // Adjust scroll behavior for clicks on nav links
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").slice(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const sectionTop = targetSection.offsetTop;
+                const scrollPosition = sectionTop - stickyHeight;
+
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    window.addEventListener("scroll", changeActiveLink);
+});
+	
+	
+	  // Counter animation function for individual counters
+  function animateCounter(counter) {
+    const target = +counter.innerText;
+    const increment = target / 100; // Adjust the speed of counting
+    let count = 0;
+
+    function updateCounter() {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target;
+      }
+    }
+    updateCounter();
+  }
+
+  // Intersection Observer to detect when each counter comes into view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target); // Animate the specific counter
+        observer.unobserve(entry.target); // Stop observing once animation starts
+      }
+    });
+  }, { threshold: 0.5 }); // Adjust threshold as needed for earlier or later trigger
+
+  // Observe each counter individually
+  document.querySelectorAll('.counter').forEach(counter => {
+    observer.observe(counter);
+  });
+	
+	
+	
+//	// Staff list
+//	document.getElementById('showMore').addEventListener('click', function(e) {
+//    e.preventDefault(); // Prevent the default action of the link
+//    const hiddenCards = document.querySelectorAll('.card.hidden');
+//    hiddenCards.forEach(card => {
+//      card.classList.remove('hidden'); // Remove 'hidden' class to make them visible
+//    });
+//    this.style.display = 'none'; // Hide the "Show more" link after click
+//  });
+//	
+	
+</script>
+</body>
+</html>
