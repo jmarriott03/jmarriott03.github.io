@@ -48,10 +48,10 @@ section :last-child {
 }
 .w-80 :last-child, .w-60 :last-child, .w-40 :last-child {
     margin-bottom: 0;
-    color: green;
 }
 .topstroke {
     border-top: 0.25rem solid var(--black);
+	margin-bottom: 2rem;
 }
 .column-5 {
     display: grid;
@@ -77,7 +77,8 @@ section :last-child {
     width: 100%;
     border: 1px dotted green;
 }
-@media (max-width: 25rem) {
+
+@media (max-width: 30rem) {
 .column-5, .column-4, .column-3, .column-2 {
     grid-template-columns: 1fr; /* Single column layout for narrow screens */
 }
@@ -89,8 +90,12 @@ section :last-child {
     border: 2px solid yellow;
     padding-bottom: 1rem;
     margin: -1rem 0 0 -1rem;
-    width: calc(100% + 2rem);/*    height: auto;*/
+    width: calc(100% + 2rem);
 }
+	.btn-container :last-child{
+		margin-bottom: 1rem;
+	}
+
 </style>
 </head>
 <body>
@@ -99,15 +104,15 @@ section :last-child {
     <h2>w-80</h2>
   </div>
   <div class="w-60">
-    <div class="topstroke mb-reg"></div>
+    <div class="topstroke"></div>
     <h2>w-60</h2>
   </div>
   <div class="w-40">
-    <div class="topstroke mb-reg"></div>
+    <div class="topstroke"></div>
     <h2>w-40</h2>
   </div>
   <div class="w-80">
-    <div class="topstroke mb-reg"></div>
+    <div class="topstroke mb-2"></div>
     <h2>column-5</h2>
     <div class="column-5"><a href="#">
       <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
@@ -122,7 +127,7 @@ section :last-child {
       </a></div>
   </div>
   <div class="w-80">
-    <div class="topstroke mb-reg"></div>
+    <div class="topstroke mb-2"></div>
     <h2>column-4</h2>
     <div class="column-4"><a href="#">
       <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
@@ -135,7 +140,7 @@ section :last-child {
       </a></div>
   </div>
   <div class="w-80">
-    <div class="topstroke mb-reg"></div>
+    <div class="topstroke"></div>
     <h2>column-3</h2>
     <div class="column-3"><a href="#">
       <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
@@ -146,7 +151,7 @@ section :last-child {
       </a></div>
   </div>
   <div class="w-80">
-    <div class="topstroke mb-reg"></div>
+    <div class="topstroke"></div>
     <h2>column-2</h2>
     <div class="column-2"><a href="#">
       <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
@@ -154,6 +159,12 @@ section :last-child {
       <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>2</div>
       </a></div>
   </div>
+	
+	<div class="bck-lgrey">
+	<div class="w-80">
+    <div class="dotted btn-container p-1">
+		<button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button><button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button></div>
+	</div></div>
 </main>
 </body>
 </html>
