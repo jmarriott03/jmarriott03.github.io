@@ -57,30 +57,30 @@ section :last-child {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
     gap: 1em;
-    max-width: 80rem;
-    overflow: hidden;
 }
 .column-4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     gap: 1em;
-    max-width: 80rem;
 }
 .column-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
     gap: 1em;
-    max-width: 80rem;
 }
 .column-2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
     gap: 1em;
-    max-width: 80rem;
 }
 .column-5 > *, .column-4 > *, .column-3 > *, .column-2 > * {
     width: 100%;
     border: 1px dotted green;
+}
+@media (max-width: 25rem) {
+.column-5, .column-4, .column-3, .column-2 {
+    grid-template-columns: 1fr; /* Single column layout for narrow screens */
+}
 }
 .card {
     padding: 1rem;
