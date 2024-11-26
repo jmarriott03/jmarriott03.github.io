@@ -43,6 +43,7 @@ section :last-child {
 }
 .w-80, .w-60, .w-40 {
     margin: 2rem auto;
+    padding: 0 2rem;
     overflow: hidden;
 }
 .w-80 :last-child, .w-60 :last-child, .w-40 :last-child {
@@ -51,6 +52,44 @@ section :last-child {
 }
 .topstroke {
     border-top: 0.25rem solid var(--black);
+}
+.column-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+    overflow: hidden;
+}
+.column-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+}
+.column-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+}
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 1em;
+    max-width: 80rem;
+}
+.column-5 > *, .column-4 > *, .column-3 > *, .column-2 > * {
+    width: 100%;
+    border: 1px dotted green;
+}
+.card {
+    padding: 1rem;
+}
+.card img {
+    border: 2px solid yellow;
+    padding-bottom: 1rem;
+    margin: -1rem 0 0 -1rem;
+    width: calc(100% + 2rem);/*    height: auto;*/
 }
 </style>
 </head>
@@ -66,6 +105,54 @@ section :last-child {
   <div class="w-40">
     <div class="topstroke mb-reg"></div>
     <h2>w-40</h2>
+  </div>
+  <div class="w-80">
+    <div class="topstroke mb-reg"></div>
+    <h2>column-5</h2>
+    <div class="column-5"><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>2</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>3</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>4</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>5</div>
+      </a></div>
+  </div>
+  <div class="w-80">
+    <div class="topstroke mb-reg"></div>
+    <h2>column-4</h2>
+    <div class="column-4"><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>2</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>3</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>4</div>
+      </a></div>
+  </div>
+  <div class="w-80">
+    <div class="topstroke mb-reg"></div>
+    <h2>column-3</h2>
+    <div class="column-3"><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>2</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>3</div>
+      </a></div>
+  </div>
+  <div class="w-80">
+    <div class="topstroke mb-reg"></div>
+    <h2>column-2</h2>
+    <div class="column-2"><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>1</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/>2</div>
+      </a></div>
   </div>
 </main>
 </body>
