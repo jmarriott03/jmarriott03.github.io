@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+/*
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+*/
+* {
+    border: 1px dotted red;
+}
+.w-80 {
+    max-width: 80rem;
+}
+.w-60 {
+    max-width: 60rem;
+}
+.w-40 {
+    max-width: 40rem;
+}
+.w-80, .w-60, .w-40 {
+    margin: 2rem auto;
+    overflow: hidden;
+}
+.w-80 :last-child, .w-60 :last-child, .w-40 :last-child {
+    margin-bottom: 0;
+    color: green;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80">
+    <h2>w-80</h2>
+  </div>
+  <div class="w-60">
+    <div class="topstroke mb-reg"></div>
+    <h2>w-60</h2>
+  </div>
+  <div class="w-40">
+    <div class="topstroke mb-reg"></div>
+    <h2>w-40</h2>
+  </div>
+</main>
+</body>
+</html>
