@@ -357,7 +357,7 @@ nav ul li a.current {
 }
 .btn-hide {
     display: block;
-	overflow: hidden;
+    overflow: hidden;
 }
 }
 section :last-child {
@@ -558,8 +558,11 @@ div :last-child {
     max-width: 80rem;
     padding: 0 2rem 1.5rem 2rem;/*    border: 1px dotted red;*/
 }
-.column4 > * {
-    width: 100%;
+
+@media (max-width: 25rem) {
+.column-5, .column-4, .column-3, .column-2 {
+    grid-template-columns: 1fr; /* Single column layout for narrow screens */
+}
 }
 .container-80 {
     max-width: 80rem;
