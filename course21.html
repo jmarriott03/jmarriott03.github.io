@@ -51,7 +51,7 @@ section :last-child {
 }
 .topstroke {
     border-top: 0.25rem solid var(--black);
-	margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 .column-5 {
     display: grid;
@@ -92,10 +92,17 @@ section :last-child {
     margin: -1rem 0 0 -1rem;
     width: calc(100% + 2rem);
 }
-	.btn-container :last-child{
-		margin-bottom: 1rem;
-	}
-
+.fullw {
+    width: 100%;
+    overflow: hidden;
+}
+.btn-container {
+    padding: 1rem 2rem;
+    max-width: 80rem;
+}
+.btn-container :last-child {
+    margin-bottom: 1rem;
+}
 </style>
 </head>
 <body>
@@ -159,12 +166,12 @@ section :last-child {
       <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">2</div>
       </a></div>
   </div>
-	
-	<div class="bck-lgrey">
-	<div class="w-80">
+  <div class="fullw bck-lgrey">
     <div class="dotted btn-container p-1">
-		<button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button><button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button></div>
-	</div></div>
+      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+    </div>
+  </div>
 </main>
 </body>
 </html>
