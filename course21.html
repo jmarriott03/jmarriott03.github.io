@@ -83,16 +83,12 @@ section :last-child {
     grid-template-columns: 1fr; /* Single column layout for narrow screens */
 }
 }
-	
-	
-	
-	
-	.hero-2col {
+.container-hero {
     display: flex;
     flex-wrap: wrap;
 }
 /* Use CSS variables to manage layout widths */
-.hero-2col {
+.container-hero {
 --left-width: 50%;
 --right-width: 50%;
 }
@@ -126,11 +122,39 @@ section :last-child {
     width: 100%;
 }
 }
-	
-	
-	
-	
-	
+.btn-rounded {
+    color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--black);
+}
+.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+}
+.text-resize > .btn-rounded {
+    font-size: 1.25rem;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.text-resize > .btn-rounded {
+    font-size: 1rem;
+}
+}
+.text-highlight {
+    opacity: 0.7;
+}
 .card {
     padding: 1rem;
 }
@@ -151,11 +175,15 @@ section :last-child {
 .btn-container :last-child {
     margin-bottom: 1rem;
 }
+.horizontal-links a {
+    margin: 0.5rem 1rem 0.5rem 0;
+    float: left;
+}
 </style>
 </head>
 <body>
 <main>
-	<div class="hero-2col layout-33-67 bck-highlight-dark">
+  <div class="container-hero layout-33-67 bck-highlight-dark">
     <div class="left-column p-2">
       <div class="centered white-text text-resize">
         <h3 class="m-0 text-highlight">BEng (Hons)</h3>
@@ -167,8 +195,6 @@ section :last-child {
     </div>
     <div class="right-column hero-zoom"><img src="images/1280x720engineering.webp" width="1280" height="720" alt=""></div>
   </div>
-	
-	
   <div class="w-80">
     <h2>w-80</h2>
   </div>
@@ -230,8 +256,15 @@ section :last-child {
   </div>
   <div class="fullw bck-lgrey">
     <div class="dotted btn-container p-1">
-      <button class="btn btn-primary">Register for open day
-</button>
+      <button class="btn btn-primary">Register for open day </button>
+      <button class="btn btn-danger">Apply at UCAS.com</button>
+    </div>
+  </div>
+  <div class="fullw bck-lgrey">
+    <div class="dotted btn-container p-1">
+      <div class="horizontal-links black-text">
+      <a href="#link1">Link 1</a> <a href="#link2">Link 2</a> <a href="#link3">Link 3</a> <a href="#link4">Link 4</a></div>
+      <button class="btn btn-primary">Register for open day </button>
       <button class="btn btn-danger">Apply at UCAS.com</button>
     </div>
   </div>
