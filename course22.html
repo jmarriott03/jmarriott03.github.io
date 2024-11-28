@@ -8,8 +8,11 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
+--highlight-light: #ccc;
+--highlight-dark: #666;
+}
+* {
+    border: 1px dotted red;
 }
 .bck-highlight-light {
     background-color: var(--highlight-light);
@@ -22,7 +25,7 @@ div :last-child {
 }
 .parent {
     display: grid;
-d grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto 1fr auto 2rem auto;
     gap: 0 2rem;/*	gap: 2rem; if 2 columns*/
 }
@@ -43,10 +46,6 @@ d grid-template-columns: repeat(8, 1fr);
 }
 .div6 {
     grid-area: 4 / 6 / 6 / 8;
-}
-.parent > * {
-    border: 1px dotted red;
-    width: 100%;
 }
 
 @media (max-width: 60em) {
@@ -119,7 +118,7 @@ d grid-template-columns: repeat(8, 1fr);
 </head>
 <body>
 <main>
-  <div class="w-80 p-2 dotted">
+  <div class="w-80 p-2">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class="parent">
@@ -133,7 +132,11 @@ d grid-template-columns: repeat(8, 1fr);
         <button class="btn-rounded-black">Apply now</button>
       </div>
     </div>
-    <!--    <div class="div3"></div>-->
+    <div class="div3 mt-2">
+      <div class="rounded-1 p-1 mrfrosty">
+        <p>Area for additional information</p>
+      </div>
+    </div>
     <div class="div4 rounded-2 p-2 mrfrosty stroke shadow">
       <h2 class="m-0">98%</h2>
       <p>of Plymouth engineering graduates are employed or in further study within six months of graduation</p>
@@ -147,7 +150,7 @@ d grid-template-columns: repeat(8, 1fr);
       <p>Access to advanced engineering labs and the renowned Marine Station</p>
     </div>
   </div>
-  <div class="w-80 p-2 dotted">
+  <div class="w-80 p-2">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 </main>
