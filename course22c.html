@@ -51,6 +51,7 @@ div :last-child {
 }
 .div1, .div4, .div5, .div6 {
     width: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 60em) {
@@ -84,7 +85,6 @@ div :last-child {
 .highlight-dark {
     color: var(--highlight-dark);
 }
-
 .btn-rounded-black {
     color: var(--black);
     border: 2px solid var(--black);
@@ -120,13 +120,17 @@ div :last-child {
 .w-80 {
     max-width: 80rem;
 }
-.mrfrosty {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1));
-  backdrop-filter: blur(0.5rem);
-}
 .mrfrosty-dark {
-  background-image: linear-gradient(rgba(168, 0, 117, 0.6), rgba(168, 0, 117, 1));
-  backdrop-filter: blur(0.5rem);
+    background-image: linear-gradient(rgba(168, 0, 117, 0.6), rgba(168, 0, 117, 1));
+    backdrop-filter: blur(0.5rem);
+}
+.undergraduate-tag {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.pt-half {
+    padding-top: 0.5rem;
 }
 </style>
 </head>
@@ -140,9 +144,9 @@ div :last-child {
     <div class="div1"><img src="images/1920x1080engineering.webp" width="1280" height="720" alt=""></div>
     <div class="div2 centered white-text">
       <div class="rounded-2 p-2 mrfrosty-dark shadow">
+        <p class="pt-half"><span class="undergraduate-tag bck-highlight-light black-text">Undergraduate course</span></p>
         <h3 class="m-0 highlight-light">BEng (Hons)</h3>
-        <h1>Electrical and Electronic
-          Engineering</h1>
+        <h1>Electrical and Electronic Engineering</h1>
         <p>Study engineering at the University of Plymouth for hands-on learning, industry partnerships, and a clear path to employability</p>
         <button class="btn-rounded-white">Apply now</button>
       </div>

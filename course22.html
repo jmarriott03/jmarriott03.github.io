@@ -49,6 +49,7 @@ div :last-child {
 }
 .div1, .div4, .div5, .div6 {
     width: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 60em) {
@@ -117,6 +118,14 @@ div :last-child {
 .w-80 {
     max-width: 80rem;
 }
+.undergraduate-tag {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.pt-half {
+    padding-top: 0.5rem;
+}
 </style>
 </head>
 <body>
@@ -126,12 +135,12 @@ div :last-child {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class="parent">
-    <div class="div1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""><img src="images/1280x720arthistory.jpg" width="1280" height="720" alt=""/></div>
+    <div class="div1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
     <div class="div2 centered">
       <div class="rounded-2 p-2 mrfrosty shadow">
+        <p class="pt-half"><span class="undergraduate-tag bck-highlight-dark white-text">Undergraduate course</span></p>
         <h3 class="m-0 highlight-dark">BEng (Hons)</h3>
-        <h1>Electrical and Electronic
-          Engineering</h1>
+        <h1>Electrical and Electronic Engineering</h1>
         <p>Study engineering at the University of Plymouth for hands-on learning, industry partnerships, and a clear path to employability</p>
         <button class="btn-rounded-black">Apply now</button>
       </div>
