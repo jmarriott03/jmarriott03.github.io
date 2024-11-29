@@ -8,14 +8,12 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
+--highlight-light: #ccc;
+--highlight-dark: #666;
 }
-/*
 * {
     border: 1px dotted red;
 }
-*/
 .bck-highlight-light {
     background-color: var(--highlight-light);
 }
@@ -78,6 +76,54 @@ div :last-child {
     grid-area: 7 / 2 / 8 / 3;
 }
 }
+	
+	
+	
+	
+	.container-hero {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.container-hero {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+	
+	
+	
+	
+	
 .highlight-light {
     color: var(--highlight-light);
 }
@@ -128,10 +174,10 @@ div :last-child {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
   <div class="parent">
-    <div class="div1"><img src="images/1920x1080engineering.webp" width="1280" height="720" alt=""></div>
+    <div class="div1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
     <div class="div2 centered">
       <div class="rounded-2 p-2 mrfrosty shadow">
-        <h3 class="m-0">BEng (Hons)</h3>
+        <h3 class="m-0 highlight-dark">BEng (Hons)</h3>
         <h1>Electrical and Electronic
           Engineering</h1>
         <p>Study engineering at the University of Plymouth for hands-on learning, industry partnerships, and a clear path to employability</p>
@@ -140,7 +186,7 @@ div :last-child {
     </div>
     <div class="div3 mt-2">
       <div class="rounded-1 p-1 mrfrosty shadow">
-        <p><strong>99</strong> people have viewed today</p>
+        <p>Area for additional information</p>
       </div>
     </div>
     <div class="div4 rounded-2 p-2 mrfrosty stroke shadow">
@@ -161,32 +207,5 @@ div :last-child {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 </main>
-  <script>
-document.addEventListener("scroll", () => {
-    const heroImages = document.querySelectorAll('.div1 img');
-
-    heroImages.forEach(image => {
-        const rect = image.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // Ensure zooming starts only when the image reaches the top of the viewport
-        if (rect.top <= 0 && rect.bottom >= 0) {
-            // Calculate the scroll progress
-            const scrollPercent = Math.min(1, Math.abs(rect.top) / rect.height);
-
-            // Use scrollPercent to determine zoom (adjust scale range as needed)
-            const minScale = 1; // No zoom
-            const maxScale = 1.5; // Maximum zoom
-            const scale = minScale + scrollPercent * (maxScale - minScale);
-
-            // Apply scaling to the image
-            image.style.transform = `scale(${scale})`;
-        } else {
-            // Reset scale if the image is not at the top of the viewport
-            image.style.transform = 'scale(1)';
-        }
-    });
-});
-</script> 
 </body>
 </html>
