@@ -59,52 +59,74 @@ div :last-child {
 .div9 {
     grid-area: 5 / 4 / 6 / 5;
 }
-	
-	
-	
-	
-	@media (max-width: 60rem) {
-	.parent {
-grid-template-columns: 2rem repeat(3, 1fr) 2rem;
-grid-template-rows: 2rem auto 2rem repeat(2, 1fr) 2rem auto 2rem;
 
+@media (max-width: 60rem) {
+.parent {
+    grid-template-columns: 2rem repeat(3, 1fr) 2rem;
+    grid-template-rows: 2rem auto 2rem repeat(2, 1fr) 2rem auto 2rem;
+}
+.div1 {
+    grid-area: 2 / 2 / 3 / 5;
+}
+.div2 {
+    grid-area: 7 / 2 / 8 / 5;
+}
+.div3 {
+    grid-area: 4 / 2 / 6 / 5;
+}
+.div4 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.div5 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+.div6 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+.div7 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+.div8 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+.div9 {
+    grid-area: 5 / 4 / 6 / 5;
+}
 }
 
-.div1 { grid-area: 2 / 2 / 3 / 5; }
-.div2 { grid-area: 7 / 2 / 8 / 5; }
-.div3 { grid-area: 4 / 2 / 6 / 5; }
-.div4 { grid-area: 4 / 2 / 5 / 3; }
-.div5 { grid-area: 4 / 3 / 5 / 4; }
-.div6 { grid-area: 4 / 4 / 5 / 5; }
-.div7 { grid-area: 5 / 2 / 6 / 3; }
-.div8 { grid-area: 5 / 3 / 6 / 4; }
-.div9 { grid-area: 5 / 4 / 6 / 5; }
-	
-	
-	}
-	
-	
-	
-	@media (max-width: 40rem) {
-	.parent {
-grid-template-columns: 2rem repeat(2, 1fr) 2rem;
-grid-template-rows: 2rem auto 2rem repeat(3, 1fr) 2rem auto 2rem;
-
+@media (max-width: 40rem) {
+.parent {
+    grid-template-columns: 2rem repeat(2, 1fr) 2rem;
+    grid-template-rows: 2rem auto 2rem repeat(3, 1fr) 2rem auto 2rem;
 }
-
-.div1 { grid-area: 2 / 2 / 3 / 4; }
-.div2 { grid-area: 8 / 2 / 9 / 4; }
-.div3 { grid-area: 4 / 2 / 7 / 4; }
-.div4 { grid-area: 4 / 2 / 5 / 3; }
-.div5 { grid-area: 4 / 3 / 5 / 4; }
-.div6 { grid-area: 5 / 2 / 6 / 3; }
-.div7 { grid-area: 5 / 3 / 6 / 4; }
-.div8 { grid-area: 6 / 2 / 7 / 3; }
-.div9 { grid-area: 6 / 3 / 7 / 4; }
-	}
-	
-	
-	
+.div1 {
+    grid-area: 2 / 2 / 3 / 4;
+}
+.div2 {
+    grid-area: 8 / 2 / 9 / 4;
+}
+.div3 {
+    grid-area: 4 / 2 / 7 / 4;
+}
+.div4 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.div5 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+.div6 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+.div7 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+.div8 {
+    grid-area: 6 / 2 / 7 / 3;
+}
+.div9 {
+    grid-area: 6 / 3 / 7 / 4;
+}
+}
 .parent > * {
     width: 100%;
     padding: 1rem;
@@ -133,7 +155,6 @@ grid-template-rows: 2rem auto 2rem repeat(3, 1fr) 2rem auto 2rem;
     padding: 1rem;
 }
 .card img {
-    border: 2px solid yellow;
     padding-bottom: 1rem;
     margin: -1rem 0 0 -1rem;
     width: calc(100% + 2rem);
@@ -168,7 +189,7 @@ grid-template-rows: 2rem auto 2rem repeat(3, 1fr) 2rem auto 2rem;
     <div class="div9">Mode of study<br>
       <strong>Full time</strong></div>
   </div>
-  <div class="w-80 px-2">
+  <div class="w-80 px-2 black-text">
     <div class="column-5"><a href="#">
       <div class="card rounded-1 stroke p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">1</div>
       </a><a href="#">
