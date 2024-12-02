@@ -11,6 +11,9 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
+* {
+    border: 1px dotted red;
+}
 .bck-highlight-light {
     background-color: var(--highlight-light);
 }
@@ -22,10 +25,10 @@ div :last-child {
 }
 .parent {
     display: grid;
-    grid-template-columns: 2rem repeat(3, 1fr) 2rem repeat(2, auto) 2rem;
+    grid-template-columns: 2rem repeat(3, 1fr) 2rem repeat(2, 1fr) 2rem;
     grid-template-rows: 2rem auto 2rem repeat(2, auto) 2rem;
+    max-width: 80rem;
 }
-
 .div1, .div2, .div3 {
     background-color: var(--highlight-light);
 }
@@ -56,18 +59,100 @@ div :last-child {
 .div9 {
     grid-area: 5 / 4 / 6 / 5;
 }
+	
+	
+	
+	
+	@media (max-width: 60rem) {
+	.parent {
+grid-template-columns: 2rem repeat(3, 1fr) 2rem;
+grid-template-rows: 2rem auto 2rem repeat(2, 1fr) 2rem auto 2rem;
+
+}
+
+.div1 { grid-area: 2 / 2 / 3 / 5; }
+.div2 { grid-area: 7 / 2 / 8 / 5; }
+.div3 { grid-area: 4 / 2 / 6 / 5; }
+.div4 { grid-area: 4 / 2 / 5 / 3; }
+.div5 { grid-area: 4 / 3 / 5 / 4; }
+.div6 { grid-area: 4 / 4 / 5 / 5; }
+.div7 { grid-area: 5 / 2 / 6 / 3; }
+.div8 { grid-area: 5 / 3 / 6 / 4; }
+.div9 { grid-area: 5 / 4 / 6 / 5; }
+	
+	
+	}
+	
+	
+	
+	@media (max-width: 40rem) {
+	.parent {
+grid-template-columns: 2rem repeat(2, 1fr) 2rem;
+grid-template-rows: 2rem auto 2rem repeat(3, 1fr) 2rem auto 2rem;
+
+}
+
+.div1 { grid-area: 2 / 2 / 3 / 4; }
+.div2 { grid-area: 8 / 2 / 9 / 4; }
+.div3 { grid-area: 4 / 2 / 7 / 4; }
+.div4 { grid-area: 4 / 2 / 5 / 3; }
+.div5 { grid-area: 4 / 3 / 5 / 4; }
+.div6 { grid-area: 5 / 2 / 6 / 3; }
+.div7 { grid-area: 5 / 3 / 6 / 4; }
+.div8 { grid-area: 6 / 2 / 7 / 3; }
+.div9 { grid-area: 6 / 3 / 7 / 4; }
+	}
+	
+	
+	
 .parent > * {
-    border: 1px dotted red;
     width: 100%;
     padding: 1rem;
+}
+.column-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1em;
+}
+.column-5 > * {
+    width: 100%;
+}
+
+@media (max-width: 30rem) {
+.column-5 {
+    grid-template-columns: 1fr;
+}
+}
+.w-80 {
+    max-width: 80rem;
+}
+.w-80 :last-child {
+    margin-bottom: 0;
+}
+.card {
+    padding: 1rem;
+}
+.card img {
+    border: 2px solid yellow;
+    padding-bottom: 1rem;
+    margin: -1rem 0 0 -1rem;
+    width: calc(100% + 2rem);
 }
 </style>
 </head>
 <body>
 <main>
-  <div class="parent">
-    <div class="div1"><h2>1</h2><p>Course overview text content</p></div>
-    <div class="div2"><h2>2</h2><p>Admissions tutor welcome 'this course if for you if...'</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+  <div class="parent black-text">
+    <div class="div1">
+      <h2>1</h2>
+      <p>Course overview text content</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="div2">
+      <h2>2</h2>
+      <p>Admissions tutor welcome 'this course if for you if...'</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
     <div class="div3 rounded-2"></div>
     <div class="div4">Typical offer<br>
       <strong>112 - 128</strong><br>
@@ -82,6 +167,19 @@ div :last-child {
       <strong>3 years (4 years with placement)</strong></div>
     <div class="div9">Mode of study<br>
       <strong>Full time</strong></div>
+  </div>
+  <div class="w-80 px-2">
+    <div class="column-5"><a href="#">
+      <div class="card rounded-1 stroke p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">1</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">2</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">3</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">4</div>
+      </a><a href="#">
+      <div class="card rounded-1 stroke"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">5</div>
+      </a></div>
   </div>
 </main>
 </body>
