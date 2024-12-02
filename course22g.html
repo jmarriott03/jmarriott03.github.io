@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 2rem repeat(3, 1fr) 2rem repeat(2, auto) 2rem;
+    grid-template-rows: 2rem auto 2rem repeat(2, auto) 2rem;
+}
+
+.div1, .div2, .div3 {
+    background-color: var(--highlight-light);
+}
+.div1 {
+    grid-area: 2 / 2 / 3 / 5;
+}
+.div2 {
+    grid-area: 2 / 6 / 6 / 8;
+}
+.div3 {
+    grid-area: 4 / 2 / 6 / 5;
+}
+.div4 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+.div5 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+.div6 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+.div7 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+.div8 {
+    grid-area: 5 / 3 / 6 / 4;
+}
+.div9 {
+    grid-area: 5 / 4 / 6 / 5;
+}
+.parent > * {
+    border: 1px dotted red;
+    width: 100%;
+    padding: 1rem;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent">
+    <div class="div1"><h2>1</h2><p>Course overview text content</p></div>
+    <div class="div2"><h2>2</h2><p>Admissions tutor welcome 'this course if for you if...'</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+    <div class="div3 rounded-2"></div>
+    <div class="div4">Typical offer<br>
+      <strong>112 - 128</strong><br>
+      <a href="#">Contextual offers</a> <span class="iconfont" aria-hidden="true">G</span></div>
+    <div class="div5">UCAS course code<br>
+      <strong>H604</strong></div>
+    <div class="div6">Institution code<br>
+      <strong>P60</strong></div>
+    <div class="div7">Study location<br>
+      <strong>Plymouth</strong></div>
+    <div class="div8">Duration<br>
+      <strong>3 years (4 years with placement)</strong></div>
+    <div class="div9">Mode of study<br>
+      <strong>Full time</strong></div>
+  </div>
+</main>
+</body>
+</html>
