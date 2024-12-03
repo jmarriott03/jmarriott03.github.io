@@ -8,7 +8,8 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
+/*--highlight-light: #b4c960;*/
+--highlight-light: #ccc;
 --highlight-dark: #a80075;
 }
 * {
@@ -129,13 +130,13 @@ div :last-child {
 }
 .parent > * {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
 }
 .column-5 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
     gap: 1em;
-	max-width: 80rem;
+    max-width: 80rem;
 }
 .column-5 > * {
     width: 100%;
@@ -150,7 +151,7 @@ div :last-child {
     width: 100%;
     transition: 0.3s ease;
     margin: 0;
-	padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 .card > * {
     color: var(--black);
@@ -200,51 +201,71 @@ outline: none;
     color: var(--black);
     text-decoration: underline;
 }
+.staffquote {
+    padding: 0 0 0 3.5em;
+    position: relative;
+    min-height: 3em;
+}
+.staffquote img {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
 </style>
 </head>
 <body>
 <main>
   <div class="parent black-text">
     <div class="div1">
-      <h2>1</h2>
-      <p>Course overview text content</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     <div class="div2">
-      <h2>2</h2>
-      <p>Admissions tutor welcome 'this course if for you if...'</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>This course is for you if...</h2>
+      <ul>
+        <li>Point 1</li>
+        <li>Point 2</li>
+        <li>Point 3</li>
+        <li>Point 4</li>
+        <li>Point 5</li>
+      </ul>
+      <div class="staffquote">
+        <p><a href="#"><strong><img src="images/1280x720placeholder.gif" alt="">Dr Keri Collins</strong></a><br>
+          Lecturer in Mechanical Engineering</p>
+      </div>
     </div>
     <div class="div3 rounded-2"></div>
     <div class="div4">Typical offer<br>
-      <strong>112 - 128</strong><br>
+      <strong class="largetext">112 - 128</strong><br>
       <a href="#">Contextual offers</a> <span class="iconfont" aria-hidden="true">G</span></div>
     <div class="div5">UCAS course code<br>
-      <strong>H604</strong></div>
+      <strong class="largetext">H604</strong></div>
     <div class="div6">Institution code<br>
-      <strong>P60</strong></div>
+      <strong class="largetext">P60</strong></div>
     <div class="div7">Study location<br>
-      <strong>Plymouth</strong></div>
+      <strong class="largetext">Plymouth</strong></div>
     <div class="div8">Duration<br>
-      <strong>3 years (4 years with placement)</strong></div>
+      <strong class="largetext">3 years (4 years with placement)</strong></div>
     <div class="div9">Mode of study<br>
-      <strong>Full time</strong></div>
+      <strong class="largetext">Full time</strong></div>
   </div>
-    <div class="column-5  px-2 mb-2">
-    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260engineering.gif" width="460" height="260" alt="">
-      <p class="blue-link">Engineering Council accredited degree</p>
+  <div class="column-5  px-2 mb-2">
+    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+      <p class="blue-link">1 accreditated</p>
       </a></div>
-    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260imech3.gif" width="460" height="260" alt="">
-      <p class="blue-link">Institution of Mechanical Engineers (IMechE) accredited degree</p>
+    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="460" height="260" alt="">
+      <p class="blue-link">2 accreditated</p>
       </a></div>
-    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260iom3.gif" width="460" height="260" alt="">
-      <p class="blue-link">Composites pathway: Accredited by the Institute of Materials, Minerals and Mining (IoM3)</p>
+    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="460" height="260" alt="">
+      <p class="blue-link">3 accreditated</p>
       </a></div>
-    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260tef.gif" width="460" height="260" alt="">
-      <p class="blue-link">Teaching Excellence Framework Gold</p>
+    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="460" height="260" alt="">
+      <p class="blue-link">4 accreditated</p>
       </a></div>
-    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/engineering/460x260cash.gif" width="460" height="260" alt="">
-      <p class="blue-link">Tamar Engineering Project</p>
+    <div class="card rounded-1 p-1 stroke"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="460" height="260" alt="">
+      <p class="blue-link">5 accreditated</p>
       </a></div>
   </div>
 </main>
