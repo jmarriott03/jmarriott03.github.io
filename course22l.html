@@ -8,8 +8,8 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
+--btn-success: #008a00;
+--btn-success-hov: #063;
 }
 .bck-highlight-light {
     background-color: var(--highlight-light);
@@ -34,7 +34,7 @@ html {
 }
 .navbar a {
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     font-size: 1rem;
     transition: background-color 0.3s;
     margin: 0 auto;
@@ -46,27 +46,27 @@ html {
 .header {
     width: 100%;
 }
-.nav-button-light {
+.nav-button-clearing {
+    color: var(--white);
+    background-color: var(--btn-success);
+    font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+}
+.nav-button-clearing:hover, .nav-button-clearing:focus {
+    color: var(--white);
+    background-color: var(--btn-success-hov);
+}
+.nav-button-openday {
     color: var(--white);
     background-color: var(--btn-primary);
     font-weight: bold;
     border-radius: 0.25rem;
     padding: 0.5rem 0.75rem;
 }
-.nav-button-light:hover, .nav-button-light:focus {
+.nav-button-openday:hover, .nav-button-openday:focus {
     color: var(--white);
     background-color: var(--btn-primary-hov);
-}
-.nav-button-dark {
-    color: var(--white);
-    background-color: var(--btn-danger);
-    font-weight: bold;
-    border-radius: 0.25rem;
-    padding: 0.5rem 0.75rem;
-}
-.nav-button-dark:hover, .nav-button-dark:focus {
-    color: var(--white);
-    background-color: var(--btn-danger-hov);
 }
 .nav-link {
     color: var(--black);
@@ -106,7 +106,7 @@ section :last-child {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <div class="navbar mrfrosty shadow">
-    <div class="w-76"><a href="#section1" class="nav-link" data-section="section1">Overview</a><a href="#section2" class="nav-link" data-section="section2">Structure</a><a href="#section3" class="nav-link" data-section="section3">Teaching</a><a href="#section4" class="nav-link" data-section="section4">Careers</a><a href="#section5" class="nav-link" data-section="section5">Fees</a><a href="#section5" class="nav-link" data-section="section6">Entry</a><a href="#" class="nav-button-dark ">Apply at UCAS.com</a></div>
+    <div class="w-76"><a href="#section1" class="nav-link" data-section="section1">Overview</a><a href="#section2" class="nav-link" data-section="section2">Structure</a><a href="#section3" class="nav-link" data-section="section3">Teaching</a><a href="#section4" class="nav-link" data-section="section4">Careers</a><a href="#section5" class="nav-link" data-section="section5">Fees</a><a href="#section5" class="nav-link" data-section="section6">Entry</a><a href="#" class="nav-button-clearing">Register for clearing</a><a href="#" class="nav-button-openday">Meet us at open day</a></div>
   </div>
   <section id="section1">
     <h2>Overview</h2>
