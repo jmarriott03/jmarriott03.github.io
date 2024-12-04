@@ -11,22 +11,24 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
-* {
-    border: 1px dotted red;
-}
 .bck-highlight-light {
     background-color: var(--highlight-light);
 }
 .bck-highlight-dark {
     background-color: var(--highlight-dark);
 }
+/*
+* {
+    border: 1px dotted red;
+}
+*/
 html {
     scroll-behavior: smooth;
 }
 .navbar {
     position: sticky;
     top: 0;
-    /*    display: flex;*/
+    display: flex;
     padding: 2rem;
     z-index: 1000;
 }
@@ -35,14 +37,11 @@ html {
     padding: 0.5rem;
     font-size: 1rem;
     transition: background-color 0.3s;
-    border-radius: 0.25rem;
-}
-.navbar a:not(:last-child) {
-    margin-right: 1rem;
+    margin: 0 auto;
 }
 .navbar a.active {
-    background-color: rgba(0, 0, 0, 0.2);
-	cursor: default;
+    border-bottom: 2px solid var(--black);
+    cursor: default;
 }
 .header {
     width: 100%;
@@ -51,6 +50,8 @@ html {
     color: var(--white);
     background-color: var(--btn-primary);
     font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
 }
 .nav-button-light:hover, .nav-button-light:focus {
     color: var(--white);
@@ -60,6 +61,8 @@ html {
     color: var(--white);
     background-color: var(--btn-danger);
     font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
 }
 .nav-button-dark:hover, .nav-button-dark:focus {
     color: var(--white);
@@ -69,7 +72,7 @@ html {
     color: var(--black);
 }
 .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--mgrey);
 }
 section {
     max-width: 80em;
@@ -80,10 +83,14 @@ section :last-child {
     margin-bottom: 0;
 }
 .w-76 {
-    max-width: 76rem;
+    max-width: 80rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
 }
 
-@media (max-width: 80em) {
+@media (max-width: 60em) {
 .navbar {
     display: none;
 }
@@ -99,42 +106,41 @@ section :last-child {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <div class="navbar mrfrosty shadow">
-    <div class="w-76"><a href="#section1" class="nav-link" data-section="section1">Section 1</a><a href="#section2" class="nav-link" data-section="section2">Section 2</a><a href="#section3" class="nav-link" data-section="section3">Section 3</a><a href="#section4" class="nav-link" data-section="section4">Section 4</a><a href="#section5" class="nav-link" data-section="section5">Section 5</a><a href="#section5" class="nav-link" data-section="section6">Section 6</a><a href="#" class="nav-button-light">Register for open day</a><a href="#" class="nav-button-dark ">Apply at UCAS.com</a></div>
+    <div class="w-76"><a href="#section1" class="nav-link" data-section="section1">Overview</a><a href="#section2" class="nav-link" data-section="section2">Structure</a><a href="#section3" class="nav-link" data-section="section3">Teaching</a><a href="#section4" class="nav-link" data-section="section4">Careers</a><a href="#section5" class="nav-link" data-section="section5">Fees</a><a href="#section5" class="nav-link" data-section="section6">Entry</a><a href="#" class="nav-button-dark ">Apply at UCAS.com</a></div>
   </div>
   <section id="section1">
-    <h2>Section 1</h2>
+    <h2>Overview</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <button class="btn btn-primary">Register for open day</button>
-    <button class="btn btn-danger">Apply at UCAS.com</button>
   </section>
   <section id="section2" class="bck-lgrey">
-    <h2>Section 2</h2>
+    <h2>Structure</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <section id="section3">
-    <h2>Section 3</h2>
+    <h2>Teaching</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <section id="section4" class="bck-lgrey">
-    <h2>Section 4</h2>
+    <h2>Careers</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <section id="section5">
-    <h2>Section 5</h2>
+    <h2>Fees</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <section id="section6" class="bck-lgrey">
-    <h2>Section 6</h2>
+    <h2>Entry</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
