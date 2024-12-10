@@ -198,7 +198,7 @@ section :last-child {
     // IntersectionObserver setup for section highlighting
     const observerOptions = {
         root: null, // Use the viewport as the root
-        threshold: 0.5 // Trigger when 50% of the section is visible
+        threshold: 1 // Trigger when 50% of the section is visible
     };
 
     const observerCallback = (entries) => {
