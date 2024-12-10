@@ -11,9 +11,11 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
+/*
 * {
-/*    border: 1px dotted red;*/
+    border: 1px dotted red;
 }
+*/
 .bck-highlight-light {
     background-color: var(--highlight-light);
 }
@@ -26,7 +28,6 @@ html {
 .navbar {
     position: sticky;
     top: 0;
-    /*    display: flex;*/
     padding: 2rem;
     z-index: 1000;
 }
@@ -37,6 +38,7 @@ html {
     transition: background-color 0.3s;
     border-radius: 0.25rem;
 	text-align: center;
+	height: 2.6rem;
 }
 .navbar a:not(:last-child) {
     margin-right: 1rem;
@@ -92,7 +94,10 @@ section :last-child {
     width: 100%;
     margin: 0 auto;
 }
-
+.course-title {
+	opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
 @media (max-width: 80em) {
 .navbar {
     display: none;
@@ -123,17 +128,18 @@ section :last-child {
 </head>
 <body>
 <main>
-<!--
-  <section>
-    <h1>Hero placeholder</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </section>
--->
   <img src="images/1280x400babbage.jpg" width="1280" height="400" alt="">
   <div class="navbar mrfrosty shadow">
-    <div class="w-76"><span class="p-half">Electrical and Electronic Engineering</span><a href="#section1" class="nav-link w-5" data-section="section1">About</a><a href="#section2" class="nav-link w-5" data-section="section2">Details</a><a href="#section3" class="nav-link w-7" data-section="section3">Experience</a><a href="#section4" class="nav-link w-5half" data-section="section4">Careers</a><a href="#section5" class="nav-link w-9" data-section="section5">Fees and funds</a><a href="#section5" class="nav-link w-5" data-section="section6">Apply</a></div>
+    <div class="w-76">
+      <span class="course-title">BEng (Hons)<br>
+      <strong>Electrical and Electronic Engineering</strong></span>
+      <a href="#section1" class="nav-link w-5" data-section="section1">About</a>
+      <a href="#section2" class="nav-link w-5" data-section="section2">Details</a>
+      <a href="#section3" class="nav-link w-7" data-section="section3">Experience</a>
+      <a href="#section4" class="nav-link w-5half" data-section="section4">Careers</a>
+      <a href="#section5" class="nav-link w-9" data-section="section5">Fees and funds</a>
+      <a href="#section5" class="nav-link w-5" data-section="section6">Apply</a>
+    </div>
   </div>
   <section id="section1">
     <h2>About placeholder</h2>
@@ -174,7 +180,7 @@ section :last-child {
   </section>
 </main>
 <script>
-    // Get all navigation links
+// Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Function to scroll to the section with an offset for the navbar
@@ -245,6 +251,26 @@ section :last-child {
                 }
             });
     });
+
+// Get the course title and navbar
+const courseTitle = document.querySelector('.course-title');
+const navbar = document.querySelector('.navbar');
+
+// Function to handle opacity of course title
+function checkNavbarSticky() {
+    const navbarOffset = navbar.offsetTop;
+    if (window.scrollY >= navbarOffset) {
+        // Navbar is sticky, set course title to visible
+        courseTitle.style.opacity = 1;
+    } else {
+        // Navbar is not sticky, hide course title
+        courseTitle.style.opacity = 0;
+    }
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', checkNavbarSticky);
+
 </script>
 </body>
 </html>
