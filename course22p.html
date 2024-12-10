@@ -127,8 +127,9 @@ section :last-child {
 </style>
 </head>
 <body>
-<main>
+<main><div class="trigger-course-title">
   <img src="images/1280x400babbage.jpg" width="1280" height="400" alt="">
+	</div>
   <div class="navbar mrfrosty shadow">
     <div class="nav-container">
       <span class="course-title">BEng (Hons)<br>
@@ -252,25 +253,33 @@ section :last-child {
             });
     });
 
-const navbar = document.querySelector('.navbar');
-const courseTitle = document.querySelector('.course-title');
+document.addEventListener('DOMContentLoaded', () => {
+    const courseTitle = document.querySelector('.course-title');
+    const triggerElement = document.querySelector('.trigger-course-title');
 
-// Debounce function to limit the frequency of scroll event handling
-let scrollTimeout;
-function checkNavbarSticky() {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-        const navbarOffset = navbar.offsetTop;
-        if (window.scrollY >= navbarOffset) {
-            courseTitle.style.opacity = 1;
-        } else {
-            courseTitle.style.opacity = 0;
-        }
-    }, 1); // Delay to prevent constant updates
-}
+    // IntersectionObserver options
+    const options = {
+        root: null, // Use the viewport as the root
+        threshold: 0.1 // Trigger when at least 10% of the element is visible
+    };
 
-// Listen for scroll events
-window.addEventListener('scroll', checkNavbarSticky);
+    // Callback function for IntersectionObserver
+    const callback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                courseTitle.style.opacity = '0';
+            } else {
+                courseTitle.style.opacity = '1';
+            }
+        });
+    };
+
+    // Create the observer
+    const observer = new IntersectionObserver(callback, options);
+
+    // Observe the trigger element
+    observer.observe(triggerElement);
+});
 
 </script>
 </body>
