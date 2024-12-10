@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+/*
+--highlight-light: #d99dc7;
+--highlight-dark: #a80075;
+*/
+--highlight-light: #d2d1e0;
+--highlight-dark: #2d276b;
+}
+/*
+* {
+    border: 1px dotted red;
+}
+*/
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto 1fr auto 2rem auto;
+    gap: 0 2rem;/*	gap: 2rem; if 2 columns*/
+}
+.div1 {
+    grid-area: 1 / 1 / 5 / 9;
+}
+.div2 {
+    grid-area: 2 / 2 / 4 / 5;
+}
+.div3 {
+    grid-area: 2 / 5 / 4 / 8;
+}
+.div4 {
+    grid-area: 4 / 2 / 6 / 4;
+}
+.div5 {
+    grid-area: 4 / 4 / 6 / 6;
+}
+.div6 {
+    grid-area: 4 / 6 / 6 / 8;
+}
+.div1, .div4, .div5, .div6 {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 60em) {
+.parent {
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: 2rem repeat(2, auto) 2rem repeat(3, auto);
+    gap: 1rem 0;
+}
+.div1 {
+    grid-area: 1 / 1 / 5 / 4;
+}
+.div2 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.div3 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.div4 {
+    grid-area: 5 / 2 / 6 / 3;
+}
+.div5 {
+    grid-area: 6 / 2 / 7 / 3;
+}
+.div6 {
+    grid-area: 7 / 2 / 8 / 3;
+}
+}
+.highlight-light {
+    color: var(--highlight-light);
+}
+.highlight-dark {
+    color: var(--highlight-dark);
+}
+.btn-rounded-black {
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.btn-rounded-black:hover, .btn-rounded-black:focus {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--black);
+}
+.btn-rounded-white {
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.btn-rounded-white:hover, .btn-rounded-:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+}
+.w-80 {
+    max-width: 80rem;
+}
+.placeholder-width {
+    max-width: 68rem;
+}
+.mrfrosty-dark {
+    background-image: linear-gradient(rgba(45, 39, 107, 0.6), rgba(45, 39, 107, 1));
+    backdrop-filter: blur(0.5rem);
+}
+.undergraduate-tag {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.pt-half {
+    padding-top: 0.5rem;
+}
+.div2-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 60em) {
+.div2-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+}
+.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.shadow-2 {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="placeholder-width p-2">
+    <h2>Placeholder text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <div class="parent">
+    <div class="div1"><img src="images/1920x1080engineering.webp" width="1280" height="720" alt=""></div>
+    <div class="div2 white-text div2-padding">
+      <div class="rounded-2 p-2 mrfrosty-dark shadow">
+        <p class="pt-half"><span class="undergraduate-tag bck-highlight-light black-text">Undergraduate course</span></p>
+        <h3 class="m-0 highlight-light">BEng (Hons)</h3>
+        <div class="text-resize mb-reg">
+          <h1>Electrical and Electronic Engineering</h1>
+        </div>
+        <p>Study engineering at the University of Plymouth for hands-on learning, industry partnerships, and a clear path to employability</p>
+        <!--        <button class="btn-rounded-white">Apply now</button>-->
+        <ul class="no-bullets">
+          <li><span class="iconfont" aria-hidden="true">6</span>Typical offer of <strong>112 UCAS points</strong></li>
+          <li><span class="iconfont" aria-hidden="true">6</span>Accepting applications for <strong>September 2025</strong></li>
+          <li><span class="iconfont" aria-hidden="true">6</span>Foundation year available</li>
+          <li><span class="iconfont" aria-hidden="true">6</span>Study full or part time</li>
+          <li><span class="iconfont" aria-hidden="true">6</span><a href="#">Contextual offers supported</a> <span class="iconfont" aria-hidden="true">G</span></li>
+        </ul>
+      </div>
+    </div>
+    <!--
+    <div class="div3 mt-2 white-text">
+      <div class="rounded-1 p-1 mrfrosty-dark shadow">
+        <p><strong>99</strong> people have viewed today</p>
+      </div>
+    </div>
+-->
+    <div class="div4 rounded-2 p-2 mrfrosty stroke shadow-2">
+      <h2 class="m-0">98%</h2>
+      <p>of Plymouth engineering graduates are employed or in further study within six months of graduation</p>
+    </div>
+    <div class="div5 rounded-2 p-2 mrfrosty stroke shadow-2">
+      <h2 class="m-0">Over 100</h2>
+      <p>industry collaborations ensure you gain hands-on experience through live projects, preparing you for the workforce</p>
+    </div>
+    <div class="div6 rounded-2 p-2 mrfrosty stroke shadow-2">
+      <h2 class="m-0">State-of-the-Art Facilities</h2>
+      <p>Access to advanced engineering labs and the renowned Marine Station</p>
+    </div>
+  </div>
+  <div class="placeholder-width p-2">
+    <h2>Placeholder text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</main>
+<script>
+document.addEventListener("scroll", () => {
+    const heroImages = document.querySelectorAll('.div1 img');
+
+    heroImages.forEach(image => {
+        const rect = image.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Ensure zooming starts only when the image reaches the top of the viewport
+        if (rect.top <= 0 && rect.bottom >= 0) {
+            // Calculate the scroll progress
+            const scrollPercent = Math.min(1, Math.abs(rect.top) / rect.height);
+
+            // Use scrollPercent to determine zoom (adjust scale range as needed)
+            const minScale = 1; // No zoom
+            const maxScale = 1.5; // Maximum zoom
+            const scale = minScale + scrollPercent * (maxScale - minScale);
+
+            // Apply scaling to the image
+            image.style.transform = `scale(${scale})`;
+        } else {
+            // Reset scale if the image is not at the top of the viewport
+            image.style.transform = 'scale(1)';
+        }
+    });
+});
+</script>
+</body>
+</html>
