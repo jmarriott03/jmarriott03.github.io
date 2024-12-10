@@ -252,20 +252,21 @@ section :last-child {
             });
     });
 
-// Get the course title and navbar
-const courseTitle = document.querySelector('.course-title');
 const navbar = document.querySelector('.navbar');
+const courseTitle = document.querySelector('.course-title');
 
-// Function to handle opacity of course title
+// Debounce function to limit the frequency of scroll event handling
+let scrollTimeout;
 function checkNavbarSticky() {
-    const navbarOffset = navbar.offsetTop;
-    if (window.scrollY >= navbarOffset) {
-        // Navbar is sticky, set course title to visible
-        courseTitle.style.opacity = 1;
-    } else {
-        // Navbar is not sticky, hide course title
-        courseTitle.style.opacity = 0;
-    }
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        const navbarOffset = navbar.offsetTop;
+        if (window.scrollY >= navbarOffset) {
+            courseTitle.style.opacity = 1;
+        } else {
+            courseTitle.style.opacity = 0;
+        }
+    }, 10); // Delay to prevent constant updates
 }
 
 // Listen for scroll events
