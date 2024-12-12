@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.rounded-half {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.rounded-quarter {
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <div class="centered black-text bck-highlight-light p-2 rounded-2 shadow mb-reg">
+      <h2>rounded-2 (2rem)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-1 rounded-1 shadow mb-reg">
+      <h2>rounded-1 (1rem)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-1 rounded-half shadow mb-reg">
+      <h2>rounded-half (0.5rem)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-1 rounded-quarter shadow mb-reg">
+      <h2>rounded-quarter (0.25rem)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
