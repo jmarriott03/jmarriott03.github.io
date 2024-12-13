@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gap);
+    max-width: var(--max-width);
+    max-width: 80rem;
+    margin: 1rem auto;
+}
+.container > * {
+    width: 100%;
+}
+.container strong {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+.box {
+    border: 1px solid var(--white);
+}
+.box {
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+.container {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 768px) {
+.container {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <div class="container rounded-1 bck-highlight-light">
+      <div class="box"> UCAS tariff<br>
+        <strong>112 - 128 Contextual offers</strong> <span class="iconfont" aria-hidden="true">G</span></div>
+      <div class="box">UCAS course code<br>
+        <strong>H300</strong></div>
+      <div class="box">Institution code<br>
+        <strong>P60</strong></div>
+      <div class="box">Duration<br>
+        <strong>3 years<br>
+        (+ optional placement)</strong></div>
+      <div class="box">Course type<br>
+        <strong>Full-time</strong></div>
+      <div class="box">Study location<br>
+        <strong>Plymouth</strong></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
