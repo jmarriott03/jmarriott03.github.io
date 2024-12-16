@@ -1,91 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Card Variations Demo</title>
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
 <style>
-	* {border: 1px dotted red;}
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-    background-color: #f4f4f4;
-  }
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+* {
+    border: 1px dotted red;
+}
+.w-80 {
+    max-width: 80rem;
+}
+.topstroke {
+    border-top: 0.25rem solid var(--black);
+    margin-bottom: 2rem;
+}
+.column-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1em;
+}
+.column-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+}
+.column-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    gap: 1em;
+}
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 1em;
+}
+.column-5 > *, .column-4 > *, .column-3 > *, .column-2 > * {
+    width: 100%;
+}
 
-  .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
+@media (max-width: 30rem) {
+.column-5, .column-4, .column-3, .column-2 {
+    grid-template-columns: 1fr; /* Single column layout for narrow screens */
+}
+}
+.card {
     display: flex;
     flex-direction: column;
-  }
-
-  .card img {
+    height: 100%;
+}
+.card > * {
     width: 100%;
-    display: block;
-  }
-
-  .card .content {
+}
+.card img {
+    height: auto;
+}
+.card .content {
     padding: 1rem;
-  }
-
-  /* Variations */
-  /* Image position */
-  .image-top { flex-direction: column; }
-  .image-bottom { flex-direction: column-reverse; }
-
-  /* Padding variations */
-  .padding-1 .content { padding: 1rem; }
-  .padding-2 .content { padding: 2rem; }
-
-  /* Image padding */
-  .image-padding img { padding: 1rem; box-sizing: border-box; }
-
-  /* Rounded corners */
-  .rounded-0-5 { border-radius: 0.5rem; }
-  .rounded-1 { border-radius: 1rem; }
-  .rounded-2 { border-radius: 2rem; }
+}
+.image-top {
+    flex-direction: column;
+}
+.image-bottom {
+    flex-direction: column-reverse;
+}
+.image-padding-1 img {
+    padding: 1rem;
+}
+.image-padding-2 img {
+    padding: 2rem;
+}
+.padding-1 .content {
+    padding: 1rem;
+}
+.padding-2 .content {
+    padding: 2rem;
+}
+.image-bottom > img {
+    background: lime;
+	padding-top: 0;
+}
+.image-top > img {
+    background: orange;
+	padding-bottom: 0;
+}
+	div :last-child {margin-bottom: 0;}
 </style>
 </head>
 <body>
-
-<!-- Example Cards -->
-<div class="card image-top padding-1 image-padding rounded-0-5">
-  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
-  <div class="content">
-    <h3>Card Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<main>
+  <div class="w-80 p-2">
+    <h2>card</h2>
+    <div class="column-4">
+      <div class="card rounded-0-5 stroke image-top"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 1</h3>
+          <p>1</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-bottom"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 2</h3>
+          <p>2</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-top image-padding-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 3</h3>
+          <p>3</p>
+        </div>
+      </div>
+      <div class="card rounded-2 stroke image-bottom image-padding-2 padding-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 4</h3>
+          <p>4</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="card image-bottom padding-2 rounded-1">
-  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
-  <div class="content">
-    <h3>Card Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-</div>
-
-<div class="card image-top padding-1 rounded-2">
-  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
-  <div class="content">
-    <h3>Card Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-</div>
-
-<div class="card image-bottom padding-2 image-padding rounded-0-5">
-  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
-  <div class="content">
-    <h3>Card Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-</div>
-
+</main>
 </body>
 </html>
