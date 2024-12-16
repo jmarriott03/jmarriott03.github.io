@@ -283,6 +283,10 @@ li {
   background-color: var(--black);
   width: 100%;
 }
+.rounded-0-5 {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
 .rounded-1 {
   border-radius: 1rem;
   overflow: hidden;
