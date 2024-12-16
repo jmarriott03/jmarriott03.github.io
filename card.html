@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Variations Demo</title>
+<style>
+	* {border: 1px dotted red;}
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
+
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    display: block;
+  }
+
+  .card .content {
+    padding: 1rem;
+  }
+
+  /* Variations */
+  /* Image position */
+  .image-top { flex-direction: column; }
+  .image-bottom { flex-direction: column-reverse; }
+
+  /* Padding variations */
+  .padding-1 .content { padding: 1rem; }
+  .padding-2 .content { padding: 2rem; }
+
+  /* Image padding */
+  .image-padding img { padding: 1rem; box-sizing: border-box; }
+
+  /* Rounded corners */
+  .rounded-0-5 { border-radius: 0.5rem; }
+  .rounded-1 { border-radius: 1rem; }
+  .rounded-2 { border-radius: 2rem; }
+</style>
+</head>
+<body>
+
+<!-- Example Cards -->
+<div class="card image-top padding-1 image-padding rounded-0-5">
+  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
+  <div class="content">
+    <h3>Card Title</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<div class="card image-bottom padding-2 rounded-1">
+  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
+  <div class="content">
+    <h3>Card Title</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<div class="card image-top padding-1 rounded-2">
+  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
+  <div class="content">
+    <h3>Card Title</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<div class="card image-bottom padding-2 image-padding rounded-0-5">
+  <img src="https://via.placeholder.com/300x150" alt="Placeholder Image">
+  <div class="content">
+    <h3>Card Title</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+</body>
+</html>
