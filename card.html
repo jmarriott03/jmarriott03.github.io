@@ -23,10 +23,6 @@
 .w-80 {
     max-width: 80rem;
 }
-.topstroke {
-    border-top: 0.25rem solid var(--black);
-    margin-bottom: 2rem;
-}
 .column-5 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
@@ -69,63 +65,181 @@
 }
 .card .content {
     padding: 1rem;
+    flex-grow: 1; /* Ensures the content section fills the remaining space */
 }
 .image-top {
     flex-direction: column;
 }
 .image-bottom {
     flex-direction: column-reverse;
+    justify-content: start;
 }
-.image-padding-1 img {
+.image-p-1 img {
     padding: 1rem;
 }
-.image-padding-2 img {
+.image-p-2 img {
     padding: 2rem;
 }
-.padding-1 .content {
+.content-p-1 .content {
     padding: 1rem;
 }
-.padding-2 .content {
+.content-p-2 .content {
     padding: 2rem;
 }
 .image-bottom > img {
-    background: lime;
-	padding-top: 0;
+    padding-top: 0;
 }
 .image-top > img {
-    background: orange;
-	padding-bottom: 0;
+    padding-bottom: 0;
 }
-	div :last-child {margin-bottom: 0;}
+div :last-child {
+    margin-bottom: 0;
+}
 </style>
 </head>
 <body>
 <main>
   <div class="w-80 p-2">
-    <h2>card</h2>
+    <h2>card mixed</h2>
     <div class="column-4">
       <div class="card rounded-0-5 stroke image-top"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
         <div class="content">
           <h3>Card title 1</h3>
-          <p>1</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
         </div>
       </div>
       <div class="card rounded-1 stroke image-bottom"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
         <div class="content">
           <h3>Card title 2</h3>
-          <p>2</p>
+          <p>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
       </div>
-      <div class="card rounded-1 stroke image-top image-padding-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+      <div class="card rounded-1 stroke image-top image-p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
         <div class="content">
           <h3>Card title 3</h3>
-          <p>3</p>
+          <p>Ut enim ad minim veniam, quis</p>
         </div>
       </div>
-      <div class="card rounded-2 stroke image-bottom image-padding-2 padding-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+      <div class="card rounded-2 bck-highlight-dark white-text image-bottom image-p-2 content-p-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
         <div class="content">
           <h3>Card title 4</h3>
-          <p>4</p>
+          <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 p-2">
+    <h2>card rounded-0-5 stroke image-top</h2>
+    <div class="column-4">
+      <div class="card rounded-0-5 stroke image-top"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+        </div>
+      </div>
+      <div class="card rounded-0-5 stroke image-top"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 2</h3>
+          <p>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+      </div>
+      <div class="card rounded-0-5 stroke image-top"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 3</h3>
+          <p>Ut enim ad minim veniam, quis</p>
+        </div>
+      </div>
+      <div class="card rounded-0-5 stroke image-top"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 4</h3>
+          <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 p-2">
+    <h2>card rounded-1 stroke image-bottom</h2>
+    <div class="column-4">
+      <div class="card rounded-1 stroke image-bottom"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-bottom"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 2</h3>
+          <p>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-bottom"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 3</h3>
+          <p>Ut enim ad minim veniam, quis</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-bottom"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 4</h3>
+          <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 p-2">
+    <h2>card rounded-1 stroke image-top image-p-1</h2>
+    <div class="column-4">
+      <div class="card rounded-1 stroke image-top image-p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-top image-p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 2</h3>
+          <p>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-top image-p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 3</h3>
+          <p>Ut enim ad minim veniam, quis</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke image-top image-p-1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 4</h3>
+          <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 p-2">
+    <h2>card rounded-2 bck-highlight-dark white-text image-bottom image-p-2 content-p-2</h2>
+    <div class="column-4">
+      <div class="card rounded-2 bck-highlight-dark white-text image-bottom image-p-2 content-p-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+        </div>
+      </div>
+      <div class="card rounded-2 bck-highlight-dark white-text image-bottom image-p-2 content-p-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 2</h3>
+          <p>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+        </div>
+      </div>
+      <div class="card rounded-2 bck-highlight-dark white-text image-bottom image-p-2 content-p-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 3</h3>
+          <p>Ut enim ad minim veniam, quis</p>
+        </div>
+      </div>
+      <div class="card rounded-2 bck-highlight-dark white-text image-bottom image-p-2 content-p-2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+        <div class="content">
+          <h3>Card title 4</h3>
+          <p><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></p>
         </div>
       </div>
     </div>
