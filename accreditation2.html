@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #39c;
+--highlight-dark: #069;
+}
+* {
+    border: 1px dotted red;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1rem;
+    max-width: 80rem;
+}
+.accreditation {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+.big-icon {
+    font-size: 4rem;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+}
+.accreditation p:first-of-type {
+    margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero-2col layout-33-67">
+    <div class="left-column p-2">
+      <div class="black-text">
+        <h2>How you'll learn on this course</h2>
+        <p>From day one, you'll learn directly from industry-leading experts with global experience. This course will support you to expand your knowledge and develop a critical, questioning approach through intellectually stimulating opportunities to refine and apply your skills.</p>
+      </div>
+    </div>
+    <div class="right-column p-2">
+      <div class="card-container black-text">
+        <div class="accreditation">
+          <p><span class="iconfont big-icon" aria-hidden="true">|</span></p>
+          <p><a href="#">Lectures</a></p>
+        </div>
+        <div class="accreditation">
+          <p><span class="iconfont big-icon" aria-hidden="true">Ä</span></p>
+          <p><a href="#">Tutorials</a></p>
+        </div>
+        <div class="accreditation">
+          <p><span class="iconfont big-icon" aria-hidden="true">&#125;</span></p>
+          <p><a href="#">Seminars</a></p>
+        </div>
+        <div class="accreditation">
+          <p><span class="iconfont big-icon" aria-hidden="true">È</span></p>
+          <p><a href="#">Practical sessions</a></p>
+        </div>
+        <div class="accreditation">
+          <p><span class="iconfont big-icon" aria-hidden="true">'</span></p>
+          <p><a href="#">Virtual learning environment</a></p>
+        </div>
+        <div class="accreditation">
+          <p><span class="iconfont big-icon" aria-hidden="true">.</span></p>
+          <p><a href="#">Independent study</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
