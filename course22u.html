@@ -8,10 +8,6 @@
 <title>University of Plymouth</title>
 <style>
 :root {
-/*
---highlight-light: #d99dc7;
---highlight-dark: #a80075;
-*/
 --highlight-light: #d2d1e0;
 --highlight-dark: #2d276b;
 }
@@ -61,7 +57,7 @@ div :last-child {
     overflow: hidden;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 80em) {
 .parent {
     grid-template-columns: 2rem 1fr 2rem;
     grid-template-rows: 2rem repeat(2, auto) 2rem repeat(3, auto);
@@ -101,7 +97,7 @@ div :last-child {
     line-height: 1.5;
     text-align: left;
     font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-rounded-black:hover, .btn-rounded-black:focus {
     cursor: pointer;
@@ -117,7 +113,7 @@ div :last-child {
     line-height: 1.5;
     text-align: left;
     font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-rounded-white:hover, .btn-rounded-:focus {
     cursor: pointer;
@@ -161,6 +157,30 @@ div :last-child {
 .shadow-2 {
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: var(--max-width);
+    max-width: 80rem;
+    margin: 1rem auto;
+}
+.container > * {
+    width: 100%;
+}
+.container strong {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+.box {
+    padding: 1rem;
+}
+
+@media (max-width: 60rem) {
+.container {
+    grid-template-columns: auto;
+}
+}
 </style>
 </head>
 <body>
@@ -179,12 +199,17 @@ div :last-child {
           <h1>Electrical and Electronic Engineering</h1>
         </div>
         <p>Study engineering at the University of Plymouth for hands-on learning, industry partnerships, and a clear path to employability</p>
-        <ul class="pl-1">
-          <li>Typical offer of <strong>112 UCAS points</strong></li>
-          <li>Accepting applications for <strong>September 2025</strong></li>
-          <li>Foundation year available</li>
-        </ul>
-        <button class="btn-rounded-white">Apply now</button>
+        <div class="container white-text">
+          <div class="box rounded-0-5 stroke">Typical offer<br>
+            <strong>112 UCAS points</strong> </div>
+          <div class="box rounded-0-5 stroke">Accepting applications<br>
+            <strong>September 2025</strong></div>
+          <div class="box rounded-0-5 stroke">Foundation year<br>
+            <strong>Available</strong></div>
+        </div>
+        <div class="pt-1">
+          <button class="btn-rounded-white">Apply now</button>
+        </div>
       </div>
     </div>
     <!--
