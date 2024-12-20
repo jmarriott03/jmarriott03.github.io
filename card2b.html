@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+* {
+/*    border: 1px dotted red;*/
+}
+.w-80 {
+    max-width: 80rem;
+}
+.column-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+    gap: 1em;
+}
+.column-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 1em;
+}
+.column-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    gap: 1em;
+}
+.column-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 1em;
+}
+.column-5 > *, .column-4 > *, .column-3 > *, .column-2 > * {
+    width: 100%;
+}
+
+@media (max-width: 30rem) {
+.column-5, .column-4, .column-3, .column-2 {
+    grid-template-columns: 1fr; /* Single column layout for narrow screens */
+}
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card > * {
+    width: 100%;
+}
+.card img {
+    height: auto;
+}
+.card .content {
+    padding: 1rem;
+    flex-grow: 1; /* Ensures the content section fills the remaining space */
+}
+.image-top {
+    flex-direction: column;
+}
+.image-bottom {
+    flex-direction: column-reverse;
+    justify-content: start;
+}
+.image-p-1 img {
+    padding: 1rem;
+}
+.image-p-2 img {
+    padding: 2rem;
+}
+.content-p-1 .content {
+    padding: 1rem;
+}
+.content-p-2 .content {
+    padding: 2rem;
+}
+.image-bottom > img {
+    padding-top: 0;
+}
+.image-top > img {
+    padding-bottom: 0;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+.left-column {
+    width: calc(var(--left-width) - 1rem); /* Adjust width to account for gap */
+}
+.right-column {
+    width: calc(var(--right-width) - 1rem); /* Adjust width to account for gap */
+}
+
+@media (max-width: 50em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero-2col layout-33-67 w-80 p-2">
+    <div class="left-column">
+      <div class="card rounded-2 bck-highlight-light black-text image-bottom image-p-2 content-p-2"><img src="images/card/card-png01.png" width="1280" height="1242" alt="">
+        <div class="content">
+          <h3>Card title 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+        </div>
+      </div>
+    </div>
+    <div class="right-column">
+      <h2>How you'll learn on this course</h2>
+      <p>From day one, you'll learn directly from industry-leading experts with global experience. This course will support you to expand your knowledge and develop a critical, questioning approach through intellectually stimulating opportunities to refine and apply your skills.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
