@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Hover Arrow</title>
+    <style>
+        /* Base styles for the button */
+        .arrow-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Base styles for the arrow */
+        .arrow {
+            display: inline-block;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+			border: 1px dotted red;
+        }
+
+        /* Hover effect */
+        .arrow-button:hover, .arrow-button:focus {
+            background-color: #2980b9;
+        }
+
+        .arrow-button:hover .arrow, .arrow-button:focus .arrow {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <button class="arrow-button">
+        Hover me <span class="arrow">→</span>
+    </button>
+</body>
+</html>
