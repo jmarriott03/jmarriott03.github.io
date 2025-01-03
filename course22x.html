@@ -12,7 +12,7 @@
 --highlight-dark: #2d276b;
 }
 * {
-    border: 1px dotted red;
+/*    border: 1px dotted red;*/
 }
 .bck-highlight-light {
     background-color: var(--highlight-light);
@@ -133,6 +133,13 @@ div :last-child {
     border-radius: 0.5rem;
     overflow: hidden;
 }
+.undergraduate-tag a {
+    text-decoration: none;
+    color: var(--highlight-dark);
+}
+.undergraduate-tag a:hover, .undergraduate-tag a:focus {
+    text-decoration: underline;
+}
 .pt-half {
     padding-top: 0.5rem;
 }
@@ -177,9 +184,14 @@ div :last-child {
     justify-content: space-between; /* Ensures consistent spacing */
     height: 100%; /* Ensures equal height for all boxes */
 }
+.box p:nth-last-child(2) {
+    margin-bottom: 0;
+}
 .box p:last-child {
     margin-top: auto; /* Pushes the last <p> to the bottom */
     text-align: right;
+    position: relative;
+    top: 0.7rem;
 }
 .letter-spacing-0 {
     letter-spacing: 0;
@@ -190,16 +202,15 @@ div :last-child {
     grid-template-columns: auto;
 }
 }
-
-	.arrowlink .arrow {
+.arrowlink .arrow {
     display: inline-block;
     transition: transform 0.3s ease;
 }
-
 .arrowlink:hover .arrow {
     transform: translateX(0.5rem);
 }
-
+.iconfont {
+}
 </style>
 </head>
 <body>
@@ -212,7 +223,7 @@ div :last-child {
     <div class="div1"><img src="images/1920x1080engineering.webp" width="1280" height="720" alt=""></div>
     <div class="div2 white-text div2-padding">
       <div class="rounded-2 p-2 mrfrosty-dark shadow">
-        <p class="pt-half"><span class="undergraduate-tag bck-highlight-light highlight-dark"><strong>Undergraduate course</strong></span></p>
+        <p class="pt-half"><span class="undergraduate-tag bck-highlight-light highlight-dark"><strong><a href="#">Undergraduate course</a></strong></span></p>
         <h3 class="m-0 highlight-light">BEng (Hons)</h3>
         <div class="text-resize mb-reg">
           <h1>Electrical and Electronic Engineering</h1>
@@ -225,19 +236,18 @@ div :last-child {
             <p><span class="iconfont largetext2 letter-spacing-0" aria-hidden="true">m</span></p>
           </div>
           <div class="box rounded-0-5 bck-highlight-light">
-            <p>Accepting applications<br>
+            <p>Accepting applications for<br>
               <strong>September 2025</strong></p>
             <p><span class="iconfont largetext2 letter-spacing-0" aria-hidden="true">Æ</span></p>
           </div>
           <div class="box rounded-0-5 bck-highlight-light">
-            <p>Foundation year<br>
-              <strong>Available</strong></p>
+            <p>Study <strong>on campus or online</strong></p>
             <p><span class="iconfont largetext2 letter-spacing-0" aria-hidden="true">x</span></p>
           </div>
         </div>
         <div class="pt-1">
-          <button class="btn-rounded-white mr-1">Book an open day</button>
-        <a href="#" class="arrowlink">Start your application <span class="arrow">→</span></a></div>
+          <button class="btn-rounded-white mr-1"><strong>Book an open day</strong></button>
+          <a href="#" class="arrowlink">Start your application <span class="arrow">→</span></a></div>
       </div>
     </div>
     <!--
