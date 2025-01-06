@@ -96,7 +96,6 @@ section :last-child {
     max-width: 86rem;
 }
 .course-title {
-    opacity: 0;
     height: 0;
     overflow: hidden;
     transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -272,10 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const callback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                courseTitle.style.opacity = '0';
                 courseTitle.style.height = '0px';
             } else {
-                courseTitle.style.opacity = '1';
                 courseTitle.style.height = `${dynamicHeight}px`;
             }
         });
