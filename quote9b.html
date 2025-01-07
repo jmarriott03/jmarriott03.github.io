@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #7fbfd7;
+}
+* {
+    border: 1px dotted red;
+}
+.w80 {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.w60 {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.w40 {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.bck-highlight {
+    background-color: var(--highlight);
+}
+.btn-rounded-resize {
+    color: currentColor;
+    border: 2px solid currentColor;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+}
+.btn-rounded-resize:hover {
+    cursor: pointer;
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quote-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.quote-image {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+    font-size: 1rem;
+}
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+.aspectratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+.aspectratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="hero-2col layout-67-33 bck-lgrey mb-reg">
+    <div class="left-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/640x640placeholder-mgrey.gif" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column aspectratio-1-1"><img src="images/640x640placeholder-mgrey.gif" width="640" height="640" alt=""></div>
+  </div>
+  <div class="hero-2col bck-lgrey mb-reg">
+    <div class="left-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/640x640placeholder-mgrey.gif" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column aspectratio-1-1"><img src="images/640x640placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+  </div>
+  <div class="hero-2col layout-33-67 bck-lgrey mb-reg">
+    <div class="left-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/640x640placeholder-mgrey.gif" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column aspectratio-1-1"><img src="images/640x640placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+  </div>
+  <div class="hero-2col layout-33-67 bck-lgrey mb-reg">
+    <div class="left-column aspectratio-1-1"><img src="images/640x640placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/640x640placeholder-mgrey.gif" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-2col bck-lgrey mb-reg">
+    <div class="left-column aspectratio-1-1"><img src="images/640x640placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/640x640placeholder-mgrey.gif" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-2col bck-lgrey layout-67-33 mb-reg">
+    <div class="left-column aspectratio-1-1"><img src="images/640x640placeholder-mgrey.gif" width="1280" height="720" alt=""></div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
+        <div class="quote-container"><img src="images/640x640placeholder-mgrey.gif" alt="Desirae Juurou" class="quote-image">
+          <div class="quote-text">
+            <p><a href="#">Desirae Juurou</a><br>
+              Project manager </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
