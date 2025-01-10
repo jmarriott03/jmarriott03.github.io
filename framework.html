@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <div class="centered stroke p-1 mb-reg">
+      <h2>centered stroke p-1 mb-reg</h2>
+      <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-2 rounded-0-5 shadow mb-reg">
+      <h2>centered black-text bck-highlight-light p-2 rounded-0-5 shadow mb-reg</h2>
+      <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered white-text bck-highlight-dark p-2 rounded-1 shadow mb-reg">
+      <h2>centered white-text bck-highlight-dark p-2 rounded-1 shadow mb-reg</h2>
+      <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered stroke p-2 rounded-1 shadow mb-reg">
+      <h2>centered stroke p-2 rounded-1 shadow mb-reg</h2>
+      <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered stroke p-2 rounded-2 shadow bck-lgrey mb-reg">
+      <h2>centered stroke p-2 rounded-2 shadow bck-lgrey mb-reg</h2>
+      <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="bck-lgrey p-2 mb-reg">
+      <div class="centered p-2 rounded-2 shadow bck-white">
+        <h2>centered p-2 rounded-2 shadow bck-white</h2>
+        <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="backgroundimage p-2 mb-reg">
+      <div class="centered p-2 rounded-2 shadow mrfrosty">
+        <h2>centered p-2 rounded-2 shadow mrfrosty</h2>
+        <p>Loem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <div class="text-resize stroke p-resize centered mb-reg">
+      <h1>text-resize h1</h1>
+      <h2>text-resize h2</h2>
+      <p>text-resize p</p>
+      <p>p-resize</p>
+    </div>
+    <div class="stroke p-1 mb-reg">
+      <h2>Accordion</h2>
+      <details>
+        <summary>
+          <h3>Summary 1</h3>
+        </summary>
+        <p>Details 1</p>
+      </details>
+      <details>
+        <summary>
+          <h3>Summary 2</h3>
+        </summary>
+        <p>Details 2</p>
+        <details>
+          <summary>
+            <h4>Nested summary 1</h4>
+          </summary>
+          <p>Details 3</p>
+        </details>
+        <details>
+          <summary>
+            <h4>Nested summary 2</h4>
+          </summary>
+          <p>Details 4</p>
+        </details>
+      </details>
+    </div>
+    <div class="stroke pt-1 px-1 mb-reg">
+      <h2 class="mb-1">Button colours</h2>
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+      <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+      <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+      <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+      <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+      <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+      <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+      <div class="bck-white"></div>
+    </div>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <p>p</p>
+    <p><strong>strong</strong></p>
+    <p><a href="#">link</a></p>
+    <p><em>em</em></p>
+    <p class="largetext">largetext</p>
+    <p class="largetext2">largetext2</p>
+    <p class="largetext3">largetext3</p>
+    <p class="smalltext">smalltext</p>
+    <p><strong>.p-0</strong> {padding: 0;}<br>
+      <strong>.p-1</strong> {padding: 1em;}<br>
+      <strong>.pt-1</strong> {padding-top: 1em;}<br>
+      <strong>.pr-1</strong> {padding-right: 1em;}<br>
+      <strong>.pb-1</strong> {padding-bottom: 1em;}<br>
+      <strong>.pl-1</strong> {padding-left: 1em;}<br>
+      <strong>.px-1</strong> {padding-left: 1em; padding-right: 1em;}<br>
+      <strong>.py-1</strong> {padding-top: 1em; padding-bottom: 1em;}<br>
+      <strong>.p-2</strong> {padding: 2em;}<br>
+      <strong>.pt-2</strong> {padding-top: 2em;}<br>
+      <strong>.pr-2</strong> {padding-right: 2em;}<br>
+      <strong>.pb-2</strong> {padding-bottom: 2em;}<br>
+      <strong>.pl-2</strong> {padding-left: 2em;}<br>
+      <strong>.px-2</strong> {padding-left: 2em; padding-right: 2em;}<br>
+      <strong>.py-2</strong> {padding-top: 2em; padding-bottom: 2em;}<br>
+      <strong>.m-auto</strong> {margin: auto;}<br>
+      <strong>.m-0</strong> {margin: 0;}<br>
+      <strong>.m-1</strong> {margin: 1em;}<br>
+      <strong>.mt-1</strong> {margin-top: 1em;}<br>
+      <strong>.mr-1</strong> {margin-right: 1em;}<br>
+      <strong>.mb-1</strong> {margin-bottom: 1em;}<br>
+      <strong>.ml-1</strong> {margin-left: 1em;}<br>
+      <strong>.mx-1</strong> {margin-left: 1em; margin-right: 1em;}<br>
+      <strong>.my-1</strong> {margin-top: 1em; margin-bottom: 1em;}<br>
+      <strong>.m-2</strong> {margin: 2em;}<br>
+      <strong>.mt-2</strong> {margin-top: 2em;}<br>
+      <strong>.mr-2</strong> {margin-right: 2em;}<br>
+      <strong>.mb-2</strong> {margin-bottom: 2em;}<br>
+      <strong>.ml-2</strong> {margin-left: 2em;}<br>
+      <strong>.mx-2 </strong>{margin-left: 2em; margin-right: 2em;}<br>
+      <strong>.my-2</strong> {margin-top: 2em; margin-bottom: 2em;}<br>
+      <strong>.mb-reg</strong> {margin-bottom: 1.5em;}<br>
+      <strong>.pb-reg</strong> {padding-bottom: 1.5em;}</p>
+  </section>
+</main>
+</body>
+</html>
