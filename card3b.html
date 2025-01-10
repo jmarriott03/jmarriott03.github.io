@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight: #7fbfd7;
+}
+* {
+    border: 1px dotted red;
+}
+.w-80 {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.w-60 {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.w-40 {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.bck-highlight {
+    background-color: var(--highlight);
+}
+.btn-rounded-resize {
+    color: currentColor;
+    border: 2px solid currentColor;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+}
+.btn-rounded-resize:hover {
+    cursor: pointer;
+}
+.quotestyle:before {
+    font-family: "Times New Roman", serif;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.5em;
+    content: "\275d";
+    display: block;
+    margin-top: 0.2em;
+}
+.quote-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.quote-image {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+    font-size: 1rem;
+}
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+.aspectratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+.aspectratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-2">
+    <div class="rounded-2 stroke p-1">
+      <div class="hero-2col layout-67-33">
+        <div class="left-column p-1">
+          <div class="centered">
+            <h2>Year 1: Experiment &amp; explore</h2>
+            <p> Technical workshops and hands-on activities establish an understanding of professional working methods, including studio practice, analogue processes, digital workflow, bookmaking, and digital and traditional printing.</p>
+            <p> Work with new people in new places in new ways. Whether it is making images on the Dartmoor field trip or working collectively on a brief directed by an industry professional, new opportunities will be available to you. </p>
+            <p>Lectures and seminars contextualise your work through the study of contemporary and historical practices. </p>
+          </div>
+        </div>
+        <div class="right-column p-1"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="1280" height="720" class="rounded-2"></div>
+      </div>
+      <div class="p-1">
+        <details>
+          <summary>
+            <h3>Core modules</h3>
+          </summary>
+          <p>Details 1</p>
+        </details>
+        <details>
+          <summary>
+            <h3>Optional modules</h3>
+          </summary>
+          <p>Details 2</p>
+          <details>
+            <summary>
+              <h4>Nested summary 1</h4>
+            </summary>
+            <p>Details 3</p>
+          </details>
+          <details>
+            <summary>
+              <h4>Nested summary 2</h4>
+            </summary>
+            <p>Details 4</p>
+          </details>
+        </details>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
