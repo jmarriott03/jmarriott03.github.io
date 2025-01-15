@@ -67,12 +67,12 @@ details[open] > summary::before {
     margin-bottom: 1.5em;
 }
 .tab-header button {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: bold;
     line-height: 1.5;
-    border-radius: 0.25rem;
-    padding: 0.5rem 0.75rem;
-    margin: 1rem 1rem 0 0;
+    border-radius: 0.25em;
+    padding: 0.5em 0.75em;
+    margin: 1em 1em 0 0;
     text-decoration: none;
     cursor: default;
     display: block;
@@ -133,13 +133,82 @@ details[open] > summary::before {
     transition: transform 0.3s ease;
 }
 .arrowlink:hover .arrow, .arrowlink:focus .arrow {
-    transform: translateX(0.5rem);
+    transform: translateX(0.5em);
 }
 .stroke-highlight-dark {
     outline: 2px solid var(--highlight-dark);
     outline-offset: -2px;
     overflow: hidden;
 }
+	
+	
+	
+	
+	.keyfacts {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: var(--gap);
+    max-width: var(--max-width);
+    max-width: 80em;
+    outline: 1em solid var(--highlight-dark);
+    outline-offset: -1em;
+}
+.keyfacts > * {
+    width: 100%;
+}
+.keyfacts strong {
+    font-size: 1.25em;
+    line-height: 1;
+}
+.box {
+    border: 1px solid var(--white);
+}
+.box {
+    padding: 1em;
+}
+
+@media (max-width: 1024px) {
+.keyfacts {
+    grid-template-columns: repeat(3, auto);
+}
+}
+
+@media (max-width: 768px) {
+.keyfacts {
+    grid-template-columns: repeat(2, auto);
+}
+}
+	
+	
+	
+	
+	
+	
+	
+	.btn-rounded {
+    color: var(--white);
+/*    border: 2px solid var(--white);*/
+		background-color: var(--highlight-dark);
+    border-radius: 2em;
+    padding: 0.5em;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1em;
+		font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-rounded:hover, .btn-rounded-:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--highlight-light);
+}
+	
+	
+	
+	
+	
+	
+	
 </style>
 </head>
 <body class="p-2">
@@ -210,12 +279,44 @@ details[open] > summary::before {
           <p>Content</p>
         </details>
 		  
-		  <details>
+		  <details  class="mb-2">
           <summary>
             <h3>GCSE</h3>
           </summary>
           <p>Content</p>
         </details>
+		  
+		  <h2>Ready to apply?</h2>
+		  <p>All applications for undergraduate courses are made through UCAS.com. Please refer to the course facts below when completing your application for this course.</p>
+		  
+		  
+		   <div class="keyfacts rounded-1 bck-highlight-dark white-text mb-reg">
+      
+      <div class="box">UCAS code<br>
+        <strong>H300</strong></div>
+      <div class="box">Institution code<br>
+        <strong>P60</strong></div>
+      <div class="box">Duration<br>
+        <strong>3 years<br>
+        (+ optional placement)</strong></div>
+      <div class="box">Mode of study<br>
+        <strong>Full-time</strong></div>
+      <div class="box">Location<br>
+        <strong>Plymouth</strong></div>
+			   
+			   <div class="box">Start date<br>
+        <strong>September 2025</strong></div>
+    </div>
+		  
+          <button class="btn-rounded">Apply at UCAS.com</button>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
 		  
 		  
       </div>
