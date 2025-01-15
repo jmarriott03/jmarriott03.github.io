@@ -12,9 +12,11 @@
 --highlight-light: #ecc1d8;
 --highlight-dark: #811850;
 }
+/*
 * {
     border: 1px dotted red;
 }
+*/
 .c-highlight-light {
     color: var(--highlight-dark);
 }
@@ -140,11 +142,7 @@ details[open] > summary::before {
     outline-offset: -2px;
     overflow: hidden;
 }
-	
-	
-	
-	
-	.keyfacts {
+.keyfacts {
     display: grid;
     grid-template-columns: repeat(6, auto);
     gap: var(--gap);
@@ -167,34 +165,27 @@ details[open] > summary::before {
     padding: 1em;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 60em) {
 .keyfacts {
     grid-template-columns: repeat(3, auto);
 }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 40em) {
 .keyfacts {
     grid-template-columns: repeat(2, auto);
 }
 }
-	
-	
-	
-	
-	
-	
-	
-	.btn-rounded {
+.btn-rounded {
     color: var(--white);
-/*    border: 2px solid var(--white);*/
-		background-color: var(--highlight-dark);
+    background-color: var(--highlight-dark);
     border-radius: 2em;
     padding: 0.5em;
     line-height: 1.5;
     text-align: left;
     font-size: 1em;
-		font-weight: bold;
+    font-weight: bold;
+    border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn-rounded:hover, .btn-rounded-:focus {
@@ -202,13 +193,20 @@ details[open] > summary::before {
     color: var(--black);
     background-color: var(--highlight-light);
 }
-	
-	
-	
-	
-	
-	
-	
+.route {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+.route-img {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.route-text {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.route-img, .route-text {
+    width: 100%;
+}
 </style>
 </head>
 <body class="p-2">
@@ -217,18 +215,11 @@ details[open] > summary::before {
     <div class="text-resize-light c-highlight-dark">
       <h2>Apply for this course</h2>
     </div>
-	  
-	  
     <div class="tab-header">
       <button class="tab-btn active" data-tab="one">UK applications</button>
       <button class="tab-btn" data-tab="two">International applications</button>
     </div>
     <div class="tab-content">
-		
-		 
-		 
-		
-		
       <div class="tab-panel active" id="tab-one">
         <h2>Entry requirements</h2>
         <div class="rounded-1 p-1 bck-highlight-dark white-text mb-reg">
@@ -236,89 +227,76 @@ details[open] > summary::before {
             <strong class="largetext">112 UCAS points</strong></p>
           <p><a href="#" class="arrowlink">You may be eligible for a contextual offer <span class="arrow iconfont">"</span></a></p>
         </div>
-		 
-		   <details>
+        <details>
           <summary>
             <h3>A level</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <details>
+        <details>
           <summary>
             <h3>International Baccalaureate</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <details>
+        <details>
           <summary>
             <h3>BTEC RQF National Extended Diploma / QCF Extended Diploma</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <details>
+        <details>
           <summary>
             <h3>Irish leaving certificate</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <details>
+        <details>
           <summary>
             <h3>SQA Advanced Higher</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <details>
+        <details>
           <summary>
             <h3>Access to HE Diploma</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <details  class="mb-2">
+        <details  class="mb-2">
           <summary>
             <h3>GCSE</h3>
           </summary>
           <p>Content</p>
         </details>
-		  
-		  <h2>Ready to apply?</h2>
-		  <p>All applications for undergraduate courses are made through UCAS.com. Please refer to the course facts below when completing your application for this course.</p>
-		  
-		  
-		   <div class="keyfacts rounded-1 bck-highlight-dark white-text mb-reg">
-      
-      <div class="box">UCAS code<br>
-        <strong>H300</strong></div>
-      <div class="box">Institution code<br>
-        <strong>P60</strong></div>
-      <div class="box">Duration<br>
-        <strong>3 years<br>
-        (+ optional placement)</strong></div>
-      <div class="box">Mode of study<br>
-        <strong>Full-time</strong></div>
-      <div class="box">Location<br>
-        <strong>Plymouth</strong></div>
-			   
-			   <div class="box">Start date<br>
-        <strong>September 2025</strong></div>
-    </div>
-		  
-          <button class="btn-rounded">Apply at UCAS.com</button>
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+        <h2>Ready to apply?</h2>
+        <p>All applications for undergraduate courses are made through UCAS.com. Please refer to the course facts below when completing your application for this course.</p>
+        <div class="keyfacts rounded-1 bck-highlight-dark white-text mb-reg">
+          <div class="box">UCAS code<br>
+            <strong>H300</strong></div>
+          <div class="box">Institution code<br>
+            <strong>P60</strong></div>
+          <div class="box">Duration<br>
+            <strong>3 years<br>
+            (+ optional placement)</strong></div>
+          <div class="box">Mode of study<br>
+            <strong>Full-time</strong></div>
+          <div class="box">Location<br>
+            <strong>Plymouth</strong></div>
+          <div class="box">Start date<br>
+            <strong>September 2025</strong></div>
+        </div>
+        <button class="btn-rounded mb-reg">Apply at UCAS.com</button>
+        <h2>Other routes to this course</h2>
+        <div class="rounded-1 stroke">
+          <div class="route">
+            <div class="route-img"><img src="images/1920x1080engineering2.webp" width="1920" height="1080" alt=""/></div>
+            <div class="route-text p-1 centered">
+              <p><strong><a href="#">BEng (Hons) Mechanical Engineering with Foundation Year</a></strong><br>
+                Don't have the traditional entry requirements to start a degree? Get a solid grounding in the disciplines underpinning mechanical engineering through an additional foundation year.</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="tab-panel" id="tab-two">
         <h2>International applications</h2>
@@ -328,14 +306,7 @@ details[open] > summary::before {
   </div>
 </main>
 <script>
-
-	
-	
-	
-	
-	
-	
-	const tabButtons = document.querySelectorAll('.tab-btn');
+const tabButtons = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 const tabContent = document.querySelector('.tab-content');
 let currentPanel = document.querySelector('.tab-panel.active');
@@ -391,12 +362,6 @@ tabButtons.forEach(button => {
         activateTab(newPanel);
     });
 });
-
-	
-	
-	
-	
-
-    </script>
+</script>
 </body>
 </html>
