@@ -148,36 +148,92 @@ details[open] > summary::before {
     <div class="text-resize-light c-highlight-dark">
       <h2>Apply for this course</h2>
     </div>
+	  
+	  
     <div class="tab-header">
       <button class="tab-btn active" data-tab="one">UK applications</button>
       <button class="tab-btn" data-tab="two">International applications</button>
     </div>
     <div class="tab-content">
+		
+		 
+		 
+		
+		
       <div class="tab-panel active" id="tab-one">
         <h2>Entry requirements</h2>
-        <div class="rounded-1 p-1 bck-highlight-dark white-text">
+        <div class="rounded-1 p-1 bck-highlight-dark white-text mb-reg">
           <p>Our typical offer<br>
             <strong class="largetext">112 UCAS points</strong></p>
           <p><a href="#" class="arrowlink">You may be eligible for a contextual offer <span class="arrow iconfont">"</span></a></p>
         </div>
+		 
+		   <details>
+          <summary>
+            <h3>Core modules</h3>
+          </summary>
+          <p>Details 1</p>
+        </details>
+		  
+		  
       </div>
       <div class="tab-panel" id="tab-two">
         <h2>International applications</h2>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
   </div>
 </main>
 <script>
 
-		
-const tabButtons = document.querySelectorAll('.tab-btn');
+	
+	
+	
+	
+	
+	
+	const tabButtons = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 const tabContent = document.querySelector('.tab-content');
 let currentPanel = document.querySelector('.tab-panel.active');
 
-// Set initial height of tab-content
-tabContent.style.height = `${currentPanel.offsetHeight}px`;
+function activateTab(newPanel) {
+    // Measure the current height before the change
+    const startHeight = tabContent.offsetHeight;
+
+    // Start fading out the current panel
+    currentPanel.style.opacity = '0';
+
+    // Measure the new panel's height immediately
+    const endHeight = newPanel.offsetHeight;
+
+    // Set the initial height for transition
+    tabContent.style.height = `${startHeight}px`;
+
+    // Force reflow to ensure the height change is applied
+    tabContent.offsetHeight; // Trigger reflow
+
+    // Trigger height transition and prepare to fade in the new panel
+    tabContent.style.height = `${endHeight}px`;
+
+    // Wait for the opacity transition to complete (300ms)
+    currentPanel.addEventListener('transitionend', () => {
+        currentPanel.classList.remove('active');
+        currentPanel.style.opacity = ''; // Reset opacity
+
+        // Activate the new panel
+        newPanel.classList.add('active');
+        newPanel.style.opacity = '1'; // Ensure it's fully visible
+
+        // Set height to auto after the height transition ends
+        tabContent.addEventListener('transitionend', () => {
+            tabContent.style.height = 'auto';
+        }, { once: true });
+
+        // Update the current panel reference
+        currentPanel = newPanel;
+    }, { once: true });
+}
 
 tabButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -187,22 +243,16 @@ tabButtons.forEach(button => {
         tabButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
-        // Start fade-out of the current panel
-        currentPanel.classList.remove('active');
-
-        // Delay activating the new panel to allow fade-out to complete
-        setTimeout(() => {
-            // Set the new panel as active
-            currentPanel = document.querySelector(`#tab-${button.dataset.tab}`);
-            currentPanel.classList.add('active');
-
-            // Smoothly transition the height of tab-content
-            tabContent.style.height = `${currentPanel.offsetHeight}px`;
-        }, 300); // Match this delay to the opacity transition duration (300ms)
+        // Find the corresponding new panel
+        const newPanel = document.querySelector(`#tab-${button.dataset.tab}`);
+        activateTab(newPanel);
     });
 });
 
-
+	
+	
+	
+	
 
     </script>
 </body>
