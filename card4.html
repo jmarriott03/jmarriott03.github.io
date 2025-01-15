@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #ecc1d8;
+--highlight-dark: #811850;
+}
+* {
+    border: 1px dotted red;
+}
+.c-highlight-light {
+    color: var(--highlight-dark);
+}
+.c-highlight-dark {
+    color: var(--highlight-dark);
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.w-60 {
+    max-width: 60em;
+    overflow: hidden;
+}
+.w-60 :last-child {
+    margin-bottom: 0;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+/* Float buttons left */
+.tab-header {
+    overflow: hidden; /* Clear the floated buttons */
+    margin-bottom: 1.5em;
+}
+.tab-header button {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 1rem 1rem 0 0;
+    text-decoration: none;
+    cursor: default;
+    display: block;
+    border: none;
+    float: left;
+    -webkit-appearance: none;
+    outline-offset: 2px;
+    transition: 0.3s;
+    color: var(--black);
+    background-color: var(--lgrey);
+}
+.tab-header button.active {
+    color: var(--white);
+    background-color: var(--highlight-dark);
+}
+.tab-header button:hover, .tab-header button:focus {
+    color: var(--white);
+    background-color: var(--highlight-dark);
+}
+.tab-content {
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s ease; /* Smooth height transition */
+}
+.tab-panel {
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    visibility: hidden;
+}
+.tab-panel.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    visibility: visible;
+    height: auto;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+.text-resize-light h2 {
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+/*Media queries*/
+@media (max-width: 80em) {
+.text-resize-light h2 {
+    font-size: 1.5em;
+}
+}
+.arrowlink .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.arrowlink:hover .arrow, .arrowlink:focus .arrow {
+    transform: translateX(0.5rem);
+}
+.stroke-highlight-dark {
+    outline: 2px solid var(--highlight-dark);
+    outline-offset: -2px;
+    overflow: hidden;
+}
+</style>
+</head>
+<body class="p-2">
+<main>
+  <div class="w-60 p-2 rounded-2 stroke-highlight-dark">
+    <div class="text-resize-light c-highlight-dark">
+      <h2>Apply for this course</h2>
+    </div>
+    <div class="tab-header">
+      <button class="tab-btn active" data-tab="one">UK applications</button>
+      <button class="tab-btn" data-tab="two">International applications</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-panel active" id="tab-one">
+        <h2>Entry requirements</h2>
+        <div class="rounded-1 p-1 bck-highlight-dark white-text">
+          <p>Our typical offer<br>
+            <strong class="largetext">112 UCAS points</strong></p>
+          <p><a href="#" class="arrowlink">You may be eligible for a contextual offer <span class="arrow iconfont">"</span></a></p>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-two">
+        <h2>International applications</h2>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+
+		
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+const tabContent = document.querySelector('.tab-content');
+let currentPanel = document.querySelector('.tab-panel.active');
+
+// Set initial height of tab-content
+tabContent.style.height = `${currentPanel.offsetHeight}px`;
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (button.classList.contains('active')) return; // Prevent action if already active
+
+        // Remove active class from current button
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Start fade-out of the current panel
+        currentPanel.classList.remove('active');
+
+        // Delay activating the new panel to allow fade-out to complete
+        setTimeout(() => {
+            // Set the new panel as active
+            currentPanel = document.querySelector(`#tab-${button.dataset.tab}`);
+            currentPanel.classList.add('active');
+
+            // Smoothly transition the height of tab-content
+            tabContent.style.height = `${currentPanel.offsetHeight}px`;
+        }, 300); // Match this delay to the opacity transition duration (300ms)
+    });
+});
+
+
+
+    </script>
+</body>
+</html>
