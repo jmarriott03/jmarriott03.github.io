@@ -193,25 +193,67 @@ details[open] > summary::before {
     color: var(--black);
     background-color: var(--highlight-light);
 }
-.route {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
+.p-resize2 {
+    padding: 2em;
 }
-.route-img {
-    grid-area: 1 / 1 / 2 / 2;
+.rounded-resize {
+    border-radius: 2em;
+    overflow: hidden;
 }
-.route-text {
-    grid-area: 1 / 2 / 2 / 3;
+
+@media (max-width: 60em) {
+.p-resize2 {
+    padding: 1em;
 }
-.route-img, .route-text {
+.rounded-resize {
+    border-radius: 1em;
+    overflow: hidden;
+}
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
     width: 100%;
+}
 }
 </style>
 </head>
-<body class="p-2">
+<body class="p-resize2">
 <main>
-  <div class="w-60 p-2 rounded-2 stroke-highlight-dark">
+  <div class="w-60 p-resize2 rounded-resize stroke-highlight-dark">
     <div class="text-resize-light c-highlight-dark">
       <h2>Apply for this course</h2>
     </div>
@@ -288,14 +330,14 @@ details[open] > summary::before {
         </div>
         <button class="btn-rounded mb-reg">Apply at UCAS.com</button>
         <h2>Other routes to this course</h2>
-        <div class="rounded-1 stroke">
-          <div class="route">
-            <div class="route-img"><img src="images/1920x1080engineering2.webp" width="1920" height="1080" alt=""/></div>
-            <div class="route-text p-1 centered">
+        <div class="hero-2col bck-highlight mb-reg rounded-1 stroke">
+          <div class="left-column p-1">
+            <div class="centered quotestyle">
               <p><strong><a href="#">BEng (Hons) Mechanical Engineering with Foundation Year</a></strong><br>
                 Don't have the traditional entry requirements to start a degree? Get a solid grounding in the disciplines underpinning mechanical engineering through an additional foundation year.</p>
             </div>
           </div>
+          <div class="right-column"><img src="images/1920x1080engineering2.webp" width="1920" height="1080" alt=""></div>
         </div>
       </div>
       <div class="tab-panel" id="tab-two">
