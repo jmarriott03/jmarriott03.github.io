@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.p-resize2 {
+    padding: 2em;
+}
+.rounded-0 {
+    border-radius: 0;
+}
+.rounded-resize {
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+@media (max-width: 60em) {
+.p-resize2 {
+    padding: 1em;
+}
+.rounded-resize {
+    border-radius: 1em;
+}
+}
+/* Add default corner radius */
+div {
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+/* Override default for divs with an explicit border-radius in inline styles */
+div[style*="border-radius"] {
+    border-radius: initial;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <h1>div border-radius</h1>
+    <div class="centered white-text bck-highlight-dark p-2 shadow mb-reg">
+      <h2>rounded auto (0.5em)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered white-text bck-highlight-dark p-2 shadow mb-reg">
+      <h2>rounded auto (0.5em)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+      <div class="centered black-text bck-white p-1 mb-reg">
+        <p>Nested rounded auto (0.5em)</p>
+      </div>
+      <div class="centered black-text bck-highlight-light rounded-1 p-1 mb-reg">
+        <p>Nested rounded-1 (1em)</p>
+      </div>
+      <div class="centered black-text bck-highlight-light rounded-0 p-1">
+        <p>Nested rounded-0 (0)</p>
+      </div>
+    </div>
+    <div class="centered black-text bck-highlight-light p-2 rounded-2 shadow mb-reg">
+      <h2>rounded-2 (2em)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-1 rounded-1 shadow mb-reg">
+      <h2>rounded-1 (1em)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-1 rounded-0-5 shadow mb-reg">
+      <h2>rounded-0-5 (0.5em)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered black-text bck-highlight-light p-resize2 rounded-resize shadow mb-reg">
+      <h2>rounded-resize (2em - 1em below 60em)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="centered white-text bck-highlight-dark p-2 rounded-0 shadow mb-reg">
+      <h2>rounded-0 (0)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
