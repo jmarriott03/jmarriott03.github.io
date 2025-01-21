@@ -28,81 +28,45 @@ main {
     display: flex;
     justify-content: center; /* Center horizontally */
 }
-/*
-.btn2 {
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 1.4;
-    border-radius: 0.25em;
-    padding: 0.5em 0.75em;
-    margin: 0 1em 1em 0;
-    text-decoration: none;
-    cursor: default;
-    border: none;
-    -webkit-appearance: none;
-    outline-offset: 2px;
-    transition: 0.3s;
-}
-*/
 form {
-    display: flex; /* Aligns input and button in a row */
-    align-items: center; /* Aligns items vertically */
-    gap: 0.5em; /* Adds spacing between input and button */
+    display: flex; /* Align input and SVG button in a row */
+    align-items: center; /* Vertically align elements */
+    gap: 0.5em; /* Add spacing between input and button */
 }
-.btn2 {
+input[type="text"] {
     font-size: 1em;
-    font-weight: bold;
-    line-height: 1;
-    border-radius: 50%; /* Makes the button circular */
-    padding: 0; /* Remove default padding */
-    width: 3em; /* Set equal width */
-    height: 3em; /* Set equal height */
-    text-decoration: none;
-    cursor: default;
-    border: none;
-    -webkit-appearance: none;
-    outline-offset: 2px;
-    transition: 0.3s;
-    display: flex; /* Center text inside */
-    justify-content: center;
-    align-items: center;
-}
-input[type="submit"] {
-    padding: 0; /* Remove default padding */
-    width: 3em; /* Set equal width */
-    height: 3em; /* Set equal height */
-    border-radius: 50%; /* Makes the button circular */
-    color: var(--lgrey);
-    background-color: var(--link);
-    border: none;
-    cursor: pointer;
-    display: flex; /* Center text inside */
-    justify-content: center;
-    align-items: center;
-}
-	
-	
-	
-	
-	
-input[type="text"], input[type="submit"], input[type="button"] {
-    font-size: 1em;
-    padding: 0.5em;
+    padding: 0 0.75em; /* Adjust padding */
     text-transform: lowercase; /* Makes the text visually lowercase */
+    height: 2em; /* Consistent height for the input */
+    box-sizing: border-box; /* Ensure padding doesn't affect total height */
+    border: none; /* Remove border */
+    background: #ccc; /* Background color for the input */
+    border-radius: 1em; /* Optional: rounded corners */
+    color: #000; /* Text color */
+    width: 10em;
 }
-/*
-input[type=submit] {
-    padding: 0.5em;
-    background: var(--mgrey);
-    ;
-    border: 0 none;
+input[type="text"]:focus {
+    outline: none; /* Remove focus outline */
+}
+.svg-btn {
+    width: 2.5em; /* Set SVG width */
+    height: 2.5em; /* Set SVG height */
     cursor: pointer;
-    -webkit-border-radius: 0.25em;
-    border-radius: 0.25em;
-    color: var(--lgrey);
-    background-color: var(--link);
+    border: none;
+    background: none;
+    display: flex; /* Center SVG content */
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove default padding */
+    transition: transform 0.3s, fill 0.3s; /* Smooth transitions */
 }
-*/
+.svg-btn svg {
+    fill: var(--black); /* Default foreground color */
+    transition: fill 0.3s; /* Smooth transition for color */
+}
+.svg-btn:hover svg {
+    fill: var(--dgrey); /* Change foreground color on hover */
+}
 </style>
 </head>
 <body>
@@ -111,7 +75,11 @@ input[type=submit] {
     <form onsubmit="return process();">
       jmarriott03.github.io/
       <input type="text" name="url" id="url" autofocus autocapitalize="none">
-      <input type="submit" value="go" class="btn2 btn-primary">
+      <button type="submit" class="svg-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.1 170.1" aria-label="Submit">
+        <path d="M131.8,85l-70.9,40.9V44.1l70.9,40.9ZM170.1,85C170.1,38.1,132,0,85,0S0,38.1,0,85s38.1,85,85,85,85-38.1,85-85" />
+      </svg>
+      </button>
     </form>
   </div>
 </main>
