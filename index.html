@@ -1,94 +1,107 @@
 <!doctype html>
-<html>
-
-<!--CODE BY JAMIE MARRIOTT-->
-
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jamie Marriott</title>
-<style type="text/css">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
 * {
-	margin: 0 auto;
+    border: 1px dotted red;
 }
-* + * {
-	margin-top: 1em;
+*/
+.bck-highlight-light {
+    background-color: var(--highlight-light);
 }
-html, body {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	margin: 0;
-	font-size: 20px;
-	font-family: sans-serif;
-	line-height: 1.5em;
-	color: #111;
-	background-color: #FAFAFA;
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
 }
-h2 {
-	font-size: 1.2em;
-	line-height: 1.5em;
-	font-weight: 700;
+div :last-child {
+    margin-bottom: 0;
 }
-a {
-	color: #00E;
+main {
+    display: flex;
+    justify-content: center; /* Center horizontally */
 }
-p {
-	clear: both;
+form {
+    display: flex; /* Align input and SVG button in a row */
+    align-items: center; /* Vertically align elements */
+    gap: 0.5em; /* Add spacing between input and button */
 }
-strong {
-	font-weight: bold;
+input[type="text"] {
+    font-size: 1em;
+    padding: 1em;  Adjust padding 
+    text-transform: lowercase; /* Makes the text visually lowercase */
+    height: 2em; /* Consistent height for the input */
+    box-sizing: border-box; /* Ensure padding doesn't affect total height */
+    border: none; /* Remove border */
+    background: var(--lgrey); /* Background color for the input */
+    border-radius: 1em; /* Optional: rounded corners */
+    color: var(--black); /* Text color */
+    width: 10em;
 }
-em {
-	font-style: italic;
+input[type="text"]:focus {
+    outline: none; /* Remove focus outline */
 }
-ul {
-	margin: 0;
-	padding: 0 0 0 2em;
+.svg-btn {
+    width: 2.5em; /* Set SVG width */
+    height: 2.5em; /* Set SVG height */
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex; /* Center SVG content */
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove default padding */
+    transition: transform 0.3s, fill 0.3s; /* Smooth transitions */
 }
-li {
-	margin: 0.5em 0 0 0;
+.svg-btn svg {
+    fill: var(--black); /* Default foreground color */
+    transition: fill 0.3s; /* Smooth transition for color */
 }
-.textbox {
-	max-width: 34em;
-	overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 1em;
-}
-input[type="text"], input[type="submit"], input[type="button"] {
-	font-size: 20px;
-	padding: .25em;
-	margin: 0 0.1em;
-}
-input[type=submit] {
-	padding: 0.25em 0.5em;
-	background: #ccc;
-	border: 0 none;
-	cursor: pointer;
-	-webkit-border-radius: 0.25em;
-	border-radius: 0.25em;
-	color: #EEE;
-	background-color: #08C;
+.svg-btn:hover svg, .svg-btn:focus svg {
+    fill: var(--dgrey); /* Change foreground color on hover */
 }
 </style>
-<script>
-function process()
-{
-var url="https://jmarriott03.github.io/" + document.getElementById("url").value + ".html";
-location.href=url;
-return false;
-}
-</script>
 </head>
-
 <body>
-<div class="textbox">
-  <form onSubmit="return process();">
-    jmarriott03.github.io/
-    <input type="text" name="url" id="url" autofocus autocapitalize="none">
-    <input type="submit" value="Go">
-  </form>
-</div>
+<main>
+  <div class="p-2">
+    <form onsubmit="return process();">
+      jmarriott03.github.io/
+      <input type="text" name="url" id="url" autofocus autocapitalize="none">
+      <button type="submit" class="svg-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.1 170.1" aria-label="Submit">
+        <path d="M131.8,85l-70.9,40.9V44.1l70.9,40.9ZM170.1,85C170.1,38.1,132,0,85,0S0,38.1,0,85s38.1,85,85,85,85-38.1,85-85" />
+      </svg>
+      </button>
+    </form>
+  </div>
+</main>
+<script>
+function process() {
+    // Get the value from the text box, convert to lowercase
+    var userInput = document.getElementById("url").value.toLowerCase();
+    // Construct the URL
+    var url = "https://jmarriott03.github.io/" + userInput + ".html";
+    // Redirect to the constructed URL
+    location.href = url;
+    return false;
+}
+
+// Automatically convert input value to lowercase while typing
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("url").addEventListener("input", function() {
+        this.value = this.value.toLowerCase();
+    });
+});
+</script>
 </body>
 </html>
