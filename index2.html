@@ -1,77 +1,71 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>jamie marriott</title>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
 <style>
-/* Styling */
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
 * {
-	margin: 0 auto;
+    border: 1px dotted red;
 }
-* + * {
-	margin-top: 1em;
+.bck-highlight-light {
+    background-color: var(--highlight-light);
 }
-html, body {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	margin: 0;
-	font-size: 20px;
-	font-family: sans-serif;
-	line-height: 1.5em;
-	color: #111;
-	background-color: #fff;
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
 }
-h2 {
-	font-size: 1.2em;
-	line-height: 1.5em;
-	font-weight: 700;
+div :last-child {
+    margin-bottom: 0;
 }
-a {
-	color: #00e;
-}
-p {
-	clear: both;
-}
-strong {
-	font-weight: bold;
-}
-em {
-	font-style: italic;
-}
-ul {
-	margin: 0;
-	padding: 0 0 0 2em;
-}
-li {
-	margin: 0.5em 0 0 0;
-}
-.textbox {
-	max-width: 34em;
-	overflow: hidden;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 1em;
+	
+.btn2 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.3;
+  border-radius: 0.25em;
+  padding: 0.5em 0.75em;
+  margin: 0 1em 1em 0;
+  text-decoration: none;
+  cursor: default;
+  border: none;
+  -webkit-appearance: none;
+  outline-offset: 2px;
+  transition: 0.3s;
 }
 input[type="text"], input[type="submit"], input[type="button"] {
-	font-size: 20px;
-	padding: .25em;
-	margin: 0 0.1em;
+	font-size: 1em;
+	padding: 0.5em;
     text-transform: lowercase; /* Makes the text visually lowercase */
 }
 input[type=submit] {
-	padding: 0.25em 0.5em;
-	background: #ccc;
+	padding: 0.5em;
+	background: var(--mgrey);;
 	border: 0 none;
 	cursor: pointer;
 	-webkit-border-radius: 0.25em;
 	border-radius: 0.25em;
-	color: #eee;
-	background-color: #08c;
+	color: var(--lgrey);
+	background-color: var(--link);
 }
 </style>
+</head>
+<body>
+<main>
+  <div class="p-2">
+    <form onsubmit="return process();">
+      jmarriott03.github.io/
+      <input type="text" name="url" id="url" autofocus autocapitalize="none">
+      <input type="submit" value="go" class="btn2 btn-primary">
+    </form>
+  </div>
+</main>
 <script>
 function process() {
     // Get the value from the text box, convert to lowercase
@@ -90,15 +84,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
-</head>
-
-<body>
-<div class="textbox">
-  <form onsubmit="return process();">
-    jmarriott03.github.io/
-    <input type="text" name="url" id="url" autofocus autocapitalize="none">
-    <input type="submit" value="go">
-  </form>
-</div>
 </body>
 </html>
