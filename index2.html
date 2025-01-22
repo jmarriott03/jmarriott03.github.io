@@ -50,24 +50,25 @@ Adjust padding text-transform: lowercase; /* Makes the text visually lowercase *
 input[type="text"]:focus {
     outline: none; /* Remove focus outline */
 }
-.svg-btn {
-    width: 2.5em; /* Set SVG width */
-    height: 2.5em; /* Set SVG height */
-    cursor: pointer;
-    border: none;
-    background: none;
-    display: flex; /* Center SVG content */
-    align-items: center;
-    justify-content: center;
-    padding: 0; /* Remove default padding */
-    transition: transform 0.3s, fill 0.3s; /* Smooth transitions */
+.round-btn {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+    width: 1em;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    align-content: center;
+    text-align: center;
+	border: 0;
+	border: none;
+	transition: transform 0.3s, background-color 0.3s;
 }
-.svg-btn svg {
-    fill: var(--black); /* Default foreground color */
-    transition: fill 0.3s; /* Smooth transition for color */
-}
-.svg-btn:hover svg, .svg-btn:focus svg {
-    fill: var(--dgrey); /* Change foreground color on hover */
+.round-btn:hover, .round-btn:focus {
+    background-color: var(--dgrey);
 }
 </style>
 </head>
@@ -77,11 +78,8 @@ input[type="text"]:focus {
     <form onsubmit="return process();">
       jmarriott03.github.io/
       <input type="text" name="url" id="url" autofocus autocapitalize="none">
-      <button type="submit" class="svg-btn">
-      <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 33 33"> 
-        <!-- Generator: Adobe Illustrator 29.2.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 116)  -->
-        <path d="M26.7,16l-7.5,7.5-1.9-1.9,4.3-4.3H5.3v-2.7h16.2l-4.3-4.3,1.9-1.9,7.5,7.5ZM32,16C32,7.2,24.8,0,16,0S0,7.2,0,16s7.2,16,16,16,16-7.2,16-16"/>
-      </svg>
+      <button type="submit" class="round-btn">
+      <span aria-hidden="true">&quot;</span>
       </button>
     </form>
   </div>
