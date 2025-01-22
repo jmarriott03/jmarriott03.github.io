@@ -31,29 +31,28 @@ main {
     justify-content: center; /* Center horizontally */
 }
 form {
-    display: flex; /* Align input and SVG button in a row */
-    align-items: center; /* Vertically align elements */
-    gap: 0.5em; /* Add spacing between input and button */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 input[type="text"] {
     font-size: 1em;
     padding: 1em;
-Adjust padding text-transform: lowercase; /* Makes the text visually lowercase */
-    height: 2em; /* Consistent height for the input */
-    box-sizing: border-box; /* Ensure padding doesn't affect total height */
-    border: none; /* Remove border */
-    background: var(--lgrey); /* Background color for the input */
-    border-radius: 1em; /* Optional: rounded corners */
-    color: var(--black); /* Text color */
-    width: 10em;
+    text-transform: lowercase;
+    height: 2em;
+    box-sizing: border-box;
+    border: none;
+    background: var(--lgrey);
+    border-radius: 1em;
+    color: var(--black);
 }
 input[type="text"]:focus {
-    outline: none; /* Remove focus outline */
+    outline: none;
 }
 .round-btn {
     font-family: 'icon', sans-serif;
     font-weight: normal;
-    line-height: 1.4;
+    line-height: 1.5;
     width: 1em;
     font-size: 24px;
     width: 32px;
@@ -63,24 +62,28 @@ input[type="text"]:focus {
     color: var(--white);
     align-content: center;
     text-align: center;
-	border: 0;
-	border: none;
-	transition: transform 0.3s, background-color 0.3s;
-	aspect-ratio: 1 / 1;
+    border: 0;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+    aspect-ratio: 1 / 1;
 }
 .round-btn:hover, .round-btn:focus {
     background-color: var(--dgrey);
+}
+button {
+    padding: 0;
+    border: none;
+	background: none;
 }
 </style>
 </head>
 <body>
 <main>
-  <div class="p-2">
+  <div class="p-1"><p class="mb-1">jmarriott03.github.io/</p>
     <form onsubmit="return process();">
-      jmarriott03.github.io/
       <input type="text" name="url" id="url" autofocus autocapitalize="none">
-      <button type="submit" class="round-btn">
-      <span aria-hidden="true">&quot;</span>
+      <button type="submit">
+      <div class="round-btn"> <span aria-hidden="true">&quot;</span></div>
       </button>
     </form>
   </div>
