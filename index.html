@@ -37,8 +37,8 @@ form {
 }
 input[type="text"] {
     font-size: 1em;
-    padding: 1em;  Adjust padding 
-    text-transform: lowercase; /* Makes the text visually lowercase */
+    padding: 1em;
+Adjust padding text-transform: lowercase; /* Makes the text visually lowercase */
     height: 2em; /* Consistent height for the input */
     box-sizing: border-box; /* Ensure padding doesn't affect total height */
     border: none; /* Remove border */
@@ -50,24 +50,25 @@ input[type="text"] {
 input[type="text"]:focus {
     outline: none; /* Remove focus outline */
 }
-.svg-btn {
-    width: 2.5em; /* Set SVG width */
-    height: 2.5em; /* Set SVG height */
-    cursor: pointer;
-    border: none;
-    background: none;
-    display: flex; /* Center SVG content */
-    align-items: center;
-    justify-content: center;
-    padding: 0; /* Remove default padding */
-    transition: transform 0.3s, fill 0.3s; /* Smooth transitions */
+.round-btn {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    line-height: 1.4;
+    width: 1em;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    align-content: center;
+    text-align: center;
+	border: 0;
+	border: none;
+	transition: transform 0.3s, background-color 0.3s;
 }
-.svg-btn svg {
-    fill: var(--black); /* Default foreground color */
-    transition: fill 0.3s; /* Smooth transition for color */
-}
-.svg-btn:hover svg, .svg-btn:focus svg {
-    fill: var(--dgrey); /* Change foreground color on hover */
+.round-btn:hover, .round-btn:focus {
+    background-color: var(--dgrey);
 }
 </style>
 </head>
@@ -77,10 +78,8 @@ input[type="text"]:focus {
     <form onsubmit="return process();">
       jmarriott03.github.io/
       <input type="text" name="url" id="url" autofocus autocapitalize="none">
-      <button type="submit" class="svg-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.1 170.1" aria-label="Submit">
-        <path d="M131.8,85l-70.9,40.9V44.1l70.9,40.9ZM170.1,85C170.1,38.1,132,0,85,0S0,38.1,0,85s38.1,85,85,85,85-38.1,85-85" />
-      </svg>
+      <button type="submit" class="round-btn">
+      <span aria-hidden="true">&quot;</span>
       </button>
     </form>
   </div>
