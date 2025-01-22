@@ -1,17 +1,23 @@
 <!doctype html>
-<html lang="en" data-theme="mono">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
+/*
+* {
+    border: 1px dotted red;
+}
+*/
 :root {
 --bg-color: var(--white);
---bg-color-light: #eee;
---bg-color-medium: #ccc;
---bg-color-dark: #111;
+--bg-color-light: var(--lgrey);
+--bg-color-medium: var(--mgrey);
+--bg-color-dark: var(--black);
 --text-color: var(--black);
 --text-color-light: var(--black);
 --text-color-medium: var(--black);
@@ -23,66 +29,52 @@
 }
 /* Mono theme variables */
 [data-theme="mono"] {
---bg-color: var(--white);
---bg-color-light: #eee;
---bg-color-medium: #ccc;
---bg-color-dark: #111;
---text-color: var(--black);
+--bg-color-light: var(--lgrey);
+--bg-color-medium: var(--mgrey);
+--bg-color-dark: var(--black);
 --text-color-light: var(--black);
 --text-color-medium: var(--black);
 --text-color-dark: var(--white);
---link-color: var(--link);
 --link-color-light: var(--link);
 --link-color-medium: var(--black);
 --link-color-dark: var(--white);
 }
 /* Raspberry red theme variables */
 [data-theme="raspberry-red"] {
---bg-color: var(--white);
 --bg-color-light: #ff93bd;
 --bg-color-medium: #c1004a;
 --bg-color-dark: #7d0031;
---text-color: var(--black);
 --text-color-light: var(--black);
 --text-color-medium: var(--white);
 --text-color-dark: var(--white);
---link-color: var(--link);
 --link-color-light: var(--black);
 --link-color-medium: var(--white);
 --link-color-dark: var(--white);
 }
-	
 /* Butter yellow theme variables */
 [data-theme="butter-yellow"] {
---bg-color: var(--white);
 --bg-color-light: #fbf0af;
 --bg-color-medium: #f7e161;
 --bg-color-dark: #f3d213;
---text-color: var(--black);
 --text-color-light: var(--black);
 --text-color-medium: var(--black);
 --text-color-dark: var(--black);
---link-color: var(--link);
 --link-color-light: var(--black);
 --link-color-medium: var(--black);
 --link-color-dark: var(--black);
 }
 /* Turquoise theme variables */
 [data-theme="turquoise"] {
---bg-color: var(--white);
 --bg-color-light: #d3e9f1;
 --bg-color-medium: #7fbfd7;
 --bg-color-dark: #29718c;
---text-color: var(--black);
 --text-color-light: var(--black);
 --text-color-medium: var(--black);
 --text-color-dark: var(--white);
---link-color: var(--link);
 --link-color-light: var(--black);
 --link-color-medium: var(--black);
 --link-color-dark: var(--white);
 }
-	
 /* Dark mode theme variables */
 [data-theme="dark"] {
 --bg-color: var(--black);
@@ -98,12 +90,11 @@
 --link-color-medium: var(--white);
 --link-color-dark: var(--black);
 }
-
 div :last-child {
     margin-bottom: 0;
 }
-.w-80 {
-    max-width: 80rem;
+.w-60 {
+    max-width: 60rem;
     overflow: hidden;
 }
 .bg-color {
@@ -157,15 +148,21 @@ body {
 .bck-highlight-dark {
     background-color: var(--highlight-dark);
 }
+.four-container {
+    overflow: hidden;
+}
 .four {
     width: 25%;
     float: left;
     padding: 1rem;
-    border: 1px dotted red;
+    border: 1px dotted var(--text-color);
 }
 .btn-dark {
-	outline: 2px solid var(--dgrey);
+    outline: 2px solid var(--dgrey);
     outline-offset: -2px;
+}
+.button-container {
+    border-bottom: 1px solid var(--black);
 }
 
 /*media*/
@@ -179,42 +176,45 @@ body {
 </head>
 <body>
 <main>
-  <div class="p-2 w-80">
-    <h1>data-theme</h1>
-    <div class="four bg-color">
-      <p>None<br>
-        <a href="#">Link</a></p>
-    </div>
-    <div class="four bg-color-light">
-      <p>Light<br>
-        <a href="#">Link</a></p>
-    </div>
-    <div class="four bg-color-medium">
-      <p>Medium<br>
-        <a href="#">Link</a></p>
-    </div>
-    <div class="four bg-color-dark">
-      <p>Dark<br>
-        <a href="#">Link</a></p>
+  <div class="button-container">
+    <div class="w-60 px-2 pt-2 pb-1">
+      <h1>Select data-theme</h1>
+      <button class="btn btn-secondary" onclick="setTheme('mono')"><span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
+      <button class="btn btn-danger" onclick="setTheme('raspberry-red')"><span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
+      <button class="btn btn-warning" onclick="setTheme('butter-yellow')"><span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
+      <button class="btn btn-info" onclick="setTheme('turquoise')"><span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
+      <button class="btn btn-dark" onclick="setTheme('dark')"><span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
     </div>
   </div>
-  <div class="w-80 px-2">
-    <button class="btn btn-secondary" onclick="setTheme('mono')"><span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
-    <button class="btn btn-danger" onclick="setTheme('raspberry-red')"><span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
-    <button class="btn btn-warning" onclick="setTheme('butter-yellow')"><span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
-    <button class="btn btn-info" onclick="setTheme('turquoise')"><span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
-    <button class="btn btn-dark" onclick="setTheme('dark')"><span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
-  </div>
-  <section class="w80 p-1 dark">
+  <div class="w-60 p-2 dark">
+    <div class="four-container mb-reg">
+      <div class="four bg-color">
+        <p>None<br>
+          <a href="#">Link</a></p>
+      </div>
+      <div class="four bg-color-light">
+        <p>Light<br>
+          <a href="#">Link</a></p>
+      </div>
+      <div class="four bg-color-medium">
+        <p>Medium<br>
+          <a href="#">Link</a></p>
+      </div>
+      <div class="four bg-color-dark">
+        <p>Dark<br>
+          <a href="#">Link</a></p>
+      </div>
+    </div>
     <div class="centered p-2 rounded-1 shadow mb-reg bg-color-light">
-      <h2>data theme test</h2>
+      <h2>centered p-2 rounded-1 shadow mb-reg bg-color-light</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
-	  </div></section>
-	<section class="w80 p-1 dark" data-theme="raspberry-red">
-    <div class="centered p-2 rounded-1 shadow mb-reg bg-color-medium">
-      <h2>data theme test raspberry red override</h2>
+    </div>
+    <div class="centered p-2 rounded-1 shadow mb-reg bg-color-medium" data-theme="raspberry-red">
+      <h2>centered p-2 rounded-1 shadow mb-reg bg-color-medium<br>
+        data-theme=&quot;raspberry-red&quot;</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
-	  </div></section>
+    </div>
+  </div>
   <script>
         // Apply dark theme if user prefers it
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
