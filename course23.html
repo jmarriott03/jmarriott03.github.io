@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.intro {
+    background: var(--lgrey);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: -4rem;
+}
+.card {
+    width: 100%;
+    transform: translateY(2em);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.card.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(2rem);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.w-80 {
+    max-width: 80rem;
+}
+.shadow-2 {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.overflow {
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-2">
+    <div class="mb-reg overflow">
+      <button class="btn btn-primary">Reload page</button>
+    </div>
+    <h2>Placeholder text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  <img src="images/1280x720engineering.webp" width="1280" height="720" alt=""/>
+  <div class="container p-2">
+    <div class="card rounded-2 p-2 mrfrosty stroke shadow-2">
+      <h2 class="m-0">98%</h2>
+      <p>of Plymouth engineering graduates are employed or in further study within six months of graduation</p>
+    </div>
+    <div class="card rounded-2 p-2 mrfrosty stroke shadow-2" style="transition-delay: 0.3s;">
+      <h2 class="m-0">Over 100</h2>
+      <p>industry collaborations ensure you gain hands-on experience through live projects, preparing you for the workforce</p>
+    </div>
+    <div class="card rounded-2 p-2 mrfrosty stroke shadow-2" style="transition-delay: 0.6s;">
+      <h2 class="m-0">State-of-the-Art Facilities</h2>
+      <p>Access to advanced engineering labs and the renowned Marine Station</p>
+    </div>
+  </div>
+  <div class="w-80 px-2 pb-2">
+    <h2>Placeholder text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</main>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+     const cards = document.querySelectorAll('.card');
+
+     const observer = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+             if (entry.isIntersecting) {
+                 entry.target.classList.add('visible');
+             }
+         });
+     }, {
+         threshold: 0.1
+     });
+
+     cards.forEach(card => observer.observe(card));
+ });
+
+ document.addEventListener('DOMContentLoaded', () => {
+     const resetButton = document.querySelector('.btn');
+
+     resetButton.addEventListener('click', () => {
+         location.reload(); // Reload the page
+     });
+ });
+</script>
+</body>
+</html>
