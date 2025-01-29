@@ -128,7 +128,7 @@ div :last-child {
 }
 body {
     background-color: var(--bg-color);
-    color: var(--text-color);/*    transition: background-color 0.3s, color 0.3s;*/
+    color: var(--text-color);
 }
 .bck-highlight-light {
     background-color: var(--highlight-light);
@@ -144,7 +144,7 @@ body {
     outline-offset: -2px;
 }
 .button-container {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--text-color);
 }
 .four {
     width: 25%;
@@ -160,12 +160,12 @@ body {
     margin: 0;
 }
 }
-	.backgroundimage {
-    background-image: url("images/1280x1280square.gif");
+.backgroundimage {
+    background-image: url("images/1280x720cop28.jpg");
     background-size: cover;
 }
 .mrfrosty-theme {
-	color: var(--text-color-dark);
+    color: var(--text-color-dark);
     background-image: linear-gradient(hsla(var(--bg-color-dark), 0.6), hsla(var(--bg-color-dark), 1));
     backdrop-filter: blur(0.5rem);
 }
@@ -183,19 +183,6 @@ body {
       <button class="btn btn-dark" onclick="setTheme('dark')"><span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
     </div>
   </div>
-	
-	
-	
-	<div class="w-60 backgroundimage p-2 mb-reg">
-      <div class="centered p-2 rounded-2 shadow-2 mrfrosty-theme">
-        <h2>centered p-2 <span class="nowrap">rounded-2</span> <span class="nowrap">shadow-2</span> mrfrosty-deep-rose white-text</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-	
-	
-	
-	
   <div class="w-60 p-2 dark">
     <div class="four-container mb-reg">
       <div class="four bg-color">
@@ -217,12 +204,18 @@ body {
     </div>
     <div class="centered p-2 rounded-1 shadow mb-reg bg-color-light">
       <h2>centered p-2 rounded-1 shadow mb-reg bg-color-light</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
     </div>
     <div class="centered p-2 rounded-1 shadow mb-reg bg-color-medium" data-theme="raspberry-red">
       <h2>centered p-2 rounded-1 shadow mb-reg bg-color-medium<br>
         data-theme=&quot;raspberry-red&quot;</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+    </div>
+    <div class="backgroundimage p-2">
+      <div class="centered p-2 rounded-2 shadow mrfrosty-theme">
+        <h2>centered p-2 <span class="nowrap">rounded-2</span> <span class="nowrap">shadow</span> mrfrosty-theme</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
     </div>
   </div>
   <script>
