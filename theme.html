@@ -90,6 +90,10 @@
 --link-color-medium: var(--white);
 --link-color-dark: var(--black);
 }
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
 div :last-child {
     margin-bottom: 0;
 }
@@ -126,25 +130,15 @@ div :last-child {
 .bg-color-dark a {
     color: var(--link-color-dark);
 }
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-.bck-highlight-light {
-    background-color: var(--highlight-light);
-}
-.bck-highlight-dark {
-    background-color: var(--highlight-dark);
-}
-.four-container {
-    overflow: hidden;
-}
 .btn-dark {
     outline: 2px solid var(--dgrey);
     outline-offset: -2px;
 }
 .button-container {
     border-bottom: 1px solid var(--text-color);
+}
+.four-container {
+    overflow: hidden;
 }
 .four {
     width: 25%;
@@ -160,9 +154,8 @@ body {
     margin: 0;
 }
 }
-.backgroundimage {
-    background-image: url("images/1280x720cop28.jpg");
-    background-size: cover;
+.bg-image {
+    background-image: url("images/32x32chess.gif");
 }
 .mrfrosty-theme {
     color: var(--text-color-dark);
@@ -202,18 +195,17 @@ body {
           <a href="#">Link</a></p>
       </div>
     </div>
-    <div class="centered p-2 rounded-1 shadow mb-reg bg-color-light">
-      <h2>centered p-2 rounded-1 shadow mb-reg bg-color-light</h2>
+    <div class="centered p-2 rounded-2 shadow mb-reg bg-color-light">
+      <h2>bg-color-light</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="centered p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
+        <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+      </div>
     </div>
-    <div class="centered p-2 rounded-1 shadow mb-reg bg-color-medium" data-theme="raspberry-red">
-      <h2>centered p-2 rounded-1 shadow mb-reg bg-color-medium<br>
-        data-theme=&quot;raspberry-red&quot;</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
-    </div>
-    <div class="backgroundimage p-2">
+    <div class="bg-image p-2">
       <div class="centered p-2 rounded-2 shadow mrfrosty-theme">
-        <h2>centered p-2 <span class="nowrap">rounded-2</span> <span class="nowrap">shadow</span> mrfrosty-theme</h2>
+        <h2>mrfrosty-theme</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
       </div>
     </div>
