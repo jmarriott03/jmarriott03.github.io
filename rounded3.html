@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+    border: 1px dotted red;
+}
+*/
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.p-resize2 {
+    padding: 2em;
+}
+.rounded-0 {
+    border-radius: 0;
+}
+.rounded-resize {
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+@media (max-width: 60em) {
+.p-resize2 {
+    padding: 1em;
+}
+.rounded-resize {
+    border-radius: 1em;
+}
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    gap: 1em;
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.rounded-group div {
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+.rounded-group .rounded-1 {
+    border-radius: 1em;
+}
+.rounded-group .rounded-2 {
+    border-radius: 2em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="bck-highlight-light">
+    <div class="w-80 p-2">
+      <h2>rounded-group not applied</h2>
+      <div class="card-container">
+        <div class="card bck-white  p-1">
+          <p><a href="#">Undergraduate application</a><br>
+            Apply to join an undergraduate course as an international student</p>
+        </div>
+        <div class="card bck-white  p-1">
+          <p><a href="#">Postgraduate taught application</a><br>
+            Apply to join a postgraduate programme as an international student</p>
+        </div>
+        <div class="card bck-white  p-1">
+          <p><a href="#">Postgraduate research application</a><br>
+            Apply for a research degree as an international student</p>
+        </div>
+        <div class="card bck-white  p-1">
+          <p><a href="#">Applying from your country</a><br>
+            Check our regional entry requirements and contact local agents for support</p>
+        </div>
+        <div class="card white-text bck-highlight-dark p-1 rounded-1">
+          <p><a href="#">English language requirements</a><br>
+            Information about the minimum language ability you need, and English courses</p>
+        </div>
+        <div class="card white-text bck-highlight-dark p-1 rounded-2">
+          <p><a href="#">Scholarships for international students</a><br>
+            Find out about the funding options available for funding your studies</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bck-highlight-dark">
+    <div class="w-80 p-2">
+      <h2 class="white-text">rounded-group applied</h2>
+      <div class="card-container rounded-group">
+        <div class="card bck-white p-1">
+          <p><a href="#">Undergraduate application</a><br>
+            Apply to join an undergraduate course as an international student</p>
+        </div>
+        <div class="card bck-white p-1">
+          <p><a href="#">Postgraduate taught application</a><br>
+            Apply to join a postgraduate programme as an international student</p>
+        </div>
+        <div class="card bck-white p-1">
+          <p><a href="#">Postgraduate research application</a><br>
+            Apply for a research degree as an international student</p>
+        </div>
+        <div class="card bck-white p-1">
+          <p><a href="#">Applying from your country</a><br>
+            Check our regional entry requirements and contact local agents for support</p>
+        </div>
+        <div class="card black-text bck-highlight-light p-1 rounded-1">
+          <p><a href="#">English language requirements</a><br>
+            Information about the minimum language ability you need, and English courses</p>
+        </div>
+        <div class="card black-text bck-highlight-light p-1 rounded-2">
+          <p><a href="#">Scholarships for international students</a><br>
+            Find out about the funding options available for funding your studies</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
