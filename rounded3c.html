@@ -12,11 +12,9 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
-/*
 * {
     border: 1px dotted red;
 }
-*/
 .bck-highlight-light {
     background-color: var(--highlight-light);
 }
@@ -74,6 +72,7 @@ section :last-child {
 .rounded-group div {
     border-radius: 0.5em;
     overflow: hidden;
+	margin: 1em;
 }
 .rounded-group .rounded-0 {
     border-radius: 0;
@@ -86,12 +85,12 @@ section :last-child {
 }
 </style>
 </head>
-<body>
+<body class="rounded-group">
 <main>
   <div class="bck-highlight-light">
     <div class="w-80 p-2">
-      <h2>rounded-group not added</h2>
-      <div class="card-container">
+      <h2>Heading</h2>
+      <div class="card-container rounded-0">
         <div class="card bck-white p-1"><h2>no rounded</h2>
           <p>Sed do eiusmod tempor incididunt <a href="#">adipisicing elit</a>.</p>
         </div>
@@ -115,8 +114,8 @@ section :last-child {
   </div>
   <div class="bck-highlight-dark">
     <div class="w-80 p-2">
-      <h2 class="white-text">rounded-group added (0.5em on all elements unless rounded-0, rounded-1 or rounded-2 applied)</h2>
-      <div class="card-container rounded-group">
+      <h2 class="white-text">Container rounded-0</h2>
+      <div class="card-container rounded-0">
         <div class="card bck-white p-1"><h2>no rounded</h2>
           <p>Sed do eiusmod tempor incididunt <a href="#">adipisicing elit</a>.</p>
         </div>
