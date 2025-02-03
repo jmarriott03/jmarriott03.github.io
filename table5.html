@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 40em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.divider {
+    border-bottom: 1px solid var(--mgrey);
+    margin-bottom: 1.5em;
+}
+/*style1*/
+.style1 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 1em;
+    outline: 1px solid var(--black);
+    outline-offset: -1px;
+    overflow: hidden;
+}
+.style1 td, .style1 th {
+    padding: 1em;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.style1 th {
+    background-color: var(--mgrey);
+    color: var(--black);
+    ;
+}
+/*style2*/
+.style2 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 1em;
+    outline: 1px solid var(--black);
+    outline-offset: -1px;
+    overflow: hidden;
+}
+.style2 td, .style2 th {
+    padding: 1em;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.style2 th {
+    background-color: var(--black);
+    color: var(--white);
+    ;
+}
+.style2 tr:nth-child(2n+1) {
+    background-color: var(--lgrey);
+}
+/*style3*/
+.style3 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: var(--lgrey);
+}
+.style3 td, .style3 th {
+    padding: 1em;
+    text-align: left;
+}
+.style3 th {
+    background-color: var(--black);
+    color: var(--white);
+}
+.style3 tr:nth-child(2n+1) {
+    background-color: var(--mgrey);
+}
+/*style4*/
+.style4 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 1em;
+    outline: 1px solid var(--black);
+    outline-offset: -1px;
+    overflow: hidden;
+}
+.style4 td, .style4 th {
+    padding: 1em;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.style4 th {
+    background-color: var(--black);
+    color: var(--white);
+    ;
+}
+/*style5*/
+.style5 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 1em;
+    outline: 1px solid var(--black);
+    outline-offset: -1px;
+    overflow: hidden;
+    background-color: var(--lgrey);
+}
+.style5 td, .style5 th {
+    padding: 1em;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+.style5 th {
+    background-color: var(--mgrey);
+    color: var(--black);
+    ;
+}
+.style5 tr:last-child td {
+    border-bottom: none;
+}
+/*style6*/
+.style6 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: var(--lgrey);
+}
+.style6 td, .style6 th {
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+.style6 th {
+    background-color: var(--black);
+    color: var(--white);
+    ;
+}
+.style6 tr:last-child td {
+    border-bottom: none;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <h1>table5</h1>
+    <h2>Style 1</h2>
+    <div class="style1 mb-2">
+      <table>
+        <tr>
+          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>2025-2026</h3></th>
+          <th scope="col"><h3>2026-2027 *</h3></th>
+        </tr>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>£9,250</td>
+          <td>£9,535</td>
+        </tr>
+        <tr>
+          <td><strong>International</strong></td>
+          <td>£18,100</td>
+          <td>£18,650</td>
+        </tr>
+        <tr>
+          <td><strong>Part time (Home)</strong></td>
+          <td>£770</td>
+          <td>£795</td>
+        </tr>
+      </table>
+    </div>
+    <div class="divider"></div>
+    <h2>Style 2</h2>
+    <div class="style2 mb-reg">
+      <table>
+        <tr>
+          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>2025-2026</h3></th>
+          <th scope="col"><h3>2026-2027 *</h3></th>
+        </tr>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>£9,250</td>
+          <td>£9,535</td>
+        </tr>
+        <tr>
+          <td><strong>International</strong></td>
+          <td>£18,100</td>
+          <td>£18,650</td>
+        </tr>
+        <tr>
+          <td><strong>Part time (Home)</strong></td>
+          <td>£770</td>
+          <td>£795</td>
+        </tr>
+      </table>
+    </div>
+    <div class="divider"></div>
+    <h2>Style 3</h2>
+    <div class="style3 mb-reg">
+      <table>
+        <tr>
+          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>2025-2026</h3></th>
+          <th scope="col"><h3>2026-2027 *</h3></th>
+        </tr>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>£9,250</td>
+          <td>£9,535</td>
+        </tr>
+        <tr>
+          <td><strong>International</strong></td>
+          <td>£18,100</td>
+          <td>£18,650</td>
+        </tr>
+        <tr>
+          <td><strong>Part time (Home)</strong></td>
+          <td>£770</td>
+          <td>£795</td>
+        </tr>
+      </table>
+    </div>
+    <div class="divider"></div>
+    <h2>Style 4</h2>
+    <div class="style4 mb-reg">
+      <table>
+        <tr>
+          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>2025-2026</h3></th>
+          <th scope="col"><h3>2026-2027 *</h3></th>
+        </tr>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>£9,250</td>
+          <td>£9,535</td>
+        </tr>
+        <tr>
+          <td><strong>International</strong></td>
+          <td>£18,100</td>
+          <td>£18,650</td>
+        </tr>
+        <tr>
+          <td><strong>Part time (Home)</strong></td>
+          <td>£770</td>
+          <td>£795</td>
+        </tr>
+      </table>
+    </div>
+    <div class="divider"></div>
+    <h2>Style 5</h2>
+    <div class="style5 mb-reg">
+      <table>
+        <tr>
+          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>2025-2026</h3></th>
+          <th scope="col"><h3>2026-2027 *</h3></th>
+        </tr>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>£9,250</td>
+          <td>£9,535</td>
+        </tr>
+        <tr>
+          <td><strong>International</strong></td>
+          <td>£18,100</td>
+          <td>£18,650</td>
+        </tr>
+        <tr>
+          <td><strong>Part time (Home)</strong></td>
+          <td>£770</td>
+          <td>£795</td>
+        </tr>
+      </table>
+    </div>
+    <div class="divider"></div>
+    <h2>Style 6</h2>
+    <div class="style6 mb-reg">
+      <table>
+        <tr>
+          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>2025-2026</h3></th>
+          <th scope="col"><h3>2026-2027 *</h3></th>
+        </tr>
+        <tr>
+          <td><strong>Home</strong></td>
+          <td>£9,250</td>
+          <td>£9,535</td>
+        </tr>
+        <tr>
+          <td><strong>International</strong></td>
+          <td>£18,100</td>
+          <td>£18,650</td>
+        </tr>
+        <tr>
+          <td><strong>Part time (Home)</strong></td>
+          <td>£770</td>
+          <td>£795</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</main>
+</body>
+</html>
