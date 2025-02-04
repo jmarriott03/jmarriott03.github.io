@@ -13,17 +13,6 @@
 --freshgreen-medium: #b4c960;
 --freshgreen-dark: #677c1d;
 }
-/*
-.bck-freshgreen-light {
-    background-color: var(--freshgreen-light);
-}
-.bck-freshgreen-medium {
-    background-color: var(--freshgreen-medium);
-}
-.bck-freshgreen-dark {
-    background-color: var(--freshgreen-dark);
-}
-*/
 section {
     max-width: 40em;
     overflow: hidden;
@@ -53,7 +42,12 @@ section :last-child {
 .style1 th {
     background-color: var(--freshgreen-medium);
     color: var(--black);
-    ;
+}
+.style1 th a {
+    color: var(--black);
+}
+.style1 td a {
+    color: var(--black);
 }
 /*style2*/
 .style2 table {
@@ -73,10 +67,15 @@ section :last-child {
 .style2 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
-    ;
 }
 .style2 tr:nth-child(2n+1) {
     background-color: var(--freshgreen-light);
+}
+.style2 th a {
+    color: var(--white);
+}
+.style2 td a {
+    color: var(--black);
 }
 /*style3*/
 .style3 table {
@@ -98,6 +97,12 @@ section :last-child {
 .style3 tr:nth-child(2n+1) {
     background-color: var(--freshgreen-medium);
 }
+.style3 th a {
+    color: var(--white);
+}
+.style3 td a {
+    color: var(--black);
+}
 /*style4*/
 .style4 table {
     border-collapse: collapse;
@@ -116,7 +121,12 @@ section :last-child {
 .style4 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
-    ;
+}
+.style4 th a {
+    color: var(--white);
+}
+.style4 td a {
+    color: var(--black);
 }
 /*style5*/
 .style5 table {
@@ -137,10 +147,15 @@ section :last-child {
 .style5 th {
     background-color: var(--freshgreen-medium);
     color: var(--black);
-    ;
 }
 .style5 tr:last-child td {
     border-bottom: none;
+}
+.style5 th a {
+    color: var(--black);
+}
+.style5 td a {
+    color: var(--black);
 }
 /*style6*/
 .style6 table {
@@ -160,7 +175,6 @@ section :last-child {
 .style6 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
-    ;
 }
 .style6 tr:last-child td {
     border-bottom: none;
@@ -181,12 +195,12 @@ section :last-child {
     <div class="style1 mb-2">
       <table>
         <tr>
-          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
           <th scope="col"><h3>2025-2026</h3></th>
           <th scope="col"><h3>2026-2027 *</h3></th>
         </tr>
         <tr>
-          <td><strong>Home</strong></td>
+          <td><strong>Home <a href="#">link</a></strong></td>
           <td>£9,250</td>
           <td>£9,535</td>
         </tr>
@@ -207,12 +221,12 @@ section :last-child {
     <div class="style2 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
           <th scope="col"><h3>2025-2026</h3></th>
           <th scope="col"><h3>2026-2027 *</h3></th>
         </tr>
         <tr>
-          <td><strong>Home</strong></td>
+          <td><strong>Home <a href="#">link</a></strong></td>
           <td>£9,250</td>
           <td>£9,535</td>
         </tr>
@@ -233,12 +247,12 @@ section :last-child {
     <div class="style3 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
           <th scope="col"><h3>2025-2026</h3></th>
           <th scope="col"><h3>2026-2027 *</h3></th>
         </tr>
         <tr>
-          <td><strong>Home</strong></td>
+          <td><strong>Home <a href="#">link</a></strong></td>
           <td>£9,250</td>
           <td>£9,535</td>
         </tr>
@@ -259,12 +273,12 @@ section :last-child {
     <div class="style4 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
           <th scope="col"><h3>2025-2026</h3></th>
           <th scope="col"><h3>2026-2027 *</h3></th>
         </tr>
         <tr>
-          <td><strong>Home</strong></td>
+          <td><strong>Home <a href="#">link</a></strong></td>
           <td>£9,250</td>
           <td>£9,535</td>
         </tr>
@@ -285,12 +299,12 @@ section :last-child {
     <div class="style5 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student</h3></th>
+          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
           <th scope="col"><h3>2025-2026</h3></th>
           <th scope="col"><h3>2026-2027 *</h3></th>
         </tr>
         <tr>
-          <td><strong>Home</strong></td>
+          <td><strong>Home <a href="#">link</a></strong></td>
           <td>£9,250</td>
           <td>£9,535</td>
         </tr>
