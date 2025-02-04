@@ -14,7 +14,7 @@
 --freshgreen-dark: #677c1d;
 }
 section {
-    max-width: 40em;
+    max-width: 60em;
     overflow: hidden;
 }
 section :last-child {
@@ -28,7 +28,7 @@ section :last-child {
 .style1 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    margin-left: 0;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -42,6 +42,7 @@ section :last-child {
 .style1 th {
     background-color: var(--freshgreen-medium);
     color: var(--black);
+	font-weight: bold;
 }
 .style1 th a {
     color: var(--black);
@@ -53,7 +54,7 @@ section :last-child {
 .style2 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    margin-left: 0;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -67,6 +68,7 @@ section :last-child {
 .style2 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
+	font-weight: bold;
 }
 .style2 tr:nth-child(2n+1) {
     background-color: var(--freshgreen-light);
@@ -81,7 +83,7 @@ section :last-child {
 .style3 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    margin-left: 0;
     border-radius: 1em;
     overflow: hidden;
     background-color: var(--freshgreen-light);
@@ -93,6 +95,7 @@ section :last-child {
 .style3 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
+	font-weight: bold;
 }
 .style3 tr:nth-child(2n+1) {
     background-color: var(--freshgreen-medium);
@@ -107,7 +110,7 @@ section :last-child {
 .style4 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    margin-left: 0;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -121,6 +124,7 @@ section :last-child {
 .style4 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
+	font-weight: bold;
 }
 .style4 th a {
     color: var(--white);
@@ -132,7 +136,7 @@ section :last-child {
 .style5 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    margin-left: 0;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -147,6 +151,7 @@ section :last-child {
 .style5 th {
     background-color: var(--freshgreen-medium);
     color: var(--black);
+	font-weight: bold;
 }
 .style5 tr:last-child td {
     border-bottom: none;
@@ -161,7 +166,7 @@ section :last-child {
 .style6 table {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    margin-left: 0;
     border-radius: 1em;
     overflow: hidden;
     background-color: var(--freshgreen-light);
@@ -175,6 +180,7 @@ section :last-child {
 .style6 th {
     background-color: var(--freshgreen-dark);
     color: var(--white);
+	font-weight: bold;
 }
 .style6 tr:last-child td {
     border-bottom: none;
@@ -190,14 +196,14 @@ section :last-child {
 <body>
 <main>
   <section class="p-2">
-    <h1>table5 - table theme full width of container</h1>
+    <h1>table5c - table theme sizes to content</h1>
     <h2>Style 1</h2>
     <div class="style1 mb-2">
       <table>
         <tr>
-          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
-          <th scope="col"><h3>2025-2026</h3></th>
-          <th scope="col"><h3>2026-2027 *</h3></th>
+          <th>New student <a href="#">link</a></th>
+          <th>2025-2026</th>
+          <th>2026-2027 *</th>
         </tr>
         <tr>
           <td><strong>Home <a href="#">link</a></strong></td>
@@ -221,9 +227,9 @@ section :last-child {
     <div class="style2 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
-          <th scope="col"><h3>2025-2026</h3></th>
-          <th scope="col"><h3>2026-2027 *</h3></th>
+          <th>New student <a href="#">link</a></th>
+          <th>2025-2026</th>
+          <th>2026-2027 *</th>
         </tr>
         <tr>
           <td><strong>Home <a href="#">link</a></strong></td>
@@ -247,9 +253,9 @@ section :last-child {
     <div class="style3 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
-          <th scope="col"><h3>2025-2026</h3></th>
-          <th scope="col"><h3>2026-2027 *</h3></th>
+          <th>New student <a href="#">link</a></th>
+          <th>2025-2026</th>
+          <th>2026-2027 *</th>
         </tr>
         <tr>
           <td><strong>Home <a href="#">link</a></strong></td>
@@ -273,9 +279,9 @@ section :last-child {
     <div class="style4 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
-          <th scope="col"><h3>2025-2026</h3></th>
-          <th scope="col"><h3>2026-2027 *</h3></th>
+          <th>New student <a href="#">link</a></th>
+          <th>2025-2026</th>
+          <th>2026-2027 *</th>
         </tr>
         <tr>
           <td><strong>Home <a href="#">link</a></strong></td>
@@ -299,9 +305,9 @@ section :last-child {
     <div class="style5 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
-          <th scope="col"><h3>2025-2026</h3></th>
-          <th scope="col"><h3>2026-2027 *</h3></th>
+          <th>New student <a href="#">link</a></th>
+          <th>2025-2026</th>
+          <th>2026-2027 *</th>
         </tr>
         <tr>
           <td><strong>Home <a href="#">link</a></strong></td>
@@ -325,9 +331,9 @@ section :last-child {
     <div class="style6 mb-reg">
       <table>
         <tr>
-          <th scope="col"><h3>New student <a href="#">link</a></h3></th>
-          <th scope="col"><h3>2025-2026</h3></th>
-          <th scope="col"><h3>2026-2027 *</h3></th>
+          <th>New student <a href="#">link</a></th>
+          <th>2025-2026</th>
+          <th>2026-2027 *</th>
         </tr>
         <tr>
           <td><strong>Home <a href="#">link</a></strong></td>

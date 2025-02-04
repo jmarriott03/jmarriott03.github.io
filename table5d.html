@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
+:root {
+--freshgreen-light: #e5edc9;
+--freshgreen-medium: #b4c960;
+--freshgreen-dark: #677c1d;
+}
 section {
     max-width: 60em;
     overflow: hidden;
@@ -23,7 +28,7 @@ section :last-child {
 .style1 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 0;
+    width: 100%;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -35,21 +40,21 @@ section :last-child {
     border: 1px solid var(--black);
 }
 .style1 th {
-    background-color: var(--mgrey);
+    background-color: var(--freshgreen-medium);
     color: var(--black);
-    font-weight: bold;
+	font-weight: bold;
 }
 .style1 th a {
     color: var(--black);
 }
 .style1 td a {
-    color: var(--link);
+    color: var(--black);
 }
 /*style2*/
 .style2 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 0;
+    width: 100%;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -61,39 +66,39 @@ section :last-child {
     border: 1px solid var(--black);
 }
 .style2 th {
-    background-color: var(--black);
+    background-color: var(--freshgreen-dark);
     color: var(--white);
-    font-weight: bold;
+	font-weight: bold;
 }
 .style2 tr:nth-child(2n+1) {
-    background-color: var(--lgrey);
+    background-color: var(--freshgreen-light);
 }
 .style2 th a {
     color: var(--white);
 }
 .style2 td a {
-    color: var(--link);
+    color: var(--black);
 }
 /*style3*/
 .style3 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 0;
+    width: 100%;
     border-radius: 1em;
     overflow: hidden;
-    background-color: var(--lgrey);
+    background-color: var(--freshgreen-light);
 }
 .style3 td, .style3 th {
     padding: 1em;
     text-align: left;
 }
 .style3 th {
-    background-color: var(--black);
+    background-color: var(--freshgreen-dark);
     color: var(--white);
-    font-weight: bold;
+	font-weight: bold;
 }
 .style3 tr:nth-child(2n+1) {
-    background-color: var(--mgrey);
+    background-color: var(--freshgreen-medium);
 }
 .style3 th a {
     color: var(--white);
@@ -105,7 +110,7 @@ section :last-child {
 .style4 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 0;
+    width: 100%;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
@@ -117,26 +122,26 @@ section :last-child {
     border: 1px solid var(--black);
 }
 .style4 th {
-    background-color: var(--black);
+    background-color: var(--freshgreen-dark);
     color: var(--white);
-    font-weight: bold;
+	font-weight: bold;
 }
 .style4 th a {
     color: var(--white);
 }
 .style4 td a {
-    color: var(--link);
+    color: var(--black);
 }
 /*style5*/
 .style5 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 0;
+    width: 100%;
     border-radius: 1em;
     outline: 1px solid var(--black);
     outline-offset: -1px;
     overflow: hidden;
-    background-color: var(--lgrey);
+    background-color: var(--freshgreen-light);
 }
 .style5 td, .style5 th {
     padding: 1em;
@@ -144,9 +149,9 @@ section :last-child {
     border: 1px solid var(--black);
 }
 .style5 th {
-    background-color: var(--mgrey);
+    background-color: var(--freshgreen-medium);
     color: var(--black);
-    font-weight: bold;
+	font-weight: bold;
 }
 .style5 tr:last-child td {
     border-bottom: none;
@@ -155,16 +160,17 @@ section :last-child {
     color: var(--black);
 }
 .style5 td a {
-    color: var(--link);
+    color: var(--black);
 }
 /*style6*/
 .style6 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin-left: 0;
+    width: 100%;
     border-radius: 1em;
     overflow: hidden;
-    background-color: var(--lgrey);
+    background-color: var(--freshgreen-light);
+    color: var(--black);
 }
 .style6 td, .style6 th {
     padding: 1em;
@@ -172,9 +178,9 @@ section :last-child {
     border-bottom: 1px solid var(--black);
 }
 .style6 th {
-    background-color: var(--black);
+    background-color: var(--freshgreen-dark);
     color: var(--white);
-    font-weight: bold;
+	font-weight: bold;
 }
 .style6 tr:last-child td {
     border-bottom: none;
@@ -183,14 +189,14 @@ section :last-child {
     color: var(--white);
 }
 .style6 td a {
-    color: var(--link);
+    color: var(--black);
 }
 </style>
 </head>
 <body>
 <main>
   <section class="p-2">
-    <h1>table5 - table5 - table sizes to content</h1>
+    <h1>table5d - table theme full width of container</h1>
     <h2>Style 1</h2>
     <div class="style1 mb-2">
       <table>
