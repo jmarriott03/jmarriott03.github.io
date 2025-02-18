@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staggered Letter Fade In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .spacer {
+            height: 100vh;
+            background-color: pink;
+        }
+        .container {
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 1em;
+            padding: 0 10px;
+        }
+        h2 {
+            display: flex;
+            gap: 0.3em;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(-0.5em);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+        .word.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Letter-by-letter fade-in effect for <p> */
+        p {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 0.05s ease-in;
+        }
+        .letter.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="spacer"></div>
+    <div class="container">
+        <h2 class="tagline">Staggered Fade In Effect</h2>
+    </div>
+    <div class="container">
+        <h2 class="tagline">Another tagline ok</h2>
+        <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Handle h2 word fade-in
+            const taglines = document.querySelectorAll(".tagline");
+            taglines.forEach(h2 => {
+                const words = h2.textContent.split(" ").map(word => {
+                    const span = document.createElement("span");
+                    span.textContent = word;
+                    span.classList.add("word");
+                    return span;
+                });
+                h2.innerHTML = "";
+                words.forEach(word => h2.appendChild(word));
+
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            words.forEach((word, index) => {
+                                setTimeout(() => word.classList.add("visible"), index * 300);
+                            });
+                            observer.unobserve(h2);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(h2);
+            });
+
+            // Letter-by-letter fade-in for <p>
+            const paragraphs = document.querySelectorAll(".fade-in");
+            paragraphs.forEach(p => {
+                const letters = Array.from(p.textContent).map(letter => {
+                    const span = document.createElement("span");
+                    span.classList.add("letter");
+                    span.innerHTML = letter === " " ? "&nbsp;" : letter; // Preserve spaces
+                    return span;
+                });
+
+                p.innerHTML = "";
+                letters.forEach(letter => p.appendChild(letter));
+
+                const pObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            letters.forEach((letter, index) => {
+                                setTimeout(() => letter.classList.add("visible"), index * 30); // Quick fade-in per letter
+                            });
+                            pObserver.unobserve(p);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                pObserver.observe(p);
+            });
+        });
+    </script>
+</body>
+</html>
