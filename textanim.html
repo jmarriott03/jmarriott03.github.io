@@ -25,38 +25,20 @@
             gap: 1em;
             padding: 0 10px;
         }
-        h2 {
-            display: flex;
-            gap: 0.3em;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-        }
-        .word {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(-0.5em);
-            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        }
-        .word.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Letter-by-letter fade-in effect for <p> */
-        p {
+        .staggered-fade-in {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            font-size: 1.2em;
+/*            font-size: 1.2em;*/
             max-width: 600px;
             line-height: 1.5;
         }
-        .letter {
+        .staggered-fade-in .letter {
             display: inline-block;
             opacity: 0;
-            transition: opacity 0.05s ease-in;
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
         }
-        .letter.visible {
+        .staggered-fade-in .letter.visible {
             opacity: 1;
         }
     </style>
@@ -64,65 +46,42 @@
 <body>
     <div class="spacer"></div>
     <div class="container">
-        <h2 class="tagline">Staggered Fade In Effect</h2>
+        <h2 class="staggered-fade-in">Staggered Fade In Effect</h2>
     </div>
     <div class="container">
-        <h2 class="tagline">Another tagline ok</h2>
-        <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2 class="staggered-fade-in">Another tagline ok</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="staggered-fade-in">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Handle h2 word fade-in
-            const taglines = document.querySelectorAll(".tagline");
-            taglines.forEach(h2 => {
-                const words = h2.textContent.split(" ").map(word => {
+            const elements = document.querySelectorAll(".staggered-fade-in");
+
+            elements.forEach(el => {
+                const letters = [...el.textContent].map(letter => {
                     const span = document.createElement("span");
-                    span.textContent = word;
-                    span.classList.add("word");
+                    span.classList.add("letter");
+                    span.innerHTML = letter === " " ? "&nbsp;" : letter;
                     return span;
                 });
-                h2.innerHTML = "";
-                words.forEach(word => h2.appendChild(word));
+
+                el.innerHTML = "";
+                letters.forEach(letter => el.appendChild(letter));
 
                 const observer = new IntersectionObserver(entries => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            words.forEach((word, index) => {
-                                setTimeout(() => word.classList.add("visible"), index * 300);
-                            });
-                            observer.unobserve(h2);
-                        }
-                    });
-                }, { threshold: 0.1 });
-
-                observer.observe(h2);
-            });
-
-            // Letter-by-letter fade-in for <p>
-            const paragraphs = document.querySelectorAll(".fade-in");
-            paragraphs.forEach(p => {
-                const letters = Array.from(p.textContent).map(letter => {
-                    const span = document.createElement("span");
-                    span.classList.add("letter");
-                    span.innerHTML = letter === " " ? "&nbsp;" : letter; // Preserve spaces
-                    return span;
-                });
-
-                p.innerHTML = "";
-                letters.forEach(letter => p.appendChild(letter));
-
-                const pObserver = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
                             letters.forEach((letter, index) => {
-                                setTimeout(() => letter.classList.add("visible"), index * 30); // Quick fade-in per letter
+                                setTimeout(() => letter.classList.add("visible"), index * 30);
                             });
-                            pObserver.unobserve(p);
+                            observer.unobserve(el);
                         }
                     });
                 }, { threshold: 0.1 });
 
-                pObserver.observe(p);
+                observer.observe(el);
             });
         });
     </script>
