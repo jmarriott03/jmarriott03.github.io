@@ -63,9 +63,8 @@ details > summary::before {
 details[open] > summary::before {
     content: "M";
 }
-/* Float buttons left */
 .tab-header {
-    overflow: hidden; /* Clear the floated buttons */
+    overflow: hidden;
     margin-bottom: 1.5em;
 }
 .tab-header button {
@@ -96,7 +95,7 @@ details[open] > summary::before {
 .tab-content {
     overflow: hidden;
     position: relative;
-    transition: height 0.3s ease; /* Smooth height transition */
+    transition: height 0.3s ease;
 }
 .tab-panel {
     width: 100%;
@@ -123,7 +122,6 @@ details[open] > summary::before {
     font-weight: lighter;
 }
 
-/*Media queries*/
 @media (max-width: 60em) {
 .text-resize-light h2 {
     font-size: 1.5em;
@@ -200,7 +198,7 @@ details[open] > summary::before {
 }
 .card-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+    grid-template-columns: repeat(2, 1fr);
     gap: 1em;
 }
 .card-container .card:first-child:nth-last-child(odd) {
@@ -208,6 +206,9 @@ details[open] > summary::before {
 }
 
 @media (max-width: 40em) {
+.card-container {
+    grid-template-columns: 1fr;
+}
 .card-container .card:first-child:nth-last-child(odd) {
     grid-column: span 1;
 }
