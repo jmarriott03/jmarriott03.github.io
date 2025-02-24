@@ -19,7 +19,7 @@
             max-width: 80rem;
             overflow: hidden;
 			border: 1px dotted red;
-			padding: 2em;
+			
         }
         .gallery {
             display: flex;
@@ -62,6 +62,10 @@
         }
 		
 		
+		
+		 .p-resize-2-1 {
+    padding: 2em;
+  }
 		@media (max-width: 50em) {
 
 		
@@ -70,13 +74,18 @@
 
         }
 			
+			 .p-resize-2-1 {
+    padding: 1em;
+  }
+			
 		}
 		
+
 		
     </style>
 </head>
 <body>
-<div class="gallery-container">
+<div class="gallery-container p-resize-2-1">
         <div class="gallery" id="gallery">
             <img src="images/1280x720arthistory.jpg" alt="Image 1">
             <img src="images/1280x720art.jpg" alt="Image 2">
@@ -90,18 +99,49 @@
         </div>
     </div>
     <script>
-        const gallery = document.getElementById('gallery');
-        const nextBtn = document.getElementById('next');
-        const prevBtn = document.getElementById('prev');
-        const cardWidth = 310; // Image width + gap
+const gallery = document.getElementById('gallery');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
 
-        nextBtn.addEventListener('click', () => {
-            gallery.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        });
+const images = Array.from(gallery.querySelectorAll("img"));
+let currentIndex = 0;
 
-        prevBtn.addEventListener('click', () => {
-            gallery.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-        });
-    </script>
+function updateScrollPosition() {
+    const cardWidth = images[0].clientWidth + 16; // Image width + gap
+    gallery.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+}
+
+// Detect the closest image in view when manually scrolling
+function updateIndexOnScroll() {
+    let scrollLeft = gallery.scrollLeft;
+    let cardWidth = images[0].clientWidth + 16;
+    currentIndex = Math.round(scrollLeft / cardWidth); // Find closest image index
+}
+
+// Attach scroll event listener
+gallery.addEventListener('scroll', () => {
+    clearTimeout(gallery.dataset.scrollTimeout);
+    gallery.dataset.scrollTimeout = setTimeout(updateIndexOnScroll, 100);
+});
+
+// Next button click
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateScrollPosition();
+    }
+});
+
+// Prev button click
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateScrollPosition();
+    }
+});
+
+
+</script>
+
 </body>
 </html>
