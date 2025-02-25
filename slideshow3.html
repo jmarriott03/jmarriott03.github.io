@@ -13,10 +13,12 @@
     --highlight-dark: #a80075;
 }
 
+/*
 * {
     outline: 1px dotted red;
     outline-offset: -1px;
 }
+*/
 
 .backgroundimage {
     background-image: url("images/1920x600babbage.jpg");
@@ -66,7 +68,6 @@ details[open] > summary::before {
     position: relative;
     max-width: 80rem;
     width: 100%; /* Ensure it spans full width */
-	overscroll-behavior-x: contain;
 }
 
 .gallery {
@@ -77,6 +78,7 @@ details[open] > summary::before {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2em;
+            overscroll-behavior-x: contain;
 }
 
 .gallery::-webkit-scrollbar {
@@ -142,10 +144,22 @@ details[open] > summary::before {
 .p-resize-2-1 {
     padding: 2em;
 }
+	
+	
+	
+	
+	.w-0-85 {
+		width: 0.85em;
+	}
+	
+	
+	.w-0-6 {
+		width: 0.6em;
+	}
 
 @media (max-width: 50em) {
     .card {
-        width: calc(100% - 3em);
+        width: calc(100% - 4em);
     }
     .p-resize-2-1 {
         padding: 1em;
@@ -184,7 +198,7 @@ details[open] > summary::before {
             </div>
         </div>
         <div class="button-container">
-            <button id="prev"><span class="iconfont">P</span></button><button id="next"><span class="iconfont">N</span></button>
+            <button id="prev"><span class="iconfont w-0-85">P</span></button><button id="next"><span class="iconfont w-0-6">N</span></button>
         </div>
     </div>
 </main>
