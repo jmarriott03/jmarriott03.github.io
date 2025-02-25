@@ -1,147 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Gallery</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-        }
-        .gallery-container {
-            position: relative;
-/*            width: 80%;*/
-            max-width: 80rem;
-            overflow: hidden;
-			border: 1px dotted red;
-			
-        }
-        .gallery {
-            display: flex;
-            gap: 1em;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-			overscroll-behavior-x: contain;
-            padding-bottom: 20px;
-        }
-        .gallery::-webkit-scrollbar {
-            display: none;
-        }
-        .gallery img {
-            width: 30em;
-/*            height: 200px;*/
-            object-fit: cover;
-            border-radius: 1em;
-            flex-shrink: 0;
-            scroll-snap-align: start;
-			border: 1px dotted red;
-        }
-        .button-container {
-            display: flex;
-            justify-content: end;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .button-container button {
-            background: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .button-container button:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-		
-		
-		
-		 .p-resize-2-1 {
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+    --highlight-light: #b4c960;
+    --highlight-dark: #a80075;
+}
+
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+    display: none;
+    content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 80rem;
+    width: 100%; /* Ensure it spans full width */
+	overscroll-behavior-x: contain;
+}
+
+.gallery {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2em;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 30em;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.card p {
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #333;
+}
+
+.button-container {
+    position: absolute;
+    right: 2em;
+	bottom: 0;
+    display: flex;
+    gap: 1em;
+}
+
+.button-container button {
+    width: 2em;
+    height: 2em;
+    background: #666;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+	transition: opacity 0.3s ease;
+}
+
+.button-container button:first-child {
+    content: "P";
+	font-family: 'icon', sans-serif;
+  font-weight: normal;
+	padding-top: 0.125em;
+	padding-left: 0.125em;
+}
+
+.button-container button:last-child {
+    content: "N";
+	font-family: 'icon', sans-serif;
+  font-weight: normal;
+	padding-top: 0.125em;
+	padding-right: 0.125em;
+	
+}
+
+.button-container button.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.p-resize-2-1 {
     padding: 2em;
-  }
-		@media (max-width: 50em) {
+}
 
-		
-		.gallery img {
-            width: calc(100% - 4em);
-
-        }
-			
-			 .p-resize-2-1 {
-    padding: 1em;
-  }
-			
-		}
-		
-
-		
-    </style>
+@media (max-width: 50em) {
+    .card {
+        width: calc(100% - 4em);
+    }
+    .p-resize-2-1 {
+        padding: 1em;
+    }
+}
+</style>
 </head>
 <body>
-<div class="gallery-container p-resize-2-1">
+<main>
+    <div class="gallery-container p-resize-2-1">
         <div class="gallery" id="gallery">
-            <img src="images/1280x720arthistory.jpg" alt="Image 1">
-            <img src="images/1280x720art.jpg" alt="Image 2">
-            <img src="images/1280x720architecture.jpg" alt="Image 3">
-            <img src="images/1280x720clearing.jpg" alt="Image 4">
-			<img src="images/1280x720student15.jpg" alt="Image 5">
-    </div>
+            <div class="card">
+                <img src="images/1280x720arthistory.jpg" alt="Image 1">
+                <p>Dummy text for Image 1</p>
+            </div>
+            <div class="card">
+                <img src="images/1280x720art.jpg" alt="Image 2">
+                <p>Dummy text for Image 2</p>
+            </div>
+            <div class="card">
+                <img src="images/1280x720architecture.jpg" alt="Image 3">
+                <p>Dummy text for Image 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="card">
+                <img src="images/1280x720clearing.jpg" alt="Image 4">
+                <p>Dummy text for Image 4</p>
+            </div>
+            <div class="card">
+                <img src="images/1280x720student15.jpg" alt="Image 5">
+                <p>Dummy text for Image 5</p>
+            </div>
+        </div>
         <div class="button-container">
-            <button id="prev">&#10094; Prev</button>
-            <button id="next">Next &#10095;</button>
+            <button id="prev">P</button>
+            <button id="next">N</button>
         </div>
     </div>
-    <script>
+</main>
+<script>
+
+	
+	
+	
+	
+	
+// Initialize variables
 const gallery = document.getElementById('gallery');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
-
-const images = Array.from(gallery.querySelectorAll("img"));
+const cards = Array.from(gallery.querySelectorAll(".card"));
 let currentIndex = 0;
 
+// Update the scroll position
 function updateScrollPosition() {
-    const cardWidth = images[0].clientWidth + 16; // Image width + gap
+    const cardWidth = cards[0].clientWidth + 16; // Card width + gap
     gallery.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
 }
 
-// Detect the closest image in view when manually scrolling
-function updateIndexOnScroll() {
-    let scrollLeft = gallery.scrollLeft;
-    let cardWidth = images[0].clientWidth + 16;
-    currentIndex = Math.round(scrollLeft / cardWidth); // Find closest image index
+// Update button states (disabled or active)
+function updateButtonStates() {
+    prevBtn.classList.toggle("disabled", currentIndex === 0);
+    nextBtn.classList.toggle("disabled", currentIndex === cards.length - 1);
+
+    // Check if the gallery is scrolled to the last card
+    const totalScrollWidth = gallery.scrollWidth - gallery.clientWidth; // Total scrollable width
+    if (gallery.scrollLeft >= totalScrollWidth - 1) { // Allow a small buffer to account for rounding
+        nextBtn.classList.add("disabled"); // Ensure 'N' button is disabled at the last card
+    } else {
+        nextBtn.classList.remove("disabled"); // Remove disabled state when not at the last card
+    }
+
+    // Ensure the prev button state is updated correctly
+    if (gallery.scrollLeft <= 0) { // Prevent flickering when at the first card
+        prevBtn.classList.add("disabled");
+    } else {
+        prevBtn.classList.remove("disabled");
+    }
 }
 
-// Attach scroll event listener
-gallery.addEventListener('scroll', () => {
-    clearTimeout(gallery.dataset.scrollTimeout);
-    gallery.dataset.scrollTimeout = setTimeout(updateIndexOnScroll, 100);
-});
-
-// Next button click
+// Click events
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
+    if (currentIndex < cards.length - 1) {
         currentIndex++;
         updateScrollPosition();
+        setTimeout(updateButtonStates, 200); // Add a small delay before updating button states
     }
 });
 
-// Prev button click
 prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
         updateScrollPosition();
+        setTimeout(updateButtonStates, 200); // Add a small delay before updating button states
     }
 });
 
+// Detect manual scroll position
+gallery.addEventListener('scroll', () => {
+    const cardWidth = cards[0].clientWidth + 16; // Card width + gap
+    const scrollLeft = gallery.scrollLeft;
+    currentIndex = Math.round(scrollLeft / cardWidth); // Update current index based on scroll position
+    updateButtonStates(); // Update button states after scroll
+});
+
+// Initialize button states on page load
+updateButtonStates();
+
+
+	
+	
+	
+	
+	
 
 </script>
-
 </body>
 </html>
