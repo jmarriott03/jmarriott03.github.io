@@ -102,8 +102,8 @@ details[open] > summary::before {
 }
 	.button-container {
     position: absolute;
-    right: 2em;
     bottom: 0;
+		right: 2em;
     display: flex;  /* This makes the buttons align horizontally */
     gap: 1em;       /* Ensures some spacing between the buttons */
     align-items: center;  /* Centers the buttons vertically */
@@ -145,11 +145,16 @@ details[open] > summary::before {
 
 @media (max-width: 50em) {
     .card {
-        width: calc(100% - 4em);
+        width: calc(100% - 3em);
     }
     .p-resize-2-1 {
         padding: 1em;
     }
+		.button-container {
+
+		right: 1em;
+
+}
 }
 </style>
 </head>
