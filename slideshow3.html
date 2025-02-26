@@ -8,27 +8,12 @@
 <link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
-:root {
-    --highlight-light: #b4c960;
-    --highlight-dark: #a80075;
-}
-
 /*
 * {
     outline: 1px dotted red;
     outline-offset: -1px;
 }
 */
-
-.backgroundimage {
-    background-image: url("images/1920x600babbage.jpg");
-}
-.bck-highlight-light {
-    background-color: var(--highlight-light);
-}
-.bck-highlight-dark {
-    background-color: var(--highlight-dark);
-}
 section {
     max-width: 60em;
     overflow: hidden;
@@ -36,40 +21,11 @@ section {
 section :last-child {
     margin-bottom: 0;
 }
-summary {
-    cursor: pointer;
-    padding: 0.5em;
-}
-details {
-    margin: 0;
-    border-bottom: 1px solid #CCC;
-}
-summary > * {
-    display: inline;
-}
-details > p {
-    margin: 0.5em;
-}
-details summary::-webkit-details-marker, details summary::marker {
-    display: none;
-    content: "";
-}
-details > summary::before {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    content: 'O';
-    float: right;
-}
-details[open] > summary::before {
-    content: "M";
-}
-
 .gallery-container {
     position: relative;
     max-width: 80rem;
-    width: 100%; /* Ensure it spans full width */
+    width: 100%;
 }
-
 .gallery {
     display: flex;
     gap: 1em;
@@ -78,137 +34,109 @@ details[open] > summary::before {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2em;
-            overscroll-behavior-x: contain;
+    overscroll-behavior-x: contain;
 }
-
 .gallery::-webkit-scrollbar {
-    display: none;
+display: none;
 }
-
 .card {
-    width: 30em;
+    width: 35em;
     flex-shrink: 0;
     scroll-snap-align: start;
 }
-
+.card :last-child {
+    margin-bottom: 0;
+}
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 0.5em;
+    border-radius: 1em;
+    margin-bottom: 1em;
 }
-
-.card p {
-    margin-top: 0.5em;
-    font-size: 1em;
-    color: #333;
-}
-	.button-container {
+.button-container {
     position: absolute;
     bottom: 0;
-		right: 2em;
-    display: flex;  /* This makes the buttons align horizontally */
-    gap: 1em;       /* Ensures some spacing between the buttons */
-    align-items: center;  /* Centers the buttons vertically */
+    right: 2em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
 }
-
 .button-container button {
     width: 2em;
     height: 2em;
     background: #666;
     border: none;
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
+    color: var(--white);
+    font-size: 1.25em;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
     transition: opacity 0.3s ease;
-    padding: 0; /* Remove any default padding */
+    padding: 0;
+	user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
-
-.button-container button:first-child {
-    padding-top: 0.125em; /* Adjust top padding if needed */
-}
-
-.button-container button:last-child {
-    padding-top: 0.125em; /* Adjust top padding if needed */
-}
-
 .button-container button.disabled {
     opacity: 0.5;
     cursor: default;
+	pointer-events: none;
 }
-
 .p-resize-2-1 {
     padding: 2em;
 }
-	
-	
-	
-	
-	.w-0-85 {
-		width: 0.85em;
-	}
-	
-	
-	.w-0-6 {
-		width: 0.6em;
-	}
+.btn-prev {
+    width: 0.85em;
+    padding-top: 0.125em;
+}
+.btn-next {
+    width: 0.6em;
+    padding-top: 0.125em;
+}
 
 @media (max-width: 50em) {
-    .card {
-        width: calc(100% - 4em);
-    }
-    .p-resize-2-1 {
-        padding: 1em;
-    }
-		.button-container {
-
-		right: 1em;
-
+.card {
+    width: calc(100% - 4em);
+}
+.p-resize-2-1 {
+    padding: 1em;
+}
+.button-container {
+    right: 1em;
 }
 }
 </style>
 </head>
 <body>
 <main>
-    <div class="gallery-container p-resize-2-1">
-        <div class="gallery" id="gallery">
-            <div class="card">
-                <img src="images/1280x720arthistory.jpg" alt="Image 1">
-                <p>Dummy text for Image 1</p>
-            </div>
-            <div class="card">
-                <img src="images/1280x720art.jpg" alt="Image 2">
-                <p>Dummy text for Image 2</p>
-            </div>
-            <div class="card">
-                <img src="images/1280x720architecture.jpg" alt="Image 3">
-                <p>Dummy text for Image 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="card">
-                <img src="images/1280x720clearing.jpg" alt="Image 4">
-                <p>Dummy text for Image 4</p>
-            </div>
-            <div class="card">
-                <img src="images/1280x720student15.jpg" alt="Image 5">
-                <p>Dummy text for Image 5</p>
-            </div>
-        </div>
-        <div class="button-container">
-            <button id="prev"><span class="iconfont w-0-85">P</span></button><button id="next"><span class="iconfont w-0-6">N</span></button>
-        </div>
+  <div class="gallery-container p-resize-2-1">
+    <div class="gallery" id="gallery">
+      <div class="card"> <img src="images/1280x720arthistory.jpg" alt="Image 1">
+        <p>Dummy text for Image 1</p>
+      </div>
+      <div class="card"> <img src="images/1280x720art.jpg" alt="Image 2">
+        <p>Dummy text for Image 2</p>
+      </div>
+      <div class="card"> <img src="images/1280x720architecture.jpg" alt="Image 3">
+        <p>Dummy text for Image 3 <a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="card"> <img src="images/1280x720clearing.jpg" alt="Image 4">
+        <p>Dummy text for Image 4</p>
+      </div>
+      <div class="card"> <img src="images/1280x720student15.jpg" alt="Image 5">
+        <p>Dummy text for Image 5</p>
+      </div>
     </div>
+    <div class="button-container">
+      <button id="prev"><span class="iconfont btn-prev">P</span></button>
+      <button id="next"><span class="iconfont btn-next">N</span></button>
+    </div>
+  </div>
 </main>
 <script>
-
-	
-	
-	
-	
-	
 // Initialize variables
 const gallery = document.getElementById('gallery');
 const nextBtn = document.getElementById('next');
@@ -219,7 +147,10 @@ let currentIndex = 0;
 // Update the scroll position
 function updateScrollPosition() {
     const cardWidth = cards[0].clientWidth + 16; // Card width + gap
-    gallery.scrollTo({ left: currentIndex * cardWidth, behavior: 'smooth' });
+    gallery.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: 'smooth'
+    });
 }
 
 // Update button states (disabled or active)
@@ -245,18 +176,18 @@ function updateButtonStates() {
 
 // Click events
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
+    if (!nextBtn.classList.contains("disabled") && currentIndex < cards.length - 1) {
         currentIndex++;
         updateScrollPosition();
-        setTimeout(updateButtonStates, 200); // Add a small delay before updating button states
+        setTimeout(updateButtonStates, 200);
     }
 });
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
+    if (!prevBtn.classList.contains("disabled") && currentIndex > 0) {
         currentIndex--;
         updateScrollPosition();
-        setTimeout(updateButtonStates, 200); // Add a small delay before updating button states
+        setTimeout(updateButtonStates, 200);
     }
 });
 
@@ -270,14 +201,6 @@ gallery.addEventListener('scroll', () => {
 
 // Initialize button states on page load
 updateButtonStates();
-
-
-	
-	
-	
-	
-	
-
 </script>
 </body>
 </html>
