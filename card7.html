@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #c5daed;
+--highlight-dark: #1b5283;
+}
+/*
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+*/
+.c-highlight-light {
+    color: var(--highlight-dark);
+}
+.c-highlight-dark {
+    color: var(--highlight-dark);
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.w-60 {
+    max-width: 60em;
+    overflow: hidden;
+}
+.w-60 :last-child {
+    margin-bottom: 0;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid #CCC;
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+}
+details[open] > summary::before {
+    content: "M";
+}
+.tab-header {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -2px;
+}
+.tab-header button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.75em 1em;
+    margin-right: 0.5em;
+    border-radius: 0.5em 0.5em 0 0; /* Rounds the top corners */
+    border: 2px solid var(--highlight-dark);
+    border-bottom: none;
+    background-color: var(--highlight-dark);
+    color: var(--white);
+    cursor: pointer;
+}
+.tab-header button.active {
+    background-color: var(--white);
+    color: var(--black);
+    border-bottom: none;
+    cursor: auto;
+}
+.tab-content {
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s ease;
+}
+.tab-panel {
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    visibility: hidden;
+}
+.tab-panel.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    visibility: visible;
+    height: auto;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+.text-resize-light h2 {
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+@media (max-width: 60em) {
+.text-resize-light h2 {
+    font-size: 1.5em;
+}
+}
+.arrowlink .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.arrowlink:hover .arrow, .arrowlink:focus .arrow {
+    transform: translateX(0.5em);
+}
+.stroke-highlight-dark {
+    outline: 2px solid var(--highlight-dark);
+    outline-offset: -2px;
+    overflow: hidden;
+}
+.keyfacts {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    outline: 1em solid var(--highlight-dark);
+    outline-offset: -1em;
+}
+.keyfacts > * {
+    width: 100%;
+}
+.keyfacts strong {
+    font-size: 2em;
+    line-height: 1;
+}
+
+@media (max-width: 60em) {
+.keyfacts {
+    grid-template-columns: repeat(3, auto);
+}
+}
+
+@media (max-width: 40em) {
+.keyfacts {
+    grid-template-columns: repeat(2, auto);
+}
+}
+.btn-rounded {
+    color: var(--white);
+    background-color: var(--btn-primary);
+    border-radius: 2em;
+    padding: 0.5em 0.75em;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-rounded:hover, .btn-rounded-:focus {
+    cursor: pointer;
+    background-color: var(--btn-primary-hov);
+}
+.p-resize2 {
+    padding: 2em;
+}
+.tab-rounded-resize {
+    border-radius: 0 2em 2em 2em;
+    overflow: hidden;
+}
+
+@media (max-width: 60em) {
+.p-resize2 {
+    padding: 1em;
+}
+.tab-rounded-resize {
+    border-radius: 0 1em 1em 1em;
+}
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+.card-container .card:first-child:nth-last-child(odd) {
+    grid-column: span 2;
+}
+
+@media (max-width: 40em) {
+.card-container {
+    grid-template-columns: 1fr;
+}
+.card-container .card:first-child:nth-last-child(odd) {
+    grid-column: span 1;
+}
+}
+.card {
+    width: 100%;
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.mb-0-5 {
+    margin-bottom: 0.5em;
+}
+</style>
+</head>
+<body class="p-resize2">
+<main>
+  <div class="w-60 text-resize-light c-highlight-dark mb-reg">
+    <h2>Fees, costs and funding</h2>
+  </div>
+  
+  <!-- New wrapper to place tabs above the container -->
+  <div class="w-60 tabs-container mb-0">
+    <div class="tab-header">
+      <button class="tab-btn active" data-tab="one">UK student fees</button>
+      <button class="tab-btn" data-tab="two">International student fees</button>
+    </div>
+    <div class="w-60 p-resize2 tab-rounded-resize stroke-highlight-dark">
+      <h2 class="mb-0-5">Tuition fees</h2>
+      <div class="tab-content">
+        <div class="tab-panel active" id="tab-one">
+          <p>Tuition fees for new students starting in the 2025/26 academic year:</p>
+          <div class="card-container mb-reg">
+            <div class="card rounded-1 p-1 bck-highlight-dark white-text mb-reg">
+              <p>Full-time study <br>
+                <span class="largetext"><strong>£9,535 per year</strong></span></p>
+            </div>
+            <div class="card rounded-1 p-1 bck-highlight-dark white-text mb-reg">
+              <p>Part-time study <br>
+                <span class="largetext"><strong>£975 per 10 credits</strong></span></p>
+            </div>
+            <div class="card rounded-1 p-1 bck-highlight-dark white-text mb-reg">
+              <p>Optional placement year completed in the UK <br>
+                <span class="largetext"><strong>£1,850</strong></span></p>
+            </div>
+          </div>
+          <details>
+            <summary>
+              <h3>Tuition fee changes</h3>
+            </summary>
+            <p>Content</p>
+          </details>
+        </div>
+        <div class="tab-panel" id="tab-two">
+          <h2>International entry requirements</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+const tabContent = document.querySelector('.tab-content');
+let currentPanel = document.querySelector('.tab-panel.active');
+
+function activateTab(newPanel) {
+    // Measure the current height before the change
+    const startHeight = tabContent.offsetHeight;
+
+    // Start fading out the current panel
+    currentPanel.style.opacity = '0';
+
+    // Measure the new panel's height immediately
+    const endHeight = newPanel.offsetHeight;
+
+    // Set the initial height for transition
+    tabContent.style.height = `${startHeight}px`;
+
+    // Force reflow to ensure the height change is applied
+    tabContent.offsetHeight; // Trigger reflow
+
+    // Trigger height transition and prepare to fade in the new panel
+    tabContent.style.height = `${endHeight}px`;
+
+    // Wait for the opacity transition to complete (300ms)
+    currentPanel.addEventListener('transitionend', () => {
+        currentPanel.classList.remove('active');
+        currentPanel.style.opacity = ''; // Reset opacity
+
+        // Activate the new panel
+        newPanel.classList.add('active');
+        newPanel.style.opacity = '1'; // Ensure it's fully visible
+
+        // Set height to auto after the height transition ends
+        tabContent.addEventListener('transitionend', () => {
+            tabContent.style.height = 'auto';
+        }, {
+            once: true
+        });
+
+        // Update the current panel reference
+        currentPanel = newPanel;
+    }, {
+        once: true
+    });
+}
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (button.classList.contains('active')) return; // Prevent action if already active
+
+        // Remove active class from current button
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Find the corresponding new panel
+        const newPanel = document.querySelector(`#tab-${button.dataset.tab}`);
+        activateTab(newPanel);
+    });
+});
+</script>
+</body>
+</html>
