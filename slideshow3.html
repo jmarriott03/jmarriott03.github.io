@@ -114,7 +114,7 @@ display: none;
 <main>
   <div class="gallery-container p-resize-2-1 mb-reg">
     <h2>Explore some of our species</h2>
-    <div class="gallery" id="gallery">
+    <div class="gallery" id="gallery" tabindex="0">
       <div class="card"><img src="images/1280x720animal1.webp" alt="">
         <p>Leaf insect 'Phyllium sp'</p>
       </div>
@@ -214,6 +214,17 @@ gallery.addEventListener('scroll', () => {
 
 // Initialize button states on page load
 updateButtonStates();
+	
+// Enable keyboard navigation
+gallery.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight" && currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateScrollPosition();
+    } else if (event.key === "ArrowLeft" && currentIndex > 0) {
+        currentIndex--;
+        updateScrollPosition();
+    }
+});
 </script>
 </body>
 </html>
