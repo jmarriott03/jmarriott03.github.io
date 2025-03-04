@@ -82,11 +82,10 @@ display: none;
 }
 .button-container button.disabled {
     opacity: 0.5;
-/*
     cursor: default;
     pointer-events: none;
-*/
-	visibility: hidden;
+	will-change: opacity, transform;
+	transform: translateZ(0);
 }
 .p-resize-2-1 {
     padding: 2em;
