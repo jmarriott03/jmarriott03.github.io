@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.p-resize-2-1 {
+    padding: 2em;
+}
+.parent > div {
+    width: 100%;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas: "hero img2 img3" "hero text2 text3" "hero img4 img5" "text1 text4 text5";
+    max-width: 80em;
+}
+.hero {
+    grid-area: hero;
+}
+.text1 {
+    grid-area: text1;
+}
+.img2 {
+    grid-area: img2;
+}
+.text2 {
+    grid-area: text2;
+}
+.img3 {
+    grid-area: img3;
+}
+.text3 {
+    grid-area: text3;
+}
+.img4 {
+    grid-area: img4;
+}
+.text4 {
+    grid-area: text4;
+}
+.img5 {
+    grid-area: img5;
+}
+.text5 {
+    grid-area: text5;
+}
+
+@media (max-width: 60em) {
+.parent {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "hero hero" "text1 text1" "img2 img3" "text2 text3" "img4 img5" "text4 text5";
+}
+}
+
+@media (max-width: 40em) {
+.parent {
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero" "text1" "img2" "text2" "img3" "text3" "img4" "text4" "img5" "text5";
+}
+.p-resize-2-1 {
+    padding: 1em;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent p-resize-2-1">
+    <div class="hero rounded-1"><img src="images/1280x720animal1.jpg" alt=""></div>
+    <div class="text1">Leaf insect 'Phyllium sp'</div>
+    <div class="img2 rounded-1"><img src="images/1280x720animal2.jpg" alt=""></div>
+    <div class="text2">Male Panther Chameleon 'Furcifer pardalis'</div>
+    <div class="img3 rounded-1"><img src="images/1280x720animal3.jpg" alt=""></div>
+    <div class="text3">Ivory Millipede 'Chicobolus spinigerus'</div>
+    <div class="img4 rounded-1"><img src="images/1280x720animal4.jpg" alt=""></div>
+    <div class="text4">Sun Beetle 'Pachnoda marginata'</div>
+    <div class="img5 rounded-1"><img src="images/1280x720animal5.jpg" alt=""></div>
+    <div class="text5">Orchid Mantis 'Hymenopus coronatus'</div>
+  </div>
+</main>
+</body>
+</html>
