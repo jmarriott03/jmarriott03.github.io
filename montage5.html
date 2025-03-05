@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.p-resize-2-1 {
+    padding: 2em;
+}
+.parent > div {
+    width: 100%;
+}
+.parent img {
+    border-radius: 1em 1em 0 0;
+}
+.parent p {
+    padding: 0 1em 1em 1em;
+    margin: 0;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    grid-gap: 1em;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1em;
+}
+.card1 {
+    grid-area: 1 / 1 / 5 / 2;
+}
+.img1 {
+    grid-area: 1 / 1 / 4 / 2;
+}
+.text1 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.card2 {
+    grid-area: 1 / 2 / 3 / 3;
+}
+.img2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.text2 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.card3 {
+    grid-area: 3 / 2 / 5 / 3;
+}
+.img3 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.text3 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+@media (max-width: 60em) {
+.parent {
+    grid-template-columns: repeat(2, 1fr);
+}
+.card1 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+.img1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+.text1 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+.card2 {
+    grid-area: 3 / 1 / 5 / 2;
+}
+.img2 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.text2 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.card3 {
+    grid-area: 3 / 2 / 5 / 3;
+}
+.img3 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.t {
+    grid-area: 4 / 2 / 5 / 3;
+}
+}
+
+@media (max-width: 40em) {
+.parent {
+    grid-template-columns: 1fr;
+}
+.card1 {
+    grid-area: 1 / 1 / 3 / 2;
+}
+.img1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.text1 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+.card2 {
+    grid-area: 3 / 1 / 5 / 2;
+}
+.img2 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.text2 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.card3 {
+    grid-area: 5 / 1 / 7 / 2;
+}
+.img3 {
+    grid-area: 5 / 1 / 6 / 2;
+}
+.text3 {
+    grid-area: 6 / 1 / 7 / 2;
+}
+.p-resize-2-1 {
+    padding: 1em;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent p-resize-2-1">
+    <div class="card1 bck-lgrey rounded-1"></div>
+    <div class="img1"><img src="images/1280x720student16.webp" alt=""></div>
+    <div class="text1">
+      <p><strong>1)</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <a href="#">anim id est laborum</a>.</p>
+    </div>
+    <div class="card2 bck-lgrey rounded-1"></div>
+    <div class="img2"><img src="images/1280x720student17.webp" alt=""></div>
+    <div class="text2">
+      <p><strong>2)</strong> Sed do eiusmod tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>.</p>
+    </div>
+    <div class="card3 bck-lgrey rounded-1"></div>
+    <div class="img3"><img src="images/1280x720student18.webp" alt=""></div>
+    <div class="text3">
+      <p><strong>3)</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat</a>.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
