@@ -12,10 +12,12 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
+/*
 * {
     outline: 1px dotted red;
     outline-offset: -1px;
 }
+*/
 .backgroundimage {
     background-image: url("images/1920x600babbage.jpg");
 }
@@ -32,6 +34,9 @@ section {
 section :last-child {
     margin-bottom: 0;
 }
+.p-resize-2-1 {
+    padding: 2em;
+}
 .grid-container {
     display: grid;
     grid-template-areas: "img1 img2 img3" "img1 text2 text3" "img1 img4 img5" "text1 text4 text5";
@@ -42,6 +47,9 @@ section :last-child {
 }
 .grid-container > div {
     width: 100%;
+}
+.grid-container p:last-child {
+    margin-bottom: 0;
 }
 .img1 {
     grid-area: img1;
@@ -73,14 +81,13 @@ section :last-child {
 .text5 {
     grid-area: text5;
 }
-	.img1, .img2, .img3, .img4, .img5 {
-		border-radius: 1em 1em 0 0;
-	overflow: hidden;
-	}
-	
-	.text1, .text2, .text3, .text4, .text5 {padding: 0 1em 1em 1em;}
-	
-	
+.img1, .img2, .img3, .img4, .img5 {
+    border-radius: 1em 1em 0 0;
+    overflow: hidden;
+}
+.text1, .text2, .text3, .text4, .text5 {
+    padding: 0 1em 1em 1em;
+}
 .wrapper1 {
     grid-column: 1;
     grid-row: 1 / span 4;
@@ -101,27 +108,93 @@ section :last-child {
     grid-column: 3;
     grid-row: 3 / span 2;
 }
+
+@media (max-width: 60em) {
+.grid-container {
+    grid-template-areas: "img1 img1" "text1 text1" "img2 img3" "text2 text3" "img4 img5" "text4 text5";
+    grid-template-columns: 1fr 1fr;
+}
+.wrapper1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+.wrapper2 {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+}
+.wrapper3 {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+}
+.wrapper4 {
+    grid-column: 1;
+    grid-row: 5 / span 2;
+}
+.wrapper5 {
+    grid-column: 2;
+    grid-row: 5 / span 2;
+}
+}
+
+@media (max-width: 40em) {
+.p-resize-2-1 {
+    padding: 1em;
+}
+.grid-container {
+    grid-template-areas: "img1" "text1" "img2" "text2" "img3" "text3" "img4" "text4" "img5" "text5";
+    grid-template-columns: 1fr;
+}
+.wrapper1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+.wrapper2 {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+}
+.wrapper3 {
+    grid-column: 1;
+    grid-row: 5 / span 2;
+}
+.wrapper4 {
+    grid-column: 1;
+    grid-row: 7 / span 2;
+}
+.wrapper5 {
+    grid-column: 1;
+    grid-row: 9 / span 2;
+}
 }
 </style>
 </head>
 <body>
 <main>
-  <div class="grid-container p-2">
+  <div class="grid-container  p-resize-2-1">
     <div class="wrapper1 bck-lgrey p-2 rounded-1"></div>
-    <div class="img1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
-    <div class="text1">text1 </div>
+    <div class="img1"><img src="images/1280x720student16.webp" width="1280" height="720" alt=""/></div>
+    <div class="text1">
+      <p><strong>1)</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <a href="#">anim id est laborum</a>.</p>
+    </div>
     <div class="wrapper2 bck-lgrey p-2 rounded-1"></div>
-    <div class="img2"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
-    <div class="text2">text2</div>
+    <div class="img2"><img src="images/1280x720student17.webp" width="1280" height="720" alt=""/></div>
+    <div class="text2">
+      <p><strong>2)</strong> Sed do eiusmod tempor incididunt ut labore et <a href="#">dolore magna aliqua</a>.</p>
+    </div>
     <div class="wrapper3 bck-lgrey p-2 rounded-1"></div>
-    <div class="img3"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
-    <div class="text3">text3</div>
+    <div class="img3"><img src="images/1280x720student18.webp" width="1280" height="720" alt=""/></div>
+    <div class="text3">
+      <p><strong>3)</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#">ex ea commodo consequat</a>.</p>
+    </div>
     <div class="wrapper4 bck-lgrey p-2 rounded-1"></div>
-    <div class="img4"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
-    <div class="text4">text4</div>
+    <div class="img4"><img src="images/1280x720student19.webp" width="1280" height="720" alt=""/></div>
+    <div class="text4">
+      <p><strong>4)</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum dolore fugiat</a>.</p>
+    </div>
     <div class="wrapper5 bck-lgrey p-2 rounded-1"></div>
-    <div class="img5"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
-    <div class="text5">text5</div>
+    <div class="img5"><img src="images/1280x720student20.webp" width="1280" height="720" alt=""/></div>
+    <div class="text5">
+      <p><strong>5)</strong> Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>.</p>
+    </div>
   </div>
 </main>
 </body>
