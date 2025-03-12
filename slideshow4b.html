@@ -8,12 +8,10 @@
 <link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
-/*
 * {
     outline: 1px dotted red;
     outline-offset: -1px;
 }
-*/
 section {
     max-width: 60em;
     overflow: hidden;
@@ -35,15 +33,18 @@ section :last-child {
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2em;
     overscroll-behavior-x: contain;
-	touch-action: pan-x;
+    touch-action: pan-x;
 }
 .gallery::-webkit-scrollbar {
 display: none;
 }
 .card {
-    width: 35em;
+    width: 23em;
     flex-shrink: 0;
     scroll-snap-align: start;
+    background-color: var(--lgrey);
+    border-radius: 1em;
+    overflow: hidden;
 }
 .card :last-child {
     margin-bottom: 0;
@@ -51,7 +52,6 @@ display: none;
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 1em;
     margin-bottom: 1em;
 }
 .button-container {
@@ -85,7 +85,7 @@ display: none;
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
-	transform: translateZ(0);
+    transform: translateZ(0);
 }
 .p-resize-2-1 {
     padding: 2em;
@@ -110,39 +110,131 @@ display: none;
     right: 1em;
 }
 }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin-left: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+.blue-link {
+    color: var(--link);
+    text-decoration: underline;
+}
+.black-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.white-link {
+    color: var(--black);
+    text-decoration: underline;
+}
 </style>
 </head>
 <body>
 <main>
   <div class="gallery-container p-resize-2-1 mb-reg">
-    <h2>Explore some of our species</h2>
+    <h2>Course search</h2>
     <div class="gallery" id="gallery" tabindex="0">
-      <div class="card"><img src="images/1280x720animal1.webp" alt="">
-        <p>Leaf insect 'Phyllium sp'</p>
+      <div class="card"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">BA (Hons) Architecture</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Æ</span>Study level</td>
+              <td><strong>Undergraduate</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>3 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">m</span>UCAS code</td>
+              <td><strong>K100</strong></td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="card"><img src="images/1280x720animal2.webp" alt="">
-        <p>Male Panther Chameleon 'Furcifer pardalis'</p>
+      <div class="card"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">PhD Art History</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Æ</span>Study level</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="card"><img src="images/1280x720animal3.webp" alt="">
-        <p>Ivory Millipede 'Chicobolus spinigerus'</p>
+      <div class="card"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">BA (Hons) Art History</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Æ</span>Study level</td>
+              <td><strong>Undergraduate</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>3 years (+ optional placement)</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">m</span>UCAS code</td>
+              <td><strong>V350</strong></td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="card"><img src="images/1280x720animal4.webp" alt="">
-        <p>Sun Beetle 'Pachnoda marginata'</p>
-      </div>
-      <div class="card"><img src="images/1280x720animal5.webp" alt="">
-        <p>Orchid Mantis 'Hymenopus coronatus'</p>
-      </div>
-      <div class="card"><img src="images/1280x720animal6.webp" alt="">
-        <p>Death Feigning Beetle 'Asbolus verrucosus'</p>
-      </div>
-      <div class="card"><img src="images/1280x720animal7.webp" alt="">
-        <p>Golden Mantella Frog 'Mantella aurantiaca'</p>
-      </div>
-      <div class="card"><img src="images/1280x720animal8.webp" alt="">
-        <p>Giant African Land Snail 'Lissachatina fulica'</p>
-      </div>
-      <div class="card"><img src="images/1280x720animal9.webp" alt="">
-        <p>Giant Asian Mantis 'Hierodula patellifera'</p>
+      <div class="card"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">PhD Performing Arts</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
     <div class="button-container">
