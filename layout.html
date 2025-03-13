@@ -32,6 +32,9 @@ section {
 section :last-child {
     margin-bottom: 0;
 }
+div :last-child {
+    margin-bottom: 0;
+}
 .w-80 {
     max-width: 80em;
     overflow: hidden;
@@ -53,11 +56,58 @@ section :last-child {
 }
 	}
 
+	
+	
+	
+	.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+    gap: 1em;
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+	
+	
+	
 </style>
 </head>
 <body>
 <main>
 	
-	<div class="bck-highlight-light"><div class="w-80 p-resize-2-1"><h2>h2 text</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div></div></main>
+	<div class="bck-highlight-light mb-reg"><div class="w-80 p-resize-2-1"><h2>h2 text</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p></div></div>
+	
+	
+	  <div class="bck-highlight-light mb-reg">
+    <div class="w-80 p-resize-2-1">
+      <div class="card-container p-resize-2-1 bck-lgrey rounded-2">
+        <div class="card bck-white rounded-1 p-1">
+          <p><strong>Card: </strong>bck-white<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+        <div class="card bck-highlight-medium black-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-highlight-medium black-text<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+        <div class="card bck-highlight-dark white-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-highlight-dark white-text<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-black white-text<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+	<div class="w-80 p-resize-2-1"><h2>h2 text</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p></div>
+	
+	</main>
 </body>
 </html>
