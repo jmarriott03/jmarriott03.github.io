@@ -14,7 +14,7 @@
 }
 * {
     outline: 1px dotted red;
-	outline-offset: -1px;
+    outline-offset: -1px;
 }
 .backgroundimage {
     background-image: url("images/1920x600babbage.jpg");
@@ -50,16 +50,13 @@ div :last-child {
 .p-resize-2-1 {
     padding: 2em;
 }
-	@media (max-width: 40em) {
-		.p-resize-2-1 {
+
+@media (max-width: 40em) {
+.p-resize-2-1 {
     padding: 1em;
 }
-	}
-
-	
-	
-	
-	.card-container {
+}
+.card-container {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
     gap: 1em;
@@ -73,26 +70,26 @@ div :last-child {
 .card > * {
     margin-left: 0;
 }
-	
-	
-	
 </style>
 </head>
 <body>
 <main>
-	
-	<div class="bck-highlight-light mb-reg"><div class="w-80 p-resize-2-1"><h2>h2 text</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p></div></div>
-	
-	
-	  <div class="bck-highlight-light mb-reg">
+  <div class="bck-highlight-dark white-text">
+    <div class="w-80 p-resize-2-1">
+      <h2>h2 text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
+    </div>
+  </div>
+  <div class="bck-highlight-light">
     <div class="w-80 p-resize-2-1">
       <div class="card-container p-resize-2-1 bck-lgrey rounded-2">
         <div class="card bck-white rounded-1 p-1">
           <p><strong>Card: </strong>bck-white<br>
             <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
         </div>
-        <div class="card bck-highlight-medium black-text rounded-1 p-1">
-          <p><strong>Card: </strong>bck-highlight-medium black-text<br>
+        <div class="card bck-highlight-light black-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-highlight-light black-text<br>
             <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
         </div>
         <div class="card bck-highlight-dark white-text rounded-1 p-1">
@@ -106,8 +103,29 @@ div :last-child {
       </div>
     </div>
   </div>
-	<div class="w-80 p-resize-2-1"><h2>h2 text</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p></div>
-	
-	</main>
+  <div class="w-80 p-resize-2-1">
+    <h2>h2 text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
+  </div>
+  <div class="w-80 p-resize-2-1 card-container p-resize-2-1 bck-lgrey">
+    <div class="card bck-white rounded-1 p-1">
+      <p><strong>Card: </strong>bck-white<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+    <div class="card bck-highlight-light black-text rounded-1 p-1">
+      <p><strong>Card: </strong>bck-highlight-light black-text<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+    <div class="card bck-highlight-dark white-text rounded-1 p-1">
+      <p><strong>Card: </strong>bck-highlight-dark white-text<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+    <div class="card bck-black white-text rounded-1 p-1">
+      <p><strong>Card: </strong>bck-black white-text<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+  </div>
+</main>
 </body>
 </html>
