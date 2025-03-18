@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+    outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.w-60 {
+    max-width: 60em;
+    overflow: hidden;
+}
+summary {
+    cursor: pointer;
+    padding: 0.5em;
+}
+details {
+    margin: 0;
+    border-bottom: 1px solid var(--mgrey);
+}
+summary > * {
+    display: inline;
+}
+details > p {
+    margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+    font-family: 'icon', sans-serif;
+    font-weight: normal;
+    content: 'O';
+    float: right;
+    transition: transform 0.3s ease;
+}
+details[open] > summary::before {
+    transform: rotate(180deg);
+}
+summary {
+    transition: background-color 0.3s ease;
+}
+summary:hover {
+    background-color: var(--lgrey);
+}
+.p-resize-2-1 {
+    padding: 2em;
+}
+
+@media (max-width: 40em) {
+.p-resize-2-1 {
+    padding: 1em;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-60 p-resize-2-1">
+    <h1>accordion10</h1>
+    <div class="mb-reg">
+      <details>
+        <summary>
+          <h2>Summary 1</h2>
+        </summary>
+        <p>Details 1</p>
+      </details>
+      <details>
+        <summary>
+          <h2>Summary 2</h2>
+        </summary>
+        <p>Details 2</p>
+        <details>
+          <summary>
+            <h3>Nested summary 1</h3>
+          </summary>
+          <p>Details 3</p>
+        </details>
+        <details>
+          <summary>
+            <h3>Nested summary 2</h3>
+          </summary>
+          <p>Details 4</p>
+        </details>
+      </details>
+    </div>
+    <div class="codegrey"><code><strong>details &gt; summary</strong>::before {<br>
+      font-family: 'icon', sans-serif;<br>
+      font-weight: normal;<br>
+      content: 'O';<br>
+      float: right;<br>
+      }<br>
+      <strong>details[open] &gt; summary</strong>::before {<br>
+      content: "M";<br>
+      }</code></div>
+  </div>
+</main>
+</body>
+</html>
