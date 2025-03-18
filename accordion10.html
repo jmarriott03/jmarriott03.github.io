@@ -22,12 +22,18 @@ summary {
     cursor: pointer;
     padding: 0.5em;
 }
+summary > * {
+    display: inline;
+}
+summary {
+    transition: background-color 0.3s ease;
+}
+summary:hover {
+    background-color: var(--lgrey);
+}
 details {
     margin: 0;
     border-bottom: 1px solid var(--mgrey);
-}
-summary > * {
-    display: inline;
 }
 details > p {
     margin: 0.5em;
@@ -45,12 +51,6 @@ details > summary::before {
 }
 details[open] > summary::before {
     transform: rotate(180deg);
-}
-summary {
-    transition: background-color 0.3s ease;
-}
-summary:hover {
-    background-color: var(--lgrey);
 }
 .p-resize-2-1 {
     padding: 2em;
@@ -93,15 +93,40 @@ summary:hover {
         </details>
       </details>
     </div>
-    <div class="codegrey"><code><strong>details &gt; summary</strong>::before {<br>
+    <div class="codegrey"><code> <strong>summary</strong> {<br>
+      cursor: pointer;<br>
+      padding: 0.5em;<br>
+      }<br>
+      <strong>summary &gt; *</strong> {<br>
+      display: inline;<br>
+      }<br>
+      <strong>summary</strong> {<br>
+      transition: background-color 0.3s ease;<br>
+      }<br>
+      <strong>summary:hover</strong> {<br>
+      background-color: var(--lgrey);<br>
+      }<br>
+      <strong>details</strong> {<br>
+      margin: 0;<br>
+      border-bottom: 1px solid var(--mgrey);<br>
+      }<br>
+      <strong>details &gt; p</strong> {<br>
+      margin: 0.5em;<br>
+      }<br>
+      <strong>details summary::-webkit-details-marker, details summary::marker</strong> {<br>
+      display: none;<br>
+      content: "";<br>
+      }<br>
+      <strong>details &gt; summary::before</strong> {<br>
       font-family: 'icon', sans-serif;<br>
       font-weight: normal;<br>
       content: 'O';<br>
       float: right;<br>
+      transition: transform 0.3s ease;<br>
       }<br>
-      <strong>details[open] &gt; summary</strong>::before {<br>
-      content: "M";<br>
-      }</code></div>
+      <strong>details[open] &gt; summary::before</strong> {<br>
+      transform: rotate(180deg);<br>
+      } </code></div>
   </div>
 </main>
 </body>
