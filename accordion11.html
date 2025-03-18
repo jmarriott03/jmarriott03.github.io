@@ -28,10 +28,15 @@ summary > * {
 }
 summary:hover {
     background-color: var(--lgrey);
+    border-radius: 0.5em 0.5em 0 0;
+}
+details:not([open]) > summary:hover {
+    border-radius: 0.5em;
 }
 details {
-    margin: 0;
-    border-bottom: 1px solid var(--mgrey);
+    margin: 0 0 1em 0;
+    border: 1px solid var(--mgrey);
+    border-radius: 0.5em;
 }
 details > p {
     margin: 0.5em;
@@ -50,6 +55,9 @@ details > summary::before {
 details[open] > summary::before {
     transform: rotate(180deg);
 }
+details details {
+    margin: 0 1em 1em 1em;
+}
 .p-resize-2-1 {
     padding: 2em;
 }
@@ -64,7 +72,7 @@ details[open] > summary::before {
 <body>
 <main>
   <div class="w-60 p-resize-2-1">
-    <h1>accordion10</h1>
+    <h1>accordion10b</h1>
     <div class="mb-reg">
       <details>
         <summary>
@@ -101,10 +109,16 @@ details[open] > summary::before {
       }<br>
       <strong>summary:hover</strong> {<br>
       background-color: var(--lgrey);<br>
+      border-radius: 0.5em 0.5em 0 0;<br>
+      }<br>
+      <strong>details:not([open]) &gt; summary:hover</strong> {<br>
+      border-radius: 0.5em;<br>
       }<br>
       <strong>details</strong> {<br>
-      margin: 0;<br>
-      border-bottom: 1px solid var(--mgrey);<br>
+      margin: 0 0 1em 0;<br>
+      border: 1px solid var(--mgrey);<br>
+      border-radius: 0.5em;<br>
+      overflow: hidden;<br>
       }<br>
       <strong>details &gt; p</strong> {<br>
       margin: 0.5em;<br>
@@ -122,7 +136,11 @@ details[open] > summary::before {
       }<br>
       <strong>details[open] &gt; summary::before</strong> {<br>
       transform: rotate(180deg);<br>
+      }<br>
+      <strong>details details</strong> {<br>
+      margin: 0 1em 1em 1em;<br>
       }</code></div>
+    <br>
   </div>
 </main>
 </body>
