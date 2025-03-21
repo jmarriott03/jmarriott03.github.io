@@ -152,6 +152,18 @@ section :last-child {
 .mrfrosty-theme a {
     color: var(--link-color-dark);
 }
+
+@media (max-width: 40em) {
+/*Off white color change to make container visible instead of white on white*/
+.mrfrosty {
+    background-image: linear-gradient(rgba(238, 238, 238, 0.6), rgba(238, 238, 238, 1));
+    backdrop-filter: blur(0.5em);
+}
+/*Remove shadow as is clipping*/
+.shadow {
+  box-shadow: none;
+}
+}
 .columns {
     column-count: 2;
     column-gap: 1em;

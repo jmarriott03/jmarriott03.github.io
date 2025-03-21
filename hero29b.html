@@ -150,6 +150,18 @@ section :last-child {
 .mrfrosty-theme a {
     color: var(--link-color-dark);
 }
+
+@media (max-width: 40em) {
+/*Off white color change to make container visible instead of white on white*/
+.mrfrosty {
+    background-image: linear-gradient(rgba(238, 238, 238, 0.6), rgba(238, 238, 238, 1));
+    backdrop-filter: blur(0.5em);
+}
+/*Remove shadow as is clipping*/
+.shadow {
+    box-shadow: none;
+}
+}
 .columns {
     column-count: 2;
     column-gap: 1em;
@@ -175,7 +187,7 @@ section :last-child {
     <div class="parent rounded-2">
       <div class="div1"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt=""/></div>
       <div class="div2 p-resize-2-0">
-        <div class="black-text text-resize p-2 mrfrosty-theme rounded-2 shadow">
+        <div class="black-text text-resize p-2 mrfrosty rounded-2 shadow">
           <h2>Apply for a Student visa</h2>
           <p><a href="#">Information on visas</a> for international students applying to study at the University of Plymouth</p>
           <button class="btn-rounded"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</button>
