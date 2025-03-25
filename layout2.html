@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #677c1d;
+}
+/*
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.w-60 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.w-40 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.gap-1 {
+    gap: 1em;
+}
+.gap-0-5 {
+    gap: 0.5em;
+}
+.btn-rounded {
+    color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--black);
+}
+.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+}
+.text-resize > .btn-rounded {
+    font-size: 1.25rem;
+}
+
+@media (max-width: 80em) {
+.text-resize > .btn-rounded {
+    font-size: 1rem;
+}
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+
+	
+	.bck-dgrey {
+  background-color: var(--dgrey);
+  width: 100%;
+}
+	
+	
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-1">
+    <h1>layout2</h1>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 1</h2>
+      <div class="card-container p-1 dotted rounded-0-5 gap-0-5">
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 0.5em<br>
+        <strong>Card corner radius</strong>: 0.5em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 2</h2>
+      <div class="card-container p-1 dotted rounded-0-5 gap-1">
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 0.5em<br>
+        <strong>Card corner radius</strong>: 0.5em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 3</h2>
+      <div class="card-container p-1 dotted rounded-1 gap-0-5">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 1em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 4</h2>
+      <div class="card-container p-1 dotted rounded-1 gap-1">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 1em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 5</h2>
+      <div class="card-container p-1 dotted rounded-2 gap-0-5">
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 2em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 6</h2>
+      <div class="card-container p-1 dotted rounded-2 gap-1">
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 2em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 7</h2>
+      <div class="card-container p-1 dotted rounded-2 gap-0-5">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-lgrey mb-reg">
+    <div class="w-80 p-1"><h2>Version 8</h2>
+      <div class="card-container p-1 dotted rounded-2 gap-1">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
