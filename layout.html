@@ -46,28 +46,9 @@ div :last-child {
     max-width: 80em;
     overflow: hidden;
 }
-.p-resize-2-1 {
-    padding: 2em;
-}
-
-@media (max-width: 40em) {
-.p-resize-2-1 {
-    padding: 1em;
-}
-}
-.p-resize-4-2 {
-    padding: 4em;
-}
-
-@media (max-width: 60em) {
-.p-resize-4-2 {
-    padding: 2em;
-}
-}
 .card-container {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
-    gap: 1em;
 }
 .card {
     width: 100%;
@@ -77,6 +58,12 @@ div :last-child {
 }
 .card > * {
     margin-left: 0;
+}
+.gap-1 {
+    gap: 1em;
+}
+.gap-0-5 {
+    gap: 0.5em;
 }
 .btn-rounded {
     color: currentColor;
@@ -150,69 +137,255 @@ div :last-child {
 </head>
 <body>
 <main>
-  <div class="bck-highlight-dark white-text">
-    <div class="w-80 p-resize-2-1">
-      <h2>h2 text</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
-    </div>
+  <div class="w-80 p-1">
+    <h1>layout</h1>
   </div>
-  <div class="bck-highlight-light">
-    <div class="w-80 p-resize-2-1">
-      <div class="card-container p-resize-2-1 bck-lgrey rounded-2">
-        <div class="card bck-white rounded-1">
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-0-5 gap-0-5">
+        <div class="card bck-white rounded-0-5">
           <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
             <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
           </div>
         </div>
-        <div class="card bck-highlight-light black-text rounded-1">
+        <div class="card bck-white rounded-0-5">
           <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
             <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
           </div>
         </div>
-        <div class="card bck-highlight-dark white-text rounded-1">
+        <div class="card bck-white rounded-0-5">
           <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
             <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
           </div>
         </div>
-        <div class="card bck-black white-text rounded-1">
+        <div class="card bck-white rounded-0-5">
           <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
             <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-80 p-resize-2-1">
-    <h2>h2 text</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
-  </div>
-  <div class="w-80 p-resize-2-1 card-container p-resize-2-1 bck-lgrey">
-    <div class="card bck-white rounded-1 p-1">
-      <p><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
-    </div>
-    <div class="card bck-highlight-light black-text rounded-1 p-1">
-      <p><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
-    </div>
-    <div class="card bck-highlight-dark white-text rounded-1 p-1">
-      <p><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
-    </div>
-    <div class="card bck-black white-text rounded-1 p-1">
-      <p><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 0.5em<br>
+        <strong>Card corner radius</strong>: 0.5em<br>
+        <strong>Gap</strong>: 0.5em</p>
     </div>
   </div>
-  <div class="w-80 p-resize-2-1">
-    <div class="rounded-2 hero-2col layout-33-67 mb-reg bck-highlight-light">
-      <div class="left-column p-resize-4-2">
-        <div class="centered text-resize black-text">
-          <h2>Teaching, research and support facilities</h2>
-          <p>At Plymouth, we are dedicated to your success and to ensuring that your university experience is exceptional from beginning to end.</p>
-          <p><a href="#">Explore our facilities</a></p>
-          <button class="btn-rounded"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</button>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-0-5 gap-1">
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-0-5">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
         </div>
       </div>
-      <div class="right-column"><img src="images/1280x720student20.webp" width="1280" height="720" alt=""></div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 0.5em<br>
+        <strong>Card corner radius</strong>: 0.5em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-1 gap-0-5">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 1em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-1 gap-1">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 1em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-2 gap-0-5">
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 2em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-2 gap-1">
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-2">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 2em<br>
+        <strong>Gap</strong>: 1em</p>
+    </div>
+  </div>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-2 gap-0-5">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 0.5em</p>
+    </div>
+  </div>
+  <div class="bck-highlight-dark mb-reg">
+    <div class="w-80 p-1">
+      <div class="card-container p-1 bck-highlight-light rounded-2 gap-1">
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student16.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 1</strong> Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student17.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 2</strong> Sed do eiusmod tempor incididunt ut labore et dolore <a href="#">magna aliqua</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student18.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 3</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi</a>.</p>
+          </div>
+        </div>
+        <div class="card bck-white rounded-1">
+          <div><img src="images/1280x720student19.webp" width="1280" height="720" alt="">
+            <p class="p-1"><strong>Card 4</strong> Duis aute irure dolor in reprehenderit in voluptate velit <a href="#">esse cillum</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 p-1 white-text">
+      <p><strong>Container corner radius</strong>: 2em<br>
+        <strong>Card corner radius</strong>: 1em<br>
+        <strong>Gap</strong>: 1em</p>
     </div>
   </div>
 </main>
