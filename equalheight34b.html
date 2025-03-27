@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+    grid-column-gap: 1em;
+    margin: 0 auto;
+    grid-gap: 1em;
+}
+.grid-item {
+    margin: 0;
+    max-width: 39em;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    vertical-align: top;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+.grid-item > * {
+    width: 100%;
+}
+section {
+    max-width: 80em;
+    overflow: hidden;
+}
+figcaption {
+    margin: 0;
+    padding: 1em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-2">
+    <h2>Related research</h2>
+    <div class="grid-container">
+      <div class="grid-item rounded-0-5 stroke">
+        <figure><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320"></a>
+          <figcaption><a href="#">Environmental Cultures</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item rounded-0-5 stroke">
+        <figure><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320"></a>
+          <figcaption><a href="#">International Environmental Arts Research Network</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item rounded-0-5 stroke">
+        <figure><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320"></a>
+          <figcaption><a href="#">Cross Cutting Strand: Arts - Health Collaborative Research</a></figcaption>
+        </figure>
+      </div>
+      <div class="grid-item rounded-0-5 stroke">
+        <figure><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320"></a>
+          <figcaption><a href="#">Art, culture and the environment: collaboration and change</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
