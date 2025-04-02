@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+.backgroundimage {
+    background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+    background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+    background-color: var(--highlight-dark);
+}
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+div :last-child {
+    margin-bottom: 0;
+}
+.w-80 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.w-60 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.w-40 {
+    max-width: 80em;
+    overflow: hidden;
+}
+.p-resize-2-1 {
+    padding: 2em;
+}
+
+@media (max-width: 40em) {
+.p-resize-2-1 {
+    padding: 1em;
+}
+}
+.p-resize-4-2 {
+    padding: 4em;
+}
+
+@media (max-width: 60em) {
+.p-resize-4-2 {
+    padding: 2em;
+}
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+    gap: 1em;
+}
+.card {
+    width: 100%;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card > * {
+    margin-left: 0;
+}
+.btn-rounded {
+    color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    background: none;
+    line-height: 1.5;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--black);
+}
+.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+}
+.text-resize > .btn-rounded {
+    font-size: 1.25rem;
+}
+.hero-2col {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+    width: var(--left-width);
+}
+.right-column {
+    width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+    width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+    width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="bck-highlight-dark white-text">
+    <div class="w-80 p-resize-2-1">
+      <h2>h2 text</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
+    </div>
+  </div>
+  <div class="bck-highlight-light">
+    <div class="w-80 p-resize-2-1">
+      <div class="card-container p-1 bck-lgrey rounded-2">
+        <div class="card bck-white rounded-1 p-1">
+          <p><strong>Card: </strong>bck-white<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+        <div class="card bck-highlight-light black-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-highlight-light black-text<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+        <div class="card bck-highlight-dark white-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-highlight-dark white-text<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+        <div class="card bck-black white-text rounded-1 p-1">
+          <p><strong>Card: </strong>bck-black white-text<br>
+            <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 p-resize-2-1">
+    <h2>h2 text</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
+  </div>
+  <div class="w-80 p-resize-2-1 card-container bck-lgrey">
+    <div class="card bck-white rounded-0-5 p-1">
+      <p><strong>Card: </strong>bck-white<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+    <div class="card bck-highlight-light black-text rounded-0-5 p-1">
+      <p><strong>Card: </strong>bck-highlight-light black-text<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+    <div class="card bck-highlight-dark white-text rounded-0-5 p-1">
+      <p><strong>Card: </strong>bck-highlight-dark white-text<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+    <div class="card bck-black white-text rounded-0-5 p-1">
+      <p><strong>Card: </strong>bck-black white-text<br>
+        <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
+    </div>
+  </div>
+  <div class="w-80 p-resize-2-1">
+    <div class="rounded-2 hero-2col layout-33-67 mb-reg bck-highlight-light">
+      <div class="left-column p-resize-4-2">
+        <div class="centered text-resize black-text">
+          <h2>Teaching, research and support facilities</h2>
+          <p>At Plymouth, we are dedicated to your success and to ensuring that your university experience is exceptional from beginning to end.</p>
+          <p><a href="#">Explore our facilities</a></p>
+          <button class="btn-rounded"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</button>
+        </div>
+      </div>
+      <div class="right-column"> <img src="images/1280x720engineering.webp" width="1920" height="1080" alt=""> </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
