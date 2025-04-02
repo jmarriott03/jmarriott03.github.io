@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+*/
+section {
+    max-width: 60em;
+    overflow: hidden;
+}
+section :last-child {
+    margin-bottom: 0;
+}
+.gallery-container {
+    position: relative;
+    max-width: 80rem;
+    width: 100%;
+}
+.gallery {
+    display: flex;
+    gap: 1.5em;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2em;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+}
+.gallery::-webkit-scrollbar {
+display: none;
+}
+.card {
+    width: 23em;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background-color: var(--lgrey);
+    border-radius: 1em;
+    overflow: hidden;
+}
+.card :last-child {
+    margin-bottom: 0;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+.button-container {
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.button-container button {
+    width: 2em;
+    height: 2em;
+    background: #666;
+    border: none;
+    color: var(--white);
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.button-container button.disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+    transform: translateZ(0);
+}
+.p-resize-2-1 {
+    padding: 2em;
+}
+.btn-prev {
+    width: 0.85em;
+    padding-top: 0.125em;
+}
+.btn-next {
+    width: 0.6em;
+    padding-top: 0.125em;
+}
+
+@media (max-width: 50em) {
+.card {
+    width: calc(100% - 4em);
+}
+.p-resize-2-1 {
+    padding: 1em;
+}
+.button-container {
+    right: 1em;
+}
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    margin-left: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+td {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 1px solid var(--black);
+}
+.blue-link {
+    color: var(--link);
+    text-decoration: underline;
+}
+.black-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+.white-link {
+    color: var(--black);
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="gallery-container p-2 mb-reg">
+    <h2>Course search</h2>
+    <div class="gallery" id="gallery" tabindex="0">
+      <div class="card"><a href="#"><img src="images/1280x720architecture.jpg" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">BA (Hons) Architecture</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Æ</span>Study level</td>
+              <td><strong>Undergraduate</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>3 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">m</span>UCAS code</td>
+              <td><strong>K100</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720arthistory.jpg" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">PhD Art History</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Æ</span>Study level</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720art.jpg" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">BA (Hons) Art History</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Æ</span>Study level</td>
+              <td><strong>Undergraduate</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full time</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>3 years (+ optional placement)</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">m</span>UCAS code</td>
+              <td><strong>V350</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720student2.jpg" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">PhD Performing Arts</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720student16.webp" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720student17.webp" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">Consectetur adipisicing elit</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720student18.webp" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">Sed do eiusmod tempor incididunt</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card"><a href="#"><img src="images/1280x720student19.webp" width="1280" height="720" alt=""></a>
+        <div class="p-1">
+          <h3><a href="#">Labore et dolore magna</a></h3>
+          <table>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">Ê</span>Course type</td>
+              <td ><strong>Full-time, Part-time route available</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">c</span>Duration</td>
+              <td><strong>Full time: 2-4 years<br>
+                Part time: 4-8 years</strong></td>
+            </tr>
+            <tr>
+              <td><span class="iconfont" aria-hidden="true">(</span>Location</td>
+              <td><strong>Plymouth</strong></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button id="prev"><span class="iconfont btn-prev">P</span></button>
+      <button id="next"><span class="iconfont btn-next">N</span></button>
+    </div>
+  </div>
+</main>
+<script>
+const gallery = document.getElementById('gallery');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+const cards = document.querySelectorAll('.card');
+
+function getVisibleCards() {
+    let visibleCards = 0;
+    let galleryRect = gallery.getBoundingClientRect();
+    cards.forEach(card => {
+        let cardRect = card.getBoundingClientRect();
+        if (cardRect.left >= galleryRect.left && cardRect.right <= galleryRect.right) {
+            visibleCards++;
+        }
+    });
+    return visibleCards;
+}
+
+function updateScrollPosition(direction) {
+    const cardWidth = cards[0].clientWidth + 24; // Card width + gap
+    const visibleCards = getVisibleCards();
+    let newScrollLeft = gallery.scrollLeft + (direction * visibleCards * cardWidth);
+    gallery.scrollTo({ left: newScrollLeft, behavior: 'smooth' });
+    setTimeout(updateButtonStates, 300);
+}
+
+function updateButtonStates() {
+    prevBtn.classList.toggle("disabled", gallery.scrollLeft <= 0);
+    nextBtn.classList.toggle("disabled", gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 1);
+}
+
+nextBtn.addEventListener('click', () => {
+    if (!nextBtn.classList.contains("disabled")) {
+        updateScrollPosition(1);
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (!prevBtn.classList.contains("disabled")) {
+        updateScrollPosition(-1);
+    }
+});
+
+gallery.addEventListener('scroll', updateButtonStates);
+window.addEventListener('resize', updateButtonStates);
+
+gallery.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") updateScrollPosition(1);
+    if (event.key === "ArrowLeft") updateScrollPosition(-1);
+});
+</script>
+</body>
+</html>
