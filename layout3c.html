@@ -56,6 +56,15 @@ div :last-child {
     padding: 1em;
 }
 }
+.px-resize-2-1 {
+    padding: 2em;
+}
+
+@media (max-width: 40em) {
+.px-resize-2-1 {
+    padding: 2em 1em;
+}
+}
 .p-resize-4-2 {
     padding: 4em;
 }
@@ -145,18 +154,18 @@ div :last-child {
 </head>
 <body>
 <main>
-  <div class="w-80 p-2">
-    <h1>layout (p-2)</h1>
+  <div class="w-80 px-resize-2-1">
+    <h1>layout3 (px-resize-2-1)</h1>
   </div>
   <div class="bck-highlight-dark white-text">
-    <div class="w-80 p-2">
+    <div class="w-80 px-resize-2-1">
       <h2>h2 text</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
     </div>
   </div>
   <div class="bck-lgrey">
-    <div class="w-80 p-2">
+    <div class="w-80 px-resize-2-1">
       <div class="card-container p-1 bck-highlight-light rounded-2">
         <div class="card bck-white rounded-1 p-1">
           <p><strong>Card: </strong>bck-white<br>
@@ -177,13 +186,13 @@ div :last-child {
       </div>
     </div>
   </div>
-  <div class="w-80 p-2">
+  <div class="w-80 px-resize-2-1">
     <h2>h2 text</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
     <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <a href="#">cillum dolore eu fugiat</a>.</p>
   </div>
   <div class="bck-lgrey">
-    <div class="w-80 p-2 card-container">
+    <div class="w-80 px-resize-2-1 card-container">
       <div class="card bck-white rounded-0-5 p-1">
         <p><strong>Card: </strong>bck-white<br>
           <a href="#"><strong>Container: </strong>bck-highlight-light</a> </p>
@@ -202,7 +211,7 @@ div :last-child {
       </div>
     </div>
   </div>
-  <div class="w-80 p-2">
+  <div class="w-80 px-resize-2-1">
     <div class="rounded-2 hero-2col layout-33-67 mb-reg bck-lgrey">
       <div class="left-column p-resize-4-2">
         <div class="centered text-resize black-text">
