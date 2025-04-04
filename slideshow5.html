@@ -364,6 +364,7 @@ function updateButtonStates() {
     nextBtn.classList.toggle("disabled", gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 1);
 }
 
+// Add all event listeners
 nextBtn.addEventListener('click', () => {
     if (!nextBtn.classList.contains("disabled")) {
         updateScrollPosition(1);
@@ -378,11 +379,13 @@ prevBtn.addEventListener('click', () => {
 
 gallery.addEventListener('scroll', updateButtonStates);
 window.addEventListener('resize', updateButtonStates);
-
-gallery.addEventListener("keydown", (event) => {
+gallery.addEventListener('keydown', (event) => {
     if (event.key === "ArrowRight") updateScrollPosition(1);
     if (event.key === "ArrowLeft") updateScrollPosition(-1);
 });
+
+// Update button state on initial load
+window.addEventListener("load", updateButtonStates);
 </script>
 </body>
 </html>
