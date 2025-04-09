@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #677c1d;
+}
+/*
+* {
+    outline: 1px dotted red;
+    outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.w-60 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.w-40 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.p-resize-2-1 {
+	padding: 2em;
+}
+
+@media (max-width: 40em) {
+.p-resize-2-1 {
+	padding: 1em;
+}
+}
+.p-resize-4-2 {
+	padding: 4em;
+}
+
+@media (max-width: 60em) {
+.p-resize-4-2 {
+	padding: 2em;
+}
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+	gap: 1em;
+}
+.card {
+	width: 100%;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.btn-rounded {
+	color: currentColor;
+	border: 2px solid currentColor;
+	border-radius: 2em;
+	padding: 0.5em;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
+	cursor: pointer;
+	color: var(--white);
+	background-color: var(--black);
+}
+.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+	cursor: pointer;
+	color: var(--black);
+	background-color: var(--white);
+}
+.text-resize > .btn-rounded {
+	font-size: 1.25em;
+}
+
+@media (max-width: 80em) {
+.text-resize > .btn-rounded {
+	font-size: 1em;
+}
+}
+.hero-2col {
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+	width: var(--left-width);
+}
+.right-column {
+	width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+	width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+	width: 100%;
+}
+}
+.gradient-bg {
+	background: radial-gradient(circle at 30% 30%, #ff0080 0%, transparent 40%), radial-gradient(circle at 70% 70%, #00ffff 0%, transparent 40%), radial-gradient(circle at 50% 50%, #ffe600 0%, transparent 40%);
+	background-repeat: no-repeat;
+	background-size: 200% 200%;
+	animation: moveSpots 10s infinite ease-in-out alternate;
+}
+@keyframes moveSpots {
+0% {
+background-position:
+20% 30%, 80% 60%, 50% 50%;
+}
+50% {
+background-position:
+60% 40%, 30% 70%, 70% 30%;
+}
+100% {
+background-position:
+40% 60%, 60% 30%, 30% 70%;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.gradient-bg {
+	animation: none !important;
+	background: #111; /* static fallback */
+}
+}
+.online-logo > img {
+	width: 12em;
+	margin: 0 auto;
+}
+.centered {
+	align-content: center;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-2">
+    <div class="hero-2col mb-reg stroke rounded-2 bck-black">
+      <div class="left-column gradient-bg">
+        <div class="p-2 online-logo centered"><img src="images/online-logo.svg" alt=""/></div>
+      </div>
+      <div class="right-column p-resize-4-2 bck-white">
+        <div class="centered text-resize black-text">
+          <p>Discover online opportunities to take your learning and career further</p>
+          <button class="btn-rounded">Online study</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
