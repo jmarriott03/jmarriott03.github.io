@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(16em, 1fr) );
+	grid-column-gap: 1em;
+	margin: 0 auto;
+	grid-gap: 1em;
+}
+.grid-item {
+	margin: 0;
+	max-width: 39em;
+}
+.grid-item img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	vertical-align: top;
+	object-fit: cover;
+	aspect-ratio: 16 / 9;
+}
+.grid-item > * {
+	width: 100%;
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+figcaption {
+	margin: 0;
+	padding: 1em;
+}
+.grid-item figcaption > p:first-of-type {
+	font-size: 0.875em;
+	color: var(--dgrey);
+	margin-bottom: 0;
+}
+.grid-item figcaption > p:first-of-type::before {
+	content: "c";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0.5em;
+}
+.grid-item > * {
+	text-decoration: none;
+	color: var(--black);
+}
+.blue-link {
+	color: var(--link);
+	word-wrap: break-word;
+	text-decoration: underline;
+	text-underline-position: under;
+	text-underline-offset: 1px;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="bck-lgrey">
+    <div class="w-80 p-2">
+      <h2>What's on events</h2>
+      <div class="grid-container pb-reg">
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student1.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 10:00 - 12:30</p>
+              <h3 class="blue-link">Blossom Walks</h3>
+              <p>What's on at the University of Plymouth: Blossom Walks – Part of the Cotehele Festival of Blossom. Various dates and locations.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student2.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 12:00 - 13:00</p>
+              <h3 class="blue-link">Poetry Matters</h3>
+              <p>What's on at the University of Plymouth: Poetry Matters. Make time for the poetry in your life. University of Plymouth, various dates.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student9.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 13:00 - 14:00</p>
+              <h3 class="blue-link">Detox for the Soul</h3>
+              <p>What's on at the University of Plymouth: Detox for the Soul. Event for University of Plymouth students and staff. University of Plymouth, various dates.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student12.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 12:00 - 14:00</p>
+              <h3 class="blue-link">Celebrate Baisakhi with Us!</h3>
+              <p>What's on at the University of Plymouth: Celebrate Baisakhi with Us! Event for University of Plymouth students and staff. University of Plymouth, 14 April 2025.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student15.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 15:00 - 16:00</p>
+              <h3 class="blue-link">God Explored</h3>
+              <p>What's on at the University of Plymouth: God Explored. Exploring the belief that happiness can be achieved by faith in Jesus Christ. University of Plymouth, various dates.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student16.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 09:30 - 17:30</p>
+              <h3 class="blue-link">Supergen ORE Hub Early Career Researcher Forum</h3>
+              <p>What's on at the University of Plymouth: Supergen ORE Hub Early Career Researcher Forum. Explore the latest research and innovation in offshore wind, wave and tidal energy. University of Manchester, 14 April 2025.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student17.webp" alt="#" width="320">
+            <figcaption>
+              <p>14 April 2025 19:00 - 21:10</p>
+              <h3 class="blue-link">She Said (2022)</h3>
+              <p>She Said (2022) with discussion. Inspired by true events, this powerful investigative drama depicts how two New York Times reporters uncovered the widespread sexual abuse of women by Hollywood producer Harvey Weinstein. Part of our Screen Queens series.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+        <div class="grid-item rounded-1 bck-white"><a href="#">
+          <figure><img src="images/1280x720student18.webp" alt="#" width="320">
+            <figcaption>
+              <p>15 April 2025 09:00 - 13:00</p>
+              <h3 class="blue-link">Pitch and Procure</h3>
+              <p>What's on at the University of Plymouth: Pitch and Procure. Plymouth Chamber networking event. University of Plymouth, 15 April 2025.</p>
+            </figcaption>
+          </figure>
+          </a></div>
+      </div>
+      <p><a href="#">More events</a></p>
+    </div>
+  </div>
+</main>
+</body>
+</html>
