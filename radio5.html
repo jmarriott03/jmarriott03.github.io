@@ -4,148 +4,43 @@
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
 :root {
---white: #fff;
---lgrey: #eee;
---mgrey: #ccc;
---dgrey: #666;
---black: #111;
---link: #00e;
---dlink: #009;
---visited: purple;
---red: #c00;
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
 --lprogress: #516abf;
 --mprogress: #1d347e;
 --dprogress: #091a52;
 --progresstxt: var(--white);
 }
-@font-face {
-    font-family: icon;
-    src: url('fonts/icon14.woff');
-}
-.iconfont {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    line-height: 1;
-    width: 1em;
-    display: inline-block;
-    text-align: center;
-    margin: 0 0.25em 0 0;
-}
 * {
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-* + * {
-    margin-top: 1em;
-}
-html, body {
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    font-size: 100%;
-    font-family: sans-serif;
-    font-weight: normal;
-    line-height: 1.5;
-    color: var(--black);
-    background: var(--white);
-    margin: 0;
-}
-h1 {
-    font-size: 2em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h2 {
-    font-size: 1.5em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h3 {
-    font-size: 1.17em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h4 {
-    font-size: 1em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h5 {
-    font-size: 0.83em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-h6 {
-    font-size: 0.75em;
-    line-height: 1.2;
-    font-weight: bold;
-}
-p {
-    clear: both;
-    line-height: 1.5;
-    margin-bottom: 1.5em;
-}
-a {
-    color: var(--link);
-    word-wrap: break-word;
-    text-underline-position: under;
-    text-underline-offset: 1px;
-}
-strong {
-    font-weight: bold;
-}
-em {
-    font-style: italic;
-}
-img {
-    border: 0;
-    text-decoration: none;
-    vertical-align: top;
-    width: 100%;
-    height: auto;
-    margin: 0;
-}
-.nowrap {
-    white-space: nowrap;
-}
-.ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 0;
+    outline: 1px dotted red;
+	outline-offset: -1px;
 }
 section {
-    max-width: 40em;
-    overflow: hidden;
-    padding: 1em;
-    margin-top: 0;
-    overflow: hidden;
-}
-.codegrey {
-    background-color: var(--lgrey);
-    padding: 1em;
-}
-.largetext {
-    font-size: 1.5em;
-    line-height: 1.2;
-    margin-bottom: 0;
+	max-width: 60em;
+	overflow: hidden;
+	padding: 2em;
+	margin-top: 0;
+	overflow: hidden;
 }
 progress {
-    position: relative;
-    height: 0.5rem;
-    width: 15rem;
-    border: none;
+	position: relative;
+	height: 0.5em;
+	width: 15em;
+	border: none;
 }
 progress::after {
-    content: "Progress: " attr(value) "%";
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    color: var(--progresstxt);
+	content: "Progress: " attr(value) "%";
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 0.75em;
+	margin-top: 0.5em;
+	color: var(--progresstxt);
 }
 progress::-webkit-progress-bar {
 background-color: var(--white);
@@ -154,194 +49,95 @@ progress::-webkit-progress-value {
 background-color: var(--black);
 }
 .flex-container {
-    display: flex;
-    align-items: center;
-    max-width: 40rem;
+	display: flex;
+	align-items: center;
+	max-width: 60em;
 }
 .flex-container > div {
-    margin: 1rem;
-    padding: 0;
+	margin: 1em;
+	padding: 0;
 }
 .thumbnail {
-    width: 10em;
+	width: 10em;
 }
 .fullw {
-    width: 100%;
-    background-color: red;
-    overflow: hidden;
-    background-color: var(--lprogress);
+	width: 100%;
+	background-color: red;
+	overflow: hidden;
+	background-color: var(--lprogress);
 }
 .radio1 input[type='radio'] {
-    transform: scale(2);
-    vertical-align: middle;
-    margin: 0.5rem;
+	transform: scale(2);
+	vertical-align: middle;
+	margin: 0.5em;
 }
 .radio1 {
-    line-height: 2.5rem;
+	line-height: 2.5em;
 }
 .checkbox1 input[type='checkbox'] {
-    transform: scale(2);
-    vertical-align: middle;
-    margin: 0.5rem;
+	transform: scale(2);
+	vertical-align: middle;
+	margin: 0.5em;
 }
 .checkbox1 {
-    line-height: 2.5rem;
-}
-.btn {
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    margin: 0 1rem 0 0;
-    text-decoration: none;
-    cursor: default;
-    display: block;
-    border: none;
-    float: left;
-    -webkit-appearance: none;
-    outline-offset: 2px;
-    transition: 0.3s;
-}
-.whitetxt {
-    color: var(--white);
-}
-.whitetxt a {
-    color: var(--white);
-}
-.blacktxt {
-    color: var(--black);
-}
-.linkbck {
-    background-color: var(--link);
-}
-.linkbck:hover, .linkbck:focus {
-    background-color: var(--dlink);
+	line-height: 2.5em;
 }
 .backnext {
-    color: var(--white);
-    background-color: var(--lprogress);
+	color: var(--white);
+	background-color: var(--lprogress);
 }
-.backnext:hover, .linkbck:focus {
-    background-color: var(--mprogress);
+.backnext:hover {
+	background-color: var(--mprogress);
 }
 .lightbck {
-    max-width: 40em;
-    overflow: hidden;
-    padding: 1em;
-    background-color: var(--lprogress);
+	overflow: hidden;
+	padding: 1em;
+	background-color: var(--lprogress);
 }
 .lightbck p:last-child {
-    margin: 0;
+	margin: 0;
 }
 .information {
-    max-width: 40em;
-    overflow: hidden;
-    padding: 1em;
-    border-left: 0.5rem solid var(--lprogress);
+	overflow: hidden;
+	padding: 1em;
+	border-left: 0.5em solid var(--lprogress);
 }
 .progressbar {
-    width: 15rem;
-    height: 0.5rem;
-    background-color: var(--white);
-    margin-top: 1.5rem;
+	width: 15em;
+	height: 0.5em;
+	background-color: var(--white);
+	margin-top: 1.5em;
+	border-radius: 0.25em;
+	overflow: hidden;
 }
 .progressinner {
-    height: 0.5rem;
-    background-color: var(--black);
-    margin: 0;
+	height: 0.5em;
+	background-color: var(--black);
+	margin: 0;
 }
 .progressvalue {
-    max-width: 15rem;
-    text-align: center;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    color: var(--white);
+	max-width: 15em;
+	text-align: center;
+	font-size: 0.75em;
+	margin-top: 0.5em;
+	color: var(--white);
+}
+.no-letter-spacing {
+	letter-spacing: 0;
 }
 
 @media (max-width: 60em) {
 .fullw {
-    display: none;
+	display: none;
 }
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/* Make things more rounded */
-img {
-  border-radius: 1rem;
-}
-
-section, .information, .lightbck, .fullw {
-  border-radius: 1rem;
-}
-
-.progressbar, .progressinner {
-  border-radius: 0.5rem;
-  overflow: hidden; /* Ensure no square overflow */
-}
-
-progress {
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-progress::-webkit-progress-bar {
-  background-color: var(--white);
-  border-radius: 0.5rem;
-}
-
-progress::-webkit-progress-value {
-  background-color: var(--black);
-  border-radius: 0.5rem;
-}
-
-/* Round radio and checkboxes */
-input[type="radio"], input[type="checkbox"] {
-  border-radius: 50%;
-}
-
-/* Make buttons extra rounded (pill style) */
-.btn {
-  border-radius: 2rem;
-  padding: 0.75rem 1.5rem;
-}
-
-/* Give some extra spacing to sections */
-section {
-  padding: 2rem;
-}
-
-/* Optional: smoother fonts if you want to import one */
-html, body {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* For Poppins font, add this in <head> if you want */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 </style>
 </head>
 <body>
 <main>
   <div class="fullw">
-    <div class="flex-container progresspadding">
-      <div><img src="images/1280x720richardthompson.jpg" width="1280" height="720" alt="" class="thumbnail"></div>
+    <div class="flex-container p-2">
+      <div><img src="images/1280x720richardthompson.jpg" width="1280" height="720" alt="" class="thumbnail rounded-0-5"></div>
       <div>
         <div class="progressbar">
           <div class="progressinner" style="width:30%"></div>
@@ -354,7 +150,7 @@ html, body {
     <h2>Back next buttons</h2>
     <p>
       <button class="btn backnext"><span class="iconfont" aria-hidden="true">P</span> Back</button>
-      <button class="btn backnext">Next <span class="iconfont" aria-hidden="true">N</span> </button>
+      <button class="btn backnext">Next <span class="iconfont no-letter-spacing" aria-hidden="true">N</span></button>
     </p>
   </section>
   <section>
@@ -363,14 +159,14 @@ html, body {
   </section>
   <section>
     <h2>Background tint</h2>
-    <div class="lightbck whitetxt">
+    <div class="lightbck white-text rounded-0-5">
       <p>Further information about <a href="#">something or other</a></p>
     </div>
   </section>
   <section>
     <h2>Text and image</h2>
     <p>Regular text lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><img src="images/1280x720richardthompson.jpg" width="1280" height="720" alt=""></p>
+    <img src="images/1280x720richardthompson.jpg" width="1280" height="720" alt="" class="rounded-1 mb-reg">
     <p class="largetext">Large text lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <section class="radio1">
@@ -401,7 +197,7 @@ html, body {
       <label for="six">Six</label>
       <br>
       <br>
-      <input type="submit" value="Submit" class="btn whitetxt linkbck">
+      <input type="submit" value="Submit" class="btn btn-primary">
     </form>
   </section>
 </main>
