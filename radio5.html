@@ -9,16 +9,19 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
---lprogress: #516abf;
---mprogress: #1d347e;
---dprogress: #091a52;
---progresstxt: var(--white);
+--lprogress: #d3e9f1;
+--mprogress: #7fbfd7;
+--dprogress: #29718c;
+--progresstxt: var(--black);
 }
+/*
 * {
     outline: 1px dotted red;
 	outline-offset: -1px;
+}
+*/
+div :last-child {
+	margin-bottom: 0;
 }
 section {
 	max-width: 60em;
@@ -26,6 +29,7 @@ section {
 	padding: 2em;
 	margin-top: 0;
 	overflow: hidden;
+	border-bottom: 2px solid var(--lgrey);
 }
 progress {
 	position: relative;
@@ -62,9 +66,8 @@ background-color: var(--black);
 }
 .fullw {
 	width: 100%;
-	background-color: red;
 	overflow: hidden;
-	background-color: var(--lprogress);
+	background-color: var(--dprogress);
 }
 .radio1 input[type='radio'] {
 	transform: scale(2);
@@ -83,24 +86,25 @@ background-color: var(--black);
 	line-height: 2.5em;
 }
 .backnext {
-	color: var(--white);
-	background-color: var(--lprogress);
+	color: var(--black);
+	background-color: var(--mprogress);
 }
 .backnext:hover {
-	background-color: var(--mprogress);
+	color: var(--white);
+	background-color: var(--dprogress);
 }
 .lightbck {
 	overflow: hidden;
-	padding: 1em;
 	background-color: var(--lprogress);
 }
-.lightbck p:last-child {
-	margin: 0;
+.darkbck {
+	overflow: hidden;
+	background-color: var(--dprogress);
 }
 .information {
 	overflow: hidden;
 	padding: 1em;
-	border-left: 0.5em solid var(--lprogress);
+	border-left: 0.5em solid var(--mprogress);
 }
 .progressbar {
 	width: 15em;
@@ -125,8 +129,13 @@ background-color: var(--black);
 .no-letter-spacing {
 	letter-spacing: 0;
 }
+.darkbck-stroke {
+	outline: 2px solid var(--dprogress);
+	outline-offset: -2px;
+	overflow: hidden;
+}
 
-@media (max-width: 60em) {
+@media (max-width: 35em) {
 .fullw {
 	display: none;
 }
@@ -137,7 +146,7 @@ background-color: var(--black);
 <main>
   <div class="fullw">
     <div class="flex-container p-2">
-      <div><img src="images/1280x720richardthompson.jpg" width="1280" height="720" alt="" class="thumbnail rounded-0-5"></div>
+      <div><img src="images/1280x720student21.webp" width="1280" height="720" alt="" class="thumbnail rounded-0-5"></div>
       <div>
         <div class="progressbar">
           <div class="progressinner" style="width:30%"></div>
@@ -158,16 +167,22 @@ background-color: var(--black);
     <div class="information">This tool does not include all of the numbers. It will be updated with more types of numbers. </div>
   </section>
   <section>
-    <h2>Background tint</h2>
-    <div class="lightbck white-text rounded-0-5">
+    <h2>Background dark, text white</h2>
+    <div class="darkbck p-1 white-text rounded-0-5">
+      <p>Further information about <a href="#">something or other</a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Dark stroke</h2>
+    <div class="darkbck-stroke p-1 rounded-0-5">
       <p>Further information about <a href="#">something or other</a></p>
     </div>
   </section>
   <section>
     <h2>Text and image</h2>
     <p>Regular text lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <img src="images/1280x720richardthompson.jpg" width="1280" height="720" alt="" class="rounded-1 mb-reg">
-    <p class="largetext">Large text lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img src="images/1280x720student21.webp" width="1280" height="720" alt="" class="rounded-1 mb-reg">
+    <p class="largetext m-0">Large text lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </section>
   <section class="radio1">
     <h2>Radio buttons</h2>
