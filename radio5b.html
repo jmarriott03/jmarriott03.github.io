@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--lprogress: #d3e9f1;
+--mprogress: #7fbfd7;
+--dprogress: #29718c;
+--progresstxt: var(--black);
+}
+/*
+* {
+    outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+div :last-child {
+	margin-bottom: 0;
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+	padding: 2em;
+	margin-top: 0;
+	overflow: hidden;
+}
+progress {
+	position: relative;
+	height: 0.5em;
+	width: 15em;
+	border: none;
+}
+progress::after {
+	content: "Progress: " attr(value) "%";
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 0.75em;
+	margin-top: 0.5em;
+	color: var(--progresstxt);
+}
+progress::-webkit-progress-bar {
+background-color: var(--white);
+}
+progress::-webkit-progress-value {
+background-color: var(--black);
+}
+.flex-container {
+	display: flex;
+	align-items: center;
+	max-width: 60em;
+}
+.flex-container > div {
+	margin: 1em;
+	padding: 0;
+}
+.thumbnail {
+	width: 10em;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--dprogress);
+}
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	vertical-align: middle;
+	margin: 0.5em;
+}
+.radio1 {
+	line-height: 2.5em;
+}
+.checkbox1 input[type='checkbox'] {
+	transform: scale(2);
+	vertical-align: middle;
+	margin: 0.5em;
+}
+.checkbox1 {
+	line-height: 2.5em;
+}
+.backnext {
+	color: var(--black);
+	background-color: var(--mprogress);
+}
+.backnext:hover {
+	color: var(--white);
+	background-color: var(--dprogress);
+}
+.lightbck {
+	overflow: hidden;
+	background-color: var(--lprogress);
+}
+.darkbck {
+	overflow: hidden;
+	background-color: var(--dprogress);
+}
+.information {
+	overflow: hidden;
+	padding: 1em;
+	border-left: 0.5em solid var(--mprogress);
+}
+.progressbar {
+	width: 15em;
+	height: 0.5em;
+	background-color: var(--white);
+	margin-top: 1.5em;
+	border-radius: 0.25em;
+	overflow: hidden;
+}
+.progressinner {
+	height: 0.5em;
+	background-color: var(--black);
+	margin: 0;
+}
+.progressvalue {
+	max-width: 15em;
+	text-align: center;
+	font-size: 0.75em;
+	margin-top: 0.5em;
+	color: var(--white);
+}
+.no-letter-spacing {
+	letter-spacing: 0;
+}
+.darkbck-stroke {
+	outline: 2px solid var(--dprogress);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+
+@media (max-width: 35em) {
+.fullw {
+	display: none;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw">
+    <div class="flex-container p-2">
+      <div><img src="images/1280x720student21.webp" width="1280" height="720" alt="" class="thumbnail rounded-0-5"></div>
+      <div>
+        <div class="progressbar">
+          <div class="progressinner" style="width:30%"></div>
+        </div>
+        <div class="progressvalue">Progress: 30%</div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <p>Start a course in 2025: check what you need to do</p>
+    <h2>Have you already made an application to study at the University of Plymouth?</h2>
+    <form action="/action_page.php" class="mb-reg">
+      <input type="radio" id="one" name="fav_number" value="one">
+      <label for="one">Yes</label>
+      <br>
+      <input type="radio" id="two" name="fav_number" value="two">
+      <label for="two">No</label>
+    </form>
+    <button class="btn backnext">Next <span class="iconfont no-letter-spacing" aria-hidden="true">N</span></button>
+  </section>
+</main>
+</body>
+</html>
