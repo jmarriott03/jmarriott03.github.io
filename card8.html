@@ -222,27 +222,22 @@ details[open] > summary::before {
 .mb-0-5 {
 	margin-bottom: 0.5em;
 }
-/* Mobile improvements for scrollbar with gradient mask to indicate scroll */
-	
-@media (max-width: 40em) {
-  .tab-header {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    position: relative;
-    mask-image: linear-gradient(to right, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, black 90%, transparent);
-  }
-
-  .tab-header::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab-header.no-gradient {
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
+/* Mobile improvements for scrollbar with gradient mask to indicate scroll */	
+.tab-header {
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	position: relative;
+	mask-image: linear-gradient(to right, black 90%, transparent);
+	-webkit-mask-image: linear-gradient(to right, black 90%, transparent);
+}
+.tab-header::-webkit-scrollbar {
+display: none;
+}
+.tab-header.no-gradient {
+	mask-image: none;
+	-webkit-mask-image: none;
 }
 </style>
 </head>
