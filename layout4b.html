@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.w-60 {
+	max-width: 60em;
+	overflow: hidden;
+}
+.w-40 {
+	max-width: 40em;
+	overflow: hidden;
+}
+.p-resize-2-1 {
+	padding: 2em;
+}
+
+@media (max-width: 40em) {
+.p-resize-2-1 {
+	padding: 1em;
+}
+}
+.image-row {
+	display: flex;
+	gap: 1em;
+}
+.image-container {
+	flex: 1;
+}
+.image-caption {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 1em;
+	text-align: left;
+	font-size: 1em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-60 p-resize-2-1">
+    <h1>Standard gallery component</h1>
+    <h2>main 1em, thumbnail 0.5em</h2>
+    <div class="rounded-1 mb-reg">
+      <figure> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="Main image">
+        <figcaption class="image-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+      </figure>
+    </div>
+    <div class="w-80">
+      <div class="image-row">
+        <div class="image-container rounded-0-5"><img src="images/1280x720placeholder-mgrey.gif" alt="Image 1"></div>
+        <div class="image-container rounded-0-5"><img src="images/1280x720placeholder-mgrey.gif" alt="Image 2"></div>
+        <div class="image-container rounded-0-5"><img src="images/1280x720placeholder-mgrey.gif" alt="Image 3"></div>
+        <div class="image-container rounded-0-5"><img src="images/1280x720placeholder-mgrey.gif" alt="Image 4"></div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
