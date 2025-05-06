@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );
+	grid-column-gap: 1em;
+	margin: 0 auto;
+	grid-gap: 1em;
+}
+.grid-item {
+	margin: 0;
+	max-width: 39em;
+}
+.grid-item img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	vertical-align: top;
+	object-fit: cover;
+	aspect-ratio: 16 / 9;
+}
+.grid-item > * {
+	width: 100%;
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+figcaption {
+	margin: 0;
+	padding: 1em;
+}
+.grid-item figcaption > p:first-of-type {
+	font-size: 0.875em;
+	color: var(--dgrey);
+	margin-bottom: 0;
+}
+.grid-item figcaption > p:first-of-type::before {
+	content: "c";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0.5em;
+}
+.grid-item > * {
+	text-decoration: none;
+	color: var(--black);
+}
+.blue-link {
+	color: var(--link);
+	word-wrap: break-word;
+	text-decoration: underline;
+	text-underline-position: under;
+	text-underline-offset: 1px;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-2">
+    <h1>News</h1>
+    <h2>News, views and features from around the University</h2>
+    <p>The Media and Communications team works with staff, students, partners and the community to showcase the University's expertise, excellence and achievements.</p>
+    <div class="grid-container pb-reg">
+      <div class="grid-item rounded-0-5 stroke"><a href="#">
+        <figure><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320">
+          <figcaption>
+            <p>27 April 2025</p>
+            <h3 class="blue-link">Plymouth professor champions arts and humanities research</h3>
+            <p>Professor Katharine Willis joins national advisory board.</p>
+          </figcaption>
+        </figure>
+        </a></div>
+      <div class="grid-item rounded-0-5 stroke"><a href="#">
+        <figure><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320">
+          <figcaption>
+            <p>28 April 2025</p>
+            <h3 class="blue-link">University of Plymouth is first to launch an electric boat</h3>
+            <p>Expanding our fleet and delivering net zero.</p>
+          </figcaption>
+        </figure>
+        </a></div>
+      <div class="grid-item rounded-0-5 stroke"><a href="#">
+        <figure><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320">
+          <figcaption>
+            <p>29 April 2025</p>
+            <h3 class="blue-link">Students who changed paths are recognised in national awards</h3>
+            <p>Hanaa Metcalfe and Elena Brake are shortlisted for a prize after bravely changing careers.</p>
+          </figcaption>
+        </figure>
+        </a></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
