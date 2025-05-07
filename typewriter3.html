@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+.spacer {
+	height: 100vh;
+	background-color: pink;
+}
+.container {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* align children to the left */
+}
+.typerwriter-fade-in {
+	display: inline;
+	text-align: left;
+	line-height: 1.5;
+	white-space: normal;
+}
+.typerwriter-fade-in .letter {
+	display: inline;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+.typerwriter-fade-in .letter.visible {
+	opacity: 1;
+}
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 2em;
+}
+.fullw {
+	width: 100%;
+	overflow: hidden;
+}
+.typerwriter-fade-in .letter::after {
+	content: '';
+	display: inline;
+}
+.bounce {
+      display: inline-block;
+      position: relative;
+      animation: bounceY 2s ease 1;
+    }
+
+    @keyframes bounceY {
+      0%   { top: 0; }
+      20%  { top: -20px; }
+      40%  { top: 0; }
+      60%  { top: -20px; }
+      80%  { top: 0; }
+      90%  { top: -20px; }
+      100% { top: 0; }
+    }
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <h1>typewriter3</h1>
+    <p><span class="bounce iconfont largetext3">#</span> Keep scrolling down to trigger typewriter effect text demo.</p>
+	    </section>
+<img src="images/1280x720student21.webp" width="1280" height="720" alt="" class="mb-reg">
+<section class="p-2">
+  <div class="container mb-reg">
+    <h2 class="typerwriter-fade-in">typerwriter fade in effect</h2>
+    <img src="images/1280x720student15.webp" width="1280" height="720" alt="" class="mb-reg">
+    <h2 class="typerwriter-fade-in">Another heading to show the effect triggers when in browser view</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+    <p class="typerwriter-fade-in">A bad idea to have this effect on a large passage of text. For demo purposes only to show once the animation is triggered, it continues even if the text is no longer in browser view. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="fullw">
+    <button id="resetBtn" class="btn btn-primary">Reset animation</button>
+  </div>
+</section></main>
+
+<script>
+  let originalTexts = [];
+
+  function setupText() {
+    const elements = document.querySelectorAll(".typerwriter-fade-in");
+
+    elements.forEach((el, i) => {
+      const text = originalTexts[i] || el.textContent;
+      if (!originalTexts[i]) originalTexts.push(text);
+
+      // Add accessibility attributes
+      el.setAttribute("aria-label", text);
+      el.setAttribute("role", "text");
+
+      const letters = [...text].map(letter => {
+        const span = document.createElement("span");
+        span.classList.add("letter");
+        span.setAttribute("aria-hidden", "true");
+        span.textContent = letter;
+		return span;
+      });
+
+      el.innerHTML = "";
+      letters.forEach(letter => el.appendChild(letter));
+    });
+  }
+
+  function applytyperwriterFadeIn() {
+    const elements = document.querySelectorAll(".typerwriter-fade-in");
+
+    elements.forEach((el) => {
+      const letters = el.querySelectorAll(".letter");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            letters.forEach((letter, index) => {
+              setTimeout(() => letter.classList.add("visible"), index * 30);
+            });
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(el);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setupText();
+    applytyperwriterFadeIn();
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      document.querySelectorAll(".typerwriter-fade-in .letter").forEach(span => {
+        span.classList.remove("visible");
+      });
+
+		
+		
+		// Reset bounce animation
+  const bounceEl = document.querySelector(".bounce");
+  if (bounceEl) {
+    bounceEl.classList.remove("bounce");
+
+    // Force a reflow to restart the animation
+    void bounceEl.offsetWidth;
+
+    bounceEl.classList.add("bounce");
+  }
+		
+		
+		
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      setTimeout(() => {
+        setupText();
+        applytyperwriterFadeIn();
+      }, 600);
+    });
+  });
+</script>
+</body>
+</html>
