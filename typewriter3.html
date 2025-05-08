@@ -70,20 +70,43 @@ button {
 	display: inline;
 }
 .bounce {
-      display: inline-block;
-      position: relative;
-      animation: bounceY 2s ease 1;
-    }
-
-    @keyframes bounceY {
-      0%   { top: 0; }
-      20%  { top: -20px; }
-      40%  { top: 0; }
-      60%  { top: -20px; }
-      80%  { top: 0; }
-      90%  { top: -20px; }
-      100% { top: 0; }
-    }
+	display: inline-block;
+	position: relative;
+	animation: bounceY 2s ease 1;
+}
+@keyframes bounceY {
+0% {
+top: 0;
+}
+20% {
+top: -20px;
+}
+40% {
+top: 0;
+}
+60% {
+top: -20px;
+}
+80% {
+top: 0;
+}
+90% {
+top: -20px;
+}
+100% {
+top: 0;
+}
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
+	border: 0;
+}
 </style>
 </head>
 <body>
@@ -91,22 +114,25 @@ button {
   <section class="p-2">
     <h1>typewriter3</h1>
     <p><span class="bounce iconfont largetext3">#</span> Keep scrolling down to trigger typewriter effect text demo.</p>
-	    </section>
-<img src="images/1280x720student21.webp" width="1280" height="720" alt="" class="mb-reg">
-<section class="p-2">
-  <div class="container mb-reg">
-    <h2 class="typerwriter-fade-in">typerwriter fade in effect</h2>
-    <img src="images/1280x720student15.webp" width="1280" height="720" alt="" class="mb-reg">
-    <h2 class="typerwriter-fade-in">Another heading to show the effect triggers when in browser view</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-    <p class="typerwriter-fade-in">A bad idea to have this effect on a large passage of text. For demo purposes only to show once the animation is triggered, it continues even if the text is no longer in browser view. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet.</p>
-  </div>
-  <div class="fullw">
-    <button id="resetBtn" class="btn btn-primary">Reset animation</button>
-  </div>
-</section></main>
-
+  </section>
+  <img src="images/1280x720student21.webp" width="1280" height="720" alt="">
+  <section class="p-2">
+    <div class="container mb-reg">
+      <h2 class="typerwriter-fade-in">typerwriter fade in effect</h2>
+      <h2 class="sr-only">typerwriter fade in effect</h2>
+      <img src="images/1280x720student15.webp" width="1280" height="720" alt="" class="mb-reg">
+      <h2 class="typerwriter-fade-in">Another heading to show the effect triggers when in browser view</h2>
+      <h2 class="sr-only">Another heading to show the effect triggers when in browser view</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+      <p class="typerwriter-fade-in">A bad idea to have this effect on a large passage of text. For demo purposes only to show once the animation is triggered, it continues even if the text is no longer in browser view. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="sr-only">A bad idea to have this effect on a large passage of text. For demo purposes only to show once the animation is triggered, it continues even if the text is no longer in browser view. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="fullw">
+      <button id="resetBtn" class="btn btn-primary">Reset animation</button>
+    </div>
+  </section>
+</main>
 <script>
   let originalTexts = [];
 
