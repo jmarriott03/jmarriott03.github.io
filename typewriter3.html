@@ -1,113 +1,127 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Author: Jamie Marriott">
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link rel="stylesheet" href="css/plymouth_reset.css">
-<link rel="stylesheet" href="css/plymouth_framework.css">
-<title>University of Plymouth</title>
-<style>
-:root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
-}
-/*
-* {
-	outline: 1px dotted red;
-	outline-offset: -1px;
-}
-*/
-.bck-highlight-light {
-	background-color: var(--highlight-light);
-}
-.bck-highlight-dark {
-	background-color: var(--highlight-dark);
-}
-section {
-	max-width: 60em;
-	overflow: hidden;
-}
-section :last-child {
-	margin-bottom: 0;
-}
-.spacer {
-	height: 100vh;
-	background-color: pink;
-}
-.container {
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start; /* align children to the left */
-}
-.typerwriter-fade-in {
-	display: inline;
-	text-align: left;
-	line-height: 1.5;
-	white-space: normal;
-}
-.typerwriter-fade-in .letter {
-	display: inline;
-	opacity: 0;
-	transition: opacity 0.3s ease-out;
-}
-.typerwriter-fade-in .letter.visible {
-	opacity: 1;
-}
-button {
-	padding: 10px 20px;
-	font-size: 16px;
-	cursor: pointer;
-	margin: 2em;
-}
-.fullw {
-	width: 100%;
-	overflow: hidden;
-}
-.typerwriter-fade-in .letter::after {
-	content: '';
-	display: inline;
-}
-.bounce {
-	display: inline-block;
-	position: relative;
-	animation: bounceY 2s ease 1;
-}
-@keyframes bounceY {
-0% {
-top: 0;
-}
-20% {
-top: -20px;
-}
-40% {
-top: 0;
-}
-60% {
-top: -20px;
-}
-80% {
-top: 0;
-}
-90% {
-top: -20px;
-}
-100% {
-top: 0;
-}
-}
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	white-space: nowrap;
-	border: 0;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="description" content="Author: Jamie Marriott">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <link rel="stylesheet" href="css/plymouth_reset.css">
+  <link rel="stylesheet" href="css/plymouth_framework.css">
+  <title>University of Plymouth</title>
+  <style>
+    :root {
+      --highlight-light: #b4c960;
+      --highlight-dark: #a80075;
+    }
+
+    .bck-highlight-light {
+      background-color: var(--highlight-light);
+    }
+
+    .bck-highlight-dark {
+      background-color: var(--highlight-dark);
+    }
+
+    section {
+      max-width: 60em;
+      overflow: hidden;
+    }
+
+    section :last-child {
+      margin-bottom: 0;
+    }
+
+    .spacer {
+      height: 100vh;
+      background-color: pink;
+    }
+
+    .container {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .typerwriter-fade-in {
+      display: inline;
+      text-align: left;
+      line-height: 1.5;
+      white-space: normal;
+    }
+
+    .typerwriter-fade-in .letter {
+      display: inline;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .typerwriter-fade-in .letter.visible {
+      opacity: 1;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 1em 1em 0 0;
+    }
+
+    .fullw {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .typerwriter-fade-in .letter::after {
+      content: '';
+      display: inline;
+    }
+
+    .bounce {
+      display: inline-block;
+      position: relative;
+      animation: bounceY 2s ease 1;
+    }
+
+    @keyframes bounceY {
+      0% { top: 0; }
+      20% { top: -20px; }
+      40% { top: 0; }
+      60% { top: -20px; }
+      80% { top: 0; }
+      90% { top: -20px; }
+      100% { top: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bounce {
+        animation: none !important;
+      }
+      .typerwriter-fade-in .letter {
+        transition: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    .simulate-reduced-motion .bounce {
+      animation: none !important;
+    }
+
+    .simulate-reduced-motion .typerwriter-fade-in .letter {
+      transition: none !important;
+      opacity: 1 !important;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 <main>
@@ -130,94 +144,95 @@ top: 0;
     </div>
     <div class="fullw">
       <button id="resetBtn" class="btn btn-primary">Reset animation</button>
+      <button id="toggleMotionBtn" class="btn btn-secondary">Toggle Reduced Motion (Off)</button>
     </div>
   </section>
 </main>
 <script>
-let originalTexts = [];
+  let originalTexts = [];
+  let simulateReducedMotion = false;
 
-/**
- * Wraps each character of the given element's text in a <span>
- */
-function wrapLetters(el, index) {
+  function prefersReducedMotionEnabled() {
+    return simulateReducedMotion || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function wrapLetters(el, index) {
     const text = originalTexts[index] || el.textContent;
     if (!originalTexts[index]) originalTexts.push(text);
-
     const letters = [...text].map(letter => {
-        const span = document.createElement("span");
-        span.classList.add("letter");
-        span.setAttribute("aria-hidden", "true");
-        span.textContent = letter;
-        return span;
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.setAttribute("aria-hidden", "true");
+      span.textContent = letter;
+      return span;
     });
-
     el.innerHTML = "";
     letters.forEach(letter => el.appendChild(letter));
-}
+  }
 
-/**
- * Prepares all elements with .typerwriter-fade-in for animation
- */
-function setupText() {
+  function setupText() {
     const elements = document.querySelectorAll(".typerwriter-fade-in");
     elements.forEach((el, index) => wrapLetters(el, index));
-}
+  }
 
-/**
- * Applies the typewriter fade-in effect using IntersectionObserver
- */
-function applyTypewriterFadeIn() {
+  function applyTypewriterFadeIn() {
+    const reduceMotion = prefersReducedMotionEnabled();
     document.querySelectorAll(".typerwriter-fade-in").forEach(el => {
-        const letters = el.querySelectorAll(".letter");
-
+      const letters = el.querySelectorAll(".letter");
+      if (reduceMotion) {
+        letters.forEach(letter => letter.classList.add("visible"));
+      } else {
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    letters.forEach((letter, index) => {
-                        setTimeout(() => {
-                            letter.classList.add("visible");
-                        }, index * 30);
-                    });
-                    observer.unobserve(el);
-                }
-            });
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              letters.forEach((letter, index) => {
+                setTimeout(() => {
+                  letter.classList.add("visible");
+                }, index * 30);
+              });
+              observer.unobserve(el);
+            }
+          });
         }, { threshold: 0.1 });
-
         observer.observe(el);
+      }
     });
-}
+  }
 
-/**
- * Resets the animation and reapplies it
- */
-function resetAnimation() {
+  function resetAnimation() {
     document.querySelectorAll(".typerwriter-fade-in .letter").forEach(span => {
-        span.classList.remove("visible");
+      span.classList.remove("visible");
     });
 
     const bounceEl = document.querySelector(".bounce");
-    if (bounceEl) {
-        bounceEl.classList.remove("bounce");
-        void bounceEl.offsetWidth; // Force reflow
-        bounceEl.classList.add("bounce");
+    if (bounceEl && !prefersReducedMotionEnabled()) {
+      bounceEl.classList.remove("bounce");
+      void bounceEl.offsetWidth;
+      bounceEl.classList.add("bounce");
     }
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: prefersReducedMotionEnabled() ? 'auto' : 'smooth' });
 
     setTimeout(() => {
-        setupText();
-        applyTypewriterFadeIn();
+      setupText();
+      applyTypewriterFadeIn();
     }, 600);
-}
+  }
 
-// Initialize on DOM ready
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     setupText();
     applyTypewriterFadeIn();
 
     document.getElementById("resetBtn").addEventListener("click", resetAnimation);
-});
-</script>
 
+    document.getElementById("toggleMotionBtn").addEventListener("click", () => {
+      simulateReducedMotion = !simulateReducedMotion;
+      document.body.classList.toggle("simulate-reduced-motion", simulateReducedMotion);
+      document.getElementById("toggleMotionBtn").textContent =
+        `Toggle Reduced Motion (${simulateReducedMotion ? "On" : "Off"})`;
+      resetAnimation();
+    });
+  });
+</script>
 </body>
 </html>
