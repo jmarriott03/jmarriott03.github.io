@@ -134,85 +134,90 @@ top: 0;
   </section>
 </main>
 <script>
-  let originalTexts = [];
+let originalTexts = [];
 
-  function setupText() {
-    const elements = document.querySelectorAll(".typerwriter-fade-in");
+/**
+ * Wraps each character of the given element's text in a <span>
+ */
+function wrapLetters(el, index) {
+    const text = originalTexts[index] || el.textContent;
+    if (!originalTexts[index]) originalTexts.push(text);
 
-    elements.forEach((el, i) => {
-      const text = originalTexts[i] || el.textContent;
-      if (!originalTexts[i]) originalTexts.push(text);
-
-      // Add accessibility attributes
-      el.setAttribute("aria-label", text);
-      el.setAttribute("role", "text");
-
-      const letters = [...text].map(letter => {
+    const letters = [...text].map(letter => {
         const span = document.createElement("span");
         span.classList.add("letter");
         span.setAttribute("aria-hidden", "true");
         span.textContent = letter;
-		return span;
-      });
-
-      el.innerHTML = "";
-      letters.forEach(letter => el.appendChild(letter));
+        return span;
     });
-  }
 
-  function applytyperwriterFadeIn() {
+    el.innerHTML = "";
+    letters.forEach(letter => el.appendChild(letter));
+}
+
+/**
+ * Prepares all elements with .typerwriter-fade-in for animation
+ */
+function setupText() {
     const elements = document.querySelectorAll(".typerwriter-fade-in");
+    elements.forEach((el, index) => wrapLetters(el, index));
+}
 
-    elements.forEach((el) => {
-      const letters = el.querySelectorAll(".letter");
+/**
+ * Applies the typewriter fade-in effect using IntersectionObserver
+ */
+function applyTypewriterFadeIn() {
+    document.querySelectorAll(".typerwriter-fade-in").forEach(el => {
+        const letters = el.querySelectorAll(".letter");
 
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            letters.forEach((letter, index) => {
-              setTimeout(() => letter.classList.add("visible"), index * 30);
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    letters.forEach((letter, index) => {
+                        setTimeout(() => {
+                            letter.classList.add("visible");
+                        }, index * 30);
+                    });
+                    observer.unobserve(el);
+                }
             });
-            observer.unobserve(el);
-          }
-        });
-      }, { threshold: 0.1 });
+        }, { threshold: 0.1 });
 
-      observer.observe(el);
+        observer.observe(el);
     });
-  }
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
-    setupText();
-    applytyperwriterFadeIn();
-
-    document.getElementById("resetBtn").addEventListener("click", () => {
-      document.querySelectorAll(".typerwriter-fade-in .letter").forEach(span => {
+/**
+ * Resets the animation and reapplies it
+ */
+function resetAnimation() {
+    document.querySelectorAll(".typerwriter-fade-in .letter").forEach(span => {
         span.classList.remove("visible");
-      });
-
-		
-		
-		// Reset bounce animation
-  const bounceEl = document.querySelector(".bounce");
-  if (bounceEl) {
-    bounceEl.classList.remove("bounce");
-
-    // Force a reflow to restart the animation
-    void bounceEl.offsetWidth;
-
-    bounceEl.classList.add("bounce");
-  }
-		
-		
-		
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      setTimeout(() => {
-        setupText();
-        applytyperwriterFadeIn();
-      }, 600);
     });
-  });
+
+    const bounceEl = document.querySelector(".bounce");
+    if (bounceEl) {
+        bounceEl.classList.remove("bounce");
+        void bounceEl.offsetWidth; // Force reflow
+        bounceEl.classList.add("bounce");
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    setTimeout(() => {
+        setupText();
+        applyTypewriterFadeIn();
+    }, 600);
+}
+
+// Initialize on DOM ready
+document.addEventListener("DOMContentLoaded", () => {
+    setupText();
+    applyTypewriterFadeIn();
+
+    document.getElementById("resetBtn").addEventListener("click", resetAnimation);
+});
 </script>
+
 </body>
 </html>
