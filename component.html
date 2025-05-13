@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+    outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.w-60 {
+	max-width: 60em;
+	overflow: hidden;
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.codegrey2 {
+	background-color: var(--lgrey);
+	padding: 0.25em;
+}
+ul ul {
+	list-style-type: disc;
+}
+ul > li > strong:first-child {
+	display: inline-block;
+	margin-bottom: 1em;
+	font-size: 1.17em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-60 p-2">
+    <h1>Create a new 'Text and animation' component in the CMS to support HTML5 embeds</h1>
+    <h2>1. Screen Readers</h2>
+    <ul>
+      <li><strong>Use ARIA roles and labels:</strong>
+        <ul>
+          <li>Provide <span class="codegrey2">aria-label</span> or <span class="codegrey2">aria-labelledby</span> to describe the content.</li>
+          <li>If the animation conveys meaningful information, make sure it's described in text or through <span class="codegrey2">aria-describedby</span>.</li>
+        </ul>
+      </li>
+      <li><strong>Hide decorative animations:</strong>
+        <ul>
+          <li>If the animation is purely decorative, use <span class="codegrey2">aria-hidden="true"</span> or <span class="codegrey2">role="presentation"</span> to prevent it from being announced.</li>
+        </ul>
+      </li>
+      <li><strong>Descriptive fallback content:</strong>
+        <ul>
+          <li>For iframes or SVGs, include alternative text or an accessible summary outside the iframe/SVG.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
