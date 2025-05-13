@@ -32,18 +32,13 @@ div :last-child {
 ul ul {
 	list-style-type: disc;
 }
-ul > li > strong:first-child {
-	display: inline-block;
-	margin-bottom: 1em;
-	font-size: 1.17em;
-}
 </style>
 </head>
 <body>
 <main>
   <div class="w-60 p-2">
     <h1>Create a new 'Text and animation' component in the CMS to support HTML5 embeds</h1>
-    <h2>1. Screen Readers</h2>
+    <h2>1. Screen readers</h2>
     <ul>
       <li><strong>Use ARIA roles and labels:</strong>
         <ul>
@@ -61,6 +56,102 @@ ul > li > strong:first-child {
           <li>For iframes or SVGs, include alternative text or an accessible summary outside the iframe/SVG.</li>
         </ul>
       </li>
+    </ul>
+    <h2>2. Reading mode (reader view in browsers)</h2>
+    <ul>
+      <li><strong>Ensure semantic HTML outside of the animation:</strong>
+        <ul>
+          <li>Reader mode will typically strip non-semantic content, including iframes and canvas-based animations. Ensure the key messages are still conveyed in accessible HTML text nearby.</li>
+        </ul>
+      </li>
+      <li><strong>Avoid putting key content inside inaccessible canvases or iframes without a fallback.</strong></li>
+    </ul>
+    <h2>3. Keyboard access</h2>
+    <ul>
+      <li><strong>Make sure iframe content is keyboard navigable:</strong>
+        <ul>
+          <li>If the embedded content (e.g., interactive SVG or game) has controls or interactivity, test that all elements can be reached and controlled via keyboard (Tab, Enter, Arrow keys, etc.).</li>
+        </ul>
+      </li>
+      <li><strong>Focus management:</strong>
+        <ul>
+          <li>Use JavaScript to manage focus appropriately when users interact with embedded components.</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>4. ARIA roles and states</h2>
+    <ul>
+      <li><strong>Role and live regions:</strong>
+        <ul>
+          <li>Use <span class="codegrey2">role="img"</span> with <span class="codegrey2">aria-label</span> for non-decorative SVGs.</li>
+          <li>If the animation updates live (e.g., a loading spinner or progress indicator), consider using <span class="codegrey2">aria-live="polite"</span> or <span class="codegrey2">assertive</span>.</li>
+        </ul>
+      </li>
+      <li><strong>Avoid overuse of ARIA:</strong>
+        <ul>
+          <li>Don’t add ARIA attributes just to “pass” accessibility audits—only use them when they provide meaningful assistance.</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>5. Graceful degradation/fallbacks</h2>
+    <ul>
+      <li><strong>No-JS fallback:</strong>
+        <ul>
+          <li>Provide fallback content for users who have JavaScript disabled or blocked.</li>
+        </ul>
+      </li>
+      <li><strong>Reduced motion preference:</strong>
+        <ul>
+          <li>Respect the prefers-reduced-motion media query. Avoid auto-playing or looping animations if the user has requested reduced motion:
+            <div class="codegrey mt-1">@media (prefers-reduced-motion: reduce) {<br>
+              .animated-element {<br>
+              animation: none !important;<br>
+              transition: none !important;<br>
+              }<br>
+              }</div>
+          </li>
+        </ul>
+      <li><strong>Timeouts and pause controls:</strong>
+        <ul>
+          <li>For longer or looping animations, provide controls to pause, stop, or hide the animation (WCAG 2.2 requirement under SC 2.2.2).</li>
+        </ul>
+      </li>
+      </li>
+    </ul>
+    <h2>6. Content in iframes</h2>
+    <ul>
+      <li><strong>Title attribute:</strong>
+        <ul>
+          <li>Always include a descriptive <span class="codegrey2">title</span> on iframes, e.g.:
+            <div class="codegrey mt-1">&lt;iframe src="animation.html" title="Illustration of recycling process" ...&lt;/iframe&gt;</div>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Accessible iframe content:</strong>
+        <ul>
+          <li>Ensure the HTML inside the iframe is accessible itself. This is often overlooked.</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>7. SVG-specific considerations</h2>
+    <ul>
+      <li><strong>Text inside SVGs:</strong>
+        <ul>
+          <li>Use <span class="codegrey2">&lt;title&gt;</span> and <span class="codegrey2">&lt;desc&gt;</span> elements inside the SVG to provide accessible names and descriptions.</li>
+        </ul>
+      </li>
+      <li><strong>Role and focusability:</strong>
+        <ul>
+          <li>Use <span class="codegrey2">focusable="false"</span> for purely decorative SVGs.</li>
+          <li>Use <span class="codegrey2">tabindex="0"</span> if the SVG is interactive and should be reachable by keyboard.</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>8. Lottie animations or JSON-based animation libraries</h2>
+    <ul>
+      <li>Not natively accessible — use them with caution.</li>
+      <li>Provide an accessible alternative (text, static image, or caption).</li>
+      <li>Avoid conveying critical information solely through Lottie unless paired with accessible equivalents.</li>
     </ul>
   </div>
 </main>
