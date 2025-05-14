@@ -4,29 +4,25 @@
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<meta name="loading" content="lazy">
 <link rel="stylesheet" href="css/plymouth_reset.css">
 <link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
+  --highlight-light: #b4c960;
+  --highlight-dark: #a80075;
+  --lgrey: #eee;
 }
-/*
-* {
-    outline: 1px dotted red;
-	outline-offset: -1px;
-}
-*/
 .w-60 {
-	max-width: 60em;
-	overflow: hidden;
+  max-width: 60em;
+  overflow: hidden;
 }
 div :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 ul ul {
-	list-style-type: disc;
+  list-style-type: disc;
 }
 </style>
 </head>
@@ -34,6 +30,7 @@ ul ul {
 <main>
   <div class="w-60 p-2">
     <h1>Create a new 'Text and animation' component in the CMS to support HTML5 embeds</h1>
+
     <h2>1. Screen readers</h2>
     <ul>
       <li><strong>Use ARIA roles and labels:</strong>
@@ -44,7 +41,7 @@ ul ul {
       </li>
       <li><strong>Hide decorative animations:</strong>
         <ul>
-          <li>If the animation is purely decorative, use <span class="codegrey2">aria-hidden="true"</span> or <span class="codegrey2">role="presentation"</span> to prevent it from being announced.</li>
+          <li>If the animation is purely decorative, use <span class="codegrey2">aria-hidden="true"</span> or <span class="codegrey2">role="presentation"</span>.</li>
         </ul>
       </li>
       <li><strong>Descriptive fallback content:</strong>
@@ -53,47 +50,51 @@ ul ul {
         </ul>
       </li>
     </ul>
+
     <h2>2. Reading mode (reader view in browsers)</h2>
     <ul>
       <li><strong>Ensure semantic HTML outside of the animation:</strong>
         <ul>
-          <li>Reader mode will typically strip non-semantic content, including iframes and canvas-based animations. Ensure the key messages are still conveyed in accessible HTML text nearby.</li>
+          <li>Reader mode typically strips non-semantic content. Ensure key messages are conveyed through semantic HTML.</li>
         </ul>
       </li>
       <li><strong>Avoid putting key content inside inaccessible canvases or iframes without a fallback.</strong></li>
     </ul>
+
     <h2>3. Keyboard access</h2>
     <ul>
       <li><strong>Make sure iframe content is keyboard navigable:</strong>
         <ul>
-          <li>If the embedded content (e.g., interactive SVG or game) has controls or interactivity, test that all elements can be reached and controlled via keyboard (Tab, Enter, Arrow keys, etc.).</li>
+          <li>Test that interactive content can be accessed and controlled using a keyboard.</li>
         </ul>
       </li>
       <li><strong>Focus management:</strong>
         <ul>
-          <li>Use JavaScript to manage focus appropriately when users interact with embedded components.</li>
+          <li>Use JavaScript to manage focus appropriately when users interact with embeds.</li>
         </ul>
       </li>
     </ul>
+
     <h2>4. ARIA roles and states</h2>
     <ul>
       <li><strong>Role and live regions:</strong>
         <ul>
-          <li>Use <span class="codegrey2">role="img"</span> with <span class="codegrey2">aria-label</span> for non-decorative SVGs.</li>
-          <li>If the animation updates live (e.g., a loading spinner or progress indicator), consider using <span class="codegrey2">aria-live="polite"</span> or <span class="codegrey2">assertive</span>.</li>
+          <li>Use <span class="codegrey2">role="img"</span> with <span class="codegrey2">aria-label</span> for informative SVGs.</li>
+          <li>Use <span class="codegrey2">aria-live="polite"</span> or <span class="codegrey2">assertive</span> for live updates like loaders.</li>
         </ul>
       </li>
       <li><strong>Avoid overuse of ARIA:</strong>
         <ul>
-          <li>Don’t add ARIA attributes just to “pass” accessibility audits—only use them when they provide meaningful assistance.</li>
+          <li>Only use ARIA where necessary and meaningful.</li>
         </ul>
       </li>
     </ul>
+
     <h2>5. Graceful degradation/fallbacks</h2>
     <ul>
       <li><strong>No-JS fallback:</strong>
         <ul>
-          <li>Provide fallback content for users who have JavaScript disabled or blocked.</li>
+          <li>Provide content alternatives for users without JavaScript.</li>
         </ul>
       </li>
       <li><strong>Reduced motion preference:</strong>
@@ -107,49 +108,79 @@ ul ul {
               }</div>
           </li>
         </ul>
+      </li>
       <li><strong>Timeouts and pause controls:</strong>
         <ul>
-          <li>For longer or looping animations, provide controls to pause, stop, or hide the animation (WCAG 2.2 requirement under SC 2.2.2).</li>
+          <li>Offer controls to pause or stop long or looping animations.</li>
         </ul>
       </li>
-      </li>
     </ul>
+
+    <h2>5b. Mobile responsiveness</h2>
+    <ul>
+      <li>Ensure responsive embed scaling using <span class="codegrey2">max-width: 100%</span> and <span class="codegrey2">height: auto</span>.</li>
+      <li>Touch targets should be at least 44 by 44 pixels for usability.</li>
+    </ul>
+
     <h2>6. Content in iframes</h2>
     <ul>
       <li><strong>Title attribute:</strong>
         <ul>
-          <li>Always include a descriptive <span class="codegrey2">title</span> on iframes, e.g.:
-            <div class="codegrey mt-1">&lt;iframe src="animation.html" title="Illustration of recycling process" ...&lt;/iframe&gt;</div>
+          <li>Always use a descriptive title:
+            <div class="codegrey my-1">&lt;iframe src="animation.html" title="Illustration of recycling process" width="600" height="400" allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;</div>
+            <p>This iframe uses <span class="codegrey2">loading="lazy"</span> and <span class="codegrey2">allowfullscreen</span> to enhance performance and control.</p>
           </li>
         </ul>
       </li>
       <li><strong>Accessible iframe content:</strong>
         <ul>
-          <li>Ensure the HTML inside the iframe is accessible itself. This is often overlooked.</li>
+          <li>Make sure the HTML inside the iframe is also accessible.</li>
         </ul>
       </li>
     </ul>
+
     <h2>7. SVG-specific considerations</h2>
     <ul>
       <li><strong>Text inside SVGs:</strong>
         <ul>
-          <li>Use <span class="codegrey2">&lt;title&gt;</span> and <span class="codegrey2">&lt;desc&gt;</span> elements inside the SVG to provide accessible names and descriptions.</li>
+          <li>Use <span class="codegrey2">&lt;title&gt;</span> and <span class="codegrey2">&lt;desc&gt;</span> for names and descriptions.</li>
         </ul>
       </li>
       <li><strong>Role and focusability:</strong>
         <ul>
-          <li>Use <span class="codegrey2">focusable="false"</span> for purely decorative SVGs.</li>
-          <li>Use <span class="codegrey2">tabindex="0"</span> if the SVG is interactive and should be reachable by keyboard.</li>
+          <li><span class="codegrey2">focusable="false"</span> for decorative SVGs, <span class="codegrey2">tabindex="0"</span> for interactive ones.</li>
         </ul>
       </li>
     </ul>
+
     <h2>8. Lottie animations or JSON-based animation libraries</h2>
     <ul>
-      <li>Not natively accessible — use them with caution.</li>
-      <li>Provide an accessible alternative (text, static image, or caption).</li>
-      <li>Avoid conveying critical information solely through Lottie unless paired with accessible equivalents.</li>
+      <li>Not natively accessible — use caution.</li>
+      <li>Provide accessible alternatives like text or images.</li>
+      <li>Don’t rely on them for critical messaging.</li>
     </ul>
+
+
+    <h2>9. Design Consistency</h2>
+    <ul>
+      <li>Ensure all components use consistent styling, spacing, fonts, and color themes per CMS standards.</li>
+    </ul>
+
+    <h2>10. User feedback</h2>
+    <ul>
+      <li>Consider adding a feedback form or contact point for reporting accessibility issues.</li>
+    </ul>
+
   </div>
 </main>
+<script>
+  // Honor reduced motion preference even for JS animations
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll('.animated-element').forEach(el => {
+      el.style.animation = "none";
+      el.style.transition = "none";
+    });
+  }
+</script>
 </body>
 </html>
