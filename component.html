@@ -10,19 +10,19 @@
 <title>University of Plymouth</title>
 <style>
 :root {
-  --highlight-light: #b4c960;
-  --highlight-dark: #a80075;
-  --lgrey: #eee;
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+--lgrey: #eee;
 }
 .w-60 {
-  max-width: 60em;
-  overflow: hidden;
+	max-width: 60em;
+	overflow: hidden;
 }
 div :last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 ul ul {
-  list-style-type: disc;
+	list-style-type: disc;
 }
 </style>
 </head>
@@ -30,7 +30,6 @@ ul ul {
 <main>
   <div class="w-60 p-2">
     <h1>Create a new 'Text and animation' component in the CMS to support HTML5 embeds</h1>
-
     <h2>1. Screen readers</h2>
     <ul>
       <li><strong>Use ARIA roles and labels:</strong>
@@ -50,7 +49,6 @@ ul ul {
         </ul>
       </li>
     </ul>
-
     <h2>2. Reading mode (reader view in browsers)</h2>
     <ul>
       <li><strong>Ensure semantic HTML outside of the animation:</strong>
@@ -60,7 +58,6 @@ ul ul {
       </li>
       <li><strong>Avoid putting key content inside inaccessible canvases or iframes without a fallback.</strong></li>
     </ul>
-
     <h2>3. Keyboard access</h2>
     <ul>
       <li><strong>Make sure iframe content is keyboard navigable:</strong>
@@ -74,7 +71,6 @@ ul ul {
         </ul>
       </li>
     </ul>
-
     <h2>4. ARIA roles and states</h2>
     <ul>
       <li><strong>Role and live regions:</strong>
@@ -89,7 +85,6 @@ ul ul {
         </ul>
       </li>
     </ul>
-
     <h2>5. Graceful degradation/fallbacks</h2>
     <ul>
       <li><strong>No-JS fallback:</strong>
@@ -115,14 +110,12 @@ ul ul {
         </ul>
       </li>
     </ul>
-
-    <h2>5b. Mobile responsiveness</h2>
+    <h2>6. Mobile responsiveness</h2>
     <ul>
       <li>Ensure responsive embed scaling using <span class="codegrey2">max-width: 100%</span> and <span class="codegrey2">height: auto</span>.</li>
       <li>Touch targets should be at least 44 by 44 pixels for usability.</li>
     </ul>
-
-    <h2>6. Content in iframes</h2>
+    <h2>7. Content in iframes</h2>
     <ul>
       <li><strong>Title attribute:</strong>
         <ul>
@@ -138,8 +131,7 @@ ul ul {
         </ul>
       </li>
     </ul>
-
-    <h2>7. SVG-specific considerations</h2>
+    <h2>8. SVG-specific considerations</h2>
     <ul>
       <li><strong>Text inside SVGs:</strong>
         <ul>
@@ -152,25 +144,34 @@ ul ul {
         </ul>
       </li>
     </ul>
-
-    <h2>8. Lottie animations or JSON-based animation libraries</h2>
+    <h2>9. Lottie animations or JSON-based animation libraries</h2>
     <ul>
       <li>Not natively accessible — use caution.</li>
       <li>Provide accessible alternatives like text or images.</li>
       <li>Don’t rely on them for critical messaging.</li>
     </ul>
-
-
-    <h2>9. Design Consistency</h2>
+    <h2>10. Design Consistency</h2>
     <ul>
       <li>Ensure all components use consistent styling, spacing, fonts, and color themes per CMS standards.</li>
     </ul>
-
-    <h2>10. User feedback</h2>
+    <h2>11. User feedback</h2>
     <ul>
       <li>Consider adding a feedback form or contact point for reporting accessibility issues.</li>
     </ul>
-
+    <h2>Implementation Checklist</h2>
+    <p><strong>Before implementing a new text and animation component in the CMS, ensure you've addressed all these requirements:</strong></p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Screen reader accessibility with proper ARIA attributes</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Content is accessible in reading mode</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Full keyboard navigation support</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Appropriate ARIA roles and states</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Fallback content for users without JavaScript</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Respect for reduced motion preferences</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Mobile responsive design</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Accessible iframe implementation</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>SVG accessibility optimizations</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Alternatives for Lottie or JSON animations</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>Consistent design with Plymouth branding</p>
+    <p><span class="iconfont" aria-hidden="true">6</span>User feedback mechanisms</p>
   </div>
 </main>
 <script>
