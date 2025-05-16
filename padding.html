@@ -9,8 +9,8 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---pad-default: 2em;
---pad-sm: 1em;
+--p-reg: 2em;
+--p-sm: 1em;
 }
 * {
 	outline: 1px dotted red;
@@ -18,12 +18,12 @@
 }
 /* Responsive padding utility */
 .p-responsive {
-	padding: var(--pad-default);
+	padding: var(--p-reg);
 }
 
 @media (max-width: 40em) {
 .p-responsive {
-	padding: var(--pad-sm);
+	padding: var(--p-sm);
 }
 }
 .w-60 {
