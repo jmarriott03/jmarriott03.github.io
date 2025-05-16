@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--p-reg: 2em;
+--p-sm: 1em;
+--green: green;
+--orange: orange;
+--red: red;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.p-responsive {
+	padding: var(--p-reg);
+}
+
+@media (max-width: 40em) {
+.p-responsive {
+	padding: var(--p-sm);
+}
+}
+.w-60 {
+	max-width: 60em;
+}
+.w-60 :last-child {
+	margin-bottom: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 1em 0 0 0;
+}
+td, th {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid #111;
+}
+th {
+	border-bottom: 2px solid #111;
+}
+code {
+	background-color: var(--lgrey);
+	padding: 0.25em;
+	font-family: monospace;
+}
+.green {
+	color: var(--green);
+}
+	
+	.orange {
+	color: var(--orange);
+}
+	
+	.red {
+	color: var(--red);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-60 p-responsive">
+    <h1>Responsive padding approaches compared</h1>
+    <h2><span class="iconfont green" aria-hidden="true">6</span>Best Overall Approach: <code>padding.html</code> (CSS variables + utility class)</h2>
+    <p><strong>Why it's better:</strong></p>
+    <ul>
+      <li>Centralized control: Uses CSS variables (<code>--p-reg</code> and <code>--p-sm</code>) which makes global updates easy—change the padding in one place and it updates everywhere.</li>
+      <li>Cleaner utility class: Only one class (<code>.p-responsive</code>) is needed for both regular and small screens.</li>
+      <li>Scalable: Easier to extend (e.g., adding <code>--p-lg</code>, <code>--p-xl</code>, etc.) and reuse in larger projects.</li>
+      <li>Less duplication: No need for multiple utility classes like <code>.p-2</code> and <code>.sm-p-1</code>.</li>
+    </ul>
+    <h2>Comparison Summary</h2>
+    <table class="mb-reg">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th><code>padding.html</code> (CSS vars)</th>
+          <th><code>padding2.html</code> (Tailwind-style)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Readability</td>
+          <td><span class="iconfont green" aria-hidden="true">6</span>Cleaner</td>
+          <td><span class="iconfont orange" aria-hidden="true">-</span>More verbose</td>
+        </tr>
+        <tr>
+          <td>Scalability</td>
+          <td><span class="iconfont green" aria-hidden="true">6</span>High</td>
+          <td><span class="iconfont orange" aria-hidden="true">-</span>Moderate</td>
+        </tr>
+        <tr>
+          <td>Reusability</td>
+          <td><span class="iconfont green" aria-hidden="true">6</span>Centralised with vars</td>
+          <td><span class="iconfont orange" aria-hidden="true">-</span>Requires multiple classes</td>
+        </tr>
+        <tr>
+          <td>Consistency management</td>
+          <td><span class="iconfont green" aria-hidden="true">6</span>Easy (via <code>:root</code> variables)</td>
+          <td><span class="iconfont red" aria-hidden="true">5</span>Manual, prone to inconsistency</td>
+        </tr>
+        <tr>
+          <td>Tailwind-like familiarity</td>
+          <td><span class="iconfont red" aria-hidden="true">5</span>Not native Tailwind format</td>
+          <td><span class="iconfont green" aria-hidden="true">6</span>Closer to Tailwind syntax</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>When to choose each:</h2>
+    <ul>
+      <li>Use <code>padding.html</code> if you're working on a custom design system or want clean, scalable CSS.</li>
+      <li>Use <code>padding2.html</code> if you're emulating Tailwind-like syntax or integrating with a utility-class-heavy approach.</li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
