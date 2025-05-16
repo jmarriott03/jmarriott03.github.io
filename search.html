@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.backgroundimage {
+	background-image: url("images/1280x720engineering.webp");
+	background-size: cover;
+}
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+.w-60 {
+	max-width: 60em;
+	overflow: hidden;
+}
+.w-60 :last-child {
+	margin-bottom: 0;
+}
+.searchbox {
+	width: 100%;
+	height: 3em;
+	border-radius: 2em;
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.course-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.course-list a {
+	margin-right: 1em;
+}
+.course-list span {
+	color: var(--dgrey);
+	font-size: 0.75em;
+	line-height: 1.5;
+	white-space: nowrap;
+	background-color: var(--white);
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+.course-list2 {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.course-list2 a {
+	margin-right: 1em;
+	text-decoration: none;
+}
+.course-list2 a:hover, .course-list2 a:focus {
+	text-decoration: underline;
+}
+.course-list2 span {
+	color: var(--dgrey);
+	font-size: 0.75em;
+	line-height: 1.5;
+	white-space: nowrap;
+}
+.course-list3 {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.course-list3 a {
+	margin-right: 1em;
+	color: var(--black);
+}
+.course-list3 span {
+	color: var(--dgrey);
+	font-size: 0.75em;
+	line-height: 1.5;
+	white-space: nowrap;
+	background-color: var(--white);
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+.course-list4 {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.course-list4 a {
+	margin-right: 1em;
+	color: var(--black);
+	text-decoration: none;
+}
+.course-list4 a:hover, .course-list a:focus {
+	text-decoration: underline;
+}
+.course-list4 li {
+	border-bottom: 1px solid var(--black);
+	padding-bottom: 1em;
+}
+.course-list4 span {
+	color: var(--dgrey);
+	font-size: 0.75em;
+	line-height: 1.5;
+	white-space: nowrap;
+	background-color: var(--white);
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+.course-list5 {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.course-list5 a {
+	margin-right: 1em;
+	color: var(--black);
+	text-decoration: none;
+}
+.course-list5 a:hover, .course-list a:focus {
+	text-decoration: underline;
+}
+.course-list5 li {
+	border-bottom: 1px solid var(--black);
+	padding-bottom: 1em;
+}
+.course-list5 span {
+	color: var(--dgrey);
+	font-size: 0.75em;
+	line-height: 1.5;
+	white-space: nowrap;
+	background-color: var(--lgrey);
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+.course-list6 {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.course-list6 a {
+	margin-right: 1em;
+	color: var(--black);
+	text-decoration: none;
+}
+.course-list6 a:hover, .course-list a:focus {
+	text-decoration: underline;
+}
+.course-list6 li {
+	border-bottom: 1px solid var(--black);
+	padding-bottom: 1em;
+}
+.course-list6 span {
+	color: var(--dgrey);
+	font-size: 0.75em;
+	line-height: 1.5;
+	white-space: nowrap;
+	background-color: var(--white);
+	border-radius: 0.5em;
+	padding: 0.5em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-60 p-2">
+    <h1>search</h1>
+  </div>
+  <div class="backgroundimage mb-reg">
+    <div class="w-60 p-2">
+      <div class="rounded-2 p-2 mrfrosty">
+        <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+        <div class="searchbox stroke centered pl-1 bck-white">
+          <p>math (visual 1)</p>
+        </div>
+        <div class="p-1">
+          <ul class="course-list">
+            <li><a href="#">BSc (Hons) Mathematics with Statistics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Computer Science</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Foundation Year</a> <span>Full-time</span></li>
+            <li><a href="#">MSc Data Science and Business Analytics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">PhD Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">ResM Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">BSc (Hons) Electronic and Computer Engineering</a> <span>Full-time</span></li>
+            <li><a href="#">BEng (Hons) Electrical and Electronic Engineering with Foundation Year</a> <span>Full-time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backgroundimage mb-reg">
+    <div class="w-60 p-2">
+      <div class="rounded-2 p-2 bck-white">
+        <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+        <div class="searchbox stroke centered pl-1 bck-white">
+          <p>math (visual 2)</p>
+        </div>
+        <div class="p-1">
+          <ul class="course-list2">
+            <li><a href="#">BSc (Hons) Mathematics with Statistics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Computer Science</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Foundation Year</a> <span>Full-time</span></li>
+            <li><a href="#">MSc Data Science and Business Analytics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">PhD Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">ResM Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">BSc (Hons) Electronic and Computer Engineering</a> <span>Full-time</span></li>
+            <li><a href="#">BEng (Hons) Electrical and Electronic Engineering with Foundation Year</a> <span>Full-time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backgroundimage mb-reg">
+    <div class="w-60 p-2">
+      <div class="rounded-2 p-2 bck-lgrey">
+        <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+        <div class="searchbox stroke centered pl-1 bck-white">
+          <p>math (visual 3)</p>
+        </div>
+        <div class="p-1">
+          <ul class="course-list3">
+            <li><a href="#">BSc (Hons) Mathematics with Statistics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Computer Science</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Foundation Year</a> <span>Full-time</span></li>
+            <li><a href="#">MSc Data Science and Business Analytics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">PhD Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">ResM Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">BSc (Hons) Electronic and Computer Engineering</a> <span>Full-time</span></li>
+            <li><a href="#">BEng (Hons) Electrical and Electronic Engineering with Foundation Year</a> <span>Full-time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backgroundimage mb-reg">
+    <div class="w-60 p-2">
+      <div class="rounded-2 p-2 mrfrosty">
+        <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+        <div class="searchbox stroke centered pl-1 bck-white">
+          <p>math (visual 4)</p>
+        </div>
+        <div class="p-1">
+          <ul class="course-list4">
+            <li><a href="#">BSc (Hons) Mathematics with Statistics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Computer Science</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Foundation Year</a> <span>Full-time</span></li>
+            <li><a href="#">MSc Data Science and Business Analytics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">PhD Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">ResM Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">BSc (Hons) Electronic and Computer Engineering</a> <span>Full-time</span></li>
+            <li><a href="#">BEng (Hons) Electrical and Electronic Engineering with Foundation Year</a> <span>Full-time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backgroundimage mb-reg">
+    <div class="w-60 p-2">
+      <div class="rounded-2 p-2 bck-white">
+        <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+        <div class="searchbox stroke centered pl-1 bck-lgrey">
+          <p>math (visual 5)</p>
+        </div>
+        <div class="p-1">
+          <ul class="course-list5">
+            <li><a href="#">BSc (Hons) Mathematics with Statistics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Computer Science</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Foundation Year</a> <span>Full-time</span></li>
+            <li><a href="#">MSc Data Science and Business Analytics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">PhD Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">ResM Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">BSc (Hons) Electronic and Computer Engineering</a> <span>Full-time</span></li>
+            <li><a href="#">BEng (Hons) Electrical and Electronic Engineering with Foundation Year</a> <span>Full-time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backgroundimage mb-reg">
+    <div class="w-60 p-2">
+      <div class="rounded-2 p-2 bck-lgrey">
+        <h2><span class="iconfont" aria-hidden="true">B</span>Search all courses</h2>
+        <div class="searchbox stroke centered pl-1 bck-white">
+          <p>math (visual 6)</p>
+        </div>
+        <div class="p-1">
+          <ul class="course-list6">
+            <li><a href="#">BSc (Hons) Mathematics with Statistics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Computer Science</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Theoretical Physics</a> <span>Full-time</span></li>
+            <li><a href="#">BSc (Hons) Mathematics with Foundation Year</a> <span>Full-time</span></li>
+            <li><a href="#">MSc Data Science and Business Analytics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">PhD Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">ResM Mathematics and Statistics</a> <span>Full-time, Part-time route available</span></li>
+            <li><a href="#">BSc (Hons) Electronic and Computer Engineering</a> <span>Full-time</span></li>
+            <li><a href="#">BEng (Hons) Electrical and Electronic Engineering with Foundation Year</a> <span>Full-time</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
