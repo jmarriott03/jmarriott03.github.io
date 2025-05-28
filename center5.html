@@ -12,35 +12,34 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
-* {
-    border: 1px dotted red;
-}
 .bck-highlight-light {
-    background-color: var(--highlight-light);
+	background-color: var(--highlight-light);
 }
 .bck-highlight-dark {
-    background-color: var(--highlight-dark);
+	background-color: var(--highlight-dark);
 }
 section {
-    max-width: 80em;
-    overflow: hidden;
+	max-width: 80em;
+	overflow: hidden;
 }
 section :last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 .w-45-max {
-    max-width: 45em;
+	max-width: 45em;
 }
-.centered {
-    align-content: center;
+.centered-child {
+	display: grid;
+	place-items: center;
 }
 </style>
 </head>
 <body>
 <main>
-  <section class="p-2"><h1>Centered content using "align-content: center;"</h1>
-    <div class="rounded-2 p-2 bck-highlight-light">
-      <div class="centered w-45-max">
+  <section class="p-2">
+    <h1>Centered content using <code class="codegrey2">place-items: center;</code></h1>
+    <div class="rounded-2 p-2 bck-highlight-light centered-child">
+      <div class="w-45-max dotted">
         <h2>Centered text</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
