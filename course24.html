@@ -199,131 +199,111 @@ display: none;
   </section>
 </main>
 <script>
-// Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Function to scroll to the section with an offset for the navbar
+    // Smooth scroll with navbar offset
     function scrollToSection(event) {
-        event.preventDefault(); // Prevent default anchor click behavior
-
+        event.preventDefault();
         const targetId = event.target.getAttribute('data-section');
         const targetSection = document.getElementById(targetId);
-
         if (targetSection) {
-            const navbarHeight = 92; // Height of the navbar
+            const navbarHeight = 92;
             const sectionPosition = targetSection.offsetTop - navbarHeight;
-
-            window.scrollTo({
-                top: sectionPosition
-                , behavior: 'smooth'
-            });
+            window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
         }
     }
 
-    // Add click event listeners to navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', scrollToSection);
     });
 
-    // IntersectionObserver setup for section highlighting
-    const observerOptions = {
-        root: null, // Use the viewport as the root
-        threshold: 0.3 // Changed as didn't work for mobile
-    };
+    // Dynamic threshold logic
+    function getResponsiveThreshold() {
+        return window.innerWidth > 640 ? 1 : 0.3;
+    }
+
+    let sectionObserver;
 
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             const navLink = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
             if (entry.isIntersecting) {
-                // Remove active class from all links
                 navLinks.forEach(link => link.classList.remove('active'));
-                // Add active class to the currently visible section's link
                 navLink.classList.add('active');
             }
         });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    function createObserver() {
+        if (sectionObserver) sectionObserver.disconnect();
 
-    // Observe all sections
-    document.querySelectorAll('section')
-        .forEach(section => {
-            observer.observe(section);
+        sectionObserver = new IntersectionObserver(observerCallback, {
+            root: null,
+            threshold: getResponsiveThreshold()
         });
 
-    // Ensure proper highlight on page load
+        document.querySelectorAll('section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+    }
+
+    window.addEventListener('resize', createObserver);
     window.addEventListener('load', () => {
+        createObserver();
+
+        // Initial active link check
         const navbarHeight = 92;
         const currentScroll = window.scrollY + navbarHeight;
-
         let activeLinkFound = false;
-        document.querySelectorAll('section')
-            .forEach((section, i) => {
-                const rect = section.getBoundingClientRect();
-                const top = rect.top + window.scrollY;
 
-                if (!activeLinkFound && top <= currentScroll && top + section.offsetHeight > currentScroll) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    const currentNavLink = document.querySelector(`.nav-link[data-section="${section.id}"]`);
-                    currentNavLink.classList.add('active');
-                    activeLinkFound = true;
-                }
-            });
-    });
-
-document.addEventListener('DOMContentLoaded', () => {
-    const courseTitle = document.querySelector('.course-title');
-    const triggerElement = document.querySelector('.trigger-course-title');
-    
-    // Calculate the dynamic height
-    const dynamicHeight = courseTitle.scrollHeight; // Gets the content's full height
-    
-    // IntersectionObserver options
-    const options = {
-        root: null, // Use the viewport as the root
-        threshold: 0.1 // Trigger when at least 10% of the element is visible
-    };
-
-    // Callback function for IntersectionObserver
-    const callback = (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                courseTitle.style.height = '0px';
-            } else {
-                courseTitle.style.height = `${dynamicHeight}px`;
+        document.querySelectorAll('section').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const top = rect.top + window.scrollY;
+            if (!activeLinkFound && top <= currentScroll && top + section.offsetHeight > currentScroll) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                const currentNavLink = document.querySelector(`.nav-link[data-section="${section.id}"]`);
+                currentNavLink.classList.add('active');
+                activeLinkFound = true;
             }
         });
-    };
+    });
 
-    // Create the observer
-    const observer = new IntersectionObserver(callback, options);
+    // Show/hide course title on scroll past image
+    document.addEventListener('DOMContentLoaded', () => {
+        const courseTitle = document.querySelector('.course-title');
+        const triggerElement = document.querySelector('.trigger-course-title');
+        const dynamicHeight = courseTitle.scrollHeight;
 
-    // Observe the trigger element
-    observer.observe(triggerElement);
-});
-	
-document.addEventListener('DOMContentLoaded', () => {
-  const tabHeader = document.querySelector('.nav-container');
+        const callback = (entries) => {
+            entries.forEach(entry => {
+                courseTitle.style.height = entry.isIntersecting ? '0px' : `${dynamicHeight}px`;
+            });
+        };
 
-  function updateNavGradient() {
-    const scrollPosition = tabHeader.scrollLeft;
-    const maxScroll = tabHeader.scrollWidth - tabHeader.clientWidth;
+        const observer = new IntersectionObserver(callback, { threshold: 0.1 });
+        observer.observe(triggerElement);
+    });
 
-    if (maxScroll <= 0 || scrollPosition >= maxScroll) {
-      tabHeader.classList.add('no-gradient');
-    } else {
-      tabHeader.classList.remove('no-gradient');
-    }
-  }
+    // Navigation scroll mask logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabHeader = document.querySelector('.nav-container');
 
-  // Initial check
-  updateNavGradient();
+        function updateNavGradient() {
+            const scrollPosition = tabHeader.scrollLeft;
+            const maxScroll = tabHeader.scrollWidth - tabHeader.clientWidth;
+            if (maxScroll <= 0 || scrollPosition >= maxScroll) {
+                tabHeader.classList.add('no-gradient');
+            } else {
+                tabHeader.classList.remove('no-gradient');
+            }
+        }
 
-  // Update on scroll, resize, and load
-  tabHeader.addEventListener('scroll', updateNavGradient);
-  window.addEventListener('resize', updateNavGradient);
-  window.addEventListener('load', updateNavGradient);
-});	
+        updateNavGradient();
+        tabHeader.addEventListener('scroll', updateNavGradient);
+        window.addEventListener('resize', updateNavGradient);
+        window.addEventListener('load', updateNavGradient);
+    });
 </script>
+
 </body>
 </html>
