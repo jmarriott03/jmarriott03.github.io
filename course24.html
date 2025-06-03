@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
 :root {
@@ -158,7 +159,7 @@ display: none;
         <div class="px-2 py-1">BEng (Hons) <strong>Electrical and Electronic Engineering</strong></div>
       </div>
     </div>
-    <div class="nav-container p-1"><a href="#section1" class="nav-link w-5" data-section="section1">About</a> <a href="#section2" class="nav-link w-5" data-section="section2">Details</a> <a href="#section3" class="nav-link w-7" data-section="section3">Experience</a> <a href="#section4" class="nav-link w-5half" data-section="section4">Careers</a> <a href="#section5" class="nav-link w-9" data-section="section5">Fees and funds</a> <a href="#section5" class="nav-link w-5" data-section="section6">Apply</a> <a href="#" class="nav-button-openday">Book an open day</a> </div>
+    <div class="nav-container p-1"><a href="#section1" class="nav-link w-5" data-section="section1">About</a> <a href="#section2" class="nav-link w-5" data-section="section2">Details</a> <a href="#section3" class="nav-link w-7" data-section="section3">Experience</a> <a href="#section4" class="nav-link w-5half" data-section="section4">Careers</a> <a href="#section5" class="nav-link w-9" data-section="section5">Fees and funds</a> <a href="#section6" class="nav-link w-5" data-section="section6">Apply</a> <a href="#" class="nav-button-openday">Book an open day</a> </div>
   </div>
   <section id="section1">
     <h2>About placeholder</h2>
@@ -199,111 +200,95 @@ display: none;
   </section>
 </main>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
+    const courseTitle = document.querySelector('.course-title');
+    const triggerElement = document.querySelector('.trigger-course-title');
+    const tabHeader = document.querySelector('.nav-container');
 
-    // Smooth scroll with navbar offset
+    // --- Scroll to section with offset ---
     function scrollToSection(event) {
         event.preventDefault();
         const targetId = event.target.getAttribute('data-section');
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
-            const navbarHeight = 92;
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
             const sectionPosition = targetSection.offsetTop - navbarHeight;
             window.scrollTo({ top: sectionPosition, behavior: 'smooth' });
         }
     }
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', scrollToSection);
-    });
+    navLinks.forEach(link => link.addEventListener('click', scrollToSection));
 
-    // Dynamic threshold logic
+    // --- Active nav link via IntersectionObserver ---
     function getResponsiveThreshold() {
         return window.innerWidth > 640 ? 1 : 0.3;
     }
-
-    let sectionObserver;
 
     const observerCallback = (entries) => {
         entries.forEach(entry => {
             const navLink = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
             if (entry.isIntersecting) {
                 navLinks.forEach(link => link.classList.remove('active'));
-                navLink.classList.add('active');
+                navLink?.classList.add('active');
             }
         });
     };
 
     function createObserver() {
-        if (sectionObserver) sectionObserver.disconnect();
-
-        sectionObserver = new IntersectionObserver(observerCallback, {
+        if (window.sectionObserver) window.sectionObserver.disconnect();
+        window.sectionObserver = new IntersectionObserver(observerCallback, {
             root: null,
             threshold: getResponsiveThreshold()
         });
-
         document.querySelectorAll('section').forEach(section => {
-            sectionObserver.observe(section);
+            window.sectionObserver.observe(section);
         });
     }
 
     window.addEventListener('resize', createObserver);
-    window.addEventListener('load', () => {
-        createObserver();
+    createObserver();
 
-        // Initial active link check
-        const navbarHeight = 92;
-        const currentScroll = window.scrollY + navbarHeight;
-        let activeLinkFound = false;
-
-        document.querySelectorAll('section').forEach(section => {
-            const rect = section.getBoundingClientRect();
-            const top = rect.top + window.scrollY;
-            if (!activeLinkFound && top <= currentScroll && top + section.offsetHeight > currentScroll) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                const currentNavLink = document.querySelector(`.nav-link[data-section="${section.id}"]`);
-                currentNavLink.classList.add('active');
-                activeLinkFound = true;
-            }
-        });
-    });
-
-    // Show/hide course title on scroll past image
-    document.addEventListener('DOMContentLoaded', () => {
-        const courseTitle = document.querySelector('.course-title');
-        const triggerElement = document.querySelector('.trigger-course-title');
-        const dynamicHeight = courseTitle.scrollHeight;
-
-        const callback = (entries) => {
-            entries.forEach(entry => {
-                courseTitle.style.height = entry.isIntersecting ? '0px' : `${dynamicHeight}px`;
-            });
-        };
-
-        const observer = new IntersectionObserver(callback, { threshold: 0.1 });
-        observer.observe(triggerElement);
-    });
-
-    // Navigation scroll mask logic
-    document.addEventListener('DOMContentLoaded', () => {
-        const tabHeader = document.querySelector('.nav-container');
-
-        function updateNavGradient() {
-            const scrollPosition = tabHeader.scrollLeft;
-            const maxScroll = tabHeader.scrollWidth - tabHeader.clientWidth;
-            if (maxScroll <= 0 || scrollPosition >= maxScroll) {
-                tabHeader.classList.add('no-gradient');
-            } else {
-                tabHeader.classList.remove('no-gradient');
-            }
+    // --- Initial active link on load ---
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    const currentScroll = window.scrollY + navbarHeight;
+    document.querySelectorAll('section').forEach(section => {
+        const top = section.offsetTop;
+        if (top <= currentScroll && top + section.offsetHeight > currentScroll) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector(`.nav-link[data-section="${section.id}"]`)?.classList.add('active');
         }
-
-        updateNavGradient();
-        tabHeader.addEventListener('scroll', updateNavGradient);
-        window.addEventListener('resize', updateNavGradient);
-        window.addEventListener('load', updateNavGradient);
     });
-</script>
 
+    // --- Show/hide course title on scroll past image ---
+    courseTitle.style.height = 'auto';
+    const dynamicHeight = courseTitle.scrollHeight;
+    courseTitle.style.height = '0px';
+
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            courseTitle.style.height = entry.isIntersecting ? '0px' : `${dynamicHeight}px`;
+        });
+    }, { threshold: 0.1 });
+
+    titleObserver.observe(triggerElement);
+
+    // --- Navigation scroll mask logic ---
+    function updateNavGradient() {
+        const scrollPosition = tabHeader.scrollLeft;
+        const maxScroll = tabHeader.scrollWidth - tabHeader.clientWidth;
+        if (maxScroll <= 0 || scrollPosition >= maxScroll) {
+            tabHeader.classList.add('no-gradient');
+        } else {
+            tabHeader.classList.remove('no-gradient');
+        }
+    }
+
+    updateNavGradient();
+    tabHeader.addEventListener('scroll', updateNavGradient);
+    window.addEventListener('resize', updateNavGradient);
+    window.addEventListener('load', updateNavGradient);
+});
+</script>
 </body>
 </html>
