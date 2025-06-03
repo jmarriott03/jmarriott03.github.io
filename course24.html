@@ -228,7 +228,7 @@ display: none;
     // IntersectionObserver setup for section highlighting
     const observerOptions = {
         root: null, // Use the viewport as the root
-        threshold: 1 // Trigger when 50% of the section is visible
+        threshold: 0.3 // Changed as didn't work for mobile
     };
 
     const observerCallback = (entries) => {
