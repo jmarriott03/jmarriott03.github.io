@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+    outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.backgroundimage {
+	background-image: url("images/1920x1080babbage.webp");
+}
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-left: 0;
+	margin-bottom: 1em;
+}
+.profile :last-child {
+	margin-bottom: 0;
+}
+.profile img {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+}
+.profile-text {
+	flex: 1;
+}
+.pelican-container {
+	width: 19em;
+}
+.fullw {
+	width: 100%;
+}
+.aspect-16-9 {
+	aspect-ratio: 16 / 9;
+}
+.parent {
+	display: grid;
+}
+.div1 {
+	grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.btn-rounded {
+	border-radius: 1.5em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent">
+    <div class="div1"><img src="images/1920x600babbage.jpg" alt=""/></div>
+    <div class="div2 centered p-2">
+      <div class="rounded-1 mrfrosty p-1 shadow pelican-container">
+        <div class="profile"> <img src="images/720x720pelican.webp" alt=""/>
+          <div class="profile-text">
+            <p><strong>PlymBot Pelican</strong><br>
+              <span class="smalltext">Response time: right now</span></p>
+          </div>
+        </div>
+        <p class="largetext">Hi there!<br>
+          Are you interested in one of our courses?</p>
+        <button class="btn btn-primary fullw">Yes I want to study at Plymouth</button>
+        <button class="btn btn-secondary fullw">Actually I want something else</button>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
