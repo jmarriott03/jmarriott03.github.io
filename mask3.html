@@ -84,39 +84,29 @@
 	text-align: left;
 	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
-.black-text > .btn-rounded:hover, .black-text > .btn-rounded:focus {
+.black-text .btn-rounded:hover, .black-text .btn-rounded:focus {
 	cursor: pointer;
 	color: var(--white);
 	background-color: var(--black);
 }
-.white-text > .btn-rounded:hover, .white-text > .btn-rounded:focus {
+.white-text .btn-rounded:hover, .white-text .btn-rounded:focus {
 	cursor: pointer;
 	color: var(--black);
 	background-color: var(--white);
 }
-.text-resize > .btn-rounded {
+.text-resize .btn-rounded {
 	font-size: 1.25rem;
 }
 
 /*Responsive behavior: at 80em, resize button*/
 @media (max-width: 80em) {
-.text-resize > .btn-rounded {
+.text-resize .btn-rounded {
 	font-size: 1rem;
 }
 }
 .text-highlight {
 	opacity: 0.7;/*	color: var(--highlight-light);*/
 }
-	.logo {
-		width: 2em;
-		float: left;
-	}
-	.logo-text {
-		width: 10em;
-		height: 2em;
-		border: 1px solid white;
-		
-	}
 .aspect-16-9 {
 	aspect-ratio: 16 / 9;
 }
@@ -173,6 +163,16 @@
 	aspect-ratio: 16 / 9;
 }
 }
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.logo {
+	width: 2em;
+	display: block;
+	margin: 0;
+}
 </style>
 </head>
 <body>
@@ -180,11 +180,18 @@
   <div class="p-responsive">
     <div class="container-hero bck-highlight-dark rounded-2 mb-reg">
       <div class="left-column p-2">
-        <div class="centered white-text text-resize"><img src="images/triangle.svg" alt="" class="logo mb-1"><div class="logo-text"><p>Text</p></div>
+        <div class="centered white-text">
+          <div class="logo-wrapper mb-reg"> <img src="images/triangle.svg" alt="" class="logo mb-1">
+            <div class="logo-text">
+              <p><strong>Online</strong> programmes</p>
+            </div>
+          </div>
           <h4 class="m-0">Postgraduate taught programme</h4>
-          <h1>MSc Global Health</h1>
-          <p>Health does not exist in isolation—climate change, inequality, and demographic shifts all shape outcomes globally. From workforce shortages to migration and emerging technologies, global challenges affect every system. Policy, practice, and research must adapt.</p>
-          <button class="btn-rounded">Apply now</button>
+          <div class="text-resize">
+            <h1>MSc Global Health</h1>
+            <p>Health does not exist in isolation—climate change, inequality, and demographic shifts all shape outcomes globally. From workforce shortages to migration and emerging technologies, global challenges affect every system. Policy, practice, and research must adapt.</p>
+            <button class="btn-rounded">Apply now</button>
+          </div>
         </div>
       </div>
       <div class="right-column">
@@ -194,10 +201,10 @@
         </div>
       </div>
     </div>
-    <h2>Dynamic themes buttons</h2>
-    <button class="btn btn-secondary" onclick="setHighlight('#d0da6d', '#3a4120')">Theme 1</button>
-    <button class="btn btn-secondary" onclick="setHighlight('#f06', '#007ea7')">Theme 2</button>
-    <button class="btn btn-secondary" onclick="setHighlight('#ffb400', '#d1495b')">Theme 3</button>
+    <h2>Dynamic themes</h2>
+    <button class="btn btn-light" onclick="setHighlight('#d0da6d', '#3a4120')">Green</button>
+    <button class="btn btn-light" onclick="setHighlight('#63c5b6', '#44528a')">Blue</button>
+    <button class="btn btn-light" onclick="setHighlight('#d33279', '#97297a')">Purple</button>
   </div>
 </main>
 <script>
