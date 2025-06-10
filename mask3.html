@@ -9,8 +9,8 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
+--highlight-light: #d0da6d;
+--highlight-dark: #3a4120;
 --p-reg: 2em;
 --p-sm: 1em;
 }
@@ -29,10 +29,12 @@
 	padding: var(--p-sm);
 }
 }
+/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+*/
 .container-hero {
 	display: flex;
 	flex-wrap: wrap;
@@ -103,9 +105,18 @@
 }
 }
 .text-highlight {
-	opacity: 0.7;
-/*	color: var(--highlight-light);*/
+	opacity: 0.7;/*	color: var(--highlight-light);*/
 }
+	.logo {
+		width: 2em;
+		float: left;
+	}
+	.logo-text {
+		width: 10em;
+		height: 2em;
+		border: 1px solid white;
+		
+	}
 .aspect-16-9 {
 	aspect-ratio: 16 / 9;
 }
@@ -121,13 +132,6 @@
 .bg-image {
 	z-index: 1;
 }
-/*
-.mask-image {
-	z-index: 2;
-}
-*/
-	
-	
 .mask-overlay1 {
 	position: absolute;
 	top: 0;
@@ -135,10 +139,10 @@
 	width: 100%;
 	height: 100%;
 	background-color: var(--highlight-dark);
-	-webkit-mask-image: url("images/mask1.png");
+	-webkit-mask-image: url("images/mask1.webp");
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-size: 100% 100%;
-	mask-image: url("images/mask1.png");
+	mask-image: url("images/mask1.webp");
 	mask-repeat: no-repeat;
 	mask-size: 100% 100%;
 	z-index: 2;
@@ -150,14 +154,14 @@
 	width: 100%;
 	height: 100%;
 	background-color: var(--highlight-light);
-	-webkit-mask-image: url("images/mask2.png");
+	-webkit-mask-image: url("images/mask2.webp");
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-size: 100% 100%;
 	;
-	mask-image: url("images/mask2.png");
+	mask-image: url("images/mask2.webp");
 	mask-repeat: no-repeat;
 	mask-size: 100% 100%;
-	z-index: 2;
+	z-index: 3;
 }
 
 /*Responsive behavior: at 80em, hide masks*/
@@ -176,56 +180,31 @@
   <div class="p-responsive">
     <div class="container-hero bck-highlight-dark rounded-2 mb-reg">
       <div class="left-column p-2">
-        <div class="centered white-text text-resize">
-          <h4 class="m-0 text-highlight">Postgraduate taught programme</h4>
+        <div class="centered white-text text-resize"><img src="images/triangle.svg" alt="" class="logo mb-1"/><div class="logo-text"><p>Text</p></div>
+          <h4 class="m-0">Postgraduate taught programme</h4>
           <h1>MSc Global Health</h1>
           <p>Health does not exist in isolation—climate change, inequality, and demographic shifts all shape outcomes globally. From workforce shortages to migration and emerging technologies, global challenges affect every system. Policy, practice, and research must adapt.</p>
           <button class="btn-rounded">Apply now</button>
         </div>
       </div>
       <div class="right-column">
-        <div class="image-stack"> <img src="images/1280x720engineering.webp" width="1280" height="720" alt="" class="bg-image">
+        <div class="image-stack"><img src="images/1280x720globalhealth.webp" width="1280" height="720" alt="" class="bg-image">
           <div class="mask-overlay1"></div>
           <div class="mask-overlay2"></div>
         </div>
       </div>
     </div>
-	 
-	  
-	  
-	  
-<h2>Demo to show different themes</h2>
-  <button class="btn btn-secondary" onclick="setHighlight('#b4c960', '#a80075')">Default Theme</button>
-  <button class="btn btn-secondary" onclick="setHighlight('#f06', '#007ea7')">Blue Theme</button>
-  <button class="btn btn-secondary" onclick="setHighlight('#ffb400', '#d1495b')">Warm Theme</button>
-
-	  
-	  
-	  
-	  
+    <h2>Demo to show different themes</h2>
+    <button class="btn btn-secondary" onclick="setHighlight('#d0da6d', '#3a4120')">Theme 1</button>
+    <button class="btn btn-secondary" onclick="setHighlight('#f06', '#007ea7')">Theme 2</button>
+    <button class="btn btn-secondary" onclick="setHighlight('#ffb400', '#d1495b')">Theme 3</button>
   </div>
 </main>
-	
-	
-	
-	
-	
-	
-	
-	<script>
+<script>
 function setHighlight(light, dark) {
   document.documentElement.style.setProperty('--highlight-light', light);
   document.documentElement.style.setProperty('--highlight-dark', dark);
 }
 </script>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 </body>
 </html>
