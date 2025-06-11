@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #d0da6d;
+--highlight-dark: #3a4120;
+}
+.backgroundimage {
+	background-image: url("images/1920x600babbage.jpg");
+	height: 20em;
+}
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+.centered-child {
+	display: grid;
+	place-items: center;
+}
+.divider {
+	width: 100%;
+	height: 2px;
+	background-color: var(--lgrey);
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-2">
+    <h1>Peer presence UG course feature</h1>
+    <h2>Black text, light block, dark background</h2>
+    <div class="rounded-2 p-2 bck-highlight-dark centered-child black-text mb-reg">
+      <p class="rounded-2 p-1 bck-highlight-light"><span class="iconfont" aria-hidden="true">Ê`</span>8 people are discovering their passion for <a href="#">computer science right now</a></p>
+    </div>
+    <div class="divider mb-reg"></div>
+    <h2>White text, dark block, light background</h2>
+    <div class="rounded-2 p-2 bck-highlight-light centered-child white-text mb-reg">
+      <p class="rounded-2 p-1 bck-highlight-dark"><span class="iconfont" aria-hidden="true">Ê`</span>8 people are discovering their passion for <a href="#">computer science right now</a></p>
+    </div>
+    <div class="divider mb-reg"></div>
+    <h2>Black text, mrfrosty block with stroke, dark background</h2>
+    <div class="rounded-2 p-2 bck-highlight-dark centered-child black-text mb-reg">
+      <p class="rounded-2 p-1 mrfrosty stroke"><span class="iconfont" aria-hidden="true">Ê`</span>8 people are discovering their passion for <a href="#">computer science right now</a></p>
+    </div>
+    <div class="divider mb-reg"></div>
+    <h2>Black text, light block, image background</h2>
+    <div class="rounded-2 p-2 backgroundimage centered-child black-text mb-reg">
+      <p class="rounded-2 p-1 bck-highlight-light"><span class="iconfont" aria-hidden="true">Ê`</span>8 people are discovering their passion for <a href="#">computer science right now</a></p>
+    </div>
+    <div class="divider mb-reg"></div>
+    <h2>White text, dark block, image background</h2>
+    <div class="rounded-2 p-2 backgroundimage centered-child white-text mb-reg">
+      <p class="rounded-2 p-1 bck-highlight-dark"><span class="iconfont" aria-hidden="true">Ê`</span>8 people are discovering their passion for <a href="#">computer science right now</a></p>
+    </div>
+    <div class="divider mb-reg"></div>
+    <h2>Black text, mrfrosty block with stroke, image background</h2>
+    <div class="rounded-2 p-2 backgroundimage centered-child black-text mb-reg">
+      <p class="rounded-2 p-1 mrfrosty stroke"><span class="iconfont" aria-hidden="true">Ê`</span>8 people are discovering their passion for <a href="#">computer science right now</a></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
