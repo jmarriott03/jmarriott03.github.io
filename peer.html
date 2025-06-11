@@ -9,76 +9,86 @@
 <title>University of Plymouth</title>
 <style>
 :root {
-  --highlight-light: #b4c960;
-  --highlight-dark: #a80075;
-  --p-reg: 2em;
-  --p-sm: 1em;
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+--p-reg: 2em;
+--p-sm: 1em;
 }
 .bck-highlight-light {
-  background-color: var(--highlight-light);
+	background-color: var(--highlight-light);
 }
 .p-responsive {
-  padding: var(--p-reg);
+	padding: var(--p-reg);
 }
+
 @media (max-width: 40em) {
-  .p-responsive {
-    padding: var(--p-sm);
-  }
+.p-responsive {
+	padding: var(--p-sm);
+}
 }
 section {
-  max-width: 60em;
-  overflow: hidden;
+	max-width: 60em;
+	overflow: hidden;
 }
 .container {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 .typerwriter-fade-in {
-  display: inline;
-  text-align: left;
-  line-height: 1.5;
-  white-space: normal;
+	display: inline;
+	text-align: left;
+	line-height: 1.5;
+	white-space: normal;
 }
 .typerwriter-fade-in .letter {
-  display: inline;
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
+	display: inline;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
 }
 .typerwriter-fade-in .letter.visible {
-  opacity: 1;
+	opacity: 1;
 }
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 1em 1em 0 0;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 1em 1em 0 0;
 }
 .fullw {
-  width: 100%;
-  overflow: hidden;
+	width: 100%;
+	overflow: hidden;
 }
 .bounce {
-  display: inline-block;
-  position: relative;
-  animation: bounceY 2s ease 1;
+	display: inline-block;
+	position: relative;
+	animation: bounceY 2s ease 1;
 }
 @keyframes bounceY {
-  0%, 40%, 80%, 100% { top: 0; }
-  20%, 60%, 90% { top: -20px; }
+0%, 40%, 80%, 100% {
+top: 0;
 }
+20%, 60%, 90% {
+top: -20px;
+}
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .bounce { animation: none !important; }
-  .typerwriter-fade-in .letter {
-    transition: none !important;
-    opacity: 1 !important;
-  }
+.bounce {
+	animation: none !important;
 }
-.simulate-reduced-motion .bounce { animation: none !important; }
+.typerwriter-fade-in .letter {
+	transition: none !important;
+	opacity: 1 !important;
+}
+}
+.simulate-reduced-motion .bounce {
+	animation: none !important;
+}
 .simulate-reduced-motion .typerwriter-fade-in .letter {
-  transition: none !important;
-  opacity: 1 !important;
+	transition: none !important;
+	opacity: 1 !important;
 }
 </style>
 </head>
@@ -88,13 +98,11 @@ button {
     <h1>peer</h1>
     <p><span class="bounce iconfont largetext3">#</span> Keep scrolling down to trigger peer presence UG course feature demo.</p>
   </section>
-
   <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
-
   <section class="p-responsive">
     <div class="container mb-reg">
-      <p id="messageContainer" class="rounded-2 p-1 bck-highlight-light">
-        <!-- Content gets injected dynamically here -->
+      <p id="messageContainer" class="rounded-2 p-1 bck-highlight-light"> 
+        <!-- Content gets injected dynamically here --> 
       </p>
     </div>
     <div class="fullw">
@@ -103,16 +111,15 @@ button {
     </div>
   </section>
 </main>
-
 <script>
 let simulateReducedMotion = false;
 let currentMessageIndex = 0;
 
 const messages = [
   `<span class="iconfont" aria-hidden="true">Ê</span><span class="iconfont" aria-hidden="true">\`</span><span class="typerwriter-fade-in">8 people are discovering their passion for computer science right now</span>`,
-  `<span class="iconfont" aria-hidden="true">ø</span><span class="iconfont" aria-hidden="true">a</span><span class="typerwriter-fade-in">12 other future engineers are exploring this course today</span>`,
-  `<span class="iconfont" aria-hidden="true">÷</span><span class="iconfont" aria-hidden="true">f</span><span class="typerwriter-fade-in">15 curious minds have visited this page in the last hour</span>`,
-  `<span class="iconfont" aria-hidden="true">µ</span><span class="iconfont" aria-hidden="true">b</span><span class="typerwriter-fade-in">6 aspiring developers are considering this journey today</span>`
+  `<span class="iconfont" aria-hidden="true">Ê</span><span class="iconfont" aria-hidden="true">À</span><span class="typerwriter-fade-in">12 other future engineers are exploring this course today</span>`,
+  `<span class="iconfont" aria-hidden="true">Ê</span><span class="iconfont" aria-hidden="true">x</span><span class="typerwriter-fade-in">15 curious minds have visited this page in the last hour</span>`,
+  `<span class="iconfont" aria-hidden="true">Ê</span><span class="iconfont" aria-hidden="true">?</span><span class="typerwriter-fade-in">6 aspiring developers are considering this journey today</span>`
 ];
 
 function prefersReducedMotionEnabled() {
@@ -198,7 +205,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
-
 </body>
 </html>
