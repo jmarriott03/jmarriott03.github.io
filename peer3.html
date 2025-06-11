@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+  --highlight-light: #b4c960;
+  --highlight-dark: #a80075;
+  --p-reg: 2em;
+  --p-sm: 1em;
+}
+.bck-highlight-light {
+  background-color: var(--highlight-light);
+}
+.p-responsive {
+  padding: var(--p-reg);
+}
+@media (max-width: 40em) {
+  .p-responsive {
+    padding: var(--p-sm);
+  }
+}
+section {
+  max-width: 60em;
+  overflow: hidden;
+}
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.typerwriter-fade-in {
+  display: inline;
+  text-align: left;
+  line-height: 1.5;
+  white-space: normal;
+}
+.typerwriter-fade-in .letter {
+  display: inline;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.typerwriter-fade-in .letter.visible {
+  opacity: 1;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 1em 1em 0 0;
+}
+.fullw {
+  width: 100%;
+  overflow: hidden;
+}
+.bounce {
+  display: inline-block;
+  position: relative;
+  animation: bounceY 2s ease 1;
+}
+@keyframes bounceY {
+  0%, 40%, 80%, 100% { top: 0; }
+  20%, 60%, 90% { top: -20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bounce { animation: none !important; }
+  .typerwriter-fade-in .letter {
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
+.simulate-reduced-motion .bounce { animation: none !important; }
+.simulate-reduced-motion .typerwriter-fade-in .letter {
+  transition: none !important;
+  opacity: 1 !important;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <h1>peer</h1>
+    <p><span class="bounce iconfont largetext3">#</span> Keep scrolling down to trigger peer presence UG course feature demo.</p>
+  </section>
+
+  <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="">
+
+  <section class="p-responsive">
+    <div class="container mb-reg">
+      <p id="messageContainer" class="rounded-2 p-1 bck-highlight-light">
+        <!-- Content gets injected dynamically here -->
+      </p>
+    </div>
+    <div class="fullw">
+      <button id="resetBtn" class="btn btn-primary">Reset animation</button>
+      <button id="toggleMotionBtn" class="btn btn-secondary">Toggle Reduced Motion (Off)</button>
+    </div>
+  </section>
+</main>
+
+<script>
+let simulateReducedMotion = false;
+let currentMessageIndex = 0;
+
+const messages = [
+  `<span class="iconfont" aria-hidden="true">Ê</span><span class="iconfont" aria-hidden="true">\`</span><span class="typerwriter-fade-in">8 people are discovering their passion for computer science right now</span>`,
+  `<span class="iconfont" aria-hidden="true">ø</span><span class="iconfont" aria-hidden="true">a</span><span class="typerwriter-fade-in">12 learners just joined an online AI workshop</span>`,
+  `<span class="iconfont" aria-hidden="true">÷</span><span class="iconfont" aria-hidden="true">f</span><span class="typerwriter-fade-in">6 students are exploring game development today</span>`,
+  `<span class="iconfont" aria-hidden="true">µ</span><span class="iconfont" aria-hidden="true">b</span><span class="typerwriter-fade-in">10 users just submitted their final project</span>`
+];
+
+function prefersReducedMotionEnabled() {
+  return simulateReducedMotion || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function wrapLetters(el) {
+  const text = el.textContent;
+  el.innerHTML = '';
+  [...text].forEach(letter => {
+    const span = document.createElement('span');
+    span.classList.add('letter');
+    span.setAttribute('aria-hidden', 'true');
+    span.textContent = letter;
+    el.appendChild(span);
+  });
+}
+
+function applyTypewriterAnimation(el) {
+  const letters = el.querySelectorAll(".letter");
+  if (prefersReducedMotionEnabled()) {
+    letters.forEach(letter => letter.classList.add("visible"));
+  } else {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          letters.forEach((letter, index) => {
+            setTimeout(() => {
+              letter.classList.add("visible");
+            }, index * 30);
+          });
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(el);
+  }
+}
+
+function setMessage(msgHTML) {
+  const container = document.getElementById("messageContainer");
+  container.innerHTML = msgHTML;
+
+  const typer = container.querySelector(".typerwriter-fade-in");
+  if (typer) {
+    wrapLetters(typer);
+    applyTypewriterAnimation(typer);
+  }
+}
+
+function updateMessage() {
+  const message = messages[currentMessageIndex];
+  setMessage(message);
+  currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+}
+
+function resetAnimation() {
+  const bounceEl = document.querySelector(".bounce");
+  if (bounceEl && !prefersReducedMotionEnabled()) {
+    bounceEl.classList.remove("bounce");
+    void bounceEl.offsetWidth;
+    bounceEl.classList.add("bounce");
+  }
+
+  window.scrollTo({ top: 0, behavior: prefersReducedMotionEnabled() ? 'auto' : 'smooth' });
+
+  setTimeout(() => {
+    updateMessage();
+  }, 600);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateMessage(); // show first message on page load
+
+  document.getElementById("resetBtn").addEventListener("click", resetAnimation);
+
+  document.getElementById("toggleMotionBtn").addEventListener("click", () => {
+    simulateReducedMotion = !simulateReducedMotion;
+    document.body.classList.toggle("simulate-reduced-motion", simulateReducedMotion);
+    document.getElementById("toggleMotionBtn").textContent =
+      `Toggle Reduced Motion (${simulateReducedMotion ? "On" : "Off"})`;
+    resetAnimation();
+  });
+});
+</script>
+
+
+</body>
+</html>
