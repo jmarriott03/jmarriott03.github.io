@@ -70,6 +70,23 @@ section :last-child {
 .h-30 {
 	min-height: 30em;
 }
+.typerwriter-fade-in {
+  display: inline;
+  text-align: left;
+  white-space: normal;
+}
+.typerwriter-fade-in .letter {
+  display: inline;  /* instead of inline-block */
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.typerwriter-fade-in .letter.visible {
+  opacity: 1;
+}
+.simulate-reduced-motion .typerwriter-fade-in .letter {
+  transition: none !important;
+  opacity: 1 !important;
+}
 </style>
 </head>
 <body>
@@ -92,58 +109,68 @@ section :last-child {
   </div>
   <section class="p-2">
     <button class="btn btn-primary" onclick="replay()" type="button">Replay</button>
-    <button id="motion-toggle" class="btn btn-secondary" type="button">Toggle reduced motion (off)</button>
+    <button id="toggleMotionBtn" class="btn btn-secondary">Toggle Reduced Motion (Off)</button>
   </section>
 </main>
 <script>
   const text = "Hi there! Are you interested in one of our courses?";
   const textBox = document.getElementById("text-box");
   const mouth = document.getElementById("mouth");
-  const motionToggle = document.getElementById("motion-toggle");
+  const toggleMotionBtn = document.getElementById("toggleMotionBtn");
 
-  let i = 0;
-  let typing = false;
-  let prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let simulateReducedMotion = false;
 
-  function typeWriter() {
-    if (i < text.length) {
-      const currentChar = text.charAt(i);
-      textBox.innerHTML += currentChar;
+  function prefersReducedMotionEnabled() {
+    return simulateReducedMotion || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
 
-      if (!prefersReducedMotion) {
-        mouth.src = currentChar === ' ' ? 'images/pelican-close.webp' : 'images/pelican-open.webp';
-      }
+  function wrapLetters(el) {
+    const text = el.textContent;
+    el.innerHTML = '';
+    [...text].forEach(letter => {
+      const span = document.createElement('span');
+      span.classList.add('letter');
+      span.textContent = letter;
+      el.appendChild(span);
+    });
+  }
 
-      i++;
-      setTimeout(typeWriter, 75);
+  function applyTypewriterAnimation(el) {
+    const letters = el.querySelectorAll(".letter");
+    if (prefersReducedMotionEnabled()) {
+      letters.forEach(letter => letter.classList.add("visible"));
+      mouth.src = 'images/pelican-close.webp';
     } else {
-      if (!prefersReducedMotion) {
-        mouth.src = 'images/pelican-close.webp';
-      }
-      typing = false;
+      letters.forEach((letter, index) => {
+        setTimeout(() => {
+          letter.classList.add("visible");
+
+          // Animate mouth while typing
+          mouth.src = letter.textContent === ' ' ? 'images/pelican-close.webp' : 'images/pelican-open.webp';
+
+          if (index === letters.length - 1) {
+            mouth.src = 'images/pelican-close.webp';
+          }
+        }, index * 50);
+      });
     }
   }
 
   function replay() {
-    if (typing) return;
-    i = 0;
-    textBox.innerHTML = "";
-    if (!prefersReducedMotion) {
-      mouth.src = 'images/mouth-close.webp';
-      typing = true;
-      typeWriter();
-    } else {
-      textBox.innerHTML = text;
-    }
+    textBox.innerHTML = `<span class="typerwriter-fade-in">${text}</span>`;
+    const typer = textBox.querySelector('.typerwriter-fade-in');
+    wrapLetters(typer);
+    applyTypewriterAnimation(typer);
   }
 
-  motionToggle.addEventListener("click", () => {
-    prefersReducedMotion = !prefersReducedMotion;
-    motionToggle.textContent = prefersReducedMotion ? "Toggle reduced motion (on)" : "Toggle reduced motion (off)";
-    replay(); // Restart chat to reflect change
+  toggleMotionBtn.addEventListener('click', () => {
+    simulateReducedMotion = !simulateReducedMotion;
+    document.body.classList.toggle('simulate-reduced-motion', simulateReducedMotion);
+    toggleMotionBtn.textContent = `Toggle Reduced Motion (${simulateReducedMotion ? "On" : "Off"})`;
+    replay();
   });
 
-  // Initial playback
+  // Initial render
   replay();
 </script>
 </body>
