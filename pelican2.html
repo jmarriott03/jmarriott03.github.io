@@ -78,7 +78,7 @@ section :last-child {
     <div class="div1"><img src="images/1920x600babbage.jpg" alt="" class="h-30"></div>
     <div class="div2 centered p-2">
       <section class="rounded-1 mrfrosty p-1 shadow pelican-container" aria-labelledby="chat-title">
-        <div class="profile"> <img id="mouth" class="mouth-img" src="images/close.jpg" alt="Pelican chatbot mouth animation">
+        <div class="profile"><img id="mouth" class="mouth-img" src="images/close.jpg" alt="Pelican chatbot mouth animation" aria-hidden="true">
           <div class="profile-text">
             <p id="chat-title"><strong>PlymBot Pelican</strong><br>
               <span class="smalltext">Response time: right now</span> </p>
@@ -92,50 +92,59 @@ section :last-child {
   </div>
   <section class="p-2">
     <button class="btn btn-primary" onclick="replay()" type="button">Replay</button>
+    <button id="motion-toggle" class="btn btn-secondary" type="button">Toggle reduced motion (off)</button>
   </section>
 </main>
 <script>
-    const text = "Hi there! Are you interested in one of our courses?";
-    const textBox = document.getElementById("text-box");
-    const mouth = document.getElementById("mouth");
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const text = "Hi there! Are you interested in one of our courses?";
+  const textBox = document.getElementById("text-box");
+  const mouth = document.getElementById("mouth");
+  const motionToggle = document.getElementById("motion-toggle");
 
-    let i = 0;
-    let typing = false;
+  let i = 0;
+  let typing = false;
+  let prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function typeWriter() {
-      if (i < text.length) {
-        const currentChar = text.charAt(i);
-        textBox.innerHTML += currentChar;
-
-        // Open for letters, close for space
-        mouth.src = currentChar === ' ' ? 'images/pelican-close.webp' : 'images/pelican-open.webp';
-
-        i++;
-        setTimeout(typeWriter, 75);
-      } else {
-        mouth.src = 'images/pelican-close.webp';
-        typing = false;
-      }
-    }
-
-    function replay() {
-      if (typing) return;
-      i = 0;
-      textBox.innerHTML = "";
-      mouth.src = 'images/mouth-close.webp';
-      typing = true;
+  function typeWriter() {
+    if (i < text.length) {
+      const currentChar = text.charAt(i);
+      textBox.innerHTML += currentChar;
 
       if (!prefersReducedMotion) {
-        typeWriter();
-      } else {
-        // Just show text immediately if motion is reduced
-        textBox.innerHTML = text;
+        mouth.src = currentChar === ' ' ? 'images/pelican-close.webp' : 'images/pelican-open.webp';
       }
-    }
 
-    // Start initial typing
-    replay();
-  </script>
+      i++;
+      setTimeout(typeWriter, 75);
+    } else {
+      if (!prefersReducedMotion) {
+        mouth.src = 'images/pelican-close.webp';
+      }
+      typing = false;
+    }
+  }
+
+  function replay() {
+    if (typing) return;
+    i = 0;
+    textBox.innerHTML = "";
+    if (!prefersReducedMotion) {
+      mouth.src = 'images/mouth-close.webp';
+      typing = true;
+      typeWriter();
+    } else {
+      textBox.innerHTML = text;
+    }
+  }
+
+  motionToggle.addEventListener("click", () => {
+    prefersReducedMotion = !prefersReducedMotion;
+    motionToggle.textContent = prefersReducedMotion ? "Toggle reduced motion (on)" : "Toggle reduced motion (off)";
+    replay(); // Restart chat to reflect change
+  });
+
+  // Initial playback
+  replay();
+</script>
 </body>
 </html>
