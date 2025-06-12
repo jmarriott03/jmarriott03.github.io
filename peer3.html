@@ -97,7 +97,7 @@ top: -20px;
     </div>
     <div class="fullw">
       <button id="resetBtn" class="btn btn-primary">Reset animation</button>
-      <button id="toggleMotionBtn" class="btn btn-secondary">Toggle Reduced Motion (Off)</button>
+      <button id="toggleMotionBtn" class="btn btn-secondary">Toggle reduced motion (off)</button>
     </div>
   </section>
 </main>
@@ -175,7 +175,7 @@ top: -20px;
       simulateReducedMotion = !simulateReducedMotion;
       document.body.classList.toggle("simulate-reduced-motion", simulateReducedMotion);
       document.getElementById("toggleMotionBtn").textContent =
-        `Toggle Reduced Motion (${simulateReducedMotion ? "On" : "Off"})`;
+        `Toggle reduced motion (${simulateReducedMotion ? "on" : "off"})`;
       resetAnimation();
     });
   });
