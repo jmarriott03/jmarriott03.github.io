@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+.backgroundimage {
+	background-image: url("images/1920x1080babbage.webp");
+}
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-left: 0;
+	margin-bottom: 1em;
+}
+.profile :last-child {
+	margin-bottom: 0;
+}
+.profile img {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+}
+.profile-text {
+	flex: 1;
+}
+.pelican-container {
+	width: 19em;
+}
+.fullw {
+	width: 100%;
+}
+.aspect-16-9 {
+	aspect-ratio: 16 / 9;
+}
+.parent {
+	display: grid;
+}
+.div1 {
+	grid-area: 1 / 1 / 2 / 4;
+}
+.div2 {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.btn-rounded {
+	border-radius: 1.5em;
+}
+.h-30 {
+	min-height: 30em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="parent">
+    <div class="div1"><img src="images/1920x600babbage.jpg" alt="" class="h-30"></div>
+    <div class="div2 centered p-2">
+      <section class="rounded-1 mrfrosty p-1 shadow pelican-container" aria-labelledby="chat-title">
+        <div class="profile"> <img id="mouth" class="mouth-img" src="images/close.jpg" alt="Pelican chatbot mouth animation">
+          <div class="profile-text">
+            <p id="chat-title"><strong>PlymBot Pelican</strong><br>
+              <span class="smalltext">Response time: right now</span> </p>
+          </div>
+        </div>
+        <div class="text-box largetext mb-1" id="text-box" aria-live="polite" role="status"></div>
+        <button class="btn btn-primary fullw" type="button">Yes, I want to study at Plymouth</button>
+        <button class="btn btn-secondary fullw" type="button">Actually, I want something else</button>
+      </section>
+    </div>
+  </div>
+  <section class="p-2">
+    <button class="btn btn-primary" onclick="replay()" type="button">Replay</button>
+  </section>
+</main>
+<script>
+    const text = "Hi there! Are you interested in one of our courses?";
+    const textBox = document.getElementById("text-box");
+    const mouth = document.getElementById("mouth");
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let i = 0;
+    let typing = false;
+
+    function typeWriter() {
+      if (i < text.length) {
+        const currentChar = text.charAt(i);
+        textBox.innerHTML += currentChar;
+
+        // Open for letters, close for space
+        mouth.src = currentChar === ' ' ? 'images/pelican-close.webp' : 'images/pelican-open.webp';
+
+        i++;
+        setTimeout(typeWriter, 75);
+      } else {
+        mouth.src = 'images/pelican-close.webp';
+        typing = false;
+      }
+    }
+
+    function replay() {
+      if (typing) return;
+      i = 0;
+      textBox.innerHTML = "";
+      mouth.src = 'images/mouth-close.webp';
+      typing = true;
+
+      if (!prefersReducedMotion) {
+        typeWriter();
+      } else {
+        // Just show text immediately if motion is reduced
+        textBox.innerHTML = text;
+      }
+    }
+
+    // Start initial typing
+    replay();
+  </script>
+</body>
+</html>
