@@ -4,14 +4,14 @@
   <defs>
     <style>
       .st0 {
-        fill: #fff;
+        fill: #06c;
       }
 
       .st1 {
-        fill: #06c;
+        fill: #fff;
       }
     </style>
   </defs>
-  <rect class="st1" width="283.46" height="283.46"/>
-  <path class="st0" d="M56.69,56.69h170.08v35.43H56.69v-35.43ZM56.69,124.01h170.08v35.43H56.69v-35.43ZM56.69,191.34h170.08v35.43H56.69v-35.43Z"/>
+  <rect class="st0" x="0" y="0" width="283.46" height="283.46"/>
+  <path class="st1" d="M70.86,70.86h141.73v29.53H70.86v-29.53ZM70.86,126.97h141.73v29.53H70.86v-29.53ZM70.86,183.07h141.73v29.53H70.86v-29.53Z"/>
 </svg>
