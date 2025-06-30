@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #d0da6d;
+--highlight-medium: #54b848;
+--highlight-dark: #3a4120;
+--p-reg: 2em;
+--p-sm: 1em;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+.p-responsive {
+	padding: var(--p-reg);
+}
+
+@media (max-width: 40em) {
+.p-responsive {
+	padding: var(--p-sm);
+}
+}
+.px-responsive {
+	padding: 0 var(--p-reg);
+}
+
+@media (max-width: 40em) {
+.px-responsive {
+	padding: 0 var(--p-sm);
+}
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.staffquote {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-left: 0;
+	margin-bottom: 1em;
+}
+.staffquote :last-child {
+	margin-bottom: 0;
+}
+.staffquote {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin: 0; /* Remove default bottom margin */
+	flex: 0 0 auto; /* Prevent stretching */
+}
+.staffquote img {
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+}
+.staffquote-text {
+	flex: 1;
+}
+.ml-0-5 {
+	margin-left: 0.5em;
+}
+.nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1em;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@media (max-width: 40em) {
+.nav {
+	flex-direction: column;
+	align-items: flex-start;
+}
+}
+.nav-logo {
+	width: 100%;
+	height: 2em;
+}
+.nav-logo img {
+	width: auto;
+}
+.container-hero {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+/* Use CSS variables to manage layout widths */
+.container-hero {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+	width: var(--left-width);
+}
+.right-column {
+	width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+	width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+	width: 100%;
+}
+}
+.btn-rounded {
+	color: currentColor;
+	border: 2px solid currentColor;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.black-text .btn-rounded:hover, .black-text .btn-rounded:focus {
+	cursor: pointer;
+	color: var(--white);
+	background-color: var(--black);
+}
+.white-text .btn-rounded:hover, .white-text .btn-rounded:focus {
+	cursor: pointer;
+	color: var(--black);
+	background-color: var(--white);
+}
+.text-resize .btn-rounded {
+	font-size: 1.25rem;
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.text-resize .btn-rounded {
+	font-size: 1rem;
+}
+}
+.text-highlight {
+	opacity: 0.7;/*	color: var(--highlight-light);*/
+}
+.aspect-16-9 {
+	aspect-ratio: 16 / 9;
+}
+.image-stack {
+	position: relative;
+	height: 100%;
+}
+.image-stack img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.bg-image {
+	z-index: 1;
+}
+.mask-overlay1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--highlight-light);
+	-webkit-mask-image: url("images/mask1.webp");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-image: url("images/mask1.webp");
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	z-index: 2;
+}
+/*
+.mask-overlay2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--highlight-light);
+	-webkit-mask-image: url("images/mask2.webp");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-image: url("images/mask2.webp");
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	z-index: 3;
+}
+*/
+.mask-overlay2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, var(--highlight-medium), var(--highlight-dark));
+	-webkit-mask-image: url("images/mask2.webp");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-image: url("images/mask2.webp");
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	z-index: 2;
+}
+
+/*Responsive behavior: at 80em, hide mask*/
+@media (max-width: 60em) {
+.mask-overlay1 {
+	display: none;
+}
+.image-stack {
+	aspect-ratio: 16 / 9;
+}
+}
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.logo {
+	width: 3em;
+	display: block;
+	margin: 0;
+}
+summary {
+	cursor: pointer;
+	padding: 0.5em;
+	transition: background-color 0.3s ease;
+}
+summary > * {
+	display: inline;
+}
+summary:hover {
+	background-color: var(--lgrey);
+}
+details {
+	margin: 0;
+	border-bottom: 1px solid var(--mgrey);
+}
+details > p {
+	margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
+	transition: transform 0.3s ease;
+}
+details[open] > summary::before {
+	transform: rotate(180deg);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80">
+    <div class="nav p-responsive">
+      <div class="nav-logo"><img src="images/uoplogo.svg" alt=""></div>
+      <div class="staffquote"><img src="images/nav-search.svg" width="256" height="256" alt="" aria-hidden="true">
+        <div class="staffquote-text">
+          <p>Search<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
+        </div>
+      </div>
+      <div class="staffquote"><img src="images/nav-menu.svg" width="256" height="256" alt="" aria-hidden="true">
+        <div class="staffquote-text">
+          <p>Menu<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
+        </div>
+      </div>
+      <div class="staffquote"><img src="images/nav-login.svg" width="256" height="256" alt="" aria-hidden="true">
+        <div class="staffquote-text">
+          <p>Log in<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="w-80 px-responsive">
+      <p class="m-0"><a href="#">Home</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><a href="#">Courses</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><strong>MSc Global Health</strong></p>
+    </div>
+  <div class="p-responsive">
+    <div class="container-hero bck-highlight-light rounded-2 mb-reg">
+      <div class="left-column p-2">
+        <div class="centered black-text">
+          <div class="logo-wrapper mb-reg"><img src="images/online-programmes-mono-black320x320.webp" alt="" class="logo mb-1">
+            <div class="logo-text">
+              <p><strong>Online</strong> programmes</p>
+            </div>
+          </div>
+          <!--          <h4 class="m-0">Postgraduate taught programme</h4>-->
+          <div class="text-resize">
+            <h1>MSc Global Health</h1>
+            <p>Health does not exist in isolation. Climate change, inequality, and demographic shifts all shape outcomes globally. From workforce shortages to migration and emerging technologies, global challenges affect every system. Policy, practice, and research must adapt</p>
+            <button class="btn-rounded">Apply now</button>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="image-stack"><img src="images/1280x720globalhealth.webp" width="1280" height="720" alt="" class="bg-image">
+          <div class="mask-overlay1"></div>
+          <div class="mask-overlay2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 px-responsive mb-reg">
+    <details>
+      <summary>
+        <h2>Careers with this subject</h2>
+      </summary>
+      <p>Details 1</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Key features</h2>
+      </summary>
+      <p>Details 2</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Course details</h2>
+      </summary>
+      <p>Details 3</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Entry requirements</h2>
+      </summary>
+      <p>Details 4</p>
+    </details>
+    <details>
+      <summary>
+        <h2>Fees, costs and funding</h2>
+      </summary>
+      <p>Details 5</p>
+    </details>
+    <details>
+      <summary>
+        <h2>How to apply</h2>
+      </summary>
+      <p>Details 6</p>
+    </details>
+  </div>
+</main>
+</body>
+</html>
