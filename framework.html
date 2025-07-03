@@ -19,47 +19,47 @@
 }
 */
 .backgroundimage {
-    background-image: url("images/1920x600babbage.jpg");
+	background-image: url("images/1920x600babbage.jpg");
 }
 .bck-highlight-light {
-    background-color: var(--highlight-light);
+	background-color: var(--highlight-light);
 }
 .bck-highlight-dark {
-    background-color: var(--highlight-dark);
+	background-color: var(--highlight-dark);
 }
 section {
-    max-width: 60em;
-    overflow: hidden;
+	max-width: 60em;
+	overflow: hidden;
 }
 section :last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 summary {
-    cursor: pointer;
-    padding: 0.5em;
+	cursor: pointer;
+	padding: 0.5em;
 }
 details {
-    margin: 0;
-    border-bottom: 1px solid #CCC;
+	margin: 0;
+	border-bottom: 1px solid #CCC;
 }
 summary > * {
-    display: inline;
+	display: inline;
 }
 details > p {
-    margin: 0.5em;
+	margin: 0.5em;
 }
 details summary::-webkit-details-marker, details summary::marker {
 display: none;
 content: "";
 }
 details > summary::before {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    content: 'O';
-    float: right;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
 }
 details[open] > summary::before {
-    content: "M";
+	content: "M";
 }
 </style>
 </head>
@@ -190,6 +190,32 @@ details[open] > summary::before {
       <strong>.my-2</strong> {margin-top: 2em; margin-bottom: 2em;}<br>
       <strong>.mb-reg</strong> {margin-bottom: 1.5em;}<br>
       <strong>.pb-reg</strong> {padding-bottom: 1.5em;}</p>
+    <div class="m-responsive">
+      <div class="bck-lgrey">
+        <h2>m-responsive</h2>
+      </div>
+    </div>
+    <div class="p-responsive bck-lgrey mb-reg">
+      <h2>p-responsive</h2>
+    </div>
+    <div class="px-responsive bck-lgrey mb-reg">
+      <h2>px-responsive</h2>
+    </div>
+    <div class="py-responsive bck-lgrey mb-reg">
+      <h2>py-responsive</h2>
+    </div>
+    <div class="pt-responsive bck-lgrey mb-reg">
+      <h2>pt-responsive</h2>
+    </div>
+    <div class="pr-responsive bck-lgrey mb-reg">
+      <h2>pr-responsive</h2>
+    </div>
+    <div class="pb-responsive bck-lgrey mb-reg">
+      <h2>pb-responsive</h2>
+    </div>
+    <div class="pl-responsive bck-lgrey">
+      <h2>pl-responsive</h2>
+    </div>
   </section>
 </main>
 </body>
