@@ -1,136 +1,170 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Author: Jamie Marriott">
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link rel="stylesheet" href="css/plymouth_reset.css">
-<link rel="stylesheet" href="css/plymouth_framework.css">
-<title>University of Plymouth</title>
-<style>
-:root {
---highlight-light: #e5edc9;
---highlight-dark: #677c1d;
-}
-.bck-highlight-light {
-	background-color: var(--highlight-light);
-}
-.bck-highlight-dark {
-	background-color: var(--highlight-dark);
-}
-section {
-	max-width: 60em;
-	overflow: hidden;
-}
-section :last-child {
-	margin-bottom: 0;
-}
-.day-option {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	border: none;
-	background: none;
-	width: 100%;
-	text-align: left;
-	margin-bottom: 1em;
-}
-.day-option:hover, .day-option:focus {
-	background-color: var(--lgrey);
-	outline: none;
-}
-.day-option.selected {
-	background-color: var(--highlight-light);
-}
-.day-option:focus-visible {
-outline: 2px solid var(--link);
-outline-offset: 2px;
-}
-.day-content {
-	flex: 1;
-}
-.day-icon {
-	flex-shrink: 0;
-	margin-left: 1rem;
-	font-size: 3em;
-	color: var(--highlight-dark);
-	font-family: 'icon', sans-serif;
-	font-weight: normal;
-	line-height: 0;
-	text-align: right;
-	display: none;
-	margin: 0.125em 0 0 0;
-}
-.day-option.selected .day-icon {
-	display: block;
-}
-button:disabled, button:disabled:hover {
-	background-color: var(--mgrey);
-	cursor: not-allowed;
-}
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
-}
-.day-option h3 {
-	font-size: 1.125rem;
-	line-height: 1.2;
-	font-weight: bold;
-	margin: 0;
-}
-.day-option p {
-	font-size: 1rem;
-	line-height: 1.5;
-	margin: 0;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="description" content="Author: Jamie Marriott">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <link rel="stylesheet" href="css/plymouth_reset.css">
+  <link rel="stylesheet" href="css/plymouth_framework.css">
+  <title>University of Plymouth</title>
+  <style>
+    :root {
+      --highlight-light: #e5edc9;
+      --highlight-dark: #677c1d;
+    }
+
+    .bck-highlight-light {
+      background-color: var(--highlight-light);
+    }
+
+    .bck-highlight-dark {
+      background-color: var(--highlight-dark);
+    }
+
+    section {
+      max-width: 60em;
+      overflow: hidden;
+    }
+
+    section :last-child {
+      margin-bottom: 0;
+    }
+
+    .day-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      padding: 1em;
+      color: var(--black);
+      -webkit-appearance: none;
+    }
+
+    /* Fix iOS Safari blue text */
+    .day-option :not(.day-icon) {
+      color: var(--black);
+      -webkit-text-fill-color: var(--black);
+      text-decoration: none;
+    }
+
+    .day-option:hover,
+    .day-option:focus {
+      background-color: var(--lgrey);
+      outline: none;
+    }
+
+    .day-option.selected {
+      background-color: var(--highlight-light);
+    }
+
+    .day-option:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 2px;
+    }
+
+    .day-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .day-heading {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .day-description {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .day-icon {
+      flex-shrink: 0;
+      margin-left: 1rem;
+      font-size: 3em;
+      color: var(--highlight-dark);
+      font-family: 'icon', sans-serif;
+      font-weight: normal;
+      line-height: 0;
+      text-align: right;
+      display: none;
+      margin: 0.125em 0 0 0;
+    }
+
+    .day-option.selected .day-icon {
+      display: block;
+    }
+
+    button:disabled,
+    button:disabled:hover {
+      background-color: var(--mgrey);
+      cursor: not-allowed;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 <main>
   <section class="p-responsive">
     <h2 class="m-0">Join us for an undergraduate open day</h2>
     <p>Pick a date that works for you.</p>
+
     <div id="aria-status" class="sr-only" role="status" aria-live="polite"></div>
-    <button class="day-option rounded-0-5 stroke p-1 mb-1" data-date="Saturday 21 June 2025" aria-pressed="false">
-    <div class="day-content">
-      <h3 class="m-0">Saturday 21 June 2025</h3>
-      <p>Undergraduate Open Day</p>
-    </div>
-    <div class="day-icon"><span aria-hidden="true">H</span></div>
+
+    <button class="day-option rounded-0-5 stroke mb-1" data-date="Saturday 21 June 2025" aria-pressed="false">
+      <span class="day-content">
+        <span class="day-heading">Saturday 21 June 2025</span>
+        <span class="day-description">Undergraduate Open Day</span>
+      </span>
+      <span class="day-icon">H</span>
     </button>
-    <button class="day-option rounded-0-5 stroke p-1 mb-1" data-date="Saturday 27 September 2025" aria-pressed="false">
-    <div class="day-content">
-      <h3 class="m-0">Saturday 27 September 2025</h3>
-      <p>Undergraduate Open Day</p>
-    </div>
-    <div class="day-icon"><span aria-hidden="true">H</span></div>
+
+    <button class="day-option rounded-0-5 stroke mb-1" data-date="Saturday 27 September 2025" aria-pressed="false">
+      <span class="day-content">
+        <span class="day-heading">Saturday 27 September 2025</span>
+        <span class="day-description">Undergraduate Open Day</span>
+      </span>
+      <span class="day-icon">H</span>
     </button>
-    <button class="day-option rounded-0-5 stroke p-1 mb-1" data-date="Saturday 18 October 2025" aria-pressed="false">
-    <div class="day-content">
-      <h3 class="m-0">Saturday 18 October 2025</h3>
-      <p>Undergraduate Open Day</p>
-    </div>
-    <div class="day-icon"><span aria-hidden="true">H</span></div>
+
+    <button class="day-option rounded-0-5 stroke mb-1" data-date="Saturday 18 October 2025" aria-pressed="false">
+      <span class="day-content">
+        <span class="day-heading">Saturday 18 October 2025</span>
+        <span class="day-description">Undergraduate Open Day</span>
+      </span>
+      <span class="day-icon">H</span>
     </button>
-    <button class="day-option rounded-0-5 stroke p-1 mb-1" data-date="Saturday 15 November 2025" aria-pressed="false">
-    <div class="day-content">
-      <h3 class="m-0">Saturday 15 November 2025</h3>
-      <p>Undergraduate Open Day</p>
-    </div>
-    <div class="day-icon"><span aria-hidden="true">H</span></div>
+
+    <button class="day-option rounded-0-5 stroke mb-1" data-date="Saturday 15 November 2025" aria-pressed="false">
+      <span class="day-content">
+        <span class="day-heading">Saturday 15 November 2025</span>
+        <span class="day-description">Undergraduate Open Day</span>
+      </span>
+      <span class="day-icon">H</span>
     </button>
+
     <button id="nextButton" disabled class="btn btn-primary">Next</button>
   </section>
 </main>
+
 <script>
   const options = document.querySelectorAll('.day-option');
   const nextButton = document.getElementById('nextButton');
