@@ -448,7 +448,7 @@
 	overflow: hidden;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 40em) {
 .rounded-responsive {
 	border-radius: 1em;
 }
