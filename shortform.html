@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #c5daed;
+--highlight-dark: #1b5283;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+}
+.w-80 {
+	max-width: 80em;
+}
+.container {
+	display: flex;
+	gap: 2em;
+}
+.column {
+	flex: 1;
+	width: 100%;
+}
+.column :last-child {
+	margin-bottom: 0;
+}
+
+@media (max-width: 60em) {
+.container {
+	flex-direction: column;
+	gap: 1.5em;
+}
+}
+form label {
+	display: block;
+	font-weight: bold;
+	margin: 1em 0;
+}
+form select, form input[type="email"] {
+	width: 100%;
+	padding: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.5rem;
+	background-color: var(--lgrey);
+	font-size: 1rem;
+}
+button:disabled {
+	background-color: var(--mgrey);
+	cursor: not-allowed;
+}
+.stroke-highlight {
+	outline: 2px solid var(--highlight-dark);
+	outline-offset: -2px;
+}
+.text-highlight {
+	color: var(--highlight-dark);
+}
+.checkbox1 input[type='checkbox'] {
+	transform: scale(2);
+	vertical-align: middle;
+	margin: 0.5em 1em 0.5em 0.5em;
+}
+.checkbox1 {
+	line-height: 2.5em;
+}
+/* --- Animations --- */
+.fade-slide-wrapper {
+	overflow: hidden;
+}
+.fade-section {
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+}
+.fade-section.active {
+	position: static;
+	opacity: 1;
+	pointer-events: auto;
+}
+.relative-wrapper {
+	position: relative;
+}
+.rounded-resize {
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+@media (max-width: 60em) {
+.rounded-resize {
+	border-radius: 1em;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 m-responsive px-responsive">
+    <p class="largetext2 text-highlight">Visit us</p>
+  </div>
+  <div class="w-80 m-responsive px-responsive">
+    <div id="bookingWrapper" class="fade-slide-wrapper">
+      <div class="relative-wrapper"> 
+        <!-- Form Section -->
+        <div id="formSection" class="container rounded-resize p-responsive stroke-highlight fade-section active">
+          <div class="column">
+            <h2>Book your place at an open day</h2>
+            <p>Choose your preferred date and enter your email to secure your booking now and provide more information later.</p>
+            <p>Or you can share more details, such as guest information and additional requirements you may have, by completing a full registration.</p>
+            <h3>What to expect on the day</h3>
+            <ul>
+              <li>Subject-specific talks</li>
+              <li>Tours of our campus and facilities</li>
+              <li>Guidance on applying and student finance</li>
+              <li>Opportunities to ask questions and explore Plymouth</li>
+            </ul>
+          </div>
+          <div class="column">
+            <form id="bookingForm">
+              <label for="date" class="m-0 mb-1">Choose an open day</label>
+              <select id="date" required>
+                <option value="">-- Please choose a date --</option>
+                <option value="27 September 2025">27 September 2025</option>
+                <option value="18 October 2025">18 October 2025</option>
+              </select>
+              <label for="email">Email address</label>
+              <input type="email" id="email" placeholder="you@example.com" required />
+              <div class="mb-reg checkbox1">
+                <label>
+                  <input type="checkbox" id="gdpr" required />
+                  I agree to the University of Plymouth using my details to contact me about my enquiry, events, and courses. <a href="#">See our privacy policy</a>. </label>
+              </div>
+              <input type="hidden" id="course" value="BSc Computer Science" />
+              <input type="hidden" id="level" value="Undergraduate" />
+              <button type="submit" id="submitBtn" class="btn btn-primary" disabled>Complete your booking</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Confirmation Section -->
+        <div id="confirmationSection" class="container rounded-resize p-responsive stroke-highlight fade-section">
+          <div class="column">
+            <h2>Booking confirmed</h2>
+            <p>Your place has been secured at your chosen open day. You will receive a confirmation email shortly.</p>
+            <div class="rounded-0-5 p-1 bck-highlight-light mb-reg">
+              <p class="m-0">Open day date</p>
+              <h3 id="confirmDate">27 September 2025</h3>
+              <p class="m-0">Confirmation sent to</p>
+              <h3 id="confirmEmail" class="m-0">you@example.com</h3>
+            </div>
+            <button type="button" id="addBtn" class="btn btn-primary">Add event to calendar</button>
+          </div>
+          <div class="column">
+            <h2>What happens next?</h2>
+            <ul>
+              <li>Check your email for confirmation details</li>
+              <li>We'll contact you for further information</li>
+              <li>We'll send you a reminder closer to the date</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const date = document.getElementById('date');
+  const email = document.getElementById('email');
+  const gdpr = document.getElementById('gdpr');
+  const submitBtn = document.getElementById('submitBtn');
+  const form = document.getElementById('bookingForm');
+
+  const formSection = document.getElementById('formSection');
+  const confirmationSection = document.getElementById('confirmationSection');
+  const confirmDate = document.getElementById('confirmDate');
+  const confirmEmail = document.getElementById('confirmEmail');
+
+  function validateForm() {
+    submitBtn.disabled = !(date.value && email.validity.valid && gdpr.checked);
+  }
+
+  date.addEventListener('change', validateForm);
+  email.addEventListener('input', validateForm);
+  gdpr.addEventListener('change', validateForm);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    confirmDate.textContent = date.value;
+    confirmEmail.textContent = email.value;
+
+    // Fade out form
+    formSection.style.transition = 'opacity 0.4s ease';
+    formSection.style.opacity = '0';
+
+    formSection.addEventListener('transitionend', function onFormFadeOut() {
+      formSection.removeEventListener('transitionend', onFormFadeOut);
+
+      formSection.classList.remove('active');
+      formSection.style.opacity = '';
+      formSection.style.transition = '';
+
+      confirmationSection.classList.add('active');
+      confirmationSection.style.opacity = '0';
+
+      requestAnimationFrame(() => {
+        confirmationSection.style.transition = 'opacity 0.4s ease';
+        confirmationSection.style.opacity = '1';
+      });
+
+      confirmationSection.addEventListener('transitionend', function onConfirmFadeIn() {
+        confirmationSection.removeEventListener('transitionend', onConfirmFadeIn);
+        confirmationSection.style.transition = '';
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
