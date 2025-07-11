@@ -99,16 +99,6 @@ button:disabled {
 .relative-wrapper {
 	position: relative;
 }
-.rounded-resize {
-	border-radius: 2em;
-	overflow: hidden;
-}
-
-@media (max-width: 60em) {
-.rounded-resize {
-	border-radius: 1em;
-}
-}
 </style>
 </head>
 <body>
@@ -120,7 +110,7 @@ button:disabled {
     <div id="bookingWrapper" class="fade-slide-wrapper">
       <div class="relative-wrapper"> 
         <!-- Form Section -->
-        <div id="formSection" class="container rounded-resize p-responsive stroke-highlight fade-section active">
+        <div id="formSection" class="container rounded-responsive p-responsive stroke-highlight fade-section active">
           <div class="column">
             <h2>Book your place at an open day</h2>
             <p>Choose your preferred date and enter your email to secure your booking now and provide more information later.</p>
@@ -142,21 +132,21 @@ button:disabled {
                 <option value="18 October 2025">18 October 2025</option>
               </select>
               <label for="email">Email address</label>
-              <input type="email" id="email" placeholder="you@example.com" required />
+              <input type="email" id="email" placeholder="you@example.com" required>
               <div class="mb-reg checkbox1">
                 <label>
-                  <input type="checkbox" id="gdpr" required />
+                  <input type="checkbox" id="gdpr" required>
                   I agree to the University of Plymouth using my details to contact me about my enquiry, events, and courses. <a href="#">See our privacy policy</a>. </label>
               </div>
-              <input type="hidden" id="course" value="BSc Computer Science" />
-              <input type="hidden" id="level" value="Undergraduate" />
+              <input type="hidden" id="course" value="BSc Computer Science">
+              <input type="hidden" id="level" value="Undergraduate">
               <button type="submit" id="submitBtn" class="btn btn-primary" disabled>Complete your booking</button>
             </form>
           </div>
         </div>
         
         <!-- Confirmation Section -->
-        <div id="confirmationSection" class="container rounded-resize p-responsive stroke-highlight fade-section">
+        <div id="confirmationSection" class="container rounded-responsive p-responsive stroke-highlight fade-section">
           <div class="column">
             <h2>Booking confirmed</h2>
             <p>Your place has been secured at your chosen open day. You will receive a confirmation email shortly.</p>
