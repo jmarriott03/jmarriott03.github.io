@@ -443,3 +443,13 @@
     scroll-behavior: auto !important;
   }
 }
+.rounded-responsive {
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+@media (max-width: 60em) {
+.rounded-responsive {
+	border-radius: 1em;
+}
+}
