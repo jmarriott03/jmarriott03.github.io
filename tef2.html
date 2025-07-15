@@ -14,6 +14,10 @@
 --highlight-dark: #338078;
 --highlight-gold: #fab72d;
 }
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
 @font-face {
 	font-family: neuzeit;
 	src: url('fonts/neuzeitforplymouth-bold-webfont.woff');
@@ -23,8 +27,7 @@
 	font-weight: normal;
 	line-height: 1;
 }
-	
-	@font-face {
+@font-face {
 	font-family: neuzeitblack;
 	src: url('fonts/neuzeitforplymouth-black-webfont.woff');
 }
@@ -33,10 +36,6 @@
 	font-weight: normal;
 	line-height: 1;
 }
-	
-	
-	
-	
 /*
 * {
 	outline: 1px dotted red;
@@ -64,7 +63,7 @@ div :last-child {
 	flex: 0 0 auto; /* Prevent stretching */
 }
 .staffquote:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .staffquote img {
 	width: 2em;
@@ -238,7 +237,7 @@ details[open] > summary::before {
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
-	.pt-half {
+.pt-half {
 	padding-top: 0.5rem;
 }
 .tefgold {
@@ -278,10 +277,8 @@ transform: translateY(0);
 	margin: 0; /* Remove default bottom margin */
 	flex: 0 0 auto; /* Prevent stretching */
 }
-
-
 .tef-logo:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .tef-logo img {
 	width: 2em;
@@ -292,7 +289,6 @@ transform: translateY(0);
 }
 .gold-text {
 	width: 100%;
-	min-width: 15em;
 }
 .gold-highlight {
 	color: var(--highlight-gold);
