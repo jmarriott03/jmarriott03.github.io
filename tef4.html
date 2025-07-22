@@ -12,6 +12,32 @@
 --highlight-light: #deedeb;
 --highlight-medium: #9fcac5;
 --highlight-dark: #338078;
+--tef-gold: #fab72d;
+--tef-blue: #1e294f;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+@font-face {
+	font-family: neuzeit;
+	src: url('fonts/neuzeitforplymouth-bold-webfont.woff');
+}
+.neuzeit {
+	font-family: 'neuzeit', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+}
+@font-face {
+	font-family: neuzeitblack;
+	src: url('fonts/neuzeitforplymouth-black-webfont.woff');
+}
+.neuzeitblack {
+	font-family: 'neuzeitblack', sans-serif;
+	font-weight: normal;
+	line-height: 1;
 }
 /*
 * {
@@ -35,19 +61,12 @@ div :last-child {
 .staffquote {
 	display: flex;
 	align-items: center;
-	gap: 1em;
-	margin-left: 0;
-	margin-bottom: 1em;
-}
-.staffquote :last-child {
-	margin-bottom: 0;
-}
-.staffquote {
-	display: flex;
-	align-items: center;
 	gap: 0.5em;
 	margin: 0; /* Remove default bottom margin */
 	flex: 0 0 auto; /* Prevent stretching */
+}
+.staffquote:last-child {
+	margin-bottom: 0;
 }
 .staffquote img {
 	width: 2em;
@@ -69,7 +88,7 @@ div :last-child {
 	justify-content: flex-start;
 }
 
-@media (max-width: 40em) {
+@media (max-width: 80em) {
 .nav {
 	flex-direction: column;
 	align-items: flex-start;
@@ -211,13 +230,10 @@ details[open] > summary::before {
 	font-size: 1rem;
 	transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
-.btn-rounded-white:hover, .btn-rounded-:focus {
+.btn-rounded-white:hover, .btn-rounded:focus {
 	cursor: pointer;
 	color: var(--black);
 	background-color: var(--white);
-}
-.w-80 {
-	max-width: 80rem;
 }
 .undergraduate-tag {
 	padding: 0.5rem;
@@ -257,13 +273,52 @@ opacity: 1;
 transform: translateY(0);
 }
 }
+.tef-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin: 0; /* Remove default bottom margin */
+	flex: 0 0 auto; /* Prevent stretching */
+}
+.tef-logo:last-child {
+	margin-bottom: 0;
+}
+.tef-logo img {
+	width: 2em;
+	height: auto;
+}
+.tef-logo-text {
+	flex: 1;
+}
+.tef-gold {
+	color: var(--tef-gold);
+}
+.tef-blue {
+	color: var(--tef-blue);
+}
+.bck-tef-blue {
+	background-color: var(--tef-blue);
+	padding: 0.25em;
+	margin-left: 0;
+}
 </style>
 </head>
 <body>
 <main>
   <div class="w-80">
     <div class="nav p-responsive">
-      <div class="nav-logo"><img src="images/uoplogo.svg" alt="" class="mr-1"><img src="images/tefgold.gif" alt=""></div>
+      <div class="nav-logo"><img src="images/uoplogo.svg" alt=""></div>
+      <div class="tef-logo"><img src="images/tefgold.gif" alt="">
+        <div class="tef-logo-text">
+          <p class="neuzeit tef-blue">One of a select number of universitites<br>
+            in the UK to achieve triple gold</p>
+        </div>
+      </div>
+      <div class="bck-tef-blue white-text">
+        <p class="neuzeitblack smalltext nowrap"><span class="tef-gold">GOLD</span> OVERALL<br>
+          <span class="tef-gold">GOLD</span> STUDENT EXPERIENCE<br>
+          <span class="tef-gold">GOLD</span> STUDENT OUTCOMES</p>
+      </div>
       <div class="staffquote"><img src="images/nav-search.svg" width="256" height="256" alt="" aria-hidden="true">
         <div class="staffquote-text">
           <p>Search<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
@@ -295,6 +350,7 @@ transform: translateY(0);
         <button class="btn-rounded-black">Apply now</button>
       </div>
     </div>
+    <div class="div3 mt-2"></div>
     <div class="div4 rounded-2 p-2 mrfrosty stroke shadow card">
       <h2 class="m-0">98%</h2>
       <p>of Plymouth engineering graduates are employed or in further study within six months of graduation</p>
