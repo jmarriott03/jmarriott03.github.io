@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+    outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.backgroundimage {
+	background-image: url("images/1920x600babbage.jpg");
+}
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+summary {
+	cursor: pointer;
+	padding: 0.5em;
+}
+details {
+	margin: 0;
+	border-bottom: 1px solid #CCC;
+}
+summary > * {
+	display: inline;
+}
+details > p {
+	margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
+}
+details[open] > summary::before {
+	content: "M";
+}
+</style>
+</head>
+<body>
+<main><section class="p-responsive">
+    <h1>H1 Text layout (1.5em space)</h1>
+    <h2>H2 heading and paragraphs</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2>H2 heading and H3 subheadings</h2>
+    <h3>Lorem ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h3>Lorem ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h2>Basic bullet list</h2>
+    <p>When the bullet points are simple and short, this formatting option works pretty effectively (it's easy to discern the different points at a glance):</p>
+    <ul>
+      <li><strong>Lorem ipsum dolor sit amet</strong></li>
+      <li><strong>Consectetur adipiscing elit</strong></li>
+      <li><strong>Sed do eiusmod tempor incididunt ut labore</strong></li>
+      <li><strong>Dolore magna aliqua</strong></li>
+    </ul>
+    <p>Bold formatting can be an effective way to add extra emphasis to bullet points when the word count is low. Another formatting option is to treat what comes after the bullet list as a new 'chunk' of content.</p>
+    <h2>Complex bullet list</h2>
+    <ul>
+      <li><strong>Gravida neque convallis a cras semper</strong><br>
+        Tortor at auctor urna nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.</li>
+      <li><strong>Vel fringilla est ullamcorper eget</strong><br>
+        Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Sed risus pretium quam vulputate dignissim.</li>
+      <li><strong>Faucibus ornare suspendisse sed nisi</strong><br>
+        Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Ornare lectus sit amet est placerat in egestas erat.</li>
+      <li><strong>Sed lectus vestibulum mattis ullamcorper velit sed</strong><br>
+        Sed faucibus turpis in eu mi bibendum neque egestas congue. Elementum sagittis vitae et leo duis ut diam quam nulla.</li>
+      <li><strong>Massa id neque aliquam vestibulum morbi blandit cursus risus</strong><br>
+        Turpis massa sed elementum tempus egestas sed sed risus. Id nibh tortor id aliquet lectus proin nibh nisl condimentum.</li>
+      <li><strong>Cras tincidunt lobortis feugiat vivamus</strong><br>
+        Sociis natoque penatibus et magnis. Eget sit amet tellus cras. In hac habitasse platea dictumst quisque sagittis purus.</li>
+    </ul>
+    <h2>Multi-level bullet list</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ul>
+      <li><strong>Ullamcorper a lacus vestibulum sed arcu non odio</strong>
+        <ul>
+          <li>Ut consequat semper viverra nam</li>
+          <li>Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit</li>
+          <li>Donec adipiscing tristique risus nec feugiat in fermentum</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><strong>Amet mauris commodo quis imperdiet massa</strong>
+        <ul>
+          <li>Nibh sed pulvinar proin gravida</li>
+          <li>A pellentesque sit amet porttitor</li>
+          <li>Habitant morbi tristique senectus et</li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><strong>Tellus pellentesque eu tincidunt tortor aliquam</strong>
+        <ul>
+          <li>Tincidunt augue interdum velit euismod in</li>
+          <li>Enim ut sem viverra aliquet eget sit amet</li>
+          <li>Rhoncus urna neque viverra justo</li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Complex multi-level bullet list</h2>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Et magnis dis parturient montes nascetur ridiculus.</p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna aliqua</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h2>Basic numbered list</h2>
+    <p>When the list item are simple and short, this formatting option works pretty effectively (it's easy to discern the different points at a glance):</p>
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Sed do eiusmod tempor incididunt ut labore</li>
+      <li>Dolore magna aliqua</li>
+    </ol>
+    <h2>Complex numbered list</h2>
+    <p>Gravida neque convallis a cras semper. Tortor at auctor urna nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.</p>
+    <ol>
+      <li><strong><a href="#">Vel fringilla est ullamcorper eget</a></strong><br>
+        Proin nibh nisl condimentum id venenatis a condimentum vitae sapien sed risus pretium quam vulputate dignissim</li>
+      <li><strong><a href="#">Faucibus ornare suspendisse sed nisi</a></strong><br>
+        Mattis nunc sed blandit libero volutpat sed cras ornare arcu ornare lectus sit amet est placerat in egestas erat</li>
+      <li><strong><a href="#">Sed lectus vestibulum mattis ullamcorper velit sed</a></strong><br>
+        Sed faucibus turpis in eu mi bibendum neque egestas congue elementum sagittis vitae et leo duis ut diam quam nulla</li>
+      <li><strong><a href="#">Massa id neque aliquam vestibulum morbi blandit cursus risus</a></strong><br>
+        Turpis massa sed elementum tempus egestas sed sed risus id nibh tortor id aliquet lectus proin nibh nisl condimentum</li>
+      <li><strong><a href="#">Cras tincidunt lobortis feugiat vivamus</a></strong><br>
+        Sociis natoque penatibus et magnis. Eget sit amet tellus cras in hac habitasse platea dictumst quisque sagittis purus</li>
+    </ol>
+    <h2>Inset text as additional details</h2>
+    <p>At consectetur lorem donec massa sapien faucibus et molestie ac. Est sit amet facilisis magna etiam tempor. Elit at imperdiet dui accumsan sit amet. In vitae turpis massa sed elementum tempus egestas sed.</p>
+    <blockquote>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</blockquote>
+    <p>Justo donec enim diam vulputate. Diam maecenas ultricies mi eget. Mollis aliquam ut porttitor leo a diam sollicitudin.</p>
+    <h2>Inset text as warning text</h2>
+    <p>At consectetur lorem donec massa sapien faucibus et molestie ac. Est sit amet facilisis magna etiam tempor. Elit at imperdiet dui accumsan sit amet. In vitae turpis massa sed elementum tempus egestas sed.</p>
+    <blockquote><strong>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</strong></blockquote>
+    <p>Justo donec enim diam vulputate. Diam maecenas ultricies mi eget. Mollis aliquam ut porttitor leo a diam sollicitudin.</p>
+    <h2>End-of-paragraph and end-of-section links</h2>
+    <p>At consectetur lorem donec massa sapien faucibus et molestie ac. Est sit amet facilisis magna etiam tempor. Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo. Justo donec enim diam vulputate.</p>
+    <p><a href="#">Link providing more details about what's mentioned above</a></p>
+    <p>Diam maecenas ultricies mi eget. Mollis aliquam ut porttitor leo a diam sollicitudin. Iaculis at erat pellentesque adipiscing. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Nunc non blandit massa enim nec dui nunc. </p>
+    <p><strong><a href="#">Primary call to action</a></strong></p>
+    <h2>Links with descriptions</h2>
+    <p> <strong><a href="#">Lorem ipsum dolor sit amet</a></strong><br>
+      Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><strong><a href="#">Est lorem ipsum dolor sit amet consectetur adipiscing</a></strong><br>
+      Consectetur lorem donec massa sapien faucibus et. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.</p>
+    <p><strong><a href="#">Consequat mauris nunc congue nisi</a></strong><br>
+      Egestas erat imperdiet sed euismod nisi. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio.</p>
+    <h2>Other examples of next-line formatting</h2>
+    <p><strong><a href="#">Professor Joe Bloggs</a></strong><br>
+      Lecturer in Text Formatting</p>
+    <p>Contact Joe by sending a carrier pigeon to this address:</p>
+    <p><strong> Room 101<br>
+      Hepworth House<br>
+      University of Plymouth<br>
+      PL4 8AA</strong></p>
+    <p>Or connect with Joe using more modern methods:</p>
+    <p><strong>Instagram: <a href="#">@joe_bloggs</a><br>
+      Twitter: <a href="#">@OfficialProfJoeBloggs</a><br>
+      Website: <a href="#">www.joe-bloggs-blogs.com</a></strong></p>
+    <h2>Large text</h2>
+    <p class="largetext">Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</p>
+    <div class="bg-lgrey pad1">
+      <h2>Colour block</h2>
+      <p>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</p>
+    </div>
+  </section>
+  <div class="fullw bg-lgrey">
+    <section>
+      <h2>Colour block full width</h2>
+      <p>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</p>
+    </section></main>
+</body>
+</html>
