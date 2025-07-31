@@ -39,6 +39,30 @@
 --link-color-medium: var(--black);
 --link-color-dark: var(--white);
 }
+/* Deep rose theme variables */
+[data-theme="deep-rose"] {
+--bg-color-light: 318, 100%, 77%;
+--bg-color-medium: 318, 100%, 33%;
+--bg-color-dark: 318, 100%, 21%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Deep rose theme variables */
+[data-theme="brilliant-rose"] {
+--bg-color-light: 328, 53%, 84%;
+--bg-color-medium: 327, 52%, 69%;
+--bg-color-dark: 328, 69%, 30%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
 /* Raspberry red theme variables */
 [data-theme="raspberry-red"] {
 --bg-color-light: 337, 100%, 79%;
@@ -50,6 +74,18 @@
 --link-color-light: var(--black);
 --link-color-medium: var(--white);
 --link-color-dark: var(--white);
+}
+/* Deep orange theme variables */
+[data-theme="deep-orange"] {
+--bg-color-light: 37, 73%, 84%;
+--bg-color-medium: 37, 73%, 69%;
+--bg-color-dark: 37, 74%, 54%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--black);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--black);
 }
 /* Butter yellow theme variables */
 [data-theme="butter-yellow"] {
@@ -63,6 +99,30 @@
 --link-color-medium: var(--black);
 --link-color-dark: var(--black);
 }
+/* Dark lavender theme variables */
+[data-theme="dark-lavender"] {
+--bg-color-light: 244, 19%, 85%;
+--bg-color-medium: 246, 21%, 70%;
+--bg-color-dark: 245, 47%, 29%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Bondi blue theme variables */
+[data-theme="bondi-blue"] {
+--bg-color-light: 209, 53%, 85%;
+--bg-color-medium: 209, 53%, 56%;
+--bg-color-dark: 208, 66%, 31%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
 /* Turquoise theme variables */
 [data-theme="turquoise"] {
 --bg-color-light: 196, 52%, 89%;
@@ -73,6 +133,54 @@
 --text-color-dark: var(--white);
 --link-color-light: var(--black);
 --link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Sea green theme variables */
+[data-theme="sea-green"] {
+--bg-color-light: 172, 29%, 90%;
+--bg-color-medium: 173, 29%, 71%;
+--bg-color-dark: 174, 43%, 35%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Fresh green theme variables */
+[data-theme="fresh-green"] {
+--bg-color-light: 73, 50%, 86%;
+--bg-color-medium: 72, 49%, 58%;
+--bg-color-dark: 73, 62%, 30%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Persian indigo theme variables */
+[data-theme="persian-indigo"] {
+--bg-color-light: 226, 62%, 76%;
+--bg-color-medium: 226, 63%, 30%;
+--bg-color-dark: 226, 80%, 18%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Midnight blue theme variables */
+[data-theme="midnight-blue"] {
+--bg-color-light: 237, 30%, 77%;
+--bg-color-medium: 238, 30%, 34%;
+--bg-color-dark: 237, 58%, 18%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
 --link-color-dark: var(--white);
 }
 /* Dark mode theme variables */
@@ -91,95 +199,112 @@
 --link-color-dark: var(--black);
 }
 body {
-    color: var(--text-color);
-    background-color: var(--bg-color);
+	color: var(--text-color);
+	background-color: var(--bg-color);
 }
 div :last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 .w-60 {
-    max-width: 60rem;
-    overflow: hidden;
+	max-width: 60rem;
+	overflow: hidden;
 }
 .bg-color {
-    color: var(--text-color);
-    background-color: hsl(var(--bg-color));
-    overflow: hidden;
+	color: var(--text-color);
+	background-color: hsl(var(--bg-color));
+	overflow: hidden;
 }
 .bg-color a {
-    color: var(--link-color);
+	color: var(--link-color);
 }
 .bg-color-light {
-    color: var(--text-color-light);
-    background-color: hsl(var(--bg-color-light));
+	color: var(--text-color-light);
+	background-color: hsl(var(--bg-color-light));
 }
 .bg-color-light a {
-    color: var(--link-color-light);
+	color: var(--link-color-light);
 }
 .bg-color-medium {
-    color: var(--text-color-medium);
-    background-color: hsl(var(--bg-color-medium));
+	color: var(--text-color-medium);
+	background-color: hsl(var(--bg-color-medium));
 }
 .bg-color-medium a {
-    color: var(--link-color-medium);
+	color: var(--link-color-medium);
 }
 .bg-color-dark {
-    color: var(--text-color-dark);
-    background-color: hsl(var(--bg-color-dark));
+	color: var(--text-color-dark);
+	background-color: hsl(var(--bg-color-dark));
 }
 .bg-color-dark a {
-    color: var(--link-color-dark);
+	color: var(--link-color-dark);
 }
 .btn-dark {
-    outline: 2px solid var(--dgrey);
-    outline-offset: -2px;
+	outline: 2px solid var(--dgrey);
+	outline-offset: -2px;
 }
 .button-container {
-    border-bottom: 1px solid var(--text-color);
+	border-bottom: 1px solid var(--text-color);
 }
 .four-container {
-    overflow: hidden;
+	overflow: hidden;
 }
 .four {
-    width: 25%;
-    float: left;
-    padding: 1rem;
-    border: 1px dotted var(--text-color);
+	width: 25%;
+	float: left;
+	padding: 1rem;
+	border: 1px dotted var(--text-color);
 }
 
 /*media*/
 @media (max-width: 50em) {
 .four {
-    width: 100%;
-    margin: 0;
+	width: 100%;
+	margin: 0;
 }
 }
 .bg-image {
-    background-image: url("images/32x32chess.gif");
+	background-image: url("images/32x32chess.gif");
 }
 .mrfrosty-theme {
-    color: var(--text-color-dark);
-    background-image: linear-gradient(hsla(var(--bg-color-dark), 0.6), hsla(var(--bg-color-dark), 1));
-    backdrop-filter: blur(0.5rem);
+	color: var(--black);
+	background-image: linear-gradient(hsla(var(--bg-color-light), 0.6), hsla(var(--bg-color-light), 1));
+	backdrop-filter: blur(0.5rem);
 }
 .mrfrosty-theme a {
-    color: var(--link-color-dark);
+	color: var(--black);
+}
+.btn-theme {
+	background-color: hsl(var(--bg-color-dark));
+	color: var(--text-color-dark);
+}
+.btn-theme:hover {
+	background-color: hsl(var(--bg-color-medium));
+	color: var(--text-color-medium);
 }
 </style>
 </head>
 <body>
 <main>
   <div class="button-container">
-    <div class="w-60 px-2 pt-2 pb-1">
+    <div class="w-60 p-responsive">
       <h1>Select data-theme</h1>
-      <button class="btn btn-secondary" onclick="setTheme('mono')"><span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
-      <button class="btn btn-danger" onclick="setTheme('raspberry-red')"><span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
-      <button class="btn btn-warning" onclick="setTheme('butter-yellow')"><span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
-      <button class="btn btn-info" onclick="setTheme('turquoise')"><span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
-      <button class="btn btn-dark" onclick="setTheme('dark')"><span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
+      <button class="btn btn-theme"  data-theme="mono" onclick="setTheme('mono')"> <span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
+      <button class="btn btn-theme"  data-theme="deep-rose" onclick="setTheme('deep-rose')"> <span class="iconfont" aria-hidden="true">Ì</span>Deep rose</button>
+      <button class="btn btn-theme"  data-theme="brilliant-rose" onclick="setTheme('brilliant-rose')"> <span class="iconfont" aria-hidden="true">Ì</span>Brilliant rose</button>
+      <button class="btn btn-theme"  data-theme="raspberry-red" onclick="setTheme('raspberry-red')"> <span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
+      <button class="btn btn-theme"  data-theme="deep-orange" onclick="setTheme('deep-orange')"> <span class="iconfont" aria-hidden="true">Ì</span>Deep orange</button>
+      <button class="btn btn-theme"  data-theme="butter-yellow" onclick="setTheme('butter-yellow')"> <span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
+      <button class="btn btn-theme"  data-theme="dark-lavender" onclick="setTheme('dark-lavender')"> <span class="iconfont" aria-hidden="true">Ì</span>Dark lavender</button>
+      <button class="btn btn-theme"  data-theme="bondi-blue" onclick="setTheme('bondi-blue')"> <span class="iconfont" aria-hidden="true">Ì</span>Bondi blue</button>
+      <button class="btn btn-theme"  data-theme="turquoise" onclick="setTheme('turquoise')"> <span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
+      <button class="btn btn-theme"  data-theme="sea-green" onclick="setTheme('sea-green')"> <span class="iconfont" aria-hidden="true">Ì</span>Sea green</button>
+      <button class="btn btn-theme"  data-theme="fresh-green" onclick="setTheme('fresh-green')"> <span class="iconfont" aria-hidden="true">Ì</span>Fresh green</button>
+      <button class="btn btn-theme"  data-theme="persian-indigo" onclick="setTheme('persian-indigo')"> <span class="iconfont" aria-hidden="true">Ì</span>Persian indigo</button>
+      <button class="btn btn-theme"  data-theme="midnight-blue" onclick="setTheme('midnight-blue')"> <span class="iconfont" aria-hidden="true">Ì</span>Midnight blue</button>
+      <button class="btn btn-theme"  data-theme="dark" onclick="setTheme('dark')"> <span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
     </div>
   </div>
-  <div class="w-60 p-2 dark">
+  <div class="w-60 p-responsive dark">
     <div class="four-container mb-reg">
       <div class="four bg-color">
         <p>None<br>
