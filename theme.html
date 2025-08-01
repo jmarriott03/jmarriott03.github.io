@@ -256,7 +256,7 @@ div :last-child {
 }
 
 /*media*/
-@media (max-width: 50em) {
+@media (max-width: 40em) {
 .four {
 	width: 100%;
 	margin: 0;
@@ -266,12 +266,12 @@ div :last-child {
 	background-image: url("images/32x32chess.gif");
 }
 .mrfrosty-theme {
-	color: var(--black);
+	color: var(--text-color-light);
 	background-image: linear-gradient(hsla(var(--bg-color-light), 0.6), hsla(var(--bg-color-light), 1));
 	backdrop-filter: blur(0.5em);
 }
 .mrfrosty-theme a {
-	color: var(--black);
+	color: var(--link-color-light);
 }
 .btn-theme {
 	background-color: hsl(var(--bg-color-dark));
@@ -280,6 +280,20 @@ div :last-child {
 .btn-theme:hover {
 	background-color: hsl(var(--bg-color-medium));
 	color: var(--text-color-medium);
+}
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2em;
+}
+.column {
+	width: 100%;
+}
+
+@media (max-width: 40em) {
+.container {
+	grid-template-columns: 1fr;
+}
 }
 </style>
 </head>
@@ -304,7 +318,7 @@ div :last-child {
       <button class="btn btn-theme"  data-theme="dark" onclick="setTheme('dark')"> <span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
     </div>
   </div>
-  <div class="w-80 p-responsive dark">
+  <div class="w-80 p-responsive">
     <div class="four-container mb-reg">
       <div class="four bg-color">
         <p>None<br>
@@ -323,18 +337,20 @@ div :last-child {
           <a href="#">Link</a></p>
       </div>
     </div>
-    <div class="centered p-2 rounded-2 shadow mb-reg bg-color-light">
-      <h2>bg-color-light</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
-      <div class="centered p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
-        <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+    <div class="container">
+      <div class="column centered p-2 rounded-2 shadow mb-reg bg-color-light">
+        <h2>bg-color-light</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+        <div class="centered p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
+          <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+        </div>
       </div>
-    </div>
-    <div class="bg-image p-2">
-      <div class="centered p-2 rounded-2 shadow mrfrosty-theme">
-        <h2>mrfrosty-theme</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="column bg-image p-2">
+        <div class="centered p-2 rounded-2 shadow mrfrosty-theme">
+          <h2>mrfrosty-theme</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
+        </div>
       </div>
     </div>
   </div>
