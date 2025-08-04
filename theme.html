@@ -302,20 +302,20 @@ div :last-child {
   <div class="button-container bck-lgrey">
     <div class="w-80 p-responsive">
       <h1 class="black-text">Select data-theme</h1>
-      <button class="btn btn-theme"  data-theme="mono" onclick="setTheme('mono')"> <span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
-      <button class="btn btn-theme"  data-theme="deep-rose" onclick="setTheme('deep-rose')"> <span class="iconfont" aria-hidden="true">Ì</span>Deep rose</button>
-      <button class="btn btn-theme"  data-theme="brilliant-rose" onclick="setTheme('brilliant-rose')"> <span class="iconfont" aria-hidden="true">Ì</span>Brilliant rose</button>
-      <button class="btn btn-theme"  data-theme="raspberry-red" onclick="setTheme('raspberry-red')"> <span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
-      <button class="btn btn-theme"  data-theme="deep-orange" onclick="setTheme('deep-orange')"> <span class="iconfont" aria-hidden="true">Ì</span>Deep orange</button>
-      <button class="btn btn-theme"  data-theme="butter-yellow" onclick="setTheme('butter-yellow')"> <span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
-      <button class="btn btn-theme"  data-theme="dark-lavender" onclick="setTheme('dark-lavender')"> <span class="iconfont" aria-hidden="true">Ì</span>Dark lavender</button>
-      <button class="btn btn-theme"  data-theme="bondi-blue" onclick="setTheme('bondi-blue')"> <span class="iconfont" aria-hidden="true">Ì</span>Bondi blue</button>
-      <button class="btn btn-theme"  data-theme="turquoise" onclick="setTheme('turquoise')"> <span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
-      <button class="btn btn-theme"  data-theme="sea-green" onclick="setTheme('sea-green')"> <span class="iconfont" aria-hidden="true">Ì</span>Sea green</button>
-      <button class="btn btn-theme"  data-theme="fresh-green" onclick="setTheme('fresh-green')"> <span class="iconfont" aria-hidden="true">Ì</span>Fresh green</button>
-      <button class="btn btn-theme"  data-theme="persian-indigo" onclick="setTheme('persian-indigo')"> <span class="iconfont" aria-hidden="true">Ì</span>Persian indigo</button>
-      <button class="btn btn-theme"  data-theme="midnight-blue" onclick="setTheme('midnight-blue')"> <span class="iconfont" aria-hidden="true">Ì</span>Midnight blue</button>
-      <button class="btn btn-theme"  data-theme="dark" onclick="setTheme('dark')"> <span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
+      <button class="btn btn-theme" data-theme="mono"><span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
+      <button class="btn btn-theme" data-theme="deep-rose"><span class="iconfont" aria-hidden="true">Ì</span>Deep rose</button>
+      <button class="btn btn-theme" data-theme="brilliant-rose"><span class="iconfont" aria-hidden="true">Ì</span>Brilliant rose</button>
+      <button class="btn btn-theme" data-theme="raspberry-red"><span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
+      <button class="btn btn-theme" data-theme="deep-orange"><span class="iconfont" aria-hidden="true">Ì</span>Deep orange</button>
+      <button class="btn btn-theme" data-theme="butter-yellow"><span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
+      <button class="btn btn-theme" data-theme="dark-lavender"><span class="iconfont" aria-hidden="true">Ì</span>Dark lavender</button>
+      <button class="btn btn-theme" data-theme="bondi-blue"><span class="iconfont" aria-hidden="true">Ì</span>Bondi blue</button>
+      <button class="btn btn-theme" data-theme="turquoise"><span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
+      <button class="btn btn-theme" data-theme="sea-green"><span class="iconfont" aria-hidden="true">Ì</span>Sea green</button>
+      <button class="btn btn-theme" data-theme="fresh-green"><span class="iconfont" aria-hidden="true">Ì</span>Fresh green</button>
+      <button class="btn btn-theme" data-theme="persian-indigo"><span class="iconfont" aria-hidden="true">Ì</span>Persian indigo</button>
+      <button class="btn btn-theme" data-theme="midnight-blue"><span class="iconfont" aria-hidden="true">Ì</span>Midnight blue</button>
+      <button class="btn btn-theme" data-theme="dark"><span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
     </div>
   </div>
   <div class="w-80 p-responsive">
@@ -355,27 +355,25 @@ div :last-child {
     </div>
   </div>
   <script>
-// Apply dark theme if user prefers it
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'mono');
+      setTheme(theme);
 
-// Set theme based on button click
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-}
+      document.querySelectorAll('[data-theme]').forEach(button => {
+        button.addEventListener('click', () => {
+          const selectedTheme = button.getAttribute('data-theme');
+          setTheme(selectedTheme);
+        });
+      });
+    });
 
-// Store the user's theme preference
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme') || 'default';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-});
-
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
-</script> 
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+  </script> 
 </main>
 </body>
 </html>
