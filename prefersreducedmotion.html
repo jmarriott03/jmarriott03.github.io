@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <h1>prefers-reduced-motion and hardware performance</h1>
+    <ol>
+      <li>Uses animations normally.</li>
+      <li>Disables or simplifies them if prefers-reduced-motion is set (which can be used as a proxy for “less powerful” or accessibility-conscious environments).</li>
+    </ol>
+    <div class="codegrey mb-reg">
+      <p>@media (prefers-reduced-motion: reduce) {<br>
+        *, *::before, *::after {<br>
+        animation: none !important;<br>
+        transition: none !important;<br>
+        scroll-behavior: auto !important;<br>
+        }<br>
+        }</p>
+    </div>
+    <h2>Notes:</h2>
+    <ul>
+      <li><strong>CSS</strong> <span class="codegrey2">prefers-reduced-motion</span> is supported in all modern browsers.</li>
+      <li>It <strong>does not</strong> directly assess hardware performance, but many systems (especially mobile or battery-saving modes) automatically set it when performance is low.</li>
+      <li>For deeper detection of device performance (like FPS or GPU info), you’d need JavaScript, but even then, it’s an estimation and not very reliable across devices.</li>
+    </ul>
+    <h2>Examples of “low-power devices” or scenarios</h2>
+    <ol>
+      <li><strong>Mobile phones (especially older or mid-tier models)</strong>
+        <ul>
+          <li>Devices running Android Go or older iPhones.</li>
+          <li>Budget Android devices with limited CPU/GPU power.</li>
+          <li>When in <strong>battery saver mode</strong>, some devices auto-enable reduced motion.</li>
+        </ul>
+      </li>
+      <li> <strong>Tablets</strong>
+        <ul>
+          <li>Entry-level iPads or Android tablets, especially in power-saving mode.</li>
+          <li>Kids’ tablets or e-readers with limited graphics capability.</li>
+        </ul>
+      </li>
+      <li> <strong>Laptops in battery saver mode</strong>
+        <ul>
+          <li>Windows, macOS, or Linux laptops often reduce motion automatically when:</li>
+          <ul>
+            <li>Battery drops below a certain threshold.</li>
+            <li>Power-saving features like “Battery Saver” or “Low Power Mode” are on.</li>
+          </ul>
+        </ul>
+      </li>
+      <li><strong>Wearables or embedded devices</strong>
+        <ul>
+          <li>Smartwatches (like older Apple Watch models).</li>
+          <li>Smart displays or IoT interfaces with stripped-down web UIs.</li>
+        </ul>
+      </li>
+      <li> <strong>Accessibility configurations</strong>
+        <ul>
+          <li>Users on <strong>any device</strong> (desktop or mobile) may enable “Reduce Motion” via system settings:</li>
+          <ul>
+            <li><strong>macOS/iOS</strong>: System Preferences &gt; Accessibility &gt; Display &gt; Reduce motion</li>
+            <li><strong>Windows: Settings</strong> &gt; Ease of Access &gt; Display &gt; Turn off animations</li>
+            <li><strong>Android: Settings</strong> &gt; Accessibility &gt; Remove animations</li>
+          </ul>
+        </ul>
+      </li>
+    </ol>
+    <h2>Why This Matters</h2>
+    <p>Because of the variety of conditions and user choices, using prefers-reduced-motion isn’t just about “performance.” It’s about respecting:</p>
+    <ul>
+      <li>Device limitations</li>
+      <li>User preferences</li>
+      <li>Power-saving contexts</li>
+      <li>Accessibility needs</li>
+    </ul>
+    <p>It's the <strong>safest proxy available in CSS</strong> for deciding whether to reduce or disable animations.</p>
+  </section>
+</main>
+</body>
+</html>
