@@ -272,24 +272,19 @@ div :last-child {
 	color: var(--text-color-medium);
 }
 a[href^="tel"] {
-	var(--link-color);
-	-webkit-text-fill-color: currentColor;
+	color: var(--link-color);
 }
 .bg-color a[href^="tel"] {
 	color: var(--link-color);
-	-webkit-text-fill-color: var(--link-color);
 }
 .bg-color-light a[href^="tel"] {
 	color: var(--link-color-light);
-	-webkit-text-fill-color: var(--link-color-light);
 }
 .bg-color-medium a[href^="tel"] {
 	color: var(--link-color-medium);
-	-webkit-text-fill-color: var(--link-color-medium);
 }
 .bg-color-dark a[href^="tel"] {
 	color: var(--link-color-dark);
-	-webkit-text-fill-color: var(--link-color-dark);
 }
 </style>
 </head>
@@ -319,33 +314,42 @@ a[href^="tel"] {
       <div class="four bg-color">
         <p>None<br>
           <a href="#">Link</a><br>
-          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+          <a href="tel:01752585858" aria-label="Call 01752 585 858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
       </div>
       <div class="four bg-color-light">
         <p>Light<br>
           <a href="#">Link</a><br>
-          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+          <a href="tel:01752585858" aria-label="Call 01752 585 858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
       </div>
       <div class="four bg-color-medium">
         <p>Medium<br>
           <a href="#">Link</a><br>
-          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+          <a href="tel:01752585858" aria-label="Call 01752 585 858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
       </div>
       <div class="four bg-color-dark">
         <p>Dark<br>
           <a href="#">Link</a><br>
-          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+          <a href="tel:01752585858" aria-label="Call 01752 585 858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
       </div>
     </div>
-	  
-	  
-	  
-	  <div class="w-80 p-responsive codegrey black-text">
-		  
-		  
-		  &lt;a href="tel:01752585858"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;01752 585 858&lt;/a&gt;
-		 
-	  </div>
+    <div class="p-responsive codegrey black-text">
+      <p> a[href^="tel"] {<br>
+        color: var(--link-color);<br>
+        }<br>
+        .bg-color a[href^="tel"] {<br>
+        color: var(--link-color);<br>
+        }<br>
+        .bg-color-light a[href^="tel"] {<br>
+        color: var(--link-color-light);<br>
+        }<br>
+        .bg-color-medium a[href^="tel"] {<br>
+        color: var(--link-color-medium);<br>
+        }<br>
+        .bg-color-dark a[href^="tel"] {<br>
+        color: var(--link-color-dark);<br>
+        } </p>
+      <p> &lt;a href="tel:01752585858" aria-label="Call 01752 585 858"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;01752 585 858&lt;/a&gt; </p>
+    </div>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
