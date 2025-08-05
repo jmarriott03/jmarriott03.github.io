@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<!--<meta name="format-detection" content="telephone=no">-->
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+    border: 1px dotted red;
+}
+*/
+:root {
+--bg-color: var(--white);
+--bg-color-light: 0, 0%, 93%;
+--bg-color-medium: 0, 0%, 80%;
+--bg-color-dark: 0, 0%, 7%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--link);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Mono theme variables */
+[data-theme="mono"] {
+--bg-color-light: 0, 0%, 93%;
+--bg-color-medium: 0, 0%, 80%;
+--bg-color-dark: 0, 0%, 7%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--link);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Deep rose theme variables */
+[data-theme="deep-rose"] {
+--bg-color-light: 318, 100%, 77%;
+--bg-color-medium: 318, 100%, 33%;
+--bg-color-dark: 318, 100%, 21%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Deep rose theme variables */
+[data-theme="brilliant-rose"] {
+--bg-color-light: 328, 53%, 84%;
+--bg-color-medium: 327, 52%, 69%;
+--bg-color-dark: 328, 69%, 30%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Raspberry red theme variables */
+[data-theme="raspberry-red"] {
+--bg-color-light: 337, 100%, 79%;
+--bg-color-medium: 337, 100%, 38%;
+--bg-color-dark: 336, 100%, 25%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Deep orange theme variables */
+[data-theme="deep-orange"] {
+--bg-color-light: 37, 73%, 84%;
+--bg-color-medium: 37, 73%, 69%;
+--bg-color-dark: 37, 74%, 54%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--black);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--black);
+}
+/* Butter yellow theme variables */
+[data-theme="butter-yellow"] {
+--bg-color-light: 51, 90%, 84%;
+--bg-color-medium: 51, 90%, 67%;
+--bg-color-dark: 51, 90%, 51%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--black);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--black);
+}
+/* Dark lavender theme variables */
+[data-theme="dark-lavender"] {
+--bg-color-light: 244, 19%, 85%;
+--bg-color-medium: 246, 21%, 70%;
+--bg-color-dark: 245, 47%, 29%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Bondi blue theme variables */
+[data-theme="bondi-blue"] {
+--bg-color-light: 209, 53%, 85%;
+--bg-color-medium: 209, 53%, 56%;
+--bg-color-dark: 208, 66%, 31%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Turquoise theme variables */
+[data-theme="turquoise"] {
+--bg-color-light: 196, 52%, 89%;
+--bg-color-medium: 196, 52%, 67%;
+--bg-color-dark: 196, 55%, 35%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Sea green theme variables */
+[data-theme="sea-green"] {
+--bg-color-light: 172, 29%, 90%;
+--bg-color-medium: 173, 29%, 71%;
+--bg-color-dark: 174, 43%, 35%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Fresh green theme variables */
+[data-theme="fresh-green"] {
+--bg-color-light: 73, 50%, 86%;
+--bg-color-medium: 72, 49%, 58%;
+--bg-color-dark: 73, 62%, 30%;
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Persian indigo theme variables */
+[data-theme="persian-indigo"] {
+--bg-color-light: 226, 62%, 76%;
+--bg-color-medium: 226, 63%, 30%;
+--bg-color-dark: 226, 80%, 18%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Midnight blue theme variables */
+[data-theme="midnight-blue"] {
+--bg-color-light: 237, 30%, 77%;
+--bg-color-medium: 238, 30%, 34%;
+--bg-color-dark: 237, 58%, 18%;
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Dark mode theme variables */
+[data-theme="dark"] {
+--bg-color: var(--black);
+--bg-color-light: 0, 0%, 20%;
+--bg-color-medium: 0, 0%, 40%;
+--bg-color-dark: 0, 0%, 60%;
+--text-color: var(--white);
+--text-color-light: var(--white);
+--text-color-medium: var(--white);
+--text-color-dark: var(--black);
+--link-color: var(--white);
+--link-color-light: var(--white);
+--link-color-medium: var(--white);
+--link-color-dark: var(--black);
+}
+body {
+	color: var(--text-color);
+	background-color: var(--bg-color);
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.bg-color {
+	color: var(--text-color);
+	background-color: hsl(var(--bg-color));
+	overflow: hidden;
+}
+.bg-color a {
+	color: var(--link-color);
+}
+.bg-color-light {
+	color: var(--text-color-light);
+	background-color: hsl(var(--bg-color-light));
+}
+.bg-color-light a {
+	color: var(--link-color-light);
+}
+.bg-color-medium {
+	color: var(--text-color-medium);
+	background-color: hsl(var(--bg-color-medium));
+}
+.bg-color-medium a {
+	color: var(--link-color-medium);
+}
+.bg-color-dark {
+	color: var(--text-color-dark);
+	background-color: hsl(var(--bg-color-dark));
+}
+.bg-color-dark a {
+	color: var(--link-color-dark);
+}
+.btn-dark {
+	outline: 2px solid var(--dgrey);
+	outline-offset: -2px;
+}
+.button-container {
+	border-bottom: 1px solid var(--text-color);
+}
+.four-container {
+	overflow: hidden;
+}
+.four {
+	width: 25%;
+	float: left;
+	padding: 1em;
+	border: 1px dotted var(--text-color);
+}
+
+/*media*/
+@media (max-width: 40em) {
+.four {
+	width: 100%;
+	margin: 0;
+}
+}
+.btn-theme {
+	background-color: hsl(var(--bg-color-dark));
+	color: var(--text-color-dark);
+}
+.btn-theme:hover {
+	background-color: hsl(var(--bg-color-medium));
+	color: var(--text-color-medium);
+}
+a[href^="tel"] {
+	var(--link-color);
+	-webkit-text-fill-color: currentColor;
+}
+.bg-color a[href^="tel"] {
+	color: var(--link-color);
+	-webkit-text-fill-color: var(--link-color);
+}
+.bg-color-light a[href^="tel"] {
+	color: var(--link-color-light);
+	-webkit-text-fill-color: var(--link-color-light);
+}
+.bg-color-medium a[href^="tel"] {
+	color: var(--link-color-medium);
+	-webkit-text-fill-color: var(--link-color-medium);
+}
+.bg-color-dark a[href^="tel"] {
+	color: var(--link-color-dark);
+	-webkit-text-fill-color: var(--link-color-dark);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="button-container bck-lgrey">
+    <div class="w-80 p-responsive">
+      <h1 class="black-text">telephone3</h1>
+      <button class="btn btn-theme" data-theme="mono"><span class="iconfont" aria-hidden="true">Ì</span>Mono</button>
+      <button class="btn btn-theme" data-theme="deep-rose"><span class="iconfont" aria-hidden="true">Ì</span>Deep rose</button>
+      <button class="btn btn-theme" data-theme="brilliant-rose"><span class="iconfont" aria-hidden="true">Ì</span>Brilliant rose</button>
+      <button class="btn btn-theme" data-theme="raspberry-red"><span class="iconfont" aria-hidden="true">Ì</span>Raspberry red</button>
+      <button class="btn btn-theme" data-theme="deep-orange"><span class="iconfont" aria-hidden="true">Ì</span>Deep orange</button>
+      <button class="btn btn-theme" data-theme="butter-yellow"><span class="iconfont" aria-hidden="true">Ì</span>Butter yellow</button>
+      <button class="btn btn-theme" data-theme="dark-lavender"><span class="iconfont" aria-hidden="true">Ì</span>Dark lavender</button>
+      <button class="btn btn-theme" data-theme="bondi-blue"><span class="iconfont" aria-hidden="true">Ì</span>Bondi blue</button>
+      <button class="btn btn-theme" data-theme="turquoise"><span class="iconfont" aria-hidden="true">Ì</span>Turquoise</button>
+      <button class="btn btn-theme" data-theme="sea-green"><span class="iconfont" aria-hidden="true">Ì</span>Sea green</button>
+      <button class="btn btn-theme" data-theme="fresh-green"><span class="iconfont" aria-hidden="true">Ì</span>Fresh green</button>
+      <button class="btn btn-theme" data-theme="persian-indigo"><span class="iconfont" aria-hidden="true">Ì</span>Persian indigo</button>
+      <button class="btn btn-theme" data-theme="midnight-blue"><span class="iconfont" aria-hidden="true">Ì</span>Midnight blue</button>
+      <button class="btn btn-theme" data-theme="dark"><span class="iconfont" aria-hidden="true">Ì</span>Dark</button>
+    </div>
+  </div>
+  <div class="w-80 p-responsive">
+    <div class="four-container mb-reg">
+      <div class="four bg-color">
+        <p>None<br>
+          <a href="#">Link</a><br>
+          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+      </div>
+      <div class="four bg-color-light">
+        <p>Light<br>
+          <a href="#">Link</a><br>
+          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+      </div>
+      <div class="four bg-color-medium">
+        <p>Medium<br>
+          <a href="#">Link</a><br>
+          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+      </div>
+      <div class="four bg-color-dark">
+        <p>Dark<br>
+          <a href="#">Link</a><br>
+          <a href="tel:01752585858" class="largetext"><span class="iconfont" aria-hidden="true">0</span>01752 585 858</a></p>
+      </div>
+    </div>
+	  
+	  
+	  
+	  <div class="w-80 p-responsive codegrey black-text">
+		  
+		  
+		  &lt;a href="tel:01752585858"&gt;&lt;span class="iconfont" aria-hidden="true"&gt;0&lt;/span&gt;01752 585 858&lt;/a&gt;
+		 
+	  </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'mono');
+      setTheme(theme);
+
+      document.querySelectorAll('[data-theme]').forEach(button => {
+        button.addEventListener('click', () => {
+          const selectedTheme = button.getAttribute('data-theme');
+          setTheme(selectedTheme);
+        });
+      });
+    });
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+  </script> 
+</main>
+</body>
+</html>
