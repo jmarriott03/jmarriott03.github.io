@@ -27,6 +27,7 @@ section :last-child {
 <main>
   <section class="p-responsive">
     <h1>prefers-reduced-motion and hardware performance</h1>
+    <p> There’s no direct CSS method to <strong>detect the browser's power</strong> (like CPU/GPU capabilities), but the best-practice approach is to <strong>respect the user's system preference</strong> using <span class="codegrey2 nowrap">prefers-reduced-motion</span>. This media feature is often automatically set on low-power devices or when a user wants to reduce animation for performance or accessibility reasons.</p>
     <ol>
       <li>Uses animations normally.</li>
       <li>Disables or simplifies them if prefers-reduced-motion is set (which can be used as a proxy for “less powerful” or accessibility-conscious environments).</li>
