@@ -27,19 +27,19 @@ section :last-child {
 <main>
   <section class="p-responsive">
     <h1>prefers-reduced-motion and hardware performance</h1>
-    <p> There’s no direct CSS method to <strong>detect the browser's power</strong> (like CPU/GPU capabilities), but the best-practice approach is to <strong>respect the user's system preference</strong> using <span class="codegrey2 nowrap">prefers-reduced-motion</span>. This media feature is often automatically set on low-power devices or when a user wants to reduce animation for performance or accessibility reasons.</p>
+    <p>There’s no direct CSS method to <strong>detect the browser's power</strong> (like CPU/GPU capabilities), but the best-practice approach is to <strong>respect the user's system preference</strong> using <span class="codegrey2 nowrap">prefers-reduced-motion</span>. This media feature is often automatically set on low-power devices or when a user wants to reduce animation for performance or accessibility reasons.</p>
     <ol>
       <li>Uses animations normally.</li>
-      <li>Disables or simplifies them if prefers-reduced-motion is set (which can be used as a proxy for “less powerful” or accessibility-conscious environments).</li>
+      <li>Disables or simplifies them if <span class="codegrey2">prefers-reduced-motion</span> is set (which can be used as a proxy for “less powerful” or accessibility-conscious environments).</li>
     </ol>
     <div class="codegrey mb-reg">
       <p>@media (prefers-reduced-motion: reduce) {<br>
-        *, *::before, *::after {<br>
-        animation: none !important;<br>
-        transition: none !important;<br>
-        scroll-behavior: auto !important;<br>
-        }<br>
-        }</p>
+        &nbsp;&nbsp;*, *::before, *::after {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;animation: none !important;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;transition: none !important;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;scroll-behavior: auto !important;<br>
+        &nbsp;&nbsp;}<br>
+        } </p>
     </div>
     <h2>Notes:</h2>
     <ul>
@@ -56,19 +56,20 @@ section :last-child {
           <li>When in <strong>battery saver mode</strong>, some devices auto-enable reduced motion.</li>
         </ul>
       </li>
-      <li> <strong>Tablets</strong>
+      <li><strong>Tablets</strong>
         <ul>
           <li>Entry-level iPads or Android tablets, especially in power-saving mode.</li>
           <li>Kids’ tablets or e-readers with limited graphics capability.</li>
         </ul>
       </li>
-      <li> <strong>Laptops in battery saver mode</strong>
+      <li><strong>Laptops in battery saver mode</strong>
         <ul>
-          <li>Windows, macOS, or Linux laptops often reduce motion automatically when:</li>
-          <ul>
-            <li>Battery drops below a certain threshold.</li>
-            <li>Power-saving features like “Battery Saver” or “Low Power Mode” are on.</li>
-          </ul>
+          <li>Windows, macOS, or Linux laptops often reduce motion automatically when battery or power-saving thresholds are triggered:
+            <ul>
+              <li>Battery drops below a certain threshold.</li>
+              <li>Power-saving features like “Battery Saver” or “Low Power Mode” are on.</li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li><strong>Wearables or embedded devices</strong>
@@ -77,19 +78,21 @@ section :last-child {
           <li>Smart displays or IoT interfaces with stripped-down web UIs.</li>
         </ul>
       </li>
-      <li> <strong>Accessibility configurations</strong>
+      <li><strong>Accessibility configurations</strong>
         <ul>
           <li>Users on <strong>any device</strong> (desktop or mobile) may enable “Reduce Motion” via system settings:</li>
-          <ul>
-            <li><strong>macOS/iOS</strong>: System Preferences &gt; Accessibility &gt; Display &gt; Reduce motion</li>
-            <li><strong>Windows: Settings</strong> &gt; Ease of Access &gt; Display &gt; Turn off animations</li>
-            <li><strong>Android: Settings</strong> &gt; Accessibility &gt; Remove animations</li>
-          </ul>
+          <li>
+            <ul>
+              <li><strong>macOS/iOS:</strong> System Preferences &gt; Accessibility &gt; Display &gt; Reduce motion</li>
+              <li><strong>Windows:</strong> Settings &gt; Ease of Access &gt; Display &gt; Turn off animations</li>
+              <li><strong>Android:</strong> Settings &gt; Accessibility &gt; Remove animations</li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ol>
-    <h2>Why This Matters</h2>
-    <p>Because of the variety of conditions and user choices, using prefers-reduced-motion isn’t just about “performance.” It’s about respecting:</p>
+    <h2>Why this matters</h2>
+    <p>Because of the variety of conditions and user choices, using <span class="codegrey2">prefers-reduced-motion</span> isn’t just about “performance.” It’s about respecting:</p>
     <ul>
       <li>Device limitations</li>
       <li>User preferences</li>
