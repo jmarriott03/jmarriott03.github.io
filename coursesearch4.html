@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+section {
+	max-width: 60em;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+.search-container {
+	position: relative;
+	max-width: 100%;
+	margin-bottom: 2rem;
+}
+label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+input[type="text"] {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 5px;
+}
+.results {
+	position: absolute;
+	width: 100%;
+	background-color: var(--white);
+	border: 1px solid var(--mgrey);
+	border-top: none;
+	max-height: 15em;
+	overflow-y: auto;
+	z-index: 10;
+}
+.result-item {
+	padding: 1em;
+	border-bottom: 1px solid var(--lgrey);
+	cursor: pointer;
+}
+.result-item[aria-selected="true"] {
+	background-color: var(--mgrey);
+}
+.selected-container {
+	width: 100%;
+	background-color: var(--white);
+	padding: 1em;
+	border-radius: 0.5em;
+	border: 1px solid var(--mgrey);
+}
+.selected-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 0;
+	border-bottom: 1px solid var(--lgrey);
+}
+.selected-item span {
+	flex-grow: 1;
+}
+.remove-btn {
+	background: var(--btn-danger);
+	color: var(--white);
+	border: none;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.remove-btn:hover {
+	background: var(--btn-danger-hov);
+}
+.no-results {
+	padding: 1em;
+	color: var(--mgrey);
+}
+.visually-hidden {
+	position: absolute;
+	left: -9999px;
+}
+.button-container {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+.button-container {
+	justify-content: center;
+}
+.button-container .btn {
+	width: 100%;
+}
+}
+.button-container > .btn-primary {
+	margin: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="bck-lgrey">
+    <section class="p-responsive">
+      <h1>Course search and select</h1>
+      <div class="search-container">
+        <label for="course-search">Search for a course</label>
+        <input
+      type="text"
+      id="course-search"
+      role="combobox"
+      aria-autocomplete="list"
+      aria-expanded="false"
+      aria-controls="results"
+      aria-activedescendant=""
+      autocomplete="off"
+    />
+        <div id="results" class="results" role="listbox" aria-label="Course results"></div>
+      </div>
+      <div class="selected-container">
+        <h2>Selected Courses</h2>
+        <div id="selected-list"></div>
+      </div>
+      <div class="button-container">
+        <button class="btn btn-primary">Next</button>
+      </div>
+    </section>
+  </div>
+</main>
+<script>
+    const courses = [
+      { title: "Psychology BSc", ucas: "C800" },
+      { title: "Computer Science BSc", ucas: "G400" },
+      { title: "Law LLB", ucas: "M100" },
+      { title: "Mechanical Engineering BEng", ucas: "H300" },
+      { title: "Business Management BA", ucas: "N200" },
+      { title: "History BA", ucas: "V100" },
+      { title: "Architecture BSc", ucas: "K100" },
+      { title: "Biomedical Sciences BSc", ucas: "B900" },
+      { title: "Economics BSc", ucas: "L100" },
+      { title: "English Literature BA", ucas: "Q300" }
+    ];
+
+    const input = document.getElementById("course-search");
+    const resultsBox = document.getElementById("results");
+    const selectedList = document.getElementById("selected-list");
+
+    let filteredCourses = [];
+    let activeIndex = -1;
+    const selectedCourses = [];
+
+    input.addEventListener("input", (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      activeIndex = -1;
+
+      if (query.length === 0) {
+        clearResults();
+        return;
+      }
+
+      filteredCourses = courses.filter(course =>
+        course.title.toLowerCase().includes(query) || course.ucas.toLowerCase().includes(query)
+      );
+
+      renderResults();
+    });
+
+    input.addEventListener("keydown", (e) => {
+      const items = resultsBox.querySelectorAll(".result-item");
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (filteredCourses.length > 0) {
+          activeIndex = (activeIndex + 1) % filteredCourses.length;
+          updateActiveDescendant(items);
+        }
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (filteredCourses.length > 0) {
+          activeIndex = (activeIndex - 1 + filteredCourses.length) % filteredCourses.length;
+          updateActiveDescendant(items);
+        }
+      } else if (e.key === "Enter") {
+        if (activeIndex >= 0 && filteredCourses[activeIndex]) {
+          selectCourse(filteredCourses[activeIndex]);
+          clearResults();
+        }
+      } else if (e.key === "Escape") {
+        clearResults();
+      }
+    });
+
+    function renderResults() {
+      resultsBox.innerHTML = "";
+      input.setAttribute("aria-expanded", "true");
+
+      if (filteredCourses.length === 0) {
+        resultsBox.innerHTML = '<div class="no-results">No results found</div>';
+        input.setAttribute("aria-activedescendant", "");
+        return;
+      }
+
+      filteredCourses.forEach((course, index) => {
+        const div = document.createElement("div");
+        div.className = "result-item";
+        div.setAttribute("role", "option");
+        div.id = `result-${index}`;
+        div.setAttribute("aria-selected", index === activeIndex ? "true" : "false");
+        div.innerHTML = `
+          <div class="course-title">${course.title}</div>
+          <div class="ucas-code">UCAS: ${course.ucas}</div>
+        `;
+        div.addEventListener("click", () => {
+          selectCourse(course);
+          clearResults();
+          input.focus();
+        });
+        resultsBox.appendChild(div);
+      });
+
+      updateActiveDescendant(resultsBox.querySelectorAll(".result-item"));
+    }
+
+    function updateActiveDescendant(items) {
+      items.forEach((item, i) => {
+        item.setAttribute("aria-selected", i === activeIndex ? "true" : "false");
+      });
+
+      if (activeIndex >= 0 && items[activeIndex]) {
+        input.setAttribute("aria-activedescendant", items[activeIndex].id);
+        items[activeIndex].scrollIntoView({ block: "nearest" });
+      } else {
+        input.setAttribute("aria-activedescendant", "");
+      }
+    }
+
+    function selectCourse(course) {
+      if (selectedCourses.find(c => c.ucas === course.ucas)) return;
+
+      selectedCourses.push(course);
+      renderSelected();
+    }
+
+    function removeCourse(ucasCode) {
+      const index = selectedCourses.findIndex(c => c.ucas === ucasCode);
+      if (index !== -1) {
+        selectedCourses.splice(index, 1);
+        renderSelected();
+      }
+    }
+
+    function renderSelected() {
+      selectedList.innerHTML = "";
+      selectedCourses.forEach(course => {
+        const div = document.createElement("div");
+        div.className = "selected-item";
+        div.innerHTML = `
+          <span>${course.title} (${course.ucas})</span>
+          <button class="remove-btn" onclick="removeCourse('${course.ucas}')">Remove</button>
+        `;
+        selectedList.appendChild(div);
+      });
+    }
+
+    function clearResults() {
+      resultsBox.innerHTML = "";
+      filteredCourses = [];
+      activeIndex = -1;
+      input.setAttribute("aria-expanded", "false");
+      input.setAttribute("aria-activedescendant", "");
+    }
+
+    // Make removeCourse accessible
+    window.removeCourse = removeCourse;
+  </script>
+</body>
+</html>
