@@ -11,6 +11,12 @@
 :root {
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
 }
 /*
 * {
@@ -72,8 +78,8 @@ td {
 }
 .card:focus-within {
 background-color: var(--lgrey);
-	outline: 2px solid var(--link);
-	outline-offset: -2px;
+outline: 2px solid var(--link);
+outline-offset: -2px;
 }
 .card img {
 	width: calc(100% + 2rem);
@@ -100,12 +106,42 @@ outline: none;
 .topstroke {
 	border-top: 0.25rem solid var(--black);
 }
-	
 .line-clamp {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 1em;
+	display: inline-block;
+	margin-bottom: 1em;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
 }
 </style>
 </head>
@@ -116,10 +152,20 @@ outline: none;
     <p>Showing 1-9 of 12 courses</p>
     <div class="card-container">
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">BA (Hons) Architecture</h3>
-        <p class="line-clamp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3 class="blue-link">BDS Dental Surgery</h3>
+        <p><span class="tag tag-undergraduate">Undergraduate</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>5 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Comprehensive undergraduate degree in dental surgery, combining theoretical knowledge with extensive clinical practice in modern dental lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow">
+        <p><span class="tag tag-undergraduate">Undergraduate</span></p>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span></p>
+        <p><span class="tag tag-postgraduate-research">Postgraduate research</span></p>
+        <p><span class="tag tag-short-course">Short course</span></p>
+        <p><span class="tag tag-degree-apprenticeship">Degree apprenticeship</span></p>
+        <p><span class="tag tag-online">Online</span></p>
         <p><a href="#">2XXX</a></p>
       </div>
       <div class="card rounded-1 p-1 stroke shadow">
