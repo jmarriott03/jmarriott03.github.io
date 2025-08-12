@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid var(--black);/*	width: auto;*/
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	gap: 1em;
+}
+.card {
+	width: 100%;
+	max-width: 30em;
+	transition: 0.3s ease;
+	margin: 0;
+	max-width: 40em;
+}
+.card > * {
+	color: var(--black);
+	text-decoration: none;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.card:hover {
+	background-color: var(--lgrey);
+	cursor: pointer;
+}
+.card:focus-within {
+background-color: var(--lgrey);
+outline: 2px solid var(--link);
+outline-offset: -2px;
+}
+.card img {
+	width: calc(100% + 2rem);
+	height: auto;
+	margin: -1rem -1rem 1.5rem -1rem;
+	mix-blend-mode: multiply;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card:focus-within *:focus {
+outline: none;
+}
+.blue-link {
+	color: var(--link);
+	text-decoration: underline;
+}
+.black-link {
+	color: var(--black);
+	text-decoration: underline;
+}
+.white-link {
+	color: var(--black);
+	text-decoration: underline;
+}
+.topstroke {
+	border-top: 0.25rem solid var(--black);
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 1em;
+	display: inline-block;
+	margin-bottom: 1em;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <h2 class="m-0">Search results</h2>
+    <p>Showing 1-9 of 12 courses</p>
+    <div class="card-container">
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link">BDS Dental Surgery</h3>
+        <p><span class="tag tag-undergraduate">Undergraduate</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>5 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Comprehensive undergraduate degree in dental surgery, combining theoretical knowledge with extensive clinical practice in modern dental lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><span class="tag tag-undergraduate">Undergraduate</span></p>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span></p>
+        <p><span class="tag tag-postgraduate-research">Postgraduate research</span></p>
+        <p><span class="tag tag-short-course">Short course</span></p>
+        <p><span class="tag tag-degree-apprenticeship">Degree apprenticeship</span></p>
+        <p><span class="tag tag-online">Online</span></p>
+        <p><a href="#">2XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">3XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">4XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">5XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">6XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">7XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">8XXX</a></p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><a href="#">9XXX</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
