@@ -30,10 +30,6 @@
 	outline-offset: -1px;
 }
 */
-	
-	
-	
-	
 /*mono*/
 .mono1 {
 	background-color: #eee;
@@ -174,11 +170,6 @@
 .midnightblue3 {
 	background-color: #131648;
 }
-	
-	
-	
-	
-
 section {
 	max-width: 80em;
 	overflow: hidden;
@@ -198,17 +189,49 @@ section :last-child {
 .peer-bck-white {
 	background-color: var(--white);
 }
-	
-	 
-	
-	
 .peer-bck-tint {
 	background-color: rgba(255,255,255,0.2);
 }
 .stroke-tint {
-  outline: 2px solid rgba(255,255,255,0.5);
-  outline-offset: -2px;
-  overflow: hidden;
+	outline: 2px solid rgba(255,255,255,0.5);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+/* pulsing green dot before paragraph text */
+.pulsing-dot {
+	position: relative;
+}
+/* draw the dot */
+.pulsing-dot::before {
+	content: "";
+	display: inline-block;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 50%;
+	background-color: #cf3; /* theme green */
+	margin-right: 0.5em;
+	vertical-align: middle;
+	opacity: 1;
+	/* fade in/out 3 times then stop */
+	animation: fade-dot 1.5s ease-in-out 0s 3 forwards;
+}
+@keyframes fade-dot {
+0% {
+opacity: 1;
+}
+50% {
+opacity: 0.2;
+}
+100% {
+opacity: 1;
+}
+}
+
+/* Respect reduced-motion preference (not needed because I have this covered in plymouth_framework.css) */
+@media (prefers-reduced-motion: reduce) {
+.pulsing-dot::before {
+	animation: none;
+}
 }
 </style>
 </head>
@@ -218,75 +241,60 @@ section :last-child {
     <h1>peer5</h1>
     <h2>mono3</h2>
     <div class="p-1 mono3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>lime3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>lime3</h2>
     <div class="p-1 lime3 centered-child black-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>deeprose3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>deeprose3</h2>
     <div class="p-1 deeprose3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>brilliantrose3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>brilliantrose3</h2>
     <div class="p-1 brilliantrose3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>raspberryred3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>raspberryred3</h2>
     <div class="p-1 raspberryred3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>deeporange3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>deeporange3</h2>
     <div class="p-1 deeporange3 centered-child black-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>butteryellow3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>butteryellow3</h2>
     <div class="p-1 butteryellow3 centered-child black-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>darklavender3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>darklavender3</h2>
     <div class="p-1 darklavender3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>bondiblue3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>bondiblue3</h2>
     <div class="p-1 bondiblue3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>turquoise3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>turquoise3</h2>
     <div class="p-1 turquoise3 centered-child black-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
-    </div> 
-	  
-	  <h2>seagreen3</h2>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
+    </div>
+    <h2>seagreen3</h2>
     <div class="p-1 seagreen3 centered-child black-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
     </div>
-	  
-	  <h2>freshgreen3</h2>
+    <h2>freshgreen3</h2>
     <div class="p-1 freshgreen3 centered-child black-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
     </div>
-	  
-	  <h2>persianindigo3</h2>
+    <h2>persianindigo3</h2>
     <div class="p-1 persianindigo3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
     </div>
-	  
-	  <h2>midnightblue3</h2>
+    <h2>midnightblue3</h2>
     <div class="p-1 midnightblue3 centered-child white-text mb-reg">
-      <p class="rounded-2 p-1 peer-bck-tint stroke-tint"><span class="iconfont" aria-hidden="true">Ê</span>8 people are discovering their passion for computer science right now</p>
+      <p class="rounded-2 p-1 peer-bck-tint stroke-tint pulsing-dot">8 people are discovering their passion for computer science right now</p>
     </div>
-	  
-	 
   </section>
 </main>
 </body>
