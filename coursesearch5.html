@@ -316,6 +316,9 @@ option {
 .pt-reg {
 	padding-top: 1.5em;
 }
+label {
+    line-height: 2;
+  }
 </style>
 </head>
 <body>
@@ -328,7 +331,7 @@ option {
         <input type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
       </div>
       <h3>Filter by course type</h3>
-<!--
+      <!--
       <div class="mb-1">
         <div class="tag tag-bck-white">Undergraduate</div>
         <div class="tag tag-bck-white">Postgraduate taught</div>
@@ -337,7 +340,8 @@ option {
         <div class="tag tag-bck-white">Degree apprenticeship</div>
         <div class="tag tag-bck-white">Online</div>
       </div>
--->
+--> 
+      <!--
       <div class="mb-1">
         <div class="tag tag-undergraduate">Undergraduate</div>
         <div class="tag tag-postgraduate-taught">Postgraduate taught</div>
@@ -345,6 +349,35 @@ option {
         <div class="tag tag-short-course">Short course</div>
         <div class="tag tag-degree-apprenticeship">Degree apprenticeship</div>
         <div class="tag tag-online">Online</div>
+      </div>
+-->
+      
+      <div class="mb-1">
+        <form>
+          <label>
+            <input type="checkbox" name="type" value="undergraduate">
+            Undergraduate</label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="postgraduate-taught">
+            Postgraduate taught</label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="postgraduate-research">
+            Postgraduate research</label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="short-course">
+            Short course</label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="degree-apprenticeship">
+            Degree apprenticeship</label>
+          <br>
+          <label>
+            <input type="checkbox" name="type" value="online">
+            Online</label>
+        </form>
       </div>
       <h3>Filter by location</h3>
       <div class="filter-section">
