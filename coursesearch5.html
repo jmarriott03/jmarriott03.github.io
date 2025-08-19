@@ -18,12 +18,10 @@
 --degree-apprenticeship: #7fbfd7;
 --online: #c1004a;
 }
-/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
-*/
 .bck-highlight-light {
 	background-color: var(--highlight-light);
 }
@@ -152,13 +150,141 @@ outline: none;
 .mgrey {
 	color: var(--mgrey);
 }
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-bottom: 1em;
+	width: 100%;
+}
+.split p {
+	margin: 0;
+	max-width: none;
+}
+.split p {
+	flex: 1;  /* take remaining space */
+}
+.split > *:last-child {
+	margin-right: 0;
+}
+
+	
+	
+	
+	
+	@media (max-width: 40em) {
+  .split {
+    flex-direction: column;     /* stack items */
+    align-items: flex-start;    /* align to the left */
+    gap: 0.5em;                 /* optional spacing between items */
+  }
+
+  .split > * {
+    margin-right: 0;            /* remove forced spacing */
+    width: 100%;                /* optional: make children full width */
+  }
+}
+	
+	
+	
+	
+	
+.search-container {
+	width: 100%;
+}
+.search-box {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.5em;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.search-box:focus {
+	outline: none;
+	border-color: var(--link);
+	box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+.search-container {
+	position: relative;
+}
+.search-container::before {
+	content: "B";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0.5em;
+	position: absolute;
+	left: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--dgrey);
+	pointer-events: none;
+	z-index: 1;
+}
+.search-box {
+	padding-left: 2em;/* Your other styles */
+}
+	
+/* Cross-browser placeholder support */
+.search-box::-webkit-input-placeholder {
+color: var(--dgrey);
+}
+.search-box::-moz-placeholder {
+color: var(--dgrey);
+opacity: 1;
+}
+.search-box:-ms-input-placeholder {
+color: var(--dgrey);
+}
+.search-box:-moz-placeholder {
+color: var(--dgrey);
+opacity: 1;
+}
+.tag-bck-white {
+	background-color: var(--white);
+}
 </style>
 </head>
 <body>
 <main>
   <section class="p-responsive">
+    <div class="rounded-responsive p-responsive stroke bck-highlight-light mb-reg">
+      <h1 class="m-0">Search courses</h1>
+      <p>Find the perfect course for you</p>
+      <div class="search-container mb-reg">
+        <input type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
+      </div>
+      <h3>Filter by course type</h3>
+		<div class="mb-1">
+      <div class="tag tag-bck-white">Undergraduate</div>
+      <div class="tag tag-bck-white">Postgraduate taught</div>
+      <div class="tag tag-bck-white">Postgraduate research</div>
+      <div class="tag tag-bck-white">Short course</div>
+      <div class="tag tag-bck-white">Degree apprenticeship</div>
+      <div class="tag tag-bck-white">Online</div></div>
+      <h3>Filter by location</h3>
+      <div class="split mb-reg">
+        <p class="black-text pb-1"><a href="#">Clear all filters</a></p>
+        <button class="btn btn-primary m-0">Search courses</button>
+      </div>
+    </div>
     <h2 class="m-0">Search results</h2>
-    <p>Showing 1-9 of 12 courses</p>
+    <div class="split mb-reg">
+      <p>Showing 1-9 of 12 courses</p>
+      <div>
+        <label for="sort" style="margin-right:0.5rem; font-weight:600;">Sort by:</label>
+        <select id="sort">
+          <option value="relevance">Relevance</option>
+          <option value="az">A–Z</option>
+          <option value="duration">Duration</option>
+          <option value="intake">Next intake</option>
+        </select>
+      </div>
+    </div>
     <div class="card-container mb-reg">
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
         <h3 class="blue-link">BDS Dental Surgery</h3>
@@ -250,7 +376,6 @@ outline: none;
         <p class="line-clamp">Advanced clinical training in restorative dentistry including prosthodontics, endodontics, and periodontics for comprehensive patient care.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
-      
       <!--
       <div class="card rounded-1 p-1 stroke shadow">
         <p><span class="tag tag-undergraduate">Undergraduate</span></p>
@@ -262,9 +387,15 @@ outline: none;
       </div>
 --> 
     </div>
+    <!--
     <div>
       <p class="mb-1">Showing 1-9 of 12 courses</p>
       <p class="floatr"><span class="iconfont mgrey" aria-hidden="true">P</span><span class="mr-1 mgrey">Previous</span> <span class="rounded-0-5 p-0-5 bck-lgrey mr-1">1</span><span class="mr-1">2</span>Next<span class="iconfont ml-1" aria-hidden="true">N</span></p>
+    </div>
+-->
+    <div class="split mb-reg">
+      <p>Showing 1-9 of 12 courses</p>
+      <div><span class="iconfont mgrey" aria-hidden="true">P</span><span class="mr-1 mgrey">Previous</span> <span class="rounded-0-5 p-0-5 bck-lgrey mr-1">1</span><span class="mr-1">2</span>Next<span class="iconfont ml-1" aria-hidden="true">N</span></div>
     </div>
   </section>
 </main>
