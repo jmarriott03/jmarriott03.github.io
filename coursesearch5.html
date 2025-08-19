@@ -18,10 +18,12 @@
 --degree-apprenticeship: #7fbfd7;
 --online: #c1004a;
 }
+/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+*/
 .bck-highlight-light {
 	background-color: var(--highlight-light);
 }
@@ -169,27 +171,17 @@ outline: none;
 	margin-right: 0;
 }
 
-	
-	
-	
-	
-	@media (max-width: 40em) {
-  .split {
-    flex-direction: column;     /* stack items */
-    align-items: flex-start;    /* align to the left */
-    gap: 0.5em;                 /* optional spacing between items */
-  }
-
-  .split > * {
-    margin-right: 0;            /* remove forced spacing */
-    width: 100%;                /* optional: make children full width */
-  }
+@media (max-width: 40em) {
+.split {
+	flex-direction: column;     /* stack items */
+	align-items: flex-start;    /* align to the left */
+	gap: 0.5em;                 /* optional spacing between items */
 }
-	
-	
-	
-	
-	
+.split > * {
+	margin-right: 0;            /* remove forced spacing */
+	width: 100%;                /* optional: make children full width */
+}
+}
 .search-container {
 	width: 100%;
 }
@@ -247,6 +239,83 @@ opacity: 1;
 .tag-bck-white {
 	background-color: var(--white);
 }
+.filter-label {
+	font-size: 14px;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 10px;
+	display: block;
+}
+.dropdown-wrapper {
+	position: relative;
+	width: 100%;
+}
+.dropdown-select {
+	width: 100%;
+	padding: 12px 40px 12px 16px;
+	font-size: 14px;
+	color: #333;
+	background: white;
+	border: 2px solid #ddd;
+	border-radius: 6px;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: all 0.3s ease;
+	outline: none;
+}
+.dropdown-select:hover {
+	border-color: #0066cc;
+}
+.dropdown-select:focus {
+	border-color: #0066cc;
+	box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+.dropdown-arrow {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666;
+	pointer-events: none;
+	transition: transform 0.3s ease;
+}
+.dropdown-select:focus + .dropdown-arrow {
+	transform: translateY(-50%) rotate(180deg);
+}
+.content-area {
+	padding: 40px 20px;
+	text-align: center;
+	color: #666;
+}
+.selected-location {
+	font-size: 18px;
+	font-weight: 600;
+	color: #0066cc;
+	margin-bottom: 10px;
+}
+.location-info {
+	font-size: 14px;
+	line-height: 1.6;
+}
+/* Custom styling for option groups */
+optgroup {
+	font-weight: bold;
+	color: #333;
+	font-style: normal;
+}
+option {
+	padding: 8px;
+	font-weight: normal;
+}
+.pt-reg {
+	padding-top: 1.5em;
+}
 </style>
 </head>
 <body>
@@ -259,17 +328,45 @@ opacity: 1;
         <input type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
       </div>
       <h3>Filter by course type</h3>
-		<div class="mb-1">
-      <div class="tag tag-bck-white">Undergraduate</div>
-      <div class="tag tag-bck-white">Postgraduate taught</div>
-      <div class="tag tag-bck-white">Postgraduate research</div>
-      <div class="tag tag-bck-white">Short course</div>
-      <div class="tag tag-bck-white">Degree apprenticeship</div>
-      <div class="tag tag-bck-white">Online</div></div>
+      <div class="mb-1">
+        <div class="tag tag-bck-white">Undergraduate</div>
+        <div class="tag tag-bck-white">Postgraduate taught</div>
+        <div class="tag tag-bck-white">Postgraduate research</div>
+        <div class="tag tag-bck-white">Short course</div>
+        <div class="tag tag-bck-white">Degree apprenticeship</div>
+        <div class="tag tag-bck-white">Online</div>
+      </div>
       <h3>Filter by location</h3>
-      <div class="split mb-reg">
-        <p class="black-text pb-1"><a href="#">Clear all filters</a></p>
-        <button class="btn btn-primary m-0">Search courses</button>
+      <div class="filter-section">
+        <div class="dropdown-wrapper">
+          <select id="locationSelect" class="dropdown-select">
+            <option value="all">All locations</option>
+            <optgroup label="Main Campuses">
+            <option value="plymouth-main">Plymouth - Main Campus</option>
+            <option value="plymouth-roland-levinsky">Plymouth - Roland Levinsky Building</option>
+            <option value="plymouth-marine">Plymouth - Marine Station</option>
+            </optgroup>
+            <optgroup label="Partner Locations">
+            <option value="exeter">Exeter Campus</option>
+            <option value="truro">Truro Campus</option>
+            <option value="newton-abbot">Newton Abbot Campus</option>
+            <option value="taunton">Taunton Campus</option>
+            </optgroup>
+            <optgroup label="International">
+            <option value="malaysia">Malaysia Campus</option>
+            <option value="singapore">Singapore Partner</option>
+            </optgroup>
+            <optgroup label="Online">
+            <option value="distance-learning">Distance learning</option>
+            <option value="online-programs">Online programs</option>
+            </optgroup>
+          </select>
+          <div class="dropdown-arrow"></div>
+        </div>
+        <div class="split pt-reg mb-reg">
+          <p class="black-text pb-1"><a href="#">Clear all filters</a></p>
+          <button class="btn btn-primary m-0">Search courses</button>
+        </div>
       </div>
     </div>
     <h2 class="m-0">Search results</h2>
