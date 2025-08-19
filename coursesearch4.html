@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Author: Jamie Marriott">
 <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <link rel="stylesheet" href="css/plymouth_reset.css">
@@ -12,16 +13,10 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
-/*
-* {
-	outline: 1px dotted red;
-	outline-offset: -1px;
-}
-*/
 section {
 	max-width: 60em;
 }
-section :last-child {
+section > *:last-child {
 	margin-bottom: 0;
 }
 .search-container {
@@ -36,10 +31,15 @@ label {
 }
 input[type="text"] {
 	width: 100%;
-	padding: 1em;
-	font-size: 1em;
+	padding: 1rem;
+	font-size: 1rem;
+	line-height: 1.5;
 	border: 1px solid var(--mgrey);
 	border-radius: 5px;
+}
+input[type="text"]:focus-visible {
+outline: 2px solid var(--highlight-dark);
+outline-offset: 2px;
 }
 .results {
 	position: absolute;
@@ -52,7 +52,7 @@ input[type="text"] {
 	z-index: 10;
 }
 .result-item {
-	padding: 1em;
+	padding: 1rem;
 	border-bottom: 1px solid var(--lgrey);
 	cursor: pointer;
 }
@@ -62,14 +62,14 @@ input[type="text"] {
 .selected-container {
 	width: 100%;
 	background-color: var(--white);
-	padding: 1em;
+	padding: 1rem;
 	border-radius: 0.5em;
 	border: 1px solid var(--mgrey);
 }
 .selected-item {
 	display: flex;
 	justify-content: space-between;
-	padding: 0.5em 0;
+	padding: 0.5rem 0;
 	border-bottom: 1px solid var(--lgrey);
 }
 .selected-item span {
@@ -79,16 +79,17 @@ input[type="text"] {
 	background: var(--btn-danger);
 	color: var(--white);
 	border: none;
-	padding: 0.5em;
+	padding: 0.5rem;
 	border-radius: 0.5em;
 	cursor: pointer;
-	transition: 0.3s;
+	transition: background 0.3s;
+	font-size: 1rem;
 }
-.remove-btn:hover {
-	background: var(--btn-danger-hov);
+.remove-btn:hover, .remove-btn:focus-visible {
+background: var(--btn-danger-hov);
 }
 .no-results {
-	padding: 1em;
+	padding: 1rem;
 	color: var(--mgrey);
 }
 .visually-hidden {
@@ -123,171 +124,282 @@ input[type="text"] {
       <div class="search-container">
         <label for="course-search">Search for a course</label>
         <input
-      type="text"
-      id="course-search"
-      role="combobox"
-      aria-autocomplete="list"
-      aria-expanded="false"
-      aria-controls="results"
-      aria-activedescendant=""
-      autocomplete="off"
-    />
-        <div id="results" class="results" role="listbox" aria-label="Course results"></div>
+          type="text"
+          id="course-search"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="results"
+          aria-activedescendant=""
+          autocomplete="off"
+          aria-describedby="search-help"
+        />
+        <div id="search-help" class="visually-hidden"> Type to search for courses by name or UCAS code. Use arrow keys to navigate results, Enter to select, Escape to close. </div>
+        <div id="results" class="results" role="listbox" aria-label="Course results" aria-live="polite"></div>
       </div>
-      <div class="selected-container">
-        <h2>Selected Courses</h2>
-        <div id="selected-list"></div>
+      <div class="selected-container" aria-live="polite">
+        <h2>Selected Courses (<span id="selected-count">0</span>)</h2>
+        <div id="selected-list" role="list"></div>
       </div>
       <div class="button-container">
-        <button class="btn btn-primary">Next</button>
+        <button class="btn btn-primary" type="button">Next</button>
       </div>
     </section>
   </div>
 </main>
 <script>
-    const courses = [
-      { title: "Psychology BSc", ucas: "C800" },
-      { title: "Computer Science BSc", ucas: "G400" },
-      { title: "Law LLB", ucas: "M100" },
-      { title: "Mechanical Engineering BEng", ucas: "H300" },
-      { title: "Business Management BA", ucas: "N200" },
-      { title: "History BA", ucas: "V100" },
-      { title: "Architecture BSc", ucas: "K100" },
-      { title: "Biomedical Sciences BSc", ucas: "B900" },
-      { title: "Economics BSc", ucas: "L100" },
-      { title: "English Literature BA", ucas: "Q300" }
-    ];
+(function() {
+  'use strict';
 
-    const input = document.getElementById("course-search");
-    const resultsBox = document.getElementById("results");
-    const selectedList = document.getElementById("selected-list");
+  const courses = [
+    { title: "Psychology BSc", ucas: "C800" },
+    { title: "Computer Science BSc", ucas: "G400" },
+    { title: "Law LLB", ucas: "M100" },
+    { title: "Mechanical Engineering BEng", ucas: "H300" },
+    { title: "Business Management BA", ucas: "N200" },
+    { title: "History BA", ucas: "V100" },
+    { title: "Architecture BSc", ucas: "K100" },
+    { title: "Biomedical Sciences BSc", ucas: "B900" },
+    { title: "Economics BSc", ucas: "L100" },
+    { title: "English Literature BA", ucas: "Q300" }
+  ];
 
-    let filteredCourses = [];
-    let activeIndex = -1;
-    const selectedCourses = [];
+  // Cache DOM
+  const elements = {
+    input: document.getElementById("course-search"),
+    resultsBox: document.getElementById("results"),
+    selectedList: document.getElementById("selected-list"),
+    selectedCount: document.getElementById("selected-count")
+  };
 
-    input.addEventListener("input", (e) => {
-      const query = e.target.value.trim().toLowerCase();
-      activeIndex = -1;
+  // State
+  const state = {
+    filteredCourses: [],
+    activeIndex: -1,
+    selectedCourses: new Map()
+  };
 
-      if (query.length === 0) {
-        clearResults();
-        return;
-      }
+  // Utilities
+  const escapeMap = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+  const escapeReg = /[&<>"']/g;
+  function escapeHtml(text) {
+    return text.replace(escapeReg, m => escapeMap[m]);
+  }
 
-      filteredCourses = courses.filter(course =>
-        course.title.toLowerCase().includes(query) || course.ucas.toLowerCase().includes(query)
-      );
+  function debounce(func, wait) {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }
 
-      renderResults();
+  // Search logic
+  function searchCourses(query) {
+    if (!query) return [];
+    const normalizedQuery = query.toLowerCase().trim();
+    return courses.filter(course => {
+      const titleMatch = course.title.toLowerCase().includes(normalizedQuery);
+      const ucasMatch = course.ucas.toLowerCase().includes(normalizedQuery);
+      return titleMatch || ucasMatch;
+    }).sort((a, b) => {
+      const aTitle = a.title.toLowerCase().indexOf(normalizedQuery);
+      const bTitle = b.title.toLowerCase().indexOf(normalizedQuery);
+      if (aTitle !== -1 && bTitle === -1) return -1;
+      if (bTitle !== -1 && aTitle === -1) return 1;
+      if (aTitle !== -1 && bTitle !== -1) return aTitle - bTitle;
+      return a.title.localeCompare(b.title);
     });
+  }
 
-    input.addEventListener("keydown", (e) => {
-      const items = resultsBox.querySelectorAll(".result-item");
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        if (filteredCourses.length > 0) {
-          activeIndex = (activeIndex + 1) % filteredCourses.length;
-          updateActiveDescendant(items);
-        }
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        if (filteredCourses.length > 0) {
-          activeIndex = (activeIndex - 1 + filteredCourses.length) % filteredCourses.length;
-          updateActiveDescendant(items);
-        }
-      } else if (e.key === "Enter") {
-        if (activeIndex >= 0 && filteredCourses[activeIndex]) {
-          selectCourse(filteredCourses[activeIndex]);
-          clearResults();
-        }
-      } else if (e.key === "Escape") {
-        clearResults();
-      }
-    });
+  // Rendering
+  function renderResults() {
+    elements.resultsBox.innerHTML = "";
+    elements.input.setAttribute("aria-expanded", "true");
 
-    function renderResults() {
-      resultsBox.innerHTML = "";
-      input.setAttribute("aria-expanded", "true");
-
-      if (filteredCourses.length === 0) {
-        resultsBox.innerHTML = '<div class="no-results">No results found</div>';
-        input.setAttribute("aria-activedescendant", "");
-        return;
-      }
-
-      filteredCourses.forEach((course, index) => {
-        const div = document.createElement("div");
-        div.className = "result-item";
-        div.setAttribute("role", "option");
-        div.id = `result-${index}`;
-        div.setAttribute("aria-selected", index === activeIndex ? "true" : "false");
-        div.innerHTML = `
-          <div class="course-title">${course.title}</div>
-          <div class="ucas-code">UCAS: ${course.ucas}</div>
-        `;
-        div.addEventListener("click", () => {
-          selectCourse(course);
-          clearResults();
-          input.focus();
-        });
-        resultsBox.appendChild(div);
-      });
-
-      updateActiveDescendant(resultsBox.querySelectorAll(".result-item"));
+    if (state.filteredCourses.length === 0) {
+      const noResults = document.createElement("div");
+      noResults.className = "no-results";
+      noResults.textContent = "No results found";
+      elements.resultsBox.appendChild(noResults);
+      elements.input.setAttribute("aria-activedescendant", "");
+      return;
     }
 
-    function updateActiveDescendant(items) {
-      items.forEach((item, i) => {
-        item.setAttribute("aria-selected", i === activeIndex ? "true" : "false");
-      });
+    const fragment = document.createDocumentFragment();
+    state.filteredCourses.forEach((course, index) => {
+      const div = document.createElement("div");
+      div.className = "result-item";
+      div.setAttribute("role", "option");
+      div.id = `result-${index}`;
+      div.setAttribute("aria-selected", "false");
 
-      if (activeIndex >= 0 && items[activeIndex]) {
-        input.setAttribute("aria-activedescendant", items[activeIndex].id);
-        items[activeIndex].scrollIntoView({ block: "nearest" });
-      } else {
-        input.setAttribute("aria-activedescendant", "");
-      }
+      const isSelected = state.selectedCourses.has(course.ucas);
+      div.innerHTML = `
+  <div class="course-title">
+    ${escapeHtml(course.title)}
+    ${isSelected ? '<span class="iconfont" aria-hidden="true">6</span>' : ''}
+  </div>
+  <div class="ucas-code">UCAS: ${escapeHtml(course.ucas)}</div>
+`;
+
+
+      div.addEventListener("click", () => handleCourseClick(course));
+      fragment.appendChild(div);
+    });
+    elements.resultsBox.appendChild(fragment);
+    updateActiveDescendant(elements.resultsBox.querySelectorAll(".result-item"));
+  }
+
+  function renderSelected() {
+    elements.selectedList.innerHTML = "";
+
+    if (state.selectedCourses.size === 0) {
+      const empty = document.createElement("div");
+      empty.className = "no-results";
+      empty.textContent = "No courses selected yet";
+      elements.selectedList.appendChild(empty);
+      return;
     }
 
-    function selectCourse(course) {
-      if (selectedCourses.find(c => c.ucas === course.ucas)) return;
+    const fragment = document.createDocumentFragment();
+    state.selectedCourses.forEach(course => {
+      const div = document.createElement("div");
+      div.className = "selected-item";
+      div.setAttribute("role", "listitem");
+      div.innerHTML = `
+        <span>${escapeHtml(course.title)} (${escapeHtml(course.ucas)})</span>
+        <button class="remove-btn" type="button" data-ucas="${escapeHtml(course.ucas)}"
+          aria-label="Remove ${escapeHtml(course.title)}">Remove</button>
+      `;
+      fragment.appendChild(div);
+    });
+    elements.selectedList.appendChild(fragment);
+  }
 
-      selectedCourses.push(course);
+  // State updates
+  function updateSelectedCount() {
+    elements.selectedCount.textContent = state.selectedCourses.size;
+  }
+
+  function clearResults() {
+    elements.resultsBox.innerHTML = "";
+    state.filteredCourses = [];
+    state.activeIndex = -1;
+    elements.input.setAttribute("aria-expanded", "false");
+    elements.input.setAttribute("aria-activedescendant", "");
+  }
+
+  function updateActiveDescendant(items) {
+    items.forEach((item, i) => {
+      item.setAttribute("aria-selected", i === state.activeIndex ? "true" : "false");
+    });
+    if (state.activeIndex >= 0 && items[state.activeIndex]) {
+      elements.input.setAttribute("aria-activedescendant", items[state.activeIndex].id);
+      items[state.activeIndex].scrollIntoView({ block: "nearest" });
+    } else {
+      elements.input.setAttribute("aria-activedescendant", "");
+    }
+  }
+
+  // Actions
+  function selectCourse(course) {
+    if (state.selectedCourses.has(course.ucas)) return;
+    state.selectedCourses.set(course.ucas, course);
+    renderSelected();
+    updateSelectedCount();
+  }
+
+  function removeCourse(ucasCode) {
+    if (state.selectedCourses.has(ucasCode)) {
+      state.selectedCourses.delete(ucasCode);
       renderSelected();
+      updateSelectedCount();
     }
+  }
 
-    function removeCourse(ucasCode) {
-      const index = selectedCourses.findIndex(c => c.ucas === ucasCode);
-      if (index !== -1) {
-        selectedCourses.splice(index, 1);
-        renderSelected();
-      }
+  function handleCourseClick(course) {
+    selectCourse(course);
+    clearResults();
+    elements.input.value = "";
+    elements.input.focus();
+  }
+
+  function handleKeyDown(e) {
+    const items = elements.resultsBox.querySelectorAll(".result-item");
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        if (state.filteredCourses.length > 0) {
+          state.activeIndex = Math.min(state.activeIndex + 1, state.filteredCourses.length - 1);
+          updateActiveDescendant(items);
+        }
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        if (state.filteredCourses.length > 0) {
+          state.activeIndex = Math.max(state.activeIndex - 1, -1);
+          updateActiveDescendant(items);
+        }
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (state.activeIndex >= 0 && state.filteredCourses[state.activeIndex]) {
+          selectCourse(state.filteredCourses[state.activeIndex]);
+          clearResults();
+          elements.input.value = "";
+        }
+        break;
+      case "Escape":
+        clearResults();
+        elements.input.blur();
+        break;
+      case "Tab":
+        clearResults();
+        break;
     }
+  }
 
-    function renderSelected() {
-      selectedList.innerHTML = "";
-      selectedCourses.forEach(course => {
-        const div = document.createElement("div");
-        div.className = "selected-item";
-        div.innerHTML = `
-          <span>${course.title} (${course.ucas})</span>
-          <button class="remove-btn" onclick="removeCourse('${course.ucas}')">Remove</button>
-        `;
-        selectedList.appendChild(div);
-      });
+  // Event Listeners
+  const debouncedSearch = debounce(query => {
+    state.activeIndex = -1;
+    if (!query) {
+      clearResults();
+      return;
     }
+    state.filteredCourses = searchCourses(query);
+    renderResults();
+  }, 150);
 
-    function clearResults() {
-      resultsBox.innerHTML = "";
-      filteredCourses = [];
-      activeIndex = -1;
-      input.setAttribute("aria-expanded", "false");
-      input.setAttribute("aria-activedescendant", "");
+  elements.input.addEventListener("input", e => debouncedSearch(e.target.value.trim()));
+  elements.input.addEventListener("keydown", handleKeyDown);
+
+  document.addEventListener("click", e => {
+    if (!elements.input.contains(e.target) && !elements.resultsBox.contains(e.target)) {
+      clearResults();
     }
+  });
 
-    // Make removeCourse accessible
-    window.removeCourse = removeCourse;
-  </script>
+  elements.selectedList.addEventListener("click", e => {
+    if (e.target.matches(".remove-btn")) {
+      e.preventDefault();
+      removeCourse(e.target.dataset.ucas);
+    }
+  });
+
+  // Init
+  function init() {
+    updateSelectedCount();
+    requestAnimationFrame(() => elements.input.focus());
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+})();
+</script>
 </body>
 </html>
