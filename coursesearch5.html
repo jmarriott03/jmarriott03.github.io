@@ -48,7 +48,7 @@ table {
 td {
 	padding: 0.5em;
 	text-align: left;
-	border-bottom: 1px solid var(--black);/*	width: auto;*/
+	border-bottom: 1px solid var(--black);
 }
 .card-container {
 	display: grid;
@@ -279,6 +279,21 @@ opacity: 1;
 label {
 	line-height: 2;
 }
+.no-underline {
+	text-decoration: none;
+	display: inline-block;
+}
+.checklist-inline form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em; /* spacing between checkboxes */
+}
+.checklist-inline label {
+	display: flex;
+	align-items: center;
+	gap: 0.25em; /* space between checkbox and text */
+	margin: 0;
+}
 </style>
 </head>
 <body>
@@ -291,49 +306,23 @@ label {
         <input type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
       </div>
       <h3>Filter by course type</h3>
-      <!--
-      <div class="mb-1">
-        <div class="tag tag-bck-white">Undergraduate</div>
-        <div class="tag tag-bck-white">Postgraduate taught</div>
-        <div class="tag tag-bck-white">Postgraduate research</div>
-        <div class="tag tag-bck-white">Short course</div>
-        <div class="tag tag-bck-white">Degree apprenticeship</div>
-        <div class="tag tag-bck-white">Online</div>
-      </div>
---> 
-      <!--
-      <div class="mb-1">
-        <div class="tag tag-undergraduate">Undergraduate</div>
-        <div class="tag tag-postgraduate-taught">Postgraduate taught</div>
-        <div class="tag tag-postgraduate-research">Postgraduate research</div>
-        <div class="tag tag-short-course">Short course</div>
-        <div class="tag tag-degree-apprenticeship">Degree apprenticeship</div>
-        <div class="tag tag-online">Online</div>
-      </div>
--->
-      
-      <div class="mb-1">
+      <div class="mb-1 checklist-inline">
         <form>
           <label>
             <input type="checkbox" name="type" value="undergraduate">
             Undergraduate</label>
-          <br>
           <label>
             <input type="checkbox" name="type" value="postgraduate-taught">
             Postgraduate taught</label>
-          <br>
           <label>
             <input type="checkbox" name="type" value="postgraduate-research">
             Postgraduate research</label>
-          <br>
           <label>
             <input type="checkbox" name="type" value="short-course">
             Short course</label>
-          <br>
           <label>
             <input type="checkbox" name="type" value="degree-apprenticeship">
             Degree apprenticeship</label>
-          <br>
           <label>
             <input type="checkbox" name="type" value="online">
             Online</label>
@@ -345,9 +334,9 @@ label {
           <select id="locationSelect" class="dropdown-select">
             <option value="all">All locations</option>
             <optgroup label="Main Campuses">
-            <option value="plymouth-main">Plymouth - Main Campus</option>
-            <option value="plymouth-roland-levinsky">Plymouth - Roland Levinsky Building</option>
-            <option value="plymouth-marine">Plymouth - Marine Station</option>
+            <option value="plymouth-main">Plymouth - Campus 1</option>
+            <option value="plymouth-roland-levinsky">Campus 2</option>
+            <option value="plymouth-marine">Plymouth - Campus 3</option>
             </optgroup>
             <optgroup label="Partner Locations">
             <option value="exeter">Exeter Campus</option>
@@ -366,7 +355,7 @@ label {
           </select>
           <span class="iconfont dropdown-icon" aria-hidden="true">O</span> </div>
         <div class="split pt-reg mb-reg">
-          <p class="black-text"><a href="#">Clear all filters</a></p>
+          <p><a href="#">Clear all filters</a></p>
           <button class="btn btn-primary m-0">Search courses</button>
         </div>
       </div>
@@ -386,7 +375,7 @@ label {
     </div>
     <div class="card-container mb-reg">
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">BDS Dental Surgery</h3>
+        <h3 class="blue-link line-clamp">BDS Dental Surgery</h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>5 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
@@ -395,7 +384,7 @@ label {
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">BDS Dental Surgery with Integrated Foundation Year</h3>
+        <h3 class="blue-link line-clamp">BDS Dental Surgery with Integrated Foundation Year</h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>6 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
@@ -404,7 +393,7 @@ label {
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">BSc (Hons) Dental Therapy and Hygiene</h3>
+        <h3 class="blue-link line-clamp">BSc (Hons) Dental Therapy and Hygiene</h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
@@ -413,7 +402,7 @@ label {
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">BSc (Hons) Dental Therapy and Hygiene with Integrated Foundation Year</h3>
+        <h3 class="blue-link line-clamp">BSc (Hons) Dental Therapy and Hygiene with Integrated Foundation Year</h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>4 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
@@ -422,7 +411,7 @@ label {
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MSc Endodontics</h3>
+        <h3 class="blue-link line-clamp">MSc Endodontics</h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>2 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
@@ -431,7 +420,7 @@ label {
         <p class="next-intake">Next intake: <strong>March 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MSc Oral Surgery</h3>
+        <h3 class="blue-link line-clamp">MSc Oral Surgery</h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
@@ -440,7 +429,7 @@ label {
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MSc Orthodontics</h3>
+        <h3 class="blue-link line-clamp">MSc Orthodontics</h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
@@ -449,7 +438,7 @@ label {
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MSc Periodontology</h3>
+        <h3 class="blue-link line-clamp">MSc Periodontology</h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
@@ -458,7 +447,7 @@ label {
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MSc Periodontology</h3>
+        <h3 class="blue-link line-clamp">MSc Periodontology</h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
@@ -467,7 +456,7 @@ label {
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
       <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link">MSc Restorative Dentistry</h3>
+        <h3 class="blue-link line-clamp">MSc Restorative Dentistry</h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
@@ -475,6 +464,10 @@ label {
         <p class="line-clamp">Advanced clinical training in restorative dentistry including prosthodontics, endodontics, and periodontics for comprehensive patient care.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="blue-link line-clamp">Integrated interdisciplinary programme in sustainable marine engineering, environmental policy, digital data analytics, applied artificial intelligence, renewable energy systems, and international business strategy with professional placement year and overseas study opportunities</h3>
+        <p>Example of 250 character title with line clamp 3.</p>
+      </div>
       <div class="card rounded-1 p-1 stroke shadow">
         <p><span class="tag tag-undergraduate">Undergraduate</span></p>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span></p>
@@ -484,15 +477,9 @@ label {
         <p><span class="tag tag-online">Online</span></p>
       </div>
     </div>
-    <!--
-    <div>
-      <p class="mb-1">Showing 1-9 of 12 courses</p>
-      <p class="floatr"><span class="iconfont mgrey" aria-hidden="true">P</span><span class="mr-1 mgrey">Previous</span> <span class="rounded-0-5 p-0-5 bck-lgrey mr-1">1</span><span class="mr-1">2</span>Next<span class="iconfont ml-1" aria-hidden="true">N</span></p>
-    </div>
--->
     <div class="split mb-reg">
       <p>Showing 1-9 of 12 courses</p>
-      <div><span class="iconfont mgrey" aria-hidden="true">P</span><span class="mr-1 mgrey">Previous</span> <span class="rounded-0-5 p-0-5 bck-lgrey mr-1">1</span><span class="mr-1">2</span>Next<span class="iconfont ml-1" aria-hidden="true">N</span></div>
+      <div><span class="iconfont mgrey" aria-hidden="true">P</span><span class="mr-1 mgrey">Previous</span> <span class="rounded-0-5 p-0-5 bck-lgrey mr-1">1</span><span class="mr-1"><a href="#">2</a></span><a href="#">Next<span class="iconfont ml-1 no-underline" aria-hidden="true">N</span></a></div>
     </div>
   </section>
 </main>
