@@ -252,8 +252,8 @@ opacity: 1;
 }
 .dropdown-select {
 	width: 100%;
-	padding: 12px 40px 12px 16px;
-	font-size: 14px;
+	padding: 12px 40px 12px 16px; /* leave space for icon */
+	font-size: 1em;
 	color: #333;
 	background: white;
 	border: 2px solid #ddd;
@@ -272,20 +272,18 @@ opacity: 1;
 	border-color: #0066cc;
 	box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
-.dropdown-arrow {
+.dropdown-icon {
 	position: absolute;
 	right: 16px;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 0;
-	height: 0;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid #666;
-	pointer-events: none;
+	font-size: 0.9em; /* adjust as needed */
+	color: #666;
+	pointer-events: none; /* allow clicks through to select */
 	transition: transform 0.3s ease;
 }
-.dropdown-select:focus + .dropdown-arrow {
+/* Rotate arrow when dropdown is focused */
+.dropdown-select:focus + .dropdown-icon {
 	transform: translateY(-50%) rotate(180deg);
 }
 .content-area {
@@ -317,8 +315,8 @@ option {
 	padding-top: 1.5em;
 }
 label {
-    line-height: 2;
-  }
+	line-height: 2;
+}
 </style>
 </head>
 <body>
@@ -404,8 +402,7 @@ label {
             <option value="online-programs">Online programs</option>
             </optgroup>
           </select>
-          <div class="dropdown-arrow"></div>
-        </div>
+          <span class="iconfont dropdown-icon" aria-hidden="true">O</span> </div>
         <div class="split pt-reg mb-reg">
           <p class="black-text pb-1"><a href="#">Clear all filters</a></p>
           <button class="btn btn-primary m-0">Search courses</button>
@@ -516,7 +513,6 @@ label {
         <p class="line-clamp">Advanced clinical training in restorative dentistry including prosthodontics, endodontics, and periodontics for comprehensive patient care.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
         </a></div>
-      <!--
       <div class="card rounded-1 p-1 stroke shadow">
         <p><span class="tag tag-undergraduate">Undergraduate</span></p>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span></p>
@@ -525,7 +521,6 @@ label {
         <p><span class="tag tag-degree-apprenticeship">Degree apprenticeship</span></p>
         <p><span class="tag tag-online">Online</span></p>
       </div>
---> 
     </div>
     <!--
     <div>
