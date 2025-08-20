@@ -18,6 +18,20 @@
 --degree-apprenticeship: #7fbfd7;
 --online: #c1004a;
 }
+
+/* Visually hidden label utility (screen reader only) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 /*
 * {
 	outline: 1px dotted red;
@@ -303,7 +317,8 @@ label {
       <h2 class="m-0 largetext2">Search courses</h2>
       <p>Find the perfect course for you</p>
       <div class="search-container mb-reg">
-        <input type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
+        <label for="courseSearch" class="visually-hidden">Search courses</label>
+        <input id="courseSearch" type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
       </div>
       <h3>Filter by course type</h3>
       <div class="mb-reg checklist-inline">
@@ -331,6 +346,7 @@ label {
       <h3>Filter by location</h3>
       <div class="filter-section">
         <div class="dropdown-wrapper">
+          <label for="locationSelect" class="visually-hidden">Select a location</label>
           <select id="locationSelect" class="dropdown-select">
             <option value="all">All locations</option>
             <optgroup label="Main Campuses">
