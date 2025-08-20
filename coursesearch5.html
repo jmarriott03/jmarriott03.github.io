@@ -175,7 +175,7 @@ outline: none;
 .split {
 	flex-direction: column;     /* stack items */
 	align-items: flex-start;    /* align to the left */
-	gap: 0.5em;                 /* optional spacing between items */
+	gap: 1em;                   /* optional spacing between items */
 }
 .split > * {
 	margin-right: 0;            /* remove forced spacing */
@@ -196,7 +196,6 @@ outline: none;
 .search-box:focus {
 	outline: none;
 	border-color: var(--link);
-	box-shadow: 0 0 5px rgba(0,123,255,0.5);
 }
 .search-container {
 	position: relative;
@@ -218,7 +217,7 @@ outline: none;
 	z-index: 1;
 }
 .search-box {
-	padding-left: 2em;/* Your other styles */
+	padding-left: 2em;
 }
 	
 /* Cross-browser placeholder support */
@@ -239,25 +238,18 @@ opacity: 1;
 .tag-bck-white {
 	background-color: var(--white);
 }
-.filter-label {
-	font-size: 14px;
-	font-weight: 600;
-	color: #333;
-	margin-bottom: 10px;
-	display: block;
-}
 .dropdown-wrapper {
 	position: relative;
 	width: 100%;
 }
 .dropdown-select {
 	width: 100%;
-	padding: 12px 40px 12px 16px; /* leave space for icon */
+	padding: 1em 2.5em 1em 1em;
 	font-size: 1em;
-	color: #333;
-	background: white;
-	border: 2px solid #ddd;
-	border-radius: 6px;
+	color: var(--black);
+	background: var(--white);
+	border: 2px solid var(--lgrey);
+	border-radius: 0.5em;
 	cursor: pointer;
 	appearance: none;
 	-webkit-appearance: none;
@@ -266,50 +258,20 @@ opacity: 1;
 	outline: none;
 }
 .dropdown-select:hover {
-	border-color: #0066cc;
+	border-color: var(--link);
 }
 .dropdown-select:focus {
-	border-color: #0066cc;
-	box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+	border-color: var(--link)
 }
 .dropdown-icon {
 	position: absolute;
-	right: 16px;
+	right: 1em;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 0.9em; /* adjust as needed */
-	color: #666;
-	pointer-events: none; /* allow clicks through to select */
+	font-size: 1em;
+	color: var(--black);
+	pointer-events: none;
 	transition: transform 0.3s ease;
-}
-/* Rotate arrow when dropdown is focused */
-.dropdown-select:focus + .dropdown-icon {
-	transform: translateY(-50%) rotate(180deg);
-}
-.content-area {
-	padding: 40px 20px;
-	text-align: center;
-	color: #666;
-}
-.selected-location {
-	font-size: 18px;
-	font-weight: 600;
-	color: #0066cc;
-	margin-bottom: 10px;
-}
-.location-info {
-	font-size: 14px;
-	line-height: 1.6;
-}
-/* Custom styling for option groups */
-optgroup {
-	font-weight: bold;
-	color: #333;
-	font-style: normal;
-}
-option {
-	padding: 8px;
-	font-weight: normal;
 }
 .pt-reg {
 	padding-top: 1.5em;
@@ -404,7 +366,7 @@ label {
           </select>
           <span class="iconfont dropdown-icon" aria-hidden="true">O</span> </div>
         <div class="split pt-reg mb-reg">
-          <p class="black-text pb-1"><a href="#">Clear all filters</a></p>
+          <p class="black-text"><a href="#">Clear all filters</a></p>
           <button class="btn btn-primary m-0">Search courses</button>
         </div>
       </div>
