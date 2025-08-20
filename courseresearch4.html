@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+  --highlight-light: #b4c960;
+  --highlight-dark: #a80075;
+  --btn-danger: #d32f2f;
+  --btn-danger-hov: #9a0007;
+  --white: #fff;
+  --mgrey: #666;
+  --lgrey: #ccc;
+}
+
+/* Accessible visually-hidden class (no scrollbars) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+section {
+  max-width: 60em;
+}
+section > *:last-child {
+  margin-bottom: 0;
+}
+.search-container {
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid var(--mgrey);
+  border-radius: 5px;
+}
+input[type="text"]:focus-visible {
+  outline: 2px solid var(--highlight-dark);
+  outline-offset: 2px;
+}
+.results {
+  position: absolute;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--mgrey);
+  border-top: none;
+  max-height: 15em;
+  overflow-y: auto;
+  z-index: 10;
+}
+.result-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--lgrey);
+  cursor: pointer;
+}
+.result-item[aria-selected="true"] {
+  background-color: var(--mgrey);
+  color: var(--white);
+}
+.selected-container {
+  width: 100%;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5em;
+  border: 1px solid var(--mgrey);
+}
+.selected-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lgrey);
+}
+.selected-item span {
+  flex-grow: 1;
+}
+.remove-btn {
+  background: var(--btn-danger);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+.remove-btn:hover {
+  background: var(--btn-danger-hov);
+}
+.remove-btn:focus-visible {
+  background: var(--btn-danger-hov);
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+.no-results {
+  padding: 1rem;
+  color: var(--mgrey);
+}
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+@media (max-width: 40em) {
+  .button-container {
+    justify-content: center;
+  }
+  .button-container .btn {
+    width: 100%;
+  }
+}
+.button-container > .btn-primary {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="bck-lgrey">
+    <section class="p-responsive">
+      <h1>Course search and select</h1>
+      <div class="search-container">
+        <label for="course-search">Search for a course</label>
+        <input
+          type="text"
+          id="course-search"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="results"
+          aria-activedescendant=""
+          aria-haspopup="listbox"
+          autocomplete="off"
+          aria-describedby="search-help"
+        />
+        <div id="search-help" class="visually-hidden">
+          Type to search for courses by name or UCAS code. Use arrow keys to navigate results, Enter to select, Escape to close.
+        </div>
+        <div id="results" class="results" role="listbox" aria-label="Course results" aria-live="polite"></div>
+      </div>
+      <div class="selected-container" aria-live="polite">
+        <h2>Selected courses (<span id="selected-count">0</span>)</h2>
+        <div id="selected-list" role="list"></div>
+      </div>
+      <div class="button-container">
+        <button class="btn btn-primary" type="button" aria-label="Go to the next step">Next</button>
+      </div>
+    </section>
+  </div>
+</main>
+<script>
+(function() {
+  'use strict';
+
+  const courses = [
+    { title: "Psychology BSc", ucas: "C800" },
+    { title: "Computer Science BSc", ucas: "G400" },
+    { title: "Law LLB", ucas: "M100" },
+    { title: "Mechanical Engineering BEng", ucas: "H300" },
+    { title: "Business Management BA", ucas: "N200" },
+    { title: "History BA", ucas: "V100" },
+    { title: "Architecture BSc", ucas: "K100" },
+    { title: "Biomedical Sciences BSc", ucas: "B900" },
+    { title: "Economics BSc", ucas: "L100" },
+    { title: "English Literature BA", ucas: "Q300" }
+  ];
+
+  const elements = {
+    input: document.getElementById("course-search"),
+    resultsBox: document.getElementById("results"),
+    selectedList: document.getElementById("selected-list"),
+    selectedCount: document.getElementById("selected-count")
+  };
+
+  const state = {
+    filteredCourses: [],
+    activeIndex: -1,
+    selectedCourses: new Map()
+  };
+
+  const escapeMap = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+  const escapeReg = /[&<>"']/g;
+  function escapeHtml(text) {
+    return text.replace(escapeReg, m => escapeMap[m]);
+  }
+
+  function debounce(func, wait) {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }
+
+  function searchCourses(query) {
+    if (!query) return [];
+    const normalizedQuery = query.toLowerCase().trim();
+    return courses.filter(course => {
+      const titleMatch = course.title.toLowerCase().includes(normalizedQuery);
+      const ucasMatch = course.ucas.toLowerCase().includes(normalizedQuery);
+      return titleMatch || ucasMatch;
+    }).sort((a, b) => a.title.localeCompare(b.title));
+  }
+
+  function renderResults() {
+    elements.resultsBox.innerHTML = "";
+    elements.input.setAttribute("aria-expanded", "true");
+
+    if (state.filteredCourses.length === 0) {
+      const noResults = document.createElement("div");
+      noResults.className = "no-results";
+      noResults.textContent = "No results found";
+      elements.resultsBox.appendChild(noResults);
+      elements.input.setAttribute("aria-activedescendant", "");
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    state.filteredCourses.forEach((course, index) => {
+      const div = document.createElement("div");
+      div.className = "result-item";
+      div.setAttribute("role", "option");
+      div.id = `result-${index}`;
+      div.setAttribute("aria-selected", "false");
+
+      const isSelected = state.selectedCourses.has(course.ucas);
+      div.innerHTML = `
+        <div class="course-title">
+          ${escapeHtml(course.title)}
+          ${isSelected ? '<span class="iconfont" aria-hidden="true">6</span><span class="visually-hidden">Selected</span>' : ''}
+        </div>
+        <div class="ucas-code">UCAS: ${escapeHtml(course.ucas)}</div>
+      `;
+
+      div.addEventListener("click", () => handleCourseClick(course));
+      fragment.appendChild(div);
+    });
+    elements.resultsBox.appendChild(fragment);
+    updateActiveDescendant(elements.resultsBox.querySelectorAll(".result-item"));
+  }
+
+  function renderSelected() {
+    elements.selectedList.innerHTML = "";
+
+    if (state.selectedCourses.size === 0) {
+      const empty = document.createElement("div");
+      empty.className = "no-results";
+      empty.textContent = "No courses selected yet";
+      elements.selectedList.appendChild(empty);
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    state.selectedCourses.forEach(course => {
+      const div = document.createElement("div");
+      div.className = "selected-item";
+      div.setAttribute("role", "listitem");
+      div.innerHTML = `
+        <span>${escapeHtml(course.title)} (${escapeHtml(course.ucas)})</span>
+        <button class="remove-btn" type="button" data-ucas="${escapeHtml(course.ucas)}"
+          aria-label="Remove ${escapeHtml(course.title)}">Remove</button>
+      `;
+      fragment.appendChild(div);
+    });
+    elements.selectedList.appendChild(fragment);
+  }
+
+  function updateSelectedCount() {
+    elements.selectedCount.textContent = state.selectedCourses.size;
+  }
+
+  function clearResults() {
+    elements.resultsBox.innerHTML = "";
+    state.filteredCourses = [];
+    state.activeIndex = -1;
+    elements.input.setAttribute("aria-expanded", "false");
+    elements.input.setAttribute("aria-activedescendant", "");
+  }
+
+  function updateActiveDescendant(items) {
+    items.forEach((item, i) => {
+      item.setAttribute("aria-selected", i === state.activeIndex ? "true" : "false");
+    });
+    if (state.activeIndex >= 0 && items[state.activeIndex]) {
+      elements.input.setAttribute("aria-activedescendant", items[state.activeIndex].id);
+      items[state.activeIndex].scrollIntoView({ block: "nearest" });
+    } else {
+      elements.input.setAttribute("aria-activedescendant", "");
+    }
+  }
+
+  function selectCourse(course) {
+    if (state.selectedCourses.has(course.ucas)) return;
+    state.selectedCourses.set(course.ucas, course);
+    renderSelected();
+    updateSelectedCount();
+  }
+
+  function removeCourse(ucasCode) {
+    if (state.selectedCourses.has(ucasCode)) {
+      state.selectedCourses.delete(ucasCode);
+      renderSelected();
+      updateSelectedCount();
+    }
+  }
+
+  function handleCourseClick(course) {
+    selectCourse(course);
+    clearResults();
+    elements.input.value = "";
+    elements.input.focus();
+  }
+
+  function handleKeyDown(e) {
+    const items = elements.resultsBox.querySelectorAll(".result-item");
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        if (state.filteredCourses.length > 0) {
+          state.activeIndex = Math.min(state.activeIndex + 1, state.filteredCourses.length - 1);
+          updateActiveDescendant(items);
+        }
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        if (state.filteredCourses.length > 0) {
+          state.activeIndex = Math.max(state.activeIndex - 1, -1);
+          updateActiveDescendant(items);
+        }
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (state.activeIndex >= 0 && state.filteredCourses[state.activeIndex]) {
+          selectCourse(state.filteredCourses[state.activeIndex]);
+          clearResults();
+          elements.input.value = "";
+        }
+        break;
+      case "Escape":
+        clearResults();
+        // Keep focus on input for accessibility
+        break;
+      case "Tab":
+        clearResults();
+        break;
+    }
+  }
+
+  const debouncedSearch = debounce(query => {
+    state.activeIndex = -1;
+    if (!query) {
+      clearResults();
+      return;
+    }
+    state.filteredCourses = searchCourses(query);
+    renderResults();
+  }, 150);
+
+  elements.input.addEventListener("input", e => debouncedSearch(e.target.value.trim()));
+  elements.input.addEventListener("keydown", handleKeyDown);
+
+  document.addEventListener("click", e => {
+    if (!elements.input.contains(e.target) && !elements.resultsBox.contains(e.target)) {
+      clearResults();
+    }
+  });
+
+  elements.selectedList.addEventListener("click", e => {
+    if (e.target.matches(".remove-btn")) {
+      e.preventDefault();
+      removeCourse(e.target.dataset.ucas);
+    }
+  });
+
+  function init() {
+    updateSelectedCount();
+    requestAnimationFrame(() => elements.input.focus());
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+})();
+</script>
+</body>
+</html>
