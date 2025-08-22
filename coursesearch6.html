@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
+--gap: .5em;               /* requested gap between pills */
+--bg: #f8fafc;
+--ink: #0f172a;
+--pill-bg: #ffffff;
+--pill-hover: #cbd5e1;
+--pill-on-bg: #1d4ed8;
+--pill-on-ink: #ffffff;
+}
+/* Visually hidden label utility (screen reader only) */
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid var(--black);
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	gap: 1em;
+}
+.card {
+	width: 100%;
+	max-width: 30em;
+	transition: 0.3s ease;
+	margin: 0;
+	max-width: 40em;
+}
+.card > * {
+	color: var(--black);
+	text-decoration: none;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.card:hover {
+	background-color: var(--lgrey);
+	cursor: pointer;
+}
+.card:focus-within {
+background-color: var(--lgrey);
+outline: 2px solid var(--link);
+outline-offset: -2px;
+}
+.card img {
+	width: calc(100% + 2rem);
+	height: auto;
+	margin: -1rem -1rem 1.5rem -1rem;
+	mix-blend-mode: multiply;
+}
+/* Remove outline from all focusable children when they receive focus in Firefox*/
+.card:focus-within *:focus {
+outline: none;
+}
+.blue-link {
+	color: var(--link);
+	text-decoration: underline;
+}
+.black-link {
+	color: var(--black);
+	text-decoration: underline;
+}
+.white-link {
+	color: var(--black);
+	text-decoration: underline;
+}
+.topstroke {
+	border-top: 0.25rem solid var(--black);
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 1em;
+	display: inline-block;
+	margin-bottom: 1em;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
+}
+.p-0-5 {
+	padding: 0.5em;
+}
+.floatr {
+	float: right;
+}
+.dgrey {
+	color: var(--dgrey);
+}
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-bottom: 1em;
+	width: 100%;
+}
+.split p {
+	margin: 0;
+	max-width: none;
+}
+.split p {
+	flex: 1;  /* take remaining space */
+}
+.split > *:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 40em) {
+.split {
+	flex-direction: column;     /* stack items */
+	align-items: flex-start;    /* align to the left */
+	gap: 1em;                   /* optional spacing between items */
+}
+.split > * {
+	margin-right: 0;            /* remove forced spacing */
+	width: 100%;                /* optional: make children full width */
+}
+}
+.search-container {
+	width: 100%;
+}
+.search-box {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.5em;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.search-box:focus {
+	outline: none;
+	border-color: var(--link);
+}
+.search-container {
+	position: relative;
+}
+.search-container::before {
+	content: "B";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0.5em;
+	position: absolute;
+	left: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--dgrey);
+	pointer-events: none;
+	z-index: 1;
+}
+.search-box {
+	padding-left: 2em;
+}
+	
+/* Cross-browser placeholder support */
+.search-box::-webkit-input-placeholder {
+color: var(--dgrey);
+}
+.search-box::-moz-placeholder {
+color: var(--dgrey);
+opacity: 1;
+}
+.search-box:-ms-input-placeholder {
+color: var(--dgrey);
+}
+.search-box:-moz-placeholder {
+color: var(--dgrey);
+opacity: 1;
+}
+.tag-bck-white {
+	background-color: var(--white);
+}
+.dropdown-wrapper {
+	position: relative;
+	width: 100%;
+}
+.dropdown-select {
+	width: 100%;
+	padding: 1em 2.5em 1em 1em;
+	font-size: 1em;
+	color: var(--black);
+	background: var(--white);
+	border: 2px solid var(--lgrey);
+	border-radius: 0.5em;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: all 0.3s ease;
+	outline: none;
+}
+.dropdown-select:hover {
+	border-color: var(--link);
+}
+.dropdown-select:focus {
+	border-color: var(--link)
+}
+.dropdown-icon {
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: var(--black);
+	pointer-events: none;
+	transition: transform 0.3s ease;
+}
+.pt-reg {
+	padding-top: 1.5em;
+}
+label {
+	line-height: 2;
+}
+.no-underline {
+	text-decoration: none;
+	display: inline-block;
+}
+.pills label {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+legend {
+	font-weight: 600;
+	margin-bottom: .75rem;
+}
+/* Container for the pills */
+.pills {
+	display: flex;
+	flex-wrap: wrap;       /* allows wrapping on small viewports */
+	gap: var(--gap);       /* 0.5em gap between items */
+	align-items: flex-start;
+}
+/* Visually hide the native checkbox but keep it accessible */
+.pills input[type="checkbox"] {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	white-space: nowrap;
+}
+/* Pill styling on the label */
+.pills label {
+	display: inline-flex;
+	align-items: center;
+	padding: .55em .9em;
+	border-radius: 9999px;
+	cursor: pointer;
+	user-select: none;
+	background: var(--pill-bg);
+	border: 1px solid var(--pill-border);
+	transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+	line-height: 1;
+	white-space: nowrap;
+}
+.pills label:hover {
+	border-color: var(--pill-hover);
+}
+
+    /* Focus ring when tabbing only */
+.pills input[type="checkbox"]:focus-visible + label {
+outline-offset: 2px;
+outline: 2px solid #06c;
+}
+/* Checked (on) state */
+.pills input[type="checkbox"]:checked + label {
+	background: var(--pill-on-bg);
+	color: var(--pill-on-ink);
+	border-color: var(--pill-on-bg);
+}
+.pills input:checked + span {
+	background: var(--plymouth-dark);
+	color: white;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <div class="rounded-responsive p-responsive bck-lgrey mb-reg">
+      <h2 class="m-0 largetext2">Search courses</h2>
+      <p>Find the perfect course for you</p>
+      <div class="search-container mb-reg">
+        <label for="courseSearch" class="visually-hidden">Search courses</label>
+        <input id="courseSearch" type="text" class="search-box" placeholder="Search for courses, subjects, or keywords...">
+      </div>
+      <h3>Filter by course type</h3>
+      <form>
+        <fieldset>
+          <div class="pills" role="group" aria-label="Filter by location">
+            <input type="checkbox" id="undergraduate" />
+            <label for="undergraduate">Undergraduate</label>
+            <input type="checkbox" id="postgraduatetaught" />
+            <label for="postgraduatetaught">Postgraduate taught</label>
+            <input type="checkbox" id="postgraduateresearch" />
+            <label for="postgraduateresearch">Postgraduate research</label>
+            <input type="checkbox" id="shortcourse" />
+            <label for="shortcourse">Short course</label>
+            <input type="checkbox" id="online" />
+            <label for="online">Online</label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <h3>Filter by location</h3>
+    <div class="filter-section">
+      <div class="dropdown-wrapper">
+        <label for="locationSelect" class="visually-hidden">Select a location</label>
+        <select id="locationSelect" class="dropdown-select">
+          <option value="all">All locations</option>
+          <optgroup label="Main Campuses">
+          <option value="plymouth-main">Plymouth - Campus 1</option>
+          <option value="plymouth-roland-levinsky">Campus 2</option>
+          <option value="plymouth-marine">Plymouth - Campus 3</option>
+          </optgroup>
+          <optgroup label="Partner Locations">
+          <option value="exeter">Exeter Campus</option>
+          <option value="truro">Truro Campus</option>
+          <option value="taunton">Taunton Campus</option>
+          </optgroup>
+          <optgroup label="International">
+          <option value="malaysia">Malaysia Campus</option>
+          <option value="singapore">Singapore Partner</option>
+          </optgroup>
+          <optgroup label="Online">
+          <option value="distance-learning">Distance learning</option>
+          <option value="online-programs">Online programs</option>
+          </optgroup>
+        </select>
+        <span class="iconfont dropdown-icon" aria-hidden="true">O</span> </div>
+      <div class="split pt-reg mb-reg">
+        <p><a href="#">Clear all filters</a></p>
+        <button class="btn btn-primary m-0">Search courses</button>
+      </div>
+    </div>
+    </div>
+    <h2 class="m-0">Search results</h2>
+    <div class="split mb-reg">
+      <p>Showing 1-9 of 12 courses</p>
+      <div>
+        <label for="sort" style="margin-right:0.5rem; font-weight:600;">Sort by:</label>
+        <select id="sort">
+          <option value="relevance">Relevance</option>
+          <option value="az">A–Z</option>
+          <option value="duration">Duration</option>
+          <option value="intake">Next intake</option>
+        </select>
+      </div>
+    </div>
+    <div class="card-container mb-reg">
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">BDS Dental Surgery</h3>
+        <p><span class="tag tag-undergraduate">Undergraduate</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>5 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Comprehensive undergraduate degree in dental surgery, combining theoretical knowledge with extensive clinical practice in modern dental lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="next-intake">Next intake: <strong>September 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">BDS Dental Surgery with Integrated Foundation Year</h3>
+        <p><span class="tag tag-undergraduate">Undergraduate</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>6 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Extended dental surgery program including foundation year for students who need additional preparation for university-level study.</p>
+        <p class="next-intake">Next intake: <strong>September 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">BSc (Hons) Dental Therapy and Hygiene</h3>
+        <p><span class="tag tag-undergraduate">Undergraduate</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>3 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Train to become a qualified dental therapist and hygienist with hands-on clinical experience and comprehensive theoretical training.</p>
+        <p class="next-intake">Next intake: <strong>September 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">BSc (Hons) Dental Therapy and Hygiene with Integrated Foundation Year</h3>
+        <p><span class="tag tag-undergraduate">Undergraduate</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>4 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Extended dental therapy and hygiene program with foundation year for additional academic preparation and support.</p>
+        <p class="next-intake">Next intake: <strong>September 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">MSc Endodontics</h3>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>2 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Specialized training in endodontic procedures, root canal therapy, and advanced dental pain management techniques for practicing dentists.</p>
+        <p class="next-intake">Next intake: <strong>March 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">MSc Oral Surgery</h3>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>3 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Advanced surgical training covering complex oral and maxillofacial procedures, implant dentistry, and surgical management of oral diseases.</p>
+        <p class="next-intake">Next intake: <strong>October 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">MSc Orthodontics</h3>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>3 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Advanced training in orthodontic treatment, teeth alignment, and jaw correction techniques for qualified dental professionals.</p>
+        <p class="next-intake">Next intake: <strong>October 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">MSc Periodontology</h3>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>3 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Comprehensive training in the prevention, diagnosis and treatment of periodontal disease and maintenance of dental implants.</p>
+        <p class="next-intake">Next intake: <strong>October 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
+        <h3 class="blue-link line-clamp">MSc Restorative Dentistry</h3>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
+          <span class="iconfont" aria-hidden="true">c</span>3 years<br>
+          <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
+          <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
+        <p class="line-clamp">Advanced clinical training in restorative dentistry including prosthodontics, endodontics, and periodontics for comprehensive patient care.</p>
+        <p class="next-intake">Next intake: <strong>October 25</strong></p>
+        </a></div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="blue-link line-clamp">Integrated interdisciplinary programme in sustainable marine engineering, environmental policy, digital data analytics, applied artificial intelligence, renewable energy systems, and international business strategy with professional placement year and overseas study opportunities</h3>
+        <p>Example of 250 character title with line clamp 3.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <p><span class="tag tag-undergraduate">Undergraduate</span></p>
+        <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span></p>
+        <p><span class="tag tag-postgraduate-research">Postgraduate research</span></p>
+        <p><span class="tag tag-short-course">Short course</span></p>
+        <p><span class="tag tag-degree-apprenticeship">Degree apprenticeship</span></p>
+        <p><span class="tag tag-online">Online</span></p>
+      </div>
+    </div>
+    <div class="split mb-reg">
+      <p>Showing 1-9 of 12 courses</p>
+      <div><span class="iconfont dgrey" aria-hidden="true">P</span><span class="mr-1 dgrey">Previous</span> <span class="rounded-0-5 p-0-5 bck-lgrey mr-1">1</span><span class="mr-1"><a href="#">2</a></span><a href="#">Next<span class="iconfont ml-1 no-underline" aria-hidden="true">N</span></a></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
