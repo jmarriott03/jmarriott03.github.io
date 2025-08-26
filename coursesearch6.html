@@ -9,33 +9,18 @@
 <title>University of Plymouth</title>
 <style>
 :root {
---highlight-light: #b4c960;
---highlight-dark: #a80075;
 --undergraduate: #f7e161;
 --postgraduate-taught: #1d347e;
 --postgraduate-research: #111;
 --short-course: #338078;
 --degree-apprenticeship: #7fbfd7;
 --online: #c1004a;
---gap: .5em;               /* requested gap between pills */
 --bg: #f8fafc;
 --ink: #0f172a;
 --pill-bg: #ffffff;
 --pill-hover: #cbd5e1;
 --pill-on-bg: #1d4ed8;
 --pill-on-ink: #ffffff;
-}
-/* Visually hidden label utility (screen reader only) */
-.visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	clip: rect(0, 0, 0, 0) !important;
-	white-space: nowrap !important;
-	border: 0 !important;
 }
 /*
 * {
@@ -68,6 +53,18 @@ td {
 	padding: 0.5em;
 	text-align: left;
 	border-bottom: 1px solid var(--black);
+}
+/* Visually hidden label utility (screen reader only) */
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
 }
 .card-container {
 	display: grid;
@@ -213,8 +210,9 @@ outline: none;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .search-box:focus {
-	outline: none;
-	border-color: var(--link);
+	outline: 2px solid var(--link;
+) outline-offset: 2px;
+	border-color: var(--mgrey);
 }
 .search-container {
 	position: relative;
@@ -280,7 +278,9 @@ opacity: 1;
 	border-color: var(--link);
 }
 .dropdown-select:focus {
-	border-color: var(--link)
+	outline: 2px solid var(--link);
+	outline-offset: 2px;
+	border-color: var(--lgrey);
 }
 .dropdown-icon {
 	position: absolute;
@@ -317,8 +317,8 @@ legend {
 /* Container for the pills */
 .pills {
 	display: flex;
-	flex-wrap: wrap;       /* allows wrapping on small viewports */
-	gap: var(--gap);       /* 0.5em gap between items */
+	flex-wrap: wrap;
+	gap: 0.5em;
 	align-items: flex-start;
 }
 /* Visually hide the native checkbox but keep it accessible */
@@ -341,8 +341,8 @@ legend {
 	border-radius: 9999px;
 	cursor: pointer;
 	user-select: none;
-	background: var(--pill-bg);
-	border: 1px solid var(--pill-border);
+	background: var(--white);
+	border: 1px solid var(--lgrey);
 	transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
 	line-height: 1;
 	white-space: nowrap;
@@ -354,7 +354,7 @@ legend {
     /* Focus ring when tabbing only */
 .pills input[type="checkbox"]:focus-visible + label {
 outline-offset: 2px;
-outline: 2px solid #06c;
+outline: 2px solid var(--link);
 }
 /* Checked (on) state */
 .pills input[type="checkbox"]:checked + label {
@@ -381,7 +381,7 @@ outline: 2px solid #06c;
       <h3>Filter by course type</h3>
       <form>
         <fieldset>
-          <div class="pills" role="group" aria-label="Filter by location">
+          <div class="pills pb-reg" role="group" aria-label="Filter by location">
             <input type="checkbox" id="undergraduate">
             <label for="undergraduate">Undergraduate</label>
             <input type="checkbox" id="postgraduatetaught">
@@ -395,36 +395,21 @@ outline: 2px solid #06c;
           </div>
         </fieldset>
       </form>
-    </div>
-    <h3>Filter by location</h3>
-    <div class="filter-section">
-      <div class="dropdown-wrapper">
-        <label for="locationSelect" class="visually-hidden">Select a location</label>
-        <select id="locationSelect" class="dropdown-select">
-          <option value="all">All locations</option>
-          <optgroup label="Main Campuses">
-          <option value="plymouth-main">Plymouth - Campus 1</option>
-          <option value="plymouth-roland-levinsky">Campus 2</option>
-          <option value="plymouth-marine">Plymouth - Campus 3</option>
-          </optgroup>
-          <optgroup label="Partner Locations">
-          <option value="exeter">Exeter Campus</option>
-          <option value="truro">Truro Campus</option>
-          <option value="taunton">Taunton Campus</option>
-          </optgroup>
-          <optgroup label="International">
-          <option value="malaysia">Malaysia Campus</option>
-          <option value="singapore">Singapore Partner</option>
-          </optgroup>
-          <optgroup label="Online">
-          <option value="distance-learning">Distance learning</option>
-          <option value="online-programs">Online programs</option>
-          </optgroup>
-        </select>
-        <span class="iconfont dropdown-icon" aria-hidden="true">O</span> </div>
-      <div class="split pt-reg pb-reg">
-        <p><a href="#">Clear all filters</a></p>
-        <button class="btn btn-primary m-0">Search courses</button>
+      <h3>Filter by location</h3>
+      <div class="filter-section">
+        <div class="dropdown-wrapper">
+          <label for="locationSelect" class="visually-hidden">Select a location</label>
+          <select id="locationSelect" class="dropdown-select">
+            <option value="all">All locations</option>
+            <option value="plymouth">Plymouth Campus</option>
+            <option value="partner">Partner colleges</option>
+            <option value="online">Online</option>
+          </select>
+          <span class="iconfont dropdown-icon" aria-hidden="true">O</span> </div>
+        <div class="split pt-reg">
+          <p><a href="#">Clear all filters</a></p>
+          <button class="btn btn-primary m-0">Search courses</button>
+        </div>
       </div>
     </div>
     <h2 class="m-0">Search results</h2>
