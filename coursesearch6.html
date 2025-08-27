@@ -73,14 +73,8 @@ td {
 }
 .card {
 	width: 100%;
-	max-width: 30em;
-	transition: 0.3s ease;
 	margin: 0;
 	max-width: 40em;
-}
-.card > * {
-	color: var(--black);
-	text-decoration: none;
 }
 .card :last-child {
 	margin-bottom: 0;
@@ -88,36 +82,11 @@ td {
 .card > * {
 	margin-left: 0;
 }
-.card:hover {
-	background-color: var(--lgrey);
-	cursor: pointer;
-}
-.card:focus-within {
-background-color: var(--lgrey);
-outline: 2px solid var(--link);
-outline-offset: -2px;
-}
 .card img {
 	width: calc(100% + 2rem);
 	height: auto;
 	margin: -1rem -1rem 1.5rem -1rem;
 	mix-blend-mode: multiply;
-}
-/* Remove outline from all focusable children when they receive focus in Firefox*/
-.card:focus-within *:focus {
-outline: none;
-}
-.blue-link {
-	color: var(--link);
-	text-decoration: underline;
-}
-.black-link {
-	color: var(--black);
-	text-decoration: underline;
-}
-.white-link {
-	color: var(--black);
-	text-decoration: underline;
 }
 .topstroke {
 	border-top: 0.25rem solid var(--black);
@@ -366,6 +335,10 @@ outline: 2px solid var(--link);
 	background: var(--plymouth-dark);
 	color: white;
 }
+/* To stop 1px line clamp clipping of text link */
+.card :where(h1, h2, h3, h4, h5, h6) {
+padding-bottom: 1px;
+}
 </style>
 </head>
 <body>
@@ -426,90 +399,90 @@ outline: 2px solid var(--link);
       </div>
     </div>
     <div class="card-container mb-reg">
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">BDS Dental Surgery</h3>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>BDS Dental Surgery</strong></a></h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>5 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Comprehensive undergraduate degree in dental surgery, combining theoretical knowledge with extensive clinical practice in modern dental lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">BDS Dental Surgery with Integrated Foundation Year</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>BDS Dental Surgery with Integrated Foundation Year</strong></a></h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>6 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Extended dental surgery program including foundation year for students who need additional preparation for university-level study.</p>
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">BSc (Hons) Dental Therapy and Hygiene</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>BSc (Hons) Dental Therapy and Hygiene</strong></a></h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Train to become a qualified dental therapist and hygienist with hands-on clinical experience and comprehensive theoretical training.</p>
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">BSc (Hons) Dental Therapy and Hygiene with Integrated Foundation Year</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>BSc (Hons) Dental Therapy and Hygiene with Integrated Foundation Year</strong></a></h3>
         <p><span class="tag tag-undergraduate">Undergraduate</span><br>
           <span class="iconfont" aria-hidden="true">c</span>4 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Full-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Extended dental therapy and hygiene program with foundation year for additional academic preparation and support.</p>
         <p class="next-intake">Next intake: <strong>September 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">MSc Endodontics</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>MSc Endodontics</strong></a></h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>2 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Specialized training in endodontic procedures, root canal therapy, and advanced dental pain management techniques for practicing dentists.</p>
         <p class="next-intake">Next intake: <strong>March 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">MSc Oral Surgery</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>MSc Oral Surgery</strong></a></h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Advanced surgical training covering complex oral and maxillofacial procedures, implant dentistry, and surgical management of oral diseases.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">MSc Orthodontics</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>MSc Orthodontics</strong></a></h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Advanced training in orthodontic treatment, teeth alignment, and jaw correction techniques for qualified dental professionals.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">MSc Periodontology</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>MSc Periodontology</strong></a></h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Comprehensive training in the prevention, diagnosis and treatment of periodontal disease and maintenance of dental implants.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
-        </a></div>
-      <div class="card rounded-1 p-1 stroke shadow"><a href="#">
-        <h3 class="blue-link line-clamp">MSc Restorative Dentistry</h3>
+      </div>
+      <div class="card rounded-1 p-1 stroke shadow">
+        <h3 class="line-clamp"><a href="#"><strong>MSc Restorative Dentistry</strong></a></h3>
         <p><span class="tag tag-postgraduate-taught">Postgraduate taught</span><br>
           <span class="iconfont" aria-hidden="true">c</span>3 years<br>
           <span class="iconfont" aria-hidden="true">Æ</span>Part-time<br>
           <span class="iconfont" aria-hidden="true">(</span>Plymouth Campus</p>
         <p class="line-clamp">Advanced clinical training in restorative dentistry including prosthodontics, endodontics, and periodontics for comprehensive patient care.</p>
         <p class="next-intake">Next intake: <strong>October 25</strong></p>
-        </a></div>
+      </div>
       <div class="card rounded-1 p-1 stroke shadow">
-        <h3 class="blue-link line-clamp">Integrated interdisciplinary programme in sustainable marine engineering, environmental policy, digital data analytics, applied artificial intelligence, renewable energy systems, and international business strategy with professional placement year and overseas study opportunities</h3>
-        <p>Example of 250 character title with line clamp 3.</p>
+        <h3 class="line-clamp"><a href="#"><strong>Integrated interdisciplinary programme in sustainable marine engineering, environmental policy, digital data analytics, applied artificial intelligence, renewable energy systems, and international business strategy with professional placement year and overseas study opportunities</strong></a></h3>
+        <p>Example of 250 character title with line-clamp.</p>
       </div>
       <div class="card rounded-1 p-1 stroke shadow">
         <p><span class="tag tag-undergraduate">Undergraduate</span></p>
