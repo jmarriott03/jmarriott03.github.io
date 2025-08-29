@@ -15,12 +15,6 @@
 --short-course: #338078;
 --degree-apprenticeship: #7fbfd7;
 --online: #c1004a;
---bg: #f8fafc;
---ink: #0f172a;
---pill-bg: #ffffff;
---pill-hover: #cbd5e1;
---pill-on-bg: #1d4ed8;
---pill-on-ink: #ffffff;
 }
 /*
 * {
@@ -90,12 +84,6 @@ td {
 }
 .topstroke {
 	border-top: 0.25rem solid var(--black);
-}
-.line-clamp {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
 }
 .tag {
 	padding: 0.25em 0.5em;
@@ -312,28 +300,26 @@ legend {
 	user-select: none;
 	background: var(--white);
 	border: 1px solid var(--lgrey);
-	transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease;
+	transition: background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
 	line-height: 1;
 	white-space: nowrap;
 }
-.pills label:hover {
-	border-color: var(--pill-hover);
-}
-
-    /* Focus ring when tabbing only */
+/* Focus ring when tabbing only */
 .pills input[type="checkbox"]:focus-visible + label {
 outline-offset: 2px;
 outline: 2px solid var(--link);
 }
 /* Checked (on) state */
 .pills input[type="checkbox"]:checked + label {
-	background: var(--pill-on-bg);
-	color: var(--pill-on-ink);
-	border-color: var(--pill-on-bg);
+	background: var(--link);
+	color: var(--white);
+	border-color: var(--link);
 }
-.pills input:checked + span {
-	background: var(--plymouth-dark);
-	color: white;
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 /* Fixes 1px line clamp clipping of h1-h6 text link */
 .card :where(h1, h2, h3, h4, h5, h6).line-clamp {
