@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+/*
+* {
+    outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+.pills label {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+/* Container for the pills */
+.pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	align-items: flex-start;
+}
+/* Visually hide the native checkbox but keep it accessible */
+.pills input[type="checkbox"] {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	white-space: nowrap;
+}
+/* Pill styling on the label */
+.pills label {
+	display: inline-flex;
+	align-items: center;
+	padding: .55em .9em;
+	border-radius: 9999px;
+	cursor: pointer;
+	user-select: none;
+	background: var(--white);
+	border: 1px solid var(--lgrey);
+	transition: background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+	line-height: 1;
+	white-space: nowrap;
+}
+/* Focus ring when tabbing only */
+.pills input[type="checkbox"]:focus-visible + label {
+outline-offset: 2px;
+outline: 2px solid var(--link);
+}
+/* Checked (on) state */
+.pills input[type="checkbox"]:checked + label {
+	background: var(--link);
+	color: var(--white);
+	border-color: var(--link);
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <h1>focus-visible</h1>
+    <div class="rounded-responsive p-responsive bck-lgrey mb-reg">
+      <p>Focus rings only appear when you tab through elements using the keyboard.</p>
+      <form>
+        <fieldset>
+          <div class="pills" role="group" aria-label="Filter by location">
+            <input type="checkbox" id="undergraduate">
+            <label for="undergraduate">Undergraduate</label>
+            <input type="checkbox" id="postgraduatetaught">
+            <label for="postgraduatetaught">Postgraduate taught</label>
+            <input type="checkbox" id="postgraduateresearch">
+            <label for="postgraduateresearch">Postgraduate research</label>
+            <input type="checkbox" id="shortcourse">
+            <label for="shortcourse">Short course</label>
+            <input type="checkbox" id="online">
+            <label for="online">Online</label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="codegrey mb-reg"> <code> .pills input[type="checkbox"]:focus-visible + label {<br>
+      outline-offset: 2px;<br>
+      outline: 2px solid var(--link);<br>
+      }<br>
+      </code></div>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible">https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible</a></p>
+  </section>
+</main>
+</body>
+</html>
