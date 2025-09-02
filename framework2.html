@@ -20,6 +20,9 @@
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+div > :last-child {
+	margin-bottom: 0;
+}
 /* Backgrounds */
 .backgroundimage {
 	background-image: url("images/1920x600babbage.jpg");
@@ -48,13 +51,14 @@
 }
 /* Stack vertical spacing */
 .stack > * + * {
-	margin-top: var(--space-l);
+    margin-top: var(--space-l);
 }
 .stack > *:first-child {
-	margin-top: 0;
+    margin-top: 0;
 }
-.stack > *:last-child {
-	margin-bottom: 0;
+/* Reset bottom margin for the last element inside a stack item */
+.stack > * > :last-child {
+    margin-bottom: 0;
 }
 </style>
 </head>
