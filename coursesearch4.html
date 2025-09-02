@@ -10,124 +10,123 @@
 <title>University of Plymouth</title>
 <style>
 :root {
-  --highlight-light: #b4c960;
-  --highlight-dark: #a80075;
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
 }
-
 /* Accessible visually-hidden class (no scrollbars) */
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
-
 section {
-  max-width: 60em;
+	max-width: 60em;
 }
 section > *:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .search-container {
-  position: relative;
-  max-width: 100%;
-  margin-bottom: 2em;
+	position: relative;
+	max-width: 100%;
+	margin-bottom: 2em;
 }
 label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 0.5em;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.5em;
 }
 input[type="text"] {
-  width: 100%;
-  padding: 1em;
-  font-size: 1em;
-  line-height: 1.5;
-  border: 1px solid var(--mgrey);
-  border-radius: 0.25em;
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	line-height: 1.5;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.25em;
 }
 input[type="text"]:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 2px;
+outline: 2px solid var(--link);
+outline-offset: 2px;
 }
 .results {
-  position: absolute;
-  width: 100%;
-  background-color: var(--white);
-  border: 1px solid var(--mgrey);
-  border-top: none;
-  max-height: 15em;
-  overflow-y: auto;
-  z-index: 10;
+	position: absolute;
+	width: 100%;
+	background-color: var(--white);
+	border: 1px solid var(--mgrey);
+	border-top: none;
+	max-height: 15em;
+	overflow-y: auto;
+	z-index: 10;
 }
 .result-item {
-  padding: 1em;
-  border-bottom: 1px solid var(--lgrey);
-  cursor: pointer;
+	padding: 1em;
+	border-bottom: 1px solid var(--lgrey);
+	cursor: pointer;
 }
 .result-item[aria-selected="true"] {
-  background-color: var(--mgrey);
-  color: var(--white);
+	background-color: var(--dgrey);
+	color: var(--white);
 }
 .selected-container {
-  width: 100%;
-  background-color: var(--white);
-  padding: 1em;
-  border-radius: 0.25em;
-  border: 1px solid var(--mgrey);
+	width: 100%;
+	background-color: var(--white);
+	padding: 1em;
+	border-radius: 0.25em;
+	border: 1px solid var(--mgrey);
 }
 .selected-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5em 0;
-  border-bottom: 1px solid var(--lgrey);
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 0;
+	border-bottom: 1px solid var(--lgrey);
 }
 .selected-item span {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 .remove-btn {
-  background: var(--btn-danger);
-  color: var(--white);
-  border: none;
-  padding: 0.5em;
-  border-radius: 0.25em;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-size: 1em;
+	background: var(--btn-danger);
+	color: var(--white);
+	border: none;
+	padding: 0.5em;
+	border-radius: 0.25em;
+	cursor: pointer;
+	transition: background 0.3s;
+	font-size: 1em;
 }
 .remove-btn:hover {
-  background: var(--btn-danger-hov);
+	background: var(--btn-danger-hov);
 }
 .remove-btn:focus-visible {
-  background: var(--btn-danger-hov);
-  outline: 2px solid var(--link);
-  outline-offset: 2px;
+background: var(--btn-danger-hov);
+outline: 2px solid var(--link);
+outline-offset: 2px;
 }
 .no-results {
-  padding: 1em;
-  color: var(--mgrey);
+	padding: 1em;
+	color: var(--mgrey);
 }
 .button-container {
-  margin-top: 2em;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+	margin-top: 2em;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
 }
+
 @media (max-width: 40em) {
-  .button-container {
-    justify-content: center;
-  }
-  .button-container .btn {
-    width: 100%;
-  }
+.button-container {
+	justify-content: center;
+}
+.button-container .btn {
+	width: 100%;
+}
 }
 .button-container > .btn-primary {
-  margin: 0;
+	margin: 0;
 }
 </style>
 </head>
@@ -149,9 +148,7 @@ input[type="text"]:focus-visible {
           autocomplete="off"
           aria-describedby="search-help"
         >
-        <div id="search-help" class="visually-hidden">
-          Type to search for courses by name or UCAS code. Use arrow keys to navigate results, Enter to select, Escape to close.
-        </div>
+        <div id="search-help" class="visually-hidden"> Type to search for courses by name or UCAS code. Use arrow keys to navigate results, Enter to select, Escape to close. </div>
         <div id="results" class="results" role="listbox" aria-label="Course results" aria-live="polite"></div>
       </div>
       <div class="selected-container" aria-live="polite">
