@@ -44,7 +44,13 @@ div > :last-child {
 }
 /* sections */
 section {
-	padding: var(--space-l)
+	padding: var(--space-l);
+}
+
+@media (max-width: 40em) {
+section {
+	padding: var(--space-m);
+}
 }
 /* Stack vertical spacing */
 .stack > * + * {
@@ -52,6 +58,12 @@ section {
 }
 .stack > *:last-child {
 	margin-bottom: 0;
+}
+
+@media (max-width: 40em) {
+.stack > * + * {
+	margin-top: var(--space-m);
+}
 }
 /* Responsive grid container */
 .grid {
