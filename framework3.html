@@ -15,12 +15,10 @@
 --space-m: 1rem;
 --space-l: 2rem;
 }
-/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
-*/
 div > :last-child {
 	margin-bottom: 0;
 }
@@ -147,6 +145,28 @@ section {
 .ml-0-5 {
 	margin-left: 0.5em;
 }
+/* Column span utilities */
+.span-2 {
+	grid-column: span 2;
+	width: 100%;
+}
+
+@media (max-width: 40em) {
+.span-2 {
+	grid-column: span 1; /* fallback to single column on mobile */
+}
+}
+.flex-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+.flex-grid > * {
+	flex: 1 1 19em; /* min width, can grow */
+}
+.flex-grid > .span-2 {
+	flex: 2 1 38em; /* takes up roughly 2 columns */
+}
 </style>
 </head>
 <body>
@@ -182,6 +202,45 @@ section {
   </div>
   
   <!-- CONTENT -->
+  
+  <section>
+    <div class="w-80">
+      <h2>Span column 2 flex grid</h2>
+      <div class="flex-grid">
+        <div class="span-2">
+          <h2>5a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+          <h2>b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+          <h2>5c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="w-80">
+      <h2>Span column 2 grid</h2>
+      <div class="grid">
+        <div class="span-2">
+          <h2>5a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+          <h2>b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+          <h2>5c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="bck-white">
     <div class="w-80 stack">
       <div class="rounded-responsive p-responsive bck-highlight-light">
