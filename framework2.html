@@ -31,6 +31,15 @@
 section {
 	padding: var(--space-responsive);
 }
+/* Cancel vertical padding if two adjacent sections share the same background */
+section.bck-white + section.bck-white, section.bck-lgrey + section.bck-grey, section.bck-mgrey + section.bck-mgrey, section.bck-dgrey + section.bck-dgrey, section.bck-black + section.bck-black, section.bck-highlight-light + section.bck-highlight-light, section.bck-highlight-dark + section.bck-highlight-dark {
+	padding-top: 0;
+}
+@media (max-width: 40em) {
+section.bck-white + section.bck-white, section.bck-lgrey + section.bck-grey, section.bck-mgrey + section.bck-mgrey, section.bck-dgrey + section.bck-dgrey, section.bck-black + section.bck-black, section.bck-highlight-light + section.bck-highlight-light, section.bck-highlight-dark + section.bck-highlight-dark {
+	padding-top: var(--space-s);
+}
+}
 /* Stack vertical spacing */
 .stack > * + * {
 	margin-top: var(--space-responsive);
@@ -225,7 +234,13 @@ div > :last-child {
   </section>
   <section class="bck-highlight-dark">
     <div class="w-80 stack white-text">
-      <h2>4) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+      <h2>4a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+      <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
+	<section class="bck-highlight-dark">
+    <div class="w-80 stack white-text">
+      <h2>4b) This padding has changed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
       <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </section>
