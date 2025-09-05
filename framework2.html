@@ -14,8 +14,30 @@
 --space-s: 0.5rem;
 --space-m: 1rem;
 --space-l: 2rem;
+--space-responsive: var(--space-l);
 }
-/* Debug outlines (remove in production) */
+
+@media (max-width: 40em) {
+:root {
+--space-responsive: var(--space-m);
+}
+}
+/* Debug outlines (remove in production) */	
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+/* Sections */
+section {
+	padding: var(--space-responsive);
+}
+/* Stack vertical spacing */
+.stack > * + * {
+	margin-top: var(--space-responsive);
+}
+.stack > *:last-child {
+	margin-bottom: 0;
+}
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
@@ -36,34 +58,82 @@ div > :last-child {
 .white-text {
 	color: #fff;
 }
+.nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1em;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@media (max-width: 40em) {
+.nav {
+	flex-direction: column;
+	align-items: flex-start;
+}
+}
+.nav-logo {
+	width: 100%;
+	height: 2.5em;
+}
+.nav-logo img {
+	width: auto;
+}
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.logo {
+	width: 3em;
+	display: block;
+	margin: 0;
+}
+.nav-icon {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-left: 0;
+	margin-bottom: 1em;
+}
+.nav-icon :last-child {
+	margin-bottom: 0;
+}
+.nav-icon {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin: 0; /* Remove default bottom margin */
+	flex: 0 0 auto; /* Prevent stretching */
+}
+.nav-icon img {
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+}
+.nav-icon-text {
+	flex: 1;
+}
+/* Breadcrumb */
+.breadcrumb-container {
+	max-width: 84em;
+	padding: 0 var(--space-l);
+}
+
+@media (max-width: 40em) {
+.breadcrumb-container {
+	padding: 0 var(--space-m);
+}
+}
+.ml-0-5 {
+	margin-left: 0.5em;
+}
 /* Container width */
 .w-80 {
 	max-width: 80em;
 	margin: 0 auto;
 	overflow: hidden;
-}
-/* sections */
-section {
-	padding: var(--space-l);
-}
-
-@media (max-width: 40em) {
-section {
-	padding: var(--space-m);
-}
-}
-/* Stack vertical spacing */
-.stack > * + * {
-	margin-top: var(--space-l);
-}
-.stack > *:last-child {
-	margin-bottom: 0;
-}
-
-@media (max-width: 40em) {
-.stack > * + * {
-	margin-top: var(--space-m);
-}
 }
 /* Responsive grid container */
 .grid {
@@ -75,10 +145,51 @@ section {
 .grid > *:last-child {
 	margin-bottom: 0;
 }
+/* Column span utilities */
+.span-2 {
+	grid-column: span 2;
+	width: 100%;
+}
+
+@media (max-width: 40em) {
+.span-2 {
+	grid-column: span 1; /* fallback to single column on mobile */
+}
+}
 </style>
 </head>
 <body>
-<main>
+<main> 
+  <!-- Navigation -->
+  <section>
+    <div class="w-80">
+      <div class="nav">
+        <div class="nav-logo"><img src="images/uoplogo.svg" alt="" class="mr-1"></div>
+        <div class="nav-icon"><img src="images/nav-search.svg" width="256" height="256" alt="" aria-hidden="true">
+          <div class="nav-icon-text">
+            <p>Search<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
+          </div>
+        </div>
+        <div class="nav-icon"><img src="images/nav-menu.svg" width="256" height="256" alt="" aria-hidden="true">
+          <div class="nav-icon-text">
+            <p>Menu<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
+          </div>
+        </div>
+        <div class="nav-icon"><img src="images/nav-login.svg" width="256" height="256" alt="" aria-hidden="true">
+          <div class="nav-icon-text">
+            <p>Log in<span class="iconfont ml-0-5" aria-hidden="true">N</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb-container">
+    <p class="m-0"><a href="#">Home</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><a href="#">Courses</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><strong>MSc Global Health</strong></p>
+  </div>
+  
+  <!-- Content -->
   <section class="bck-white">
     <div class="w-80 stack">
       <div class="rounded-responsive p-responsive bck-highlight-light">
@@ -130,19 +241,38 @@ section {
       <h2>4 column responsive</h2>
       <div class="grid">
         <div>
-          <h2>5a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>5a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          <h2>b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>5b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          <h2>5c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>5c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          <h2>5d) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>5d) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bck-black white-text">
+    <div class="w-80">
+      <h2>2 column span</h2>
+      <div class="grid">
+        <div class="span-2">
+          <h3>6a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+          <h3>6b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+          <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div>
+          <h3>6b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
@@ -153,15 +283,15 @@ section {
       <h2>3 column responsive</h2>
       <div class="grid">
         <div>
-          <h2>b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>7a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          <h2>5c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>7b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          <h2>5d) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>7c) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
@@ -172,11 +302,11 @@ section {
       <h2>2 column responsive</h2>
       <div class="grid">
         <div>
-          <h2>5a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>8a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-          <h2>b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
+          <h3>8b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
           <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
