@@ -40,7 +40,7 @@ summary {
 }
 details {
 	margin: 0;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid var(--mgrey);
 }
 summary > * {
 	display: inline;
@@ -64,7 +64,8 @@ details[open] > summary::before {
 </style>
 </head>
 <body>
-<main><section class="p-responsive">
+<main>
+  <section class="p-responsive">
     <h1>H1 Text layout (1.5em space)</h1>
     <h2>H2 heading and paragraphs</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -199,10 +200,12 @@ details[open] > summary::before {
       <p>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</p>
     </div>
   </section>
-  <div class="fullw bg-lgrey">
+  <div class="fullw bck-highlight-light black-text p-responsive">
     <section>
       <h2>Colour block full width</h2>
-      <p>Hendrerit gravida rutrum quisque non tellus orci. Quis auctor elit sed vulputate mi sit amet mauris commodo.</p>
-    </section></main>
+      <p>Hendrerit gravida rutrum quisque non tellus orci. <a href="#">Quis auctor elit sed vulputate</a> mi sit amet mauris commodo.</p>
+    </section>
+  </div>
+</main>
 </body>
 </html>
