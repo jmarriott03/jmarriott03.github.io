@@ -108,91 +108,96 @@ section :last-child {
   </section>
 </main>
 <script>
-const placeholders = {
-course: '{{course.name}}',
-tariff: '{{course.new_ucas_tariff}}',
-ucas: '{{course.ucas_course_code}}',
-institute: '{{course.version.institution_code}}',
-published: '{{course.published_version.institution_code}}',
-duration: '{{course.duration}}',
-mode: '{{course.study_mode}}',
-location: '{{course.location}}',
-start: '{{course.start_date_text}}',
-currentfee : '{{course.fees.current_fee_year}}',
-nextfeeyear: '{{course.fees.next_fee_year}}',
-homefeecurrent: '{{course.fees.home_fees.current_year_fees}}',
-homefeenext: '{{course.fees.home_fees.next_year_fees}}',
-internationalfeecurrent: '{{course.fees.international_fees.current_year_fees}}',
-internationalfeenext: '{{course.fees.international_fees.next_year_fees}}',
-parttimefeecurrent: '{{course.fees.part_time_home_fees.current_year_fees}}',
-parttimefeenext: '{{course.fees.part_time_home_fees.next_year_fees}}',
-credits: '{{course.fees.part_time_home_fees.credits}}',
-creditdescription: '{{course.fees.part_time_home_fees.description}}'
+    const placeholders = {
+        course: '{{course.name}}',
+        tariff: '{{course.new_ucas_tariff}}',
+        ucas: '{{course.ucas_course_code}}',
+        institute: '{{course.version.institution_code}}',
+        published: '{{course.published_version.institution_code}}',
+        duration: '{{course.duration}}',
+        mode: '{{course.study_mode}}',
+        location: '{{course.location}}',
+        start: '{{course.start_date_text}}',
+        currentfee: '{{course.fees.current_fee_year}}',
+        nextfeeyear: '{{course.fees.next_fee_year}}',
+        homefeecurrent: '{{course.fees.home_fees.current_year_fees}}',
+        homefeenext: '{{course.fees.home_fees.next_year_fees}}',
+        internationalfeecurrent: '{{course.fees.international_fees.current_year_fees}}',
+        internationalfeenext: '{{course.fees.international_fees.next_year_fees}}',
+        parttimefeecurrent: '{{course.fees.part_time_home_fees.current_year_fees}}',
+        parttimefeenext: '{{course.fees.part_time_home_fees.next_year_fees}}',
+        credits: '{{course.fees.part_time_home_fees.credits}}',
+        creditdescription: '{{course.fees.part_time_home_fees.description}}'
     };
 
-    const textbox = document.getElementById('textbox');
+const textbox = document.getElementById('textbox');
 
-    function insertText(key) {
-        const text = placeholders[key] + ' ';
-        textbox.focus(); 
+function insertText(key) {
+    const text = placeholders[key] + ' ';
+    textbox.focus();
 
-        const sel = window.getSelection();
-        if (sel.rangeCount > 0) {
-            const range = sel.getRangeAt(0);
+    const sel = window.getSelection();
+    if (sel.rangeCount > 0) {
+        const range = sel.getRangeAt(0);
 
-            // Insert text normally (not bold)
-            const textNode = document.createTextNode(text);
-            range.deleteContents();
-            range.insertNode(textNode);
+        // Insert text normally (not bold)
+        const textNode = document.createTextNode(text);
+        range.deleteContents();
+        range.insertNode(textNode);
 
-            // Move cursor after inserted text
-            range.setStartAfter(textNode);
-            range.setEndAfter(textNode);
-            sel.removeAllRanges();
-            sel.addRange(range);
-        } else {
-            textbox.appendChild(document.createTextNode(text));
-        }
+        // Move cursor after inserted text
+        range.setStartAfter(textNode);
+        range.setEndAfter(textNode);
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else {
+        textbox.appendChild(document.createTextNode(text));
     }
+}
 
-    // Attach click event to buttons
-    document.querySelectorAll('.buttons button').forEach(button => {
-        button.addEventListener('click', () => {
-            const key = button.getAttribute('data-key');
-            insertText(key);
-        });
+// Attach click event to buttons
+document.querySelectorAll('.buttons button').forEach(button => {
+    button.addEventListener('click', () => {
+        const key = button.getAttribute('data-key');
+        insertText(key);
     });
+});
 
-    // Enable Enter key to create new line
-    textbox.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            document.execCommand('insertHTML', false, '<br>');
-        }
-    });
-
-    // Paste text with a leading space and normal formatting
-    textbox.addEventListener('paste', function(e) {
+// Enable Enter key to create new line
+textbox.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
         e.preventDefault();
-        const text = (e.clipboardData || window.clipboardData).getData('text');
+        document.execCommand('insertHTML', false, '<br>');
+    }
+});
 
-        const sel = window.getSelection();
-        if (sel.rangeCount > 0) {
-            const range = sel.getRangeAt(0);
-            const textNode = document.createTextNode(' ' + text);
+// Paste text with a leading space and normal formatting
+textbox.addEventListener('paste', function(e) {
+    e.preventDefault();
+    const text = (e.clipboardData || window.clipboardData).getData('text');
 
-            range.deleteContents();
-            range.insertNode(textNode);
+    const sel = window.getSelection();
+    if (sel.rangeCount > 0) {
+        const range = sel.getRangeAt(0);
+        const textNode = document.createTextNode(' ' + text);
 
-            // Move cursor after inserted text
-            range.setStartAfter(textNode);
-            range.setEndAfter(textNode);
-            sel.removeAllRanges();
-            sel.addRange(range);
-        } else {
-            textbox.appendChild(document.createTextNode(' ' + text));
-        }
-    });
+        range.deleteContents();
+        range.insertNode(textNode);
+
+        // Move cursor after inserted text
+        range.setStartAfter(textNode);
+        range.setEndAfter(textNode);
+        sel.removeAllRanges();
+        sel.addRange(range);
+    } else {
+        textbox.appendChild(document.createTextNode(' ' + text));
+    }
+});
+
+// Set focus to the textbox on page load
+window.addEventListener('DOMContentLoaded', () => {
+    textbox.focus();
+});
 </script>
 </body>
 </html>
