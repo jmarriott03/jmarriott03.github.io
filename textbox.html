@@ -215,14 +215,6 @@ document.querySelectorAll('.buttons button').forEach(button => {
     });
 });
 
-// Enable Enter key to create new line
-textbox.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-        document.execCommand('insertHTML', false, '<br>');
-    }
-});
-
 // Set focus to the textbox on page load
 window.addEventListener('DOMContentLoaded', () => {
     textbox.focus();
