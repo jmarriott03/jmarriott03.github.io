@@ -12,10 +12,12 @@
 --highlight-light: #b4c960;
 --highlight-dark: #a80075;
 }
+/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+*/
 section {
 	max-width: 60em;
 	overflow: hidden;
@@ -42,58 +44,77 @@ section :last-child {
 	border-radius: 0.5em;
 	background-color: var(--lgrey);
 	color: var(--black);
-	font-size: 12px;
+	font-size: 0.875em;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
-	margin-right: 0.5em;
+	margin: 0 0.25em 0.5em 0;
+	outline-offset: 2px;
 }
 .buttons button:hover {
 	background-color: var(--mgrey);
+}
+.mb-0-5 {
+	margin-bottom: 0.5em;
 }
 </style>
 </head>
 <body>
 <main>
   <section class="p-responsive">
+	  <div class="stroke p-responsive rounded-responsive">
+    <h2>Textbox tags</h2>
     <div id="textbox" contenteditable="true"></div>
-    <p class="m-0">Liquid tags</p>
+    <h3 class="m-0 mb-0-5">Liquid tags</h3>
     <div class="buttons mb-1">
-      <button data-key="years">Years</button>
-      <button data-key="months">Months</button>
-      <button data-key="days">Days</button>
-      <button data-key="hours">Hours</button>
-      <button data-key="minutes">Minutes</button>
+      <button data-key="course">Course name</button>
+      <button data-key="tariff">UCAS tariff</button>
+      <button data-key="ucas">UCAS course code</button>
+      <button data-key="institute">Institution code</button>
+      <button data-key="published">Published code</button>
+      <button data-key="duration">Duration</button>
+      <button data-key="mode">Mode of study</button>
+      <button data-key="location">Location</button>
+      <button data-key="start">Start date</button>
     </div>
-	  
-	  
-	  
-	   <p class="m-0">Fees tags</p>
+    <h3 class="m-0 mb-0-5">Fees tags</h3>
     <div class="buttons mb-1">
-      <button data-key="years">Years</button>
-      <button data-key="months">Months</button>
-      <button data-key="days">Days</button>
-      <button data-key="hours">Hours</button>
-      <button data-key="minutes">Minutes</button>
+      <button data-key="currentfee">Current fee year</button>
+      <button data-key="nextfeeyear">Next fee year</button>
+      <button data-key="homefeecurrent">Home fee current year fee</button>
+      <button data-key="homefeenext">Home fee next year fee</button>
+      <button data-key="internationalfeecurrent">International fee current year fee</button>
+      <button data-key="internationalfeenext">International fee next year fee</button>
+      <button data-key="parttimefeecurrent">Part time fee current year fee</button>
+      <button data-key="parttimefeenext">Part time fee next year fee</button>
     </div>
-	  
-	  
-	   <p class="m-0">Credit note tags</p>
+    <h3 class="m-0 mb-0-5">Credit note tags</h3>
     <div class="buttons">
-      <button data-key="years">Years</button>
-      <button data-key="months">Months</button>
-      <button data-key="days">Days</button>
-      <button data-key="hours">Hours</button>
-      <button data-key="minutes">Minutes</button>
-    </div>
+      <button data-key="credits">Credits</button>
+      <button data-key="creditdescription">Credit description</button>
+    </div></div>
   </section>
 </main>
 <script>
-    const placeholders = {
-        years: '{{years.info@some}}',
-        months: '{{months.info@some}}',
-        days: '{{days.info@some}}',
-        hours: '{{hours.info@some}}',
-        minutes: '{{minutes.info@some}}'
+const placeholders = {
+course: '{{course.name}}',
+tariff: '{{course.new_ucas_tariff}}',
+ucas: '{{course.ucas_course_code}}',
+institute: '{{course.version.institution_code}}',
+published: '{{course.published_version.institution_code}}',
+duration: '{{course.duration}}',
+mode: '{{course.study_mode}}',
+location: '{{course.location}}',
+start: '{{course.start_date_text}}',
+currentfee : '{{course.fees.current_fee_year}}',
+nextfeeyear: '{{course.fees.next_fee_year}}',
+homefeecurrent: '{{course.fees.home_fees.current_year_fees}}',
+homefeenext: '{{course.fees.home_fees.next_year_fees}}',
+internationalfeecurrent: '{{course.fees.international_fees.current_year_fees}}',
+internationalfeenext: '{{course.fees.international_fees.next_year_fees}}',
+parttimefeecurrent: '{{course.fees.part_time_home_fees.current_year_fees}}',
+parttimefeenext: '{{course.fees.part_time_home_fees.next_year_fees}}',
+credits: '{{course.fees.part_time_home_fees.credits}}',
+creditdescription: '{{course.fees.part_time_home_fees.description}}'
     };
 
     const textbox = document.getElementById('textbox');
