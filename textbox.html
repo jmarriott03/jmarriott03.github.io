@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+#textbox {
+	width: 100%;
+	min-height: 10em;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.5em;
+	padding: 0.5em;
+	font-size: 1em;
+	line-height: 1.5;
+	outline: none;
+	white-space: pre-wrap;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+}
+.buttons button {
+	padding: 0.5em;
+	border: none;
+	border-radius: 0.5em;
+	background-color: var(--lgrey);
+	color: var(--black);
+	font-size: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-right: 0.5em;
+}
+.buttons button:hover {
+	background-color: var(--mgrey);
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <div id="textbox" contenteditable="true"></div>
+    <p class="m-0">Liquid tags</p>
+    <div class="buttons mb-1">
+      <button data-key="years">Years</button>
+      <button data-key="months">Months</button>
+      <button data-key="days">Days</button>
+      <button data-key="hours">Hours</button>
+      <button data-key="minutes">Minutes</button>
+    </div>
+	  
+	  
+	  
+	   <p class="m-0">Fees tags</p>
+    <div class="buttons mb-1">
+      <button data-key="years">Years</button>
+      <button data-key="months">Months</button>
+      <button data-key="days">Days</button>
+      <button data-key="hours">Hours</button>
+      <button data-key="minutes">Minutes</button>
+    </div>
+	  
+	  
+	   <p class="m-0">Credit note tags</p>
+    <div class="buttons">
+      <button data-key="years">Years</button>
+      <button data-key="months">Months</button>
+      <button data-key="days">Days</button>
+      <button data-key="hours">Hours</button>
+      <button data-key="minutes">Minutes</button>
+    </div>
+  </section>
+</main>
+<script>
+    const placeholders = {
+        years: '{{years.info@some}}',
+        months: '{{months.info@some}}',
+        days: '{{days.info@some}}',
+        hours: '{{hours.info@some}}',
+        minutes: '{{minutes.info@some}}'
+    };
+
+    const textbox = document.getElementById('textbox');
+
+    function insertText(key) {
+        const text = placeholders[key] + ' ';
+        textbox.focus(); 
+
+        const sel = window.getSelection();
+        if (sel.rangeCount > 0) {
+            const range = sel.getRangeAt(0);
+
+            // Insert text normally (not bold)
+            const textNode = document.createTextNode(text);
+            range.deleteContents();
+            range.insertNode(textNode);
+
+            // Move cursor after inserted text
+            range.setStartAfter(textNode);
+            range.setEndAfter(textNode);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        } else {
+            textbox.appendChild(document.createTextNode(text));
+        }
+    }
+
+    // Attach click event to buttons
+    document.querySelectorAll('.buttons button').forEach(button => {
+        button.addEventListener('click', () => {
+            const key = button.getAttribute('data-key');
+            insertText(key);
+        });
+    });
+
+    // Enable Enter key to create new line
+    textbox.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            document.execCommand('insertHTML', false, '<br>');
+        }
+    });
+
+    // Paste text with a leading space and normal formatting
+    textbox.addEventListener('paste', function(e) {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData('text');
+
+        const sel = window.getSelection();
+        if (sel.rangeCount > 0) {
+            const range = sel.getRangeAt(0);
+            const textNode = document.createTextNode(' ' + text);
+
+            range.deleteContents();
+            range.insertNode(textNode);
+
+            // Move cursor after inserted text
+            range.setStartAfter(textNode);
+            range.setEndAfter(textNode);
+            sel.removeAllRanges();
+            sel.addRange(range);
+        } else {
+            textbox.appendChild(document.createTextNode(' ' + text));
+        }
+    });
+</script>
+</body>
+</html>
