@@ -133,7 +133,7 @@ section :last-child {
 const textbox = document.getElementById('textbox');
 
 function insertText(key) {
-    const text = placeholders[key] + ' ';
+    const text = ' ' + placeholders[key] + ' ';
     textbox.focus();
 
     const sel = window.getSelection();
