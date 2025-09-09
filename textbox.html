@@ -56,42 +56,55 @@ section :last-child {
 .mb-0-5 {
 	margin-bottom: 0.5em;
 }
+.save-btn-container {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-end;
+}
+.save-btn-container > button {
+	margin: 0;
+}
 </style>
 </head>
 <body>
 <main>
   <section class="p-responsive">
-	  <div class="stroke p-responsive rounded-responsive">
-    <h2>Textbox tags</h2>
-    <div id="textbox" contenteditable="true"></div>
-    <h3 class="m-0 mb-0-5">Liquid tags</h3>
-    <div class="buttons mb-1">
-      <button data-key="course">Course name</button>
-      <button data-key="tariff">UCAS tariff</button>
-      <button data-key="ucas">UCAS course code</button>
-      <button data-key="institute">Institution code</button>
-      <button data-key="published">Published code</button>
-      <button data-key="duration">Duration</button>
-      <button data-key="mode">Mode of study</button>
-      <button data-key="location">Location</button>
-      <button data-key="start">Start date</button>
+    <div class="stroke p-responsive rounded-responsive">
+      <h2>Textbox tags</h2>
+      <div id="textbox" contenteditable="true"></div>
+      <div class="save-btn-container mb-reg">
+        <button class="btn btn-primary">Save</button>
+      </div>
+      <h3 class="m-0 mb-0-5">Liquid tags</h3>
+      <div class="buttons mb-1">
+        <button data-key="course">Course name</button>
+        <button data-key="tariff">UCAS tariff</button>
+        <button data-key="ucas">UCAS course code</button>
+        <button data-key="institute">Institution code</button>
+        <button data-key="published">Published code</button>
+        <button data-key="duration">Duration</button>
+        <button data-key="mode">Mode of study</button>
+        <button data-key="location">Location</button>
+        <button data-key="start">Start date</button>
+      </div>
+      <h3 class="m-0 mb-0-5">Fees tags</h3>
+      <div class="buttons mb-1">
+        <button data-key="currentfee">Current fee year</button>
+        <button data-key="nextfeeyear">Next fee year</button>
+        <button data-key="homefeecurrent">Home fee current year fee</button>
+        <button data-key="homefeenext">Home fee next year fee</button>
+        <button data-key="internationalfeecurrent">International fee current year fee</button>
+        <button data-key="internationalfeenext">International fee next year fee</button>
+        <button data-key="parttimefeecurrent">Part time fee current year fee</button>
+        <button data-key="parttimefeenext">Part time fee next year fee</button>
+      </div>
+      <h3 class="m-0 mb-0-5">Credit note tags</h3>
+      <div class="buttons">
+        <button data-key="credits">Credits</button>
+        <button data-key="creditdescription">Credit description</button>
+      </div>
     </div>
-    <h3 class="m-0 mb-0-5">Fees tags</h3>
-    <div class="buttons mb-1">
-      <button data-key="currentfee">Current fee year</button>
-      <button data-key="nextfeeyear">Next fee year</button>
-      <button data-key="homefeecurrent">Home fee current year fee</button>
-      <button data-key="homefeenext">Home fee next year fee</button>
-      <button data-key="internationalfeecurrent">International fee current year fee</button>
-      <button data-key="internationalfeenext">International fee next year fee</button>
-      <button data-key="parttimefeecurrent">Part time fee current year fee</button>
-      <button data-key="parttimefeenext">Part time fee next year fee</button>
-    </div>
-    <h3 class="m-0 mb-0-5">Credit note tags</h3>
-    <div class="buttons">
-      <button data-key="credits">Credits</button>
-      <button data-key="creditdescription">Credit description</button>
-    </div></div>
   </section>
 </main>
 <script>
