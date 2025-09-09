@@ -141,10 +141,10 @@ function needsLeadingSpace(range) {
         if (offset > 0) {
             return node.textContent[offset - 1] !== ' ';
         } else {
-            // Check previous sibling if at start of text node
             let prev = node.previousSibling;
             while (prev && prev.nodeType !== Node.TEXT_NODE) prev = prev.previousSibling;
-            return !(prev && prev.textContent.slice(-1) === ' ');
+            if (!prev) return false; // start of line → no space
+            return prev.textContent.slice(-1) !== ' ';
         }
     } else if (node.nodeType === Node.ELEMENT_NODE) {
         if (offset > 0) {
@@ -152,9 +152,18 @@ function needsLeadingSpace(range) {
             if (prevChild.nodeType === Node.TEXT_NODE) {
                 return prevChild.textContent.slice(-1) !== ' ';
             }
+        } else {
+            return false; // at start of element
         }
     }
-    return true;
+    return false;
+}
+
+// Utility: ensure no duplicate trailing spaces
+function cleanTrailingSpaces(node) {
+    if (node && node.nodeType === Node.TEXT_NODE) {
+        node.textContent = node.textContent.replace(/\s+$/, ' ');
+    }
 }
 
 // Insert a placeholder text at cursor
@@ -173,12 +182,16 @@ function insertText(key) {
         range.deleteContents();
         range.insertNode(textNode);
 
+        cleanTrailingSpaces(textNode);
+
         range.setStartAfter(textNode);
         range.setEndAfter(textNode);
         sel.removeAllRanges();
         sel.addRange(range);
     } else {
-        textbox.appendChild(document.createTextNode(' ' + textToInsert + ' '));
+        const node = document.createTextNode(' ' + textToInsert + ' ');
+        textbox.appendChild(node);
+        cleanTrailingSpaces(node);
     }
 }
 
@@ -193,17 +206,22 @@ textbox.addEventListener('paste', function(e) {
         let textToInsert = pastedText;
 
         if (needsLeadingSpace(range)) textToInsert = ' ' + textToInsert;
+        textToInsert += ' ';
 
         const textNode = document.createTextNode(textToInsert);
         range.deleteContents();
         range.insertNode(textNode);
+
+        cleanTrailingSpaces(textNode);
 
         range.setStartAfter(textNode);
         range.setEndAfter(textNode);
         sel.removeAllRanges();
         sel.addRange(range);
     } else {
-        textbox.appendChild(document.createTextNode(' ' + pastedText));
+        const node = document.createTextNode(' ' + pastedText + ' ');
+        textbox.appendChild(node);
+        cleanTrailingSpaces(node);
     }
 });
 
