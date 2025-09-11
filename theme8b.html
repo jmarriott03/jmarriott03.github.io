@@ -202,6 +202,7 @@
 --link-color-medium: var(--white);
 --link-color-dark: var(--black);
 }
+
 @media (max-width: 40em) {
 :root {
 --space-responsive: var(--space-m);
@@ -306,35 +307,20 @@ div :last-child {
 	grid-template-columns: 1fr;
 }
 }
-	
-	
-	
-	/* Position theme selector top right */
+/* Position theme selector top right */
 .theme-selector {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  z-index: 1000;
-/*
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	z-index: 1000;/*
 	color: var(--white);
 	background-color: var(--black);
 */
 }
-
 .theme-selector select {
-  padding: 0.5em;
-  border-radius: 0.5em;
+	padding: 0.5em;
+	border-radius: 0.5em;
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 /* Sections */
 section {
 	padding: var(--space-responsive);
@@ -343,6 +329,7 @@ section {
 section.bck-white + section.bck-white, section.bck-lgrey + section.bck-grey, section.bck-mgrey + section.bck-mgrey, section.bck-dgrey + section.bck-dgrey, section.bck-black + section.bck-black, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
 	padding-top: 0;
 }
+
 @media (max-width: 40em) {
 section.bck-white + section.bck-white, section.bck-lgrey + section.bck-grey, section.bck-mgrey + section.bck-mgrey, section.bck-dgrey + section.bck-dgrey, section.bck-black + section.bck-black, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
 	padding-top: var(--space-m);
@@ -470,21 +457,16 @@ div > :last-child {
 	grid-column: span 1; /* fallback to single column on mobile */
 }
 }
-	
-	
-	
-	
-	
-	
+
 /*Responsive behavior: at 80em, resize button*/
 @media (max-width: 80em) {
 .btn-rounded-resize {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 }
 .hero-2col {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 /* Use CSS variables to manage layout widths */
 .hero-2col {
@@ -502,31 +484,31 @@ div > :last-child {
 }
 /* Apply the width variables */
 .left-column {
-    width: var(--left-width);
+	width: var(--left-width);
 }
 .right-column {
-    width: var(--right-width);
+	width: var(--right-width);
 }
 
 /* Responsive behavior: at 80em, both columns are 50% */
 @media (max-width: 80em) {
 .left-column, .right-column {
-    width: 50%;
+	width: 50%;
 }
 }
 
 /* Responsive behavior: at 60em, stack columns vertically */
 @media (max-width: 60em) {
 .left-column, .right-column {
-    width: 100%;
+	width: 100%;
 }
 }
 </style>
 </head>
 <body>
-<main>
-	
-	<!-- Dropdown for theme selection -->
+<main> 
+  
+  <!-- Dropdown for theme selection -->
   <div class="theme-selector p-1 mrfrosty-theme rounded-1">
     <label for="theme-switcher" class="visually-hidden">Select theme</label>
     <select id="theme-switcher">
@@ -546,8 +528,8 @@ div > :last-child {
       <option value="dark">Dark</option>
     </select>
   </div>
-	
-	  <!-- Navigation -->
+  
+  <!-- Navigation -->
   <section>
     <div class="w-80">
       <div class="nav">
@@ -576,142 +558,133 @@ div > :last-child {
     <p class="m-0"><a href="#">Home</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><a href="#">Courses</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><strong>MSc Global Health</strong></p>
   </div>
   
-  <!-- Content -->
-	
-	
-		<!-- 1 -->
-	<section>
+  <!-- Content --> 
+  
+  <!-- 1 -->
+  <section>
     <div class="w-40">
-		
-		<h2>40em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-	<section class="bg-color-light" data-theme="mono">
+      <h2>40em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-light" data-theme="mono">
     <div class="w-40">
-		
-		<h2>40em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-		<section class="bg-color-medium" data-theme="mono">
+      <h2>40em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-medium" data-theme="mono">
     <div class="w-60">
-		
-		<h2>60em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-		<section class="bg-color-dark" data-theme="mono">
+      <h2>60em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-dark" data-theme="mono">
     <div class="w-80">
-		
-		<h2>80em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	<section class="bg-color-light">
+      <h2>80em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-light">
     <div class="w-40">
-		
-		<h2>40em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-		<section class="bg-color-medium">
+      <h2>40em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-medium">
     <div class="w-60">
-		
-		<h2>60em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-		<section class="bg-color-dark">
+      <h2>60em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-dark">
     <div class="w-80">
-		
-		<h2>80em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	<section class="bg-color-dark">
+      <h2>80em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  <section class="bg-color-dark">
     <div class="w-80">
-		
-		<h2>80em repeated</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-		
-		</div>
-	</section>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	
-			<!-- 1 -->
-	
-	<section class="bck-white">
+      <h2>80em repeated</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+    </div>
+  </section>
+  
+  <!-- 1 -->
+  
+  <section class="bck-white">
     <div class="w-40 bg-color-light black-text rounded-responsive p-responsive">
-		
-		<h2>40em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		
-		</div>
-	</section>
-	
-	
-	
-		
-			<!-- 1 -->
-	
-	<section class="bck-white">
+      <h2>40em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
+  
+  <!-- 1 -->
+  
+  <section class="bck-white">
     <div class="w-60 bg-color-medium black-text rounded-responsive p-responsive">
-		
-		<h2>60em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		
-		</div>
-	</section>
+      <h2>60em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
+  
+  <!-- 1 -->
+  
+  <section class="bck-white">
+    <div class="w-80 bg-color-dark black-text rounded-responsive p-responsive">
+      <h2>80em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </section>
 	
 	
-		
-			<!-- 1 -->
+	
+	
+	
+	<!-- 2 -->
 	
 	<section class="bck-white">
-    <div class="w-80 bg-color-dark black-text rounded-responsive p-responsive">
-		
-		<h2>80em</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		
-		</div>
+	<div class="w-80 hero-2col layout-33-67 bg-color-light">
+		<div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <h2>80em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+	 
+  </div>
+	</section>
+	
+	
+	
+	
+	
+	<section class="bck-white">
+	<div class="w-80 hero-2col bg-color-medium">
+		<div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
+    <div class="right-column p-resize">
+      <div class="centered text-resize quotestyle">
+        <h2>80em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+	 
+  </div>
+	</section>
+	
+	
+	<section class="bck-white">
+	<div class="w-80 hero-2col layout-67-33 bg-color-dark">
+		<div class="left-column p-resize"> <div class="centered text-resize quotestyle"><h2>80em</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div></div>
+    <div class="right-column">
+     
+       <img src="images/1280x720fineart12.jpg" width="1280" height="720" alt="">
+      </div>
+    
+	 
+  </div>
 	</section>
 	
 	
@@ -719,7 +692,20 @@ div > :last-child {
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   <div class="w-80 p-responsive">
     <div class="four-container mb-reg">
       <div class="four bg-color">
@@ -756,7 +742,7 @@ div > :last-child {
       </div>
     </div>
   </div>
-<script>
+  <script>
   document.addEventListener('DOMContentLoaded', () => {
     const themeSwitcher = document.getElementById('theme-switcher');
     const savedTheme = localStorage.getItem('theme');
@@ -774,7 +760,7 @@ div > :last-child {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }
-</script>
+</script> 
 </main>
 </body>
 </html>
