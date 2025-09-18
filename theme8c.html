@@ -17,7 +17,7 @@
 --space-m: 1rem;
 --space-l: 2rem;
 --space-responsive: var(--space-l);
---bg-color: var(--white);
+--bg-color: 0, 0%, 100%;
 --bg-color-light: 0, 0%, 93%;
 --bg-color-dark: 0, 0%, 7%;
 --text-color: var(--black);
@@ -175,6 +175,7 @@
 }
 /* Midnight blue theme variables */
 [data-theme="midnight-blue"] {
+--bg-color: 0, 0%, 100%;
 --bg-color-light: 237, 30%, 77%;
 --bg-color-medium: 238, 30%, 34%;
 --bg-color-dark: 237, 58%, 18%;
@@ -187,7 +188,7 @@
 }
 /* Dark mode theme variables */
 [data-theme="dark"] {
---bg-color: var(--black);
+--bg-color: 0° 0% 0%;
 --bg-color-light: 0, 0%, 20%;
 --bg-color-medium: 0, 0%, 40%;
 --bg-color-dark: 0, 0%, 60%;
@@ -217,9 +218,15 @@ div :last-child {
 	max-width: 80em;
 	overflow: hidden;
 }
-.bg-color {
+
+	
+	
+	
+	
+	.bg-color {
 	color: var(--text-color);
 	background-color: hsl(var(--bg-color));
+	overflow: hidden;
 }
 .bg-color a {
 	color: var(--link-color);
@@ -245,15 +252,19 @@ div :last-child {
 .bg-color-dark a {
 	color: var(--link-color-dark);
 }
-.bg-color-white {
-	background-color: var(--white);
-}
-.bg-color-lgrey {
-	background-color: var(--lgrey);
-}
-.bg-color-black {
-	background-color: var(--black);
-}
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+
+	
+	
 .btn-dark {
 	outline: 2px solid var(--dgrey);
 	outline-offset: -2px;
@@ -296,12 +307,12 @@ section {
 	padding: var(--space-responsive);
 }
 /* Cancel vertical padding if two adjacent sections share the same background */
-section.bg-color-white + section.bg-color-white, section.bg-color-lgrey + section.bck-grey, section.bck-mgrey + section.bck-mgrey, section.bck-dgrey + section.bck-dgrey, section.bg-color-black + section.bg-color-black, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
 	padding-top: 0;
 }
 
 @media (max-width: 40em) {
-section.bg-color-white + section.bg-color-white, section.bg-color-lgrey + section.bck-grey, section.bck-mgrey + section.bck-mgrey, section.bck-dgrey + section.bck-dgrey, section.bg-color-black + section.bg-color-black, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
 	padding-top: var(--space-m);
 }
 }
@@ -310,12 +321,12 @@ article {
 	padding: var(--space-responsive);
 }
 /* Cancel vertical padding if two adjacent sections share the same background */
-article.bg-color-white + article.bg-color-white, article.bg-color-lgrey + article.bck-grey, article.bck-mgrey + article.bck-mgrey, article.bck-dgrey + article.bck-dgrey, article.bg-color-black + article.bg-color-black, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
 	padding-top: 0;
 }
 
 @media (max-width: 40em) {
-article.bg-color-white + article.bg-color-white, article.bg-color-lgrey + article.bck-grey, article.bck-mgrey + article.bck-mgrey, article.bck-dgrey + article.bck-dgrey, article.bg-color-black + article.bg-color-black, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
 	padding-top: var(--space-m);
 }
 }
@@ -522,6 +533,8 @@ div > :last-child {
 	border-radius: 50%;
 	margin-right: 1em;
 }
+	
+	
 </style>
 </head>
 <body>
@@ -549,7 +562,7 @@ div > :last-child {
   </div>
   
   <!-- Navigation -->
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80">
       <div class="nav">
         <div class="nav-logo"><img src="images/uoplogo.svg" alt="" class="mr-1"></div>
@@ -573,7 +586,7 @@ div > :last-child {
   </section>
   
   <!-- Breadcrumbs -->
-  <section class="bg-color-white">
+  <section class="bg-color">
     <p class="w-80"><a href="#">Home</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><a href="#">Courses</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><strong>MSc Global Health</strong></p>
   </section>
   
@@ -581,7 +594,7 @@ div > :last-child {
   
   <!-- 1 -->
   
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80 hero-2col layout-33-67 bg-color-light">
       <div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
       <div class="right-column p-resize">
@@ -597,7 +610,7 @@ div > :last-child {
       </div>
     </div>
   </section>
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80 hero-2col bg-color-medium">
       <div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
       <div class="right-column p-resize">
@@ -613,7 +626,7 @@ div > :last-child {
       </div>
     </div>
   </section>
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80 hero-2col layout-67-33 bg-color-dark">
       <div class="left-column p-resize">
         <div class="centered text-resize quotestyle">
@@ -656,7 +669,7 @@ div > :last-child {
   
   <!-- 1 -->
   
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-40 bg-color-light black-text rounded-responsive p-responsive">
       <h2>w-40 bg-color-light black-text rounded-responsive p-responsive</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -665,7 +678,7 @@ div > :last-child {
   
   <!-- 1 -->
   
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-60 bg-color-medium black-text rounded-responsive p-responsive">
       <h2>w-60</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -674,7 +687,7 @@ div > :last-child {
   
   <!-- 1 -->
   
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80 bg-color-dark black-text rounded-responsive p-responsive">
       <h2>w-80</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -683,7 +696,7 @@ div > :last-child {
   
   <!-- 4 -->
   
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80 grid rounded-responsive p-responsive bg-color-light">
       <div class="text-resize">
         <h3>8a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
@@ -692,7 +705,7 @@ div > :last-child {
       <div> <img src="images/1280x720fineart12.jpg" width="1280" height="720" alt="" class="rounded-1"> </div>
     </div>
   </section>
-  <section class="bg-color-light"><div class="w-80 pb-reg"><h2>Grid 4 items</h2></div>
+  <section class="bg-color-light"><div class="w-80 pb-reg"><h2>Grid 4 items or more</h2></div>
     <div class="w-80 grid">
       <div class="rounded-1 p-1 bg-color-medium">
         <h2>1</h2>
@@ -715,51 +728,54 @@ div > :last-child {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	<section class="bg-color-medium">
+  <section class="bg-color-medium"><div class="w-80 pb-reg"><h2>Grid 3 items</h2></div>
     <div class="w-80 grid">
-      <div>
+      <div class="rounded-1 p-1 bg-color-dark">
         <h2>1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
-      <div>
+      <div class="rounded-1 p-1 bg-color-dark">
         <h2>2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
-      <div>
+      <div class="rounded-1 p-1 bg-color-dark">
         <h2>3</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
-      
+     
     </div>
-  </section>
+  </section>	
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	<section class="bg-color-dark">
+	  <section class="bg-color-dark"><div class="w-80 pb-reg"><h2>Grid 2 items</h2></div>
     <div class="w-80 grid">
-      <div>
+      <div class="rounded-1 p-1 bg-color">
         <h2>1</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
-      <div>
+      <div class="rounded-1 p-1 bg-color">
         <h2>2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
-      
+
+     
     </div>
-  </section>
+  </section>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -773,7 +789,7 @@ div > :last-child {
   
   <!-- End bit -->
   
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="w-80 grid">
       <div class="bg-color p-responsive stroke">
         <p>None<br>
@@ -793,7 +809,7 @@ div > :last-child {
       </div>
     </div>
   </section>
-  <section class="bg-color-white">
+  <section class="bg-color">
     <div class="grid w-80">
       <div class="p-responsive rounded-responsive mb-reg bg-color-light">
         <h2>bg-color-light</h2>
