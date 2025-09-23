@@ -14,10 +14,6 @@
 	outline-offset: -1px;
 }
 */
-.debug-outline * {
-    outline: 1px dotted red;
-    outline-offset: -1px;
-  }
 :root {
 --space-s: 0.5rem;
 --space-m: 1rem;
@@ -808,11 +804,7 @@ div > :last-child {
     localStorage.setItem('theme', theme);
   }
 
-window.addEventListener('keydown', function(event) {
-  if (event.key.toLowerCase() === 't') {
-    document.body.classList.toggle('debug-outline');
-  }
-});
+
 </script> 
 </main>
 </body>
