@@ -194,7 +194,7 @@
 }
 /* Dark mode theme variables */
 [data-theme="dark"] {
---bg-color: 0° 0% 0%;
+--bg-color: 0 0% 0%;
 --bg-color-light: 0, 0%, 20%;
 --bg-color-medium: 0, 0%, 40%;
 --bg-color-dark: 0, 0%, 60%;
@@ -213,39 +213,9 @@
 --space-responsive: var(--space-m);
 }
 }
-/* Global text and link rules */
 body {
 	color: var(--text-color);
-	background-color: hsl(var(--bg-color));
-}
-a {
-	color: var(--link-color);
-	text-decoration: underline;
-}
-/* Container theming */
-.bg-color {
---link-color: var(--link);   /* always blue */
---text-color: var(--black); /* always black text */
-	background-color: hsl(var(--bg-color));
-	color: var(--black);
-}
-.bg-color-light {
---link-color: var(--link-color-light);
---text-color: var(--text-color-light);
-	background-color: hsl(var(--bg-color-light));
-	color: var(--text-color);
-}
-.bg-color-medium {
---link-color: var(--link-color-medium);
---text-color: var(--text-color-medium);
-	background-color: hsl(var(--bg-color-medium));
-	color: var(--text-color);
-}
-.bg-color-dark {
---link-color: var(--link-color-dark);
---text-color: var(--text-color-dark);
-	background-color: hsl(var(--bg-color-dark));
-	color: var(--text-color);
+	background-color: var(--bg-color);
 }
 div :last-child {
 	margin-bottom: 0;
@@ -253,6 +223,35 @@ div :last-child {
 .w-80 {
 	max-width: 80em;
 	overflow: hidden;
+}
+.bg-color {
+	color: var(--text-color);
+	background-color: hsl(var(--bg-color));
+	overflow: hidden;
+}
+.bg-color a {
+	color: var(--link-color);
+}
+.bg-color-light {
+	color: var(--text-color-light);
+	background-color: hsl(var(--bg-color-light));
+}
+.bg-color-light a {
+	color: var(--link-color-light);
+}
+.bg-color-medium {
+	color: var(--text-color-medium);
+	background-color: hsl(var(--bg-color-medium));
+}
+.bg-color-medium a {
+	color: var(--link-color-medium);
+}
+.bg-color-dark {
+	color: var(--text-color-dark);
+	background-color: hsl(var(--bg-color-dark));
+}
+.bg-color-dark a {
+	color: var(--link-color-dark);
 }
 .btn-dark {
 	outline: 2px solid var(--dgrey);
@@ -736,7 +735,7 @@ div > :last-child {
   </section>
   <section class="bg-color-dark">
     <div class="w-80 pb-reg">
-      <h2>Grid 2 items <a href="#">test link color</a></h2>
+      <h2>Grid 2 items</h2>
     </div>
     <div class="w-80 grid">
       <div class="rounded-1 p-1 bg-color">
@@ -744,21 +743,6 @@ div > :last-child {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
       <div class="rounded-1 p-1 bg-color">
-        <h2>2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-      </div>
-    </div>
-  </section>
-  <section class="bg-color">
-    <div class="w-80 pb-reg">
-      <h2>Grid 2 items <a href="#">test link color</a></h2>
-    </div>
-    <div class="w-80 grid">
-      <div class="rounded-1 p-1 bg-color-dark">
-        <h2>1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
-      </div>
-      <div class="rounded-1 p-1 bg-color-dark">
         <h2>2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
       </div>
