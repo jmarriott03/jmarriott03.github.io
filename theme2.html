@@ -114,7 +114,7 @@
 --text-color-light: var(--black);
 --text-color-medium: var(--black);
 --text-color-dark: var(--black);
---link-color: var(--black);
+--link-color: var(--link);
 --link-color-light: var(--black);
 --link-color-medium: var(--black);
 --link-color-dark: var(--black);
@@ -457,6 +457,22 @@ div > :last-child {
 .grid > *:last-child {
 	margin-bottom: 0;
 }
+/* Override link colours inside grid cards.
+   Ensures that when a lighter/darker .bg-color-* card sits inside a parent
+   with a different background theme, the link colour matches the card’s own
+   background context rather than inheriting from the outer section. */
+.grid .bg-color a {
+	color: var(--link-color);
+}
+.grid .bg-color-light a {
+	color: var(--link-color-light);
+}
+.grid .bg-color-medium a {
+	color: var(--link-color-medium);
+}
+.grid .bg-color-dark a {
+	color: var(--link-color-dark);
+}
 /* Column span utilities */
 .span-2 {
 	grid-column: span 2;
@@ -558,7 +574,6 @@ div > :last-child {
 </head>
 <body>
 <main> 
-  
   <!-- Dropdown for theme selection -->
   <div class="theme-selector p-1 mrfrosty-theme rounded-1 stroke">
     <label for="theme-switcher" class="visually-hidden">Select theme</label>
@@ -603,16 +618,12 @@ div > :last-child {
       </div>
     </div>
   </section>
-  
   <!-- Breadcrumbs -->
   <section class="bg-color">
-    <p class="w-80"><a href="#">Home</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><a href="#">Courses</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><strong>MSc Global Health</strong></p>
+    <p class="w-80"><a href="#">Home</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><a href="#">Courses</a><span class="iconfont ml-0-5" aria-hidden="true">N</span><strong>MSc Global Health</strong> (Keyboard: <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next theme, t to toggle debug)</p>
   </section>
-  
   <!-- Content --> 
-  
   <!-- 1 -->
-  
   <section class="bg-color">
     <div class="w-80 hero-2col layout-33-67 bg-color-light">
       <div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
@@ -629,6 +640,9 @@ div > :last-child {
       </div>
     </div>
   </section>
+  
+  <!-- 2 -->
+  
   <section class="bg-color">
     <div class="w-80 hero-2col bg-color-medium">
       <div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
@@ -645,6 +659,7 @@ div > :last-child {
       </div>
     </div>
   </section>
+  <!-- 3 -->
   <section class="bg-color">
     <div class="w-80 hero-2col layout-67-33 bg-color-dark">
       <div class="left-column p-resize">
@@ -661,60 +676,56 @@ div > :last-child {
       <div class="right-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
     </div>
   </section>
+  <!-- 4 -->
   <section class="bg-color-light">
     <div class="w-40">
       <h2>40em</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
+  <!-- 5 -->
   <section class="bg-color-medium">
     <div class="w-60">
       <h2>60em</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
+  <!-- 6 -->
   <section class="bg-color-dark">
     <div class="w-80">
       <h2>80em</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
+  <!-- 7 -->
   <section class="bg-color-dark">
     <div class="w-80">
       <h2>80em repeated</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
-  
-  <!-- 1 -->
-  
+  <!-- 8 -->
   <section class="bg-color">
     <div class="w-40 bg-color-light black-text rounded-responsive p-responsive">
       <h2>w-40 bg-color-light black-text rounded-responsive p-responsive</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </section>
-  
-  <!-- 1 -->
-  
+  <!-- 9 -->
   <section class="bg-color">
     <div class="w-60 bg-color-medium black-text rounded-responsive p-responsive">
       <h2>w-60</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </section>
-  
-  <!-- 1 -->
-  
+  <!-- 10 -->
   <section class="bg-color">
     <div class="w-80 bg-color-dark black-text rounded-responsive p-responsive">
       <h2>w-80</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </section>
-  
-  <!-- 4 -->
-  
+  <!-- 11 -->
   <section class="bg-color">
     <div class="w-80 grid rounded-responsive p-responsive bg-color-light">
       <div class="text-resize">
@@ -724,10 +735,11 @@ div > :last-child {
       <div> <img src="images/1280x720fineart12.jpg" width="1280" height="720" alt="" class="rounded-1"> </div>
     </div>
   </section>
+  <!-- 12 -->
   <section class="bg-color-light">
     <div class="w-80 pb-reg">
       <h2>Grid 4 items or more</h2>
-    </div>
+      <a href="#">link</a></div>
     <div class="w-80 grid">
       <div class="rounded-1 p-1 bg-color-medium">
         <h2>1</h2>
@@ -747,10 +759,11 @@ div > :last-child {
       </div>
     </div>
   </section>
+  <!-- 13 -->
   <section class="bg-color-medium">
     <div class="w-80 pb-reg">
       <h2>Grid 3 items</h2>
-    </div>
+      <a href="#">link</a></div>
     <div class="w-80 grid">
       <div class="rounded-1 p-1 bg-color-dark">
         <h2>1</h2>
@@ -766,14 +779,15 @@ div > :last-child {
       </div>
     </div>
   </section>
+  <!-- 14 -->
   <section class="bg-color-dark">
     <div class="w-80 pb-reg">
       <h2>Grid 2 items</h2>
-    </div>
+      <a href="#">link</a></div>
     <div class="w-80 grid">
       <div class="rounded-1 p-1 bg-color">
         <h2>1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sunt in culpa qui officia <a href="#">exact css</a>.</p>
       </div>
       <div class="rounded-1 p-1 bg-color-medium">
         <h2>2</h2>
@@ -781,9 +795,7 @@ div > :last-child {
       </div>
     </div>
   </section>
-  
-  <!-- End bit -->
-  
+  <!-- 15 -->
   <section class="bg-color">
     <div class="w-80 grid">
       <div class="bg-color p-responsive stroke">
@@ -804,6 +816,7 @@ div > :last-child {
       </div>
     </div>
   </section>
+  <!-- 16 -->
   <section class="bg-color">
     <div class="grid w-80">
       <div class="p-responsive rounded-responsive mb-reg bg-color-light">
@@ -823,18 +836,18 @@ div > :last-child {
     </div>
   </section>
   <script>
-	document.addEventListener('DOMContentLoaded', () => {
-    const themeSwitcher = document.getElementById('theme-switcher');
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (prefersDark ? 'dark' : 'mono');
-    setTheme(theme);
-    themeSwitcher.value = theme;
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'mono');
+        setTheme(theme);
+        themeSwitcher.value = theme;
 
-    themeSwitcher.addEventListener('change', () => {
-        setTheme(themeSwitcher.value);
+        themeSwitcher.addEventListener('change', () => {
+            setTheme(themeSwitcher.value);
+        });
     });
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     const themeSwitcher = document.getElementById('theme-switcher');
