@@ -123,6 +123,12 @@ div :last-child {
 .caption-block {
 	border-left: 2px solid currentColor;
 	padding: 0.5em;
+	font-size: 0.75em;
+	line-height: 1.5;
+}
+.caption-block::before {
+	content: "The image shows: ";
+	font-weight: bold;
 }
 </style>
 </head>
@@ -139,7 +145,7 @@ div :last-child {
                 MA Illustration graduate</p>
             </div>
           </div>
-          <div class="caption-block smalltext">The image shows Desirae Juurou, an MA Illustration graduate, at work in the studio.</div>
+          <div class="caption-block">Desirae Juurou, an MA Illustration graduate, at work in the studio.</div>
         </div>
       </div>
       <div class="right-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
