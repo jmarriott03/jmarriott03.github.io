@@ -27,21 +27,6 @@ div :last-child {
 .bg-color {
 	background-color: var(--bg-color);
 }
-.w-80 {
-	max-width: 80em;
-	margin: 0 auto;
-	overflow: hidden;
-}
-.w-60 {
-	max-width: 60em;
-	margin: 0 auto;
-	overflow: hidden;
-}
-.w-40 {
-	max-width: 40em;
-	margin: 0 auto;
-	overflow: hidden;
-}
 
 /*Responsive behavior: at 80em, resize button*/
 @media (max-width: 80em) {
@@ -130,6 +115,9 @@ div :last-child {
 	content: "The image shows: ";
 	font-weight: bold;
 }
+.pt-0 {
+	padding-top: 0;
+}
 </style>
 </head>
 <body>
@@ -150,6 +138,18 @@ div :last-child {
       </div>
       <div class="right-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt=""></div>
     </div>
+  </section>
+  <section class="p-responsive pt-0">
+    <div class="w-80 codegrey"> <code>.caption-block {<br>
+      border-left: 2px solid currentColor;<br>
+      padding: 0.5em;<br>
+      font-size: 0.75em;<br>
+      line-height: 1.5;<br>
+      }<br>
+      .caption-block::before {<br>
+      content: "The image shows: ";<br>
+      font-weight: bold;<br>
+      }</code></div>
   </section>
 </main>
 </body>
