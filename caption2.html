@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+:root {
+--bg-color: #f3d213;
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.w-80 {
+	max-width: 80em;
+	overflow: hidden;
+}
+.bg-color {
+	background-color: var(--bg-color);
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+	font-size: 1rem;
+}
+}
+.hero-2col {
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+	width: var(--left-width);
+}
+.right-column {
+	width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+	width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+	width: 100%;
+}
+}
+.btn-rounded-resize {
+	color: currentColor;
+	border: 2px solid currentColor;
+	font-size: 1.25rem;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+}
+.btn-rounded-resize:hover {
+	cursor: pointer;
+}
+.quotestyle:before {
+	font-family: "Times New Roman", serif;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.5em;
+	content: "\275d";
+	display: block;
+	margin-top: 0.2em;
+}
+.quote-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+.pt-0 {
+	padding-top: 0;
+}
+figure {
+	position: relative;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.875em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <div class="w-80 hero-2col layout-67-33 bg-color rounded-responsive">
+      <div class="left-column p-resize">
+        <div class="centered text-resize quotestyle black-text">
+          <p>As an international student, the working experience in the UK is very valuable. I have a better understanding of the working lifestyle is like in the UK and it has also increased my confidence with regards to my future career. Furthermore, the working experience that I have gained has already made my CV look great!</p>
+          <div class="quote-container mb-reg"><img src="images/640x640quotes03.jpg" alt="Desirae Juurou" class="quote-image">
+            <div class="quote-text">
+              <p><a href="#">Desirae Juurou</a><br>
+                MA Illustration graduate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <figure><img src="images/1280x720fineart12.jpg" alt="Fine Art Stuedent Alysia Millington">
+          <figcaption class="rounded-0-5">Desirae Juurou, an MA Illustration graduate, at work in the studio.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="p-responsive pt-0">
+    <div class="w-80 codegrey"><code>figure {<br>
+      position: relative;<br>
+      }<br>
+      figcaption {<br>
+      position: absolute;<br>
+      bottom: 1em;<br>
+      left: 1em;<br>
+      background-color: rgba(0, 0, 0, 0.7);<br>
+      color: var(--white);<br>
+      padding: 0.5em;<br>
+      font-size: 0.875em;<br>
+      max-width: calc(100% - 2em);<br>
+      }<br>
+      figcaption a {<br>
+      color: var(--white);<br>
+      text-decoration: underline;<br>
+      }<br>
+      figure {<br>
+      height: 100%;<br>
+      width: 100%;<br>
+      }</code></div>
+  </section>
+</main>
+</body>
+</html>
