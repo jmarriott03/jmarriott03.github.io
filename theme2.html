@@ -223,7 +223,6 @@
 --bg-color-light: 0, 0%, 20%;
 --bg-color-medium: 0, 0%, 40%;
 --bg-color-dark: 0, 0%, 60%;
---text-color: var(--black);
 --text-color: var(--white);
 --text-color-light: var(--white);
 --text-color-medium: var(--white);
@@ -830,60 +829,58 @@ div > :last-child {
     </div>
   </section>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const themeSwitcher = document.getElementById('theme-switcher');
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (prefersDark ? 'dark' : 'mono');
-        setTheme(theme);
-        themeSwitcher.value = theme;
-
-        themeSwitcher.addEventListener('change', () => {
-            setTheme(themeSwitcher.value);
-        });
-    });
-
 document.addEventListener('DOMContentLoaded', () => {
-    const themeSwitcher = document.getElementById('theme-switcher');
-    const themes = Array.from(themeSwitcher.options).map(option => option.value);
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    let currentTheme = savedTheme || (prefersDark ? 'dark' : 'mono');
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
 
-    setTheme(currentTheme);
-    themeSwitcher.value = currentTheme;
+  // Detect system preference and saved theme
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'mono');
 
-    themeSwitcher.addEventListener('change', () => {
-        currentTheme = themeSwitcher.value;
-        setTheme(currentTheme);
-    });
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
 
-    // Toggle debug outline with 'T'
-    window.addEventListener('keydown', function(event) {
-        if (event.key.toLowerCase() === 't') {
-            document.body.classList.toggle('debug-outline');
-        }
-
-        // Cycle themes with left/right arrows
-        if (event.key === 'ArrowRight') {
-            const currentIndex = themes.indexOf(currentTheme);
-            currentTheme = themes[(currentIndex + 1) % themes.length];
-            setTheme(currentTheme);
-            themeSwitcher.value = currentTheme;
-        }
-        if (event.key === 'ArrowLeft') {
-            const currentIndex = themes.indexOf(currentTheme);
-            currentTheme = themes[(currentIndex - 1 + themes.length) % themes.length];
-            setTheme(currentTheme);
-            themeSwitcher.value = currentTheme;
-        }
-    });
-});
-
-function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
     localStorage.setItem('theme', theme);
-}
+    liveRegion.textContent = `Theme changed to ${theme.replace('-', ' ')}`;
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Initialise
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
 </script> 
 </main>
 </body>
