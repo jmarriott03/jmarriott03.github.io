@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+}
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 60em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+/* Shared link styles */
+footer nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+	gap: 1rem;
+}
+footer nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--link);
+}
+footer nav a:hover, footer nav a:focus {
+	text-decoration: underline;
+}
+footer nav ul li {
+	margin: 0;
+}
+</style>
+</head>
+
+<body>
+<main>
+  <section class="p-responsive">
+    <h2>footer5</h2>
+    <footer>
+      <nav aria-label="Grid footer links">
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </section>
+</main>
+</body>
+</html>
