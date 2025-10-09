@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--highlight-light: #b4c960;
+--highlight-dark: #a80075;
+--btn-disabled-bg: #eee;
+--btn-disabled-txt: #999;
+--btn-disabled: #eee;
+--btn-disabled-txt: #999;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+section:last-of-type {
+	margin-bottom: 0;
+}
+/* Disabled button */
+.btn:disabled, .btn[aria-disabled="true"] {
+	background-color: var(--btn-disabled);
+	color: var(--btn-disabled-txt);
+	cursor: not-allowed;
+	opacity: 1;
+}
+.pb-0 {
+	padding-bottom: 0;
+}
+.pt-0-5 {
+	padding-top: 0.5em;
+}
+.fullw {
+	width: 100%;
+	clear: both;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="p-responsive">
+    <h1>button4</h1>
+    <h2>Button colours</h2>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+    <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+    <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+    <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+    <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+    <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+    <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+    <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+    <h2 class="fullw pt-0-5">Disabled buttons</h2>
+    <button class="btn btn-primary">Primary enabled</button>
+    <button class="btn btn-primary" disabled>Primary disabled</button>
+    <button class="btn btn-light">Light enabled</button>
+    <button class="btn btn-light" disabled>Light disabled</button>
+    <button class="btn btn-primary" aria-disabled="true">ARIA disabled</button>
+  </section>
+</main>
+</body>
+</html>
