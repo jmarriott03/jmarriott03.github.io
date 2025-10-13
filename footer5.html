@@ -35,7 +35,7 @@ footer nav ul {
 	margin: 0;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(18em, 1fr) );
-	gap: 1rem;
+	gap: 1.5em 1em;
 	max-width: 100%;
 }
 footer nav a {
@@ -67,6 +67,21 @@ footer address {
 	letter-spacing: 0;
 	padding: 0.5rem;
 }
+	
+	
+	
+	
+.contact-links a {
+  display: block;        /* stack links vertically */
+  margin-bottom: 1.5em;    /* 1 em space between each link */
+}
+
+.contact-links a:last-child {
+  margin-bottom: 0;      /* removes extra space after the last link */
+}
+	
+	
+	
 </style>
 </head>
 <body>
@@ -105,10 +120,12 @@ footer address {
                 United Kingdom
                 </address>
               </li>
-              <li><a href="tel:+441752600600"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</a><br>
-                <a href="#">Maps &amp; directions</a><br>
-                <a href="#">Visit us</a><br>
-                <a href="#">Job vacancies</a> </li>
+              <li class="contact-links">
+  <a href="tel:+441752600600"><span class="iconfont" aria-hidden="true">0</span>+44 1752 600600</a>
+  <a href="#">Maps &amp; directions</a>
+  <a href="#">Visit us</a>
+  <a href="#">Job vacancies</a>
+</li>
               <li><a href="#">Logo</a></li>
               <li><span class="iconfont"><a href="#" class="social">f</a></span><span class="iconfont"><a href="#" class="social">t</a></span><span class="iconfont"><a href="#" class="social">y</a></span><span class="iconfont"><a href="#" class="social">i</a></span><span class="iconfont"><a href="#" class="social">p</a></span><span class="iconfont"><a href="#" class="social">Ü</a></span><span class="iconfont"><a href="#" class="social">l</a></span> </li>
             </ul>
