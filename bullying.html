@@ -8,13 +8,20 @@
 <link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
-:root {
---highlight-light: #b4c960;
---highlight-dark: #677c1d;
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.w-60 {
+	max-width: 60em;
 }
 .w-60 {
 	max-width: 60em;
-	overflow: hidden;
+}
+.w-60 :last-child {
+  margin-bottom: 0;
 }
 .darkorange {
 	color: darkorange;
@@ -26,7 +33,7 @@ ul {
 </head>
 <body>
 <main>
-  <div class="w-60 p-2">
+  <div class="w-60 p-responsive">
     <h1>Bullying, Harassment, and Sexual Misconduct Training (Mandatory)</h1>
     <h3>Could this scenario be considered bullying?</h3>
     <ul>
@@ -73,40 +80,40 @@ ul {
     <ul>
       <li><span class="iconfont" aria-hidden="true">2</span>A student receives lower marks because of their disability</li>
       <li><span class="iconfont darkorange" aria-hidden="true">3</span>A staff member is excluded from meetings after supporting a colleague's harassment complaint</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Someone is teased because of their accent</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> A person is asked inappropriate personal questions</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Someone is teased because of their accent</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>A person is asked inappropriate personal questions</li>
     </ul>
     <h3>Under the Worker Protection Act 2023 amendments, employers must:</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Only respond to harassment after it's reported</li>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> Take reasonable steps to prevent staff experiencing sexual harassment</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Provide monetary compensation to affected employees</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Only address sexual harassment involving students</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Only respond to harassment after it's reported</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>Take reasonable steps to prevent staff experiencing sexual harassment</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Provide monetary compensation to affected employees</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Only address sexual harassment involving students</li>
     </ul>
     <h3>Which is the most appropriate professional boundary?</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Holding one-to-one meeting with students in off-campus cafes</li>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> Using University systems for all student communications</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Meeting with students outside of a professional context</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Holding one-to-one meeting with students in off-campus cafes</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>Using University systems for all student communications</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Meeting with students outside of a professional context</li>
     </ul>
     <h3>What would be the most appropriate steps for Dr. David to take to address this situation?</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Avoid Dr. Sarah when on campus.</li>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> If appropriate, Dr David can try to resolve the issue informally by speaking to Dr Sarah directly. If he’s not comfortable doing this, or if it doesn’t resolve the issue, he should speak to his line manager, HR Partner, or use the University’s ‘Speak Up’ tool. If needed, the matter can be escalated formally.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Respond with similar behaviour to show Dr. Sarah how it feels.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Avoid Dr. Sarah when on campus.</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>If appropriate, Dr David can try to resolve the issue informally by speaking to Dr Sarah directly. If he’s not comfortable doing this, or if it doesn’t resolve the issue, he should speak to his line manager, HR Partner, or use the University’s ‘Speak Up’ tool. If needed, the matter can be escalated formally.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Respond with similar behaviour to show Dr. Sarah how it feels.</li>
     </ul>
     <h3>What is the most appropriate first step for Professor Taylor to take in response to Sam’s disclosure?</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Immediately launch their own investigation and go directly to Casey to speak about the allegations</li>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> Reassure Sam, thank them for sharing, and explain the options available for support and next steps</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Encourage Sam to ignore Casey and focus on their studies</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Immediately launch their own investigation and go directly to Casey to speak about the allegations</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>Reassure Sam, thank them for sharing, and explain the options available for support and next steps</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Encourage Sam to ignore Casey and focus on their studies</li>
     </ul>
     <h3>Cath suspects that this treatment may be a form of victimisation after supporting a colleague’s complaint. What should Cath do next?</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Assume this is unrelated to the complaint and ignore the behaviour.</li>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> Consult the bullying and harassment policy to decide on the next steps. Cath can also raise the matter with their manager, report it to the HR Partner Team, or use the Speak Up tool.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Accept the exclusion and criticism as a normal part of working life and move on.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Look for a new job to avoid further problems.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Assume this is unrelated to the complaint and ignore the behaviour.</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>Consult the bullying and harassment policy to decide on the next steps. Cath can also raise the matter with their manager, report it to the HR Partner Team, or use the Speak Up tool.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Accept the exclusion and criticism as a normal part of working life and move on.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Look for a new job to avoid further problems.</li>
     </ul>
     
     <!-- Question 1 -->
@@ -114,18 +121,18 @@ ul {
     <h3>During a team meeting, James makes a joke about wheelchair users needing "special treatment" while discussing reasonable adjustments for a new team member who uses a wheelchair. When a colleague points out that the comment is inappropriate and offensive, James dismisses it, saying he was "just joking" and that "people are too sensitive these days."</h3>
     <h3>What type of behaviour could this be?</h3>
     <ul>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> Disability harassment. James’ comment about wheelchair users needing “special treatment” creates an offensive environment and violates the dignity of individuals with disabilities.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> James is simply making a joke that shouldn't be taken seriously. It's just a light-hearted comment, and the issue is being blown out of proportion.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Wait for the issue to resolve itself. If it happens again, James will eventually realise his comments are inappropriate on his own.</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>Disability harassment. James’ comment about wheelchair users needing “special treatment” creates an offensive environment and violates the dignity of individuals with disabilities.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>James is simply making a joke that shouldn't be taken seriously. It's just a light-hearted comment, and the issue is being blown out of proportion.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Wait for the issue to resolve itself. If it happens again, James will eventually realise his comments are inappropriate on his own.</li>
     </ul>
     
     <!-- Question 2 -->
     <h2>2/10</h2>
     <h3>A staff member approaches you and discloses that they are being subjected to offensive comments regarding their religious beliefs by a colleague. They don't feel comfortable speaking directly to the individual. They're considering reporting it, but are unsure how to proceed and are concerned it won't be taken seriously.</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Advise the staff member to find another job if it’s too difficult to work with that colleague</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Ignore the complaint, as it might not be serious and reporting it will likely make things worse</li>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> Reassure them that their concerns will be taken seriously and explain the reporting process and support available to them</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Advise the staff member to find another job if it’s too difficult to work with that colleague</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Ignore the complaint, as it might not be serious and reporting it will likely make things worse</li>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>Reassure them that their concerns will be taken seriously and explain the reporting process and support available to them</li>
     </ul>
     
     <!-- Question 3 -->
@@ -133,11 +140,11 @@ ul {
     <h3>During online team meetings, one colleague regularly posts comments in the chat about the appearance of female colleagues. While the colleague may view these as harmless compliments, the behaviour has made several women uncomfortable, leading them to turn off their cameras during meetings.</h3>
     <h3>What is the most appropriate course of action to take in this situation?</h3>
     <ul>
-      <li><span class="iconfont darkorange" aria-hidden="true">3</span> If you feel able to, approach the colleague privately and explain that their comments are inappropriate and that they make people uncomfortable.<br>
+      <li><span class="iconfont darkorange" aria-hidden="true">3</span>If you feel able to, approach the colleague privately and explain that their comments are inappropriate and that they make people uncomfortable.<br>
         <br>
         If that doesn't resolve the matter, or if you are not comfortable/it's not appropriate to speak to the colleague directly, speak to your manager or HR Partner, or use the Speak Up tool.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Suggesting that it’s just harmless fun, and that people should not take things too seriously.</li>
-      <li><span class="iconfont" aria-hidden="true">2</span> Ignore the behaviour since the colleague is not intending to offend anyone, and it is up to the female colleagues to address it if they are uncomfortable.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Suggesting that it’s just harmless fun, and that people should not take things too seriously.</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Ignore the behaviour since the colleague is not intending to offend anyone, and it is up to the female colleagues to address it if they are uncomfortable.</li>
     </ul>
     
     <!-- Question 4 -->
@@ -145,7 +152,7 @@ ul {
     <h3>Sarah, a PhD student, tells you her supervisor has been sending her personal messages on social media, invited her to dinner at his home, and made comments about wanting to "get to know her better outside of academia". When she doesn't respond positively, he started criticising her research more harshly.</h3>
     <h3>What type of situation could this be?</h3>
     <ul>
-      <li><span class="iconfont" aria-hidden="true">2</span> Misunderstanding that can be resolved informally</li>
+      <li><span class="iconfont" aria-hidden="true">2</span>Misunderstanding that can be resolved informally</li>
       <li><span class="iconfont darkorange" aria-hidden="true">3</span> Sexual harassment with potential victimisation</li>
       <li><span class="iconfont" aria-hidden="true">2</span> Normal Supervisor – Student relationship</li>
     </ul>
