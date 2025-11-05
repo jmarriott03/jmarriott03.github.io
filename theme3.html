@@ -452,19 +452,20 @@ div > :last-child {
 	margin: 0 auto;
 	overflow: hidden;
 }
-.w-40 {
+.w-40, .w-1\/2 {
 	max-width: 40em;
 	margin: 0 auto;
 	overflow: hidden;
 }
 .w-1\/3 {
 	max-width: 26.666666em;
-}
-.w-1\/2 {
-	max-width: 40em;
+	margin: 0 auto;
+	overflow: hidden;
 }
 .w-2\/3 {
 	max-width: 53.333333em;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 @media (max-width: 40em) {
@@ -660,24 +661,24 @@ p, ul, ol {
   
   <!-- 1 -->
   <section class="bg-color">
-    <div class="w-1/3 bg-color-dark rounded-responsive p-responsive">
-      <h2>w-1/3 centered</h2>
+    <div class="w-40 bg-color-dark rounded-responsive p-responsive">
+      <h2>w-40 centered (narrow)</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
   
   <!-- 2 -->
   <section class="bg-color-dark">
-    <div class="w-2/3">
-      <h2>w-2/3 centered highlighted</h2>
+    <div class="w-40">
+      <h2>w-40 centered highlighted</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
   
   <!-- 3 -->
   <section class="bg-color-dark">
-    <div class="w-2/3">
-      <h2>w-2/3 centered highlighted - padding changes when stacked</h2>
+    <div class="w-40">
+      <h2>w-40 centered highlighted - padding changes when stacked</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">deserunt mollit anim id est laborum</a>.</p>
     </div>
   </section>
@@ -694,7 +695,7 @@ p, ul, ol {
   <section class="bg-color">
     <div class="w-80">
       <div class="w-1/2 bg-color-medium rounded-responsive p-responsive ml-0">
-        <h2>w-1/2</h2>
+        <h2>w-1/2 &#40;same as w-40&#41;</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <a href="#">anim id est laborum</a>.</p>
       </div>
     </div>
@@ -703,7 +704,7 @@ p, ul, ol {
   <section class="bg-color">
     <div class="w-80">
       <div class="w-2/3 bg-color-dark rounded-responsive p-responsive ml-0">
-        <h2>w-2/3</h2>
+        <h2>w-2/3 left aligned with ml-0</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit <a href="#">anim id est laborum</a>.</p>
       </div>
     </div>
@@ -746,17 +747,16 @@ p, ul, ol {
         text-wrap: balance;<br>
         margin: 0 0 24px 0;<br>
         }</code></p>
-      <p>p tag still 'pretty' and remain full width of container.</p>
+      <p>p tag still 'pretty' and is full width of container.</p>
       <p><code>p, ul, ol {<br>
         text-wrap: pretty;<br>
         <s>max-width: 75ch;</s><br>
         margin: 0 0 24px 0;<br>
         }</code></p>
-      <p>There is a 1/3 centered block.</p>
       <p>Highlighted components can have full width background color.</p>
       <p>Offer layout options for one-third, one-half, two-thirds, and full-width sections, all left-aligned within an 80em container.</p>
-      <p>Consider whether the one-third layout should expand to full width below 40em for improved responsiveness.</p>
-      <p>It may be preferable to use max-width instead of width so that content can adapt more effectively to smaller viewports.</p>
+      <p>w-1/3 container should expand to full width below 40em for improved responsiveness.</p>
+      <p>It is better to use max-width instead of width so that content can adapt more effectively to smaller viewports.</p>
       <p><code>.w-1\/3 {<br>
         max-width: 26.666666em;<br>
         }<br>
@@ -772,7 +772,7 @@ p, ul, ol {
         }<br>
         }</code> </p>
       <p>Responsive padding 2em - 1em agreed.</p>
-      <p>Blue links to only be underlined on hover/focus</p>
+      <p>Blue links only underlined on hover/focus.</p>
 		<p><code>.bg-color a {<br>
 	color: var(--link-color);<br>
 	text-decoration: none;<br>
