@@ -773,14 +773,14 @@ p, ul, ol {
         }</code> </p>
       <p>Responsive padding 2em - 1em agreed.</p>
       <p>Blue links only underlined on hover/focus.</p>
-		<p><code>.bg-color a {<br>
-	color: var(--link-color);<br>
-	text-decoration: none;<br>
-}<br>
-.bg-color a:hover, .bg-color a:focus {<br>
-	text-decoration: underline;<br>
-}<br>
-/* Link behaviour override for mono theme only */<br>
+      <p><code>.bg-color a {<br>
+        color: var(--link-color);<br>
+        text-decoration: none;<br>
+        }<br>
+        .bg-color a:hover, .bg-color a:focus {<br>
+        text-decoration: underline;<br>
+        }<br>
+        /* Link behaviour override for mono theme only */<br>
         [data-theme="mono"] .bg-color-light a {<br>
         text-decoration: none;<br>
         }<br>
@@ -817,7 +817,6 @@ document.addEventListener('DOMContentLoaded', () => {
     root.dataset.theme = theme;
     themeSwitcher.value = theme;
     localStorage.setItem('theme', theme);
-    liveRegion.textContent = `Theme changed to ${theme.replace('-', ' ')}`;
   };
 
   const cycleTheme = step => {
