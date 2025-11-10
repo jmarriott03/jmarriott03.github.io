@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+:root {
+--space-s: 0.5rem;
+--space-m: 1rem;
+--space-l: 2rem;
+--space-responsive: var(--space-l);
+--bg-color: 0, 0%, 100%;
+--bg-color-light: 0, 0%, 93%;
+--bg-color-dark: 0, 0%, 7%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--link);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Mono theme variables */
+[data-theme="mono"] {
+--bg-color-light: 0, 0%, 93%;
+--bg-color-medium: 0, 0%, 80%;
+--bg-color-dark: 0, 0%, 7%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--link);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Link behaviour override for mono theme only */
+[data-theme="mono"] .bg-color-light a {
+	text-decoration: none;
+}
+[data-theme="mono"] .bg-color-light a:hover, [data-theme="mono"] .bg-color-light a:focus {
+	text-decoration: underline;
+}
+/* Deep rose theme variables */
+[data-theme="deep-rose"] {
+--bg-color-light: 318, 100%, 77%;
+--bg-color-medium: 318, 100%, 33%;
+--bg-color-dark: 318, 100%, 21%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Deep rose theme variables */
+[data-theme="brilliant-rose"] {
+--bg-color-light: 328, 53%, 84%;
+--bg-color-medium: 327, 52%, 69%;
+--bg-color-dark: 328, 69%, 30%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Raspberry red theme variables */
+[data-theme="raspberry-red"] {
+--bg-color-light: 337, 100%, 79%;
+--bg-color-medium: 337, 100%, 38%;
+--bg-color-dark: 336, 100%, 25%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Deep orange theme variables */
+[data-theme="deep-orange"] {
+--bg-color-light: 37, 73%, 84%;
+--bg-color-medium: 37, 73%, 69%;
+--bg-color-dark: 37, 74%, 54%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--black);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--black);
+}
+/* Butter yellow theme variables */
+[data-theme="butter-yellow"] {
+--bg-color-light: 51, 90%, 84%;
+--bg-color-medium: 51, 90%, 67%;
+--bg-color-dark: 51, 90%, 51%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--black);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--black);
+}
+/* Dark lavender theme variables */
+[data-theme="dark-lavender"] {
+--bg-color-light: 244, 19%, 85%;
+--bg-color-medium: 246, 21%, 70%;
+--bg-color-dark: 245, 47%, 29%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Bondi blue theme variables */
+[data-theme="bondi-blue"] {
+--bg-color-light: 209, 53%, 85%;
+--bg-color-medium: 209, 53%, 56%;
+--bg-color-dark: 208, 66%, 31%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Turquoise theme variables */
+[data-theme="turquoise"] {
+--bg-color-light: 196, 52%, 89%;
+--bg-color-medium: 196, 52%, 67%;
+--bg-color-dark: 196, 55%, 35%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Sea green theme variables */
+[data-theme="sea-green"] {
+--bg-color-light: 172, 29%, 90%;
+--bg-color-medium: 173, 29%, 71%;
+--bg-color-dark: 174, 43%, 35%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Fresh green theme variables */
+[data-theme="fresh-green"] {
+--bg-color-light: 73, 50%, 86%;
+--bg-color-medium: 72, 49%, 58%;
+--bg-color-dark: 73, 62%, 30%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--black);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--black);
+--link-color-dark: var(--white);
+}
+/* Persian indigo theme variables */
+[data-theme="persian-indigo"] {
+--bg-color-light: 226, 62%, 76%;
+--bg-color-medium: 226, 63%, 30%;
+--bg-color-dark: 226, 80%, 18%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Midnight blue theme variables */
+[data-theme="midnight-blue"] {
+--bg-color-light: 237, 30%, 77%;
+--bg-color-medium: 238, 30%, 34%;
+--bg-color-dark: 237, 58%, 18%;
+--text-color: var(--black);
+--text-color-light: var(--black);
+--text-color-medium: var(--white);
+--text-color-dark: var(--white);
+--link-color: var(--link);
+--link-color-light: var(--black);
+--link-color-medium: var(--white);
+--link-color-dark: var(--white);
+}
+/* Dark mode theme variables */
+[data-theme="dark"] {
+--bg-color: 0 0% 7%;
+--bg-color-light: 0, 0%, 20%;
+--bg-color-medium: 0, 0%, 40%;
+--bg-color-dark: 0, 0%, 60%;
+--text-color: var(--white);
+--text-color-light: var(--white);
+--text-color-medium: var(--white);
+--text-color-dark: var(--black);
+--link-color: var(--white);
+--link-color-light: var(--white);
+--link-color-medium: var(--white);
+--link-color-dark: var(--black);
+}
+/* Link behaviour override for dark theme only */
+[data-theme="dark"] .bg-color a {
+	text-decoration: underline;
+}
+
+@media (max-width: 40em) {
+:root {
+--space-responsive: var(--space-m);
+}
+}
+body {
+	color: var(--text-color);
+	background-color: var(--bg-color);
+}
+div :last-child {
+	margin-bottom: 0;
+}
+.bg-color {
+	color: var(--text-color);
+	background-color: hsl(var(--bg-color));
+}
+.bg-color a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+.bg-color a:hover, .bg-color a:focus {
+	text-decoration: underline;
+}
+.bg-color-light {
+	color: var(--text-color-light);
+	background-color: hsl(var(--bg-color-light));
+}
+.bg-color-light a {
+	color: var(--link-color-light);
+	text-decoration: underline;
+}
+.bg-color-medium {
+	color: var(--text-color-medium);
+	background-color: hsl(var(--bg-color-medium));
+}
+.bg-color-medium a {
+	color: var(--link-color-medium);
+	text-decoration: underline;
+}
+.bg-color-dark {
+	color: var(--text-color-dark);
+	background-color: hsl(var(--bg-color-dark));
+}
+.bg-color-dark a {
+	color: var(--link-color-dark);
+	text-decoration: underline;
+}
+.btn-dark {
+	outline: 2px solid var(--dgrey);
+	outline-offset: -2px;
+}
+.bg-image {
+	background-image: url("images/32x32chess.gif");
+}
+.mrfrosty-theme {
+	color: var(--text-color-light);
+	background-image: linear-gradient(hsla(var(--bg-color-light), 0.6), hsla(var(--bg-color-light), 1));
+	backdrop-filter: blur(0.5em);
+}
+.mrfrosty-theme a {
+	color: var(--link-color-light);
+}
+.btn-theme {
+	background-color: hsl(var(--bg-color-dark));
+	color: var(--text-color-dark);
+}
+.btn-theme:hover {
+	background-color: hsl(var(--bg-color-medium));
+	color: var(--text-color-medium);
+}
+/* Position theme selector top right */
+.theme-selector {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	z-index: 1000;/*
+	color: var(--white);
+	background-color: var(--black);
+*/
+}
+.theme-selector select {
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+/* Sections */
+section {
+	padding: var(--space-responsive);
+}
+/* Cancel vertical padding if two adjacent sections share the same background */
+section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+	padding-top: 0;
+}
+
+@media (max-width: 40em) {
+section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+	padding-top: var(--space-m);
+}
+}
+/* Articles */
+article {
+	padding: var(--space-responsive);
+}
+/* Cancel vertical padding if two adjacent sections share the same background */
+article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+	padding-top: 0;
+}
+
+@media (max-width: 40em) {
+article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+	padding-top: var(--space-m);
+}
+}
+/* Stack vertical spacing */
+.stack > * + * {
+	margin-top: var(--space-responsive);
+}
+div > :last-child {
+	margin-bottom: 0;
+}
+/* Backgrounds */
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+.nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1em;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+@media (max-width: 40em) {
+.nav {
+	flex-direction: column;
+	align-items: flex-start;
+}
+}
+.nav-logo {
+	width: 100%;
+	height: 2.5em;
+}
+.nav-logo img {
+	width: auto;
+}
+.logo-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.logo {
+	width: 3em;
+	display: block;
+	margin: 0;
+}
+.nav-icon {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin-left: 0;
+	margin-bottom: 1em;
+}
+.nav-icon :last-child {
+	margin-bottom: 0;
+}
+.nav-icon {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin: 0; /* Remove default bottom margin */
+	flex: 0 0 auto; /* Prevent stretching */
+}
+.nav-icon img {
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+}
+.nav-icon-text {
+	flex: 1;
+}
+/* Breadcrumb */
+.breadcrumb-container {
+	max-width: 84em;
+	padding: 0 var(--space-l);
+}
+
+@media (max-width: 40em) {
+.breadcrumb-container {
+	padding: 0 var(--space-m);
+}
+}
+.ml-0-5 {
+	margin-left: 0.5em;
+}
+/* Container width */
+.w-80 {
+	max-width: 80em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.w-60 {
+	max-width: 60em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.w-40, .w-1\/2 {
+	max-width: 40em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.w-1\/3 {
+	max-width: 26.666666em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.w-2\/3 {
+	max-width: 53.333333em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+@media (max-width: 40em) {
+.w-1\/3 {
+	max-width: 100%;
+}
+}
+/* Responsive grid container */
+.grid {
+	display: grid;
+	gap: 1em; /* grid gap */
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid > * {
+	width: 100%;
+}
+/* Optional: remove bottom margin of last child */
+.grid > *:last-child {
+	margin-bottom: 0;
+}
+/* Override link colours inside grid cards.
+   Ensures that when a lighter/darker .bg-color-* card sits inside a parent
+   with a different background theme, the link colour matches the card’s own
+   background context rather than inheriting from the outer section. */
+.grid .bg-color a {
+	color: var(--link-color);
+}
+.grid .bg-color-light a {
+	color: var(--link-color-light);
+}
+.grid .bg-color-medium a {
+	color: var(--link-color-medium);
+}
+.grid .bg-color-dark a {
+	color: var(--link-color-dark);
+}
+/* Column span utilities */
+.span-2 {
+	grid-column: span 2;
+	width: 100%;
+}
+
+@media (max-width: 40em) {
+.span-2 {
+	grid-column: span 1; /* fallback to single column on mobile */
+}
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+	font-size: 1rem;
+}
+}
+.hero-2col {
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+	width: var(--left-width);
+}
+.right-column {
+	width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+	width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+	width: 100%;
+}
+}
+.btn-rounded-resize {
+	color: currentColor;
+	border: 2px solid currentColor;
+	font-size: 1.25rem;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+}
+.btn-rounded-resize:hover {
+	cursor: pointer;
+}
+.quotestyle:before {
+	font-family: "Times New Roman", serif;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.5em;
+	content: "\275d";
+	display: block;
+	margin-top: 0.2em;
+}
+.quote-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+/* Default logo */
+.nav-logo img {
+	content: url('images/uoplogo.svg');
+}
+/* Dark mode logo */
+[data-theme="dark"] .nav-logo img {
+	content: url('images/uoplogowhite.svg');
+}
+p, ul, ol {
+	max-width: none;
+}
+.ml-0 {
+	margin-left: 0;
+}
+.bg-color-test {
+	color: #111;
+	background-color: #eee;
+}
+.bg-color-test a {
+	color: #111;
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Dropdown for theme selection -->
+  <div class="theme-selector p-1 mrfrosty-theme rounded-1 stroke">
+    <label for="theme-switcher" class="visually-hidden">Select theme</label>
+    <select id="theme-switcher">
+      <option value="mono">Mono</option>
+      <option value="deep-rose">Deep rose</option>
+      <option value="brilliant-rose">Brilliant rose</option>
+      <option value="raspberry-red">Raspberry red</option>
+      <option value="deep-orange">Deep orange</option>
+      <option value="butter-yellow">Butter yellow</option>
+      <option value="dark-lavender">Dark lavender</option>
+      <option value="bondi-blue">Bondi blue</option>
+      <option value="turquoise">Turquoise</option>
+      <option value="sea-green">Sea green</option>
+      <option value="fresh-green">Fresh green</option>
+      <option value="persian-indigo">Persian indigo</option>
+      <option value="midnight-blue">Midnight blue</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
+  <section class="bg-color">
+    <div class="w-40 p-1 rounded-1 mb-reg bg-color-light">
+      <h2>bg-color-light</h2>
+      <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
+        <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+        <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color">
+    <div class="w-40 p-1 rounded-1 mb-reg bg-color-medium">
+      <h2>bg-color-medium</h2>
+      <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
+        <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+        <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color">
+    <div class="w-40 p-1 rounded-1 mb-reg bg-color-dark">
+      <h2>bg-color-dark</h2>
+      <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
+        <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+        <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color">
+    <div class="w-40 p-1 rounded-1 mb-reg bg-color-test">
+      <h2>bg-color-test</h2>
+      <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="p-1 rounded-1 bg-color-medium" data-theme="raspberry-red">
+        <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+        <p>Lorem ipsum <a href="#">this is parent link color</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color">
+    <div class="w-40 p-1 rounded-1 mb-reg bg-color-medium" data-theme="raspberry-red">
+      <h2>bg-color-medium data-theme=&quot;raspberry-red&quot;</h2>
+      <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      <div class="p-1 rounded-1  bg-color-test" >
+        <h2>bg-color-test</h2>
+        <p>Lorem ipsum <a href="#">eiusmod tempor incididunt</a>.</p>
+      </div>
+    </div>
+  </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Detect system preference and saved theme
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'mono');
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+    localStorage.setItem('theme', theme);
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Initialise
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+</script> 
+</main>
+</body>
+</html>
