@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css/plymouth_reset.css">
+<link rel="stylesheet" href="css/plymouth_framework.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
+--highlight-dark: #131648;
+--foundation: #29718c;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bck-highlight-light {
+	background-color: var(--highlight-light);
+}
+.bck-highlight-dark {
+	background-color: var(--highlight-dark);
+}
+section {
+	max-width: 80em;
+	overflow: hidden;
+}
+section :last-child {
+	margin-bottom: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+td {
+	padding: 0.5em;
+	text-align: left;
+	border-bottom: 1px solid var(--black);
+}
+/* Visually hidden label utility (screen reader only) */
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	gap: 1em;
+}
+.card {
+	width: 100%;
+	margin: 0;
+	max-width: 40em;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.card img {
+	width: calc(100% + 2rem);
+	height: auto;
+	margin: 0 -1em 1.5em -1em;
+	mix-blend-mode: multiply;
+}
+.topstroke {
+	border-top: 0.25rem solid var(--black);
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
+}
+.tag-clearing {
+	color: var(--white);
+	background-color: var(--highlight-dark);
+}
+.tag-foundation {
+	color: var(--white);
+	background-color: var(--foundation);
+}
+.p-0-5 {
+	padding: 0.5em;
+}
+.floatr {
+	float: right;
+}
+.dgrey {
+	color: var(--dgrey);
+}
+.search-container {
+	width: 100%;
+	position: relative;
+}
+.search-box {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.5em;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.search-box:focus {
+	outline: 2px solid var(--link);
+	outline-offset: 2px;
+	border-color: var(--mgrey);
+}
+.search-container::before {
+	content: "B";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: center;
+	letter-spacing: 0.5em;
+	position: absolute;
+	left: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--dgrey);
+	pointer-events: none;
+	z-index: 1;
+}
+.search-box {
+	padding-left: 2em;
+}
+	
+/* Cross-browser placeholder support */
+.search-box::-webkit-input-placeholder {
+color: var(--dgrey);
+}
+.search-box::-moz-placeholder {
+color: var(--dgrey);
+opacity: 1;
+}
+.search-box:-ms-input-placeholder {
+color: var(--dgrey);
+}
+.tag-bck-white {
+	background-color: var(--white);
+}
+.dropdown-wrapper {
+	position: relative;
+	width: 100%;
+}
+.dropdown-select {
+	width: 100%;
+	padding: 1em 2.5em 1em 1em;
+	font-size: 1em;
+	color: var(--black);
+	background: var(--white);
+	border: 2px solid var(--lgrey);
+	border-radius: 0.5em;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: all 0.3s ease;
+	outline: none;
+}
+.dropdown-select:hover {
+	border-color: var(--link);
+}
+.dropdown-select:focus {
+	outline: 2px solid var(--link);
+	outline-offset: 2px;
+	border-color: var(--lgrey);
+}
+.dropdown-icon {
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: var(--black);
+	pointer-events: none;
+	transition: transform 0.3s ease;
+}
+.pt-reg {
+	padding-top: 1.5em;
+}
+label {
+	line-height: 2;
+}
+.no-underline {
+	text-decoration: none;
+	display: inline-block;
+}
+.pills label {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+legend {
+	font-weight: 600;
+	margin-bottom: .75rem;
+}
+/* Container for the pills */
+.pills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	align-items: flex-start;
+}
+/* Visually hide the native checkbox but keep it accessible */
+.pills input[type="checkbox"] {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	white-space: nowrap;
+}
+/* Pill styling on the label */
+.pills label {
+	display: inline-flex;
+	align-items: center;
+	padding: .55em .9em;
+	border-radius: 9999px;
+	cursor: pointer;
+	user-select: none;
+	background: var(--white);
+	border: 1px solid var(--lgrey);
+	transition: background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+	line-height: 1;
+	white-space: nowrap;
+}
+/* Focus ring when tabbing only */
+.pills input[type="checkbox"]:focus-visible + label {
+outline-offset: 2px;
+outline: 2px solid var(--link);
+}
+/* Checked (on) state */
+.pills input[type="checkbox"]:checked + label {
+	background: var(--link);
+	color: var(--white);
+	border-color: var(--link);
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.tarif-block {
+	color: var(--white);
+	background-color: var(--highlight-dark);
+	margin: -1em -1em 1em -1em;
+	padding: 1em;
+}
+.tarif-block a {
+	color: var(--white);
+}
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-bottom: 1em;
+	width: 100%;
+}
+.split p {
+	margin: 0;
+	max-width: none;
+	flex: 1;  /* take remaining space */
+}
+.split > *:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 40em) {
+.split {
+	flex-direction: column;     /* stack items */
+	align-items: flex-start;    /* align to the left */
+	gap: 1em;                   /* optional spacing between items */
+}
+.split > * {
+	margin-right: 0;            /* remove forced spacing */
+	width: 100%;                /* optional: make children full width */
+}
+}
+.clear-filter {
+	display: flex;
+	justify-content: flex-end;   /* push link + button to right */
+	align-items: center;
+	gap: 1em;                    /* exactly 1em spacing */
+}
+.clear-filter a {
+	display: inline-block;       /* stops link from expanding */
+}
+.stroke-highlight-dark {
+	outline: 2px solid var(--highlight-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.round-btn {
+	border-radius: 2em;
+}
+.fullw {
+	width: 100%;
+	background-color: var(--highlight-dark);
+	overflow: hidden;
+}
+.w-80 {
+	max-width: 80em;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.mr-0-5 {
+	margin-right: 0.5em;
+}
+.dgrey-text {
+	color: var(--dgrey);
+}
+.dgrey-text a {
+	color: var(--dgrey);
+}
+a {
+	text-decoration: none;
+}
+a:hover, a:focus {
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="fullw">
+    <div class="w-80 p-responsive white-text">
+      <h2 class="m-0 largetext2">Courses and degree subject areas</h2>
+      <p class="m-0">Academic areas of undergraduate, postgraduate and research study at the <span class="nowrap">University of Plymouth</span></p>
+    </div>
+  </div>
+  <section class="p-responsive">
+    <h2 class="m-0">Search results</h2>
+    <div class="split mb-reg">
+      <p>Showing 1-3 of 3 courses</p>
+      <div>
+        <label for="sort" style="margin-right:0.5rem; font-weight:600;">Sort by:</label>
+        <select id="sort">
+          <option value="location">Location</option>
+          <option value="relevance">Tariff</option>
+          <option value="duration">Duration</option>
+        </select>
+      </div>
+    </div>
+    <div class="card-container mb-reg">
+      <div class="card rounded-1 p-1 stroke-highlight-dark">
+        <p class="mb-1"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span><span class="tag tag-clearing">Course in Clearing</span></p>
+        <img src="images/1280x720coursesearch1.webp" width="1280" height="720" alt="">
+        <h3><a href="#">BA (Hons) Creative Writing</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">Work with poets, novelists, journalists and digital writers to hone your craft as
+          a writer, reader and editor. Learn from published authors who nurture creativity, develop your skills and prepare you for diverse careers in writing.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke-highlight-dark">
+        <p class="mb-1"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span><span class="tag tag-foundation">Foundation</span></p>
+        <img src="images/1280x720coursesearch2.webp" width="1280" height="720" alt="">
+        <h3><a href="#">BA (Hons) Creative Media with Foundation</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">The foundation pathway offers non-standard entry to creative media. Explore visual design, animation, illustration, print-making, fine art and photography, while developing creative skills and best practice for undergraduate study.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke-highlight-dark">
+        <p class="mb-1"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span></p>
+        <img src="images/1280x720coursesearch3.webp" width="1280" height="720" alt="">
+        <h3><a href="#">BA (Hons) Creative Writing</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">Work with poets, novelists, journalists and digital writers to hone your craft as
+          a writer, reader and editor. Learn from published authors who nurture creativity, develop your skills and prepare you for diverse careers in writing.</p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
