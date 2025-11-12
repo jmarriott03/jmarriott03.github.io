@@ -19,13 +19,6 @@
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
-.btn-dark {
-	outline: 2px solid var(--dgrey);
-	outline-offset: -2px;
-}
-.bg-image {
-	background-image: url("images/32x32chess.gif");
-}
 /* Position theme selector top right */
 .theme-selector {
 	position: fixed;
@@ -61,7 +54,11 @@
   align-items: center; 
 }
 	
-	
+.stroke-theme-dark {
+  outline: 2px solid hsl(var(--bg-color-dark));
+  outline-offset: -2px;
+  overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -98,7 +95,7 @@
 	
 	
 	<section class="bg-color">
-    <div class="w-60 rounded-responsive bg-color stroke">
+    <div class="w-60 rounded-responsive bg-color stroke-theme-dark">
 		<div class="grid grid-vertical-align bg-color-dark p-responsive">
 		<div class=""><p class="largetext">Start a course in 2026: check what you need to do</p></div>
 			<div class="progress">
