@@ -72,6 +72,31 @@
   font-size: 0.75em;
   line-height: 1.5;
 }
+.w-26 {
+  max-width: 26.666666em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.w-40 {
+  max-width: 40em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.w-53 {
+  max-width: 53.333333em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.w-60 {
+  max-width: 60em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.w-80 {
+  max-width: 80em;
+  margin: 0 auto;
+  overflow: hidden;
+}
 .p-0 {
   padding: 0;
 }
@@ -143,7 +168,10 @@
   margin-left: 1em;
 }
 .ml-0-5 {
-	margin-left: 0.5em;
+  margin-left: 0.5em;
+}
+.ml-0 {
+  margin-left: 0;
 }
 .mx-1 {
   margin-left: 1em;
@@ -240,12 +268,12 @@
   backdrop-filter: blur(0.5em);
 }
 .mrfrosty-theme {
-	color: var(--text-color-light);
-	background-image: linear-gradient(hsla(var(--bg-color-light), 0.6), hsla(var(--bg-color-light), 1));
-	backdrop-filter: blur(0.5em);
+  color: var(--text-color-light);
+  background-image: linear-gradient(hsla(var(--bg-color-light), 0.6), hsla(var(--bg-color-light), 1));
+  backdrop-filter: blur(0.5em);
 }
 .mrfrosty-theme a {
-	color: var(--link-color-light);
+  color: var(--link-color-light);
 }
 .btn {
   font-size: 1em;
@@ -458,68 +486,126 @@
 }
 /* Sections */
 section {
-	padding: var(--space-responsive);
+  padding: var(--space-responsive);
 }
 /* Cancel vertical padding if two adjacent sections share the same background */
 section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
-	padding-top: 0;
+  padding-top: 0;
 }
-
 @media (max-width: 40em) {
-section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
-	padding-top: var(--space-m);
-}
+  section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+    padding-top: var(--space-m);
+  }
 }
 /* Articles */
 article {
-	padding: var(--space-responsive);
+  padding: var(--space-responsive);
 }
 /* Cancel vertical padding if two adjacent sections share the same background */
 article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
-	padding-top: 0;
+  padding-top: 0;
 }
-
 @media (max-width: 40em) {
-article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
-	padding-top: var(--space-m);
-}
+  article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+    padding-top: var(--space-m);
+  }
 }
 /* Stack vertical spacing */
 .stack > * + * {
-	margin-top: var(--space-responsive);
+  margin-top: var(--space-responsive);
 }
 div > :last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 /* Container width */
-.w-80 {
-	max-width: 80em;
-	margin: 0 auto;
-	overflow: hidden;
+@media (max-width: 40em) {
+  .w-26 {
+    max-width: 100%;
+  }
 }
-.w-60 {
-	max-width: 60em;
-	margin: 0 auto;
-	overflow: hidden;
+/* Responsive grid container */
+.grid {
+	display: grid;
+	gap: 1em; /* grid gap */
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
 }
-.w-40 {
-	max-width: 40em;
-	margin: 0 auto;
-	overflow: hidden;
+.grid > * {
+	width: 100%;
 }
-.w-26 {
-	max-width: 26.666666em;
-	margin: 0 auto;
-	overflow: hidden;
+/* Optional: remove bottom margin of last child */
+.grid > *:last-child {
+	margin-bottom: 0;
 }
-.w-53 {
-	max-width: 53.333333em;
-	margin: 0 auto;
-	overflow: hidden;
+/* Override link colours inside grid cards.
+   Ensures that when a lighter/darker .bg-color-* card sits inside a parent
+   with a different background theme, the link colour matches the card’s own
+   background context rather than inheriting from the outer section. */
+.grid .bg-color a {
+	color: var(--link-color);
+}
+.grid .bg-color-light a {
+	color: var(--link-color-light);
+}
+.grid .bg-color-medium a {
+	color: var(--link-color-medium);
+}
+.grid .bg-color-dark a {
+	color: var(--link-color-dark);
+}
+/* Column span utilities */
+.span-2 {
+	grid-column: span 2;
+	width: 100%;
 }
 
 @media (max-width: 40em) {
-.w-26 {
-	max-width: 100%;
+.span-2 {
+	grid-column: span 1; /* fallback to single column on mobile */
+}
+}
+
+/*Responsive behavior: at 80em, resize button*/
+@media (max-width: 80em) {
+.btn-rounded-resize {
+	font-size: 1rem;
+}
+}
+.hero-2col {
+	display: flex;
+	flex-wrap: wrap;
+}
+/* Use CSS variables to manage layout widths */
+.hero-2col {
+--left-width: 50%;
+--right-width: 50%;
+}
+/* Layouts with different percentages */
+.layout-33-67 {
+--left-width: 33%;
+--right-width: 67%;
+}
+.layout-67-33 {
+--left-width: 67%;
+--right-width: 33%;
+}
+/* Apply the width variables */
+.left-column {
+	width: var(--left-width);
+}
+.right-column {
+	width: var(--right-width);
+}
+
+/* Responsive behavior: at 80em, both columns are 50% */
+@media (max-width: 80em) {
+.left-column, .right-column {
+	width: 50%;
+}
+}
+
+/* Responsive behavior: at 60em, stack columns vertically */
+@media (max-width: 60em) {
+.left-column, .right-column {
+	width: 100%;
 }
 }

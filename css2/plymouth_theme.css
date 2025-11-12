@@ -31,10 +31,10 @@
   --link-color-dark: var(--white);
 }
 /* Link behaviour override for mono theme only */
-[data-theme="mono"] .bg-color-light a {
+[data-theme="mono"] .bg-color-light:not([data-theme]) > p > a {
   text-decoration: none;
 }
-[data-theme="mono"] .bg-color-light a:hover, [data-theme="mono"] .bg-color-light a:focus {
+[data-theme="mono"] .bg-color-light:not([data-theme]) > p > a:hover, [data-theme="mono"] .bg-color-light:not([data-theme]) > p > a:focus {
   text-decoration: underline;
 }
 /* Deep rose theme variables */
@@ -242,10 +242,10 @@ div :last-child {
 }
 .bg-color a {
   color: var(--link-color);
-  text-decoration: none;
+	text-decoration: none;
 }
-.bg-color a:hover, .bg-color a:focus {
-  text-decoration: underline;
+.bg-color a:hover, a:focus {
+	text-decoration: underline;
 }
 .bg-color-light {
   color: var(--text-color-light);
