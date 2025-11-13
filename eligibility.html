@@ -30,34 +30,40 @@
 	padding: 0.5em;
 	border-radius: 0.5em;
 }
-	
-	
-	
-	
-	.progress {
-  max-width: 10em;
-  height: 0.5em;
-  border-radius: 0.25em;
-  border: 2px solid white;
-  background: white;
-  overflow: hidden;
+.progress {
+	max-width: 20em;
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid white;
+	background: white;
+	overflow: hidden;
 }
-
 .progress-fill {
-  width: 50%;          /* 50% filled */
-  height: 100%;
-  background: black;
+	width: 50%;          /* 50% filled */
+	height: 100%;
+	background: black;
 	float: left;
 }
-	
-	.grid-vertical-align {
-  align-items: center; 
+.grid-vertical-align {
+	align-items: center;
 }
-	
 .stroke-theme-dark {
-  outline: 2px solid hsl(var(--bg-color-dark));
-  outline-offset: -2px;
-  overflow: hidden;
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.quote-container {
+  display: flex;
+  align-items: center; /* vertically centre text with image */
+}
+
+.quote-text {
+  margin-left: 1em;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
 }
 </style>
 </head>
@@ -90,31 +96,30 @@
   </section>
   <!-- Content -->
   
-	
-	
-	
-	
-	<section class="bg-color">
+  <section class="bg-color">
     <div class="w-60 rounded-responsive bg-color stroke-theme-dark">
-		<div class="grid grid-vertical-align bg-color-dark p-responsive">
-		<div class=""><p class="largetext">Start a course in 2026: check what you need to do</p></div>
-			<div class="progress">
-  <div class="progress-fill"></div>
-</div>
-		</div>
-		
-	<div class="p-responsive">	
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod tempor incididunt</a>.</p>
-</div>
-		
-
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div class="">
+          <p class="largetext">Start a course in 2026: check what you need to do</p>
+        </div>
+        <div class="progress">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="rounded-0-5 p-responsive bg-color-light stroke-theme-dark">
+          <h2>Check your eligibility to apply</h2>
+          <p>A quick optional check to help you understand whether you meet our entry requirements</p>
+          <div class="quote-container"><img src="images/640x640quotes03.jpg" alt="Desirae Juurou" class="quote-image">
+            <div class="quote-text">
+              <p><a href="#">Desirae Juurou</a><br>
+                Project manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-	
-	
-	
-	
-
   <script>
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
