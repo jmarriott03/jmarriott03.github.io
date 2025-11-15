@@ -1,0 +1,275 @@
+<!doctype html>
+<!--<html lang="en-GB" data-theme="persian-indigo">-->
+<html lang="en-GB" data-theme="deep-orange">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
+--clearing: #131648;
+--foundation: #29718c;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.progress {
+	max-width: 20em;
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: 0;          /* 50% filled */
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.progress-step-1 .progress-fill {
+	width: calc(100% / 3);
+}
+.progress-step-2 .progress-fill {
+width: calc(100% * 2 / 3);
+}
+.progress-step-3 .progress-fill {
+	width: 100%;
+}
+.grid-vertical-align {
+	align-items: center;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.text-center {
+	text-align: center;
+}
+.big-icon-container {
+	display: flex;
+	/*	align-items: flex-start;*/
+	align-items: center;
+}
+.big-icon-text {
+	margin-left: 1em;
+	flex: 1;
+}
+.big-icon-block {
+	display: inline-block;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	font-size: 5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: top;
+	background: none;
+	padding: 0;
+	margin: 0;
+	flex: 0;
+	margin-bottom: -0.17em;
+}
+.inline-block-full-width {
+	display: inline-block;
+	width: 100%;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: middle; /* optional, for nicer alignment with text */
+}
+.tariff-largetext {
+	font-size: 1.17em;
+	line-height: 1.2;
+}
+.mgrey-text {
+	color: var(--mgrey);
+}
+.dgrey-stroke {
+	outline: 2px solid var(--dgrey);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	gap: 1em;
+}
+.card {
+	width: 100%;
+	margin: 0;
+	max-width: 40em;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.card img {
+	width: calc(100% + 2em);
+	height: auto;
+	margin: -1rem -1rem 1.5rem -1rem;
+	max-width: none;
+}
+.stroke-highlight-dark {
+	outline: 2px solid var(--highlight-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.tarif-block {
+	color: var(--white);
+	background-color: var(--highlight-dark);
+	margin: -1em -1em 1em -1em;
+	padding: 1em;
+}
+.tarif-block a {
+	color: var(--white);
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
+}
+.tag-clearing {
+	color: var(--white);
+	background-color: var(--clearing);
+}
+.tag-foundation {
+	color: var(--white);
+	background-color: var(--foundation);
+}
+.mr-0-5 {
+	margin-right: 0.5em;
+}
+.dgrey-text {
+	color: var(--dgrey);
+}
+.dgrey-text a {
+	color: var(--dgrey);
+}
+.pill {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	color: var(--white);
+	background-color: var(--link);
+}
+.pill:after {
+	content: "5"; /* replace with your iconfont’s “x” code-point */
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: centre;
+	margin-left: 0.5em;
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="bg-color">
+    <div class="w-80 rounded-1 bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div>
+          <h1>Search for a course</h1>
+        </div>
+        <div>
+          <p>Find the right course for you at the University of Plymouth</p>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="p-1 rounded-2 bck-white dgrey-stroke mb-reg mgrey-text"><span class="iconfont" aria-hidden="true">B</span>Search for courses, subjects or keywords...</div>
+        <h3>Filter by course type</h3>
+        <p class="mb-2"><span class="pill mr-0-5">Undergraduate</span><span class="pill mr-0-5">Postgraduate taught</span><span class="pill mr-0-5">Postgraduate research</span><span class="pill mr-0-5">Professional development</span><span class="pill mr-0-5">Degree apprenticeship</span><span class="pill mr-0-5">Online</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color">
+    <div class="w-80 card-container">
+      <div class="card rounded-1 p-1 stroke-theme-dark">
+        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span><span class="tag tag-clearing">Course in Clearing</span></p>
+        <img src="images/1280x720coursesearch1.webp" width="1280" height="720" alt="" class="img-cover">
+        <h3><a href="#">BA (Hons) Creative Writing</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">Work with poets, novelists, journalists and digital writers to hone your craft as
+          a writer, reader and editor. Learn from published authors who nurture creativity, develop your skills and prepare you for diverse careers in writing.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke-theme-dark">
+        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span><span class="tag tag-foundation">Foundation</span></p>
+        <img src="images/1280x720coursesearch2.webp" width="1280" height="720" alt="" class="img-cover">
+        <h3><a href="#">BA (Hons) Creative Media with Foundation</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">The foundation pathway offers non-standard entry to creative media. Explore visual design, animation, illustration, print-making, fine art and photography, while developing creative skills and best practice for undergraduate study.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke-theme-dark">
+        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span></p>
+        <img src="images/1280x720coursesearch3.webp" width="1280" height="720" alt="" class="img-cover">
+        <h3><a href="#">BA (Hons) Creative Writing</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">Work with poets, novelists, journalists and digital writers to hone your craft as
+          a writer, reader and editor. Learn from published authors who nurture creativity, develop your skills and prepare you for diverse careers in writing.</p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
