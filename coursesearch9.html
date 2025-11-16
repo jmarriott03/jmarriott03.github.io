@@ -206,12 +206,18 @@ width: calc(100% * 2 / 3);
 .dgrey-text a {
 	color: var(--dgrey);
 }
+.pills-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
 .pill {
 	padding: 0.25em 0.5em;
 	border-radius: 0.5em;
-	display: inline-block;
 	color: var(--white);
 	background-color: var(--link);
+	white-space: nowrap;
+	margin: 0;
 }
 .pill:after {
 	content: "5"; /* replace with your iconfont’s “x” code-point */
@@ -239,7 +245,7 @@ width: calc(100% * 2 / 3);
       <div class="p-responsive">
         <div class="p-1 rounded-2 bck-white dgrey-stroke mb-reg mgrey-text"><span class="iconfont" aria-hidden="true">B</span>Search for courses, subjects or keywords...</div>
         <h3>Filter by course type</h3>
-        <p class="mb-2"><span class="pill mr-0-5">Undergraduate</span><span class="pill mr-0-5">Postgraduate taught</span><span class="pill mr-0-5">Postgraduate research</span><span class="pill mr-0-5">Professional development</span><span class="pill mr-0-5">Degree apprenticeship</span><span class="pill mr-0-5">Online</span></p>
+        <div class="pills-container"> <span class="pill">Undergraduate</span> <span class="pill">Postgraduate taught</span> <span class="pill">Postgraduate research</span> <span class="pill">Professional development</span> <span class="pill">Degree apprenticeship</span> <span class="pill">Online</span> </div>
       </div>
     </div>
   </section>
