@@ -20,12 +20,10 @@
 --clearing: #131648;
 --foundation: #29718c;
 }
-/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
-*/
 .progress {
 	max-width: 20em;
 	height: 1em;
@@ -109,7 +107,7 @@ width: calc(100% * 2 / 3);
 }
 .inline-block {
 	display: inline-block;
-	vertical-align: middle; /* optional, for nicer alignment with text */
+	vertical-align: middle;
 }
 .tariff-largetext {
 	font-size: 1.17em;
@@ -220,13 +218,59 @@ width: calc(100% * 2 / 3);
 	margin: 0;
 }
 .pill:after {
-	content: "5"; /* replace with your iconfont’s “x” code-point */
+	content: "5";
 	font-family: 'icon', sans-serif;
 	font-weight: normal;
 	line-height: 1;
 	width: 1em;
 	text-align: centre;
 	margin-left: 0.5em;
+}
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-bottom: 1em;
+	width: 100%;
+}
+.split p {
+	margin: 0;
+	max-width: none;
+	flex: 1;
+}
+.split > *:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 40em) {
+.split {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1em;
+}
+.split > * {
+	margin-right: 0;
+	width: 100%;
+}
+}
+.clear-filter {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1em;
+}
+.clear-filter a {
+	display: inline-block;
+}
+.text-align-right {
+	text-align: right;
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 </style>
 </head>
@@ -245,14 +289,29 @@ width: calc(100% * 2 / 3);
       <div class="p-responsive">
         <div class="p-1 rounded-2 bck-white dgrey-stroke mb-reg mgrey-text"><span class="iconfont" aria-hidden="true">B</span>Search for courses, subjects or keywords...</div>
         <h3>Filter by course type</h3>
-        <div class="pills-container"> <span class="pill">Undergraduate</span> <span class="pill">Postgraduate taught</span> <span class="pill">Postgraduate research</span> <span class="pill">Professional development</span> <span class="pill">Degree apprenticeship</span> <span class="pill">Online</span> </div>
+        <div class="pills-container mb-reg"><span class="pill">Undergraduate</span><span class="pill">Postgraduate taught</span><span class="pill">Postgraduate research</span> <span class="pill">Professional development</span><span class="pill">Degree apprenticeship</span><span class="pill">Online</span></div>
+        <div class="text-align-right"><a href="#">Reset filter</a></div>
       </div>
     </div>
   </section>
   <section class="bg-color">
+    <div class="w-80 mb-reg">
+      <h2 class="m-0">Search results</h2>
+      <div class="split mb-reg">
+        <p>Showing 1-3 of 900 courses</p>
+        <div>
+          <label for="sort" style="margin-right:0.5rem; font-weight:600;">Sort by:</label>
+          <select id="sort">
+            <option value="location">Location</option>
+            <option value="relevance">Tariff</option>
+            <option value="duration">Duration</option>
+          </select>
+        </div>
+      </div>
+    </div>
     <div class="w-80 card-container">
       <div class="card rounded-1 p-1 stroke-theme-dark">
-        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span><span class="tag tag-clearing">Course in Clearing</span></p>
+        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span></p>
         <img src="images/1280x720coursesearch1.webp" width="1280" height="720" alt="" class="img-cover">
         <h3><a href="#">BA (Hons) Creative Writing</a></h3>
         <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
@@ -260,14 +319,14 @@ width: calc(100% * 2 / 3);
           a writer, reader and editor. Learn from published authors who nurture creativity, develop your skills and prepare you for diverse careers in writing.</p>
       </div>
       <div class="card rounded-1 p-1 stroke-theme-dark">
-        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span><span class="tag tag-foundation">Foundation</span></p>
+        <p class="mb-2"><span class="tag tag-postgraduate-taught mr-0-5">Postgraduate taught</span></p>
         <img src="images/1280x720coursesearch2.webp" width="1280" height="720" alt="" class="img-cover">
         <h3><a href="#">BA (Hons) Creative Media with Foundation</a></h3>
         <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
         <p class="line-clamp">The foundation pathway offers non-standard entry to creative media. Explore visual design, animation, illustration, print-making, fine art and photography, while developing creative skills and best practice for undergraduate study.</p>
       </div>
       <div class="card rounded-1 p-1 stroke-theme-dark">
-        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span></p>
+        <p class="mb-2"><span class="tag tag-postgraduate-research mr-0-5">Postgraduate research</span></p>
         <img src="images/1280x720coursesearch3.webp" width="1280" height="720" alt="" class="img-cover">
         <h3><a href="#">BA (Hons) Creative Writing</a></h3>
         <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
