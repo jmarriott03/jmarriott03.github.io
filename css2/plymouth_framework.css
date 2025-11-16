@@ -525,89 +525,88 @@ div > :last-child {
 }
 /* Responsive grid container */
 .grid {
-	display: grid;
-	gap: 1em; /* grid gap */
-	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+  display: grid;
+  gap: 1em; /* grid gap */
+  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
 }
 .grid > * {
-	width: 100%;
+  width: 100%;
 }
 /* Optional: remove bottom margin of last child */
 .grid > *:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 /* Override link colours inside grid cards.
    Ensures that when a lighter/darker .bg-color-* card sits inside a parent
    with a different background theme, the link colour matches the card’s own
    background context rather than inheriting from the outer section. */
 .grid .bg-color a {
-	color: var(--link-color);
+  color: var(--link-color);
 }
 .grid .bg-color-light a {
-	color: var(--link-color-light);
+  color: var(--link-color-light);
 }
 .grid .bg-color-medium a {
-	color: var(--link-color-medium);
+  color: var(--link-color-medium);
 }
 .grid .bg-color-dark a {
-	color: var(--link-color-dark);
+  color: var(--link-color-dark);
 }
 /* Column span utilities */
 .span-2 {
-	grid-column: span 2;
-	width: 100%;
+  grid-column: span 2;
+  width: 100%;
 }
-
 @media (max-width: 40em) {
-.span-2 {
-	grid-column: span 1; /* fallback to single column on mobile */
+  .span-2 {
+    grid-column: span 1; /* fallback to single column on mobile */
+  }
 }
-}
-
 /*Responsive behavior: at 80em, resize button*/
 @media (max-width: 80em) {
-.btn-rounded-resize {
-	font-size: 1rem;
-}
+  .btn-rounded-resize {
+    font-size: 1rem;
+  }
 }
 .hero-2col {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 /* Use CSS variables to manage layout widths */
 .hero-2col {
---left-width: 50%;
---right-width: 50%;
+  --left-width: 50%;
+  --right-width: 50%;
 }
 /* Layouts with different percentages */
 .layout-33-67 {
---left-width: 33%;
---right-width: 67%;
+  --left-width: 33%;
+  --right-width: 67%;
 }
 .layout-67-33 {
---left-width: 67%;
---right-width: 33%;
+  --left-width: 67%;
+  --right-width: 33%;
 }
 /* Apply the width variables */
 .left-column {
-	width: var(--left-width);
+  width: var(--left-width);
 }
 .right-column {
-	width: var(--right-width);
+  width: var(--right-width);
 }
-
 /* Responsive behavior: at 80em, both columns are 50% */
 @media (max-width: 80em) {
-.left-column, .right-column {
-	width: 50%;
+  .left-column, .right-column {
+    width: 50%;
+  }
 }
-}
-
 /* Responsive behavior: at 60em, stack columns vertically */
 @media (max-width: 60em) {
-.left-column, .right-column {
-	width: 100%;
+  .left-column, .right-column {
+    width: 100%;
+  }
 }
-}
-.img-cover {width: 100%;height: 100%;object-fit: cover;
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

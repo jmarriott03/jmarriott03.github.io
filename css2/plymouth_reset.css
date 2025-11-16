@@ -80,6 +80,3 @@ ul, ol {
 li {
   margin-bottom: 16px;
 }
-div:last child {
-  margin-bottom: 0;
-}
