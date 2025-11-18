@@ -307,7 +307,7 @@ width: calc(100% * 2 / 3);
         <option value="midnight-blue">Midnight blue</option>
         <option value="dark">Dark</option>
       </select>
-      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, D debug</p>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
   </section>
   <!-- Content -->
   <section class="bg-color">
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Keyboard shortcuts
   window.addEventListener('keydown', e => {
     switch (e.key.toLowerCase()) {
-      case 'd':
+      case 't':
         document.body.classList.toggle('debug-outline');
         break;
       case 'arrowright':
