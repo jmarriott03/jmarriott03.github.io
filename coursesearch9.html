@@ -283,7 +283,7 @@ width: calc(100% * 2 / 3);
 <main>   
   <!-- Breadcrumbs -->
   <section class="bg-color">
-    <p class="w-80"><label for="theme-switcher" class="visually-hidden">Select theme</label>
+    <p class="w-80"><label for="theme-switcher" class="visually-hidden">Theme</label>
     <select id="theme-switcher" class="mr-1">
       <option value="mono">Mono</option>
       <option value="deep-rose">Deep rose</option>
@@ -299,7 +299,7 @@ width: calc(100% * 2 / 3);
       <option value="persian-indigo">Persian indigo</option>
       <option value="midnight-blue">Midnight blue</option>
       <option value="dark">Dark</option>
-    </select><span class="iconfont" aria-hidden="true">$&quot;</span>prev/next theme, T toggle debug</p>
+    </select><span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, D debug</p>
   </section>
   <!-- Content -->
   <section class="bg-color">
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Keyboard shortcuts
   window.addEventListener('keydown', e => {
     switch (e.key.toLowerCase()) {
-      case 't':
+      case 'd':
         document.body.classList.toggle('debug-outline');
         break;
       case 'arrowright':
