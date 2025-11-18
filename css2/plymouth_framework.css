@@ -258,7 +258,6 @@
 .stroke {
   outline: 2px solid var(--lgrey);
   outline-offset: -2px;
-  overflow: hidden;
 }
 .dotted {
   border: 1px dotted var(--red);
