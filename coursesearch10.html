@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
+--clearing: #131648;
+--foundation: #29718c;
+}
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.progress {
+	max-width: 20em;
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: 0;          /* 50% filled */
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.progress-step-1 .progress-fill {
+	width: calc(100% / 3);
+}
+.progress-step-2 .progress-fill {
+width: calc(100% * 2 / 3);
+}
+.progress-step-3 .progress-fill {
+	width: 100%;
+}
+.grid-vertical-align {
+	align-items: center;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+}
+.text-center {
+	text-align: center;
+}
+.big-icon-container {
+	display: flex;
+	/*	align-items: flex-start;*/
+	align-items: center;
+}
+.big-icon-text {
+	margin-left: 1em;
+	flex: 1;
+}
+.big-icon-block {
+	display: inline-block;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	font-size: 5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: top;
+	background: none;
+	padding: 0;
+	margin: 0;
+	flex: 0;
+	margin-bottom: -0.17em;
+}
+.inline-block-full-width {
+	display: inline-block;
+	width: 100%;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+.tariff-largetext {
+	font-size: 1.17em;
+	line-height: 1.2;
+}
+.mgrey-text {
+	color: var(--mgrey);
+}
+.dgrey-stroke {
+	outline: 2px solid var(--dgrey);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	gap: 1em;
+}
+.card {
+	width: 100%;
+	margin: 0;
+	max-width: 40em;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.card img {
+	width: calc(100% + 2em);
+	height: auto;
+	margin: -1rem -1rem 1.5rem -1rem;
+	max-width: none;
+}
+.stroke-highlight-dark {
+	outline: 2px solid var(--highlight-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.tarif-block {
+	color: var(--white);
+	background-color: var(--highlight-dark);
+	margin: -1em -1em 1em -1em;
+	padding: 1em;
+}
+.tarif-block a {
+	color: var(--white);
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
+}
+.tag-clearing {
+	color: var(--white);
+	background-color: var(--clearing);
+}
+.tag-foundation {
+	color: var(--white);
+	background-color: var(--foundation);
+}
+.mr-0-5 {
+	margin-right: 0.5em;
+}
+.dgrey-text {
+	color: var(--dgrey);
+}
+.dgrey-text a {
+	color: var(--dgrey);
+}
+.pills-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+.pill {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	color: var(--white);
+	background-color: var(--link);
+	white-space: nowrap;
+	margin: 0;
+}
+.pill:after {
+	content: "5";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	text-align: centre;
+	margin-left: 0.5em;
+}
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+.split p {
+	margin: 0;
+	max-width: none;
+	flex: 1;
+}
+.split > *:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 40em) {
+.split {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1em;
+}
+.split > * {
+	margin-right: 0;
+	width: 100%;
+}
+}
+.clear-filter {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1em;
+}
+.clear-filter a {
+	display: inline-block;
+}
+.text-align-right {
+	text-align: right;
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+:root[data-theme="dark"] .dgrey-text {
+	color: var(--mgrey);
+}
+:root[data-theme="dark"] .dgrey-text a {
+	color: var(--mgrey);
+}
+:root[data-theme="dark"] .bck-lgrey {
+	background-color: var(--dgrey);
+}
+:root[data-theme="dark"] .tag-postgraduate-research {
+	outline: 1px solid var(--lgrey);
+	outline-offset: -1px;
+}
+.no-underline {
+	text-decoration: none;
+	display: inline-block;
+}
+.bar, .btn {
+	width: 10em;
+	margin: 0 auto;
+}
+.bar-caption {
+	margin-bottom: 1em;
+	text-align: center;
+}
+.track {
+	height: 0.5em;
+	background: var(--mgrey);
+	border-radius: 4px;
+}
+.fill {
+	height: 100%;
+	width: 18%;
+	background: var(--dgrey);
+	border-radius: 0.5em;
+	margin-left: 0;
+}
+.btn-ouline {
+	background-color: var(--white);
+	color: var(--link);
+	outline: 1px solid var(--link);
+	outline-offset: -1px;
+	float: none;
+	display: block;
+	margin-top: 1em;
+}
+.btn-ouline:hover, .btn-ouline:focus {
+	background-color: var(--lgrey);
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Themes -->
+  <section class="bg-color">
+    <p class="w-80">
+      <label for="theme-switcher" class="visually-hidden">Theme</label>
+      <select id="theme-switcher" class="mr-1">
+        <option value="mono">Mono</option>
+        <option value="deep-rose">Deep rose</option>
+        <option value="brilliant-rose">Brilliant rose</option>
+        <option value="raspberry-red">Raspberry red</option>
+        <option value="deep-orange">Deep orange</option>
+        <option value="butter-yellow">Butter yellow</option>
+        <option value="dark-lavender">Dark lavender</option>
+        <option value="bondi-blue">Bondi blue</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="sea-green">Sea green</option>
+        <option value="fresh-green">Fresh green</option>
+        <option value="persian-indigo">Persian indigo</option>
+        <option value="midnight-blue">Midnight blue</option>
+        <option value="dark">Dark</option>
+      </select>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
+  </section>
+  <!-- Content -->
+  <section class="bg-color">
+    <div class="w-80 rounded-1 bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div>
+          <h1>Search for a course</h1>
+        </div>
+        <div>
+          <p>Find the right course for you at the University of Plymouth</p>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="p-1 rounded-2 bck-white dgrey-stroke mb-reg mgrey-text ellipsis"><span class="iconfont" aria-hidden="true">B</span>Search for courses, subjects or keywords...</div>
+        <h3>Filter by course type</h3>
+        <div class="pills-container mb-reg"><span class="pill">Undergraduate</span><span class="pill">Postgraduate taught</span><span class="pill">Postgraduate research</span> <span class="pill">Professional development</span><span class="pill">Degree apprenticeship</span><span class="pill">Online</span></div>
+        <div class="text-align-right"><a href="#">Reset filters</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color">
+    <div class="w-80 mb-reg">
+      <h2 class="m-0">Search results</h2>
+      <div class="split mb-reg">
+        <p>Showing 1-3 of 36 courses</p>
+        <div>
+          <label for="sort" style="margin-right:0.5rem; font-weight:600;">Sort by:</label>
+          <select id="sort">
+            <option value="location">Location</option>
+            <option value="relevance">Tariff</option>
+            <option value="duration">Duration</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 card-container mb-reg">
+      <div class="card rounded-1 p-1 stroke-theme-dark">
+        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span></p>
+        <img src="images/1280x720coursesearch1.webp" width="1280" height="720" alt="" class="img-cover">
+        <h3><a href="#">BA (Hons) Creative Writing</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">Writing is timeless – and vital today. At Plymouth, you'll learn from poets, novelists, journalists and more to sharpen your craft. Our expert team nurtures talent, sparks creativity and prepares you for success across writing-driven fields.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke-theme-dark">
+        <p class="mb-2"><span class="tag tag-postgraduate-taught mr-0-5">Postgraduate taught</span></p>
+        <img src="images/1280x720coursesearch2.webp" width="1280" height="720" alt="" class="img-cover">
+        <h3><a href="#">BA (Hons) Creative Media with Foundation</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">This foundation pathway offers non-standard entry into BA (Hons) Creative Media, helping you build creative skills across media like illustration, animation and fine art. Explore visual design and best practice in a vibrant, studio-based environment.</p>
+      </div>
+      <div class="card rounded-1 p-1 stroke-theme-dark">
+        <p class="mb-2"><span class="tag tag-postgraduate-research mr-0-5">Postgraduate research</span></p>
+        <img src="images/1280x720coursesearch3.webp" width="1280" height="720" alt="" class="img-cover">
+        <h3><a href="#">MA Creative Writing</a></h3>
+        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>1 year<span class="iconfont ml-1" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+        <p class="line-clamp">Our MA Creative Writing is one of the longest running in the UK, and has helped hundreds of graduates to become better writers. Our experienced and award-winning writers know the real value of providing an encouraging environment and will help you develop your own writing by studying and practicing the major forms of fiction, creative non-fiction, poetry, and dramatic writing (for stage and screen), culminating in a substantial dissertation project.</p>
+      </div>
+    </div>
+    <div class="w-80">
+      <div class="bar-caption smalltext dgrey-text">Showing 1 of 12</div>
+      <div class="bar">
+        <div class="track">
+          <div class="fill"></div>
+        </div>
+      </div>
+      <button class="btn btn-ouline">View more</button>
+    </div>
+  </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Always start with Persian indigo
+  let currentTheme = 'persian-indigo';
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+</script> 
+</main>
+</body>
+</html>
