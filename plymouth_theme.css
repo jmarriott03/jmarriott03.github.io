@@ -1,0 +1,273 @@
+/* Theme */
+*:root {
+  --space-s: 0.5em;
+  --space-m: 1em;
+  --space-l: 2em;
+  --space-responsive: var(--space-l);
+  --bg-color: 0 0% 100%;
+  --bg-color-light: 0 0% 93%;
+  --bg-color-dark: 0 0% 7%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--link);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Mono theme variables */
+[data-theme="mono"] {
+  --bg-color-light: 0 0% 93%;
+  --bg-color-medium: 0 0% 80%;
+  --bg-color-dark: 0 0% 7%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--link);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Link behaviour override for mono theme only */
+[data-theme="mono"] .bg-color-light:not([data-theme]) > p > a {
+  text-decoration: none;
+}
+[data-theme="mono"] .bg-color-light:not([data-theme]) > p > a:hover, [data-theme="mono"] .bg-color-light:not([data-theme]) > p > a:focus {
+  text-decoration: underline;
+}
+/* Deep rose theme variables */
+[data-theme="deep-rose"] {
+  --bg-color-light: 318 100% 77%;
+  --bg-color-medium: 318 100% 33%;
+  --bg-color-dark: 318 100% 21%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--white);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--white);
+  --link-color-dark: var(--white);
+}
+/* Brilliant rose theme variables */
+[data-theme="brilliant-rose"] {
+  --bg-color-light: 328 53% 84%;
+  --bg-color-medium: 327 52% 69%;
+  --bg-color-dark: 328 69% 30%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Raspberry red theme variables */
+[data-theme="raspberry-red"] {
+  --bg-color-light: 337 100% 79%;
+  --bg-color-medium: 337 100% 38%;
+  --bg-color-dark: 336 100% 25%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--white);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--white);
+  --link-color-dark: var(--white);
+}
+/* Deep orange theme variables */
+[data-theme="deep-orange"] {
+  --bg-color-light: 37 73% 84%;
+  --bg-color-medium: 37 73% 69%;
+  --bg-color-dark: 37 74% 54%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--black);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--black);
+}
+/* Butter yellow theme variables */
+[data-theme="butter-yellow"] {
+  --bg-color-light: 51 90% 84%;
+  --bg-color-medium: 51 90% 67%;
+  --bg-color-dark: 51 90% 51%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--black);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--black);
+}
+/* Dark lavender theme variables */
+[data-theme="dark-lavender"] {
+  --bg-color-light: 244 19% 85%;
+  --bg-color-medium: 246 21% 70%;
+  --bg-color-dark: 245 47% 29%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Bondi blue theme variables */
+[data-theme="bondi-blue"] {
+  --bg-color-light: 209 53% 85%;
+  --bg-color-medium: 209 53% 56%;
+  --bg-color-dark: 208 66% 31%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Turquoise theme variables */
+[data-theme="turquoise"] {
+  --bg-color-light: 196 52% 89%;
+  --bg-color-medium: 196 52% 67%;
+  --bg-color-dark: 196 55% 35%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Sea green theme variables */
+[data-theme="sea-green"] {
+  --bg-color-light: 172 29% 90%;
+  --bg-color-medium: 173 29% 71%;
+  --bg-color-dark: 174 43% 35%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Fresh green theme variables */
+[data-theme="fresh-green"] {
+  --bg-color-light: 73 50% 86%;
+  --bg-color-medium: 72 49% 58%;
+  --bg-color-dark: 73 62% 30%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--black);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--black);
+  --link-color-dark: var(--white);
+}
+/* Persian indigo theme variables */
+[data-theme="persian-indigo"] {
+  --bg-color-light: 226 62% 76%;
+  --bg-color-medium: 226 63% 30%;
+  --bg-color-dark: 226 80% 18%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--white);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--white);
+  --link-color-dark: var(--white);
+}
+/* Midnight blue theme variables */
+[data-theme="midnight-blue"] {
+  --bg-color-light: 237 30% 77%;
+  --bg-color-medium: 238 30% 34%;
+  --bg-color-dark: 237 58% 18%;
+  --text-color: var(--black);
+  --text-color-light: var(--black);
+  --text-color-medium: var(--white);
+  --text-color-dark: var(--white);
+  --link-color: var(--link);
+  --link-color-light: var(--black);
+  --link-color-medium: var(--white);
+  --link-color-dark: var(--white);
+}
+/* Dark mode theme variables */
+[data-theme="dark"] {
+  --bg-color: 0 0% 7%;
+  --bg-color-light: 0 0% 20%;
+  --bg-color-medium: 0 0% 40%;
+  --bg-color-dark: 0 0% 60%;
+  --text-color: var(--white);
+  --text-color-light: var(--white);
+  --text-color-medium: var(--white);
+  --text-color-dark: var(--black);
+  --link-color: var(--white);
+  --link-color-light: var(--white);
+  --link-color-medium: var(--white);
+  --link-color-dark: var(--black);
+}
+/* Link behaviour override for dark theme only */
+[data-theme="dark"] .bg-color a {
+  text-decoration: underline;
+}
+@media (max-width: 40em) {
+  :root {
+    --space-responsive: var(--space-m);
+  }
+}
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+div :last-child {
+  margin-bottom: 0;
+}
+.bg-color {
+  color: var(--text-color);
+  background-color: hsl(var(--bg-color));
+}
+.bg-color a {
+  color: var(--link-color);
+	text-decoration: none;
+}
+.bg-color a:hover, a:focus {
+	text-decoration: underline;
+}
+.bg-color-light {
+  color: var(--text-color-light);
+  background-color: hsl(var(--bg-color-light));
+}
+.bg-color-light a {
+  color: var(--link-color-light);
+  text-decoration: underline;
+}
+.bg-color-medium {
+  color: var(--text-color-medium);
+  background-color: hsl(var(--bg-color-medium));
+}
+.bg-color-medium a {
+  color: var(--link-color-medium);
+  text-decoration: underline;
+}
+.bg-color-dark {
+  color: var(--text-color-dark);
+  background-color: hsl(var(--bg-color-dark));
+}
+.bg-color-dark a {
+  color: var(--link-color-dark);
+  text-decoration: underline;
+}
