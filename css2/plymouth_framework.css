@@ -149,6 +149,9 @@
 .m-auto {
   margin: auto;
 }
+.mx-auto {
+  margin-inline: auto;
+}
 .m-0 {
   margin: 0;
 }
@@ -258,6 +261,7 @@
 .stroke {
   outline: 2px solid var(--lgrey);
   outline-offset: -2px;
+  overflow: hidden; /* ADDED: Missing from original framework, required by production */
 }
 .dotted {
   border: 1px dotted var(--red);
@@ -268,7 +272,7 @@
 }
 .mrfrosty-theme {
   color: var(--text-color-light);
-  background-image: linear-gradient(hsla(var(--bg-color-light), 0.6), hsla(var(--bg-color-light), 1));
+  background-image: unquote("linear-gradient(hsl(var(--bg-color-light) / 0.6), hsl(var(--bg-color-light) / 1))");
   backdrop-filter: blur(0.5em);
 }
 .mrfrosty-theme a {
@@ -296,6 +300,8 @@
 }
 .btn-primary:hover, .btn-primary:focus {
   background-color: var(--btn-primary-hov);
+  color: var(--white); /* ADDED: Ensures white text on hover */
+  text-decoration: none; /* ADDED: Removes underline on hover */
 }
 .btn-secondary {
   color: var(--white);
@@ -317,6 +323,8 @@
 }
 .btn-danger:hover, .btn-danger:focus {
   background-color: var(--btn-danger-hov);
+  color: var(--white); /* ADDED: Ensures white text on hover */
+  text-decoration: none; /* ADDED: Removes underline on hover */
 }
 .btn-warning {
   color: var(--black);
@@ -324,6 +332,7 @@
 }
 .btn-warning:hover, .btn-warning:focus {
   background-color: var(--btn-warning-hov);
+  text-decoration: none; /* ADDED: Removes underline on hover */
 }
 .btn-info {
   color: var(--white);
@@ -331,6 +340,7 @@
 }
 .btn-info:hover, .btn-info:focus {
   background-color: var(--btn-info-hov);
+  text-decoration: none; /* ADDED: Removes underline on hover */
 }
 .btn-light {
   color: var(--black);
@@ -483,10 +493,6 @@
     border-radius: 1em;
   }
 }
-/* Sections */
-section {
-  padding: var(--space-responsive);
-}
 /* Cancel vertical padding if two adjacent sections share the same background */
 section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
   padding-top: 0;
@@ -609,6 +615,161 @@ div > :last-child {
   height: 100%;
   object-fit: cover;
 }
-.margin-auto {
-  margin-inline: auto;
+
+/* ============================================================================
+   LEGACY UTILITY CLASSES
+   Classes preserved from production for backwards compatibility.
+   These are actively used in existing views and must be maintained.
+   ============================================================================ */
+
+/* Additional Padding Utilities
+   Used in: app/views/content_module/quote_blocks/_content.html.erb
+   Purpose: Provides 0.5em padding for quote block external member text */
+.p-0-5 {
+  padding: 0.5em;
+}
+
+/* Additional Border Radius Utilities
+   Used in: News lists, event lists, text and image modules
+   Purpose: Provides additional corner rounding options for various components */
+.rounded-0-25 {
+  border-radius: 0.25em;
+  overflow: hidden;
+}
+
+/* Top-only border radius utilities
+   Used in: Various card and module designs */
+.top-rounded-0-25 {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  overflow: hidden;
+}
+
+.top-rounded-0-5 {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  overflow: hidden;
+}
+
+.top-rounded-1 {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  overflow: hidden;
+}
+
+.top-rounded-2 {
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  overflow: hidden;
+}
+
+/* Individual corner border radius utilities
+   Used in: app/views/content_module/text_and_images/2024_design/_text_and_image_wording.html.erb
+   Purpose: Allows selective rounding of individual corners for text and image modules */
+.rounded-top-left-2 {
+  border-top-left-radius: 2em;
+}
+
+.rounded-top-right-2 {
+  border-top-right-radius: 2em;
+}
+
+.rounded-bottom-left-2 {
+  border-bottom-left-radius: 2em;
+}
+
+.rounded-bottom-right-2 {
+  border-bottom-right-radius: 2em;
+}
+
+/* Button Variants
+   Used in: Call out groups with blue rounded buttons
+   Purpose: Provides alternative button styling for specific call-to-action designs */
+.btn-rounded {
+  border-radius: 2em;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+}
+
+/* White bordered button variant
+   Used in: Call out groups
+   Purpose: Creates outlined white buttons for use on colored backgrounds */
+.btn-rounded-white {
+  color: var(--white);
+  border-radius: 2em;
+  text-align: left;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: 1em 1em 0 0;
+  transition: background-color, 0.2s, ease-in;
+  width: fit-content;
+}
+
+.btn-rounded-white:hover {
+  text-decoration: none;
+}
+
+/* Color and Background Utilities
+   Used in: Social shares, call out groups, apply widgets
+   Purpose: Provides white text and link background color for buttons and links */
+.whitetxt {
+  color: var(--white);
+}
+
+a.whitetxt {
+  color: var(--white);
+}
+
+.linkbck {
+  background-color: var(--link);
+}
+
+/* Important Utility Overrides
+   Used in: app/views/courses/_alternative_key_facts.html.erb
+   Purpose: Provides !important overrides for course page CTAs where specificity conflicts occur */
+.padding-1em {
+  padding: 1em !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Card Component System
+   Used in: app/views/text_blocks/_rounded_gloss_card_2025.html.erb
+           app/views/content_module/text_and_images/2025_card/_text_and_image.html.erb
+           app/views/content_module/staff_lists/staff_lists_design_2024/_staff_list.html.erb
+           app/views/content_module/block_collections/_block_collection.html.erb
+   Purpose: Provides flexbox-based card layout system for 2025 design cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card > * {
+  width: 100%;
+}
+
+.card img {
+  height: auto;
+}
+
+.card .content {
+  padding: 1em;
+  flex-grow: 1;
+}
+
+/* Border Utilities
+   Used in: app/views/content_module/article_groups/_classic.html.erb
+           app/views/content_module/article_groups/_web_refresh.html.erb
+           app/views/content_module/text_and_images/2024_design/_text_and_image_wording.html.erb
+           app/views/content_module/single_quotes/_single_quote.html.erb
+   Purpose: Provides grey border for components that don't have a background color contrast */
+.grey-border {
+  border: 2px solid var(--lgrey);
 }

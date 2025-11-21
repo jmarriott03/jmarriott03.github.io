@@ -31,10 +31,10 @@
   --link-color-dark: var(--white);
 }
 /* Link behaviour override for mono theme only */
-[data-theme="mono"] .bg-color-light:not([data-theme]) > p > a {
+[data-theme="mono"] .bg-color-light:not([data-theme]) a {
   text-decoration: none;
 }
-[data-theme="mono"] .bg-color-light:not([data-theme]) > p > a:hover, [data-theme="mono"] .bg-color-light:not([data-theme]) > p > a:focus {
+[data-theme="mono"] .bg-color-light:not([data-theme]) a:hover, [data-theme="mono"] .bg-color-light:not([data-theme]) a:focus {
   text-decoration: underline;
 }
 /* Deep rose theme variables */
