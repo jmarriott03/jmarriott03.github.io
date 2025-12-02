@@ -1,9 +1,5 @@
 /* Theme */
 *:root {
-  --space-s: 0.5em;
-  --space-m: 1em;
-  --space-l: 2em;
-  --space-responsive: var(--space-l);
   --bg-color: 0 0% 100%;
   --bg-color-light: 0 0% 93%;
   --bg-color-dark: 0 0% 7%;
@@ -223,11 +219,6 @@
 /* Link behaviour override for dark theme only */
 [data-theme="dark"] .bg-color a {
   text-decoration: underline;
-}
-@media (max-width: 40em) {
-  :root {
-    --space-responsive: var(--space-m);
-  }
 }
 body {
   color: var(--text-color);
