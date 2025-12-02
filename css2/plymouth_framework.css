@@ -503,9 +503,6 @@ section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-l
   }
 }
 /* Articles */
-article {
-  padding: var(--space-responsive);
-}
 /* Cancel vertical padding if two adjacent sections share the same background */
 article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
   padding-top: 0;
