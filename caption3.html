@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.btn-rounded-resize {
+	color: currentColor;
+	border: 2px solid currentColor;
+	font-size: 1.25rem;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+}
+.btn-rounded-resize:hover {
+	cursor: pointer;
+}
+.quotestyle:before {
+	font-family: "Times New Roman", serif;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.5em;
+	content: "\275d";
+	display: block;
+	margin-top: 0.2em;
+}
+.quote-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+figure {
+	position: relative;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+.caption-block {
+	border-left: 2px solid currentColor;
+	padding: 0.5em;
+	font-size: 0.75em;
+	line-height: 1.5;
+}
+.caption-block::before {
+	content: "The image shows: ";
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Themes -->
+  <section class="bg-color p-responsive">
+    <p class="w-80">
+      <label for="theme-switcher" class="visually-hidden">Theme</label>
+      <select id="theme-switcher" class="mr-1">
+        <option value="mono">Mono</option>
+        <option value="deep-rose">Deep rose</option>
+        <option value="brilliant-rose">Brilliant rose</option>
+        <option value="raspberry-red">Raspberry red</option>
+        <option value="deep-orange">Deep orange</option>
+        <option value="butter-yellow">Butter yellow</option>
+        <option value="dark-lavender">Dark lavender</option>
+        <option value="bondi-blue">Bondi blue</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="sea-green">Sea green</option>
+        <option value="fresh-green">Fresh green</option>
+        <option value="persian-indigo">Persian indigo</option>
+        <option value="midnight-blue">Midnight blue</option>
+        <option value="dark">Dark</option>
+      </select>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
+  </section>
+  <!-- Content -->
+  <section class="p-responsive bg-color">
+    <div class="w-80 hero-2col layout-67-33 bg-color-dark rounded-responsive">
+      <div class="left-column p-resize">
+        <div class="centered text-resize quotestyle">
+          <p>As an international student, the working experience in the UK is very valuable. I have a better understanding of the working lifestyle is like in the UK and it has also increased my confidence with regards to my future career. Furthermore, the working experience that I have gained has already made my CV look great!</p>
+          <div class="quote-container mb-reg"><img src="images/640x640quotes03.jpg" alt="Desirae Juurou" class="quote-image">
+            <div class="quote-text">
+              <p><a href="#">Desirae Juurou</a><br>
+                MA Illustration graduate</p>
+            </div>
+          </div>
+          <div class="caption-block">Desirae Juurou, an MA Illustration graduate, at work in the studio.</div>
+        </div>
+      </div>
+      <div class="right-column">
+        <figure><img src="images/1280x720fineart12.jpg" alt="Fine Art Stuedent Alysia Millington" class="img-cover">
+          <figcaption class="rounded-0-5">Image courtesy of Getty</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+  <section class="p-responsive bg-color">
+    <div class="w-80 hero-2col layout-33-67 bg-color-dark rounded-responsive">
+      <div class="left-column">
+        <figure><img src="images/1280x720fineart12.jpg" alt="Fine Art Stuedent Alysia Millington" class="img-cover">
+          <figcaption class="rounded-0-5">Image courtesy of Getty</figcaption>
+        </figure>
+      </div>
+      <div class="right-column p-resize">
+        <div class="centered text-resize quotestyle">
+          <p>As an international student, the working experience in the UK is very valuable. I have a better understanding of the working lifestyle is like in the UK and it has also increased my confidence with regards to my future career. Furthermore, the working experience that I have gained has already made my CV look great!</p>
+          <div class="quote-container mb-reg"><img src="images/640x640quotes03.jpg" alt="Desirae Juurou" class="quote-image">
+            <div class="quote-text">
+              <p><a href="#">Desirae Juurou</a><br>
+                MA Illustration graduate</p>
+            </div>
+          </div>
+          <div class="caption-block">Desirae Juurou, an MA Illustration graduate, at work in the studio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Always start with Persian indigo
+  let currentTheme = 'butter-yellow';
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+</script> 
+</main>
+</body>
+</html>
