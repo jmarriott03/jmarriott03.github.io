@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeSwitcher = document.getElementById('theme-switcher');
   const themes = [...themeSwitcher.options].map(opt => opt.value);
 
-  // Always start with Persian indigo
+  // Always start with this theme
   let currentTheme = 'butter-yellow';
   root.dataset.theme = currentTheme;
   themeSwitcher.value = currentTheme;
