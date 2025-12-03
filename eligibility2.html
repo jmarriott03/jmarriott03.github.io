@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+*:root {
+--bg-color-success-light: #e0eceb;
+}
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.progress {
+	max-width: 20em;
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: 0;          /* 50% filled */
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.progress-step-1 .progress-fill {
+	width: calc(100% / 3);
+}
+.progress-step-2 .progress-fill {
+width: calc(100% * 2 / 3);
+}
+.progress-step-3 .progress-fill {
+	width: 100%;
+}
+.grid-vertical-align {
+	align-items: center;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.text-center {
+	text-align: center;
+}
+.big-icon-container {
+	display: flex;
+	/*	align-items: flex-start;*/
+	align-items: center;
+}
+.big-icon-text {
+	margin-left: 1em;
+	flex: 1;
+}
+.big-icon-block {
+	display: inline-block;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	font-size: 5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: top;
+	background: none;
+	padding: 0;
+	margin: 0;
+	flex: 0;
+	margin-bottom: -0.17em;
+}
+.inline-block-full-width {
+	display: inline-block;
+	width: 100%;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: middle; /* optional, for nicer alignment with text */
+}
+.tariff-largetext {
+	font-size: 1.17em;
+	line-height: 1.2;
+}
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Themes -->
+  <section class="bg-color p-responsive">
+    <p class="w-80">
+      <label for="theme-switcher" class="visually-hidden">Theme</label>
+      <select id="theme-switcher" class="mr-1">
+        <option value="mono">Mono</option>
+        <option value="deep-rose">Deep rose</option>
+        <option value="brilliant-rose">Brilliant rose</option>
+        <option value="raspberry-red">Raspberry red</option>
+        <option value="deep-orange">Deep orange</option>
+        <option value="butter-yellow">Butter yellow</option>
+        <option value="dark-lavender">Dark lavender</option>
+        <option value="bondi-blue">Bondi blue</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="sea-green">Sea green</option>
+        <option value="fresh-green">Fresh green</option>
+        <option value="persian-indigo">Persian indigo</option>
+        <option value="midnight-blue">Midnight blue</option>
+        <option value="dark">Dark</option>
+      </select>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
+  </section>
+  <!-- Content -->
+  <section class="bg-color p-responsive">
+    <div class="w-80 rounded-responsive bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div class="">
+          <p class="largetext">Start a course in 2026: check what you need to do</p>
+        </div>
+        <div class="progress progress-step-1">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="rounded-0-5 stroke-theme-dark">
+          <div class="bg-color-light">
+            <div class="hero-2col layout-67-33">
+              <div class="left-column p-1">
+                <div class="big-icon-container"><span class="big-icon-block" aria-hidden="true">T</span>
+                  <div class="big-icon-text">
+                    <div class="centered">
+                      <h2>Check your eligibility to apply</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right-column">
+                <div class="centered p-1">
+                  <p class="text-center">Step 1 of 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1">
+            <h2>Your course of interest</h2>
+            <p class="py-1"><span class="p-1 bck-lgrey rounded-0-5">BA (Hons) Architecture</span></p>
+            <div class="mb-reg inline-block-full-width step-actions">
+              <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Choose another course</a></div>
+              <button class="btn btn-primary btn-rounded">Start eligibility check</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color p-responsive">
+    <div class="w-80 rounded-responsive bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div class="">
+          <p class="largetext">Start a course in 2026: check what you need to do</p>
+        </div>
+        <div class="progress progress-step-2">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="rounded-0-5 stroke-theme-dark">
+          <div class="bg-color-light">
+            <div class="hero-2col layout-67-33">
+              <div class="left-column p-1">
+                <div class="big-icon-container"><span class="big-icon-block" aria-hidden="true">T</span>
+                  <div class="big-icon-text">
+                    <h2>Check your eligibility to apply</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="right-column">
+                <div class="centered p-1">
+                  <p class="text-center">Step 2 of 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1">
+            <h2>Your qualifications</h2>
+            <p>Enter your known or expected UCAS tariff points. These are a numerical way of comparing qualifications. If you're unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
+            <p><strong>Your UCAS tariff points<span class="p-1 stroke-theme-dark rounded-0-5 ml-1 inline-block tariff-largetext">128</span></strong></p>
+            <div class="mb-reg inline-block-full-width step-actions">
+              <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+              <button class="btn btn-primary btn-rounded">Check my eligibility</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color p-responsive">
+    <div class="w-80 rounded-responsive bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div class="">
+          <p class="largetext">Start a course in 2026: check what you need to do</p>
+        </div>
+        <div class="progress progress-step-3">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="rounded-0-5 stroke-theme-dark">
+          <div class="bg-color-success">
+            <div class="hero-2col layout-67-33">
+              <div class="left-column p-1">
+                <div class="big-icon-container"><span class="big-icon-block" aria-hidden="true">H</span>
+                  <div class="big-icon-text">
+                    <h2>Great news</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="right-column">
+                <div class="centered p-1">
+                  <p class="text-center">Step 3 of 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1">
+            <p><strong>Your tariff suggests you'd be a strong candidate for this course. We'd encourage you to apply when you're ready.</strong></p>
+            <p>If you complete your enquiry, we can support you with tailored guidance and keep you updated as you move forward.</p>
+            <div class="p-1 rounded-0-5 mb-reg inline-block bck-lgrey">
+              <p>Your course: <strong>BA (Hons) Architecture</strong></p>
+              <p>Your tariff: <strong>128</strong></p>
+            </div>
+            <p>Please note that the tariff you share is only used to tailor the advice you receive at this stage and doesn't commit you to anything. If you complete your enquiry, it will be included with your enquiry details.</p>
+            <p><strong>Your UCAS tariff points<span class="p-1 stroke-theme-dark rounded-0-5 ml-1 inline-block tariff-largetext">128</span></strong></p>
+            <div class="inline-block-full-width step-actions">
+              <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+              <button class="btn btn-primary btn-rounded">Continue your enquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color p-responsive">
+    <div class="w-80 rounded-responsive bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div class="">
+          <p class="largetext">Start a course in 2026: check what you need to do</p>
+        </div>
+        <div class="progress progress-step-3">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="rounded-0-5 stroke-theme-dark">
+          <div class="bg-color-success-light">
+            <div class="hero-2col layout-67-33">
+              <div class="left-column p-1">
+                <div class="big-icon-container"><span class="big-icon-block" aria-hidden="true">H</span>
+                  <div class="big-icon-text">
+                    <h2>You still have options</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="right-column">
+                <div class="centered p-1">
+                  <p class="text-center">Step 3 of 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1">
+            <p><strong>It looks like your current qualifications don't yet meet the usual entry level for
+              university study. But that doesn't mean the door is closed.</strong></p>
+            <p>Many students begin their higher education journey through one of our partner colleges, where you can study a programme designed to prepare you for university entry.</p>
+            <p>We'd still like to support you - if you complete your enquiry, we can help you explore suitable pathways and connect you with the right options.</p>
+            <div class="p-1 rounded-0-5 mb-reg inline-block bck-lgrey">
+              <p>Your course: <strong>BA (Hons) Architecture</strong></p>
+              <p>Your tariff: <strong>20</strong></p>
+            </div>
+            <p>Please note that the tariff you share is only used to tailor the advice you receive at this stage and doesn't commit you to anything. If you complete your enquiry, it will be included with your enquiry details</p>
+            <div class="inline-block-full-width step-actions">
+              <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+              <button class="btn btn-primary btn-rounded">Continue your enquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Detect system preference and saved theme
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let currentTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'mono');
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+    localStorage.setItem('theme', theme);
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Initialise
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+</script> 
+</main>
+</body>
+</html>
