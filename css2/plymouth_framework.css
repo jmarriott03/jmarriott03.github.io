@@ -233,15 +233,12 @@
 }
 .bck-white {
   background-color: var(--white);
-  width: 100%;
 }
 .bck-lgrey {
   background-color: var(--lgrey);
-  width: 100%;
 }
 .bck-black {
   background-color: var(--black);
-  width: 100%;
 }
 .rounded-0-5 {
   border-radius: 0.5em;
