@@ -123,6 +123,28 @@
 	font-size: 1em;
 }
 }
+figure {
+	position: relative;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
 </style>
 </head>
 <body>
@@ -153,7 +175,11 @@
   
   <section class="p-responsive bg-color">
     <div class="w-80 parent rounded-2">
-      <div class="div1"><img src="images/1280x720student21.webp" width="1280" height="720" alt="" class="img-cover"></div>
+      <div class="div1">
+        <figure><img src="images/1280x720student21.webp" alt="" class="img-cover">
+          <figcaption class="rounded-0-5">Image courtesy of Getty</figcaption>
+        </figure>
+      </div>
       <div class="div2 p-resize-2-0">
         <div class="text-resize p-2 mrfrosty-theme-dark rounded-2 shadow">
           <h2>Apply for a Student visa</h2>
