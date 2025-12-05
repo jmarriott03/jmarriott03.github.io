@@ -269,7 +269,7 @@
 }
 .mrfrosty-theme {
   color: var(--text-color-light);
-  background-image: unquote("linear-gradient(hsl(var(--bg-color-light) / 0.6), hsl(var(--bg-color-light) / 1))");
+  background-image: linear-gradient(hsl(var(--bg-color-light) / 0.6), hsl(var(--bg-color-light) / 1));
   backdrop-filter: blur(0.5em);
 }
 .mrfrosty-theme a {
@@ -609,20 +609,17 @@ div > :last-child {
   height: 100%;
   object-fit: cover;
 }
-
 /* ============================================================================
    LEGACY UTILITY CLASSES
    Classes preserved from production for backwards compatibility.
    These are actively used in existing views and must be maintained.
    ============================================================================ */
-
 /* Additional Padding Utilities
    Used in: app/views/content_module/quote_blocks/_content.html.erb
    Purpose: Provides 0.5em padding for quote block external member text */
 .p-0-5 {
   padding: 0.5em;
 }
-
 /* Additional Border Radius Utilities
    Used in: News lists, event lists, text and image modules
    Purpose: Provides additional corner rounding options for various components */
@@ -630,7 +627,6 @@ div > :last-child {
   border-radius: 0.25em;
   overflow: hidden;
 }
-
 /* Top-only border radius utilities
    Used in: Various card and module designs */
 .top-rounded-0-25 {
@@ -638,44 +634,36 @@ div > :last-child {
   border-top-right-radius: 0.25em;
   overflow: hidden;
 }
-
 .top-rounded-0-5 {
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   overflow: hidden;
 }
-
 .top-rounded-1 {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   overflow: hidden;
 }
-
 .top-rounded-2 {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
   overflow: hidden;
 }
-
 /* Individual corner border radius utilities
    Used in: app/views/content_module/text_and_images/2024_design/_text_and_image_wording.html.erb
    Purpose: Allows selective rounding of individual corners for text and image modules */
 .rounded-top-left-2 {
   border-top-left-radius: 2em;
 }
-
 .rounded-top-right-2 {
   border-top-right-radius: 2em;
 }
-
 .rounded-bottom-left-2 {
   border-bottom-left-radius: 2em;
 }
-
 .rounded-bottom-right-2 {
   border-bottom-right-radius: 2em;
 }
-
 /* Button Variants
    Used in: Call out groups with blue rounded buttons
    Purpose: Provides alternative button styling for specific call-to-action designs */
@@ -683,7 +671,6 @@ div > :last-child {
   border-radius: 2em;
   padding: 0.5em 0.75em 0.5em 0.75em;
 }
-
 /* White bordered button variant
    Used in: Call out groups
    Purpose: Creates outlined white buttons for use on colored backgrounds */
@@ -702,37 +689,30 @@ div > :last-child {
   transition: background-color, 0.2s, ease-in;
   width: fit-content;
 }
-
 .btn-rounded-white:hover {
   text-decoration: none;
 }
-
 /* Color and Background Utilities
    Used in: Social shares, call out groups, apply widgets
    Purpose: Provides white text and link background color for buttons and links */
 .whitetxt {
   color: var(--white);
 }
-
 a.whitetxt {
   color: var(--white);
 }
-
 .linkbck {
   background-color: var(--link);
 }
-
 /* Important Utility Overrides
    Used in: app/views/courses/_alternative_key_facts.html.erb
    Purpose: Provides !important overrides for course page CTAs where specificity conflicts occur */
 .padding-1em {
   padding: 1em !important;
 }
-
 .text-center {
   text-align: center !important;
 }
-
 /* Card Component System
    Used in: app/views/text_blocks/_rounded_gloss_card_2025.html.erb
            app/views/content_module/text_and_images/2025_card/_text_and_image.html.erb
@@ -744,20 +724,16 @@ a.whitetxt {
   flex-direction: column;
   height: 100%;
 }
-
 .card > * {
   width: 100%;
 }
-
 .card img {
   height: auto;
 }
-
 .card .content {
   padding: 1em;
   flex-grow: 1;
 }
-
 /* Border Utilities
    Used in: app/views/content_module/article_groups/_classic.html.erb
            app/views/content_module/article_groups/_web_refresh.html.erb
