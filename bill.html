@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.search-sticky {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+.number-sticky {
+	position: sticky;
+	top: var(--search-height, 0px);
+	z-index: 900;
+}
+</style>
+</head>
+
+<body>
+<main>
+  <div> 
+    
+    <!-- Search bar -->
+    <div class="search-sticky bg-color-dark search-bar">
+      <div class="w-80 p-responsive">
+        <div class="bg-color rounded-2 p-1">
+          <p>Search</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- One -->
+    <section class="bg-color">
+      <div class="number-sticky bg-color-light">
+        <div class="w-80 p-responsive">
+          <h3>One</h3>
+        </div>
+      </div>
+      <div class="w-80 grid p-responsive">
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>1<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>2<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>3<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Two -->
+    <section class="bg-color">
+      <div class="number-sticky bg-color-light">
+        <div class="w-80 p-responsive">
+          <h3>Two</h3>
+        </div>
+      </div>
+      <div class="w-80 grid p-responsive">
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>1<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>2<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>3<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>4<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>5<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>6<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Three -->
+    <section class="bg-color">
+      <div class="number-sticky bg-color-light">
+        <div class="w-80 p-responsive">
+          <h3>Three</h3>
+        </div>
+      </div>
+      <div class="w-80 grid p-responsive">
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>1<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>2<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>3<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>4<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>5<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>6<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>7<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>8<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>9<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>10<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>11<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>12<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>13<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>14<br>
+            <a href="#">Link</a></p>
+        </div>
+        <div class="bg-color-dark p-responsive rounded-responsive">
+          <p>15<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<script>
+// Automatically measure the search bar and set the offset
+const search = document.querySelector('.search-bar');
+
+function updateOffset() {
+    const h = search.offsetHeight;
+    document.documentElement.style.setProperty('--search-height', h + 'px');
+}
+
+updateOffset();
+window.addEventListener('resize', updateOffset);
+</script>
+</body>
+</html>
