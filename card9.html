@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.theme-selector {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	z-index: 1000;
+}
+.theme-selector select {
+	padding: 0.5em;
+	border-radius: 0.5em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.p-theme {
+	padding: 1em;
+}
+.bg-color:has(.bg-color > .p-theme) .bg-color > .p-theme {
+padding: 1em 0 0 0;
+}
+.bg-color-light:has(.bg-color-light > .p-theme) .bg-color-light > .p-theme {
+padding: 1em 0 0 0;
+}
+.bg-color-medium:has(.bg-color-medium > .p-theme) .bg-color-medium > .p-theme {
+padding: 1em 0 0 0;
+}
+.bg-color-dark:has(.bg-color-dark > .p-theme) .bg-color-dark > .p-theme {
+padding: 1em 0 0 0;
+}
+/* Default: card gets rounded */
+.card {
+	border-radius: 1em;
+	overflow: hidden;
+}
+.card img {
+	border-radius: 0;
+}
+.bg-color:has(.card.bg-color) .card.bg-color img, .bg-color-light:has(.card.bg-color-light) .card.bg-color-light img, .bg-color-medium:has(.card.bg-color-medium) .card.bg-color-medium img, .bg-color-dark:has(.card.bg-color-dark) .card.bg-color-dark img {
+border-radius: 1em;
+}
+
+/* Remove the card’s own rounding because the image replaces it */
+.bg-color:has(.card.bg-color) .card.bg-color, .bg-color-light:has(.card.bg-color-light) .card.bg-color-light, .bg-color-medium:has(.card.bg-color-medium) .card.bg-color-medium, .bg-color-dark:has(.card.bg-color-dark) .card.bg-color-dark {
+border-radius: 0;
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Themes -->
+  <section class="bg-color p-responsive">
+    <p class="w-80">
+      <label for="theme-switcher" class="visually-hidden">Theme</label>
+      <select id="theme-switcher" class="mr-1">
+        <option value="mono">Mono</option>
+        <option value="deep-rose">Deep rose</option>
+        <option value="brilliant-rose">Brilliant rose</option>
+        <option value="raspberry-red">Raspberry red</option>
+        <option value="deep-orange">Deep orange</option>
+        <option value="butter-yellow">Butter yellow</option>
+        <option value="dark-lavender">Dark lavender</option>
+        <option value="bondi-blue">Bondi blue</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="sea-green">Sea green</option>
+        <option value="fresh-green">Fresh green</option>
+        <option value="persian-indigo">Persian indigo</option>
+        <option value="midnight-blue">Midnight blue</option>
+        <option value="dark">Dark</option>
+      </select>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
+  </section>
+  <!-- Content -->
+  
+  <section class="bg-color p-responsive">
+    <div class="w-80 grid">
+      <div class="card bg-color"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <h3>Heading 1</h3>
+          <p>None<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-light"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <h3>Heading 2</h3>
+          <p>Light<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-medium"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <h3>Heading 3</h3>
+          <p>Medium<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-dark"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <h3>Heading 4</h3>
+          <p>Dark<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color-light p-responsive">
+    <div class="w-80 grid">
+      <div class="card bg-color"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>None<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-light"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Light<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-medium"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Medium<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-dark"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Dark<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color-medium p-responsive">
+    <div class="w-80 grid">
+      <div class="card bg-color"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>None<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-light"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Light<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-medium"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Medium<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-dark"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Dark<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-color-dark p-responsive">
+    <div class="w-80 grid">
+      <div class="card bg-color"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>None<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-light"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Light<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-medium"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Medium<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+      <div class="card bg-color-dark"> <img src="images/1280x720marine6.jpg" alt="alternate text" width="1280" height="720">
+        <div class="p-theme">
+          <p>Dark<br>
+            <a href="#">Link</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Always start with this theme
+  let currentTheme = 'deep-orange';
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+</script> 
+</main>
+</body>
+</html>
