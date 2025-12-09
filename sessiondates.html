@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.sessions {
+	display: grid;
+	grid-template-columns: max-content minmax(0, max-content);
+	row-gap: 1em;
+}
+.date-block {
+	background: hsl(var(--bg-color-dark));
+	color: var(--text-color-dark);
+	border-radius: 1em 0 0 1em;
+}
+.content-block {
+	border-radius: 0 1em 1em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.content-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	margin-bottom: 1.5em;
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	font-size: 0.75em;
+	white-space: nowrap;
+}
+.tag-online {
+	background: #e6e8f5;
+	color: var(--black);
+}
+.tag-campus {
+	background: #e3f6ef;
+	color: var(--black);
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--mgrey);
+}
+
+@media (max-width: 50em) {
+.sessions {
+	grid-template-columns: 1fr;
+	row-gap: 0;
+}
+.date-block {
+	border-radius: 1em 1em 0 0;
+	margin-bottom: 0;
+}
+.content-block {
+	border-radius: 0 0 1em 1em;
+	margin-bottom: 1em;
+}
+.content-header {
+	flex-direction: column;
+	align-items: start;
+}
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Themes -->
+  <section class="bg-color p-responsive">
+    <p class="w-80">
+      <label for="theme-switcher" class="visually-hidden">Theme</label>
+      <select id="theme-switcher" class="mr-1">
+        <option value="mono">Mono</option>
+        <option value="deep-rose">Deep rose</option>
+        <option value="brilliant-rose">Brilliant rose</option>
+        <option value="raspberry-red">Raspberry red</option>
+        <option value="deep-orange">Deep orange</option>
+        <option value="butter-yellow">Butter yellow</option>
+        <option value="dark-lavender">Dark lavender</option>
+        <option value="bondi-blue">Bondi blue</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="sea-green">Sea green</option>
+        <option value="fresh-green">Fresh green</option>
+        <option value="persian-indigo">Persian indigo</option>
+        <option value="midnight-blue">Midnight blue</option>
+        <option value="dark">Dark</option>
+      </select>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
+  </section>
+  <!-- Content -->
+  
+  <section class="bg-color p-responsive">
+    <div class="w-80 sessions">
+      <div class="date-block p-1 centered">
+        <p><strong>Wednesday 30 October 2026</strong><br>
+          <span class="iconfont" aria-hidden="true">c</span>09:00–16:30</p>
+      </div>
+      <div class="content-block stroke-theme-dark bg-color p-1">
+        <div class="content-header">
+          <h3 class="m-0">Session 5: Overview and introductions; course expectations</h3>
+          <span class="tag tag-online">Online</span> </div>
+        <p>This session will cover the main concepts of theory and practice within the educational environment and will underpin topics previously studied in session 2.</p>
+      </div>
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Friday 15 January 2025</strong><br>
+          <span class="iconfont" aria-hidden="true">c</span>09:00–16:30</p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header">
+          <h3 class="m-0">Session 4: Foundational concepts and practical activities</h3>
+          <span class="tag tag-campus">On campus</span> </div>
+        <p>Session 1: Overview and introductions; course expectations.</p>
+      </div>
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Wednesday 30 October 2026</strong><br>
+          <span class="iconfont" aria-hidden="true">c</span>09:00–16:30</p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header m-0">
+          <h3 class="m-0">Session 1: Overview and introductions; course expectations</h3>
+          <span class="tag tag-online">Online</span> </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="bg-color p-responsive">
+    <div class="w-80 sessions">
+      <div class="date-block p-1 centered">
+        <p><strong>Wednesday 30 October 2026</strong></p>
+      </div>
+      <div class="content-block stroke-theme-dark bg-color p-1">
+        <div class="content-header">
+          <h3 class="m-0">Session 5: Overview and introductions; course expectations</h3>
+          <span class="tag tag-online">Online</span> </div>
+        <p>This session will cover the main concepts of theory and practice within the educational environment.</p>
+      </div>
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Friday 15 January 2025</strong></p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header">
+          <h3 class="m-0">Session 4: Foundational concepts and practical activities</h3>
+          <span class="tag tag-campus">On campus</span> </div>
+        <p>Session 1: Overview and introductions; course expectations.</p>
+      </div>
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Friday 1 May 2025</strong></p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header m-0">
+          <h3 class="m-0">Session 2: Foundational concepts and practical activities</h3>
+          <span class="tag tag-online">Online</span> </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="bg-color p-responsive">
+    <div class="w-80 sessions">
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Wednesday 30 September 2026</strong></p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header m-0">
+          <h3 class="m-0">Session 1</h3>
+          <span class="tag tag-online">Online</span> </div>
+      </div>
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Monday 5 May 2026</strong></p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header m-0">
+          <h3 class="m-0">Session 2</h3>
+          <span class="tag tag-campus">On campus</span> </div>
+      </div>
+      <div class="date-block p-1 centered bg-color">
+        <p><strong>Thursday 25 July 2026</strong></p>
+      </div>
+      <div class="content-block stroke-theme-dark p-1">
+        <div class="content-header m-0">
+          <h3 class="m-0">Session 3</h3>
+          <span class="tag tag-online">Online</span> </div>
+      </div>
+    </div>
+  </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Always start with this theme
+  let currentTheme = 'persian-indigo';
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+</script> 
+</main>
+</body>
+</html>
