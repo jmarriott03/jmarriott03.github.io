@@ -609,6 +609,15 @@ div > :last-child {
   height: 100%;
   object-fit: cover;
 }
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.link-no-underline {
+  text-decoration: none;
+}
+
 /* ============================================================================
    LEGACY UTILITY CLASSES
    Classes preserved from production for backwards compatibility.

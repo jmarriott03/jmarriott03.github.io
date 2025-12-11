@@ -26,13 +26,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Link behaviour override for mono theme only */
-[data-theme="mono"] .bg-color-light:not([data-theme]) a {
-  text-decoration: none;
-}
-[data-theme="mono"] .bg-color-light:not([data-theme]) a:hover, [data-theme="mono"] .bg-color-light:not([data-theme]) a:focus {
-  text-decoration: underline;
-}
 /* Deep rose theme variables */
 [data-theme="deep-rose"] {
   --bg-color-light: 318 100% 77%;
@@ -216,10 +209,6 @@
   --link-color-medium: var(--white);
   --link-color-dark: var(--black);
 }
-/* Link behaviour override for dark theme only */
-[data-theme="dark"] .bg-color a {
-  text-decoration: underline;
-}
 body {
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -233,7 +222,6 @@ div :last-child {
 }
 .bg-color a {
   color: var(--link-color);
-	text-decoration: none;
 }
 .bg-color a:hover, a:focus {
 	text-decoration: underline;
@@ -244,7 +232,6 @@ div :last-child {
 }
 .bg-color-light a {
   color: var(--link-color-light);
-  text-decoration: underline;
 }
 .bg-color-medium {
   color: var(--text-color-medium);
@@ -252,7 +239,6 @@ div :last-child {
 }
 .bg-color-medium a {
   color: var(--link-color-medium);
-  text-decoration: underline;
 }
 .bg-color-dark {
   color: var(--text-color-dark);
@@ -260,5 +246,4 @@ div :last-child {
 }
 .bg-color-dark a {
   color: var(--link-color-dark);
-  text-decoration: underline;
 }
