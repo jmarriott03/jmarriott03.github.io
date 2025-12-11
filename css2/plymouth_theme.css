@@ -223,9 +223,6 @@ div :last-child {
 .bg-color a {
   color: var(--link-color);
 }
-.bg-color a:hover, a:focus {
-	text-decoration: underline;
-}
 .bg-color-light {
   color: var(--text-color-light);
   background-color: hsl(var(--bg-color-light));
