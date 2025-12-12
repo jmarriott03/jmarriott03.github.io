@@ -615,6 +615,9 @@ div > :last-child {
   height: auto;
   display: block;
 }
+.aspect-ratio-16x9 {
+  aspect-ratio: 16 / 9;
+}
 .link-no-underline {
   text-decoration: none;
 }
