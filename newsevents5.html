@@ -9,17 +9,13 @@
 <link rel="stylesheet" href="css2/plymouth_theme.css">
 <title>University of Plymouth</title>
 <style>
-.debug-outline * {
-	outline: 1px dotted red;
-	outline-offset: -1px;
-}
 .card {
 	display: grid;
 	gap: 1em;
 	grid-template-columns: 10em 1fr;
 	grid-template-areas: "image text";
 	margin-bottom: 1em;
-	border-bottom: 1px solid var(--text-color);
+	border-bottom: 1px solid var(--mgrey);
 	padding-bottom: 1em;
 }
 .card img {
@@ -42,32 +38,8 @@
 </style>
 </head>
 <body>
-<main> 
-  <!-- Themes -->
-  <section class="bg-color p-responsive">
-    <p class="w-80">
-      <label for="theme-switcher" class="visually-hidden">Theme</label>
-      <select id="theme-switcher" class="mr-1">
-        <option value="mono">Mono</option>
-        <option value="deep-rose">Deep rose</option>
-        <option value="brilliant-rose">Brilliant rose</option>
-        <option value="raspberry-red">Raspberry red</option>
-        <option value="deep-orange">Deep orange</option>
-        <option value="butter-yellow">Butter yellow</option>
-        <option value="dark-lavender">Dark lavender</option>
-        <option value="bondi-blue">Bondi blue</option>
-        <option value="turquoise">Turquoise</option>
-        <option value="sea-green">Sea green</option>
-        <option value="fresh-green">Fresh green</option>
-        <option value="persian-indigo">Persian indigo</option>
-        <option value="midnight-blue">Midnight blue</option>
-        <option value="dark">Dark</option>
-      </select>
-      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
-  </section>
-  <!-- Content -->
-  
-  <section class="bg-color p-responsive">
+<main>
+  <section class="p-responsive">
     <div class="w-80">
       <h2>Undergraduate courses</h2>
       <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
@@ -90,124 +62,6 @@
       </div>
     </div>
   </section>
-  <section class="bg-color-light p-responsive">
-    <div class="w-80">
-      <h2>Undergraduate courses</h2>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BMBS Bachelor of Medicine, Bachelor of Surgery with Foundation (Year 0) (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BSc (Hons) Diagnostic Radiography (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-color-medium p-responsive">
-    <div class="w-80">
-      <h2>Undergraduate courses</h2>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BMBS Bachelor of Medicine, Bachelor of Surgery with Foundation (Year 0) (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BSc (Hons) Diagnostic Radiography (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="bg-color-dark p-responsive">
-    <div class="w-80">
-      <h2>Undergraduate courses</h2>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BMBS Bachelor of Medicine, Bachelor of Surgery with Foundation (Year 0) (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="card"><img src="images/1280x720placeholder-mgrey.gif" alt="">
-        <div class="content">
-          <h3>BSc (Hons) Diagnostic Radiography (Full-time)</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const root = document.documentElement;
-  const themeSwitcher = document.getElementById('theme-switcher');
-  const themes = [...themeSwitcher.options].map(opt => opt.value);
-
-  // Always start with this theme
-  let currentTheme = 'deep-orange';
-  root.dataset.theme = currentTheme;
-  themeSwitcher.value = currentTheme;
-
-  // Live region for announcements
-  const liveRegion = Object.assign(document.createElement('div'), {
-    className: 'visually-hidden',
-    ariaLive: 'polite'
-  });
-  document.body.appendChild(liveRegion);
-
-  const setTheme = theme => {
-    if (theme === currentTheme) return;
-    currentTheme = theme;
-    root.dataset.theme = theme;
-    themeSwitcher.value = theme;
-  };
-
-  const cycleTheme = step => {
-    const idx = themes.indexOf(currentTheme);
-    setTheme(themes[(idx + step + themes.length) % themes.length]);
-  };
-
-  // Dropdown changes
-  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
-
-  // Keyboard shortcuts
-  window.addEventListener('keydown', e => {
-    switch (e.key.toLowerCase()) {
-      case 't':
-        document.body.classList.toggle('debug-outline');
-        break;
-      case 'arrowright':
-        cycleTheme(1);
-        break;
-      case 'arrowleft':
-        cycleTheme(-1);
-        break;
-    }
-  });
-});
-</script> 
 </main>
 </body>
 </html>
