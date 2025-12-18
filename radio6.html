@@ -376,12 +376,15 @@ outline-offset: 2px;
 	background-color: var(--white);
 	border-radius: 0.375em;
 	outline: 2px solid var(--lgrey);
-  outline-offset: -2px;
+	outline-offset: -2px;
 	overflow: hidden;
 }
 .progressinner {
 	height: 0.75em;
 	margin: 0;
+}
+.no-letter-spacing {
+	letter-spacing: 0;
 }
 </style>
 </head>
@@ -414,7 +417,7 @@ outline-offset: 2px;
     <div class="w-60 rounded-1 bg-color stroke-theme-dark">
       <div class="grid grid-vertical-align bg-color-dark p-responsive">
         <div>
-          <h1>Search for a course</h1>
+          <h1>Register your interest in study</h1>
         </div>
         <div>
           <div class="progressbar">
@@ -424,7 +427,6 @@ outline-offset: 2px;
       </div>
       <div class="p-responsive">
         <h2>Which level of study are you interested in?</h2>
-        <p>Please select your favorite number:</p>
         <div class="radio1 mb-reg">
           <form action="/action_page.php">
             <input type="radio" id="one" name="fav_number" value="one">
