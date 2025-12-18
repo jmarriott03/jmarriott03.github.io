@@ -429,14 +429,16 @@ outline-offset: 2px;
         <h2>Which level of study are you interested in?</h2>
         <div class="radio1 mb-reg">
           <form action="/action_page.php">
-            <input type="radio" id="one" name="fav_number" value="one">
-            <label for="one"><strong>Undergraduate</strong> </label>
-            <br>
-            You have not yet completed a university degree and are looking to study a bachelor's-level qualification e.g <span class="nowrap">BA (Hons)</span>, <span class="nowrap">BSc (Hons)</span><br>
-            <input type="radio" id="two" name="fav_number" value="two">
-            <label for="two"><strong>Postgraduate</strong></label>
-            <br>
-            You already hold a bachelor's degree and are looking to study a taught master's programme e.g MSC, MA
+            <div class="stroke rounded-1 p-1 mb-1">
+              <input type="radio" id="one" name="fav_number" value="one">
+              <label for="one"><strong>Undergraduate</strong><br>
+                You have not yet completed a university degree and are looking to study a bachelor's-level qualification e.g <span class="nowrap">BA (Hons)</span>, <span class="nowrap">BSc (Hons)</span></label>
+            </div>
+            <div class="stroke rounded-1 p-1">
+              <input type="radio" id="two" name="fav_number" value="two">
+              <label for="two"><strong>Postgraduate</strong><br>
+                You already hold a bachelor's degree and are looking to study a taught master's programme e.g MSC, MA</label>
+            </div>
           </form>
         </div>
         <div class="inline-block-full-width">
