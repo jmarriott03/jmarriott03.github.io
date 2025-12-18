@@ -372,13 +372,15 @@ outline-offset: 2px;
 }
 .progressbar {
 	width: 15em;
-	height: 0.5em;
+	height: 0.75em;
 	background-color: var(--white);
-	border-radius: 0.25em;
+	border-radius: 0.375em;
+	outline: 2px solid var(--lgrey);
+  outline-offset: -2px;
 	overflow: hidden;
 }
 .progressinner {
-	height: 0.5em;
+	height: 0.75em;
 	margin: 0;
 }
 </style>
@@ -416,7 +418,7 @@ outline-offset: 2px;
         </div>
         <div>
           <div class="progressbar">
-            <div class="progressinner bg-color-medium" style="width:30%"></div>
+            <div class="progressinner bck-black" style="width:30%"></div>
           </div>
         </div>
       </div>
