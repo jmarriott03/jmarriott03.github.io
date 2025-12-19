@@ -18,6 +18,7 @@
 --online: #c1004a;
 --clearing: #131648;
 --foundation: #29718c;
+--vdgrey: #222;
 }
 .debug-outline * {
 	outline: 1px dotted red;
@@ -121,7 +122,7 @@ width: calc(100% * 2 / 3);
 }
 .card-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 	gap: 1em;
 }
 .card {
@@ -363,6 +364,54 @@ outline-offset: 2px;
 	line-height: 0;
 	letter-spacing: 0.25em;
 }
+.card-white {
+	background-color: var(--white);
+	text-decoration: none;
+	transition: 0.3s ease;
+}
+.card-white:hover {
+	background-color: var(--lgrey);
+	cursor: pointer;
+}
+[data-theme="dark"] .card-white:hover {
+	background-color: var(--vdgrey);
+}
+[data-theme="dark"] .card-white {
+	background-color: var(--black);
+}
+.card-white:focus-within {
+background-color: var(--lgrey);
+}
+a.card, a:hover.card {
+	text-decoration: none;
+	color: var(--text-color);
+}
+.link-underline {
+	color: var(--link-color);
+	word-wrap: break-word;
+	text-underline-position: under;
+	text-underline-offset: 1px;
+	text-decoration: underline;
+}
+.throbber {
+	display: flex;
+	align-items: center;
+}
+.throbber-right {
+	margin-left: auto;
+}
+.throbber-right img {
+	width: 1em;
+	height: 1em;
+	display: block;
+	animation: rotate-continuously 2s linear infinite;
+	transform-origin: 50% 50%;
+}
+@keyframes rotate-continuously {
+to {
+transform: rotate(1turn);
+}
+}
 </style>
 </head>
 <body>
@@ -401,7 +450,7 @@ outline-offset: 2px;
         </div>
       </div>
       <div class="p-responsive bck-lgrey">
-        <div class="p-1 rounded-2 bck-white dgrey-stroke mb-reg mgrey-text ellipsis"><span class="iconfont" aria-hidden="true">B</span>Search for courses, subjects or keywords...</div>
+        <div class="p-1 rounded-2 bck-white dgrey-stroke mb-reg mgrey-text ellipsis throbber"><span class="iconfont" aria-hidden="true">B</span>Search for courses, subjects or keywords...<span class="throbber-right"> <img src="images/throbber.svg" width="16" height="16" alt=""/> </span></div>
         <h3>Filter by course type</h3>
         <div class="pill-toggle">
           <button class="pill-toggle-btn" aria-pressed="true">Undergraduate</button>
@@ -419,29 +468,26 @@ outline-offset: 2px;
     <div class="w-80 mb-reg">
       <h2 class="m-0">Search results (48)</h2>
     </div>
-    <div class="w-80 card-container mb-reg">
-      <div class="card rounded-1 p-1 stroke-theme-dark">
-        <p class="mb-2"><span class="tag tag-undergraduate mr-0-5">Undergraduate</span></p>
-        <img src="images/1280x720coursesearch1.webp" width="1280" height="720" alt="" class="img-cover">
-        <h3><a href="#">BA (Hons) Creative Writing</a></h3>
-        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1 mortrboard-icon-big" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
-        <p class="line-clamp">Writing is timeless – and vital today. At Plymouth, you'll learn from poets, novelists, journalists and more to sharpen your craft. Our expert team nurtures talent, sparks creativity and prepares you for success across writing-driven fields.</p>
-      </div>
-      <div class="card rounded-1 p-1 stroke-theme-dark">
-        <p class="mb-2"><span class="tag tag-postgraduate-taught mr-0-5">Postgraduate taught</span></p>
-        <img src="images/1280x720coursesearch2.webp" width="1280" height="720" alt="" class="img-cover">
-        <h3><a href="#">BA (Hons) Creative Media with Foundation</a></h3>
-        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1 mortrboard-icon-big" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
-        <p class="line-clamp">This foundation pathway offers non-standard entry into BA (Hons) Creative Media, helping you build creative skills across media like illustration, animation and fine art. Explore visual design and best practice in a vibrant, studio-based environment.</p>
-      </div>
-      <div class="card rounded-1 p-1 stroke-theme-dark">
-        <p class="mb-2"><span class="tag tag-postgraduate-research mr-0-5">Postgraduate research</span></p>
-        <img src="images/1280x720coursesearch3.webp" width="1280" height="720" alt="" class="img-cover">
-        <h3><a href="#">MA Creative Writing</a></h3>
-        <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>1 year<span class="iconfont ml-1 mortrboard-icon-big" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
-        <p class="line-clamp">Our MA Creative Writing is one of the longest running in the UK, and has helped hundreds of graduates to become better writers. Our experienced and award-winning writers know the real value of providing an encouraging environment and will help you develop your own writing by studying and practicing the major forms of fiction, creative non-fiction, poetry, and dramatic writing (for stage and screen), culminating in a substantial dissertation project.</p>
-      </div>
-    </div>
+    <div class="w-80 card-container mb-reg"> <a href="#" class="card card-white rounded-1 p-1 stroke-theme-dark">
+      <p class="mb-2"> <span class="tag tag-undergraduate mr-0-5">Undergraduate</span> </p>
+      <img src="images/1280x720coursesearch1.webp" alt="">
+      <h3 class="link-underline">BA (Hons) Creative Writing</h3>
+      <p class="dgrey-text"> <span class="iconfont" aria-hidden="true">c</span> 3 years <span class="iconfont ml-1 mortrboard-icon-big" aria-hidden="true">Æ</span> Full-time <span class="iconfont ml-1" aria-hidden="true">(</span> Plymouth </p>
+      <p class="line-clamp"> Writing is timeless – and vital today. At Plymouth, you'll learn from poets,
+        novelists, journalists and more to sharpen your craft. </p>
+      </a> <a href="#" class="card card-white rounded-1 p-1 stroke-theme-dark">
+      <p class="mb-2"><span class="tag tag-postgraduate-taught mr-0-5">Postgraduate taught</span></p>
+      <img src="images/1280x720coursesearch2.webp" width="1280" height="720" alt="" class="img-cover">
+      <h3 class="link-underline">BA (Hons) Creative Media with Foundation</h3>
+      <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>3 years<span class="iconfont ml-1 mortrboard-icon-big" aria-hidden="true">Æ</span>Full-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+      <p class="line-clamp">This foundation pathway offers non-standard entry into BA (Hons) Creative Media, helping you build creative skills across media like illustration, animation and fine art. Explore visual design and best practice in a vibrant, studio-based environment.</p>
+      </a> <a href="#" class="card card-white rounded-1 p-1 stroke-theme-dark">
+      <p class="mb-2"><span class="tag tag-postgraduate-research mr-0-5">Postgraduate research</span></p>
+      <img src="images/1280x720coursesearch3.webp" width="1280" height="720" alt="" class="img-cover">
+      <h3 class="link-underline">MA Creative Writing</h3>
+      <p class="dgrey-text"><span class="iconfont" aria-hidden="true">c</span>1 year<span class="iconfont ml-1 mortrboard-icon-big" aria-hidden="true">Æ</span>Fullink-time<span class="iconfont ml-1" aria-hidden="true">(</span>Plymouth</p>
+      <p class="line-clamp">Our MA Creative Writing is one of the longest running in the UK, and has helped hundreds of graduates to become better writers. Our experienced and award-winning writers know the real value of providing an encouraging environment and will help you develop your own writing by studying and practicing the major forms of fiction, creative non-fiction, poetry, and dramatic writing (for stage and screen), culminating in a substantial dissertation project.</p>
+      </a> </div>
   </section>
   <script>
 document.addEventListener('DOMContentLoaded', () => {
