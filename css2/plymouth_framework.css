@@ -75,22 +75,27 @@
 .w-26 {
   max-width: 26.666666em;
   margin: 0 auto;
+  overflow: hidden;
 }
 .w-40 {
   max-width: 40em;
   margin: 0 auto;
+  overflow: hidden;
 }
 .w-53 {
   max-width: 53.333333em;
   margin: 0 auto;
+  overflow: hidden;
 }
 .w-60 {
   max-width: 60em;
   margin: 0 auto;
+  overflow: hidden;
 }
 .w-80 {
   max-width: 80em;
   margin: 0 auto;
+  overflow: hidden;
 }
 .p-0 {
   padding: 0;
@@ -237,12 +242,15 @@
 }
 .rounded-0-5 {
   border-radius: 0.5em;
+  overflow: hidden;
 }
 .rounded-1 {
   border-radius: 1em;
+  overflow: hidden;
 }
 .rounded-2 {
   border-radius: 2em;
+  overflow: hidden;
 }
 .shadow {
   box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.2);
@@ -250,6 +258,7 @@
 .stroke {
   outline: 2px solid var(--lgrey);
   outline-offset: -2px;
+  overflow: hidden; /* ADDED: Missing from original framework, required by production */
 }
 .dotted {
   border: 1px dotted var(--red);
@@ -474,6 +483,7 @@
 }
 .rounded-responsive {
   border-radius: 2em;
+  overflow: hidden;
 }
 @media (max-width: 40em) {
   .rounded-responsive {
@@ -611,9 +621,6 @@ div > :last-child {
 .link-no-underline {
   text-decoration: none;
 }
-.overflow-hidden {
-  oveflow: hidden;
-}
 /* ============================================================================
    LEGACY UTILITY CLASSES
    Classes preserved from production for backwards compatibility.
@@ -630,24 +637,29 @@ div > :last-child {
    Purpose: Provides additional corner rounding options for various components */
 .rounded-0-25 {
   border-radius: 0.25em;
+  overflow: hidden;
 }
 /* Top-only border radius utilities
    Used in: Various card and module designs */
 .top-rounded-0-25 {
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;
+  overflow: hidden;
 }
 .top-rounded-0-5 {
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
+  overflow: hidden;
 }
 .top-rounded-1 {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+  overflow: hidden;
 }
 .top-rounded-2 {
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+  overflow: hidden;
 }
 /* Individual corner border radius utilities
    Used in: app/views/content_module/text_and_images/2024_design/_text_and_image_wording.html.erb
