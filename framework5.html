@@ -12,6 +12,9 @@
 section > :last-child {
 	margin-bottom: 0;
 }
+article > :last-child {
+	margin-bottom: 0;
+}
 :where([class^="w-"]) :where([class^="w-"]) .p-responsive {
 padding: 1em;
 }
@@ -25,6 +28,7 @@ border-radius: 1em;
 <main>
   <section class="w-80 p-responsive bg-color">
     <h1>framework5</h1>
+    <p>A lightweight, utility-based layout system that applies spacing and visual styling contextually using low-specificity selectors, ensuring consistent vertical rhythm and responsive nesting behaviour without global side effects.</p>
     <div class="p-responsive rounded-responsive mb-reg bck-lgrey mb-reg">
       <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
@@ -54,6 +58,10 @@ border-radius: 1em;
   </section>
   <section class="w-80 p-responsive bg-color">
     <div class="codegrey"><code>section &gt; :last-child {<br>
+      margin-bottom: 0;<br>
+      }<br>
+      <br>
+      article &gt; :last-child {<br>
       margin-bottom: 0;<br>
       }<br>
       <br>
