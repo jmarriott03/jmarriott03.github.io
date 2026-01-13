@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="css2/plymouth_theme.css">
 <title>University of Plymouth</title>
 <style>
+section > :last-child {
+	margin-bottom: 0;
+}
 :where([class^="w-"]) :where([class^="w-"]) .p-responsive {
 padding: 1em;
 }
@@ -50,7 +53,11 @@ border-radius: 1em;
     </div>
   </section>
   <section class="w-80 p-responsive bg-color">
-    <div class="codegrey"> <code>div &gt; :last-child {<br>
+    <div class="codegrey"><code>section &gt; :last-child {<br>
+      margin-bottom: 0;<br>
+      }<br>
+      <br>
+      div &gt; :last-child {<br>
       margin-bottom: 0;<br>
       }<br>
       <br>
