@@ -364,32 +364,33 @@ outline-offset: 2px;
 	letter-spacing: 0;
 }
 /* Base */
-.radio1 label.stroke {
+.radio1 label {
 	display: block;
 	cursor: pointer;
 	background-color: transparent;
 	transition: background-color 0.2s ease;
 }
 /* Mouse hover only */
-.radio1 label.stroke:hover {
+.radio1 label:hover {
 	background-color: var(--lgrey);
 }
-
 /* Keyboard focus – use an outline, not background */
-.radio1 label.stroke:has(input:focus-visible) {
+.radio1 label:has(input:focus-visible) {
 outline: 2px solid var(--link);
 outline-offset: 2px;
 }
-
 /* Selected (checked) state */
-.radio1 label.stroke:has(input:checked) {
+.radio1 label:has(input:checked) {
 background-color: var(--lgrey);
 }
-
 /* Remove native focus ring from the radio itself */
 .radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {
 outline: none;
 box-shadow: none;
+}
+/* Dark theme overrides for radio labels */
+[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
 }
 </style>
 </head>
