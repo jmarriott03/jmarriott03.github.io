@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+section > :last-child {
+	margin-bottom: 0;
+}
+article > :last-child {
+	margin-bottom: 0;
+}
+:where([class^="w-"]) :where([class^="w-"]) .p-responsive {
+padding: 1em;
+}
+
+:where([class^="w-"]) :where([class^="w-"]) .rounded-responsive {
+border-radius: 1em;
+}
+.lorem-1::before {
+	content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.";
+}
+.lorem-2::before {
+	content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.";
+}
+.lorem-3::before {
+	content: "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+</style>
+</head>
+<body>
+<main data-theme="fresh-green">
+  <section class="p-responsive bg-color-dark overflow-hidden" data-theme="mono">
+    <h1>Kat test page - I'm the hero image</h1>
+    <p class="lorem-3"></p>
+    <p><a href="#">Test link</a></p>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">`</span>Primary button</button>
+  </section>
+  <section class="w-40 p-responsive bg-color-light">
+    <h2>framework5</h2>
+    <p class="lorem-3"></p>
+    <p><a href="#">Test link</a></p>
+    <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">`</span>Primary button</button>
+  </section>
+</main>
+</body>
+</html>
