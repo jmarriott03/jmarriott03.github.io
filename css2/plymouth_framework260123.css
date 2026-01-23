@@ -490,41 +490,25 @@
     border-radius: 1em;
   }
 }
-/* Cancel vertical padding if two adjacent sections share the same background,
-   unless the first section has mb-reg */
-section.bg-color:not(.mb-reg) + section.bg-color,
-section.bg-color-light:not(.mb-reg) + section.bg-color-light,
-section.bg-color-medium:not(.mb-reg) + section.bg-color-medium,
-section.bg-color-dark:not(.mb-reg) + section.bg-color-dark {
-	padding-top: 0;
+/* Cancel vertical padding if two adjacent sections share the same background */
+section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+  padding-top: 0;
 }
-
 @media (max-width: 40em) {
-	section.bg-color:not(.mb-reg) + section.bg-color,
-	section.bg-color-light:not(.mb-reg) + section.bg-color-light,
-	section.bg-color-medium:not(.mb-reg) + section.bg-color-medium,
-	section.bg-color-dark:not(.mb-reg) + section.bg-color-dark {
-		padding-top: var(--space-m);
-	}
+  section.bg-color + section.bg-color, section.bg-color-light + section.bg-color-light, section.bg-color-medium + section.bg-color-medium, section.bg-color-dark + section.bg-color-dark {
+    padding-top: var(--space-m);
+  }
 }
-/* Cancel vertical padding if two adjacent articles share the same background,
-   unless the first article has mb-reg */
-article.bg-color:not(.mb-reg) + article.bg-color,
-article.bg-color-light:not(.mb-reg) + article.bg-color-light,
-article.bg-color-medium:not(.mb-reg) + article.bg-color-medium,
-article.bg-color-dark:not(.mb-reg) + article.bg-color-dark {
-	padding-top: 0;
+/* Articles */
+/* Cancel vertical padding if two adjacent sections share the same background */
+article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+  padding-top: 0;
 }
-
 @media (max-width: 40em) {
-	article.bg-color:not(.mb-reg) + article.bg-color,
-	article.bg-color-light:not(.mb-reg) + article.bg-color-light,
-	article.bg-color-medium:not(.mb-reg) + article.bg-color-medium,
-	article.bg-color-dark:not(.mb-reg) + article.bg-color-dark {
-		padding-top: var(--space-m);
-	}
+  article.bg-color + article.bg-color, article.bg-color-light + article.bg-color-light, article.bg-color-medium + article.bg-color-medium, article.bg-color-dark + article.bg-color-dark {
+    padding-top: var(--space-m);
+  }
 }
-
 /* Stack vertical spacing */
 .stack > * + * {
   margin-top: var(--space-responsive);
