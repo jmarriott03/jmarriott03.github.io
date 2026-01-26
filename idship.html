@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Social Page Mock-up</title>
+<style>
+:root {
+--bg: #eee;
+--card-bg: #ffffff;
+--text-primary: #111;
+--text-secondary: #666;
+--highlight: #ccc;
+--max-width: 1100px;
+--profile-size: 168px;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text-primary);
+	line-height: 1.5;
+}
+/* Page wrapper */
+.page {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	background: var(--card-bg);
+}
+/* Cover */
+.cover {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background: url("images/idship/Light+Objects+2.webp") center bottom / cover no-repeat;
+}
+/* Profile image */
+.profile-wrapper {
+	position: absolute;
+	left: 2rem;
+bottom: calc(-1 * var(--profile-size) / 2);
+}
+.profile-image {
+	width: var(--profile-size);
+	height: var(--profile-size);
+	border-radius: 50%;
+	border: 6px solid var(--card-bg);
+}
+.logo-01 {
+	background: url("images/idship/idship01.gif") center / cover no-repeat;
+}
+.logo-02 {
+	background: url("images/idship/idship02.gif") center / cover no-repeat;
+}
+.logo-03 {
+	background: url("images/idship/idship03.gif") center / cover no-repeat;
+}
+.logo-04 {
+	background: url("images/idship/idship04.gif") center / cover no-repeat;
+}
+.logo-05 {
+	background: url("images/idship/idship05.gif") center / cover no-repeat;
+}
+.logo-06 {
+	background: url("images/idship/idship06.gif") center / cover no-repeat;
+}
+.logo-07 {
+	background: url("images/idship/idship07.gif") center / cover no-repeat;
+}
+.logo-08 {
+	background: url("images/idship/idship08.gif") center / cover no-repeat;
+}
+/* Header content */
+.header-content {
+	padding: calc(var(--profile-size) / 2 + 1.5rem) 2rem 1.5rem;
+}
+.page-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 0;
+}
+.page-subtitle {
+	margin-top: 0.25rem;
+	color: var(--text-secondary);
+}
+/* Main content */
+.content {
+	padding: 1.5rem 2rem 2.5rem;
+	border-top: 1px solid var(--highlight);
+}
+.content-card {
+	background: var(--card-bg);
+	border-radius: 8px;
+	padding: 1.25rem;
+	border: 1px solid var(--highlight);
+}
+.content-card h2 {
+	margin-top: 0;
+	font-size: 1.25rem;
+}
+.content-card p {
+	margin-bottom: 0;
+	color: var(--text-secondary);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+:root {
+--profile-size: 128px;
+}
+.cover {
+	height: 240px;
+}
+.profile-wrapper {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.header-content {
+	text-align: centre;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+.content {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+}
+
+@media (max-width: 480px) {
+.page-title {
+	font-size: 1.5rem;
+}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-01"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 1 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-02"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+	  
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 1 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-03"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 2 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-04"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 2 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-05"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 3 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-06"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 3 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-07"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 4 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-08"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+		<p>Logo 4 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
