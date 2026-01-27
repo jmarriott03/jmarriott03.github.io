@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+section > :last-child {
+	margin-bottom: 0;
+}
+article > :last-child {
+	margin-bottom: 0;
+}
+:where([class^="w-"]) :where([class^="w-"]) .p-responsive {
+padding: 1em;
+}
+
+:where([class^="w-"]) :where([class^="w-"]) .rounded-responsive {
+border-radius: 1em;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive bg-color">
+    <h1>framework7</h1>
+    <p>A lightweight, utility-based layout system that applies spacing and visual styling contextually using low-specificity selectors, ensuring consistent vertical rhythm and responsive nesting behaviour without global side effects.</p>
+    <div class="p-responsive rounded-responsive mb-reg bck-lgrey mb-reg">
+      <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="w-80 rounded-responsive p-responsive stroke mb-reg">
+      <div class="rounded-responsive p-responsive bck-lgrey mb-reg">
+        <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="w-80 rounded-responsive p-responsive bck-black white-text mb-reg">
+        <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="w-60 rounded-responsive p-responsive bck-black white-text mb-reg">
+        <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="w-40 rounded-responsive p-responsive bck-black white-text mb-reg">
+        <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="rounded-responsive p-responsive bck-white black-text mb-reg">
+          <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-80 rounded-responsive p-responsive bck-black white-text mb-reg">
+      <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="w-60 rounded-responsive p-responsive bck-black white-text mb-reg">
+      <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="w-40 rounded-responsive p-responsive bck-black white-text mb-reg">
+      <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="rounded-responsive p-responsive bck-white black-text mb-reg">
+        <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+	  <div class="rounded-responsive p-responsive black-text mb-reg stroke">
+        <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+  </div>
+</main>
+</body>
+</html>
