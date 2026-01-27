@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDSHIP</title>
+<style>
+:root {
+--bg: #eee;
+--card-bg: #ffffff;
+--text-primary: #111;
+--text-secondary: #666;
+--highlight: #ccc;
+--max-width: 1100px;
+--profile-size: 168px;
+--logo-hue: 0;
+--logo-saturation: 100;
+--logo-lightness: 50;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background: var(--bg);
+	color: var(--text-primary);
+	line-height: 1.5;
+}
+/* Color control panel */
+.color-controls {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	padding: 1.5rem 2rem;
+	border-bottom: 2px solid var(--highlight);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.color-controls h3 {
+	margin: 0 0 1rem 0;
+	font-size: 1.1rem;
+}
+.slider-group {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+	max-width: var(--max-width);
+	margin: 0 auto;
+}
+.slider-control {
+	flex: 1;
+	min-width: 200px;
+}
+.slider-control label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	font-size: 0.9rem;
+}
+.slider-control input[type="range"] {
+	width: 100%;
+	height: 8px;
+	border-radius: 4px;
+	background: var(--highlight);
+	outline: none;
+	-webkit-appearance: none;
+}
+.slider-control input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: var(--text-primary);
+cursor: pointer;
+}
+.slider-control input[type="range"]::-moz-range-thumb {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: var(--text-primary);
+cursor: pointer;
+border: none;
+}
+.slider-control input[type="range"]::-moz-range-track {
+background: var(--highlight);
+height: 8px;
+border-radius: 4px;
+}
+.slider-value {
+	display: inline-block;
+	min-width: 50px;
+	text-align: right;
+	color: var(--text-secondary);
+}
+/* Page wrapper */
+.page {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	background: var(--card-bg);
+}
+/* Cover */
+.cover {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background: url("images/idship/Light+Objects+2.webp") center bottom / cover no-repeat;
+}
+/* Profile image */
+.profile-wrapper {
+	position: absolute;
+	left: 2rem;
+bottom: calc(-1 * var(--profile-size) / 2);
+}
+.profile-image {
+	width: var(--profile-size);
+	height: var(--profile-size);
+	border-radius: 50%;
+	border: 6px solid var(--card-bg);
+	position: relative;
+	isolation: isolate;
+}
+/* Apply color overlay to logos using pseudo-element */
+.profile-image[class*="logo-"]::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+background: hsl( calc(var(--logo-hue) * 1deg), calc(var(--logo-saturation) * 1%), calc(var(--logo-lightness) * 1%) );
+	mix-blend-mode: screen;
+	pointer-events: none;
+}
+.logo-01 {
+	background: url("images/idship/idship09.gif") center / cover no-repeat;
+}
+.logo-02 {
+	background: url("images/idship/idship10.gif") center / cover no-repeat;
+}
+.logo-03 {
+	background: url("images/idship/idship11.gif") center / cover no-repeat;
+}
+.logo-04 {
+	background: url("images/idship/idship12.gif") center / cover no-repeat;
+}
+.logo-05 {
+	background: url("images/idship/idship13.gif") center / cover no-repeat;
+}
+.logo-06 {
+	background: url("images/idship/idship14.gif") center / cover no-repeat;
+}
+/* Header content */
+.header-content {
+	padding: calc(var(--profile-size) / 2 + 1.5rem) 2rem 1.5rem;
+}
+.page-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 0;
+}
+.page-subtitle {
+	margin-top: 0.25rem;
+	color: var(--text-secondary);
+}
+/* Main content */
+.content {
+	padding: 1.5rem 2rem 2.5rem;
+	border-top: 1px solid var(--highlight);
+}
+.content-card {
+	background: var(--card-bg);
+	border-radius: 8px;
+	padding: 1.25rem;
+	border: 1px solid var(--highlight);
+}
+.content-card h2 {
+	margin-top: 0;
+	font-size: 1.25rem;
+}
+.content-card p {
+	margin-bottom: 0;
+	color: var(--text-secondary);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+:root {
+--profile-size: 128px;
+}
+.cover {
+	height: 240px;
+}
+.profile-wrapper {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.header-content {
+	text-align: center;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+.content {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+.slider-group {
+	flex-direction: column;
+	gap: 1rem;
+}
+.slider-control {
+	min-width: 100%;
+}
+}
+
+@media (max-width: 480px) {
+.page-title {
+	font-size: 1.5rem;
+}
+.color-controls {
+	padding: 1rem;
+}
+}
+</style>
+</head>
+<body>
+<div class="color-controls">
+  <div class="slider-group">
+    <div class="slider-control">
+      <label for="hue">Hue: <span class="slider-value" id="hue-value">0°</span></label>
+      <input type="range" id="hue" min="0" max="360" value="0">
+    </div>
+    <div class="slider-control">
+      <label for="saturation">Saturation: <span class="slider-value" id="sat-value">100%</span></label>
+      <input type="range" id="saturation" min="0" max="100" value="100">
+    </div>
+    <div class="slider-control">
+      <label for="lightness">Lightness: <span class="slider-value" id="light-value">50%</span></label>
+      <input type="range" id="lightness" min="0" max="100" value="50">
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-01"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+      <p>Logo 1 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-02"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+      <p>Logo 1 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-03"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+      <p>Logo 2 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-04"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+      <p>Logo 2 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-05"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+      <p>Logo 3 white on black.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<div class="page">
+  <div class="cover">
+    <div class="profile-wrapper">
+      <div class="profile-image logo-06"></div>
+    </div>
+  </div>
+  <div class="header-content">
+    <h1 class="page-title">IDSHIP</h1>
+    <div class="page-subtitle">Your Brand. Delivered Brilliantly.</div>
+  </div>
+  <div class="content">
+    <div class="content-card">
+      <h2>Efficient Logistics Solutions</h2>
+      <p>Logo 3 black on white.</p>
+      <p>Embrace our direct to consumer logistics solutions designed for ecommerce businesses seeking fast and reliable services. We guarantee a seamless fulfilment process that culminates in high customer satisfaction.</p>
+      <p>Our expert team focuses on delivering exceptional value and efficiency, ensuring your products reach their destination promptly and securely.</p>
+    </div>
+  </div>
+</div>
+<script>
+const hueSlider = document.getElementById('hue');
+const satSlider = document.getElementById('saturation');
+const lightSlider = document.getElementById('lightness');
+const hueValue = document.getElementById('hue-value');
+const satValue = document.getElementById('sat-value');
+const lightValue = document.getElementById('light-value');
+
+function updateColors() {
+	document.documentElement.style.setProperty('--logo-hue', hueSlider.value);
+	document.documentElement.style.setProperty('--logo-saturation', satSlider.value);
+	document.documentElement.style.setProperty('--logo-lightness', lightSlider.value);
+	
+	hueValue.textContent = hueSlider.value + '°';
+	satValue.textContent = satSlider.value + '%';
+	lightValue.textContent = lightSlider.value + '%';
+}
+
+hueSlider.addEventListener('input', updateColors);
+satSlider.addEventListener('input', updateColors);
+lightSlider.addEventListener('input', updateColors);
+</script>
+</body>
+</html>
