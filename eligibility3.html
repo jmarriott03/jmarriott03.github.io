@@ -28,7 +28,6 @@
 	width: 100%;
 }
 .content-module-wrapper {
-	display: flow-root;
 	margin-bottom: var(--mb-module);
 	padding: 0 2em;
 }
@@ -90,10 +89,28 @@ hr {
 	display: inline-block;
 	width: fit-content;
 }
+/* ── firework canvas: fills the green box, sits behind content ── */
+.firework-host {
+	position: relative;
+	overflow: hidden;
+}
+.firework-host canvas.firework-canvas {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;   /* clicks pass through to links/buttons */
+	z-index: 0;
+}
+.firework-host > *:not(canvas) {
+	position: relative;
+	z-index: 1;             /* all existing children sit above the canvas */
+}
 </style>
 </head>
 <body>
-<main class="pt-2">
+<main class="pt-2"> 
+  <!-- ── Step 1 start state ── -->
   <div class="content-module-wrapper">
     <div class="w-80">
       <h1>eligibility3</h1>
@@ -129,6 +146,8 @@ hr {
     </div>
   </div>
   <hr>
+  
+  <!-- ── Step 2 ── -->
   <div class="content-module-wrapper">
     <div class="w-80 grid">
       <div class="underline-success">
@@ -160,6 +179,8 @@ hr {
     </div>
   </div>
   <hr>
+  
+  <!-- ── Step 3 — positive outcome (fireworks here) ── -->
   <div class="content-module-wrapper">
     <div class="w-80 grid">
       <div class="underline-success">
@@ -179,8 +200,9 @@ hr {
       </div>
     </div>
   </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 p-responsive rounded-responsive box-success">
+  <div class="content-module-wrapper"> 
+    <!-- firework-host added; canvas injected by JS after sizing -->
+    <div class="w-80 p-responsive rounded-responsive box-success firework-host" id="fireworkBox">
       <h2>Provisional outcome</h2>
       <h3>Great news</h3>
       <p><strong>Your tariff suggests you'd be a strong candidate for this course. We'd encourage you to apply when you're ready.</strong></p>
@@ -198,6 +220,8 @@ hr {
     </div>
   </div>
   <hr>
+  
+  <!-- ── Step 3 — lower-tariff outcome (no fireworks) ── -->
   <div class="content-module-wrapper">
     <div class="w-80 grid">
       <div class="underline-success">
@@ -236,5 +260,167 @@ hr {
     </div>
   </div>
 </main>
+<script>
+(() => {
+  const host    = document.getElementById('fireworkBox');
+  const canvas  = document.createElement('canvas');
+  canvas.className = 'firework-canvas';
+  // insert canvas as the very first child so CSS z-index rule works cleanly
+  host.insertBefore(canvas, host.firstChild);
+
+  const ctx = canvas.getContext('2d');
+
+  // size canvas to match the host element after layout
+  function sizeCanvas() {
+    canvas.width  = host.clientWidth;
+    canvas.height = host.clientHeight;
+  }
+  sizeCanvas();
+  // re-size on window resize (font/layout may shift host height)
+  window.addEventListener('resize', sizeCanvas);
+
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const DURATION = 5000;
+  const COLORS = [
+    '#ff4757','#ffa502','#fff176','#70a1ff',
+    '#ff6348','#fff','#00e5ff','#ce93d8',
+    '#ffdd59','#fd79a8','#fff59d','#7bed9f'
+  ];
+
+  let particles = [], rockets = [], started = false, startTime = 0, nextLaunch = 0;
+  const launches = [200, 1100, 2000, 2700, 3500];
+
+  // ── Particle ──
+  class Particle {
+    constructor(x, y) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = rand(1.5, 4);
+      this.x = x; this.y = y;
+      this.vx = Math.cos(angle) * speed;
+      this.vy = Math.sin(angle) * speed;
+      this.alpha = 1;
+      this.decay = rand(0.01, 0.025);
+      this.size  = rand(1.5, 3);
+      this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      this.px = x; this.py = y;
+    }
+    update() {
+      this.px = this.x; this.py = this.y;
+      this.vy += 0.04;
+      this.vx *= 0.995;
+      this.x += this.vx;
+      this.y += this.vy;
+      this.alpha -= this.decay;
+    }
+    draw() {
+      const W = canvas.width, H = canvas.height;
+      // trail
+      ctx.globalAlpha = this.alpha * 0.4;
+      ctx.strokeStyle = this.color;
+      ctx.lineWidth   = this.size * 0.7;
+      ctx.lineCap     = 'round';
+      ctx.beginPath();
+      ctx.moveTo(this.px, this.py);
+      ctx.lineTo(this.x,  this.y);
+      ctx.stroke();
+      // core
+      ctx.globalAlpha = this.alpha;
+      ctx.shadowColor = this.color;
+      ctx.shadowBlur  = 6;
+      ctx.fillStyle   = this.color;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+    }
+  }
+
+  // ── Rocket ──
+  class Rocket {
+    constructor() {
+      const W = canvas.width, H = canvas.height;
+      this.x      = rand(W * 0.2, W * 0.8);
+      this.y      = H;
+      this.targetY = rand(H * 0.15, H * 0.4);
+      this.speed  = rand(7, 10);
+      this.done   = false;
+      this.py     = this.y;
+    }
+    update() {
+      if (this.done) return;
+      this.py = this.y;
+      this.y -= this.speed;
+      if (this.y <= this.targetY) this.explode();
+    }
+    explode() {
+      this.done = true;
+      for (let i = 0; i < Math.floor(rand(60, 90)); i++) {
+        particles.push(new Particle(this.x, this.y));
+      }
+    }
+    draw() {
+      if (this.done) return;
+      // trail
+      ctx.globalAlpha = 0.7;
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth   = 2;
+      ctx.lineCap     = 'round';
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.py);
+      ctx.lineTo(this.x, this.y);
+      ctx.stroke();
+      // core
+      ctx.globalAlpha = 1;
+      ctx.shadowColor = '#fff';
+      ctx.shadowBlur  = 10;
+      ctx.fillStyle   = '#fff';
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur  = 0;
+    }
+  }
+
+  // ── render loop ──
+  function loop(now) {
+    const W = canvas.width, H = canvas.height;
+    const elapsed = now - startTime;
+
+    // spawn rockets on schedule
+    while (nextLaunch < launches.length && elapsed >= launches[nextLaunch]) {
+      rockets.push(new Rocket());
+      nextLaunch++;
+    }
+
+    // clear to transparent — green background shows through
+    ctx.clearRect(0, 0, W, H);
+
+    // update & draw
+    rockets.forEach(r => { r.update(); r.draw(); });
+    particles = particles.filter(p => p.alpha > 0);
+    particles.forEach(p => { p.update(); p.draw(); });
+    ctx.globalAlpha = 1;
+
+    if (elapsed < DURATION || particles.length > 0) {
+      requestAnimationFrame(loop);
+    }
+    // nothing left to do — canvas is already clear from clearRect, done.
+  }
+
+  // ── IntersectionObserver: start once the green box scrolls into view ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started    = true;
+        startTime  = performance.now();
+        observer.disconnect(); // fire once only
+        requestAnimationFrame(loop);
+      }
+    });
+  }, { threshold: 0.25 }); // triggers when 25% of the box is visible
+
+  observer.observe(host);
+})();
+</script>
 </body>
 </html>
