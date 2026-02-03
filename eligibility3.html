@@ -67,6 +67,12 @@
 	outline-offset: -2px;
 	overflow: hidden;
 }
+.box-theme {
+	background-color: hsl(var(--bg-color-light));
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -104,10 +110,7 @@
       <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
     </div>
   </div>
-	
-	
-	
-	  <div class="content-module-wrapper">
+  <div class="content-module-wrapper">
     <div class="w-80 p-responsive rounded-responsive box-success">
       <h2>Provisional outcome</h2>
       <p><strong>Your tariff</strong>: 80 points</p>
@@ -116,10 +119,7 @@
       <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
     </div>
   </div>
-	
-	
-		
-	  <div class="content-module-wrapper">
+  <div class="content-module-wrapper">
     <div class="w-80 p-responsive rounded-responsive box-primary">
       <h2>Provisional outcome</h2>
       <p><strong>Your tariff</strong>: 80 points</p>
@@ -128,10 +128,7 @@
       <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
     </div>
   </div>
-	
-		
-		
-	  <div class="content-module-wrapper">
+  <div class="content-module-wrapper">
     <div class="w-80 p-responsive rounded-responsive box-light">
       <h2>Provisional outcome</h2>
       <p><strong>Your tariff</strong>: 80 points</p>
@@ -140,13 +137,15 @@
       <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
     </div>
   </div>
-	
-	
-	
-	
-	
-	
-	
+  <div class="content-module-wrapper">
+    <div class="w-80 p-responsive rounded-responsive box-theme" data-theme="deep-orange">
+      <h2>Provisional outcome</h2>
+      <p><strong>Your tariff</strong>: 80 points</p>
+      <p><strong>Course</strong>: Zoology</p>
+      <p class="largetext">Good news! Your UCAS tariff points of <strong>{t}</strong> meet our Clearing entry requirements for <strong>{courseTitle}</strong>.</p>
+      <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
+    </div>
+  </div>
 </main>
 </body>
 </html>
