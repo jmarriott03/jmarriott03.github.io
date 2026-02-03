@@ -49,6 +49,9 @@
 .underline-light {
 	border-bottom: 4px solid var(--btn-light);
 }
+.underline-black {
+	border-bottom: 4px solid var(--black);
+}
 .box-success {
 	background-color: color-mix(in srgb, var(--btn-success) 10%, #fff);
 	outline: 2px solid var(--btn-success);
@@ -73,6 +76,31 @@
 	outline-offset: -2px;
 	overflow: hidden;
 }
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.width-fit {
+	display: inline-block;
+	width: fit-content;
+}
 </style>
 </head>
 <body>
@@ -84,12 +112,12 @@
   </div>
   <div class="content-module-wrapper">
     <div class="w-80 grid">
-      <div class="underline-success">
+      <div class="underline-black">
         <div class="p-1">
           <p class="text-center">1. Confirm your course</p>
         </div>
       </div>
-      <div class="underline-primary">
+      <div class="underline-light">
         <div class="p-1">
           <p class="text-center"><strong>2. Your qualifications</strong></p>
         </div>
@@ -103,47 +131,81 @@
   </div>
   <div class="content-module-wrapper">
     <div class="w-80 p-responsive rounded-responsive stroke">
-      <h2>Provisional outcome</h2>
-      <p><strong>Your tariff</strong>: 80 points</p>
-      <p><strong>Course</strong>: Zoology</p>
-      <p class="largetext">Good news! Your UCAS tariff points of <strong>{t}</strong> meet our Clearing entry requirements for <strong>{courseTitle}</strong>.</p>
-      <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
+      <h2>Your course of interest</h2>
+      <p class="py-1"><span class="p-1 bg-color-light rounded-0-5"><strong>BA (Hons) Architecture</strong></span></p>
+      <div class="mb-reg step-actions">
+        <div><a href="#"><span class="iconfont" aria-hidden="true">P</span>Choose another course</a></div>
+        <button class="btn btn-primary btn-rounded">Start eligibility check</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-80 grid">
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">1. Confirm your course</p>
+        </div>
+      </div>
+      <div class="underline-black">
+        <div class="p-1">
+          <p class="text-center"><strong>2. Your qualifications</strong></p>
+        </div>
+      </div>
+      <div class="underline-light">
+        <div class="p-1">
+          <p class="text-center">3. Provisional outcome</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="content-module-wrapper">
-    <div class="w-80 p-responsive rounded-responsive box-success">
-      <h2>Provisional outcome</h2>
-      <p><strong>Your tariff</strong>: 80 points</p>
-      <p><strong>Course</strong>: Zoology</p>
-      <p class="largetext">Good news! Your UCAS tariff points of <strong>{t}</strong> meet our Clearing entry requirements for <strong>{courseTitle}</strong>.</p>
-      <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
+    <div class="w-80 p-responsive rounded-responsive stroke">
+      <h2>Your qualifications</h2>
+      <p>Enter your known or expected UCAS tariff points. These are a numerical way of comparing qualifications. If you're unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
+      <p><strong>Your UCAS tariff points<span class="p-1 stroke-theme-dark rounded-0-5 ml-1 tariff-largetext">128</span></strong></p>
+      <div class="mb-reg step-actions">
+        <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+        <button class="btn btn-primary btn-rounded">Check my eligibility</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-80 grid">
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">1. Confirm your course</p>
+        </div>
+      </div>
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center"><strong>2. Your qualifications</strong></p>
+        </div>
+      </div>
+      <div class="underline-black">
+        <div class="p-1">
+          <p class="text-center">3. Provisional outcome</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="content-module-wrapper">
-    <div class="w-80 p-responsive rounded-responsive box-primary">
+    <div class="w-80 p-responsive rounded-responsive stroke">
       <h2>Provisional outcome</h2>
-      <p><strong>Your tariff</strong>: 80 points</p>
-      <p><strong>Course</strong>: Zoology</p>
-      <p class="largetext">Good news! Your UCAS tariff points of <strong>{t}</strong> meet our Clearing entry requirements for <strong>{courseTitle}</strong>.</p>
-      <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 p-responsive rounded-responsive box-light">
-      <h2>Provisional outcome</h2>
-      <p><strong>Your tariff</strong>: 80 points</p>
-      <p><strong>Course</strong>: Zoology</p>
-      <p class="largetext">Good news! Your UCAS tariff points of <strong>{t}</strong> meet our Clearing entry requirements for <strong>{courseTitle}</strong>.</p>
-      <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 p-responsive rounded-responsive box-theme" data-theme="deep-orange">
-      <h2>Provisional outcome</h2>
-      <p><strong>Your tariff</strong>: 80 points</p>
-      <p><strong>Course</strong>: Zoology</p>
-      <p class="largetext">Good news! Your UCAS tariff points of <strong>{t}</strong> meet our Clearing entry requirements for <strong>{courseTitle}</strong>.</p>
-      <p class="largetext">Contact our Clearing hotline or register online to discuss your place on this course.</p>
+      <h3>Great news</h3>
+      <p><strong>Your tariff suggests you'd be a strong candidate for this course. We'd encourage you to apply when you're ready.</strong></p>
+      <p>If you complete your enquiry, we can support you with tailored guidance and keep you updated as you move forward.</p>
+      <div class="p-1 rounded-0-5 mb-reg bg-color-light width-fit" data-theme="sea-green">
+        <p>Your course: <strong>BA (Hons) Architecture</strong></p>
+        <p>Your tariff: <strong>128</strong></p>
+      </div>
+      <p>Please note that the tariff you share is only used to tailor the advice you receive at this stage and doesn't commit you to anything. If you complete your enquiry, it will be included with your enquiry details.</p>
+      <p><strong>Your UCAS tariff points<span class="p-1 stroke-theme-dark rounded-0-5 ml-1 tariff-largetext">128</span></strong></p>
+      <div class="step-actions">
+        <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+        <button class="btn btn-primary btn-rounded">Continue your enquiry</button>
+      </div>
     </div>
   </div>
 </main>
