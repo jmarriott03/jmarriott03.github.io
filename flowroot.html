@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.p-responsive .p-responsive {
+	padding: 1em;
+}
+.p-responsive .rounded-responsive {
+	border-radius: 1em;
+}
+.w-26, .w-40, .w-53, .w-60, .w-80 {
+	width: 100%;
+}
+.content-module-wrapper {
+	display: flow-root;
+	margin-bottom: var(--mb-module);
+	padding: 0 2em;
+}
+
+@media (max-width: 40em) {
+.content-module-wrapper {
+	padding: 0 1em;
+}
+}
+.content-module-wrapper .content-module-wrapper {
+	padding: 0;
+}
+
+/*
+.btn-group {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+*/
+/*
+.btn-group .btn {
+	margin: 0;
+}
+*/
+</style>
+</head>
+<body>
+<main class="pt-2">
+  <div class="content-module-wrapper">
+    <div class="w-40">
+      <h1>flowroot</h1>
+      <p><span class="codegrey2 nowrap">display: flow-root</span> is a CSS property value that creates a new <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Block_formatting_context">Block Formatting Context (BFC)</a> for an element without requiring hacks like <span class="codegrey2 nowrap">overflow: hidden</span> or clearfix. It forces the container to enclose its floated children, preventing them from "poking out" of the bottom, while also preventing internal margin collapsing with outside elements.</p>
+      <p>Use <span class="codegrey2">display: flow-root</span> when:</p>
+      <ul>
+        <li>A container has floated children and collapses</li>
+        <li>You want to avoid clearfix hacks</li>
+        <li>Margins are collapsing in confusing ways</li>
+        <li>You’re building reusable components (cards, media objects, content blocks)</li>
+      </ul>
+      <h3>Cleaner than alternative BFC triggers</h3>
+      <p>Other ways to create a BFC include:</p>
+      <ul>
+        <li><span class="codegrey2">overflow: hidden</span></li>
+        <li><span class="codegrey2">overflow: auto</span></li>
+        <li><span class="codegrey2">display: inline-block</span></li>
+        <li><span class="codegrey2">position: absolute</span></li>
+      </ul>
+      <p>These often have side effects:</p>
+      <ul>
+        <li>Clipped content</li>
+        <li>Scrollbars appearing</li>
+        <li>Inline behaviour you didn’t want</li>
+        <li>Positioning changes</li>
+      </ul>
+      <p><span class="codegrey2">display: flow-root</span> gives you a BFC with no side effects</p>
+      <p>It exists specifically to solve these layout issues cleanly.</p>
+      <h3>When you probably don’t need it</h3>
+      <p>You usually don’t need it if:</p>
+      <ul>
+        <li>You are already using Flexbox or Grid</li>
+        <li>You control all children and no floats are involved</li>
+        <li>You actually want margin collapse (rare, but it happens)</li>
+      </ul>
+      <p><a href="https://caniuse.com/flow-root"> https://caniuse.com/flow-root</a></p>
+      <!--
+          <button class="btn btn-primary">Primary button</button>
+          <button class="btn btn-secondary">Secondary button</button>
+--> 
+    </div>
+  </div>
+</main>
+</body>
+</html>
