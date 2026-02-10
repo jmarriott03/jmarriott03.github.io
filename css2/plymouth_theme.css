@@ -2,6 +2,7 @@
 *:root {
   --bg-color: 0 0% 100%;
   --bg-color-light: 0 0% 93%;
+  --bg-color-medium: 0, 0%, 80%;
   --bg-color-dark: 0 0% 7%;
   --text-color: var(--black);
   --text-color-light: var(--black);
@@ -222,10 +223,10 @@ div :last-child {
 }
 .bg-color a {
   color: var(--link-color);
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .bg-color a:hover, a:focus {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .bg-color-light {
   color: var(--text-color-light);
