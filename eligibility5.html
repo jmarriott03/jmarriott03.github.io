@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.p-responsive .p-responsive {
+	padding: 1em;
+}
+.p-responsive .rounded-responsive {
+	border-radius: 1em;
+}
+.w-26, .w-40, .w-53, .w-60, .w-80 {
+	width: 100%;
+}
+.content-module-wrapper {
+	margin-bottom: var(--mb-module);
+	padding: 0 2em;
+}
+
+@media (max-width: 40em) {
+.content-module-wrapper {
+	padding: 0 1em;
+}
+}
+.content-module-wrapper .content-module-wrapper {
+	padding: 0;
+}
+.underline-success {
+	border-bottom: 4px solid var(--btn-success);
+}
+.underline-primary {
+	border-bottom: 4px solid var(--btn-primary);
+}
+.underline-light {
+	border-bottom: 4px solid var(--btn-light);
+}
+.underline-black {
+	border-bottom: 4px solid var(--black);
+}
+.box-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.box-success a {
+	color: var(--white);
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-theme-white {
+	outline: 2px solid var(--white);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.width-fit {
+	display: inline-block;
+	width: fit-content;
+}
+</style>
+</head>
+<body>
+<main class="pt-2"> 
+  <!-- ── Step 1 start state ── -->
+  <div class="content-module-wrapper">
+    <div class="w-80">
+      <h1>eligibility4</h1>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 grid">
+      <div class="underline-black">
+        <div class="p-1">
+          <p class="text-center"><strong>1. Confirm your course</strong></p>
+        </div>
+      </div>
+      <div class="underline-light">
+        <div class="p-1">
+          <p class="text-center">2. Your qualifications</p>
+        </div>
+      </div>
+      <div class="underline-light">
+        <div class="p-1">
+          <p class="text-center">3. Provisional outcome</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 p-responsive rounded-responsive stroke-theme-black">
+      <h2>Your course of interest</h2>
+      <p class="py-1"><span class="p-1 bg-color-light rounded-0-5"><strong>BA (Hons) Architecture</strong></span></p>
+      <div class="mb-reg step-actions">
+        <div><a href="#"><span class="iconfont" aria-hidden="true">P</span>Choose another course</a></div>
+        <button class="btn btn-primary btn-rounded">Start eligibility check</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- ── Step 2 ── -->
+  <div class="content-module-wrapper">
+    <div class="w-80 grid">
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">1. Confirm your course</p>
+        </div>
+      </div>
+      <div class="underline-black">
+        <div class="p-1">
+          <p class="text-center"><strong>2. Your qualifications</strong></p>
+        </div>
+      </div>
+      <div class="underline-light">
+        <div class="p-1">
+          <p class="text-center">3. Provisional outcome</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 p-responsive rounded-responsive stroke-theme-black">
+      <h2>Your qualifications</h2>
+      <p>Enter your known or expected UCAS tariff points. These are a numerical way of comparing qualifications. If you're unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
+      <p><strong>Your UCAS tariff points<span class="p-1 stroke-theme-black rounded-0-5 ml-1 tariff-largetext">128</span></strong></p>
+      <div class="mb-reg step-actions">
+        <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+        <button class="btn btn-primary btn-rounded">Check my eligibility</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- ── Step 3 — positive outcome (fireworks here) ── -->
+  <div class="content-module-wrapper">
+    <div class="w-80 grid">
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">1. Confirm your course</p>
+        </div>
+      </div>
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">2. Your qualifications</p>
+        </div>
+      </div>
+      <div class="underline-black">
+        <div class="p-1">
+          <p class="text-center"><strong>3. Provisional outcome</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 p-responsive rounded-responsive stroke-theme-black">
+      <h2>Provisional outcome</h2>
+      <h3>Great news</h3>
+      <p><strong>Your tariff suggests you'd be a strong candidate for this course. We'd encourage you to apply when you're ready.</strong></p>
+      <p>If you complete your enquiry, we can support you with tailored guidance and keep you updated as you move forward.</p>
+      <div class="p-1 rounded-0-5 mb-reg bg-color-light width-fit">
+        <p>Your course: <strong>BA (Hons) Architecture</strong></p>
+        <p>Your tariff: <strong>128</strong></p>
+      </div>
+      <p>Please note that the tariff you share is only used to tailor the advice you receive at this stage and doesn't commit you to anything. If you complete your enquiry, it will be included with your enquiry details.</p>
+      <div class="step-actions">
+        <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+        <button class="btn btn-primary btn-rounded">Continue your enquiry</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- ── Step 3 — lower-tariff outcome (no fireworks) ── -->
+  <div class="content-module-wrapper">
+    <div class="w-80 grid">
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">1. Confirm your course</p>
+        </div>
+      </div>
+      <div class="underline-success">
+        <div class="p-1">
+          <p class="text-center">2. Your qualifications</p>
+        </div>
+      </div>
+      <div class="underline-black">
+        <div class="p-1">
+          <p class="text-center"><strong>3. Provisional outcome</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 p-responsive rounded-responsive stroke-theme-black">
+      <h2>Provisional outcome</h2>
+      <h3>You still have options</h3>
+      <p><strong>It looks like your current qualifications don't yet meet the usual entry level for university study. But that doesn't mean the door is closed.</strong></p>
+      <p>Many students begin their higher education journey through one of our partner colleges, where you can study a programme designed to prepare you for university entry.</p>
+      <p>We'd still like to support you – if you complete your enquiry, we can help you explore suitable pathways and connect you with the right options.</p>
+      <div class="p-1 rounded-0-5 mb-reg bg-color-light width-fit">
+        <p>Your course: <strong>BA (Hons) Architecture</strong></p>
+        <p>Your tariff: <strong>20</strong></p>
+      </div>
+      <p>Please note that the tariff you share is only used to tailor the advice you receive at this stage and doesn't commit you to anything. If you complete your enquiry, it will be included with your enquiry details.</p>
+      <div class="step-actions">
+        <div class="previous-step nowrap"><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></div>
+        <button class="btn btn-primary btn-rounded">Continue your enquiry</button>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
