@@ -89,29 +89,6 @@ hr {
 	display: inline-block;
 	width: fit-content;
 }
-/* ── firework canvas: fills the green box, sits behind content ── */
-.firework-host {
-	position: relative;
-	overflow: hidden;
-}
-.firework-host canvas.firework-canvas {
-	position: absolute;
-	inset: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;   /* clicks pass through to links/buttons */
-	z-index: 0;
-}
-.firework-host > *:not(canvas) {
-	position: relative;
-	z-index: 1;             /* all existing children sit above the canvas */
-}
-
-@media (prefers-reduced-motion: reduce) {
-.firework-canvas {
-	display: none;
-}
-}
 </style>
 </head>
 <body>
@@ -206,14 +183,13 @@ hr {
       </div>
     </div>
   </div>
-  <div class="content-module-wrapper"> 
-    <!-- firework-host added; canvas injected by JS after sizing -->
-    <div class="w-80 p-responsive rounded-responsive box-success firework-host" id="fireworkBox">
+  <div class="content-module-wrapper">
+    <div class="w-80 p-responsive rounded-responsive stroke">
       <h2>Provisional outcome</h2>
       <h3>Great news</h3>
       <p><strong>Your tariff suggests you'd be a strong candidate for this course. We'd encourage you to apply when you're ready.</strong></p>
       <p>If you complete your enquiry, we can support you with tailored guidance and keep you updated as you move forward.</p>
-      <div class="p-1 rounded-0-5 mb-reg bck-white black-text width-fit" data-theme="sea-green">
+      <div class="p-1 rounded-0-5 mb-reg bg-color-light width-fit">
         <p>Your course: <strong>BA (Hons) Architecture</strong></p>
         <p>Your tariff: <strong>128</strong></p>
       </div>
@@ -265,188 +241,5 @@ hr {
     </div>
   </div>
 </main>
-<script>
-(() => {
-  /* ── Respect prefers-reduced-motion ── */
-  const prefersReducedMotion =
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (prefersReducedMotion) {
-    return;
-  }
-
-  const host = document.getElementById('fireworkBox');
-  if (!host) return;
-
-  const canvas = document.createElement('canvas');
-  canvas.className = 'firework-canvas';
-  host.insertBefore(canvas, host.firstChild);
-
-  const ctx = canvas.getContext('2d');
-
-  /* ── Canvas sizing ── */
-  function sizeCanvas() {
-    canvas.width  = host.clientWidth;
-    canvas.height = host.clientHeight;
-  }
-  sizeCanvas();
-  window.addEventListener('resize', sizeCanvas);
-
-  const rand = (a, b) => a + Math.random() * (b - a);
-  const DURATION = 5000;
-  const COLORS = [
-    '#ff4757','#ffa502','#fff176','#70a1ff',
-    '#ff6348','#fff','#00e5ff','#ce93d8',
-    '#ffdd59','#fd79a8','#fff59d','#7bed9f'
-  ];
-
-  let particles = [];
-  let rockets = [];
-  let started = false;
-  let startTime = 0;
-  let nextLaunch = 0;
-
-  const launches = [200, 1100, 2000, 2700, 3500];
-
-  /* ── Particle ── */
-  class Particle {
-    constructor(x, y) {
-      const angle = Math.random() * Math.PI * 2;
-      const speed = rand(1.5, 4);
-      this.x = x;
-      this.y = y;
-      this.vx = Math.cos(angle) * speed;
-      this.vy = Math.sin(angle) * speed;
-      this.alpha = 1;
-      this.decay = rand(0.01, 0.025);
-      this.size  = rand(1.5, 3);
-      this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
-      this.px = x;
-      this.py = y;
-    }
-    update() {
-      this.px = this.x;
-      this.py = this.y;
-      this.vy += 0.04;
-      this.vx *= 0.995;
-      this.x += this.vx;
-      this.y += this.vy;
-      this.alpha -= this.decay;
-    }
-    draw() {
-      ctx.globalAlpha = this.alpha * 0.4;
-      ctx.strokeStyle = this.color;
-      ctx.lineWidth = this.size * 0.7;
-      ctx.lineCap = 'round';
-      ctx.beginPath();
-      ctx.moveTo(this.px, this.py);
-      ctx.lineTo(this.x, this.y);
-      ctx.stroke();
-
-      ctx.globalAlpha = this.alpha;
-      ctx.shadowColor = this.color;
-      ctx.shadowBlur = 6;
-      ctx.fillStyle = this.color;
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    }
-  }
-
-  /* ── Rocket ── */
-  class Rocket {
-    constructor() {
-      const W = canvas.width;
-      const H = canvas.height;
-      this.x = rand(W * 0.2, W * 0.8);
-      this.y = H;
-      this.targetY = rand(H * 0.15, H * 0.4);
-      this.speed = rand(7, 10);
-      this.done = false;
-      this.py = this.y;
-    }
-    update() {
-      if (this.done) return;
-      this.py = this.y;
-      this.y -= this.speed;
-      if (this.y <= this.targetY) this.explode();
-    }
-    explode() {
-      this.done = true;
-      const count = Math.floor(rand(60, 90));
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle(this.x, this.y));
-      }
-    }
-    draw() {
-      if (this.done) return;
-
-      ctx.globalAlpha = 0.7;
-      ctx.strokeStyle = '#fff';
-      ctx.lineWidth = 2;
-      ctx.lineCap = 'round';
-      ctx.beginPath();
-      ctx.moveTo(this.x, this.py);
-      ctx.lineTo(this.x, this.y);
-      ctx.stroke();
-
-      ctx.globalAlpha = 1;
-      ctx.shadowColor = '#fff';
-      ctx.shadowBlur = 10;
-      ctx.fillStyle = '#fff';
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    }
-  }
-
-  /* ── Render loop ── */
-  function loop(now) {
-    const W = canvas.width;
-    const H = canvas.height;
-    const elapsed = now - startTime;
-
-    while (nextLaunch < launches.length && elapsed >= launches[nextLaunch]) {
-      rockets.push(new Rocket());
-      nextLaunch++;
-    }
-
-    ctx.clearRect(0, 0, W, H);
-
-    rockets.forEach(r => {
-      r.update();
-      r.draw();
-    });
-
-    particles = particles.filter(p => p.alpha > 0);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-
-    ctx.globalAlpha = 1;
-
-    if (elapsed < DURATION || particles.length > 0) {
-      requestAnimationFrame(loop);
-    }
-  }
-
-  /* ── Start when visible ── */
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !started) {
-        started = true;
-        startTime = performance.now();
-        observer.disconnect();
-        requestAnimationFrame(loop);
-      }
-    });
-  }, { threshold: 0.25 });
-
-  observer.observe(host);
-})();
-</script>
 </body>
 </html>
