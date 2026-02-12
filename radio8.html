@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--undergraduate: #f7e161;
+--postgraduate-taught: #1d347e;
+--postgraduate-research: #111;
+--short-course: #338078;
+--degree-apprenticeship: #7fbfd7;
+--online: #c1004a;
+--clearing: #131648;
+--foundation: #29718c;
+}
+.debug-outline * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.grid-vertical-align {
+	align-items: center;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+}
+.text-center {
+	text-align: center;
+}
+.big-icon-container {
+	display: flex;
+	/*	align-items: flex-start;*/
+	align-items: center;
+}
+.big-icon-text {
+	margin-left: 1em;
+	flex: 1;
+}
+.big-icon-block {
+	display: inline-block;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	font-size: 5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: top;
+	background: none;
+	padding: 0;
+	margin: 0;
+	flex: 0;
+	margin-bottom: -0.17em;
+}
+.inline-block-full-width {
+	display: inline-block;
+	width: 100%;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+/*
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+*/
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+.tariff-largetext {
+	font-size: 1.17em;
+	line-height: 1.2;
+}
+.mgrey-text {
+	color: var(--mgrey);
+}
+.dgrey-stroke {
+	outline: 2px solid var(--dgrey);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+	gap: 1em;
+}
+.card {
+	width: 100%;
+	margin: 0;
+	max-width: 40em;
+}
+.card :last-child {
+	margin-bottom: 0;
+}
+.card > * {
+	margin-left: 0;
+}
+.card img {
+	width: calc(100% + 2em);
+	height: auto;
+	margin: -1rem -1rem 1.5rem -1rem;
+	max-width: none;
+}
+.stroke-highlight-dark {
+	outline: 2px solid var(--highlight-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.tarif-block {
+	color: var(--white);
+	background-color: var(--highlight-dark);
+	margin: -1em -1em 1em -1em;
+	padding: 1em;
+}
+.tarif-block a {
+	color: var(--white);
+}
+.tag {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	font-size: 0.75em;
+}
+.tag-undergraduate {
+	color: var(--black);
+	background-color: var(--undergraduate);
+}
+.tag-postgraduate-taught {
+	color: var(--white);
+	background-color: var(--postgraduate-taught);
+}
+.tag-postgraduate-research {
+	color: var(--white);
+	background-color: var(--postgraduate-research);
+}
+.tag-short-course {
+	color: var(--white);
+	background-color: var(--short-course);
+}
+.tag-degree-apprenticeship {
+	color: var(--black);
+	background-color: var(--degree-apprenticeship);
+}
+.tag-online {
+	color: var(--white);
+	background-color: var(--online);
+}
+.tag-clearing {
+	color: var(--white);
+	background-color: var(--clearing);
+}
+.tag-foundation {
+	color: var(--white);
+	background-color: var(--foundation);
+}
+.mr-0-5 {
+	margin-right: 0.5em;
+}
+.dgrey-text {
+	color: var(--dgrey);
+}
+.dgrey-text a {
+	color: var(--dgrey);
+}
+.pills-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+.pill {
+	padding: 0.25em 0.5em;
+	border-radius: 0.5em;
+	color: var(--white);
+	background-color: var(--link);
+	white-space: nowrap;
+	margin: 0;
+}
+.pill:after {
+	content: "5";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	margin-left: 0.5em;
+}
+.split {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+.split p {
+	margin: 0;
+	max-width: none;
+	flex: 1;
+}
+.split > *:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 40em) {
+.split {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1em;
+}
+.split > * {
+	margin-right: 0;
+	width: 100%;
+}
+}
+.clear-filter {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1em;
+}
+.clear-filter a {
+	display: inline-block;
+}
+.text-align-right {
+	text-align: right;
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+:root[data-theme="dark"] .dgrey-text {
+	color: var(--mgrey);
+}
+:root[data-theme="dark"] .dgrey-text a {
+	color: var(--mgrey);
+}
+:root[data-theme="dark"] .bck-lgrey {
+	background-color: var(--dgrey);
+}
+:root[data-theme="dark"] .tag-postgraduate-research {
+	outline: 1px solid var(--lgrey);
+	outline-offset: -1px;
+}
+.no-underline {
+	text-decoration: none;
+	display: inline-block;
+}
+.bar-caption {
+	margin-bottom: 1em;
+	text-align: center;
+}
+.track {
+	height: 0.5em;
+	background: var(--mgrey);
+	border-radius: 0.5em;
+}
+.fill {
+	height: 100%;
+	width: 18%;
+	background: var(--dgrey);
+	border-radius: 0.5em;
+	margin-left: 0;
+}
+.progressbar {
+	width: 15em;
+	height: 0.75em;
+	background-color: var(--white);
+	border-radius: 0.375em;
+	outline: 2px solid var(--lgrey);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.progressinner {
+	height: 0.75em;
+	margin: 0;
+}
+.no-letter-spacing {
+	letter-spacing: 0;
+}
+.btn {
+	float: none;
+}
+.btn-group {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+.btn-group .btn {
+	margin: 0;
+}
+.bg-color a {
+	text-decoration: none;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+</style>
+</head>
+<body>
+<main> 
+  <!-- Themes -->
+  <section class="bg-color p-responsive">
+    <p class="w-80">
+      <label for="theme-switcher" class="visually-hidden">Theme</label>
+      <select id="theme-switcher" class="mr-1">
+        <option value="mono">Mono</option>
+        <option value="deep-rose">Deep rose</option>
+        <option value="brilliant-rose">Brilliant rose</option>
+        <option value="raspberry-red">Raspberry red</option>
+        <option value="deep-orange">Deep orange</option>
+        <option value="butter-yellow">Butter yellow</option>
+        <option value="dark-lavender">Dark lavender</option>
+        <option value="bondi-blue">Bondi blue</option>
+        <option value="turquoise">Turquoise</option>
+        <option value="sea-green">Sea green</option>
+        <option value="fresh-green">Fresh green</option>
+        <option value="persian-indigo">Persian indigo</option>
+        <option value="midnight-blue">Midnight blue</option>
+        <option value="dark">Dark</option>
+      </select>
+      <span class="iconfont" aria-hidden="true">$&quot;</span>prev/next, T toggle debug</p>
+  </section>
+  <!-- Content -->
+  <section class="bg-color p-responsive">
+    <div class="w-60 rounded-1 bg-color stroke-theme-dark">
+      <div class="grid grid-vertical-align bg-color-dark p-responsive">
+        <div>
+          <h1>Vertically aligned text over two lines</h1>
+        </div>
+        <div>
+          <div class="progressbar">
+            <div class="progressinner bck-black" style="width:30%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="p-responsive">
+        <div class="btn-group mb-reg">
+          <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
+          <button class="btn btn-primary">Next&ensp;<span class="iconfont no-letter-spacing" aria-hidden="true">N</span></button>
+          <div></div>
+        </div>
+        <p><a href="#"><span class="iconfont" aria-hidden="true">P</span>Previous step</a></p>
+        <p><a href="#">Next step&ensp;<span class="iconfont no-letter-spacing" aria-hidden="true">N</span></a></p>
+        <div class="btn-group">
+          <button class="btn btn-primary btn-rounded"><span class="iconfont" aria-hidden="true">6</span>Rounded button</button>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const themes = [...themeSwitcher.options].map(opt => opt.value);
+
+  // Always start with Persian indigo
+  let currentTheme = 'persian-indigo';
+  root.dataset.theme = currentTheme;
+  themeSwitcher.value = currentTheme;
+
+  // Live region for announcements
+  const liveRegion = Object.assign(document.createElement('div'), {
+    className: 'visually-hidden',
+    ariaLive: 'polite'
+  });
+  document.body.appendChild(liveRegion);
+
+  const setTheme = theme => {
+    if (theme === currentTheme) return;
+    currentTheme = theme;
+    root.dataset.theme = theme;
+    themeSwitcher.value = theme;
+  };
+
+  const cycleTheme = step => {
+    const idx = themes.indexOf(currentTheme);
+    setTheme(themes[(idx + step + themes.length) % themes.length]);
+  };
+
+  // Dropdown changes
+  themeSwitcher.addEventListener('change', e => setTheme(e.target.value));
+
+  // Keyboard shortcuts
+  window.addEventListener('keydown', e => {
+    switch (e.key.toLowerCase()) {
+      case 't':
+        document.body.classList.toggle('debug-outline');
+        break;
+      case 'arrowright':
+        cycleTheme(1);
+        break;
+      case 'arrowleft':
+        cycleTheme(-1);
+        break;
+    }
+  });
+});
+const pillButtons = document.querySelectorAll('.pill-toggle-btn');
+	const resetLink = document.getElementById('reset-filters');
+
+	pillButtons.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const pressed = btn.getAttribute('aria-pressed') === 'true';
+			btn.setAttribute('aria-pressed', String(!pressed));
+		});
+	});
+
+	resetLink.addEventListener('click', e => {
+		e.preventDefault(); // stop page jump
+
+		pillButtons.forEach(btn => {
+			btn.setAttribute('aria-pressed', 'false');
+		});
+	});
+</script>
+</body>
+</html>
