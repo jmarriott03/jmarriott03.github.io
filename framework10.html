@@ -17,7 +17,7 @@ body.debug * {
 	outline-offset: -1px;
 }
 /* --------------------------------------------------
-   Content module spacing system
+   Module controls & spacing system
 -------------------------------------------------- */
 .content-module-wrapper {
 --mb-module: 2em;
@@ -45,9 +45,6 @@ body.debug * {
 .content-module-wrapper[data-spacing="loose"] {
 --mb-module: 4em;
 }
-/* --------------------------------------------------
-   Module controls
--------------------------------------------------- */
 .module-spacing-controls {
 	position: absolute;
 	top: 1em;
@@ -83,37 +80,57 @@ body.debug * {
 	opacity: 1;
 	font-weight: 600;
 }
-/* Disabled rounded option dim */
 .module-spacing-controls label.disabled {
 	opacity: 0.25;
 	cursor: not-allowed;
 }
-/* --------------------------------------------------
-   Hide controls when debug off
--------------------------------------------------- */
+/* Hide controls when debug off */
 body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
 	visibility: hidden;
 }
-/* --------------------------------------------------
-   Global controls top-right
--------------------------------------------------- */
+/* Global controls top-right */
 .global-controls {
 	position: absolute;
 	top: 1em;
 	right: 1em;
 	z-index: 10;
 }
-/* --------------------------------------------------
-   Your original demo styles
--------------------------------------------------- */
+/* Original demo styles */
 .p-responsive .p-responsive {
 	padding: 1em;
 }
 .p-responsive .rounded-responsive {
 	border-radius: 1em;
 }
-.w-26, .w-40, .w-53, .w-60, .w-80 {
-	width: 100%;
+.horizontal-line {
+	border-top: 6px solid lime;
+	height: 0;
+}
+/* New top/bottom rounding classes based on framework */
+.rounded-responsive-top {
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	overflow: hidden;
+}
+.rounded-responsive-bottom {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 2em;
+	border-bottom-right-radius: 2em;
+	overflow: hidden;
+}
+
+@media (max-width: 40em) {
+.rounded-responsive-top {
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+.rounded-responsive-bottom {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
 }
 .btn {
 	float: none;
@@ -125,46 +142,6 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
 }
 .btn-group .btn {
 	margin: 0;
-}
-.blockquote {
-	padding-left: 1em;
-	border-left: 5px solid var(--mgrey);
-}
-.btn-rounded-resize {
-	color: currentColor;
-	border: 2px solid currentColor;
-	font-size: 1.25rem;
-	border-radius: 2rem;
-	padding: 0.5rem;
-	background: none;
-	line-height: 1.5;
-	text-align: left;
-}
-.btn-rounded-resize:hover {
-	cursor: pointer;
-}
-.quotestyle:before {
-	font-family: "Times New Roman", serif;
-	font-size: 3em;
-	font-weight: normal;
-	line-height: 0.5em;
-	content: "\275d";
-	display: block;
-	margin-top: 0.2em;
-}
-.quote-container {
-	display: grid;
-	grid-template-columns: auto 1fr;
-}
-.quote-image {
-	width: 3.5em;
-	height: 3.5em;
-	border-radius: 50%;
-	margin-right: 1em;
-}
-.horizontal-line {
-	border-top: 6px solid lime;
-	height: 0;
 }
 .global-controls button {
 	all: unset;
@@ -196,6 +173,10 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
         <label for="m1-square">Square</label>
         <input type="radio" id="m1-rounded" name="m1-radius" value="rounded">
         <label for="m1-rounded">Rounded</label>
+        <input type="radio" id="m1-rounded-top" name="m1-radius" value="rounded-top">
+        <label for="m1-rounded-top">Top rounded</label>
+        <input type="radio" id="m1-rounded-bottom" name="m1-radius" value="rounded-bottom">
+        <label for="m1-rounded-bottom">Bottom rounded</label>
       </fieldset>
     </div>
     <div class="w-80 bg-color">
@@ -223,12 +204,16 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
         <label for="m2-square">Square</label>
         <input type="radio" id="m2-rounded" name="m2-radius" value="rounded">
         <label for="m2-rounded">Rounded</label>
+        <input type="radio" id="m2-rounded-top" name="m2-radius" value="rounded-top">
+        <label for="m2-rounded-top">Top rounded</label>
+        <input type="radio" id="m2-rounded-bottom" name="m2-radius" value="rounded-bottom">
+        <label for="m2-rounded-bottom">Bottom rounded</label>
       </fieldset>
     </div>
     <div class="w-80 rounded-responsive bg-color-light">
       <div class="p-responsive">
         <h2>Module 1</h2>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </div>
   </div>
@@ -250,12 +235,16 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
         <label for="m3-square">Square</label>
         <input type="radio" id="m3-rounded" name="m3-radius" value="rounded">
         <label for="m3-rounded">Rounded</label>
+        <input type="radio" id="m3-rounded-top" name="m3-radius" value="rounded-top">
+        <label for="m3-rounded-top">Top rounded</label>
+        <input type="radio" id="m3-rounded-bottom" name="m3-radius" value="rounded-bottom">
+        <label for="m3-rounded-bottom">Bottom rounded</label>
       </fieldset>
     </div>
     <div class="w-80 rounded-responsive bg-color-light">
       <div class="p-responsive">
         <h2>Module 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class="btn-group">
           <button class="btn btn-primary">Primary</button>
           <button class="btn btn-secondary">Secondary</button>
@@ -279,9 +268,8 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
 </main>
 <script>
 (function () {
-	/* ---------------------------------------------
-	   Sync radios with existing HTML values on load
-	--------------------------------------------- */
+	const radiusOptions = ['rounded','rounded-top','rounded-bottom','square'];
+
 	document.querySelectorAll('.content-module-wrapper[data-module-id]').forEach(wrapper => {
 		const moduleBox = wrapper.querySelector('.w-80');
 
@@ -290,26 +278,24 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
 		const inputSpacing = wrapper.querySelector(`input[name$="-spacing"][value="${spacingCurrent}"]`);
 		if (inputSpacing) inputSpacing.checked = true;
 
-		// Sync radius radios
-		const roundedRadio = wrapper.querySelector(`input[name$="-radius"][value="rounded"]`);
-		const squareRadio = wrapper.querySelector(`input[name$="-radius"][value="square"]`);
-		if (moduleBox.classList.contains('rounded-responsive')) {
-			if (roundedRadio) roundedRadio.checked = true;
-		} else {
-			if (squareRadio) squareRadio.checked = true;
-		}
-
-		// Disable rounded if no .p-responsive inside
-		const roundedLabel = wrapper.querySelector(`label[for="${roundedRadio.id}"]`);
-		if (!moduleBox.querySelector('.p-responsive')) {
-			if (roundedRadio) roundedRadio.disabled = true;
-			if (roundedLabel) roundedLabel.classList.add('disabled');
-		}
+		// Sync radius radios based on existing classes
+		radiusOptions.forEach(opt => {
+			const radio = wrapper.querySelector(`input[name$="-radius"][value="${opt}"]`);
+			const label = wrapper.querySelector(`label[for="${radio?.id}"]`);
+			if (!moduleBox.querySelector('.p-responsive') && ['rounded','rounded-top','rounded-bottom'].includes(opt)) {
+				if (radio) radio.disabled = true;
+				if (label) label.classList.add('disabled');
+			}
+			if (opt === 'rounded' && moduleBox.classList.contains('rounded-responsive')) radio.checked = true;
+			if (opt === 'rounded-top' && moduleBox.classList.contains('rounded-responsive-top')) radio.checked = true;
+			if (opt === 'rounded-bottom' && moduleBox.classList.contains('rounded-responsive-bottom')) radio.checked = true;
+			if (opt === 'square' && !moduleBox.classList.contains('rounded-responsive') &&
+				!moduleBox.classList.contains('rounded-responsive-top') &&
+				!moduleBox.classList.contains('rounded-responsive-bottom')) radio.checked = true;
+		});
 	});
 
-	/* ---------------------------------------------
-	   Handle spacing and radius changes
-	--------------------------------------------- */
+	// Handle changes
 	document.addEventListener('change', function(event) {
 		const input = event.target;
 		const wrapper = input.closest('.content-module-wrapper');
@@ -317,33 +303,26 @@ body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
 		const moduleBox = wrapper.querySelector('.w-80');
 		if (!moduleBox) return;
 
-		// Handle spacing radios
-		if (input.name.endsWith('-spacing')) {
-			wrapper.setAttribute('data-spacing', input.value);
-		}
+		// Spacing
+		if (input.name.endsWith('-spacing')) wrapper.setAttribute('data-spacing', input.value);
 
-		// Handle radius radios
+		// Radius
 		if (input.name.endsWith('-radius') && !input.disabled) {
-			moduleBox.classList.remove('rounded-responsive');
-			if (input.value === 'rounded') {
-				moduleBox.classList.add('rounded-responsive');
+			moduleBox.classList.remove('rounded-responsive','rounded-responsive-top','rounded-responsive-bottom');
+			switch(input.value) {
+				case 'rounded': moduleBox.classList.add('rounded-responsive'); break;
+				case 'rounded-top': moduleBox.classList.add('rounded-responsive-top'); break;
+				case 'rounded-bottom': moduleBox.classList.add('rounded-responsive-bottom'); break;
 			}
 		}
 	});
 
-	/* ---------------------------------------------
-	   Remove all horizontal lines
-	--------------------------------------------- */
-	const removeButton = document.getElementById('remove-lines');
-	if (removeButton) {
-		removeButton.addEventListener('click', function () {
-			document.querySelectorAll('.horizontal-line').forEach(line => line.remove());
-		});
-	}
+	// Remove horizontal lines
+	document.getElementById('remove-lines')?.addEventListener('click', function () {
+		document.querySelectorAll('.horizontal-line').forEach(line => line.remove());
+	});
 
-	/* ---------------------------------------------
-	   Toggle debug mode with 'T'
-	--------------------------------------------- */
+	// Toggle debug with 'T'
 	let debugOn = true;
 	document.addEventListener('keydown', function(e) {
 		if (e.key.toLowerCase() === 't') {
