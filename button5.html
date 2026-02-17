@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--btn-disabled-bg: #eee;
+--btn-disabled-txt: #999;
+--btn-disabled: #eee;
+--btn-disabled-txt: #999;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.pb-0 {
+	padding-bottom: 0;
+}
+.pt-0-5 {
+	padding-top: 0.5em;
+}
+.fullw {
+	width: 100%;
+	clear: both;
+}
+.btn {
+	border-radius: 2em;
+}
+/* Disabled button */
+.btn:disabled, .btn[aria-disabled="true"] {
+	background-color: var(--btn-disabled);
+	color: var(--btn-disabled-txt);
+	cursor: not-allowed;
+	opacity: 1;
+}
+.flex-group {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+.flex-group .btn {
+	margin: 0;
+}
+.pill-toggle {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+.pill-toggle-btn {
+	font-size: 1em;
+	padding: 0.5em 0.75em;
+	border-radius: 1em;
+	background-color: var(--btn-light);
+	color: var(--black);
+	white-space: nowrap;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	margin: 0;
+	border: 0;
+	font-size: 0.75em;
+}
+.pill-toggle-btn:after {
+	content: "5";
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	width: 1em;
+	margin-left: 0.5em;
+}
+.pill-toggle-btn:hover {
+	background-color: var(--btn-light-hov);
+}
+.pill-toggle-btn[aria-pressed="true"] {
+	background-color: var(--btn-primary);
+	color: var(--white);
+}
+.pill-toggle-btn[aria-pressed="true"]:hover {
+	background-color: var(--btn-primary-hov);
+}
+.pill-toggle-btn:focus-visible {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <h1>button5</h1>
+    <h2>Pills</h2>
+    <div class="flex-group mb-reg">
+      <button class="pill-toggle-btn" aria-pressed="true">Undergraduate</button>
+      <button class="pill-toggle-btn" aria-pressed="true">Postgraduate taught</button>
+      <button class="pill-toggle-btn" aria-pressed="true">Postgraduate research</button>
+      <button class="pill-toggle-btn" aria-pressed="false">Professional development</button>
+      <button class="pill-toggle-btn" aria-pressed="false">Degree apprenticeship</button>
+      <button class="pill-toggle-btn" aria-pressed="false">Online</button>
+    </div>
+    <h2>Button colours</h2>
+    <div class="flex-group mb-reg">
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+      <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+      <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+      <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+      <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+      <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+      <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+    </div>
+    <h2>Disabled buttons</h2>
+    <div class="flex-group">
+      <button class="btn btn-primary">Primary enabled</button>
+      <button class="btn btn-primary" disabled>Primary disabled</button>
+      <button class="btn btn-light">Light enabled</button>
+      <button class="btn btn-light" disabled>Light disabled</button>
+      <button class="btn btn-primary" aria-disabled="true">ARIA disabled</button>
+    </div>
+  </div>
+  <script>const pillButtons = document.querySelectorAll('.pill-toggle-btn');
+	const resetLink = document.getElementById('reset-filters');
+
+	pillButtons.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const pressed = btn.getAttribute('aria-pressed') === 'true';
+			btn.setAttribute('aria-pressed', String(!pressed));
+		});
+	});
+
+	resetLink.addEventListener('click', e => {
+		e.preventDefault(); // stop page jump
+
+		pillButtons.forEach(btn => {
+			btn.setAttribute('aria-pressed', 'false');
+		});
+	});</script> 
+</main>
+</body>
+</html>
