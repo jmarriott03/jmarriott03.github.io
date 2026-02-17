@@ -12,7 +12,6 @@
 /* --------------------------------------------------
    Debug
 -------------------------------------------------- */
-
 body.debug * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
@@ -20,12 +19,12 @@ body.debug * {
 /* --------------------------------------------------
    Content module spacing system
 -------------------------------------------------- */
-
 .content-module-wrapper {
 --mb-module: 2em;
 	display: flow-root;
 	margin-bottom: var(--mb-module);
 	padding: 0 2em;
+	position: relative; /* for absolute controls */
 }
 
 @media (max-width: 40em) {
@@ -33,12 +32,10 @@ body.debug * {
 	padding: 0 1em;
 }
 }
-/* nested rhythm tightening */
 .content-module-wrapper .content-module-wrapper {
 --mb-module: 1em;
 	padding: 0;
 }
-/* spacing states */
 .content-module-wrapper[data-spacing="none"] {
 --mb-module: 0;
 }
@@ -49,14 +46,14 @@ body.debug * {
 --mb-module: 4em;
 }
 /* --------------------------------------------------
-   Spacing controls (editor only)
+   Module controls
 -------------------------------------------------- */
-
-body:not([data-mode="editor"]) .module-spacing-controls {
-	display: none;
-}
 .module-spacing-controls {
-	margin-bottom: 0.5em;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	z-index: 10;
+	margin: 0;
 }
 .module-spacing-controls fieldset {
 	display: inline-flex;
@@ -86,10 +83,29 @@ body:not([data-mode="editor"]) .module-spacing-controls {
 	opacity: 1;
 	font-weight: 600;
 }
+/* Disabled rounded option dim */
+.module-spacing-controls label.disabled {
+	opacity: 0.25;
+	cursor: not-allowed;
+}
+/* --------------------------------------------------
+   Hide controls when debug off
+-------------------------------------------------- */
+body:not(.debug) .module-spacing-controls, body:not(.debug) .global-controls {
+	visibility: hidden;
+}
+/* --------------------------------------------------
+   Global controls top-right
+-------------------------------------------------- */
+.global-controls {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	z-index: 10;
+}
 /* --------------------------------------------------
    Your original demo styles
 -------------------------------------------------- */
-
 .p-responsive .p-responsive {
 	padding: 1em;
 }
@@ -147,18 +163,8 @@ body:not([data-mode="editor"]) .module-spacing-controls {
 	margin-right: 1em;
 }
 .horizontal-line {
-	border-top: 6px solid #eee;
+	border-top: 6px solid lime;
 	height: 0;
-}
-.content-module-wrapper {
-	position: relative; /* add this */
-}
-.module-spacing-controls {
-	position: absolute;
-	top: 1em;
-	right: 1em;
-	margin: 0; /* remove old spacing */
-	z-index: 10;
 }
 .global-controls button {
 	all: unset;
@@ -173,38 +179,50 @@ body:not([data-mode="editor"]) .module-spacing-controls {
 </style>
 </head>
 <body class="bg-color debug" data-theme="deep-orange" data-mode="editor">
-<main class="pt-2">
+<main class="pt-2"> 
+  
+  <!-- Module 1 -->
   <div class="content-module-wrapper" data-spacing="default" data-module-id="module-1">
     <div class="module-spacing-controls">
       <fieldset>
-        <legend>Module spacing</legend>
+        <legend>Module controls</legend>
         <input type="radio" id="m1-none" name="m1-spacing" value="none">
         <label for="m1-none">None</label>
         <input type="radio" id="m1-default" name="m1-spacing" value="default" checked>
         <label for="m1-default">Default</label>
         <input type="radio" id="m1-loose" name="m1-spacing" value="loose">
         <label for="m1-loose">Loose</label>
+        <input type="radio" id="m1-square" name="m1-radius" value="square" checked>
+        <label for="m1-square">Square</label>
+        <input type="radio" id="m1-rounded" name="m1-radius" value="rounded">
+        <label for="m1-rounded">Rounded</label>
       </fieldset>
     </div>
     <div class="w-80 bg-color">
       <h1>framework10</h1>
-      <p>A lightweight, utility-based layout system that applies spacing and visual styling contextually.</p>
+      <p>A lightweight, utility-first framework that manages spacing, responsive layout, and safe visual styling for modular content.</p>
     </div>
   </div>
   <div class="horizontal-line">&nbsp;</div>
   <div class="horizontal-line">&nbsp;</div>
   <div class="horizontal-line">&nbsp;</div>
   <div class="horizontal-line">&nbsp;</div>
+  
+  <!-- Module 2 -->
   <div class="content-module-wrapper" data-spacing="default" data-module-id="module-2">
     <div class="module-spacing-controls">
       <fieldset>
-        <legend>Module spacing</legend>
+        <legend>Module controls</legend>
         <input type="radio" id="m2-none" name="m2-spacing" value="none">
         <label for="m2-none">None</label>
         <input type="radio" id="m2-default" name="m2-spacing" value="default" checked>
         <label for="m2-default">Default</label>
         <input type="radio" id="m2-loose" name="m2-spacing" value="loose">
         <label for="m2-loose">Loose</label>
+        <input type="radio" id="m2-square" name="m2-radius" value="square" checked>
+        <label for="m2-square">Square</label>
+        <input type="radio" id="m2-rounded" name="m2-radius" value="rounded">
+        <label for="m2-rounded">Rounded</label>
       </fieldset>
     </div>
     <div class="w-80 rounded-responsive bg-color-light">
@@ -215,16 +233,22 @@ body:not([data-mode="editor"]) .module-spacing-controls {
   </div>
   <div class="horizontal-line">&nbsp;</div>
   <div class="horizontal-line">&nbsp;</div>
+  
+  <!-- Module 3 -->
   <div class="content-module-wrapper" data-spacing="default" data-module-id="module-3">
     <div class="module-spacing-controls">
       <fieldset>
-        <legend>Module spacing</legend>
+        <legend>Module controls</legend>
         <input type="radio" id="m3-none" name="m3-spacing" value="none">
         <label for="m3-none">None</label>
         <input type="radio" id="m3-default" name="m3-spacing" value="default" checked>
         <label for="m3-default">Default</label>
         <input type="radio" id="m3-loose" name="m3-spacing" value="loose">
         <label for="m3-loose">Loose</label>
+        <input type="radio" id="m3-square" name="m3-radius" value="square" checked>
+        <label for="m3-square">Square</label>
+        <input type="radio" id="m3-rounded" name="m3-radius" value="rounded">
+        <label for="m3-rounded">Rounded</label>
       </fieldset>
     </div>
     <div class="w-80 rounded-responsive bg-color-light">
@@ -242,43 +266,73 @@ body:not([data-mode="editor"]) .module-spacing-controls {
   <div class="horizontal-line">&nbsp;</div>
   <div class="horizontal-line">&nbsp;</div>
   <div class="horizontal-line">&nbsp;</div>
-	<div class="content-module-wrapper">
-	  <div class="w-80">
-    <div class="global-controls">
-      <button type="button" id="remove-lines" class="pr-1">Remove horizontal-lines</button>
-      <span class="ml-1">T - toggles guides</span> </div></div>
+  
+  <!-- Global controls -->
+  <div class="content-module-wrapper">
+    <div class="w-80">
+      <div class="global-controls">
+        <button type="button" id="remove-lines" class="pr-1">Remove horizontal-lines</button>
+        <span class="ml-1">T - toggles guides</span> </div>
+    </div>
   </div>
 </main>
 <script>
 (function () {
-
 	/* ---------------------------------------------
-	   Sync radios with existing HTML values
+	   Sync radios with existing HTML values on load
 	--------------------------------------------- */
+	document.querySelectorAll('.content-module-wrapper[data-module-id]').forEach(wrapper => {
+		const moduleBox = wrapper.querySelector('.w-80');
 
-	document.querySelectorAll('.content-module-wrapper[data-module-id]')
-	.forEach(function (wrapper) {
-		const current = wrapper.getAttribute('data-spacing') || 'default';
-		const input = wrapper.querySelector('input[value="' + current + '"]');
-		if (input) input.checked = true;
+		// Sync spacing radios
+		const spacingCurrent = wrapper.getAttribute('data-spacing') || 'default';
+		const inputSpacing = wrapper.querySelector(`input[name$="-spacing"][value="${spacingCurrent}"]`);
+		if (inputSpacing) inputSpacing.checked = true;
+
+		// Sync radius radios
+		const roundedRadio = wrapper.querySelector(`input[name$="-radius"][value="rounded"]`);
+		const squareRadio = wrapper.querySelector(`input[name$="-radius"][value="square"]`);
+		if (moduleBox.classList.contains('rounded-responsive')) {
+			if (roundedRadio) roundedRadio.checked = true;
+		} else {
+			if (squareRadio) squareRadio.checked = true;
+		}
+
+		// Disable rounded if no .p-responsive inside
+		const roundedLabel = wrapper.querySelector(`label[for="${roundedRadio.id}"]`);
+		if (!moduleBox.querySelector('.p-responsive')) {
+			if (roundedRadio) roundedRadio.disabled = true;
+			if (roundedLabel) roundedLabel.classList.add('disabled');
+		}
 	});
 
 	/* ---------------------------------------------
-	   Handle spacing changes
+	   Handle spacing and radius changes
 	--------------------------------------------- */
-
-	document.addEventListener('change', function (event) {
+	document.addEventListener('change', function(event) {
 		const input = event.target;
-		if (!input.matches('.module-spacing-controls input')) return;
 		const wrapper = input.closest('.content-module-wrapper');
 		if (!wrapper) return;
-		wrapper.setAttribute('data-spacing', input.value);
+		const moduleBox = wrapper.querySelector('.w-80');
+		if (!moduleBox) return;
+
+		// Handle spacing radios
+		if (input.name.endsWith('-spacing')) {
+			wrapper.setAttribute('data-spacing', input.value);
+		}
+
+		// Handle radius radios
+		if (input.name.endsWith('-radius') && !input.disabled) {
+			moduleBox.classList.remove('rounded-responsive');
+			if (input.value === 'rounded') {
+				moduleBox.classList.add('rounded-responsive');
+			}
+		}
 	});
 
 	/* ---------------------------------------------
 	   Remove all horizontal lines
 	--------------------------------------------- */
-
 	const removeButton = document.getElementById('remove-lines');
 	if (removeButton) {
 		removeButton.addEventListener('click', function () {
@@ -287,21 +341,15 @@ body:not([data-mode="editor"]) .module-spacing-controls {
 	}
 
 	/* ---------------------------------------------
-	   Toggle debug mode with 't'
+	   Toggle debug mode with 'T'
 	--------------------------------------------- */
-
-	let debugOn = true; // initially debug mode is on
+	let debugOn = true;
 	document.addEventListener('keydown', function(e) {
 		if (e.key.toLowerCase() === 't') {
 			debugOn = !debugOn;
-			if (debugOn) {
-				document.body.classList.add('debug');
-			} else {
-				document.body.classList.remove('debug');
-			}
+			document.body.classList.toggle('debug', debugOn);
 		}
 	});
-
 })();
 </script>
 </body>
