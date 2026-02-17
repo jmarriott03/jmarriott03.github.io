@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/* --------------------------------------------------
+   Debug
+-------------------------------------------------- */
+
+body.debug * {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+/* --------------------------------------------------
+   Content module spacing system
+-------------------------------------------------- */
+
+.content-module-wrapper {
+--mb-module: 2em;
+	display: flow-root;
+	margin-bottom: var(--mb-module);
+	padding: 0 2em;
+}
+
+@media (max-width: 40em) {
+.content-module-wrapper {
+	padding: 0 1em;
+}
+}
+/* nested rhythm tightening */
+.content-module-wrapper .content-module-wrapper {
+--mb-module: 1em;
+	padding: 0;
+}
+/* spacing states */
+.content-module-wrapper[data-spacing="none"] {
+--mb-module: 0;
+}
+.content-module-wrapper[data-spacing="default"] {
+--mb-module: 2em;
+}
+.content-module-wrapper[data-spacing="loose"] {
+--mb-module: 4em;
+}
+/* --------------------------------------------------
+   Spacing controls (editor only)
+-------------------------------------------------- */
+
+body:not([data-mode="editor"]) .module-spacing-controls {
+	display: none;
+}
+.module-spacing-controls {
+	margin-bottom: 0.5em;
+}
+.module-spacing-controls fieldset {
+	display: inline-flex;
+	gap: 0.25em;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+.module-spacing-controls legend {
+	position: absolute;
+	left: -9999px;
+}
+.module-spacing-controls label {
+	font-size: 0.75rem;
+	padding: 0.25em 0.75em;
+	border-radius: 1em;
+	border: 1px solid currentColor;
+	cursor: pointer;
+	opacity: 0.5;
+	user-select: none;
+}
+.module-spacing-controls input {
+	position: absolute;
+	left: -9999px;
+}
+.module-spacing-controls input:checked + label {
+	opacity: 1;
+	font-weight: 600;
+}
+/* --------------------------------------------------
+   Your original demo styles
+-------------------------------------------------- */
+
+.p-responsive .p-responsive {
+	padding: 1em;
+}
+.p-responsive .rounded-responsive {
+	border-radius: 1em;
+}
+.w-26, .w-40, .w-53, .w-60, .w-80 {
+	width: 100%;
+}
+.btn {
+	float: none;
+}
+.btn-group {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+.btn-group .btn {
+	margin: 0;
+}
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.btn-rounded-resize {
+	color: currentColor;
+	border: 2px solid currentColor;
+	font-size: 1.25rem;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+}
+.btn-rounded-resize:hover {
+	cursor: pointer;
+}
+.quotestyle:before {
+	font-family: "Times New Roman", serif;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.5em;
+	content: "\275d";
+	display: block;
+	margin-top: 0.2em;
+}
+.quote-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+.horizontal-line {
+	border-top: 6px solid #eee;
+	height: 0;
+}
+.content-module-wrapper {
+	position: relative; /* add this */
+}
+.module-spacing-controls {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	margin: 0; /* remove old spacing */
+	z-index: 10;
+}
+.global-controls button {
+	all: unset;
+	display: inline-block;
+	font-size: 0.75rem;
+	padding: 0.25em 0.75em;
+	border-radius: 1em;
+	border: 1px solid currentColor;
+	cursor: pointer;
+	user-select: none;
+}
+</style>
+</head>
+<body class="bg-color debug" data-theme="deep-orange" data-mode="editor">
+<main class="pt-2">
+  <div class="content-module-wrapper" data-spacing="default" data-module-id="module-1">
+    <div class="module-spacing-controls">
+      <fieldset>
+        <legend>Module spacing</legend>
+        <input type="radio" id="m1-none" name="m1-spacing" value="none">
+        <label for="m1-none">None</label>
+        <input type="radio" id="m1-default" name="m1-spacing" value="default" checked>
+        <label for="m1-default">Default</label>
+        <input type="radio" id="m1-loose" name="m1-spacing" value="loose">
+        <label for="m1-loose">Loose</label>
+      </fieldset>
+    </div>
+    <div class="w-80 bg-color">
+      <h1>framework10</h1>
+      <p>A lightweight, utility-based layout system that applies spacing and visual styling contextually.</p>
+    </div>
+  </div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="content-module-wrapper" data-spacing="default" data-module-id="module-2">
+    <div class="module-spacing-controls">
+      <fieldset>
+        <legend>Module spacing</legend>
+        <input type="radio" id="m2-none" name="m2-spacing" value="none">
+        <label for="m2-none">None</label>
+        <input type="radio" id="m2-default" name="m2-spacing" value="default" checked>
+        <label for="m2-default">Default</label>
+        <input type="radio" id="m2-loose" name="m2-spacing" value="loose">
+        <label for="m2-loose">Loose</label>
+      </fieldset>
+    </div>
+    <div class="w-80 rounded-responsive bg-color-light">
+      <div class="p-responsive">
+        <p>Module with spacing removed.</p>
+      </div>
+    </div>
+  </div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="content-module-wrapper" data-spacing="default" data-module-id="module-3">
+    <div class="module-spacing-controls">
+      <fieldset>
+        <legend>Module spacing</legend>
+        <input type="radio" id="m3-none" name="m3-spacing" value="none">
+        <label for="m3-none">None</label>
+        <input type="radio" id="m3-default" name="m3-spacing" value="default" checked>
+        <label for="m3-default">Default</label>
+        <input type="radio" id="m3-loose" name="m3-spacing" value="loose">
+        <label for="m3-loose">Loose</label>
+      </fieldset>
+    </div>
+    <div class="w-80 rounded-responsive bg-color-light">
+      <div class="p-responsive">
+        <h2>Loose spacing module</h2>
+        <p>This module opts into extra separation.</p>
+        <div class="btn-group">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+  <div class="horizontal-line">&nbsp;</div>
+	<div class="content-module-wrapper">
+	  <div class="w-80">
+    <div class="global-controls">
+      <button type="button" id="remove-lines" class="pr-1">Remove horizontal-lines</button>
+      <span class="ml-1">T - toggles guides</span> </div></div>
+  </div>
+</main>
+<script>
+(function () {
+
+	/* ---------------------------------------------
+	   Sync radios with existing HTML values
+	--------------------------------------------- */
+
+	document.querySelectorAll('.content-module-wrapper[data-module-id]')
+	.forEach(function (wrapper) {
+		const current = wrapper.getAttribute('data-spacing') || 'default';
+		const input = wrapper.querySelector('input[value="' + current + '"]');
+		if (input) input.checked = true;
+	});
+
+	/* ---------------------------------------------
+	   Handle spacing changes
+	--------------------------------------------- */
+
+	document.addEventListener('change', function (event) {
+		const input = event.target;
+		if (!input.matches('.module-spacing-controls input')) return;
+		const wrapper = input.closest('.content-module-wrapper');
+		if (!wrapper) return;
+		wrapper.setAttribute('data-spacing', input.value);
+	});
+
+	/* ---------------------------------------------
+	   Remove all horizontal lines
+	--------------------------------------------- */
+
+	const removeButton = document.getElementById('remove-lines');
+	if (removeButton) {
+		removeButton.addEventListener('click', function () {
+			document.querySelectorAll('.horizontal-line').forEach(line => line.remove());
+		});
+	}
+
+	/* ---------------------------------------------
+	   Toggle debug mode with 't'
+	--------------------------------------------- */
+
+	let debugOn = true; // initially debug mode is on
+	document.addEventListener('keydown', function(e) {
+		if (e.key.toLowerCase() === 't') {
+			debugOn = !debugOn;
+			if (debugOn) {
+				document.body.classList.add('debug');
+			} else {
+				document.body.classList.remove('debug');
+			}
+		}
+	});
+
+})();
+</script>
+</body>
+</html>
