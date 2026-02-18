@@ -41,7 +41,6 @@
 	flex-wrap: wrap;
 }
 .pill-toggle-btn {
-	font-size: 1em;
 	padding: 0.5em 0.75em;
 	border-radius: 1em;
 	background-color: var(--btn-light);
@@ -95,11 +94,10 @@ outline-offset: 2px;
 	background: none;
 	-webkit-appearance: none;
 	outline-offset: 3px;
-	transition: 0.3s;
+	transition: background-color 0.3s ease;
 }
 .btn-outline-black:hover, .btn-outline-black:focus {
 	cursor: pointer;
-	color: var(--black);
 	background-color: var(--white);
 }
 .btn-outline-white {
@@ -113,28 +111,18 @@ outline-offset: 2px;
 	background: none;
 	-webkit-appearance: none;
 	outline-offset: 3px;
-	transition: 0.3s;
+	transition: background-color 0.3s ease;
 }
 .btn-outline-white:hover, .btn-outline-white:focus {
 	cursor: pointer;
-	color: var(--white);
 	background-color: var(--black);
 }
-.text-resize > .btn-outline-black {
+.text-resize > .btn-outline-black, .text-resize > .btn-outline-white {
 	font-size: 1.25em;
 }
 
 @media (max-width: 80em) {
-.text-resize > .btn-outline-black {
-	font-size: 1em;
-}
-}
-.text-resize > .btn-outline-white {
-	font-size: 1.25em;
-}
-
-@media (max-width: 80em) {
-.text-resize > .btn-outline-white {
+.text-resize > .btn-outline-black, .text-resize > .btn-outline-white {
 	font-size: 1em;
 }
 }
