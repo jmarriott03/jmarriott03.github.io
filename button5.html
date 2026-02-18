@@ -40,7 +40,7 @@
 	gap: 0.5em;
 	flex-wrap: wrap;
 }
-.pill-toggle-btn {
+.pill {
 	padding: 0.5em 0.75em;
 	border-radius: 1em;
 	background-color: var(--btn-light);
@@ -51,17 +51,17 @@
 	border: 0;
 	font-size: 0.75em;
 }
-.pill-toggle-btn:hover {
+.pill:hover {
 	background-color: var(--btn-light-hov);
 }
-.pill-toggle-btn[aria-pressed="true"] {
+.pill[aria-pressed="true"] {
 	background-color: var(--btn-primary);
 	color: var(--white);
 }
-.pill-toggle-btn[aria-pressed="true"]:hover {
+.pill[aria-pressed="true"]:hover {
 	background-color: var(--btn-primary-hov);
 }
-.pill-toggle-btn:focus-visible {
+.pill:focus-visible {
 outline: 2px solid var(--link);
 outline-offset: 2px;
 }
@@ -75,7 +75,7 @@ outline-offset: 2px;
 	align-items: center;
 	gap: 0.5em;
 }
-.pill-toggle-btn {
+.pill {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.5em;
@@ -134,12 +134,12 @@ outline-offset: 2px;
     <h1>button5</h1>
     <h2>Pills</h2>
     <div class="pill-group mb-reg">
-      <button class="pill-toggle-btn" aria-pressed="true">Undergraduate<span class="iconfont" aria-hidden="true">5</span></button>
-      <button class="pill-toggle-btn" aria-pressed="true">Postgraduate taught<span class="iconfont" aria-hidden="true">5</span></button>
-      <button class="pill-toggle-btn" aria-pressed="true">Postgraduate research<span class="iconfont" aria-hidden="true">5</span></button>
-      <button class="pill-toggle-btn" aria-pressed="false">Professional development<span class="iconfont" aria-hidden="true">5</span></button>
-      <button class="pill-toggle-btn" aria-pressed="false">Degree apprenticeship<span class="iconfont" aria-hidden="true">5</span></button>
-      <button class="pill-toggle-btn" aria-pressed="false">Online<span class="iconfont" aria-hidden="true">5</span></button>
+      <button class="pill" aria-pressed="true">Undergraduate<span class="iconfont" aria-hidden="true">5</span></button>
+      <button class="pill" aria-pressed="true">Postgraduate taught<span class="iconfont" aria-hidden="true">5</span></button>
+      <button class="pill" aria-pressed="true">Postgraduate research<span class="iconfont" aria-hidden="true">5</span></button>
+      <button class="pill" aria-pressed="false">Professional development<span class="iconfont" aria-hidden="true">5</span></button>
+      <button class="pill" aria-pressed="false">Degree apprenticeship<span class="iconfont" aria-hidden="true">5</span></button>
+      <button class="pill" aria-pressed="false">Online<span class="iconfont" aria-hidden="true">5</span></button>
     </div>
     <div class="text-align-right"><a href="#" id="reset-filters">Reset filters</a></div>
     <h2>Button colours</h2>
@@ -176,7 +176,7 @@ outline-offset: 2px;
       <button class="btn-outline-white"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
     </div>
   </div>
-  <script>const pillButtons = document.querySelectorAll('.pill-toggle-btn');
+  <script>const pillButtons = document.querySelectorAll('.pill');
 	const resetLink = document.getElementById('reset-filters');
 
 	pillButtons.forEach(btn => {
