@@ -237,6 +237,12 @@
 .bck-lgrey {
   background-color: var(--lgrey);
 }
+.bck-mgrey {
+  background-color: var(--mgrey);
+}
+.bck-dgrey {
+  background-color: var(--dgrey);
+}
 .bck-black {
   background-color: var(--black);
 }
