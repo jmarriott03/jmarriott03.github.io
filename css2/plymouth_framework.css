@@ -30,12 +30,11 @@
   src: url('../fonts/icon-webfont.woff');
 }
 .iconfont {
-  font-family: 'icon', sans-serif;
+  font-family: 'icon';
   font-weight: normal;
   line-height: 1;
   width: 1em;
   text-align: center;
-  letter-spacing: 0.5em;
 }
 .nowrap {
   white-space: nowrap;
