@@ -8,201 +8,71 @@
 <link rel="stylesheet" href="css2/plymouth_framework.css">
 <link rel="stylesheet" href="css2/plymouth_theme.css">
 <title>University of Plymouth</title>
-<style>
-:root {
---btn-disabled-txt: #999;
---btn-disabled: #eee;
-}
-/*
-* {
-	outline: 1px dotted red;
-	outline-offset: -1px;
-}
-*/
-.btn:disabled, .btn[aria-disabled="true"] {
-	background-color: var(--btn-disabled);
-	color: var(--btn-disabled-txt);
-	cursor: not-allowed;
-	opacity: 1;
-}
-.flex-group {
-	display: flex;
-	gap: 1em;
-	flex-wrap: wrap;
-}
-.flex-group .btn {
-	margin: 0;
-}
-.pill-group {
-	display: flex;
-	gap: 0.5em;
-	flex-wrap: wrap;
-}
-.pill {
-	padding: 0.5em 0.75em;
-	border-radius: 1em;
-	background-color: var(--btn-light);
-	color: var(--black);
-	white-space: nowrap;
-	transition: background-color 0.2s ease, color 0.2s ease;
-	margin: 0;
-	border: 0;
-	font-size: 0.75em;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-}
-.pill:hover {
-	background-color: var(--btn-light-hov);
-}
-.pill[aria-pressed="true"] {
-	background-color: var(--btn-primary);
-	color: var(--white);
-}
-.pill[aria-pressed="true"]:hover {
-	background-color: var(--btn-primary-hov);
-}
-.pill:focus-visible {
-outline: 2px solid var(--link);
-outline-offset: 2px;
-}
-.pill[aria-pressed="true"] .pill-check {
-	display: inline;
-}
-.pill[aria-pressed="false"] .pill-check {
-	display: none;
-}
-.btn {
-	border-radius: 2em;
-	cursor: pointer;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-}
-.iconfont {
-	letter-spacing: 0;
-}
-.btn-outline-black {
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 1.5;
-	color: var(--black);
-	border: 2px solid var(--black);
-	border-radius: 2em;
-	padding: 0.5em 0.75em;
-	background: none;
-	-webkit-appearance: none;
-	transition: background-color 0.3s ease;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-}
-.btn-outline-black:hover, .btn-outline-black:focus-visible {
-cursor: pointer;
-background-color: var(--white);
-}
-.btn-outline-black:focus-visible {
-outline: 3px solid var(--black);
-outline-offset: 3px;
-}
-.btn-outline-white {
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 1.5;
-	color: var(--white);
-	border: 2px solid var(--white);
-	border-radius: 2em;
-	padding: 0.5em 0.75em;
-	background: none;
-	-webkit-appearance: none;
-	transition: background-color 0.3s ease;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-}
-.btn-outline-white:hover, .btn-outline-white:focus-visible {
-cursor: pointer;
-background-color: var(--black);
-}
-.btn-outline-white:focus-visible {
-outline: 3px solid var(--white);
-outline-offset: 3px;
-}
-.text-resize > .btn-outline-black, .text-resize > .btn-outline-white {
-	font-size: 1.25em;
-}
-
-@media (max-width: 80em) {
-.text-resize > .btn-outline-black, .text-resize > .btn-outline-white {
-	font-size: 1em;
-}
-}
-</style>
 </head>
 <body>
 <main>
   <div class="w-80 p-responsive">
     <h1>button5</h1>
     <h2>Pills</h2>
-    <div class="pill-group mb-reg">
-      <button class="pill" aria-pressed="true">Undergraduate<span class="pill-check iconfont" aria-hidden="true">6</span></button>
-      <button class="pill" aria-pressed="true">Postgraduate taught<span class="pill-check iconfont" aria-hidden="true">6</span></button>
-      <button class="pill" aria-pressed="true">Postgraduate research<span class="pill-check iconfont" aria-hidden="true">6</span></button>
-      <button class="pill" aria-pressed="false">Professional development<span class="pill-check iconfont" aria-hidden="true">6</span></button>
-      <button class="pill" aria-pressed="false">Degree apprenticeship<span class="pill-check iconfont" aria-hidden="true">6</span></button>
-      <button class="pill" aria-pressed="false">Online<span class="pill-check iconfont" aria-hidden="true">6</span></button>
+    <div class="pill-group mb-reg" role="group" aria-label="Study level filters">
+      <button class="pill" aria-pressed="true"> Undergraduate <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+      <button class="pill" aria-pressed="true"> Postgraduate taught <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+      <button class="pill" aria-pressed="true"> Postgraduate research <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+      <button class="pill" aria-pressed="false"> Professional development <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+      <button class="pill" aria-pressed="false"> Degree apprenticeship <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+      <button class="pill" aria-pressed="false"> Online <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
     </div>
     <h2>Button colours</h2>
     <div class="flex-group mb-reg">
-      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
-      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
-      <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
-      <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
-      <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
-      <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
-      <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
-      <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+      <button class="btn btn--primary"> <span class="iconfont" aria-hidden="true">/</span>Primary </button>
+      <button class="btn btn--secondary"> <span class="iconfont" aria-hidden="true">0</span>Secondary </button>
+      <button class="btn btn--success"> <span class="iconfont" aria-hidden="true">6</span>Success </button>
+      <button class="btn btn--danger"> <span class="iconfont" aria-hidden="true">a</span>Danger </button>
+      <button class="btn btn--warning"> <span class="iconfont" aria-hidden="true">G</span>Warning </button>
+      <button class="btn btn--info"> <span class="iconfont" aria-hidden="true">é</span>Info </button>
+      <button class="btn btn--light"> <span class="iconfont" aria-hidden="true">ä</span>Light </button>
+      <button class="btn btn--dark"> <span class="iconfont" aria-hidden="true">ä</span>Dark </button>
     </div>
     <h2>Disabled buttons</h2>
     <div class="flex-group mb-reg">
-      <button class="btn btn-primary">Primary enabled</button>
-      <button class="btn btn-primary" disabled>Primary disabled</button>
-      <button class="btn btn-light">Light enabled</button>
-      <button class="btn btn-light" disabled>Light disabled</button>
-      <button class="btn btn-primary" aria-disabled="true">ARIA disabled</button>
+      <button class="btn btn--primary">Primary enabled</button>
+      <button class="btn btn--primary" disabled>Primary disabled</button>
+      <button class="btn btn--light">Light enabled</button>
+      <button class="btn btn--light" disabled>Light disabled</button>
+      <button class="btn btn--primary" aria-disabled="true" tabindex="-1"> ARIA disabled </button>
     </div>
     <h2>Outline button</h2>
     <div class="bck-lgrey p-responsive">
-      <button class="btn-outline-black"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
+      <button class="btn btn--outline btn--outline-light"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
     </div>
     <div class="bck-dgrey p-responsive mb-reg">
-      <button class="btn-outline-white"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
+      <button class="btn btn--outline btn--outline-dark"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
     </div>
     <h2>Outline button text resize</h2>
     <div class="bck-lgrey p-responsive text-resize">
-      <button class="btn-outline-black"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
+      <button class="btn btn--outline btn--outline-light"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
     </div>
     <div class="bck-dgrey p-responsive text-resize">
-      <button class="btn-outline-white"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
+      <button class="btn btn--outline btn--outline-dark"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
     </div>
   </div>
 </main>
 <script>
-	const pillButtons = document.querySelectorAll('.pill');
+  const pillButtons = document.querySelectorAll('.pill');
 
-	pillButtons.forEach(btn => {
-		btn.addEventListener('click', () => {
-			const pressed = btn.getAttribute('aria-pressed') === 'true';
-			btn.setAttribute('aria-pressed', String(!pressed));
-		});
-	});
+  pillButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+    });
+  });
 
-	document.querySelectorAll('[aria-disabled="true"]').forEach(btn => {
-		btn.addEventListener('click', e => {
-			e.preventDefault();
-			e.stopImmediatePropagation();
-		});
-	});
+  document.querySelectorAll('[aria-disabled="true"]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    });
+  });
 </script>
 </body>
 </html>
