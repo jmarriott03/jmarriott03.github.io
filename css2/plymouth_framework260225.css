@@ -1,4 +1,5 @@
-/* Framework */ :root {
+/* Framework */
+*:root {
   --white: #fff;
   --lgrey: #eee;
   --mgrey: #ccc;
@@ -23,8 +24,6 @@
   --btn-light-hov: #999;
   --btn-dark: #333;
   --btn-dark-hov: #111;
-  --btn-disabled-txt: #999;
-  --btn-disabled: #eee;
 }
 @font-face {
   font-family: icon;
@@ -99,12 +98,6 @@
 }
 .p-0 {
   padding: 0;
-}
-.p-0-25 {
-  padding: 0.25em;
-}
-.p-0-5 {
-  padding: 0.5em;
 }
 .p-1 {
   padding: 1em;
@@ -252,10 +245,6 @@
 .bck-black {
   background-color: var(--black);
 }
-.rounded-0-25 {
-  border-radius: 0.25em;
-  overflow: hidden;
-}
 .rounded-0-5 {
   border-radius: 0.5em;
   overflow: hidden;
@@ -291,161 +280,83 @@
 .mrfrosty-theme a {
   color: var(--link-color-light);
 }
-/* Base button system */
 .btn {
-  font: inherit;
-  font-weight: 600;
-  line-height: 1.4;
-  border-radius: 2em;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+  border-radius: 0.25em;
   padding: 0.5em 0.75em;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
+  margin: 0 1em 1em 0;
+  text-decoration: none;
+  cursor: default;
+  display: block;
   border: none;
-  cursor: pointer;
-  text-decoration: none;
+  float: left;
   -webkit-appearance: none;
-  outline-offset: 3px;
-  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  outline-offset: 2px;
+  transition: 0.3s;
 }
-.btn--primary {
-  background: var(--btn-primary);
+.btn-primary {
   color: var(--white);
+  background-color: var(--btn-primary);
 }
-.btn--secondary {
-  background: var(--btn-secondary);
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--btn-primary-hov);
+  color: var(--white); /* ADDED: Ensures white text on hover */
+  text-decoration: none; /* ADDED: Removes underline on hover */
+}
+.btn-secondary {
   color: var(--white);
+  background-color: var(--btn-secondary);
 }
-.btn--success {
-  background: var(--btn-success);
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: var(--btn-secondary-hov);
+}
+.btn-success {
   color: var(--white);
+  background-color: var(--btn-success);
 }
-.btn--danger {
-  background: var(--btn-danger);
+.btn-success:hover, .btn-success:focus {
+  background-color: var(--btn-success-hov);
+}
+.btn-danger {
   color: var(--white);
+  background-color: var(--btn-danger);
 }
-.btn--warning {
-  background: var(--btn-warning);
+.btn-danger:hover, .btn-danger:focus {
+  background-color: var(--btn-danger-hov);
+  color: var(--white); /* ADDED: Ensures white text on hover */
+  text-decoration: none; /* ADDED: Removes underline on hover */
+}
+.btn-warning {
   color: var(--black);
+  background-color: var(--btn-warning);
 }
-.btn--info {
-  background: var(--btn-info);
+.btn-warning:hover, .btn-warning:focus {
+  background-color: var(--btn-warning-hov);
+  text-decoration: none; /* ADDED: Removes underline on hover */
+}
+.btn-info {
   color: var(--white);
+  background-color: var(--btn-info);
 }
-.btn--light {
-  background: var(--btn-light);
+.btn-info:hover, .btn-info:focus {
+  background-color: var(--btn-info-hov);
+  text-decoration: none; /* ADDED: Removes underline on hover */
+}
+.btn-light {
   color: var(--black);
-}
-.btn--dark {
-  background: var(--btn-dark);
-  color: var(--white);
-}
-.btn:hover, .btn:focus-visible {
-  text-decoration: none;
-}
-.btn--primary:hover, .btn--primary:focus-visible {
-  background: var(--btn-primary-hov);
-}
-.btn--secondary:hover, .btn--secondary:focus-visible {
-  background: var(--btn-secondary-hov);
-}
-.btn--success:hover, .btn--success:focus-visible {
-  background: var(--btn-success-hov);
-}
-.btn--danger:hover, .btn--danger:focus-visible {
-  background: var(--btn-danger-hov);
-}
-.btn--warning:hover, .btn--warning:focus-visible {
-  background: var(--btn-warning-hov);
-}
-.btn--info:hover, .btn--info:focus-visible {
-  background: var(--btn-info-hov);
-}
-.btn--light:hover, .btn--light:focus-visible {
-  background: var(--btn-light-hov);
-}
-.btn--dark:hover, .btn--dark:focus-visible {
-  background: var(--btn-dark-hov);
-}
-.btn:disabled, .btn[aria-disabled="true"] {
-  background-color: var(--btn-disabled);
-  color: var(--btn-disabled-txt);
-  cursor: not-allowed;
-  opacity: 1;
-}
-/* Outline buttons */
-.btn--outline {
-  background: none;
-  border: 2px solid currentColor;
-}
-.btn--outline-light {
-  color: var(--black);
-  --btn-outline-hover-bg: var(--white);
-}
-.btn--outline-dark {
-  color: var(--white);
-  --btn-outline-hover-bg: var(--black);
-}
-.btn--outline:hover, .btn--outline:focus-visible {
-  background-color: var(--btn-outline-hover-bg);
-}
-/* Layout helpers for this demo */
-.flex-group {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-.flex-group .btn {
-  margin: 0;
-}
-.text-resize .btn {
-  font-size: 1.25em;
-}
-@media (max-width: 80em) {
-  .text-resize .btn {
-    font-size: 1em;
-  }
-}
-/* Pills */
-.pill-group {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-}
-.pill {
-  padding: 0.5em 0.75em;
-  border-radius: 1em;
   background-color: var(--btn-light);
-  color: var(--black);
-  white-space: nowrap;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  margin: 0;
-  border: 0;
-  font-size: 0.75em;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  cursor: pointer;
 }
-.pill:hover {
+.btn-light:hover, .btn-light:focus {
   background-color: var(--btn-light-hov);
 }
-.pill[aria-pressed="true"] {
-  background-color: var(--btn-primary);
+.btn-dark {
   color: var(--white);
+  background-color: var(--btn-dark);
 }
-.pill[aria-pressed="true"]:hover {
-  background-color: var(--btn-primary-hov);
-}
-.pill:focus-visible {
-  outline: 2px solid var(--link);
-  outline-offset: 2px;
-}
-.pill[aria-pressed="true"] .pill-check {
-  display: inline;
-}
-.pill[aria-pressed="false"] .pill-check {
-  display: none;
+.btn-dark:hover, .btn-dark:focus {
+  background-color: var(--btn-dark-hov);
 }
 .white-text {
   color: var(--white);
@@ -697,6 +608,19 @@ div > :last-child {
    Classes preserved from production for backwards compatibility.
    These are actively used in existing views and must be maintained.
    ============================================================================ */
+/* Additional Padding Utilities
+   Used in: app/views/content_module/quote_blocks/_content.html.erb
+   Purpose: Provides 0.5em padding for quote block external member text */
+.p-0-5 {
+  padding: 0.5em;
+}
+/* Additional Border Radius Utilities
+   Used in: News lists, event lists, text and image modules
+   Purpose: Provides additional corner rounding options for various components */
+.rounded-0-25 {
+  border-radius: 0.25em;
+  overflow: hidden;
+}
 /* Top-only border radius utilities
    Used in: Various card and module designs */
 .top-rounded-0-25 {
