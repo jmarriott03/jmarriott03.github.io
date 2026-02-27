@@ -11,10 +11,12 @@
 :root {
 --mb-module: 2em;
 }
+/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+*/
 .p-responsive .p-responsive {
 	padding: 1em;
 }
@@ -38,33 +40,9 @@
 .content-module-wrapper .content-module-wrapper {
 	padding: 0;
 }
-.btn {
-	float: none;
-}
-.btn-group {
-	display: flex;
-	gap: 1em;
-	flex-wrap: wrap;
-}
-.btn-group .btn {
-	margin: 0;
-}
 .blockquote {
 	padding-left: 1em;
 	border-left: 5px solid var(--mgrey);
-}
-.btn-rounded-resize {
-	color: currentColor;
-	border: 2px solid currentColor;
-	font-size: 1.25rem;
-	border-radius: 2rem;
-	padding: 0.5rem;
-	background: none;
-	line-height: 1.5;
-	text-align: left;
-}
-.btn-rounded-resize:hover {
-	cursor: pointer;
 }
 .quotestyle:before {
 	font-family: "Times New Roman", serif;
@@ -106,6 +84,78 @@
     </div>
   </div>
   <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive stroke">
+      <div class="p-responsive">
+        <h2>Pills</h2>
+        <div class="pill-group mb-reg" role="group" aria-label="Study level filters">
+          <button class="pill" aria-pressed="true"> Undergraduate <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+          <button class="pill" aria-pressed="true"> Postgraduate taught <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+          <button class="pill" aria-pressed="true"> Postgraduate research <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+          <button class="pill" aria-pressed="false"> Professional development <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+          <button class="pill" aria-pressed="false"> Degree apprenticeship <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+          <button class="pill" aria-pressed="false"> Online <span class="pill-check iconfont" aria-hidden="true">6</span> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive stroke">
+      <div class="p-responsive">
+        <h2>Button colours</h2>
+        <div class="flex-group mb-reg">
+          <button class="btn btn--primary"> <span class="iconfont" aria-hidden="true">/</span>Primary</button>
+          <button class="btn btn--secondary"> <span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+          <button class="btn btn--success"> <span class="iconfont" aria-hidden="true">6</span>Success</button>
+          <button class="btn btn--danger"> <span class="iconfont" aria-hidden="true">a</span>Danger</button>
+          <button class="btn btn--warning"> <span class="iconfont" aria-hidden="true">G</span>Warning</button>
+          <button class="btn btn--info"> <span class="iconfont" aria-hidden="true">é</span>Info</button>
+          <button class="btn btn--light"> <span class="iconfont" aria-hidden="true">ä</span>Light</button>
+          <button class="btn btn--dark"> <span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive stroke">
+      <div class="p-responsive">
+        <h2>Disabled buttons</h2>
+        <div class="flex-group mb-reg">
+          <button class="btn btn--primary">Primary enabled</button>
+          <button class="btn btn--primary" disabled>Primary disabled</button>
+          <button class="btn btn--light">Light enabled</button>
+          <button class="btn btn--light" disabled>Light disabled</button>
+          <button class="btn btn--primary" aria-disabled="true" tabindex="-1"> ARIA disabled </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive stroke">
+      <div class="p-responsive">
+        <h2>Outline button</h2>
+        <div class="bck-lgrey p-responsive">
+          <button class="btn btn--outline btn--outline-light"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
+        </div>
+        <div class="bck-dgrey p-responsive mb-reg">
+          <button class="btn btn--outline btn--outline-dark"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive stroke">
+      <div class="p-responsive">
+        <h2>Outline button text resize</h2>
+        <div class="bck-lgrey p-responsive text-resize">
+          <button class="btn btn--outline btn--outline-light"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
+        </div>
+        <div class="bck-dgrey p-responsive text-resize">
+          <button class="btn btn--outline btn--outline-dark"> <span class="iconfont" aria-hidden="true">0</span> <span class="nowrap">+44 1752 600600</span> </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
     <div class="w-80 rounded-responsive bg-color-light">
       <div class="p-responsive">
         <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -117,7 +167,7 @@
       <div class="p-responsive">
         <h2>Card 1</h2>
         <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="btn-group">
+        <div class="flex-group">
           <button class="btn btn--primary">Primary button</button>
           <button class="btn btn--secondary">Secondary button</button>
         </div>
@@ -402,15 +452,7 @@
       </div>
     </div>
   </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="content-module-wrapper">
+  <div class="content-module-wrapper">
     <div class="w-80 mb-reg">
       <h2>2 cards responsive</h2>
     </div>
@@ -433,13 +475,8 @@
           <p>Expanding our fleet and delivering net zero.</p>
         </div>
       </div>
-
     </div>
   </div>
-	
-	
-	
-	
 </main>
 </body>
 </html>
