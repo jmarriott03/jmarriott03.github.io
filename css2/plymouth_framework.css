@@ -308,63 +308,63 @@
   outline-offset: 3px;
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
-.btn--primary {
+.btn-primary {
   background: var(--btn-primary);
   color: var(--white);
 }
-.btn--secondary {
+.btn-secondary {
   background: var(--btn-secondary);
   color: var(--white);
 }
-.btn--success {
+.btn-success {
   background: var(--btn-success);
   color: var(--white);
 }
-.btn--danger {
+.btn-danger {
   background: var(--btn-danger);
   color: var(--white);
 }
-.btn--warning {
+.btn-warning {
   background: var(--btn-warning);
   color: var(--black);
 }
-.btn--info {
+.btn-info {
   background: var(--btn-info);
   color: var(--white);
 }
-.btn--light {
+.btn-light {
   background: var(--btn-light);
   color: var(--black);
 }
-.btn--dark {
+.btn-dark {
   background: var(--btn-dark);
   color: var(--white);
 }
 .btn:hover, .btn:focus-visible {
   text-decoration: none;
 }
-.btn--primary:hover, .btn--primary:focus-visible {
+.btn-primary:hover, .btn-primary:focus-visible {
   background: var(--btn-primary-hov);
 }
-.btn--secondary:hover, .btn--secondary:focus-visible {
+.btn-secondary:hover, .btn-secondary:focus-visible {
   background: var(--btn-secondary-hov);
 }
-.btn--success:hover, .btn--success:focus-visible {
+.btn-success:hover, .btn-success:focus-visible {
   background: var(--btn-success-hov);
 }
-.btn--danger:hover, .btn--danger:focus-visible {
+.btn-danger:hover, .btn-danger:focus-visible {
   background: var(--btn-danger-hov);
 }
-.btn--warning:hover, .btn--warning:focus-visible {
+.btn-warning:hover, .btn-warning:focus-visible {
   background: var(--btn-warning-hov);
 }
-.btn--info:hover, .btn--info:focus-visible {
+.btn-info:hover, .btn-info:focus-visible {
   background: var(--btn-info-hov);
 }
-.btn--light:hover, .btn--light:focus-visible {
+.btn-light:hover, .btn-light:focus-visible {
   background: var(--btn-light-hov);
 }
-.btn--dark:hover, .btn--dark:focus-visible {
+.btn-dark:hover, .btn-dark:focus-visible {
   background: var(--btn-dark-hov);
 }
 .btn:disabled, .btn[aria-disabled="true"] {
@@ -374,19 +374,19 @@
   opacity: 1;
 }
 /* Outline buttons */
-.btn--outline {
+.btn-outline {
   background: none;
   border: 2px solid currentColor;
 }
-.btn--outline-light {
+.btn-outline-light {
   color: var(--black);
   --btn-outline-hover-bg: var(--white);
 }
-.btn--outline-dark {
+.btn-outline-dark {
   color: var(--white);
   --btn-outline-hover-bg: var(--black);
 }
-.btn--outline:hover, .btn--outline:focus-visible {
+.btn-outline:hover, .btn-outline:focus-visible {
   background-color: var(--btn-outline-hover-bg);
 }
 /* Layout helpers for this demo */
