@@ -401,12 +401,6 @@
     font-size: 1em;
   }
 }
-/* Pills */
-.pill-group {
-  display: flex;
-  gap: 0.5em;
-  flex-wrap: wrap;
-}
 .pill {
   padding: 0.5em 0.75em;
   border-radius: 1em;
