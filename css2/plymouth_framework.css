@@ -389,15 +389,10 @@
 .btn-outline:hover, .btn-outline:focus-visible {
   background-color: var(--btn-outline-hover-bg);
 }
-/* Layout helpers for this demo */
-.flex-group {
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-}
-.flex-group .btn {
-  margin: 0;
-}
+.flex      { display: flex; }
+  .flex-wrap { flex-wrap: wrap; }
+  .gap-1     { gap: 1em; }
+  .gap-0-5   { gap: 0.5em; }
 .text-resize .btn {
   font-size: 1.25em;
 }
