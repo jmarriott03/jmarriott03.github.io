@@ -23,6 +23,35 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
+.card {
+	position: relative;
+	transition: background-color 0.2s ease;
+}
+.card a {
+	position: relative;
+	z-index: 2;
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+.card a::after {
+	content: "";
+	position: absolute;
+	top: -1rem;
+	left: -1rem;
+	right: -1rem;
+	bottom: -1rem;
+}
+.card:hover {
+	cursor: pointer;
+}
+.card:focus-within {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.bck-lgrey.hover-card:hover, .bck-lgrey.hover-card:focus-within {
+background-color: var(--mgrey);
+}
 </style>
 </head>
 <body>
@@ -31,83 +60,83 @@
     <h1>tribal3</h1>
     <h2>Centered</h2>
     <div class="grid mb-2">
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">*</span></p>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">0</span></p>
-        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        <p><a href="#">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">A</span></p>
-        <p>Ut enim ad minim veniam</p>
+        <p><a href="#">Ut enim ad minim veniam</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">B</span></p>
-        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        <p><a href="#">Quis nostrud exercitation ullamco laboris nisi ut aliquip</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">E</span></p>
-        <p>Duis aute irure dolor in reprehenderit</p>
+        <p><a href="#">Duis aute irure dolor in reprehenderit</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">0</span></p>
-        <p>Excepteur sint occaecat</p>
+        <p><a href="#">Excepteur sint occaecat</a></p>
       </div>
     </div>
     <h2>No centering</h2>
     <div class="grid mb-2">
-      <div class="rounded-2 p-1 text-center bck-lgrey">
+      <div class="rounded-2 p-1 text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">*</span></p>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
       </div>
-      <div class="rounded-2 p-1 text-center bck-lgrey">
+      <div class="rounded-2 p-1 text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">0</span></p>
-        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        <p><a href="#">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></p>
       </div>
-      <div class="rounded-2 p-1 text-center bck-lgrey">
+      <div class="rounded-2 p-1 text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">A</span></p>
-        <p>Ut enim ad minim veniam</p>
+        <p><a href="#">Ut enim ad minim veniam</a></p>
       </div>
-      <div class="rounded-2 p-1 text-center bck-lgrey">
+      <div class="rounded-2 p-1 text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">B</span></p>
-        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        <p><a href="#">Quis nostrud exercitation ullamco laboris nisi ut aliquip</a></p>
       </div>
-      <div class="rounded-2 p-1 text-center bck-lgrey">
+      <div class="rounded-2 p-1 text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">E</span></p>
-        <p>Duis aute irure dolor in reprehenderit</p>
+        <p><a href="#">Duis aute irure dolor in reprehenderit</a></p>
       </div>
-      <div class="rounded-2 p-1 text-center bck-lgrey">
+      <div class="rounded-2 p-1 text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">0</span></p>
-        <p>Excepteur sint occaecat</p>
+        <p><a href="#">Excepteur sint occaecat</a></p>
       </div>
     </div>
     <h2>Centered with vertical justification</h2>
     <div class="grid justify">
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">*</span></p>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p><a href="#">Lorem ipsum dolor sit amet</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">0</span></p>
-        <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+        <p><a href="#">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">A</span></p>
-        <p>Ut enim ad minim veniam</p>
+        <p><a href="#">Ut enim ad minim veniam</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">B</span></p>
-        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        <p><a href="#">Quis nostrud exercitation ullamco laboris nisi ut aliquip</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">E</span></p>
-        <p>Duis aute irure dolor in reprehenderit</p>
+        <p><a href="#">Duis aute irure dolor in reprehenderit</a></p>
       </div>
-      <div class="rounded-2 p-1 centered text-center bck-lgrey">
+      <div class="rounded-2 p-1 centered text-center bck-lgrey card hover-card">
         <p class="largetext3 m-0"><span class="iconfont" aria-hidden="true">0</span></p>
-        <p>Excepteur sint occaecat</p>
+        <p><a href="#">Excepteur sint occaecat</a></p>
       </div>
     </div>
   </div>
