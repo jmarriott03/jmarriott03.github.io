@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.justify > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.card {
+	position: relative;
+	transition: background-color 0.2s ease;
+}
+.card a {
+	position: relative;
+	z-index: 2;
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+.card a::after {
+	content: "";
+	position: absolute;
+	top: -1rem;
+	left: -1rem;
+	right: -1rem;
+	bottom: -1rem;
+}
+.card:hover {
+	cursor: pointer;
+}
+.card:focus-within {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.bck-lgrey.hover-card:hover, .bck-lgrey.hover-card:focus-within {
+background-color: var(--mgrey);
+}
+.mgrey-text {
+	color: var(--mgrey);
+}
+.mgrey-text a {
+	color: var(--mgrey);
+}
+/* --- Added layout fix for search area --- */
+
+.grid {
+	align-items: start;
+}
+
+@media (min-width: 900px) {
+.w-80.bg-color-light.p-responsive.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	gap: 1rem;
+	align-items: end;
+}
+}
+.w-80.bg-color-light.p-responsive.grid > div:last-child {
+	align-self: end;
+}
+.pl-0-75 {
+	padding-left: 0.75em;
+}
+</style>
+</head>
+<body class="bg-color" data-theme="deep-orange">
+<main class="pt-2">
+  <div class="content-module-wrapper bg-color-dark">
+    <div class="w-80">
+      <div class="p-responsive">
+        <h1>Find an Education Agent</h1>
+      </div>
+    </div>
+  </div>
+  <div class="w-80 p-responsive">
+    <h2>Plymouth University has employed a network of authorised education agents around the world to assist you with program and application queries.</h2>
+    <p>Our authorised education agents can provide you with:</p>
+    <ul>
+      <li>Accurate information about RMIT University and our programs</li>
+      <li>Answer your questions and advise you about our programs and entry requirements</li>
+      <li>Assist with your application and verifying your supporting documentation</li>
+      <li>Assistance with your student visa application</li>
+      <li>Assist with travel, accommodation and pre-departure arrangements</li>
+    </ul>
+    <p>Please note that some agents may charge a fee for these services.</p>
+    <p>Select your country or region from the drop down menu below and then select the "search" button. Please select the agent name to see detailed information.</p>
+    <p>If there are no registered agents in your country or region, please <a href="#">contact us</a> for advice on your study options and assistance with your application.</p>
+    <div class="w-80 bg-color-light p-responsive grid rounded-responsive">
+      <div>
+        <p class="mb-1">Your country/city/address</p>
+        <p class="bck-white p-0-5 rounded-2 mgrey-text pl-0-75">Type to see agent near you</p>
+      </div>
+      <div>
+        <p class="mb-1">Agent-representative</p>
+        <p class="bck-white p-0-5 rounded-2 mgrey-text pl-0-75">Optional, full or part name</p>
+      </div>
+      <div class="flex flex-wrap gap-1">
+        <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">B</span>Search</button>
+        <button class="btn btn-light">Clear</button>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
