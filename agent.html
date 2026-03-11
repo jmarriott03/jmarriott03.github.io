@@ -72,7 +72,7 @@ border-radius:2em;
 	
 	summary {
 cursor: pointer;
-padding: 0.5em;
+padding: 0.5em 0;
 transition: background-color 0.3s ease;
 }
 summary > * {
@@ -87,9 +87,6 @@ border-bottom: 1px solid var(--mgrey);
 }
 details > p {
 margin: 0.5em;
-}
-details :last-child {
-  margin-bottom: 0.5em;
 }
 details summary::-webkit-details-marker, details summary::marker {
 display: none;
@@ -118,7 +115,7 @@ transform: rotate(180deg);
 	grid-template-areas: "image text";
 	margin-bottom: 1em;
 	border-bottom: 1px solid var(--mgrey);
-	padding: 1em;
+	padding: 1em 0;
 	
 }
 .agent img {
@@ -165,7 +162,7 @@ transform: rotate(180deg);
     <p>Please note that some agents may charge a fee for these services.</p>
     <p>Select your country or region from the drop down menu below and then select the "Search" button. Please select the agent name to see detailed information.</p>
     <p>If there are no registered agents in your country or region, please <a href="#">contact us</a> for advice on your study options and assistance with your application.</p>
-    <div class="w-80 bck-lgrey p-responsive grid grid-search rounded-responsive mb-reg">
+    <div class="w-80 bck-lgrey p-responsive grid grid-search rounded-responsive mb-1">
       <div>
         <p class="mb-1">Your country/city/address</p>
         <div class="bck-white rounded-2 mgrey-text search-field">
@@ -184,9 +181,9 @@ transform: rotate(180deg);
       </div>
     </div>
 	  
-	  <details>
+	  <details open>
         <summary>
-          <h2>Summary 1</h2>
+          <h2><span class="iconfont" aria-hidden="true">(</span> 250km</h2>
         </summary>
 		  
 		  
@@ -197,17 +194,41 @@ transform: rotate(180deg);
         </div>
       </div>
 		  
+		    <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="content">
+          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
 		  
 		  
-        <p>Details 1</p>
+		  
       </details>
 	  
 	  
 	  <details>
         <summary>
-          <h2>Summary 2</h2>
+          <h2><span class="iconfont" aria-hidden="true">(</span> 500km</h2>
         </summary>
-        <p>Details 2</p>
+       
+		  
+		  
+		   <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="content">
+          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+		  
+		    <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
+        <div class="content">
+          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+		  
+		  
+		  
       </details>
 	  
 	  
