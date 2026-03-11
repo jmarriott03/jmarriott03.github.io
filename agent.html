@@ -18,78 +18,64 @@
 	outline-offset: -1px;
 }
 */
-.justify > div {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.card {
-	position: relative;
-	transition: background-color 0.2s ease;
-}
-.card a {
-	position: relative;
-	z-index: 2;
-	text-decoration: none;
-	color: inherit;
-	outline: none;
-}
-.card a::after {
-	content: "";
-	position: absolute;
-	top: -1rem;
-	left: -1rem;
-	right: -1rem;
-	bottom: -1rem;
-}
-.card:hover {
-	cursor: pointer;
-}
-.card:focus-within {
-outline: 2px solid var(--link);
-outline-offset: 2px;
-}
-.bck-lgrey.hover-card:hover, .bck-lgrey.hover-card:focus-within {
-background-color: var(--mgrey);
-}
+
 .mgrey-text {
 	color: var(--mgrey);
 }
 .mgrey-text a {
 	color: var(--mgrey);
 }
-/* --- Added layout fix for search area --- */
 
-.grid {
+@media (min-width: 60em) {
+.grid-search {
 	align-items: start;
-}
-
-@media (min-width: 900px) {
-.w-80.bg-color-light.p-responsive.grid {
-	display: grid;
 	grid-template-columns: 1fr 1fr auto;
-	gap: 1rem;
 	align-items: end;
 }
 }
-.w-80.bg-color-light.p-responsive.grid > div:last-child {
-	align-self: end;
-}
 .pl-0-75 {
 	padding-left: 0.75em;
+}
+/* Added WCAG search behaviour while preserving rounded boxes */
+
+.search-input {
+	width: 100%;
+	border: none;
+	background: transparent;
+	font: inherit;
+	color: inherit;
+	outline: none;
+	display: block;
+}
+.search-input::placeholder {
+color: var(--mgrey);
+opacity:1;
+}
+/* Ensure rounded corners remain visible */
+.search-field {
+	display: block;
+	border-radius: 2em;
+	overflow: hidden;
+}
+
+/* WCAG 2.2 focus ring on the whole search box */
+.search-field:focus-within {
+outline:2px solid currentColor;
+outline-offset:3px;
+border-radius:2em;
 }
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
 <main class="pt-2">
   <div class="content-module-wrapper bg-color-dark">
-    <div class="w-80">
+    <div class="w-60">
       <div class="p-responsive">
         <h1>Find an Education Agent</h1>
       </div>
     </div>
   </div>
-  <div class="w-80 p-responsive">
+  <div class="w-60 p-responsive">
     <h2>Plymouth University has employed a network of authorised education agents around the world to assist you with program and application queries.</h2>
     <p>Our authorised education agents can provide you with:</p>
     <ul>
@@ -102,14 +88,18 @@ background-color: var(--mgrey);
     <p>Please note that some agents may charge a fee for these services.</p>
     <p>Select your country or region from the drop down menu below and then select the "search" button. Please select the agent name to see detailed information.</p>
     <p>If there are no registered agents in your country or region, please <a href="#">contact us</a> for advice on your study options and assistance with your application.</p>
-    <div class="w-80 bg-color-light p-responsive grid rounded-responsive">
+    <div class="w-80 bg-color-light p-responsive grid grid-search rounded-responsive">
       <div>
         <p class="mb-1">Your country/city/address</p>
-        <p class="bck-white p-0-5 rounded-2 mgrey-text pl-0-75">Type to see agent near you</p>
+        <div class="bck-white p-0-5 rounded-2 mgrey-text pl-0-75 search-field">
+          <input class="search-input" type="search" placeholder="Type to see agent near you">
+        </div>
       </div>
       <div>
         <p class="mb-1">Agent-representative</p>
-        <p class="bck-white p-0-5 rounded-2 mgrey-text pl-0-75">Optional, full or part name</p>
+        <div class="bck-white p-0-5 rounded-2 mgrey-text pl-0-75 search-field">
+          <input class="search-input" type="search" placeholder="Optional, full or part name">
+        </div>
       </div>
       <div class="flex flex-wrap gap-1">
         <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">B</span>Search</button>
