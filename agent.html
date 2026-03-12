@@ -63,53 +63,38 @@ outline:2px solid var(--link);
 outline-offset:3px;
 border-radius:2em;
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	summary {
-cursor: pointer;
-padding: 0.5em;
-transition: background-color 0.3s ease;
+summary {
+	cursor: pointer;
+	padding: 0.5em;
+	transition: background-color 0.3s ease;
 }
 summary > * {
-display: inline;
+	display: inline;
 }
 summary:hover {
-background-color: var(--lgrey);
+	background-color: var(--lgrey);
 }
 details {
-margin: 0;
-border-bottom: 1px solid var(--mgrey);
+	margin: 0;
+	border-bottom: 1px solid var(--mgrey);
 }
 details > p {
-margin: 0.5em;
+	margin: 0.5em;
 }
 details summary::-webkit-details-marker, details summary::marker {
 display: none;
 content: "";
 }
 details > summary::before {
-font-family: 'icon', sans-serif;
-font-weight: normal;
-content: 'O';
-float: right;
-transition: transform 0.3s ease;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
+	transition: transform 0.3s ease;
 }
 details[open] > summary::before {
-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
-	
-	
-	
-	
-	
-	
 .agent {
 	display: grid;
 	gap: 1em;
@@ -118,7 +103,6 @@ transform: rotate(180deg);
 	margin-bottom: 1em;
 	border-bottom: 1px solid var(--mgrey);
 	padding: 1em 0.5em;
-	
 }
 .agent img {
 	aspect-ratio: 16 / 9;
@@ -126,9 +110,14 @@ transform: rotate(180deg);
 	grid-area: image;
 	max-width: 10em;
 }
-.newz .content {
+.content {
 	grid-area: text;
-	padding: 0;
+}
+
+@media (min-width: 60em) {
+.agent-contact {
+	margin-left: auto;
+}
 }
 
 @media (max-width: 40em) {
@@ -137,12 +126,9 @@ transform: rotate(180deg);
 	grid-template-areas: "image" "text";
 }
 }
-	
-	
-	
 </style>
 </head>
-<body class="bg-color" data-theme="deep-orange">
+<body class="bg-color" data-theme="sea-green">
 <main>
   <div class="content-module-wrapper bg-color-dark">
     <div class="w-60">
@@ -179,63 +165,70 @@ transform: rotate(180deg);
       </div>
       <div class="flex flex-wrap gap-1">
         <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">B</span>Search</button>
-<!--        <button class="btn btn-light">Clear</button>-->
+        <button class="btn btn-light">Clear</button>
       </div>
     </div>
-	  
-	  <details open>
-        <summary>
-          <h2><span class="iconfont" aria-hidden="true">(</span> 250km</h2>
-        </summary>
-		  
-		  
-		  <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
-        <div class="content">
-          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <details open>
+      <summary>
+        <h2><span class="iconfont" aria-hidden="true">(</span> 250km</h2>
+      </summary>
+      <div class="agent"><a href="#"><img src="images/studyoptions.webp" alt=""></a>
+        <div class="content flex flex-wrap gap-1">
+          <div>
+            <h3 class="m-0">Study Options Limited</h3>
+            <p>Country head office</p>
+            <p> 83 Alma Road Clifton<br>
+              Bristol, England, United Kingdom BS8<br>
+              2DP+44 117 9115610<br>
+              <a href="#" class="mr-1"><span class="iconfont" aria-hidden="true">(</span> Map</a><a href="#"><span class="iconfont" aria-hidden="true">&lt;</span> Website</a></p>
+          </div>
+          <div class="agent-contact">
+            <p><strong>Stefan Watts</strong><br>
+              Location head</p>
+            <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">0</span>Request a callback</button>
+          </div>
         </div>
       </div>
-		  
-		    <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
-        <div class="content">
-          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </details>
+    <details>
+      <summary>
+        <h2><span class="iconfont" aria-hidden="true">(</span> 500km</h2>
+      </summary>
+      <div class="agent"><a href="#"><img src="images/studyoptions.webp" alt=""></a>
+        <div class="content flex flex-wrap gap-1">
+          <div>
+            <h3 class="m-0">Study Options Limited</h3>
+            <p>Country head office</p>
+            <p> 83 Alma Road Clifton<br>
+              Bristol, England, United Kingdom BS8<br>
+              2DP+44 117 9115610<br>
+              <a href="#" class="mr-1"><span class="iconfont" aria-hidden="true">(</span> Map</a><a href="#"><span class="iconfont" aria-hidden="true">&lt;</span> Website</a></p>
+          </div>
+          <div class="agent-contact">
+            <p><strong>Stefan Watts</strong><br>
+              Location head</p>
+            <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">0</span>Request a callback</button>
+          </div>
         </div>
       </div>
-		  
-		  
-		  
-      </details>
-	  
-	  
-	  <details>
-        <summary>
-          <h2><span class="iconfont" aria-hidden="true">(</span> 500km</h2>
-        </summary>
-       
-		  
-		  
-		   <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
-        <div class="content">
-          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="agent"><a href="#"><img src="images/iaeglobal.webp" alt=""></a>
+        <div class="content flex flex-wrap gap-1">
+          <div>
+            <h3 class="m-0">Study Options Limited</h3>
+            <p>Country head office</p>
+            <p> 83 Alma Road Clifton<br>
+              Bristol, England, United Kingdom BS8<br>
+              2DP+44 117 9115610<br>
+              <a href="#" class="mr-1"><span class="iconfont" aria-hidden="true">(</span> Map</a><a href="#"><span class="iconfont" aria-hidden="true">&lt;</span> Website</a></p>
+          </div>
+          <div class="agent-contact">
+            <p><strong>Stefan Watts</strong><br>
+              Location head</p>
+            <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">0</span>Request a callback</button>
+          </div>
         </div>
       </div>
-		  
-		    <div class="agent"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt=""></a>
-        <div class="content">
-          <h3><a href="#">BMBS Bachelor of Medicine, Bachelor of Surgery (Full-time)</a></h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-		  
-		  
-		  
-      </details>
-	  
-	  
-	  
-	  
+    </details>
   </div>
 </main>
 </body>
