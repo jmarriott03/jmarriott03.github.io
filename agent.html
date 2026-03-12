@@ -15,7 +15,6 @@
 	outline-offset: -1px;
 }
 */
-
 .mgrey-text {
 	color: var(--mgrey);
 }
@@ -100,7 +99,6 @@ details[open] > summary::before {
 	gap: 1em;
 	grid-template-columns: 10em 1fr;
 	grid-template-areas: "image text";
-	margin-bottom: 1em;
 	border-bottom: 1px solid var(--mgrey);
 	padding: 1em 0.5em;
 }
@@ -126,19 +124,22 @@ details[open] > summary::before {
 	grid-template-areas: "image" "text";
 }
 }
+.row-gap-0 {
+	row-gap: 0;
+}
 </style>
 </head>
-<body class="bg-color" data-theme="sea-green">
+<body class="bg-color" data-theme="persian-indigo">
 <main>
-  <div class="content-module-wrapper bg-color-dark">
+  <div class="bg-color-dark">
     <div class="w-60">
-      <div class="p-responsive">
+      <div class="p-responsive grid row-gap-0">
         <h1>Find an Education Agent</h1>
+        <p><strong>Plymouth University has employed a network of authorised education agents around the world to assist you with program and application queries</strong></p>
       </div>
     </div>
   </div>
   <div class="w-60 p-responsive">
-    <h2>Plymouth University has employed a network of authorised education agents around the world to assist you with program and application queries.</h2>
     <p>Our authorised education agents can provide you with:</p>
     <ul>
       <li>Accurate information about Plymouth University and our programs</li>
