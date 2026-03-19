@@ -12,11 +12,9 @@
 :root {
 --mb-module: 2em;
 }
-/*
-*:not(:focus):not(:focus-visible) {
+.card-list *:not(:focus):not(:focus-visible) {
 	outline: 1px dotted red;
 }
-*/
 .card-list {
 	list-style: none;
 	padding: 0;
@@ -46,24 +44,25 @@
 <main>
   <div class="w-80 p-responsive">
     <h1>card10</h1>
-    <h2>A list of links presented as cards</h2><p>Each card is a list item <span class="codegrey2">&lt;li&gt;</span> inside a <span class="codegrey2">&lt;ul&gt;</span> which helps screen readers understand the content as a collection of related items</p>
+    <h2>A list of links presented as cards</h2>
+    <p>Each card is a list item <span class="codegrey2">&lt;li&gt;</span> in a <span class="codegrey2">&lt;ul&gt;</span> - helping screen readers recognise it as part of a collection. It contains a link stretched to cover the entire card, making it fully clickable while showing a focus outline only on the link, improving usability and accessibility per GOV.UK guidance.</p>
     <ul class="grid card-list">
-      <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
+      <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
         <h3><a href="#">Link text 1</a></h3>
       </li>
-      <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
+      <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
         <h3><a href="#">Link text 2</a></h3>
       </li>
-      <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
+      <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
         <h3><a href="#">Link text 3</a></h3>
       </li>
-      <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
+      <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
         <h3><a href="#">Link text 4</a></h3>
       </li>
-      <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
+      <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
         <h3><a href="#">Link text 5 lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</a></h3>
       </li>
-      <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
+      <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
         <h3><a href="#">Link text 6</a></h3>
       </li>
     </ul>
