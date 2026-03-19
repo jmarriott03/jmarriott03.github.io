@@ -12,9 +12,11 @@
 :root {
 --mb-module: 2em;
 }
+/*
 *:not(:focus):not(:focus-visible) {
 	outline: 1px dotted red;
 }
+*/
 .card-list {
 	list-style: none;
 	padding: 0;
@@ -35,13 +37,16 @@
 	position: absolute;
 	inset: 0;
 }
+.card-list li {
+	margin-bottom: 0;
+}
 </style>
 </head>
 <body>
 <main>
   <div class="w-80 p-responsive">
     <h1>card10</h1>
-    <h2>A list of links presented as cards</h2>
+    <h2>A list of links presented as cards</h2><p>Each card is a list item <span class="codegrey2">&lt;li&gt;</span> inside a <span class="codegrey2">&lt;ul&gt;</span> which helps screen readers understand the content as a collection of related items</p>
     <ul class="grid card-list">
       <li> <img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1">
         <h3><a href="#">Link text 1</a></h3>
@@ -62,7 +67,6 @@
         <h3><a href="#">Link text 6</a></h3>
       </li>
     </ul>
-    <h2>gdfsfg</h2>
   </div>
 </main>
 </body>
