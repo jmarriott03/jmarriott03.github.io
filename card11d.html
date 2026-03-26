@@ -42,6 +42,14 @@
 	color: var(--black);
 	text-decoration: underline;
 }
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
 .bg-color-turquoise-dark {
 	color: var(--white);
 	background-color: var(--turquoise-dark);
@@ -166,6 +174,11 @@ width: calc(100% * 2 / 3);
 	outline-offset: -2px;
 	overflow: hidden;
 }
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
 .blockquote {
 	padding-left: 1em;
 	border-left: 5px solid var(--mgrey);
@@ -180,6 +193,11 @@ width: calc(100% * 2 / 3);
 	border-left: 5px solid var(--green-dark);
 	background-color: var(--green-light);
 }
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
 .grid2 {
 	display: grid;
 	column-gap: 1em;
@@ -193,6 +211,10 @@ width: calc(100% * 2 / 3);
 }
 .grid {
 	align-items: start;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
 }
 </style>
 </head>
@@ -219,8 +241,8 @@ width: calc(100% * 2 / 3);
           </div>
           <p>Next, we'll ask for a few contact details so we can prepare your digital offer.</p>
           <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Secondary</button>
-            <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">N</span>Primary</button>
+            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
+            <button class="btn btn-primary">Complete your details<span class="iconfont" aria-hidden="true">N</span></button>
           </div>
         </div>
       </div>
@@ -242,6 +264,60 @@ width: calc(100% * 2 / 3);
       </div>
     </div>
   </div>
+	<hr>
+	
+	
+	
+	
+	<div class="w-80 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark">
+        <div class="centered p-responsive">
+          <h2>Clearing 2026<br>
+            Secure your place</h2>
+        </div>
+        <div class="p-responsive centered">
+          <div class="progress progress-step-1">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="span-2 p-responsive bck-white black-text">
+          <div class="bg-color-orange-light stroke-orange-dark p-responsive span-2 rounded-1 mb-reg">
+            <h2>Great news! You're eligible to apply</h2>
+            <div class="blockquote-orange">
+              <p>You're eligible to apply for <strong>BA (Hons) Accounting and Finance</strong>.</p>
+            </div>
+          </div>
+          <p>Next, we'll ask for a few contact details so we can prepare your digital offer.</p>
+          <div class="flex flex-wrap gap-1 mb-reg">
+            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
+            <button class="btn btn-primary">Start over<span class="iconfont" aria-hidden="true">N</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-responsive stroke-blue-dark">
+        <div class="bg-color-blue-light p-responsive">
+          <h2>Call handler script</h2>
+        </div>
+        <div class="p-responsive">
+          <div class="blockquote mb-reg">
+            <p>Great news — based on your tariff points, you're eligible to apply for <strong>BSc (Hons) Sociology with Foundation</strong>.</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p>I can now capture contact details so we can prepare your digital offer.</p>
+          </div>
+          <div class="instruction p-1 rounded-0-5">
+            <p>INSTRUCTION: Select <strong>Complete your details</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+	
+	
+	
+	
 </main>
 </body>
 </html>
