@@ -26,12 +26,28 @@
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
 .bg-color-green-light {
 	color: var(--black);
 	background-color: var(--green-light);
 }
-.bg-color-turquoise-dark a {
+.bg-color-green-light a {
 	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+.bg-color-turquoise-dark a {
+	color: var(--white);
 	text-decoration: underline;
 }
 .bg-color-success {
@@ -47,6 +63,15 @@
 	background-color: var(--bg-color-success-light);
 }
 .bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+.i a {
 	color: var(--black);
 	text-decoration: underline;
 }
@@ -155,19 +180,6 @@ width: calc(100% * 2 / 3);
 	border-left: 5px solid var(--green-dark);
 	background-color: var(--green-light);
 }
-.instruction {
-	background-color: var(--instruction-blue-light);
-	padding-left: 1em;
-	border-left: 5px solid var(--instruction-blue-dark);
-}
-.bg-color-turquoise-dark {
-	color: var(--white);
-	background-color: var(--turquoise-dark);
-}
-.bg-color-turquoise-dark a {
-	color: var(--white);
-	text-decoration: underline;
-}
 .grid2 {
 	display: grid;
 	column-gap: 1em;
@@ -201,7 +213,9 @@ width: calc(100% * 2 / 3);
         <div class="span-2 p-responsive bck-white black-text">
           <div class="bg-color-green-light stroke-green-dark p-responsive span-2 rounded-1 mb-reg">
             <h2>Great news! You're eligible to apply</h2>
-            <div class="blockquote-green"><p>You're eligible to apply for <strong>BA (Hons) Accounting and Finance</strong>.</p></div>
+            <div class="blockquote-green">
+              <p>You're eligible to apply for <strong>BA (Hons) Accounting and Finance</strong>.</p>
+            </div>
           </div>
           <p>Next, we'll ask for a few contact details so we can prepare your digital offer.</p>
           <div class="flex flex-wrap gap-1 mb-reg">
@@ -211,7 +225,7 @@ width: calc(100% * 2 / 3);
         </div>
       </div>
       <div class="rounded-responsive stroke-blue-dark">
-        <div class="bg-color-turquoise-dark p-responsive">
+        <div class="bg-color-blue-light p-responsive">
           <h2>Call handler script</h2>
         </div>
         <div class="p-responsive">
