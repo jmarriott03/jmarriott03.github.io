@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--turquoise-dark: #3e6f89;
+--turquoise-light: #759bad;
+--green-dark: #466a3f;
+--green-light: #eff8ee;
+--blue-dark: #141645;
+--blue-light: #d7e8f0;
+--orange-dark: #edd5ab;
+--orange-light: #fdf5e9;
+--instruction-blue-dark: #2a64c5;
+--instruction-blue-light: #ecf3fa;
+--bg-color-success-light: #e0eceb;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-green-light {
+	color: var(--black);
+	background-color: var(--green-light);
+}
+.bg-color-green-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+.bg-color-turquoise-dark a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+.i a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.progress {
+	max-width: 20em;
+	min-width: 12em;
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: 0;
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.progress-step-1 .progress-fill {
+	width: calc(100% / 3);
+}
+.progress-step-2 .progress-fill {
+width: calc(100% * 2 / 3);
+}
+.progress-step-3 .progress-fill {
+	width: 100%;
+}
+.grid-vertical-align {
+	align-items: center;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.text-center {
+	text-align: center;
+}
+.big-icon-container {
+	display: flex;
+	align-items: center;
+}
+.big-icon-text {
+	margin-left: 1em;
+	flex: 1;
+}
+.big-icon-block {
+	display: inline-block;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	font-size: 5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: top;
+	background: none;
+	padding: 0;
+	margin: 0;
+	flex: 0;
+	margin-bottom: -0.17em;
+}
+.inline-block-full-width {
+	display: inline-block;
+	width: 100%;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: middle; /* optional, for nicer alignment with text */
+}
+.tariff-largetext {
+	font-size: 1.17em;
+	line-height: 1.2;
+}
+.stroke-blue-dark {
+	outline: 2px solid var(--blue-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-green-dark {
+	outline: 2px solid var(--green-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.blockquote-blue {
+	padding-left: 1em;
+	border-left: 5px solid var(--blue-dark);
+	background-color: var(--blue-light);
+}
+.blockquote-green {
+	padding-left: 1em;
+	border-left: 5px solid var(--green-dark);
+	background-color: var(--green-light);
+}
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
+.grid2 {
+	display: grid;
+	column-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid2 > * {
+	width: 100%;
+}
+.grid2 > *:last-child {
+	margin-bottom: 0;
+}
+.grid {
+	align-items: start;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	vertical-align: middle;
+	margin: 0.5em;
+}
+/* Base */
+.radio1 label {
+	display: block;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+/* Mouse hover only */
+.radio1 label:hover {
+	background-color: var(--lgrey);
+}
+/* Keyboard focus – use an outline, not background */
+.radio1 label:has(input:focus-visible) {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+/* Selected (checked) state */
+.radio1 label:has(input:checked) {
+background-color: var(--lgrey);
+}
+/* Remove native focus ring from the radio itself */
+.radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {
+outline: none;
+box-shadow: none;
+}
+/* Dark theme overrides for radio labels */
+[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
+}
+.instruction-blue-text {
+	color: var(--instruction-blue-dark);
+}
+.instruction-blue-text a {
+	color: var(--instruction-blue-dark);
+}
+a.black-link {
+	color: var(--black);
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark">
+        <div class="centered p-responsive">
+          <h2>Clearing 2026<br>
+            Secure your place</h2>
+        </div>
+        <div class="p-responsive centered">
+          <div class="progress progress-step-1">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="span-2 p-responsive bck-white black-text">
+          <div class="bg-color-green-light stroke-green-dark p-responsive span-2 rounded-1 mb-reg">
+            <h2>Great news! You're eligible to apply for the full course</h2>
+            <div class="blockquote-green">
+              <p>You're eligible to apply for <strong>BA (Hons) Accounting and Finance</strong>. You can either choose the full course or continue with <strong>BA (Hons) Accounting and Finance with Foundation</strong>.</p>
+            </div>
+          </div>
+          <div class="radio1 mb-reg">
+            <form action="/action_page.php">
+              <label class="stroke rounded-1 p-1 mb-1">
+                <input type="radio" name="fav_number" value="one">
+                I want to apply for <strong>BA (Hons) Accounting and Finance</strong></label>
+              <label class="stroke rounded-1 p-1">
+                <input type="radio" name="fav_number" value="two">
+                I want to continue with my application for <strong>BA (Hons) Accounting and Finance with Foundation</strong></label>
+            </form>
+          </div>
+          <p>Next, we'll ask for a few contact details so we can prepare your digital offer.</p>
+          <div class="flex flex-wrap gap-1 mb-reg">
+            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
+            <button class="btn btn-primary">Review courses<span class="iconfont" aria-hidden="true">N</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-responsive stroke-blue-dark">
+        <div class="bg-color-blue-light p-responsive">
+          <h2>Call handler script</h2>
+        </div>
+        <div class="p-responsive">
+          <div class="blockquote mb-reg">
+            <p>Based on your tariff points, you may be eligible for direct entry rather than the foundation route.</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p>I can explain both options, and then we'll continue with your preferred route.</p>
+          </div>
+          <div class="instruction p-1 rounded-0-5">
+            <p><span class="instruction-blue-text"><strong>INSTRUCTION</strong>:</span> Confirm the selected route and continue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w-80 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark">
+        <div class="centered p-responsive">
+          <h2>Clearing 2026<br>
+            Secure your place</h2>
+        </div>
+        <div class="p-responsive centered">
+          <div class="progress progress-step-1">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="span-2 p-responsive bck-white black-text">
+          <div class="bg-color-orange-light stroke-orange-dark p-responsive span-2 rounded-1 mb-reg">
+            <h2>You cannot apply for this course today</h2>
+            <div class="blockquote-orange">
+              <p>You are not eligible for <strong>BA (Hons) Accounting and Finance</strong> or a foundation route at this stage. To talk through your options, please <a href="#" class="black-link"><strong>contact us</strong></a></p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1 mb-reg">
+            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
+            <button class="btn btn-primary">Start over<span class="iconfont" aria-hidden="true">N</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-responsive stroke-blue-dark">
+        <div class="bg-color-blue-light p-responsive">
+          <h2>Call handler script</h2>
+        </div>
+        <div class="p-responsive">
+          <div class="blockquote mb-reg">
+            <p>We can't progress this enquiry on the selected course, and there are no suitable alternatives available in this flow.</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p>You can review other course options and start a new search if you'd like to continue.</p>
+          </div>
+          <div class="instruction p-1 rounded-0-5">
+            <p><span class="instruction-blue-text"><strong>INSTRUCTION</strong>:</span> Select <strong>Start over</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
