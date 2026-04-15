@@ -448,6 +448,12 @@
 .black-text a {
   color: var(--black);
 }
+.dgrey-text {
+  color: var(--dgrey);
+}
+.dgrey-text a {
+  color: var(--dgrey);
+}
 .centered {
   display: flex;
   justify-content: center;
