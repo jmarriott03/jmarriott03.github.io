@@ -260,47 +260,30 @@ background-color: var(--dgrey);
 a.black-link {
 	color: var(--black);
 }
-
-	.reset-text {
-		color: var(--black);
-		background-color: var(--white);
-	}
-	
-	.reset-text a {
-		color: var(--link);
-		text-decoration: none;
-	}
-	.reset-text a:hover, .reset-text a:focus {
-  text-decoration: underline;
+.reset-text {
+	color: var(--black);
+	background-color: var(--white);
+}
+.reset-text a {
+	color: var(--link);
+	text-decoration: none;
+}
+.reset-text a:hover, .reset-text a:focus {
+	text-decoration: underline;
+}
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.text-right {
+	text-align: right;
 }
 </style>
 </head>
 <body>
 <main>
-	
-	
-	Undergraduate › BSc (Hons) Test Upsell Main (ZZF50)
-How many UCAS tariff points do you have?
-Enter the total number of your known or expected UCAS tariff points.
-UCAS tariff points are a numerical way of comparing qualifications. If you're
-unsure, try the UCAS tariff calculator.
-Your UCAS tariff points:
-96
-Thanks. I can see we're checking BSc (Hons) Test Upsell Main (ZZF50) on the Undergraduate route.
-To check your eligibility for this course, I just need to capture your current tariff points.
-Could you confirm your total UCAS Tariff points?
-If you don't know the total, that's not a problem. If you tell me your grades, we can work it out together.
-INSTRUCTION: Enter the tariff points once confirmed.
- Back Next 
-SCR.CLR.GRADE_INPUT
-Open Tariff Cheat Sheet
-	
-	
-	
-	
-	
-	
-	  <div class="w-80 p-responsive">
+  <div class="w-80 p-responsive">
     <div class="grid">
       <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark">
         <div class="centered p-responsive">
@@ -313,19 +296,17 @@ Open Tariff Cheat Sheet
           </div>
         </div>
         <div class="span-2 p-responsive bck-white reset-text">
-			<p class="dgrey-text">Undergraduate <span class="iconfont" aria-hidden="true">N</span> BSc (Hons) Test Upsell Main (ZZF50)</p>
-      <h2>How many UCAS tariff points do you have?</h2>
-
-			
-			<p><strong>Enter the total number of your known or expected UCAS tariff points.</strong></p>
-<p>UCAS tariff points are a numerical way of comparing qualifications. If you're
-unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
-			
-          <p>Next, we'll ask for a few contact details so we can prepare your digital offer.</p>
+          <p class="dgrey-text">Undergraduate <span class="iconfont" aria-hidden="true">N</span> BSc (Hons) Test Upsell Main (ZZF50)</p>
+          <h2>How many UCAS tariff points do you have?</h2>
+          <p><strong>Enter the total number of your known or expected UCAS tariff points.</strong></p>
+          <p>UCAS tariff points are a numerical way of comparing qualifications. If you're
+            unsure, try the <a href="#" class="nowrap">UCAS tariff calculator</a>.</p>
+          <p><strong>Your UCAS tariff points:<span class="p-1 stroke-theme-black rounded-0-5 ml-1">96</span></strong></p>
           <div class="flex flex-wrap gap-1 mb-reg">
             <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
-            <button class="btn btn-primary">Review courses<span class="iconfont" aria-hidden="true">N</span></button>
+            <button class="btn btn-primary">Next<span class="iconfont" aria-hidden="true">N</span></button>
           </div>
+          <p class="smalltext dgrey-text text-right">SCR.CLR.GRADE_INPUT</p>
         </div>
       </div>
       <div class="rounded-responsive stroke-blue-dark">
@@ -333,12 +314,40 @@ unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
           <h2>Call handler script</h2>
         </div>
         <div class="p-responsive">
-          <div class="blockquote mb-reg">
-            <p>Based on your tariff points, you may be eligible for direct entry rather than the foundation route.</p>
+			
+			
+			
+			
+			
+		 
+  
+  
+  
+  INSTRUCTION: Enter the tariff points once confirmed.
+  Back Next 
+  SCR.CLR.GRADE_INPUT
+  Open Tariff Cheat Sheet	
+			
+			
+			
+			 <div class="blockquote mb-reg">
+            <p>Thanks. I can see we're checking <strong>BSc (Hons) Test Upsell Main (ZZF50)</strong> on the <strong>Undergraduate</strong> route.</p>
           </div>
-          <div class="blockquote mb-reg">
-            <p>I can explain both options, and then we'll continue with your preferred route.</p>
+			
+			 <div class="blockquote mb-reg">
+            <p>To check your eligibility for this course, I just need to capture your current tariff points.</p>
           </div>
+			
+			 <div class="blockquote mb-reg">
+            <p><strong>Could you confirm your total UCAS Tariff points?</strong></p>
+          </div>
+			
+			 <div class="blockquote mb-reg">
+            <p>If you don't know the total, that's not a problem. If you tell me your grades, we can work it out together?</p>
+          </div>
+			
+			
+			
           <div class="instruction p-1">
             <p><span class="instruction-blue-text"><strong>INSTRUCTION</strong>:</span> Confirm the selected route and continue.</p>
           </div>
@@ -347,16 +356,6 @@ unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
     </div>
   </div>
   <hr>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
   <div class="w-80 p-responsive">
     <div class="grid">
       <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark">
@@ -380,12 +379,10 @@ unsure, try the <a href="#">UCAS tariff calculator</a>.</p>
             <form action="/action_page.php">
               <label class="stroke rounded-1 p-1 mb-1">
                 <input type="radio" name="fav_number" value="one">
-                <span>I want to apply for <strong>BA (Hons) Accounting and Finance</strong></span>
-              </label>
+                <span>I want to apply for <strong>BA (Hons) Accounting and Finance</strong></span> </label>
               <label class="stroke rounded-1 p-1">
                 <input type="radio" name="fav_number" value="two">
-                <span>I want to continue with my application for <strong>BA (Hons) Accounting and Finance with Foundation</strong></span>
-              </label>
+                <span>I want to continue with my application for <strong>BA (Hons) Accounting and Finance with Foundation</strong></span> </label>
             </form>
           </div>
           <p>Next, we'll ask for a few contact details so we can prepare your digital offer.</p>
