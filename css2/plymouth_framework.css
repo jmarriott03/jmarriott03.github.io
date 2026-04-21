@@ -389,10 +389,21 @@
 .btn-outline:hover, .btn-outline:focus-visible {
   background-color: var(--btn-outline-hover-bg);
 }
-.flex      { display: flex; }
-  .flex-wrap { flex-wrap: wrap; }
-  .gap-1     { gap: 1em; }
-  .gap-0-5   { gap: 0.5em; }
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.gap-1 {
+  gap: 1em;
+}
+.gap-0-5 {
+  gap: 0.5em;
+}
 .text-resize .btn {
   font-size: 1.25em;
 }
