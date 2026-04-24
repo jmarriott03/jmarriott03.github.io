@@ -13,13 +13,97 @@
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+/* Justify content (main axis) */
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+@media (max-width: 40em) {
+  .justify-start,
+  .justify-center,
+  .justify-end,
+  .justify-between,
+  .justify-around,
+  .justify-evenly {
+    justify-content: flex-start;
+  }
+}
+/* Auto margins (for pushing items) */
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.flex-1 {
+  flex: 1;
+}
+
+	
 </style>
 </head>
 <body>
 <main>
-  <div class="w-80 p-responsive">
+  <div class="w-60 p-responsive">
+	  
+	  
+
+	  
+	  
+	  
+	  <div class="flex gap-1 mb-reg">
+  <button class="btn btn-primary flex-1">One</button>
+  <button class="btn btn-primary flex-1">Two</button>
+  <button class="btn btn-primary flex-1">Three</button>
+</div>
+	  
+	  
+	  
+	  
+	  
+<div class="flex flex-wrap gap-1 mb-reg items-center justify-end">
+  <a href="#" class="py-0-5">Previous page</a>
+  <a href="#" class="py-0-5">Next page</a>
+  <button class="btn btn-primary">
+    <span class="iconfont" aria-hidden="true">/</span>Primary
+  </button>
+  <button class="btn btn-secondary">
+    <span class="iconfont" aria-hidden="true">0</span>Secondary
+  </button>
+</div>
+	  
+	  
+	  
+	  
+	  <div class="flex flex-wrap gap-1 mb-reg items-center">
+  <a href="#" class="py-0-5">Previous page</a>
+  <a href="#" class="py-0-5">Next page</a>
+
+  <div class="ml-auto flex gap-1">
+    <button class="btn btn-primary">
+      <span class="iconfont" aria-hidden="true">/</span>Primary
+    </button>
+    <button class="btn btn-secondary">
+      <span class="iconfont" aria-hidden="true">0</span>Secondary
+    </button>
+  </div>
+</div>
     <h1>button6</h1>
-    <h2>Pills</h2>
+    <h2>1</h2>
     <div class="flex flex-wrap gap-0-5 mb-reg" role="group" aria-label="Study level filters">
       <button class="pill" aria-pressed="true"> Undergraduate <span class="pill-check iconfont" aria-hidden="true">6</span></button>
       <button class="pill" aria-pressed="true"> Postgraduate taught <span class="pill-check iconfont" aria-hidden="true">6</span></button>
@@ -28,12 +112,20 @@
       <button class="pill" aria-pressed="false"> Degree apprenticeship <span class="pill-check iconfont" aria-hidden="true">6</span></button>
       <button class="pill" aria-pressed="false"> Online <span class="pill-check iconfont" aria-hidden="true">6</span></button>
     </div>
-    <h2>Button colours</h2>
+    <h2>2</h2>
     <div class="flex flex-wrap gap-1 mb-reg items-center"><a href="#" class="py-0-5">Previous page</a><a href="#" class="py-0-5">Next page</a>
       <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
       <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
     </div>
-    <h2>Button colours</h2>
+	  
+	  <h2>3</h2>
+    <div class="flex flex-wrap gap-1 mb-reg items-center"><a href="#" class="py-0-5">Previous page</a><a href="#" class="py-0-5">Next page</a>
+      <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+      <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+    </div>
+	  
+	  
+    <h2>4</h2>
     <div class="flex flex-wrap gap-1 mb-reg">
       <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
       <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
@@ -44,7 +136,7 @@
       <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
       <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
     </div>
-    <h2>Disabled buttons</h2>
+    <h2>5</h2>
     <div class="flex flex-wrap gap-1 mb-reg">
       <button class="btn btn-primary">Primary enabled</button>
       <button class="btn btn-primary" disabled>Primary disabled</button>
@@ -52,14 +144,14 @@
       <button class="btn btn-light" disabled>Light disabled</button>
       <button class="btn btn-primary" aria-disabled="true" tabindex="-1"> ARIA disabled</button>
     </div>
-    <h2>Outline button</h2>
+    <h2>6</h2>
     <div class="bck-lgrey p-responsive">
       <button class="btn btn-outline btn-outline-light"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
     </div>
     <div class="bck-dgrey p-responsive mb-reg">
       <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
     </div>
-    <h2>Outline button text resize</h2>
+    <h2>7</h2>
     <div class="bck-lgrey p-responsive text-resize">
       <button class="btn btn-outline btn-outline-light"><span class="iconfont" aria-hidden="true">0</span><span class="nowrap">+44 1752 600600</span></button>
     </div>
