@@ -308,6 +308,7 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
+  justify-content: center;
   -webkit-appearance: none;
   outline-offset: 3px;
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
