@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--turquoise-dark: #3e6f89;
+--turquoise-light: #759bad;
+--green-dark: #466a3f;
+--green-light: #eff8ee;
+--blue-dark: #141645;
+--blue-light: #d7e8f0;
+--orange-dark: #edd5ab;
+--orange-light: #fdf5e9;
+--instruction-blue-dark: #2a64c5;
+--instruction-blue-light: #ecf3fa;
+--bg-color-success-light: #e0eceb;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-green-light {
+	color: var(--black);
+	background-color: var(--green-light);
+}
+.bg-color-green-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+.bg-color-turquoise-dark a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+.in a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.progress {
+	max-width: 20em;
+	min-width: 12em;
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: 0;
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.progress-step-1 .progress-fill {
+	width: calc(100% / 3);
+}
+.progress-step-2 .progress-fill {
+width: calc(100% * 2 / 3);
+}
+.progress-step-3 .progress-fill {
+	width: 100%;
+}
+.grid-vertical-align {
+	align-items: center;
+}
+.stroke-theme-dark {
+	outline: 2px solid hsl(var(--bg-color-dark));
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.text-center {
+	text-align: center;
+}
+.big-icon-container {
+	display: flex;
+	align-items: center;
+}
+.big-icon-text {
+	margin-left: 1em;
+	flex: 1;
+}
+.big-icon-block {
+	display: inline-block;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	font-size: 5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: top;
+	background: none;
+	padding: 0;
+	margin: 0;
+	flex: 0;
+	margin-bottom: -0.17em;
+}
+.inline-block-full-width {
+	display: inline-block;
+	width: 100%;
+}
+.btn-rounded {
+	border-radius: 2em;
+}
+.step-actions {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+.previous-step {
+	padding: 0;
+	margin: 0;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+.tariff-largetext {
+	font-size: 1.17em;
+	line-height: 1.2;
+}
+.stroke-blue-dark {
+	outline: 2px solid var(--blue-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-green-dark {
+	outline: 2px solid var(--green-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.blockquote-blue {
+	padding-left: 1em;
+	border-left: 5px solid var(--blue-dark);
+	background-color: var(--blue-light);
+}
+.blockquote-green {
+	padding-left: 1em;
+	border-left: 5px solid var(--green-dark);
+	background-color: var(--green-light);
+}
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
+.grid2 {
+	display: grid;
+	column-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid2 > * {
+	width: 100%;
+}
+.grid2 > *:last-child {
+	margin-bottom: 0;
+}
+.grid {
+	align-items: start;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	margin: 0.5em;
+}
+.radio1 label {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1em;
+	align-items: start;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+.radio1 label span {
+	display: block;
+}
+.radio1 label:hover {
+	background-color: var(--lgrey);
+}
+.radio1 label:has(input:focus-visible) {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.radio1 label:has(input:checked) {
+background-color: var(--lgrey);
+}
+.radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {
+outline: none;
+box-shadow: none;
+}
+[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
+}
+.instruction-blue-text {
+	color: var(--instruction-blue-dark);
+}
+.instruction-blue-text a {
+	color: var(--instruction-blue-dark);
+}
+a.black-link {
+	color: var(--black);
+}
+.reset-text {
+	color: var(--black);
+	background-color: var(--white);
+}
+.reset-text a {
+	color: var(--link);
+	text-decoration: none;
+}
+.reset-text a:hover, .reset-text a:focus {
+	text-decoration: underline;
+}
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.svg-footer {
+	background: var(--white);
+	width: 100%;
+	grid-column: 1 / -1;
+}
+.svg-footer img {
+	display: block;   /* removes inline spacing */
+	width: 100%;
+	height: auto;
+}
+.grid2 > .span-2 {
+	grid-column: 1 / -1;
+}
+.bg-gradient-blue-turquoise {
+	background: linear-gradient(to right, #1d347e, #9fcac5);
+}
+.bg-gradient-blue-turquoise2 {
+	background: linear-gradient( to bottom, #9fcac5 0%, #1d347e 20% );
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-60 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-gradient-blue-turquoise stroke-blue-dark">
+        <div class="centered p-responsive">
+          <h2 class="white-text">Clearing 2026<br>
+            Secure your place</h2>
+        </div>
+        <div class="p-responsive centered">
+          <div class="progress progress-step-3">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="span-2 p-responsive bck-white reset-text">
+          <h2>Congratulations!</h2>
+          <h2>You have received a digital offer</h2>
+          <p>Course: <strong>BA (Hons) Accounting and Finance (N420)</strong> Course code: <strong>N401</strong> Institution code: <strong>P60</strong></p>
+          <p>We've sent confirmation of this offer to: <strong>johnsmith@example.com</strong></p>
+          <p>Add University of Plymouth as your Clearing choice in <strong>UCAS Hub</strong> as soon as possible. We can only confirm your place once your application has been received through UCAS.</p>
+          <button class="btn btn-primary">Accept your offer</button>
+        </div>
+        <div class="svg-footer"><img src="images/cheeks260430b.svg" alt=""/></div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w-60 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-gradient-blue-turquoise2 stroke-blue-dark">
+        <div class="centered p-responsive">
+          <h2 class="white-text">Clearing 2026<br>
+            Secure your place</h2>
+        </div>
+        <div class="p-responsive centered">
+          <div class="progress progress-step-3">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="span-2 p-responsive bck-white reset-text">
+          <h2>Congratulations!</h2>
+          <h2>You have received a digital offer</h2>
+          <p>Course: <strong>BA (Hons) Accounting and Finance (N420)</strong> Course code: <strong>N401</strong> Institution code: <strong>P60</strong></p>
+          <p>We've sent confirmation of this offer to: <strong>johnsmith@example.com</strong></p>
+          <p>Add University of Plymouth as your Clearing choice in <strong>UCAS Hub</strong> as soon as possible. We can only confirm your place once your application has been received through UCAS.</p>
+          <button class="btn btn-primary">Accept your offer</button>
+        </div>
+        <div class="svg-footer"><img src="images/cheeks260430.svg" alt=""/></div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w-60 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-gradient-blue-turquoise stroke-blue-dark">
+        <div class="span-2 p-responsive bck-white reset-text">
+          <h2>Congratulations!</h2>
+          <h2>You have received a digital offer</h2>
+          <p>Course: <strong>BA (Hons) Accounting and Finance (N420)</strong> Course code: <strong>N401</strong> Institution code: <strong>P60</strong></p>
+          <p>We've sent confirmation of this offer to: <strong>johnsmith@example.com</strong></p>
+          <p>Add University of Plymouth as your Clearing choice in <strong>UCAS Hub</strong> as soon as possible. We can only confirm your place once your application has been received through UCAS.</p>
+          <button class="btn btn-primary">Accept your offer</button>
+        </div>
+        <div class="svg-footer"><img src="images/cheeks260430b.svg" alt=""/></div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w-60 p-responsive">
+    <div class="grid">
+      <div class="grid2 span-2 rounded-responsive bg-gradient-blue-turquoise2 stroke-blue-dark">
+        <div class="span-2 p-responsive bck-white reset-text">
+          <h2>Congratulations!</h2>
+          <h2>You have received a digital offer</h2>
+          <p>Course: <strong>BA (Hons) Accounting and Finance (N420)</strong> Course code: <strong>N401</strong> Institution code: <strong>P60</strong></p>
+          <p>We've sent confirmation of this offer to: <strong>johnsmith@example.com</strong></p>
+          <p>Add University of Plymouth as your Clearing choice in <strong>UCAS Hub</strong> as soon as possible. We can only confirm your place once your application has been received through UCAS.</p>
+          <button class="btn btn-primary">Accept your offer</button>
+        </div>
+        <div class="svg-footer"><img src="images/cheeks260430.svg" alt=""/></div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
