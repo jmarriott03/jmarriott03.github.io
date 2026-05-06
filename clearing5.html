@@ -91,19 +91,10 @@
 	overflow: hidden;
 }
 .progress-fill {
-	width: 0;
+	width: var(--progress, 0%);
 	height: 100%;
 	background: var(--black);
 	float: left;
-}
-.progress-step-1 .progress-fill {
-	width: calc(100% / 3);
-}
-.progress-step-2 .progress-fill {
-width: calc(100% * 2 / 3);
-}
-.progress-step-3 .progress-fill {
-	width: 100%;
 }
 .grid-vertical-align {
 	align-items: center;
@@ -272,22 +263,21 @@ a.black-link {
 	outline-offset: -2px;
 	overflow: hidden;
 }
-	.flex-2 {
-  flex: 2;
+.flex-2 {
+	flex: 2;
 }
-	.flex-1 {
+.flex-1 {
 	flex: 1;
 }
 
-	/* Stack below 60em */
+/* Stack below 60em */
 @media (max-width: 60em) {
-  .flex-2,
-  .flex-1 {
-    flex: 0 0 100%;
-  }
+.flex-2, .flex-1 {
+	flex: 0 0 100%;
 }
-	.align-items-center {
-  align-items: center; /* vertical alignment */
+}
+.align-items-center {
+	align-items: center; /* vertical alignment */
 }
 	
 /*
@@ -296,117 +286,67 @@ a.black-link {
   align-items: center;
 }
 */
-	
 </style>
 </head>
 <body>
 <main>
-	
-	
-	
-	<div class="w-80 p-responsive">
-		
-		
-		<div class="flex flex-wrap gap-1">
-		<div class="rounded-responsive stroke-blue-dark flex-2">
-			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
-			
-			<div class="flex-2"><h2>Clearing 2026<br>
-            Secure your place</h2></div><div class="flex-1"><div class="progress progress-step-1 align-items-center">
-            <div class="progress-fill"></div>
-          </div></div>
-			
-			</div>
-		<div class="p-responsive">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		
-		</div>
-		
-		<div class="bck-lgrey p-responsive flex-1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-			
-			
-			</div>
-	</div>
-	
-	<hr>
-	
-	
-	<div class="w-80 p-responsive">
-		
-		
-		<div class="flex flex-wrap gap-1">
-		<div class="rounded-responsive stroke-blue-dark flex-2">
-			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
-			
-			<div class="flex-2"><h2>Clearing 2026<br>
-            Secure your place</h2></div><div class="flex-1"><div class="progress progress-step-1 align-items-center">
-            <div class="progress-fill"></div>
-          </div></div>
-			
-			</div>
-		<div class="p-responsive">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		
-		</div>
-		
-<!--		<div class="bck-lgrey p-responsive flex-1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>-->
-			
-			
-			</div>
-	</div>
-	
-	
-	
-	
-	
+  <div class="w-80 p-responsive">
+    <div class="grid">
+      <div class="rounded-responsive stroke-blue-dark span-2">
+        <div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
+          <div class="flex-2">
+            <h2>Clearing 2026<br>
+              Secure your place</h2>
+          </div>
+          <div class="flex-1">
+            <div class="progress align-items-center">
+              <div class="progress-fill" style="--progress: 33%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-responsive">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="rounded-responsive stroke-blue-dark flex-1">
+		  <div class="bck-lgrey p-responsive">
+			   <h2>Call handler script</h2></div>
+		  <div class="p-responsive">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+  
+<div class="w-80 p-responsive">
+    <div class="grid">
+      <div class="rounded-responsive stroke-blue-dark span-2">
+        <div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
+          <div class="flex-2">
+            <h2>Clearing 2026<br>
+              Secure your place</h2>
+          </div>
+          <div class="flex-1">
+            <div class="progress align-items-center">
+              <div class="progress-fill" style="--progress: 33%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-responsive">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
 <!--
-	<div class="w-60 p-responsive">
-		<div class="rounded-responsive stroke-blue-dark">
-		
-			
-			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
-			
-			<div class="flex-2"><h2>Clearing 2026<br>
-            Secure your place</h2></div><div class="flex-1"><div class="progress progress-step-1 align-items-center">
-            <div class="progress-fill"></div>
-          </div></div>
-			
-			</div>
-		<div class="p-responsive">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		
-		</div>
-		
-		
-	</div>
+      <div class="rounded-responsive stroke-blue-dark flex-1">
+		  <div class="bck-lgrey p-responsive">
+			   <h2>Call handler script</h2></div>
+		  <div class="p-responsive">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      </div>
 -->
-	
-	
-	
-	
-	
-	
-	
-	<div class="w-60 p-responsive">
-		<div class="rounded-responsive stroke-blue-dark">
-		
-			
-			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
-			
-			<div class="flex-1">1</div><div class="flex-1">2</div>
-			
-			</div>
-		<div class="p-responsive">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-		
-		</div>
-		
-		
-	</div>
+    </div>
+  </div>
 	
 	
 	
@@ -415,6 +355,20 @@ a.black-link {
 	
 	
 	
+	
+	
+  
+  <div class="w-60 p-responsive">
+    <div class="rounded-responsive stroke-blue-dark">
+      <div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">
+        <div class="flex-1">1</div>
+        <div class="flex-1">2</div>
+      </div>
+      <div class="p-responsive">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+  </div>
   <div class="w-80 p-responsive">
     <div class="grid">
       <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark">
@@ -565,5 +519,16 @@ a.black-link {
     </div>
   </div>
 </main>
+<dw-container-div> 
+  <script src="/static/files/deviceClientScript.js"></script> 
+  <script src="/static/files/IOSScrolling.js"></script> 
+  <script src="/static/files/HTMLDOMDiff.js"></script> 
+  <script src="/static/files/HTMLSimpleDOM.js"></script> 
+  <script src="/static/files/HTMLTokenizer.js"></script> 
+  <script src="/static/files/murmurhash3_gc.js"></script> 
+  <script src="/static/files/RemoteFunctions.js"></script> 
+  <script src="/static/files/LiveUpdateTools.js"></script> 
+  <script>$dwJQuery = window.parent.$; window.DevicePreview_RenderSuccess = true; DW_LiveEdit_SetupDoc('<!doctype html>\n<html lang="en-GB" data_liveedit_tagid="0x0000010c185d4f70">\n<head data_liveedit_tagid="0x0000010c15d531c0">\n<meta charset="UTF-8" data_liveedit_tagid="0x0000010c1865a2f0">\n<meta name="description" content="Author: Jamie Marriott" data_liveedit_tagid="0x0000010c15d4f8e0">\n<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" data_liveedit_tagid="0x0000010c15d4a380">\n<link rel="stylesheet" href="css2\/plymouth_reset.css" data_liveedit_tagid="0x0000010c15d497c0">\n<link rel="stylesheet" href="css2\/plymouth_framework.css" data_liveedit_tagid="0x0000010c15d44130">\n<link rel="stylesheet" href="css2\/plymouth_theme.css" data_liveedit_tagid="0x0000010c15d404c0">\n<title data_liveedit_tagid="0x0000010c15d54eb0">University of Plymouth<\/title>\n<style data_liveedit_tagid="0x0000010c15d55110">\n:root {\n--turquoise-dark: #3e6f89;\n--turquoise-light: #759bad;\n--green-dark: #466a3f;\n--green-light: #eff8ee;\n--blue-dark: #141645;\n--blue-light: #d7e8f0;\n--orange-dark: #edd5ab;\n--orange-light: #fdf5e9;\n--instruction-blue-dark: #2a64c5;\n--instruction-blue-light: #ecf3fa;\n--bg-color-success-light: #e0eceb;\n}\n* {\n	outline: 1px dotted red;\n	outline-offset: -1px;\n}\n.bg-color-blue-light {\n	color: var(--black);\n	background-color: var(--blue-light);\n}\n.bg-color-blue-light a {\n	color: var(--black);\n	text-decoration: underline;\n}\n.bg-color-green-light {\n	color: var(--black);\n	background-color: var(--green-light);\n}\n.bg-color-green-light a {\n	color: var(--black);\n	text-decoration: underline;\n}\n.bg-color-orange-light {\n	color: var(--black);\n	background-color: var(--orange-light);\n}\n.bg-color-orange-light a {\n	color: var(--black);\n	text-decoration: underline;\n}\n.bg-color-turquoise-dark {\n	color: var(--white);\n	background-color: var(--turquoise-dark);\n}\n.bg-color-turquoise-dark a {\n	color: var(--white);\n	text-decoration: underline;\n}\n.bg-color-success {\n	color: var(--white);\n	background-color: var(--btn-success);\n}\n.bg-color-success a {\n	color: var(--white);\n	text-decoration: underline;\n}\n.bg-color-success-light {\n	color: var(--black);\n	background-color: var(--bg-color-success-light);\n}\n.bg-color-success-light a {\n	color: var(--black);\n	text-decoration: underline;\n}\n.instruction {\n	background-color: var(--instruction-blue-light);\n	padding-left: 1em;\n	border-left: 5px solid var(--instruction-blue-dark);\n}\n.i a {\n	color: var(--black);\n	text-decoration: underline;\n}\n.progress {\n	height: 1em;\n	border-radius: 0.5em;\n	border: 2px solid var(--white);\n	background: white;\n	overflow: hidden;\n}\n.progress-fill {\n	width: 0;\n	height: 100%;\n	background: var(--black);\n	float: left;\n}\n.progress-step-1 .progress-fill {\n	width: calc(100% \/ 3);\n}\n.progress-step-2 .progress-fill {\nwidth: calc(100% * 2 \/ 3);\n}\n.progress-step-3 .progress-fill {\n	width: 100%;\n}\n.grid-vertical-align {\n	align-items: center;\n}\n.stroke-theme-dark {\n	outline: 2px solid hsl(var(--bg-color-dark));\n	outline-offset: -2px;\n	overflow: hidden;\n}\n.text-center {\n	text-align: center;\n}\n.big-icon-container {\n	display: flex;\n	align-items: center;\n}\n.big-icon-text {\n	margin-left: 1em;\n	flex: 1;\n}\n.big-icon-block {\n	display: inline-block;\n	font-family: \'icon\', sans-serif;\n	font-weight: normal;\n	font-size: 5em;\n	line-height: 1;\n	text-align: left;\n	vertical-align: top;\n	background: none;\n	padding: 0;\n	margin: 0;\n	flex: 0;\n	margin-bottom: -0.17em;\n}\n.inline-block-full-width {\n	display: inline-block;\n	width: 100%;\n}\n.btn-rounded {\n	border-radius: 2em;\n}\n.step-actions {\n	display: flex;\n	align-items: center;\n	gap: 1em;\n}\n.previous-step {\n	padding: 0;\n	margin: 0;\n}\n.inline-block {\n	display: inline-block;\n	vertical-align: middle;\n}\n.tariff-largetext {\n	font-size: 1.17em;\n	line-height: 1.2;\n}\n.stroke-blue-dark {\n	outline: 2px solid var(--blue-dark);\n	outline-offset: -2px;\n	overflow: hidden;\n}\n.stroke-green-dark {\n	outline: 2px solid var(--green-dark);\n	outline-offset: -2px;\n	overflow: hidden;\n}\n.stroke-orange-dark {\n	outline: 2px solid var(--orange-dark);\n	outline-offset: -2px;\n	overflow: hidden;\n}\n.blockquote {\n	padding-left: 1em;\n	border-left: 5px solid var(--mgrey);\n}\n.blockquote-blue {\n	padding-left: 1em;\n	border-left: 5px solid var(--blue-dark);\n	background-color: var(--blue-light);\n}\n.blockquote-green {\n	padding-left: 1em;\n	border-left: 5px solid var(--green-dark);\n	background-color: var(--green-light);\n}\n.blockquote-orange {\n	padding-left: 1em;\n	border-left: 5px solid var(--orange-dark);\n	background-color: var(--orange-light);\n}\n.grid2 {\n	display: grid;\n	column-gap: 1em;\n	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));\n}\n.grid2 > * {\n	width: 100%;\n}\n.grid2 > *:last-child {\n	margin-bottom: 0;\n}\n.grid {\n	align-items: start;\n}\nhr {\n	border: none;\n	border-top: 2px dotted var(--mgrey);\n}\n.radio1 input[type=\'radio\'] {\n	transform: scale(2);\n	margin: 0.5em;\n}\n.radio1 label {\n	display: grid;\n	grid-template-columns: auto 1fr;\n	column-gap: 1em;\n	align-items: start;\n	cursor: pointer;\n	background-color: transparent;\n	transition: background-color 0.2s ease;\n}\n.radio1 label span {\n	display: block;\n}\n.radio1 label:hover {\n	background-color: var(--lgrey);\n}\n.radio1 label:has(input:focus-visible) {\noutline: 2px solid var(--link);\noutline-offset: 2px;\n}\n.radio1 label:has(input:checked) {\nbackground-color: var(--lgrey);\n}\n.radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {\noutline: none;\nbox-shadow: none;\n}\n[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {\nbackground-color: var(--dgrey);\n}\n.instruction-blue-text {\n	color: var(--instruction-blue-dark);\n}\n.instruction-blue-text a {\n	color: var(--instruction-blue-dark);\n}\na.black-link {\n	color: var(--black);\n}\n.reset-text {\n	color: var(--black);\n	background-color: var(--white);\n}\n.reset-text a {\n	color: var(--link);\n	text-decoration: none;\n}\n.reset-text a:hover, .reset-text a:focus {\n	text-decoration: underline;\n}\n.stroke-theme-black {\n	outline: 2px solid var(--black);\n	outline-offset: -2px;\n	overflow: hidden;\n}\n	.flex-2 {\n  flex: 2;\n}\n	.flex-1 {\n	flex: 1;\n}\n\n	\/* Stack below 60em *\/\n@media (max-width: 60em) {\n  .flex-2,\n  .flex-1 {\n    flex: 0 0 100%;\n  }\n}\n	.align-items-center {\n  align-items: center; \/* vertical alignment *\/\n}\n	\n\/*\n	.flex {\n  display: flex;\n  align-items: center;\n}\n*\/\n	\n<\/style>\n<\/head>\n<body data_liveedit_tagid="0x0000010c185d7120">\n<main data_liveedit_tagid="0x0000010c185d7380">\n	\n	\n	\n	<div class="w-80 p-responsive" data_liveedit_tagid="0x0000010c185d75e0">\n		\n		\n		<div class="flex flex-wrap gap-1" data_liveedit_tagid="0x0000010c185d7840">\n		<div class="rounded-responsive stroke-blue-dark flex-2" data_liveedit_tagid="0x0000010c185d7aa0">\n			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive" data_liveedit_tagid="0x0000010c185d7d00">\n			\n			<div class="flex-2" data_liveedit_tagid="0x0000010c15c2c110"><h2 data_liveedit_tagid="0x0000010c15c2c240">Clearing 2026<br data_liveedit_tagid="0x0000010c15c2c4a0">\n            Secure your place<\/h2><\/div><div class="flex-1" data_liveedit_tagid="0x0000010c185d8530"><div class="progress progress-step-1 align-items-center" data_liveedit_tagid="0x0000010c185d8660">\n            <div class="progress-fill" data_liveedit_tagid="0x0000010c185d88c0"><\/div>\n          <\/div><\/div>\n			\n			<\/div>\n		<div class="p-responsive" data_liveedit_tagid="0x0000010c185d8d80">\n		<p data_liveedit_tagid="0x0000010c185d8fe0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n		<\/div>\n		\n		<\/div>\n		\n		<div class="bck-lgrey p-responsive flex-1" data_liveedit_tagid="0x0000010c16dc24d0"><p data_liveedit_tagid="0x0000010c16dc2600">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p><\/div>\n			\n			\n			<\/div>\n	<\/div>\n	\n	<hr data_liveedit_tagid="0x0000010c15c2a8c0">\n	\n	\n	<div class="w-80 p-responsive" data_liveedit_tagid="0x0000010c15d591a0">\n		\n		\n		<div class="flex flex-wrap gap-1" data_liveedit_tagid="0x0000010c15d585c0">\n		<div class="rounded-responsive stroke-blue-dark flex-2" data_liveedit_tagid="0x0000010c15d561b0">\n			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive" data_liveedit_tagid="0x0000010c15d598a0">\n			\n			<div class="flex-2" data_liveedit_tagid="0x0000010c15d5c270"><h2 data_liveedit_tagid="0x0000010c15d59b00">Clearing 2026<br data_liveedit_tagid="0x0000010c15d542f0">\n            Secure your place<\/h2><\/div><div class="flex-1" data_liveedit_tagid="0x0000010c15d5a220"><div class="progress progress-step-1 align-items-center" data_liveedit_tagid="0x0000010c15d58a80">\n            <div class="progress-fill" data_liveedit_tagid="0x0000010c15d58820"><\/div>\n          <\/div><\/div>\n			\n			<\/div>\n		<div class="p-responsive" data_liveedit_tagid="0x0000010c15d59fc0">\n		<p data_liveedit_tagid="0x0000010c15d5cf80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n		<\/div>\n		\n		<\/div>\n		\n<!--		<div class="bck-lgrey p-responsive flex-1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p><\/div>-->\n			\n			\n			<\/div>\n	<\/div>\n	\n	\n	\n	\n	\n<!--\n	<div class="w-60 p-responsive">\n		<div class="rounded-responsive stroke-blue-dark">\n		\n			\n			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive">\n			\n			<div class="flex-2"><h2>Clearing 2026<br>\n            Secure your place<\/h2><\/div><div class="flex-1"><div class="progress progress-step-1 align-items-center">\n            <div class="progress-fill"><\/div>\n          <\/div><\/div>\n			\n			<\/div>\n		<div class="p-responsive">\n		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n		<\/div>\n		\n		<\/div>\n		\n		\n	<\/div>\n-->\n	\n	\n	\n	\n	\n	\n	\n	<div class="w-60 p-responsive" data_liveedit_tagid="0x0000010c185dbbb0">\n		<div class="rounded-responsive stroke-blue-dark" data_liveedit_tagid="0x0000010c185dbe10">\n		\n			\n			<div class="flex flex-wrap align-items-center gap-1 bck-lgrey p-responsive" data_liveedit_tagid="0x0000010c185dc070">\n			\n			<div class="flex-1" data_liveedit_tagid="0x0000010c185dc2d0">1<\/div><div class="flex-1" data_liveedit_tagid="0x0000010c185dc660">2<\/div>\n			\n			<\/div>\n		<div class="p-responsive" data_liveedit_tagid="0x0000010c185dcb20">\n		<p data_liveedit_tagid="0x0000010c185dcd80">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>\n		<\/div>\n		\n		<\/div>\n		\n		\n	<\/div>\n	\n	\n	\n	\n	\n	\n	\n	\n  <div class="w-80 p-responsive" data_liveedit_tagid="0x0000010c185dd4a0">\n    <div class="grid" data_liveedit_tagid="0x0000010c185dd700">\n      <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark" data_liveedit_tagid="0x0000010c185dd960">\n        <div class="centered p-responsive" data_liveedit_tagid="0x0000010c185ddbc0">\n          <h2 data_liveedit_tagid="0x0000010c185dde20">Clearing 2026<br data_liveedit_tagid="0x0000010c185de080">\n            Secure your place<\/h2>\n        <\/div>\n        <div class="p-responsive centered" data_liveedit_tagid="0x0000010c185de520">\n          <div class="progress progress-step-1" data_liveedit_tagid="0x0000010c185de780">\n            <div class="progress-fill" data_liveedit_tagid="0x0000010c185de9e0"><\/div>\n          <\/div>\n        <\/div>\n        <div class="span-2 p-responsive bck-white reset-text" data_liveedit_tagid="0x0000010c185deea0">\n          <p class="dgrey-text" data_liveedit_tagid="0x0000010c185df100">Undergraduate <span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c185df360">N<\/span> BA (Hons) Accounting and Finance (ZZF50)<\/p>\n          <h2 data_liveedit_tagid="0x0000010c185df820">How many UCAS tariff points do you have?<\/h2>\n          <p data_liveedit_tagid="0x0000010c185dfbb0"><strong data_liveedit_tagid="0x0000010c185dfce0">Enter the total number of your known or expected UCAS tariff points.<\/strong><\/p>\n          <p data_liveedit_tagid="0x0000010c185e0070">UCAS tariff points are a numerical way of comparing qualifications. If you\'re\n            unsure, try the <a href="#" class="nowrap" data_liveedit_tagid="0x0000010c185e02d0">UCAS tariff calculator<\/a>.<\/p>\n          <p data_liveedit_tagid="0x0000010c185e0790"><strong data_liveedit_tagid="0x0000010c185e08c0">Your UCAS tariff points:<span class="p-1 stroke-theme-black rounded-0-5 ml-1" data_liveedit_tagid="0x0000010c185e0b20">96<\/span><\/strong><\/p>\n          <div class="flex flex-wrap gap-1 mb-reg" data_liveedit_tagid="0x0000010c185e0eb0">\n            <button class="btn btn-light" data_liveedit_tagid="0x0000010c185e1110"><span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c185e1240">P<\/span>Back<\/button>\n            <button class="btn btn-primary" data_liveedit_tagid="0x0000010c185e1700">Next<span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c185e1960">N<\/span><\/button>\n          <\/div>\n        <\/div>\n      <\/div>\n      <div class="rounded-responsive stroke-blue-dark" data_liveedit_tagid="0x0000010c15c22130">\n        <div class="bg-color-blue-light p-responsive" data_liveedit_tagid="0x0000010c15c22390">\n          <h2 data_liveedit_tagid="0x0000010c15c225f0">Call handler script<\/h2>\n        <\/div>\n        <div class="p-responsive" data_liveedit_tagid="0x0000010c15c22ab0">\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c15c22d10">\n            <p data_liveedit_tagid="0x0000010c15c22f70">Thanks. I can see we\'re checking <strong data_liveedit_tagid="0x0000010c15c231d0">BA (Hons) Accounting and Finance (ZZF50)<\/strong> on the <strong data_liveedit_tagid="0x0000010c15c23560">Undergraduate<\/strong> route.<\/p>\n          <\/div>\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c15c23c80">\n            <p data_liveedit_tagid="0x0000010c15c24140">To check your eligibility for this course, I just need to capture your current tariff points.<\/p>\n          <\/div>\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c15c24600">\n            <p data_liveedit_tagid="0x0000010c15c24860"><strong data_liveedit_tagid="0x0000010c15c24990">Could you confirm your total UCAS Tariff points?<\/strong><\/p>\n          <\/div>\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c15c24e50">\n            <p data_liveedit_tagid="0x0000010c15c250b0">If you don\'t know the total, that\'s not a problem. If you tell me your grades, we can work it out together.<\/p>\n          <\/div>\n          <div class="instruction p-1 mb-reg" data_liveedit_tagid="0x0000010c15c25b60">\n            <p data_liveedit_tagid="0x0000010c15c29250"><span class="instruction-blue-text" data_liveedit_tagid="0x0000010c15c29710"><strong data_liveedit_tagid="0x0000010c15c2ae10">INSTRUCTION<\/strong>:<\/span> Enter the tariff points once confirmed.<\/p>\n          <\/div>\n          <button class="btn btn-info" data_liveedit_tagid="0x0000010c15c2ca70"><span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c15c2cba0">;<\/span>Open tariff cheat sheet<\/button>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <hr data_liveedit_tagid="0x0000010c15c2d520">\n  <div class="w-80 p-responsive" data_liveedit_tagid="0x0000010c15c2d760">\n    <div class="grid" data_liveedit_tagid="0x0000010c15c2d9c0">\n      <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark" data_liveedit_tagid="0x0000010c15c2dc20">\n        <div class="centered p-responsive" data_liveedit_tagid="0x0000010c15c2de80">\n          <h2 data_liveedit_tagid="0x0000010c15c2e0e0">Clearing 2026<br data_liveedit_tagid="0x0000010c15c2e340">\n            Secure your place<\/h2>\n        <\/div>\n        <div class="p-responsive centered" data_liveedit_tagid="0x0000010c15c2e7e0">\n          <div class="progress progress-step-1" data_liveedit_tagid="0x0000010c15c2ea40">\n            <div class="progress-fill" data_liveedit_tagid="0x0000010c15c2eca0"><\/div>\n          <\/div>\n        <\/div>\n        <div class="span-2 p-responsive bck-white black-text" data_liveedit_tagid="0x0000010c15c2f160">\n          <div class="bg-color-green-light stroke-green-dark p-responsive span-2 rounded-1 mb-reg" data_liveedit_tagid="0x0000010c15c2f3c0">\n            <h2 data_liveedit_tagid="0x0000010c15c2f620">Great news! You\'re eligible to apply for the full course<\/h2>\n            <div class="blockquote-green" data_liveedit_tagid="0x0000010c15c2f9b0">\n              <p data_liveedit_tagid="0x0000010c15c2fc10">You\'re eligible to apply for <strong data_liveedit_tagid="0x0000010c15c2fe70">BA (Hons) Accounting and Finance<\/strong>. You can either choose the full course or continue with <strong data_liveedit_tagid="0x0000010c15c30200">BA (Hons) Accounting and Finance with Foundation<\/strong>.<\/p>\n            <\/div>\n          <\/div>\n          <div class="radio1 mb-reg" data_liveedit_tagid="0x0000010c15c30920">\n            <form action="\/action_page.php" data_liveedit_tagid="0x0000010c15c30b80">\n              <label class="stroke rounded-1 p-1 mb-1" data_liveedit_tagid="0x0000010c15c30de0">\n                <input type="radio" name="fav_number" value="one" data_liveedit_tagid="0x0000010c15c31040">\n                <span data_liveedit_tagid="0x0000010c15c31280">I want to apply for <strong data_liveedit_tagid="0x0000010c15c314e0">BA (Hons) Accounting and Finance<\/strong><\/span> <\/label>\n              <label class="stroke rounded-1 p-1" data_liveedit_tagid="0x0000010c15c319a0">\n                <input type="radio" name="fav_number" value="two" data_liveedit_tagid="0x0000010c15c31c00">\n                <span data_liveedit_tagid="0x0000010c15c31e40">I want to continue with my application for <strong data_liveedit_tagid="0x0000010c18240130">BA (Hons) Accounting and Finance with Foundation<\/strong><\/span> <\/label>\n            <\/form>\n          <\/div>\n          <p data_liveedit_tagid="0x0000010c18240850">Next, we\'ll ask for a few contact details so we can prepare your digital offer.<\/p>\n          <div class="flex flex-wrap gap-1 mb-reg" data_liveedit_tagid="0x0000010c18240be0">\n            <button class="btn btn-light" data_liveedit_tagid="0x0000010c18240e40"><span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c18240f70">P<\/span>Back<\/button>\n            <button class="btn btn-primary" data_liveedit_tagid="0x0000010c18241430">Review courses<span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c18241690">N<\/span><\/button>\n          <\/div>\n        <\/div>\n      <\/div>\n      <div class="rounded-responsive stroke-blue-dark" data_liveedit_tagid="0x0000010c18241db0">\n        <div class="bg-color-blue-light p-responsive" data_liveedit_tagid="0x0000010c18242010">\n          <h2 data_liveedit_tagid="0x0000010c18242270">Call handler script<\/h2>\n        <\/div>\n        <div class="p-responsive" data_liveedit_tagid="0x0000010c18242730">\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c18242990">\n            <p data_liveedit_tagid="0x0000010c18242bf0">Based on your tariff points, you may be eligible for direct entry rather than the foundation route.<\/p>\n          <\/div>\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c182430b0">\n            <p data_liveedit_tagid="0x0000010c18243310">I can explain both options, and then we\'ll continue with your preferred route.<\/p>\n          <\/div>\n          <div class="instruction p-1" data_liveedit_tagid="0x0000010c182437d0">\n            <p data_liveedit_tagid="0x0000010c18243a30"><span class="instruction-blue-text" data_liveedit_tagid="0x0000010c18243b60"><strong data_liveedit_tagid="0x0000010c18243c90">INSTRUCTION<\/strong>:<\/span> Confirm the selected route and continue.<\/p>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n  <hr data_liveedit_tagid="0x0000010c18244980">\n  <div class="w-80 p-responsive" data_liveedit_tagid="0x0000010c18244bc0">\n    <div class="grid" data_liveedit_tagid="0x0000010c18244f50">\n      <div class="grid2 span-2 rounded-responsive bg-color-turquoise-dark stroke-blue-dark" data_liveedit_tagid="0x0000010c182451b0">\n        <div class="centered p-responsive" data_liveedit_tagid="0x0000010c18245410">\n          <h2 data_liveedit_tagid="0x0000010c18245670">Clearing 2026<br data_liveedit_tagid="0x0000010c182458d0">\n            Secure your place<\/h2>\n        <\/div>\n        <div class="p-responsive centered" data_liveedit_tagid="0x0000010c18245d70">\n          <div class="progress progress-step-3" data_liveedit_tagid="0x0000010c18245fd0">\n            <div class="progress-fill" data_liveedit_tagid="0x0000010c18246230"><\/div>\n          <\/div>\n        <\/div>\n        <div class="span-2 p-responsive bck-white black-text" data_liveedit_tagid="0x0000010c182466f0">\n          <div class="bg-color-orange-light stroke-orange-dark p-responsive span-2 rounded-1 mb-reg" data_liveedit_tagid="0x0000010c18246950">\n            <h2 data_liveedit_tagid="0x0000010c18246bb0">You cannot apply for this course today<\/h2>\n            <div class="blockquote-orange" data_liveedit_tagid="0x0000010c18246f40">\n              <p data_liveedit_tagid="0x0000010c182471a0">You are not eligible for <strong data_liveedit_tagid="0x0000010c18247400">BA (Hons) Accounting and Finance<\/strong> or a foundation route at this stage. To talk through your options, please <a href="#" class="black-link" data_liveedit_tagid="0x0000010c18247790"><strong data_liveedit_tagid="0x0000010c182478c0">contact us<\/strong><\/a><\/p>\n            <\/div>\n          <\/div>\n          <div class="flex flex-wrap gap-1 mb-reg" data_liveedit_tagid="0x0000010c18247fe0">\n            <button class="btn btn-light" data_liveedit_tagid="0x0000010c18248240"><span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c18248370">P<\/span>Back<\/button>\n            <button class="btn btn-primary" data_liveedit_tagid="0x0000010c18248940">Start over<span class="iconfont" aria-hidden="true" data_liveedit_tagid="0x0000010c18248ba0">N<\/span><\/button>\n          <\/div>\n        <\/div>\n      <\/div>\n      <div class="rounded-responsive stroke-blue-dark" data_liveedit_tagid="0x0000010c182492c0">\n        <div class="bg-color-blue-light p-responsive" data_liveedit_tagid="0x0000010c18249520">\n          <h2 data_liveedit_tagid="0x0000010c18249780">Call handler script<\/h2>\n        <\/div>\n        <div class="p-responsive" data_liveedit_tagid="0x0000010c18249c40">\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c18249ea0">\n            <p data_liveedit_tagid="0x0000010c1824a100">We can\'t progress this enquiry on the selected course, and there are no suitable alternatives available in this flow.<\/p>\n          <\/div>\n          <div class="blockquote mb-reg" data_liveedit_tagid="0x0000010c1824a5c0">\n            <p data_liveedit_tagid="0x0000010c1824a820">You can review other course options and start a new search if you\'d like to continue.<\/p>\n          <\/div>\n          <div class="instruction p-1" data_liveedit_tagid="0x0000010c1824ace0">\n            <p data_liveedit_tagid="0x0000010c1824af40"><span class="instruction-blue-text" data_liveedit_tagid="0x0000010c1824b070"><strong data_liveedit_tagid="0x0000010c1824b1a0">INSTRUCTION<\/strong>:<\/span> Select <strong data_liveedit_tagid="0x0000010c1824b660">Start over<\/strong>.<\/p>\n          <\/div>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/main>\n<\/body>\n<\/html>');</script> 
+</dw-container-div>
 </body>
 </html>
