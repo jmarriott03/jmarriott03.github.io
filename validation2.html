@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+
+<style>
+:root {
+--turquoise-dark: #3e6f89;
+--turquoise-light: #759bad;
+--green-dark: #466a3f;
+--green-light: #eff8ee;
+--blue-dark: #141645;
+--blue-light: #d7e8f0;
+--orange-dark: #edd5ab;
+--orange-light: #fdf5e9;
+--instruction-blue-dark: #2a64c5;
+--instruction-blue-light: #ecf3fa;
+--bg-color-success-light: #e0eceb;
+
+--validation-error: #b10e1e;
+--validation-error-border: #d4351c;
+--validation-success: #00703c;
+--validation-success-border: #00703c;
+--validation-success-bg: #f3fbf6;
+--validation-error-bg: #fff5f5;
+}
+
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+
+.bg-color-green-light {
+	color: var(--black);
+	background-color: var(--green-light);
+}
+
+.bg-color-green-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+
+.bg-color-turquoise-dark a {
+	color: var(--white);
+	text-decoration: underline;
+}
+
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+
+.i a {
+	color: var(--black);
+	text-decoration: underline;
+}
+
+.progress {
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+
+.progress-fill {
+	width: var(--progress, 0%);
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.stroke-blue-dark {
+	outline: 2px solid var(--blue-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+
+.stroke-green-dark {
+	outline: 2px solid var(--green-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+
+.blockquote-blue {
+	padding-left: 1em;
+	border-left: 5px solid var(--blue-dark);
+	background-color: var(--blue-light);
+}
+
+.blockquote-green {
+	padding-left: 1em;
+	border-left: 5px solid var(--green-dark);
+	background-color: var(--green-light);
+}
+
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
+
+.grid2 {
+	display: grid;
+	column-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+
+.grid2 > * {
+	width: 100%;
+}
+
+.grid2 > *:last-child {
+	margin-bottom: 0;
+}
+
+.grid {
+	align-items: start;
+}
+
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	margin: 0.5em;
+}
+
+.radio1 label {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1em;
+	align-items: start;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+
+.radio1 label span {
+	display: block;
+}
+
+.radio1 label:hover {
+	background-color: var(--lgrey);
+}
+
+.radio1 label:has(input:focus-visible) {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+
+.radio1 label:has(input:checked) {
+background-color: var(--lgrey);
+}
+
+.radio1 input[type="radio"]:focus,
+.radio1 input[type="radio"]:focus-visible {
+outline: none;
+box-shadow: none;
+}
+
+[data-theme="dark"] .radio1 label:hover,
+[data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
+}
+
+.instruction-blue-text {
+	color: var(--instruction-blue-dark);
+}
+
+.instruction-blue-text a {
+	color: var(--instruction-blue-dark);
+}
+
+a.black-link {
+	color: var(--black);
+}
+
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+
+.flex-2 {
+	flex: 2;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+/* Validation styles */
+
+.ucas-validation-wrapper {
+	margin: -0.5rem 0 1rem 4rem;
+}
+
+.ucas-validation-field {
+	margin-bottom: 1.5rem;
+}
+
+.ucas-validation-label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.ucas-validation-input {
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 3px solid var(--mgrey);
+	font-size: 1.125rem;
+	background: var(--white);
+	transition:
+		border-color 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.ucas-validation-input:focus-visible {
+	outline: 3px solid var(--link);
+	outline-offset: 2px;
+}
+
+.ucas-validation-field.error .ucas-validation-input {
+	border-color: var(--validation-error-border);
+	background-color: var(--validation-error-bg);
+}
+
+.ucas-validation-field.success .ucas-validation-input {
+	border-color: var(--validation-success-border);
+	background-color: var(--validation-success-bg);
+}
+
+.ucas-validation-meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 0.5rem;
+}
+
+.ucas-validation-status {
+	font-size: 1rem;
+	color: var(--black);
+}
+
+.ucas-validation-status.error {
+	color: var(--validation-error);
+	font-weight: bold;
+}
+
+.ucas-validation-status.success {
+	color: var(--validation-success);
+	font-weight: bold;
+}
+
+.ucas-counter {
+	font-size: 0.95rem;
+	color: var(--dgrey);
+}
+
+.hidden {
+	display: none;
+}
+
+@media (max-width: 60em) {
+
+.flex-2,
+.flex-1 {
+	flex: 0 0 100%;
+}
+
+.ucas-validation-wrapper {
+	margin-left: 0;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<div class="w-80 p-responsive">
+
+<div class="grid">
+
+<div class="rounded-responsive stroke-blue-dark span-2">
+
+<div class="flex flex-wrap items-center gap-1 bg-color-turquoise-dark p-responsive">
+
+<div class="flex-2">
+<h2>
+Clearing 2026<br>
+Secure your place
+</h2>
+</div>
+
+<div class="flex-1">
+<div class="progress">
+<div class="progress-fill" style="--progress: 33%"></div>
+</div>
+</div>
+
+</div>
+
+<div class="p-responsive">
+
+<p class="dgrey-text">
+Undergraduate
+<span class="iconfont" aria-hidden="true">N</span>
+BA (Hons) Accounting and Finance (ZZF50)
+</p>
+
+<h2>Do you have a UCAS Personal ID number?</h2>
+
+<p>
+<strong>
+Before you proceed, we need to check whether you already have an application in progress.
+</strong>
+</p>
+
+<p>
+Your UCAS number can be found in your UCAS Hub and in UCAS emails.
+Please enter numbers only with no spaces or hyphens.
+</p>
+
+<div class="radio1 mb-reg">
+
+<form id="ucas-number-form">
+
+<label class="stroke rounded-1 p-1 mb-1">
+
+<input
+type="radio"
+name="ucas_number"
+value="yes"
+id="ucas-yes"
+checked
+>
+
+<span>
+Yes, I have a UCAS number
+</span>
+
+</label>
+
+<div
+class="ucas-validation-wrapper"
+id="ucas-validation-wrapper"
+>
+
+<div
+class="ucas-validation-field"
+id="ucas-validation-field"
+>
+
+<label
+class="ucas-validation-label"
+for="ucas-personal-id"
+>
+10-digit UCAS Personal ID
+</label>
+
+<input
+class="ucas-validation-input"
+id="ucas-personal-id"
+type="text"
+inputmode="numeric"
+autocomplete="off"
+maxlength="10"
+aria-describedby="ucas-validation-status"
+aria-invalid="false"
+>
+
+<div class="ucas-validation-meta">
+
+<div
+id="ucas-validation-status"
+class="ucas-validation-status"
+aria-live="polite"
+>
+Enter 10 digits.
+</div>
+
+<div
+class="ucas-counter"
+id="ucas-counter"
+>
+0 / 10 digits
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<label class="stroke rounded-1 p-1">
+
+<input
+type="radio"
+name="ucas_number"
+value="no"
+id="ucas-no"
+>
+
+<span>
+No, I don't have a UCAS number
+</span>
+
+</label>
+
+</form>
+
+</div>
+
+<div class="flex flex-wrap gap-1 mb-reg">
+
+<button class="btn btn-light">
+<span class="iconfont" aria-hidden="true">P</span>
+Back
+</button>
+
+<button
+class="btn btn-primary"
+id="ucas-next-button"
+disabled
+>
+Next
+<span class="iconfont" aria-hidden="true">N</span>
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="rounded-responsive stroke-blue-dark flex-1">
+
+<div class="bg-color-blue-light p-responsive">
+<h2>Call handler script</h2>
+</div>
+
+<div class="p-responsive">
+
+<div class="blockquote mb-reg">
+<p>
+Before we continue, I just need to check whether you already have an active UCAS application.
+</p>
+</div>
+
+<div class="blockquote mb-reg">
+<p>
+The UCAS Personal ID should contain exactly 10 digits with no spaces or hyphens.
+</p>
+</div>
+
+<div class="blockquote mb-reg">
+<p>
+If the number does not validate first time, reassure the caller and guide them through it step-by-step.
+</p>
+</div>
+
+<div class="instruction p-1">
+<p>
+<span class="instruction-blue-text">
+<strong>INSTRUCTION</strong>:
+</span>
+Do not restart the form. Allow the caller to amend the number inline.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<script>
+const ucasInput = document.getElementById('ucas-personal-id');
+const ucasField = document.getElementById('ucas-validation-field');
+const ucasStatus = document.getElementById('ucas-validation-status');
+const ucasCounter = document.getElementById('ucas-counter');
+const ucasNextButton = document.getElementById('ucas-next-button');
+
+const ucasYes = document.getElementById('ucas-yes');
+const ucasNo = document.getElementById('ucas-no');
+const validationWrapper = document.getElementById('ucas-validation-wrapper');
+
+function updateValidationState() {
+
+	const cleanValue = ucasInput.value.replace(/\D/g, '');
+
+	ucasInput.value = cleanValue;
+
+	const digitCount = cleanValue.length;
+
+	ucasCounter.textContent = digitCount + ' / 10 digits';
+
+	ucasField.classList.remove('error', 'success');
+
+	if (digitCount === 0) {
+
+		ucasStatus.className = 'ucas-validation-status';
+
+		ucasStatus.textContent = 'Enter 10 digits.';
+
+		ucasInput.setAttribute('aria-invalid', 'false');
+
+		ucasNextButton.disabled = true;
+
+		return;
+	}
+
+	if (digitCount < 10) {
+
+		ucasField.classList.add('error');
+
+		ucasStatus.className = 'ucas-validation-status error';
+
+		ucasStatus.textContent =
+			'UCAS Personal ID must contain exactly 10 digits. You have entered ' +
+			digitCount +
+			'.';
+
+		ucasInput.setAttribute('aria-invalid', 'true');
+
+		ucasNextButton.disabled = true;
+
+		return;
+	}
+
+	if (digitCount === 10) {
+
+		ucasField.classList.add('success');
+
+		ucasStatus.className = 'ucas-validation-status success';
+
+		ucasStatus.textContent =
+			'UCAS Personal ID format looks correct.';
+
+		ucasInput.setAttribute('aria-invalid', 'false');
+
+		ucasNextButton.disabled = false;
+	}
+}
+
+function toggleUcasValidation() {
+
+	if (ucasYes.checked) {
+
+		validationWrapper.classList.remove('hidden');
+
+		updateValidationState();
+
+	} else {
+
+		validationWrapper.classList.add('hidden');
+
+		ucasField.classList.remove('error', 'success');
+
+		ucasInput.value = '';
+
+		ucasInput.setAttribute('aria-invalid', 'false');
+
+		ucasStatus.className = 'ucas-validation-status';
+
+		ucasStatus.textContent = 'Enter 10 digits.';
+
+		ucasCounter.textContent = '0 / 10 digits';
+
+		ucasNextButton.disabled = false;
+	}
+}
+
+ucasInput.addEventListener('input', updateValidationState);
+
+ucasYes.addEventListener('change', toggleUcasValidation);
+ucasNo.addEventListener('change', toggleUcasValidation);
+
+toggleUcasValidation();
+</script>
+
+</body>
+</html>
