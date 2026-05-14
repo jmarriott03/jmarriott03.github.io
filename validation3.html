@@ -284,29 +284,24 @@ outline-offset: 2px;
 }
 </style>
 </head>
-
 <body>
 <main>
   <div class="w-80 p-responsive">
-	  <h2>validation3 (not production ready</h2>
+    <h2>validation3 (not production ready</h2>
     <div class="grid">
       <div class="rounded-responsive stroke-blue-dark span-2">
         <div class="flex flex-wrap items-center gap-1 bg-color-turquoise-dark p-responsive">
           <div class="flex-2">
             <h2> Clearing 2026<br>
-              Secure your place </h2>
-          </div>
+              Secure your place </h2></div>
           <div class="flex-1">
             <div class="progress">
-              <div class="progress-fill" style="--progress: 33%"></div>
-            </div>
-          </div>
-        </div>
+              <div class="progress-fill" style="--progress: 33%"></div></div></div></div>
         <div class="p-responsive">
           <h2>Do you have a UCAS Personal ID number?</h2>
-          <p> <strong> Before you proceed, we need to check whether you already have an application in progress. </strong> </p>
-          <p> Your UCAS number can be found in your <a href="https://www.ucas.com/dashboard">UCAS Hub</a> and in UCAS emails.
-            Please enter numbers only with no spaces or hyphens. </p>
+          <p><strong> Before you proceed, we need to check whether you already have an application in progress. </strong></p>
+          <p>Your UCAS number can be found in your <a href="https://www.ucas.com/dashboard">UCAS Hub</a> and in UCAS emails.
+            Please enter numbers only with no spaces or hyphens.</p>
           <div class="radio1 mb-reg">
             <form id="ucas-number-form">
               <label class="stroke rounded-1 p-1 mb-1">
@@ -316,8 +311,7 @@ name="ucas_number"
 value="yes"
 id="ucas-yes"
 checked
->
-                <span> Yes, I have a UCAS number </span> </label>
+><span>Yes, I have a UCAS number</span></label>
               <div
 class="ucas-validation-wrapper"
 id="ucas-validation-wrapper"
@@ -345,55 +339,38 @@ aria-invalid="false"
 id="ucas-validation-status"
 class="ucas-validation-status"
 aria-live="polite"
-> Enter 10 digits. </div>
+>Enter 10 digits.</div>
                     <div
 class="ucas-counter"
 id="ucas-counter"
-> 0 of 10 digits </div>
-                  </div>
-                </div>
-              </div>
+>0 of 10 digits</div></div></div></div>
               <label class="stroke rounded-1 p-1">
                 <input
 type="radio"
 name="ucas_number"
 value="no"
 id="ucas-no"
->
-                <span> No, I don't have a UCAS number </span> </label>
-            </form>
-          </div>
+><span>No, I don't have a UCAS number</span></label>
+            </form></div>
           <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-light"> <span class="iconfont" aria-hidden="true">P</span> Back </button>
+            <button class="btn btn-light"> <span class="iconfont" aria-hidden="true">P</span>Back</button>
             <button
 class="btn btn-primary"
 id="ucas-next-button"
 disabled
-> Next <span class="iconfont" aria-hidden="true">N</span> </button>
-          </div>
-        </div>
-      </div>
+> Next <span class="iconfont" aria-hidden="true">N</span></button></div></div></div>
       <div class="rounded-responsive stroke-blue-dark flex-1">
         <div class="bg-color-blue-light p-responsive">
-          <h2>Call handler script</h2>
-        </div>
+          <h2>Call handler script</h2></div>
         <div class="p-responsive">
           <div class="blockquote mb-reg">
-            <p> Before we continue, I just need to check whether you already have an active UCAS application. </p>
-          </div>
+            <p>Before we continue, I just need to check whether you already have an active UCAS application.</p></div>
           <div class="blockquote mb-reg">
-            <p> The UCAS Personal ID should contain exactly 10 digits with no spaces or hyphens. </p>
-          </div>
+            <p>The UCAS Personal ID should contain exactly 10 digits with no spaces or hyphens.</p></div>
           <div class="blockquote mb-reg">
-            <p> If the number does not validate first time, reassure the caller and guide them through it step-by-step. </p>
-          </div>
+            <p>If the number does not validate first time, reassure the caller and guide them through it step-by-step.</p></div>
           <div class="instruction p-1">
-            <p> <span class="instruction-blue-text"> <strong>INSTRUCTION</strong>: </span> Do not restart the form. Allow the caller to amend the number inline. </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <p><span class="instruction-blue-text"> <strong>INSTRUCTION</strong>:</span>Do not restart the form. Allow the caller to amend the number inline.</p></div></div></div></div></div>
 </main>
 <script>
 const ucasInput = document.getElementById('ucas-personal-id');
@@ -401,99 +378,65 @@ const ucasField = document.getElementById('ucas-validation-field');
 const ucasStatus = document.getElementById('ucas-validation-status');
 const ucasCounter = document.getElementById('ucas-counter');
 const ucasNextButton = document.getElementById('ucas-next-button');
-
 const ucasYes = document.getElementById('ucas-yes');
 const ucasNo = document.getElementById('ucas-no');
 const validationWrapper = document.getElementById('ucas-validation-wrapper');
 
 function updateValidationState() {
-
 	const cleanValue = ucasInput.value.replace(/\D/g, '');
-
 	ucasInput.value = cleanValue;
 
 	const digitCount = cleanValue.length;
-
 	ucasCounter.textContent = digitCount + ' of 10 digits';
-
 	ucasField.classList.remove('error', 'success');
 
 	if (digitCount === 0) {
-
 		ucasStatus.className = 'ucas-validation-status';
-
 		ucasStatus.textContent = 'Enter 10 digits.';
-
 		ucasInput.setAttribute('aria-invalid', 'false');
-
 		ucasNextButton.disabled = true;
-
 		return;
 	}
 
 	if (digitCount < 10) {
-
 		ucasField.classList.add('error');
-
 		ucasStatus.className = 'ucas-validation-status error';
-
 		ucasStatus.textContent =
 			'UCAS Personal ID must contain exactly 10 digits. You have entered ' +
 			digitCount +
 			'.';
 
 		ucasInput.setAttribute('aria-invalid', 'true');
-
 		ucasNextButton.disabled = true;
-
 		return;
 	}
 
 	if (digitCount === 10) {
-
 		ucasField.classList.add('success');
-
 		ucasStatus.className = 'ucas-validation-status success';
-
-		ucasStatus.textContent =
-			'UCAS Personal ID format looks correct.';
-
+		ucasStatus.textContent = 'UCAS Personal ID format looks correct.';
 		ucasInput.setAttribute('aria-invalid', 'false');
-
 		ucasNextButton.disabled = false;
 	}
 }
 
 function toggleUcasValidation() {
-
 	if (ucasYes.checked) {
-
 		validationWrapper.classList.remove('hidden');
-
 		updateValidationState();
-
 	} else {
-
 		validationWrapper.classList.add('hidden');
-
 		ucasField.classList.remove('error', 'success');
-
 		ucasInput.value = '';
-
 		ucasInput.setAttribute('aria-invalid', 'false');
-
 		ucasStatus.className = 'ucas-validation-status';
-
 		ucasStatus.textContent = 'Enter 10 digits.';
-
 		ucasCounter.textContent = '0 / 10 digits';
-
 		ucasNextButton.disabled = false;
 	}
 }
 
 ucasInput.addEventListener('input', updateValidationState);
-
 ucasYes.addEventListener('change', toggleUcasValidation);
 ucasNo.addEventListener('change', toggleUcasValidation);
 
