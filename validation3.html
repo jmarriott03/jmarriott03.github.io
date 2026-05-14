@@ -299,14 +299,8 @@ opacity: 0;
 	color: var(--black);
 	margin-top: 0.1em;
 }
-.ucas-date-input:invalid {
-color: var(--dgrey);
-}
-.ucas-date-input:hover {
-	border-color: var(--blue-dark);
-}
-.ucas-date-input:focus {
-	border-color: var(--link);
+.ucas-date-input {
+	color: var(--dgrey);
 }
 
 @media (max-width: 60em) {
@@ -469,6 +463,23 @@ const dobInput = document.getElementById('ucas-date-of-birth');
 const dobField = document.getElementById('ucas-dob-field');
 const dobStatus = document.getElementById('ucas-dob-status');
 
+function updateNextButtonState() {
+	const isYes = ucasYes.checked;
+	const idValid = ucasInput.value.replace(/\D/g, '').length === 10;
+	const dobValid = !!dobInput.value;
+
+	if (!isYes) {
+		ucasNextButton.disabled = false;
+		return;
+	}
+
+	if (idValid && dobValid) {
+		ucasNextButton.disabled = false;
+	} else {
+		ucasNextButton.disabled = true;
+	}
+}
+
 function validateDob() {
 	if (!dobInput.value) {
 		dobField.classList.remove('success', 'error');
@@ -476,7 +487,7 @@ function validateDob() {
 		dobStatus.className = 'ucas-validation-status';
 		dobStatus.textContent = 'Enter your date of birth.';
 
-		ucasNextButton.disabled = true;
+		updateNextButtonState();
 		return;
 	}
 
@@ -486,7 +497,7 @@ function validateDob() {
 	dobStatus.className = 'ucas-validation-status success';
 	dobStatus.textContent = 'Date of birth entered.';
 
-	ucasNextButton.disabled = false;
+	updateNextButtonState();
 }
 
 function updateValidationState() {
@@ -501,7 +512,7 @@ function updateValidationState() {
 		ucasStatus.className = 'ucas-validation-status';
 		ucasStatus.textContent = 'Enter 10 digits.';
 		ucasInput.setAttribute('aria-invalid', 'false');
-		ucasNextButton.disabled = true;
+		updateNextButtonState();
 		return;
 	}
 
@@ -514,7 +525,7 @@ function updateValidationState() {
 			'.';
 
 		ucasInput.setAttribute('aria-invalid', 'true');
-		ucasNextButton.disabled = true;
+		updateNextButtonState();
 		return;
 	}
 
@@ -522,8 +533,8 @@ function updateValidationState() {
 		ucasField.classList.add('success');
 		ucasStatus.className = 'ucas-validation-status success';
 		ucasStatus.textContent = 'UCAS Personal ID format looks correct.';
-		ucasInput.setAttribute('aria-invalid', 'false');
 
+		ucasInput.setAttribute('aria-invalid', 'false');
 		validateDob();
 		return;
 	}
@@ -551,7 +562,8 @@ function toggleUcasValidation() {
 		dobStatus.textContent = 'Enter your date of birth.';
 
 		ucasCounter.textContent = '0 / 10 digits';
-		ucasNextButton.disabled = false;
+
+		updateNextButtonState();
 	}
 }
 
