@@ -21,12 +21,12 @@
 --instruction-blue-dark: #2a64c5;
 --instruction-blue-light: #ecf3fa;
 --bg-color-success-light: #e0eceb;
---validation-error: #b10e1e;
---validation-error-border: #d4351c;
---validation-success: #00703c;
---validation-success-border: #00703c;
---validation-success-bg: #f3fbf6;
---validation-error-bg: #fff5f5;
+--validation-error: var(--btn-danger);
+--validation-error-border: var(--btn-danger);
+--validation-success: var(--btn-success);
+--validation-success-border: var(--btn-success);
+--validation-success-bg: var(--white);
+--validation-error-bg: var(--white);
 }
 /*
 * {
@@ -216,27 +216,27 @@ a.black-link {
 /* Validation styles */
 
 .ucas-validation-wrapper {
-	margin: -0.5rem 0 1rem 4rem;
+	margin: -0.5em 0 1em 4em;
 }
 .ucas-validation-field {
-	margin-bottom: 1.5rem;
+	margin-bottom: 1.5em;
 }
 .ucas-validation-label {
 	display: block;
 	font-weight: bold;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.5em;
 }
 .ucas-validation-input {
 	width: 100%;
-	padding: 1rem;
-	border-radius: 0.5rem;
-	border: 3px solid var(--mgrey);
-	font-size: 1.125rem;
+	padding: 1em;
+	border-radius: 1em;
+	border: 2px solid var(--mgrey);
+	font-size: 1.125em;
 	background: var(--white);
 	transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 .ucas-validation-input:focus-visible {
-outline: 3px solid var(--link);
+outline: 2px solid var(--link);
 outline-offset: 2px;
 }
 .ucas-validation-field.error .ucas-validation-input {
@@ -251,12 +251,12 @@ outline-offset: 2px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 1rem;
+	gap: 1em;
 	flex-wrap: wrap;
-	margin-top: 0.5rem;
+	margin-top: 0.5em;
 }
 .ucas-validation-status {
-	font-size: 1rem;
+	font-size: 1em;
 	color: var(--black);
 }
 .ucas-validation-status.error {
@@ -268,11 +268,39 @@ outline-offset: 2px;
 	font-weight: bold;
 }
 .ucas-counter {
-	font-size: 0.95rem;
 	color: var(--dgrey);
 }
 .hidden {
 	display: none;
+}
+/* Date picker */
+
+.ucas-date-wrapper {
+	position: relative;
+}
+.ucas-date-input {
+	padding-right: 4em;
+}
+.ucas-date-input::-webkit-calendar-picker-indicator {
+position: absolute;
+right: 1.25em;
+width: 1.5em;
+height: 1.5em;
+cursor: pointer;
+opacity: 0;
+}
+.ucas-date-icon {
+	position: absolute;
+	right: 0.75em;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: 1.5em;
+	color: var(--black);
+	margin-top: 0.1em;
+}
+.ucas-date-input {
+	color: var(--dgrey);
 }
 
 @media (max-width: 60em) {
@@ -283,13 +311,15 @@ outline-offset: 2px;
 	margin-left: 0;
 }
 }
+.btn-primary:disabled .iconfont {
+  display: none;
+}
 </style>
 </head>
-
 <body>
 <main>
   <div class="w-80 p-responsive">
-    <h1>validation2</h1>
+    <h1>validation3b</h1>
     <div class="grid">
       <div class="rounded-responsive stroke-blue-dark span-2">
         <div class="flex flex-wrap items-center gap-1 bg-color-turquoise-dark p-responsive">
@@ -305,9 +335,9 @@ outline-offset: 2px;
         </div>
         <div class="p-responsive">
           <h2>Do you have a UCAS Personal ID number?</h2>
-          <p> <strong> Before you proceed, we need to check whether you already have an application in progress. </strong> </p>
-          <p> Your UCAS number can be found in your UCAS Hub and in UCAS emails.
-            Please enter numbers only with no spaces or hyphens. </p>
+          <p><strong> Before you proceed, we need to check whether you already have an application in progress. </strong></p>
+          <p>Your UCAS number can be found in your <a href="https://www.ucas.com/dashboard">UCAS Hub</a> and in UCAS emails.
+            Please enter numbers only with no spaces or hyphens.</p>
           <div class="radio1 mb-reg">
             <form id="ucas-number-form">
               <label class="stroke rounded-1 p-1 mb-1">
@@ -318,7 +348,7 @@ value="yes"
 id="ucas-yes"
 checked
 >
-                <span> Yes, I have a UCAS number </span> </label>
+                <span>Yes, I have a UCAS number</span></label>
               <div
 class="ucas-validation-wrapper"
 id="ucas-validation-wrapper"
@@ -346,11 +376,37 @@ aria-invalid="false"
 id="ucas-validation-status"
 class="ucas-validation-status"
 aria-live="polite"
-> Enter 10 digits. </div>
+>Enter 10 digits.</div>
                     <div
 class="ucas-counter"
 id="ucas-counter"
-> 0 / 10 digits </div>
+>0 of 10 digits</div>
+                  </div>
+                </div>
+                <div
+class="ucas-validation-field"
+id="ucas-dob-field"
+>
+                  <label
+class="ucas-validation-label"
+for="ucas-date-of-birth"
+> Date of birth </label>
+                  <div class="ucas-date-wrapper">
+                    <input
+class="ucas-validation-input ucas-date-input"
+id="ucas-date-of-birth"
+type="date"
+autocomplete="bday"
+aria-describedby="ucas-dob-status"
+aria-invalid="false"
+>
+                    <span class="ucas-date-icon iconfont" aria-hidden="true">&amp;</span> </div>
+                  <div class="ucas-validation-meta">
+                    <div
+id="ucas-dob-status"
+class="ucas-validation-status"
+aria-live="polite"
+> Enter your date of birth. </div>
                   </div>
                 </div>
               </div>
@@ -361,16 +417,16 @@ name="ucas_number"
 value="no"
 id="ucas-no"
 >
-                <span> No, I don't have a UCAS number </span> </label>
+                <span>No, I don't have a UCAS number</span></label>
             </form>
           </div>
           <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-light"> <span class="iconfont" aria-hidden="true">P</span> Back </button>
+            <button class="btn btn-light"> <span class="iconfont" aria-hidden="true">P</span>Back</button>
             <button
 class="btn btn-primary"
 id="ucas-next-button"
 disabled
-> Next <span class="iconfont" aria-hidden="true">N</span> </button>
+> Next <span class="iconfont" aria-hidden="true">N</span></button>
           </div>
         </div>
       </div>
@@ -380,16 +436,16 @@ disabled
         </div>
         <div class="p-responsive">
           <div class="blockquote mb-reg">
-            <p> Before we continue, I just need to check whether you already have an active UCAS application. </p>
+            <p>Before we continue, I just need to check whether you already have an active UCAS application.</p>
           </div>
           <div class="blockquote mb-reg">
-            <p> The UCAS Personal ID should contain exactly 10 digits with no spaces or hyphens. </p>
+            <p>The UCAS Personal ID should contain exactly 10 digits with no spaces or hyphens.</p>
           </div>
           <div class="blockquote mb-reg">
-            <p> If the number does not validate first time, reassure the caller and guide them through it step-by-step. </p>
+            <p>If the number does not validate first time, reassure the caller and guide them through it step-by-step.</p>
           </div>
           <div class="instruction p-1">
-            <p> <span class="instruction-blue-text"> <strong>INSTRUCTION</strong>: </span> Do not restart the form. Allow the caller to amend the number inline. </p>
+            <p><span class="instruction-blue-text"> <strong>INSTRUCTION</strong>:</span>Do not restart the form. Allow the caller to amend the number inline.</p>
           </div>
         </div>
       </div>
@@ -402,98 +458,120 @@ const ucasField = document.getElementById('ucas-validation-field');
 const ucasStatus = document.getElementById('ucas-validation-status');
 const ucasCounter = document.getElementById('ucas-counter');
 const ucasNextButton = document.getElementById('ucas-next-button');
-
 const ucasYes = document.getElementById('ucas-yes');
 const ucasNo = document.getElementById('ucas-no');
 const validationWrapper = document.getElementById('ucas-validation-wrapper');
 
+const dobInput = document.getElementById('ucas-date-of-birth');
+const dobField = document.getElementById('ucas-dob-field');
+const dobStatus = document.getElementById('ucas-dob-status');
+
+function updateNextButtonState() {
+	const isYes = ucasYes.checked;
+	const idValid = ucasInput.value.replace(/\D/g, '').length === 10;
+	const dobValid = !!dobInput.value;
+
+	if (!isYes) {
+		ucasNextButton.disabled = false;
+		return;
+	}
+
+	if (idValid && dobValid) {
+		ucasNextButton.disabled = false;
+	} else {
+		ucasNextButton.disabled = true;
+	}
+}
+
+function validateDob() {
+	if (!dobInput.value) {
+		dobField.classList.remove('success', 'error');
+
+		dobStatus.className = 'ucas-validation-status';
+		dobStatus.textContent = 'Enter your date of birth.';
+
+		updateNextButtonState();
+		return;
+	}
+
+	dobField.classList.remove('error');
+	dobField.classList.add('success');
+
+	dobStatus.className = 'ucas-validation-status success';
+	dobStatus.textContent = 'Date of birth entered.';
+
+	updateNextButtonState();
+}
+
 function updateValidationState() {
-
 	const cleanValue = ucasInput.value.replace(/\D/g, '');
-
 	ucasInput.value = cleanValue;
 
 	const digitCount = cleanValue.length;
-
-	ucasCounter.textContent = digitCount + ' / 10 digits';
-
+	ucasCounter.textContent = digitCount + ' of 10 digits';
 	ucasField.classList.remove('error', 'success');
 
 	if (digitCount === 0) {
-
 		ucasStatus.className = 'ucas-validation-status';
-
 		ucasStatus.textContent = 'Enter 10 digits.';
-
 		ucasInput.setAttribute('aria-invalid', 'false');
-
-		ucasNextButton.disabled = true;
-
+		updateNextButtonState();
 		return;
 	}
 
 	if (digitCount < 10) {
-
 		ucasField.classList.add('error');
-
 		ucasStatus.className = 'ucas-validation-status error';
-
 		ucasStatus.textContent =
 			'UCAS Personal ID must contain exactly 10 digits. You have entered ' +
 			digitCount +
 			'.';
 
 		ucasInput.setAttribute('aria-invalid', 'true');
-
-		ucasNextButton.disabled = true;
-
+		updateNextButtonState();
 		return;
 	}
 
 	if (digitCount === 10) {
-
 		ucasField.classList.add('success');
-
 		ucasStatus.className = 'ucas-validation-status success';
-
-		ucasStatus.textContent =
-			'UCAS Personal ID format looks correct.';
+		ucasStatus.textContent = 'UCAS Personal ID format looks correct.';
 
 		ucasInput.setAttribute('aria-invalid', 'false');
-
-		ucasNextButton.disabled = false;
+		validateDob();
+		return;
 	}
 }
 
 function toggleUcasValidation() {
-
 	if (ucasYes.checked) {
-
 		validationWrapper.classList.remove('hidden');
-
 		updateValidationState();
-
 	} else {
-
 		validationWrapper.classList.add('hidden');
-
 		ucasField.classList.remove('error', 'success');
+		dobField.classList.remove('error', 'success');
 
 		ucasInput.value = '';
+		dobInput.value = '';
 
 		ucasInput.setAttribute('aria-invalid', 'false');
+		dobInput.setAttribute('aria-invalid', 'false');
 
 		ucasStatus.className = 'ucas-validation-status';
-
 		ucasStatus.textContent = 'Enter 10 digits.';
+
+		dobStatus.className = 'ucas-validation-status';
+		dobStatus.textContent = 'Enter your date of birth.';
 
 		ucasCounter.textContent = '0 / 10 digits';
 
-		ucasNextButton.disabled = false;
+		updateNextButtonState();
 	}
 }
 
 ucasInput.addEventListener('input', updateValidationState);
+dobInput.addEventListener('input', validateDob);
 
 ucasYes.addEventListener('change', toggleUcasValidation);
 ucasNo.addEventListener('change', toggleUcasValidation);
