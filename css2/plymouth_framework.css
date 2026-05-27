@@ -482,6 +482,10 @@
 .centered > * {
   margin-left: 0;
 }
+.centered-child {
+  display: grid;
+  place-items: center;
+}
 /*Media queries*/
 @media (max-width: 80em) {
   .p-resize {
