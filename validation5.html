@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--turquoise-dark: #3e6f89;
+--turquoise-light: #759bad;
+--green-dark: #466a3f;
+--green-light: #eff8ee;
+--blue-dark: #141645;
+--blue-light: #d7e8f0;
+--orange-dark: #edd5ab;
+--orange-light: #fdf5e9;
+--instruction-blue-dark: #2a64c5;
+--instruction-blue-light: #ecf3fa;
+--bg-color-success-light: #e0eceb;
+--validation-error: var(--btn-danger);
+--validation-error-border: var(--btn-danger);
+--validation-success: var(--btn-success);
+--validation-success-border: var(--btn-success);
+--validation-success-bg: var(--white);
+--validation-error-bg: var(--white);
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-green-light {
+	color: var(--black);
+	background-color: var(--green-light);
+}
+.bg-color-green-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+.bg-color-turquoise-dark a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+.i a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.progress {
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: var(--progress, 0%);
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.text-center {
+	text-align: center;
+}
+.stroke-blue-dark {
+	outline: 2px solid var(--blue-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-green-dark {
+	outline: 2px solid var(--green-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.blockquote-blue {
+	padding-left: 1em;
+	border-left: 5px solid var(--blue-dark);
+	background-color: var(--blue-light);
+}
+.blockquote-green {
+	padding-left: 1em;
+	border-left: 5px solid var(--green-dark);
+	background-color: var(--green-light);
+}
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
+.grid2 {
+	display: grid;
+	column-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid2 > * {
+	width: 100%;
+}
+.grid2 > *:last-child {
+	margin-bottom: 0;
+}
+.grid {
+	align-items: start;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	margin: 0.5em;
+}
+.radio1 label {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1em;
+	align-items: start;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+.radio1 label span {
+	display: block;
+}
+.radio1 label:hover {
+	background-color: var(--lgrey);
+}
+.radio1 label:has(input:focus-visible) {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.radio1 label:has(input:checked) {
+background-color: var(--lgrey);
+}
+.radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {
+outline: none;
+box-shadow: none;
+}
+[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
+}
+.instruction-blue-text {
+	color: var(--instruction-blue-dark);
+}
+.instruction-blue-text a {
+	color: var(--instruction-blue-dark);
+}
+a.black-link {
+	color: var(--black);
+}
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-1 {
+	flex: 1;
+}
+/* Validation styles */
+
+.ucas-validation-wrapper {
+	margin: -0.5em 0 1em 4em;
+}
+.ucas-validation-field {
+	margin-bottom: 1.5em;
+}
+.ucas-validation-label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.ucas-validation-input {
+	width: 100%;
+	padding: 1em;
+	border-radius: 1em;
+	border: 2px solid var(--mgrey);
+	font-size: 1.125em;
+	background: var(--white);
+	transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.ucas-validation-input:focus-visible {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.ucas-validation-field.error .ucas-validation-input {
+	border-color: var(--validation-error-border);
+	background-color: var(--validation-error-bg);
+}
+.ucas-validation-field.success .ucas-validation-input {
+	border-color: var(--validation-success-border);
+	background-color: var(--validation-success-bg);
+}
+.ucas-validation-meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+	flex-wrap: wrap;
+	margin-top: 0.5em;
+}
+.ucas-validation-status {
+	font-size: 1em;
+	color: var(--black);
+}
+.ucas-validation-status.error {
+	color: var(--validation-error);
+	font-weight: bold;
+}
+.ucas-validation-status.success {
+	color: var(--validation-success);
+	font-weight: bold;
+}
+.ucas-counter {
+	color: var(--dgrey);
+}
+.hidden {
+	display: none;
+}
+/* Date picker */
+
+.ucas-date-wrapper {
+	position: relative;
+}
+.ucas-date-input {
+	padding-right: 4em;
+}
+.ucas-date-input::-webkit-calendar-picker-indicator {
+position: absolute;
+right: 1.25em;
+width: 1.5em;
+height: 1.5em;
+cursor: pointer;
+opacity: 0;
+}
+.ucas-date-icon {
+	position: absolute;
+	right: 0.75em;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: 1.5em;
+	color: var(--black);
+	margin-top: 0.1em;
+}
+.ucas-date-input {
+	color: var(--dgrey);
+}
+
+@media (max-width: 60em) {
+.flex-2, .flex-1 {
+	flex: 0 0 100%;
+}
+.ucas-validation-wrapper {
+	margin-left: 0;
+}
+}
+.btn-primary:disabled .iconfont {
+	display: none;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <h1>validation4</h1>
+    <div class="grid">
+      <div class="rounded-responsive stroke-blue-dark span-2">
+        <div class="flex flex-wrap items-center gap-1 bg-color-turquoise-dark p-responsive">
+          <div class="flex-2">
+            <h2> Clearing 2026<br>
+              Secure your place </h2>
+          </div>
+          <div class="flex-1">
+            <div class="progress">
+              <div class="progress-fill" style="--progress: 33%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-responsive">
+          <h2>Have you already applied or made an enquiry with us?</h2>
+          <p><strong>Before you continue, we'll check whether we already have a record for you.</strong></p>
+          <div class="radio1 mb-reg">
+            <form action="/action_page.php">
+              <label class="stroke rounded-1 p-1 mb-1">
+                <input type="radio" name="fav_number" value="one">
+                <span><strong>I have a UCAS Personal ID number</strong><br>
+                Use your 10-digit UCAS number. You can find this in your <a href="#">UCAS Hub</a> and in UCAS emails</span></label>
+              <label class="stroke rounded-1 p-1 mb-1">
+                <input type="radio" name="fav_number" value="two">
+                <span><strong>I have an email address I've used with you before</strong><br>
+                Use the email address you have previously used with the University of Plymouth</span></label>
+              <label class="stroke rounded-1 p-1 mb-1">
+                <input type="radio" name="fav_number" value="two">
+                <span><strong>I have my Student Reference Number</strong><br>
+                Use your University of Plymouth Student Reference Number (SRN)</span></label>
+              <label class="stroke rounded-1 p-1">
+                <input type="radio" name="fav_number" value="two">
+                <span><strong>I do not have any of these</strong><br>
+                I'd like to continue with a new Clearing enquiry</span></label>
+            </form>
+          </div>
+          <div class="flex flex-wrap gap-1 mb-reg">
+            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">P</span>Back</button>
+            <button class="btn btn-primary">Next<span class="iconfont" aria-hidden="true">N</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-responsive stroke-blue-dark flex-1">
+        <div class="bg-color-blue-light p-responsive">
+          <h2>Call handler script</h2>
+        </div>
+        <div class="p-responsive">
+          <div class="blockquote mb-reg">
+            <p>Before we continue, I just need to check whether we already have a record for you. This helps us find your details quickly and avoid creating a duplicate enquiry.</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p>Do you have a UCAS Personal ID, email address previously used with us, or a Student Reference Number?</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p>If you do not have any of these, you can still continue and we will create a new Clearing enquiry for you.</p>
+          </div>
+          <div class="instruction p-1">
+            <p><span class="instruction-blue-text"> <strong>INSTRUCTION</strong>:</span> Do not restart the form. Allow the caller to update or enter details inline and continue the process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
