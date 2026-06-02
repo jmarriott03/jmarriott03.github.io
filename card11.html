@@ -23,6 +23,10 @@
 .card-list li {
 	margin-bottom: 0;
 }
+.card-list li a:focus-visible {
+outline: 2px solid currentColor;
+outline-offset: -1px;
+}
 .blockquote {
 	padding-left: 1em;
 	border-left: 5px solid currentColor;
@@ -33,12 +37,14 @@
 <main>
   <div class="bg-color-dark p-responsive" data-theme="brilliant-rose">
     <div class="w-80">
-      <ul class="grid card-list">
-        <li class="blockquote"><strong class="largetext"><a href="#">Foundation year degrees</a></strong></li>
-        <li class="blockquote"><strong class="largetext"><a href="#">Degree apprenticeships</a></strong></li>
-        <li class="blockquote"><strong class="largetext"><a href="#">Undergraduate degrees</a></strong></li>
-        <li class="blockquote"><strong class="largetext"><a href="#">Postgraduate degrees</a></strong></li>
-      </ul>
+      <nav aria-label="Course categories">
+        <ul class="grid card-list">
+          <li class="blockquote"><strong class="largetext nowrap"><a href="#">Foundation year degrees</a></strong></li>
+          <li class="blockquote"><strong class="largetext nowrap"><a href="#">Degree apprenticeships</a></strong></li>
+          <li class="blockquote"><strong class="largetext nowrap"><a href="#">Undergraduate degrees</a></strong></li>
+          <li class="blockquote"><strong class="largetext nowrap"><a href="#">Postgraduate degrees</a></strong></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </main>
