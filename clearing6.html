@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--turquoise-dark: #3e6f89;
+--turquoise-light: #759bad;
+--green-dark: #466a3f;
+--green-light: #eff8ee;
+--blue-dark: #141645;
+--blue-light: #d7e8f0;
+--orange-dark: #edd5ab;
+--orange-light: #fdf5e9;
+--instruction-blue-dark: #2a64c5;
+--instruction-blue-light: #ecf3fa;
+--bg-color-success-light: #e0eceb;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-green-light {
+	color: var(--black);
+	background-color: var(--green-light);
+}
+.bg-color-green-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+.bg-color-turquoise-dark a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+.i a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.progress {
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: var(--progress, 0%);
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.text-center {
+	text-align: center;
+}
+.stroke-blue-dark {
+	outline: 2px solid var(--blue-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-green-dark {
+	outline: 2px solid var(--green-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.blockquote-blue {
+	padding-left: 1em;
+	border-left: 5px solid var(--blue-dark);
+	background-color: var(--blue-light);
+}
+.blockquote-green {
+	padding-left: 1em;
+	border-left: 5px solid var(--green-dark);
+	background-color: var(--green-light);
+}
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
+.grid2 {
+	display: grid;
+	column-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid2 > * {
+	width: 100%;
+}
+.grid2 > *:last-child {
+	margin-bottom: 0;
+}
+.grid {
+	align-items: start;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	margin: 0.5em;
+}
+.radio1 label {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1em;
+	align-items: start;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+.radio1 label span {
+	display: block;
+}
+.radio1 label:hover {
+	background-color: var(--lgrey);
+}
+.radio1 label:has(input:focus-visible) {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.radio1 label:has(input:checked) {
+background-color: var(--lgrey);
+}
+.radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {
+outline: none;
+box-shadow: none;
+}
+[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
+}
+.instruction-blue-text {
+	color: var(--instruction-blue-dark);
+}
+.instruction-blue-text a {
+	color: var(--instruction-blue-dark);
+}
+a.black-link {
+	color: var(--black);
+}
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-1 {
+	flex: 1;
+}
+
+@media (max-width: 60em) {
+.flex-2, .flex-1 {
+	flex: 0 0 100%;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <h1>clearing6</h1>
+    <div class="grid">
+      <div class="rounded-responsive stroke-blue-dark span-2">
+        <div class="flex flex-wrap items-center gap-1 bg-color-turquoise-dark p-responsive">
+          <div class="flex-2">
+            <h2>Clearing 2026<br>
+              Secure your place</h2>
+          </div>
+          <div class="flex-1">
+            <div class="progress">
+              <div class="progress-fill" style="--progress: 33%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-responsive">
+          <h2 class="largetext2">Check your email</h2>
+          <p>If we find a matching record, we'll send a 6-digit code to <a href="#">preucas.one@example.com</a> to verify your email address.</p>
+          <p>Enter it below to continue.</p>
+          <p><strong>Verification code</strong></p>
+          <p><span class="p-1 stroke-theme-black rounded-0-5 bck-lgrey dgrey-text">e.g 123456</span></p>
+          <div class="mb-reg">
+            <button class="btn btn-primary">Next<span class="iconfont" aria-hidden="true">N</span></button>
+          </div>
+          <p><strong>Didn't receive the code?</strong></p>
+          Check your junk or spam folder, or <a href="#">request a new code</a>.
+          <div class="mt-2">
+            <button class="btn btn-light">Start a new enquiry</button>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-responsive stroke-blue-dark flex-1">
+        <div class="bg-color-blue-light p-responsive">
+          <h2>Call handler script</h2>
+        </div>
+        <div class="p-responsive">
+          <div class="blockquote mb-reg">
+            <p>Thanks. I can see we're checking for a matching record using the email address you've provided.</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p>If we find a matching record, we'll send a 6-digit verification code to your email address to verify it.</p>
+          </div>
+          <div class="blockquote mb-reg">
+            <p><strong>Could you confirm the 6-digit verification code from your email?</strong></p>
+          </div>
+          <div class="instruction p-1 mb-reg">
+            <p><span class="instruction-blue-text"><strong>INSTRUCTION</strong>:</span> Enter the verification code once confirmed. If the applicant has not received the code, advise them to check their junk or spam folder or request a new code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
