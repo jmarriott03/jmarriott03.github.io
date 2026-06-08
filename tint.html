@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.hero {
+	display: grid;
+}
+.hero > * {
+	grid-area: 1 / 1;
+}
+.hero img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+}
+.overlay {
+	background: rgba(0, 0, 0, 0.55);
+}
+.content {
+	align-self: center;
+	justify-self: center;
+	max-width: 60ch;
+	padding: 2rem;
+	color: #fff;
+	z-index: 1;
+}
+</style>
+</head>
+<body>
+<main class="p-responsive">
+  <section class="w-60 hero mb-reg"><img src="images/1280x720nurse2.webp" alt="">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="largetext3">It's your future<br>
+Make it here</h1>
+      <p class="text-resize">Visit our open day to get a taste of life here at Plymouth</p>
+    </div>
+  </section>
+	<div class="w-60"><img src="images/1280x720nurse2.webp" alt="" class="img-responsive"></div>
+</main>
+</body>
+</html>
