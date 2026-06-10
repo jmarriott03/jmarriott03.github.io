@@ -313,9 +313,6 @@
   outline-offset: 3px;
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
-a.btn {
-	text-decoration: none;
-}
 .btn-primary {
   background: var(--btn-primary);
   color: var(--white);
