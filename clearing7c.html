@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--turquoise-dark: #3e6f89;
+--turquoise-light: #759bad;
+--green-dark: #466a3f;
+--green-light: #eff8ee;
+--blue-dark: #141645;
+--blue-light: #d7e8f0;
+--orange-dark: #edd5ab;
+--orange-light: #fdf5e9;
+--instruction-blue-dark: #2a64c5;
+--instruction-blue-light: #ecf3fa;
+--bg-color-success-light: #e0eceb;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.bg-color-blue-light {
+	color: var(--black);
+	background-color: var(--blue-light);
+}
+.bg-color-blue-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-green-light {
+	color: var(--black);
+	background-color: var(--green-light);
+}
+.bg-color-green-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-orange-light {
+	color: var(--black);
+	background-color: var(--orange-light);
+}
+.bg-color-orange-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.bg-color-turquoise-dark {
+	color: var(--white);
+	background-color: var(--turquoise-dark);
+}
+.bg-color-turquoise-dark a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success {
+	color: var(--white);
+	background-color: var(--btn-success);
+}
+.bg-color-success a {
+	color: var(--white);
+	text-decoration: underline;
+}
+.bg-color-success-light {
+	color: var(--black);
+	background-color: var(--bg-color-success-light);
+}
+.bg-color-success-light a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.instruction {
+	background-color: var(--instruction-blue-light);
+	padding-left: 1em;
+	border-left: 5px solid var(--instruction-blue-dark);
+}
+.in a {
+	color: var(--black);
+	text-decoration: underline;
+}
+.progress {
+	height: 1em;
+	border-radius: 0.5em;
+	border: 2px solid var(--white);
+	background: white;
+	overflow: hidden;
+}
+.progress-fill {
+	width: var(--progress, 0%);
+	height: 100%;
+	background: var(--black);
+	float: left;
+}
+.text-center {
+	text-align: center;
+}
+.stroke-blue-dark {
+	outline: 2px solid var(--blue-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-green-dark {
+	outline: 2px solid var(--green-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.stroke-orange-dark {
+	outline: 2px solid var(--orange-dark);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.blockquote-blue {
+	padding-left: 1em;
+	border-left: 5px solid var(--blue-dark);
+	background-color: var(--blue-light);
+}
+.blockquote-green {
+	padding-left: 1em;
+	border-left: 5px solid var(--green-dark);
+	background-color: var(--green-light);
+}
+.blockquote-orange {
+	padding-left: 1em;
+	border-left: 5px solid var(--orange-dark);
+	background-color: var(--orange-light);
+}
+.grid2 {
+	display: grid;
+	column-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid2 > * {
+	width: 100%;
+}
+.grid2 > *:last-child {
+	margin-bottom: 0;
+}
+.grid {
+	align-items: start;
+}
+hr {
+	border: none;
+	border-top: 2px dotted var(--mgrey);
+}
+.radio1 input[type='radio'] {
+	transform: scale(2);
+	margin: 0.5em;
+}
+.radio1 label {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 1em;
+	align-items: start;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.2s ease;
+}
+.radio1 label span {
+	display: block;
+}
+.radio1 label:hover {
+	background-color: var(--lgrey);
+}
+.radio1 label:has(input:focus-visible) {
+outline: 2px solid var(--link);
+outline-offset: 2px;
+}
+.radio1 label:has(input:checked) {
+background-color: var(--lgrey);
+}
+.radio1 input[type="radio"]:focus, .radio1 input[type="radio"]:focus-visible {
+outline: none;
+box-shadow: none;
+}
+[data-theme="dark"] .radio1 label:hover, [data-theme="dark"] .radio1 label:has(input:checked) {
+background-color: var(--dgrey);
+}
+.instruction-blue-text {
+	color: var(--instruction-blue-dark);
+}
+.instruction-blue-text a {
+	color: var(--instruction-blue-dark);
+}
+a.black-link {
+	color: var(--black);
+}
+.stroke-theme-black {
+	outline: 2px solid var(--black);
+	outline-offset: -2px;
+	overflow: hidden;
+}
+.flex-2 {
+	flex: 2;
+}
+.flex-1 {
+	flex: 1;
+}
+.drop-down {
+	float: right;
+	margin-top: 0.25em;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--mgrey);
+}
+
+@media (max-width: 60em) {
+.flex-2, .flex-1 {
+	flex: 0 0 100%;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <h1>clearing7c</h1>
+    <div class="grid">
+      <div class="rounded-responsive stroke-blue-dark span-2">
+        <div class="flex flex-wrap items-center gap-1 bg-color-turquoise-dark p-responsive">
+          <div class="flex-2">
+            <h2>Clearing 2026<br>
+              Secure your place</h2>
+          </div>
+          <div class="flex-1">
+            <div class="progress">
+              <div class="progress-fill" style="--progress: 33%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="p-responsive">
+          <p class="dgrey-text">Undergraduate</p>
+          <h2 class="largetext2">Which course are you hoping to apply for?</h2>
+          <p>Select the course you are interested in and we'll check eligibility next.</p>
+          <div class="rounded-0-5 p-1 stroke mb-reg">
+            <p class="dgrey-text">Select a course <span class="iconfont drop-down" aria-hidden="true">O</span></p>
+          </div>
+          <p>Looking for a top-up course? Top-up entry is course-specific, so we cannot assess it through this service. <a href="#">Find out how top-up courses work at Plymouth</a>.</p>
+          <div class="mb-reg">
+            <button class="btn btn-primary">Next<span class="iconfont" aria-hidden="true">N</span></button>
+          </div>
+          <hr class="mb-reg">
+          <button class="btn btn-light">Start a new enquiry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
