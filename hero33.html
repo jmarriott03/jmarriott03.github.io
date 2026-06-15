@@ -8,19 +8,50 @@
 <link rel="stylesheet" href="css2/plymouth_framework.css">
 <link rel="stylesheet" href="css2/plymouth_theme.css">
 <title>University of Plymouth</title>
+<style>
+.hero-2col {
+	position: relative;
+}
+.right-column {
+	position: relative;
+}
+.right-column::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+  to right,
+  hsl(var(--bg-color-dark) / 1) 0%,
+  hsl(var(--bg-color-dark) / 0) 50%
+);
+	pointer-events: none;
+	z-index: 1;
+}
+.right-column img {
+	position: relative;
+	z-index: 0;
+}
+
+/* No gradient on smaller widths */
+@media (max-width: 60em) {
+.right-column::before {
+	display: none;
+}
+}
+</style>
 </head>
 <body>
 <main>
   <section>
     <div class="hero-2col layout-33-67 bg-color-dark" data-theme="bondi-blue">
-      <div class="left-column p-responsive">
+      <div class="left-column p-resize">
         <div class="centered text-resize">
           <h1>It's your future<br>
             Make it here</h1>
           <p>Visit our open day to get a taste of life here at Plymouth</p>
           <div class="flex flex-wrap gap-1 mb-reg">
             <button class="btn btn-outline btn-outline-dark">Open day - Saturday 20 June</button>
-			  <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Find your course</button>
+            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Find your course</button>
           </div>
         </div>
       </div>
