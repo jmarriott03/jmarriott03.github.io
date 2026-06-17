@@ -83,8 +83,8 @@ border-radius: 1em margin-bottom: 1.5em;
     <div class="note"> <span class="iconfont" aria-hidden="true">a</span> <strong>White/Light images</strong>: Most pixels will be highlighted (fail contrast with white text).<br>
       <span class="iconfont" aria-hidden="true">6</span> <strong>Dark images</strong>: Few pixels highlighted (white text already has good contrast). </div>
     <div class="upload-area" id="uploadArea">
-      <p class="m-0"><span class="iconfont" aria-hidden="true">V</span> Drag &amp; drop your screenshot here, or click to select</p>
-      <input type="file" id="fileInput" accept="image/*" style="display: none;">
+      <label for="fileInput" class="m-0" style="cursor:pointer; display:block;"> <span class="iconfont" aria-hidden="true">V</span> Drag &amp; drop your screenshot here, or click to select </label>
+      <input type="file" id="fileInput" accept="image/*" style="display:none;">
     </div>
     <div class="controls" id="controls">
       <button class="btn btn-primary" id="convertBtn">Highlight Low Contrast Pixels</button>
