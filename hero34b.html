@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.parent {
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, 80em) 1fr;
+	grid-template-rows: auto;
+	margin: 0;
+}
+.image-container {
+	grid-area: 1 / 1 / 2 / 4;
+}
+.content-container {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.image-container, .content-container {
+	width: 100%;
+	margin-top: 0;
+}
+.columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+.box {
+	z-index: 1;
+	margin: 0;
+}
+.search {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 2em;
+	outline: none;
+}
+
+@media (max-width: 60em) {
+.columns {
+	grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="parent">
+      <div class="image-container"><img src="images/1280x720black.gif" width="1280" height="720" alt="student at harboour" class="img-cover"></div>
+      <div class="gradient-container"></div>
+      <div class="content-container">
+        <div class="columns p-2">
+          <div class="box p-responsive mrfrosty rounded-responsive">
+            <h1 class="largetext3">Shape your future<br>
+              Join us in September</h1>
+            <h2>Register ahead of Clearing for updates and to access our priority hotline</h2>
+            <button class="btn btn-primary">Register for Clearing updates</button>
+          </div>
+          <div class="box"> 
+            <!--
+            <div class="rounded-responsive mrfrosty p-responsive mb-reg">
+              <p class="m-0">It's your future. Make it count.</p>
+              <h2 class="largetext2 mt-0">Call our Clearing hotline today<br>
+                <span class="iconfont" aria-hidden="true">0</span> <strong>01752 585 858</strong></h2>
+            </div>
+-->
+            <div class="rounded-responsive mrfrosty p-responsive">
+              <h2><span class="iconfont" aria-hidden="true">B</span> Search course vacancies</h2>
+              <input type="text" class="search" placeholder="Search courses...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
