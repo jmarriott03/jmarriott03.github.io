@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.hero {
+	display: grid;
+	background-color: var(--black);
+}
+.hero > * {
+	grid-area: 1 / 1;
+}
+.hero img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+}
+.overlay {
+	background: rgba(0, 0, 0, 0.55);
+}
+.content {
+	align-self: center;
+	justify-self: center;
+	max-width: 60ch;
+	padding: 2rem;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+<main class="p-responsive w-60">
+  <div class="mb-reg">
+    <h1>tint</h1>
+  </div>
+  <h2>white text/tint/image</h2>
+  <div class="hero mb-reg"><img src="images/1280x720nurse2.webp" alt="">
+    <div class="content">
+      <h2 class="largetext3">It's your future<br>
+        Make it here</h2>
+      <p class="text-resize">Visit our open day to get a taste of life here at Plymouth</p>
+    </div>
+  </div>
+  <h2>original image</h2>
+  <div class="mb-reg"><img src="images/1280x720nurse2.webp" alt="" class="img-responsive"></div>
+  <h2>white text/tint/white image - #737373</h2>
+  <div class="hero mb-reg"><img src="images/1280x720white.gif" alt="">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2 class="largetext3">It's your future<br>
+        Make it here</h2>
+      <p class="text-resize">Visit our open day to get a taste of life here at Plymouth</p>
+    </div>
+  </div>
+  <div class="codegrey mb-reg"><code>.overlay {<br>
+    background: rgba(0, 0, 0, 0.55);<br>
+    }</code></div>
+	<h2>To meeet WCAG 2.2 contrast for current homepage</h2>
+<h3>Change</h3>
+<div class="codegrey mb-reg">--tint-medium: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));</div><p>to</p>
+<div class="codegrey mb-reg">--tint-medium: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));</div>
+	<h3>Change</h3>
+	<div class="codegrey mb-reg">&lt;div class="gradient-container medium-tint-medium large-tint-medium extra-large-tint-light"&gt;&lt;/div&gt;</div><p>to</p><div class="codegrey">&lt;div class="gradient-container medium-tint-medium large-tint-medium extra-large-tint-medium"&gt;&lt;/div&gt;</div>
+	
+	
+	</main>
+</body>
+</html>
