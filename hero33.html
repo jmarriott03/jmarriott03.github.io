@@ -12,10 +12,10 @@
 .hero-2col {
 	position: relative;
 }
-.right-column {
+.gradient-dark-to-right {
 	position: relative;
 }
-.right-column::before {
+.gradient-dark-to-right::before {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -27,14 +27,14 @@
 	pointer-events: none;
 	z-index: 1;
 }
-.right-column img {
+.gradient-dark-to-right img {
 	position: relative;
 	z-index: 0;
 }
 
 /* No gradient on smaller widths */
 @media (max-width: 60em) {
-.right-column::before {
+.gradient-dark-to-right::before {
 	display: none;
 }
 }
@@ -55,10 +55,9 @@
           </div>
         </div>
       </div>
-      <div class="right-column"><img src="images/1280x720nurse2.webp" width="1280" height="720" alt="" class="img-cover"></div>
+      <div class="right-column gradient-dark-to-right"><img src="images/1280x720nurse2.webp" width="1280" height="720" alt="" class="img-cover"></div>
     </div>
   </section>
-	
 	<section>
     <div class="hero-2col layout-33-67 bg-color-dark" data-theme="deep-orange">
       <div class="left-column p-resize">
