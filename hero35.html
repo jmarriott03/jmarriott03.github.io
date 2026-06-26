@@ -9,51 +9,53 @@
 <link rel="stylesheet" href="css2/plymouth_theme.css">
 <title>University of Plymouth</title>
 <style>
-.hero-2col {
-	position: relative;
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
 }
-.gradient-dark-to-right {
-	position: relative;
+*/
+.parent {
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, 80em) 1fr;
+	grid-template-rows: auto;
+	margin: 0;
+	background-color: var(--black);
 }
-.gradient-dark-to-right::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient( to right, hsl(var(--bg-color-dark) / 1) 0%, hsl(var(--bg-color-dark) / 0) 50% );
-	pointer-events: none;
+.image-container {
+	grid-area: 1 / 1 / 2 / 4;
+}
+.content-container {
+	grid-area: 1 / 2 / 2 / 3;
+}
+.image-container, .content-container {
+	width: 100%;
+}
+.columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+.box {
 	z-index: 1;
+	margin: 0;
 }
-.gradient-dark-to-right img {
-	position: relative;
-	z-index: 0;
+.search {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 2em;
+	outline: none;
+	color: var(--dgrey);
 }
 
-/* No gradient on smaller widths */
 @media (max-width: 60em) {
-.gradient-dark-to-right::before {
-	display: none;
-}
-}
-.gradient-dark-to-left {
-	position: relative;
-}
-.gradient-dark-to-left::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient( to left, hsl(var(--bg-color-dark) / 1) 0%, hsl(var(--bg-color-dark) / 0) 50% );
-	pointer-events: none;
-	z-index: 1;
-}
-.gradient-dark-to-left img {
-	position: relative;
-	z-index: 0;
-}
-
-/* No gradient on smaller widths */
-@media (max-width: 60em) {
-.gradient-dark-to-left::before {
-	display: none;
+.columns {
+	grid-template-columns: 1fr;
 }
 }
 </style>
@@ -61,192 +63,34 @@
 <body>
 <main>
   <section>
-    <div class="hero-2col layout-33-67 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
+    <div class="parent">
+      <div class="image-container"><img src="images/1280x720shape.webp" width="1280" height="720" alt="student at harboour" class="img-cover"></div>
+      <div class="content-container">
+        <div class="columns p-responsive">
+          <div class="box p-responsive mrfrosty rounded-responsive text-resize">
+            <h1>Shape your future<br>
+              Join us in September</h1>
+            <p>Register ahead of Clearing for updates and to access our priority hotline</p>
+            <button class="btn btn-primary">Register for Clearing updates</button>
           </div>
-        </div>
-      </div>
-      <div class="right-column gradient-dark-to-right"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-      <div class="right-column gradient-dark-to-right"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-67-33 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-      <div class="right-column gradient-dark-to-right"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-33-67 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column gradient-dark-to-left"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column gradient-dark-to-left"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-67-33 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column gradient-dark-to-left"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-33-67 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-      <div class="right-column"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-      <div class="right-column"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-67-33 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-      <div class="right-column"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-33-67 bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col bg-color-dark mb-reg" data-theme="bondi-blue">
-      <div class="left-column"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="hero-2col layout-67-33 bg-color-dark" data-theme="bondi-blue">
-      <div class="left-column"><img src="images/1280x720shape.webp" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize">
-          <h1>Shape your future<br>
-            Join us in September</h1>
-          <p>Register ahead of Clearing for updates and to access our priority hotline</p>
-          <div class="flex flex-wrap gap-1 mb-reg">
-            <button class="btn btn-outline btn-outline-dark">Register for Clearing updates</button>
-            <button class="btn btn-outline btn-outline-dark"><span class="iconfont" aria-hidden="true">B</span>Search all courses</button>
+          <div class="box"> 
+            <!--
+            <div class="rounded-responsive mrfrosty p-responsive mb-reg">
+              <p class="m-0">It's your future. Make it count.</p>
+              <h2 class="largetext2 mt-0">Call our Clearing hotline today<br>
+                <span class="iconfont" aria-hidden="true">0</span> <strong>01752 585 858</strong></h2>
+            </div>
+-->
+            <div class="rounded-responsive mrfrosty p-responsive">
+              <h2><span class="iconfont" aria-hidden="true">B</span> Search course vacancies</h2>
+              <input
+  type="text"
+  id="course-search"
+  class="search"
+  placeholder="Search courses..."
+  aria-label="Search course vacancies"
+>
+            </div>
           </div>
         </div>
       </div>
