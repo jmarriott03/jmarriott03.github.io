@@ -97,6 +97,9 @@
   margin: 0 auto;
   overflow: hidden;
 }
+.w-fit-content {
+	width: fit-content;
+}
 .p-0 {
   padding: 0;
 }
