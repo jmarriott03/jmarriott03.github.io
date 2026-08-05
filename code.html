@@ -52,30 +52,32 @@ const input = document.getElementById('input');
 const output = document.getElementById('output');
 
 function escapeText(text) {
-	return text
-		// Preserve existing HTML entities
-		.replace(/&amp;/g, '__AMP__')
+	// Preserve existing &amp;
+	text = text.replace(/&amp;/g, '__AMP__');
 
-		// Escape HTML characters
+	// Escape HTML characters
+	text = text
 		.replace(/&/g, '&amp;')
 		.replace(/</g, '&lt;')
 		.replace(/>/g, '&gt;')
 		.replace(/"/g, '&quot;')
+		.replace(/__AMP__/g, '&amp;');
 
-		// Restore existing &amp;
-		.replace(/__AMP__/g, '&amp;')
+	// Normalise line endings
+	text = text.replace(/\r\n?/g, '\n');
 
-		// Normalise line endings
-		.replace(/\r\n?/g, '\n')
+	// Remove leading/trailing whitespace from every line
+	text = text
+		.split('\n')
+		.map(line => line.trim())
+		.join('\n');
 
-		// Remove indentation after line breaks
-		.replace(/\n[ \t]+/g, '\n')
-
-		// Convert blank lines to <br><br>
-		.replace(/\n\n+/g, '<br><br>')
-
-		// Convert remaining line breaks to <br>
+	// Convert line breaks
+	text = text
+		.replace(/\n{2,}/g, '<br><br>')
 		.replace(/\n/g, '<br>');
+
+	return text;
 }
 
 input.addEventListener('input', () => {
