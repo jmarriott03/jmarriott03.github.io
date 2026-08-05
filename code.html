@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+textarea {
+	width: 100%;
+	min-height: 5em;
+	box-sizing: border-box;
+	font: inherit;
+	margin: 0.5em 0 1.5em 0;
+	padding: 0.5em;
+	border: 1px solid var(--mgrey);
+	border-radius: 0.5em;
+	overflow: hidden;
+	resize: none;
+}
+textarea::placeholder {
+color: var(--dgrey);
+opacity: 1;
+}
+label {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-40 p-responsive">
+    <h1>code</h1>
+    <p>A lightweight code utility component that demonstrates live text transformation and clipboard functionality. Users can paste content into the input field and see HTML-safe output generated instantly, with reserved characters such as ampersands <span class="codegrey2">&amp;</span>, less-than signs <span class="codegrey2">&#60;</span>, greater-than signs <span class="codegrey2">&#62;</span> and double quotes <span class="codegrey2">&quot;</span> converted into their corresponding HTML entities.</p>
+    <label for="input">Input</label>
+    <textarea id="input" placeholder="Paste text here" autofocus></textarea>
+    <label for="output">Output</label>
+    <textarea id="output" readonly></textarea>
+    <button class="btn btn-primary" id="copy" type="button">Copy</button>
+  </div>
+</main>
+<script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    function escapeText(text) {
+	return text
+    .replace(/&amp;/g, '__AMP__')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/__AMP__/g, '&amp;');
+}
+
+    input.addEventListener('input', () => {
+      output.value = escapeText(input.value);
+    });
+
+    document.getElementById('copy').addEventListener('click', async () => {
+      await navigator.clipboard.writeText(output.value);
+    });
+  </script>
+</body>
+</html>
