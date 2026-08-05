@@ -39,7 +39,7 @@ label {
 <main>
   <div class="w-40 p-responsive">
     <h1>code</h1>
-    <p>A lightweight code utility component that demonstrates live text transformation and clipboard functionality. Users can paste content into the input field and see HTML-safe output generated instantly, with reserved characters such as ampersands <span class="codegrey2">&amp;</span>, less-than signs <span class="codegrey2">&#60;</span>, greater-than signs <span class="codegrey2">&#62;</span> and double quotes <span class="codegrey2">&quot;</span> converted into their corresponding HTML entities.</p>
+    <p>A lightweight code utility component that demonstrates live text transformation and clipboard functionality. Users can paste content into the input field and see HTML-safe output generated instantly, with reserved characters such as ampersands <span class="codegrey2">&amp;</span>, less-than signs <span class="codegrey2">&lt;</span>, greater-than signs <span class="codegrey2">&gt;</span>, double quotes <span class="codegrey2">&quot;</span> and line breaks converted into their corresponding HTML entities and <span class="codegrey2">&lt;br&gt;</span> tags.</p>
     <label for="input">Input</label>
     <textarea id="input" placeholder="Paste text here" autofocus></textarea>
     <label for="output">Output</label>
@@ -48,26 +48,29 @@ label {
   </div>
 </main>
 <script>
-    const input = document.getElementById('input');
-    const output = document.getElementById('output');
+const input = document.getElementById('input');
+const output = document.getElementById('output');
 
-    function escapeText(text) {
+function escapeText(text) {
 	return text
-    .replace(/&amp;/g, '__AMP__')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/__AMP__/g, '&amp;');
+		.replace(/\r\n|\r/g, '\n')       // normalise line endings
+		.replace(/\n\n/g, '<br><br>')    // carriage returns / blank lines
+		.replace(/\n/g, '<br>')          // soft returns
+		.replace(/&/g, '&amp;')          // escape ampersands
+		.replace(/</g, '&lt;')           // escape less-than signs
+		.replace(/>/g, '&gt;')           // escape greater-than signs
+		.replace(/"/g, '&quot;')         // escape quotes
+		.replace(/&lt;br&gt;/g, '<br>')  // restore generated br tags
+		.replace(/&lt;br&gt;&lt;br&gt;/g, '<br><br>');
 }
 
-    input.addEventListener('input', () => {
-      output.value = escapeText(input.value);
-    });
+input.addEventListener('input', () => {
+	output.value = escapeText(input.value);
+});
 
-    document.getElementById('copy').addEventListener('click', async () => {
-      await navigator.clipboard.writeText(output.value);
-    });
+document.getElementById('copy').addEventListener('click', async () => {
+	await navigator.clipboard.writeText(output.value);
+});
   </script>
 </body>
 </html>
