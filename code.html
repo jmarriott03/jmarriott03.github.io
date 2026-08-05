@@ -53,15 +53,29 @@ const output = document.getElementById('output');
 
 function escapeText(text) {
 	return text
-		.replace(/\r\n|\r/g, '\n')       // normalise line endings
-		.replace(/\n\n/g, '<br><br>')    // carriage returns / blank lines
-		.replace(/\n/g, '<br>')          // soft returns
-		.replace(/&/g, '&amp;')          // escape ampersands
-		.replace(/</g, '&lt;')           // escape less-than signs
-		.replace(/>/g, '&gt;')           // escape greater-than signs
-		.replace(/"/g, '&quot;')         // escape quotes
-		.replace(/&lt;br&gt;/g, '<br>')  // restore generated br tags
-		.replace(/&lt;br&gt;&lt;br&gt;/g, '<br><br>');
+		// Preserve existing HTML entities
+		.replace(/&amp;/g, '__AMP__')
+
+		// Escape HTML characters
+		.replace(/&/g, '&amp;')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		.replace(/"/g, '&quot;')
+
+		// Restore existing &amp;
+		.replace(/__AMP__/g, '&amp;')
+
+		// Normalise line endings
+		.replace(/\r\n?/g, '\n')
+
+		// Remove indentation after line breaks
+		.replace(/\n[ \t]+/g, '\n')
+
+		// Convert blank lines to <br><br>
+		.replace(/\n\n+/g, '<br><br>')
+
+		// Convert remaining line breaks to <br>
+		.replace(/\n/g, '<br>');
 }
 
 input.addEventListener('input', () => {
@@ -71,6 +85,6 @@ input.addEventListener('input', () => {
 document.getElementById('copy').addEventListener('click', async () => {
 	await navigator.clipboard.writeText(output.value);
 });
-  </script>
+</script>
 </body>
 </html>
