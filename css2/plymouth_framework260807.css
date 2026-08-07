@@ -34,8 +34,8 @@
   font-family: 'icon';
   font-weight: normal;
   line-height: 1;
-  width: auto;
-  line-height: normal;
+  width: 1em;
+  text-align: center;
 }
 .nowrap {
   white-space: nowrap;
@@ -98,7 +98,7 @@
   overflow: hidden;
 }
 .w-fit-content {
-  width: fit-content;
+	width: fit-content;
 }
 .p-0 {
   padding: 0;
@@ -163,10 +163,10 @@
   margin: auto;
 }
 .ml-auto {
-  margin-left: auto;
+	margin-left: auto;
 }
 .mr-auto {
-  margin-right: auto;
+	margin-right: auto;
 }
 .mx-auto {
   margin-inline: auto;
@@ -323,7 +323,7 @@
   transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 a.btn {
-  text-decoration: none;
+	text-decoration: none;
 }
 .btn-primary {
   background: var(--btn-primary);
