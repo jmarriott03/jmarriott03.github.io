@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.hero-2col {
+	position: relative;
+}
+.gradient-dark-to-right {
+	position: relative;
+}
+.gradient-dark-to-right::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient( to right, hsl(var(--bg-color-dark) / 1) 0%, hsl(var(--bg-color-dark) / 0) 50% );
+	pointer-events: none;
+	z-index: 1;
+}
+.gradient-dark-to-right img {
+	position: relative;
+	z-index: 0;
+}
+
+/* No gradient on smaller widths */
+@media (max-width: 60em) {
+.gradient-dark-to-right::before {
+	display: none;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="hero-2col layout-33-67 bg-color-dark mb-reg" data-theme="deep-orange">
+      <div class="left-column p-resize">
+        <div class="centered text-resize">
+          <p class="m-0"><strong>A level results day</strong></p>
+          <h2>Clearing 2026 <span class="nowrap">is open</span></h2>
+          <p><strong>Our phone and online Clearing services open from <span class="nowrap">8am to 9pm</span></strong></p>
+          <p><span class="iconfont" aria-hidden="true">0</span> Call our Clearing hotline <a href="#" class="nowrap">01752 585 858</a> or</p>
+          <p><a href="#"><span class="iconfont" aria-hidden="true">&#123;</span><strong> Apply through Clearing online</strong></a></p>
+        </div>
+      </div>
+      <div class="right-column gradient-dark-to-right"><img src="images/1920x1080clearing.webp" width="1920" height="1080" alt="" class="img-cover"></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
