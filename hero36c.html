@@ -24,17 +24,9 @@
 }
 .image-container {
 	grid-area: 1 / 1 / 2 / 4;
-	position: relative;
-}
-.image-container::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: linear-gradient( to right, rgb(0 0 0 / 55%) 0%, rgb(0 0 0 / 55%) 55%, rgb(0 0 0 / 0%) 100% );
 }
 .content-container {
 	grid-area: 1 / 2 / 2 / 3;
-	z-index: 1;
 }
 .image-container, .content-container {
 	width: 100%;
@@ -65,9 +57,6 @@
 .columns {
 	grid-template-columns: 1fr;
 }
-.image-container::after {
-	background: rgb(0 0 0 / 55%);
-}
 }
 </style>
 </head>
@@ -75,17 +64,16 @@
 <main>
   <section>
     <div class="parent">
-      <div class="image-container"><img src="images/1280x720placeholder.gif" width="1280" height="720" alt="student at harboour" class="img-cover"></div>
+      <div class="image-container"><img src="images/1920x1080clearing.webp" width="1920" height="1080" alt="" class="img-cover"></div>
       <div class="content-container">
-        <div class="gradient"></div>
         <div class="columns p-responsive">
-          <div class="box p-responsive largetext white-text">
+          <div class="box p-responsive mrfrosty rounded-responsive text-resize">
             <p><strong>A level results day</strong></p>
             <h2>Clearing 2026 is open</h2>
             <p><strong>Our phone and online Clearing services open from <span class="nowrap">8am to 9pm</span></strong></p>
           </div>
-          <div class="box">
-            <div class="rounded-responsive mrfrosty p-responsive mb-reg">
+          <div class="box"> 
+<div class="rounded-responsive mrfrosty p-responsive mb-reg">
               <h2><span class="iconfont" aria-hidden="true">0</span> Call our Clearing hotline <a href="#" class="nowrap">01752 585 858</a> or</h2>
             </div>
             <div class="rounded-responsive mrfrosty p-responsive ">
