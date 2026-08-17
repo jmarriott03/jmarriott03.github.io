@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.parent {
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, 80em) 1fr;
+	grid-template-rows: auto;
+	margin: 0;
+	background-color: var(--black);
+}
+.image-container {
+	grid-area: 1 / 1 / 2 / 4;
+	position: relative;
+}
+.image-container::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgb(0 0 0 / 55%);
+}
+.content-container {
+	grid-area: 1 / 2 / 2 / 3;
+	z-index: 1;
+}
+.image-container, .content-container {
+	width: 100%;
+}
+.columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+.box {
+	z-index: 1;
+	margin: 0;
+}
+.search {
+	width: 100%;
+	padding: 1em;
+	font-size: 1em;
+	border: 1px solid var(--mgrey);
+	border-radius: 2em;
+	outline: none;
+	color: var(--dgrey);
+}
+
+@media (max-width: 60em) {
+.columns {
+	grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="parent">
+      <div class="image-container"><img src="images/1920x1080clearing.webp" width="1920" height="1080" alt="student at harboour" class="img-cover"></div>
+      <div class="content-container">
+        <div class="gradient"></div>
+        <div class="columns p-responsive">
+          <div class="box p-responsive largetext white-text">
+            <p><strong>A level results day</strong></p>
+            <h2>Clearing 2026 is open</h2>
+            <p><strong>Our phone and online Clearing services open from <span class="nowrap">8am to 9pm</span></strong></p>
+          </div>
+          <div class="box">
+            <div class="rounded-responsive mrfrosty p-responsive mb-reg">
+              <h2><span class="iconfont" aria-hidden="true">0</span> Call our Clearing hotline <a href="#" class="nowrap">0333 241 6929</a> or</h2>
+            </div>
+            <div class="rounded-responsive mrfrosty p-responsive ">
+              <h2><a href="#"><span class="iconfont" aria-hidden="true">&#123;</span><strong> Apply through Clearing online</strong></a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
