@@ -30,7 +30,7 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: linear-gradient( to right, rgb(0 0 0 / 55%) 0%, rgb(0 0 0 / 55%) 55%, rgb(0 0 0 / 0%) 100% );
+	background: rgb(0 0 0 / 55%);
 }
 .content-container {
 	grid-area: 1 / 2 / 2 / 3;
@@ -64,9 +64,6 @@
 @media (max-width: 60em) {
 .columns {
 	grid-template-columns: 1fr;
-}
-.image-container::after {
-	background: rgb(0 0 0 / 55%);
 }
 }
 </style>
