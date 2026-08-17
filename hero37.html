@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+	
+
+
+	
+	
+	.component {
+  display: grid;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.component > * {
+  grid-area: 1 / 1;
+}
+
+.component > div:first-child {
+  z-index: 0;
+  min-width: 0;
+}
+
+.component > div:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgb(0 0 0 / 55%);
+  pointer-events: none;
+}
+
+.component > div:first-child img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.component > div:nth-child(2) {
+  position: relative;
+  z-index: 2;
+}
+	
+	
+	
+</style>
+</head>
+<body>
+<main data-theme="turquoise">
+  <div class="w-80 p-responsive">
+	  
+	  
+	  
+	  
+    <h1>hero37</h1>
+    <div class="rounded-responsive bg-color-dark component centered-child">
+		
+		<div><img src="images/1920x1080clearing.webp" width="1920" height="1080" alt="" class="img-cover"></div>
+		
+		
+      <div>
+        <div class="grid gap-1 p-resize">
+          <div>
+            <h2><a href="#">Clearing 2026</a></h2>
+            <p>Register to access our priority Clearing hotline and get exclusive support, expert guidance, and early alerts to help you feel prepared ahead of results day.</p>
+          </div>
+          <div>
+            <h2>2</h2>
+          </div>
+        </div>
+		  
+      </div>
+    </div>
+	  
+	  
+	  
+	  
+  </div>
+</main>
+</body>
+</html>
