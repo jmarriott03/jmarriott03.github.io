@@ -33,9 +33,8 @@
 .iconfont {
   font-family: 'icon';
   font-weight: normal;
-  line-height: 1;
-  width: auto;
   line-height: normal;
+  width: auto;
 }
 .nowrap {
   white-space: nowrap;
