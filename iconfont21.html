@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="css/plymouth_framework.css">
 <title>University of Plymouth</title>
 <style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
 html, body {
     background: var(--lgrey);
 }
@@ -17,17 +23,15 @@ html, body {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(4em, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(3em, 1fr) );
     margin: 0 auto;
-/*    max-width: 80em;*/
-    grid-gap: 0.25em;
+    grid-gap: 0.5em;
 }
 .grid-item {
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 38.5em;
     text-align: center;
     background-color: var(--white);
     padding: 0.25em;
@@ -38,10 +42,9 @@ html, body {
 .iconfontbig {
     font-family: 'icon', sans-serif;
     font-weight: normal;
-    line-height: 1;
+    line-height: 0.8;
     font-size: 3rem;
     width: 100%;
-    padding-top: 0.5rem;
 }
 </style>
 </head>
