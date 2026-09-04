@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+}
+.card-list *:not(:focus):not(:focus-visible) {
+	outline: 1px dotted red;
+}
+.card-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.card-list a {
+	color: currentColor;
+	text-decoration: underline;
+	display: inline-block;
+}
+/* Added: card container positioning */
+.card-list li {
+	position: relative;
+}
+/* Added: stretch link to behave like full card */
+.card-list li a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+.card-list li {
+	margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="p-responsive">
+    <h1>card10</h1>
+    <h2>4 cards</h2>
+    <div class="mb-reg">
+      <ul class="grid card-list">
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 1</a></h3>
+        </li>
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 2</a></h3>
+        </li>
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 3</a></h3>
+        </li>
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 4</a></h3>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <h2>3 cards</h2>
+    <div class="mb-reg">
+      <ul class="grid card-list">
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 1</a></h3>
+        </li>
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 2</a></h3>
+        </li>
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 3</a></h3>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <h2>2 cards</h2>
+    <div class="mb-reg">
+      <ul class="grid card-list">
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 1</a></h3>
+        </li>
+        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3><a href="#">Link text 2</a></h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+</body>
+</html>
