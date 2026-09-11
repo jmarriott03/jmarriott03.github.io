@@ -37,6 +37,25 @@ a.link-no-underline {
 .max-width-22-5 {
 	max-width: 22.5em;
 }
+.process-steps {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 48em) {
+.process-steps {
+	flex-direction: column;
+	align-items: stretch;
+}
+.process-steps .max-width-22-5 {
+	max-width: 100%;
+}
+.process-steps .icon-arrow {
+	display: inline-block;
+	transform: rotate(90deg);
+}
+}
 </style>
 </head>
 <body>
@@ -44,34 +63,34 @@ a.link-no-underline {
   <div class="w-80 p-responsive">
     <h1>iconbig3</h1>
     <h2>How to apply</h2>
-    <div class="flex gap-1 flex-wrap mb-reg">
+    <div class="process-steps mb-reg">
       <div class="p-responsive rounded-responsive stroke max-width-22-5">
         <p class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">b</span><a href="#" class="underline">Choose a course</a></p>
       </div>
-      <div class="centered-child"><span class="iconfont icon-big-3" aria-hidden="true">&quot;</span></div>
+      <div class="centered-child"><span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span></div>
       <div class="p-responsive rounded-responsive stroke max-width-22-5">
         <p class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">J</span><a href="#" class="underline">Check the entry requirements</a></p>
       </div>
-      <div class="centered-child"><span class="iconfont icon-big-3" aria-hidden="true">&quot;</span></div>
+      <div class="centered-child"><span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span></div>
       <div class="p-responsive rounded-responsive stroke max-width-22-5">
         <p class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">.</span><a href="#" class="underline">Apply to Plymouth</a></p>
       </div>
     </div>
     <hr>
     <h2>How to apply (longer text)</h2>
-    <div class="flex gap-1 flex-wrap mb-reg">
+    <div class="process-steps mb-reg">
       <div class="p-responsive rounded-responsive stroke max-width-22-5">
         <div class="mb-1"><span class="iconfont icon-big-3" aria-hidden="true">b</span></div>
         <h3><a href="#" class="underline">Choose a course</a></h3>
         <p>Explore courses and find the one that's right for you.</p>
       </div>
-      <div class="centered-child"><span class="iconfont icon-big-3" aria-hidden="true">&quot;</span></div>
+      <div class="centered-child"><span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span></div>
       <div class="p-responsive rounded-responsive stroke max-width-22-5">
         <div class="mb-1"><span class="iconfont icon-big-3" aria-hidden="true">J</span></div>
         <h3><a href="#" class="underline">Check the entry requirements</a></h3>
         <p>Make sure you meet the qualifications and requirements.</p>
       </div>
-      <div class="centered-child"><span class="iconfont icon-big-3" aria-hidden="true">&quot;</span></div>
+      <div class="centered-child"><span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span></div>
       <div class="p-responsive rounded-responsive stroke max-width-22-5">
         <div class="mb-1"><span class="iconfont icon-big-3" aria-hidden="true">.</span></div>
         <h3><a href="#" class="underline">Apply to Plymouth</a></h3>
