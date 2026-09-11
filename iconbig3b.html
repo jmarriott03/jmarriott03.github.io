@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin-bottom: 1.5em;
+}
+a.link-no-underline {
+	text-decoration: none;
+}
+.max-width-22-5 {
+	max-width: 22.5em;
+}
+
+/* Stack flex items vertically on smaller screens */
+@media (max-width: 40em) {
+.flex-stack-mobile {
+	flex-direction: column;
+	align-items: stretch;
+}
+.flex-stack-mobile .max-width-22-5 {
+	max-width: 100%;
+}
+.flex-stack-mobile .icon-arrow {
+	display: inline-block;
+	transform: rotate(90deg);
+}
+.centred-items .centered-child {
+	justify-content: center;
+}
+.centred-items h3 {
+	text-align: center;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <h1>iconbig3</h1>
+    <h2>How to apply</h2>
+    <div class="flex flex-wrap gap-1 flex-stack-mobile mb-reg">
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <h3 class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">b</span><a href="#" class="underline">Choose a course</a></h3>
+      </div>
+      <div class="centered-child"> <span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span> </div>
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <h3 class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">J</span><a href="#" class="underline">Check the entry requirements</a></h3>
+      </div>
+      <div class="centered-child"> <span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span> </div>
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <h3 class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">.</span><a href="#" class="underline">Apply to Plymouth</a></h3>
+      </div>
+    </div>
+    <hr>
+    <h2>How to apply (longer text)</h2>
+    <div class="flex flex-wrap gap-1 flex-stack-mobile mb-reg">
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <div class="mb-1"><span class="iconfont icon-big-3" aria-hidden="true">b</span></div>
+        <h3><a href="#" class="underline">Choose a course</a></h3>
+        <p>Explore courses and find the one that's right for you.</p>
+      </div>
+      <div class="centered-child"> <span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span> </div>
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <div class="mb-1"><span class="iconfont icon-big-3" aria-hidden="true">J</span></div>
+        <h3><a href="#" class="underline">Check the entry requirements</a></h3>
+        <p>Make sure you meet the qualifications and requirements.</p>
+      </div>
+      <div class="centered-child"> <span class="iconfont icon-big-3 icon-arrow" aria-hidden="true">&quot;</span> </div>
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <div class="mb-1"><span class="iconfont icon-big-3" aria-hidden="true">.</span></div>
+        <h3><a href="#" class="underline">Apply to Plymouth</a></h3>
+        <p>Submit your application and take the next step towards studying with us.</p>
+      </div>
+    </div>
+    <hr>
+    <h2>What are you looking for?</h2>
+    <div class="flex flex-wrap gap-1 flex-stack-mobile centred-items mb-reg">
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <div class="centered-child mb-1"><span class="iconfont icon-big-3" aria-hidden="true">Ö</span></div>
+        <h3><a href="#" class="underline">Restaurant</a></h3>
+      </div>
+      <div class="centered-child">
+        <h3>or</h3>
+      </div>
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <div class="centered-child mb-1"><span class="iconfont icon-big-3" aria-hidden="true">é</span></div>
+        <h3><a href="#" class="underline">Information</a></h3>
+      </div>
+      <div class="centered-child">
+        <h3>or</h3>
+      </div>
+      <div class="p-responsive rounded-responsive stroke max-width-22-5">
+        <div class="centered-child mb-1"><span class="iconfont icon-big-3" aria-hidden="true">Ñ</span></div>
+        <h3><a href="#" class="underline">Toilets</a></h3>
+      </div>
+    </div>
+  </div>
+  <div class="bck-black">
+    <div class="w-80 p-responsive">
+      <h2 class="white-text">What are you looking for?</h2>
+      <div class="flex flex-wrap gap-1 flex-stack-mobile centred-items mb-reg">
+        <div class="p-responsive rounded-responsive bck-white max-width-22-5">
+          <div class="centered-child mb-1"><span class="iconfont icon-big-3" aria-hidden="true">Ö</span></div>
+          <h3><a href="#" class="underline">Restaurant</a></h3>
+        </div>
+        <div class="p-responsive rounded-responsive bck-white max-width-22-5">
+          <div class="centered-child mb-1"><span class="iconfont icon-big-3" aria-hidden="true">é</span></div>
+          <h3><a href="#" class="underline">Information</a></h3>
+        </div>
+        <div class="p-responsive rounded-responsive bck-white max-width-22-5">
+          <div class="centered-child mb-1"><span class="iconfont icon-big-3" aria-hidden="true">Ñ</span></div>
+          <h3><a href="#" class="underline">Toilets</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
