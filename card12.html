@@ -15,37 +15,7 @@
 	outline-offset: -1px;
 }
 */
-.card-list *:not(:focus):not(:focus-visible) {
-	outline: 1px dotted red;
-}
-.card-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-.card-list a {
-	color: currentColor;
-	text-decoration: underline;
-	display: inline-block;
-}
-/* Added: card container positioning */
-.card-list li {
-	position: relative;
-}
-/* Added: stretch link to behave like full card */
-.card-list li a::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-}
-.card-list li {
-	margin-bottom: 0;
-}
-	
-	
-	
-	
-	table {
+table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	margin: 0;
@@ -59,160 +29,159 @@ td, th {
 th {
 	border-bottom: 2px solid var(--black);
 }
-	
-	
-	
-	
+.card-stretch {
+	position: relative;
+	transition: background-color 0.2s ease;
+}
+.card-stretch a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+.card-stretch a {
+	text-decoration: none;
+}
+.card-stretch a h3 {
+	text-decoration: underline;
+}
+.card-stretch a p {
+	color: var(--black);
+	text-decoration: none;
+}
+.card-stretch a:focus-visible {
+outline: none;
+}
+.card-stretch a:focus-visible h3 span {
+outline: 2px solid currentColor;
+outline-offset: 2px;
+}
+.card-stretch:has(a:hover), .card-stretch:has(a:focus-visible) {
+background-color: var(--lgrey);
+}
 </style>
 </head>
 <body>
 <main>
-	
-	<div class="p-responsive w-60">
-	
-		
-		
-		
-		
-		<table>
-    <tr>
-      <th scope="col"><h3>Card content</h3></th>
-      <th scope="col"><h3>Recommended approach</h3></th>
-      <th scope="col"><h3>Why</h3></th>
-    </tr>
-    <tr>
-      <td>Title + description, one destination</td>
-      <td><strong>Linked title</strong>; optionally expand its pointer hit area</td>
-      <td>Keeps a concise, meaningful link name and one keyboard focus target; the larger area is a pointer convenience.</td>
-    </tr>
-			
-			
-			<tr>
-      <td>Title + description + metadata, one destination</td>
-      <td><strong>Title link is safest</strong></td>
-      <td>Prevents descriptions, dates and status text from becoming an overly long link announcement.</td>
-    </tr>
-			
-			
-			<tr>
-      <td>Multiple links to different destinations</td>
-      <td><strong>Title link + separate links</strong></td>
-      <td>Each destination needs its own clear, keyboard-accessible link; a whole-card link would conflict with them.</td>
-    </tr>
-			
-			
-			
-			<tr>
-      <td>Buttons/actions as well as a destination</td>
-      <td><strong>Do not make the whole card a link</strong></td>
-      <td>Links navigate and buttons act; controls must remain separate and must not be nested.</td>
-    </tr>
-			
-			
-			
-			
-			<tr>
-      <td>Image + title leading to the same place</td>
-      <td><strong>One shared link, not two links</strong></td>
-      <td>Avoids duplicate Tab stops and repeated screen- reader link announcements for the same destination. Use <span class="codegrey2"><code>alt=&quot;&quot;</code></span> if the image is redundant to the linked title.</td>
-    </tr>
-			
-			
-			
-			
-			<tr>
-      <td>Card is purely informational</td>
-      <td><strong>No link</strong></td>
-      <td>Avoids creating a misleading, unnecessary interactive target.</td>
-    </tr>
-			
-			
-   
-  </table>
-		
-		
-	
-	</div>
-  <div class="p-responsive">
-	  
-	  
-	  
-	  
-	 
-	  
-	  
-	  
-	  
-	  <div class="mb-reg">
-      <ul class="grid">
-        <li><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3>Link text 1</h3></a>
-        </li>
-		  
-
-		  <li><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3>Link text 1</h3></a>
-        </li>
-		  
-		  <li><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3>Link text 1</h3></a>
-        </li>
-		  
-		  <li><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3>Link text 1</h3></a>
-        </li>
-		  
-		  
-		  </ul></div>
-		  
-		  
-		  
-		  
-    <h1>card10b</h1>
-    <h2>4 cards</h2>
-    <div class="mb-reg">
-      <ul class="grid card-list">
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 1</a></h3>
-        </li>
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 2</a></h3>
-        </li>
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 3</a></h3>
-        </li>
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 4</a></h3>
-        </li>
-      </ul>
+  <div class="p-responsive w-80">
+    <h1>card12</h1>
+    <h2>Accessible card patterns</h2>
+    <p>A working HTML demonstration of six card/link arrangements, incorporating relevant WCAG 2.2 requirements and GOV.UK-style interaction guidance.</p>
+    <table class="mb-reg">
+      <tr>
+        <th scope="col">Card content</th>
+        <th scope="col">Recommended approach</th>
+        <th scope="col">Why</th>
+      </tr>
+      <tr>
+        <td>Title + description, one destination</td>
+        <td><strong>Linked title</strong>; optionally expand its pointer hit area</td>
+        <td>Keeps a concise, meaningful link name and one keyboard focus target; the larger area is a pointer convenience.</td>
+      </tr>
+      <tr>
+        <td>Title + description + metadata, one destination</td>
+        <td><strong>Title link is safest</strong></td>
+        <td>Prevents descriptions, dates and status text from becoming an overly long link announcement.</td>
+      </tr>
+      <tr>
+        <td>Multiple links to different destinations</td>
+        <td><strong>Title link + separate links</strong></td>
+        <td>Each destination needs its own clear, keyboard-accessible link; a whole-card link would conflict with them.</td>
+      </tr>
+      <tr>
+        <td>Buttons/actions as well as a destination</td>
+        <td><strong>Do not make the whole card a link</strong></td>
+        <td>Links navigate and buttons act; controls must remain separate and must not be nested.</td>
+      </tr>
+      <tr>
+        <td>Image + title leading to the same place</td>
+        <td><strong>One shared link, not two links</strong></td>
+        <td>Avoids duplicate Tab stops and repeated screen-reader link announcements for the same destination. Use <span class="codegrey2"><code>alt=&quot;&quot;</code></span> if the image is redundant to the linked title.</td>
+      </tr>
+      <tr>
+        <td>Card is purely informational</td>
+        <td><strong>No link</strong></td>
+        <td>Avoids creating a misleading, unnecessary interactive target.</td>
+      </tr>
+    </table>
+    <h2>1. Title and description, one destination</h2>
+    <p>Recommended: enlarged title link or whole-card link</p>
+    <div class="grid mb-reg">
+      <div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">Planning a service</a></h3>
+        <p>Guidance for planning and testing a public-facing digital service.</p>
+        <p>One destination; the heading identifies it.</p>
+      </div>
+      <div class="rounded-responsive p-responsive stroke card-stretch"> <a href="#">
+        <h3><span>Designing accessible content</span></h3>
+        <p>Practical advice for writing and presenting information clearly.</p>
+        </a> </div>
     </div>
-    <hr>
-    <h2>3 cards</h2>
-    <div class="mb-reg">
-      <ul class="grid card-list">
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 1</a></h3>
-        </li>
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 2</a></h3>
-        </li>
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 3</a></h3>
-        </li>
-      </ul>
-    </div>
-    <hr>
-    <h2>2 cards</h2>
-    <div class="mb-reg">
-      <ul class="grid card-list">
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 1</a></h3>
-        </li>
-        <li><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-          <h3><a href="#">Link text 2</a></h3>
-        </li>
-      </ul>
-    </div>
+	  
+	  
+	  
+	  
+	  
+	  <h2>2. Title, description and metadata, one destination</h2>
+    <p>Recommended: title link is safest</p>
+	  
+	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">one</a></h3>
+        <p>one text</p>
+      </div><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">two</a></h3>
+        <p>two text</p>
+      </div></div>
+	  
+	 <h2>3. Multiple links to different destinations</h2>
+    <p>Recommended: title link plus separate links</p>
+	  
+	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">one</a></h3>
+        <p>one text</p>
+      </div><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">two</a></h3>
+        <p>two text</p>
+      </div></div>
+	  
+	  <h2>4. Buttons or actions as well as a destination</h2>
+    <p>Recommended: do not make the whole card a link</p>
+	  
+	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">one</a></h3>
+        <p>one text</p>
+      </div><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">two</a></h3>
+        <p>two text</p>
+      </div></div>
+	  
+	  <h2>5. Image and title leading to the same place</h2>
+    <p>Recommended: avoid unnecessary duplicate focus targets</p>
+	  
+	  
+	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">one</a></h3>
+        <p>one text</p>
+      </div><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">two</a></h3>
+        <p>two text</p>
+      </div></div>
+	  
+	  <h2>6. Purely informational card</h2>
+    <p>Recommended: no link</p>
+	  
+	  
+	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">one</a></h3>
+        <p>one text</p>
+      </div><div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">two</a></h3>
+        <p>two text</p>
+      </div></div>
+	  
+	  
+	  
+	  
+	  
   </div>
 </main>
 </body>
