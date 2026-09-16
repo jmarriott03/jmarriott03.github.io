@@ -58,14 +58,14 @@ outline-offset: 2px;
 .card-stretch:has(a:hover), .card-stretch:has(a:focus-visible) {
 background-color: var(--lgrey);
 }
-	
-	hr {
-  border: none;
-  border-top: 2px solid var(--lgrey);
-  margin-bottom: 1.5em;
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin-bottom: 1.5em;
 }
-	
-	
+.grid > * {
+	max-width: 27.5em;
+}
 </style>
 </head>
 <body>
@@ -111,7 +111,7 @@ background-color: var(--lgrey);
         <td>Avoids creating a misleading, unnecessary interactive target.</td>
       </tr>
     </table>
-	  <hr>
+    <hr>
     <h2>1. Title and description, one destination</h2>
     <p>Recommended: enlarged title link or whole-card link</p>
     <div class="grid mb-reg">
@@ -125,87 +125,71 @@ background-color: var(--lgrey);
         <p>Practical advice for writing and presenting information clearly.</p>
         </a> </div>
     </div>
-	  
-	  
-	  <hr>
-	  
-	  
-	  <h2>2. Title, description and metadata, one destination</h2>
+    <hr>
+    <h2>2. Title, description and metadata, one destination</h2>
     <p>Recommended: title link is safest</p>
-	  
-	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+    <div class="grid mb-reg">
+      <div class="rounded-responsive p-responsive stroke">
         <h3><a href="#" class="underline">Accessibility manual</a></h3>
         <p>Use this manual to understand responsibilities and delivery checks.</p>
-		  <p class="smalltext dgrey-text"><span class="iconfont" aria-hidden="true">c</span>
-            <time datetime="2026-04-27T08:30">27 April 2026 08:30 - 16:30</time>
-          </p>
-      </div></div>
-	  
-	  
-
-	  <hr>
-	  
-	 <h2>3. Multiple links to different destinations</h2>
+        <p class="smalltext dgrey-text"><span class="iconfont" aria-hidden="true">c</span>
+          <time datetime="2026-04-27T08:30">27 April 2026 08:30 - 16:30</time>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <h2>3. Multiple links to different destinations</h2>
     <p>Recommended: title link plus separate links</p>
-	  
-	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
+    <div class="grid mb-reg">
+      <div class="rounded-responsive p-responsive stroke">
         <h3><a href="#" class="underline">Build a service</a></h3>
         <p>Find guidance for planning, building and improving a service.</p>
-		  <ul>
-		    <li><a href="#" class="underline">Read the service guidance</a></li><li><a href="#" class="underline">Use the accessibility checklist</a></li></ul>
-      </div></div>
-	  
-	  
-
-	  
-	  
-	  <hr>
-	  
-	  
-	  
-	  <h2>4. Buttons or actions as well as a destination</h2>
+        <ul>
+          <li><a href="#" class="underline">Read the service guidance</a></li>
+          <li><a href="#" class="underline">Use the accessibility checklist</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <h2>4. Buttons or actions as well as a destination</h2>
     <p>Recommended: do not make the whole card a link</p>
-	  
-	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
-        <h3><a href="#" class="underline">one</a></h3>
-        <p>one text</p>
-      </div><div class="rounded-responsive p-responsive stroke">
-        <h3><a href="#" class="underline">two</a></h3>
-        <p>two text</p>
-      </div></div>
-	  
-	  
-	  <hr>
-	  
-	  
-	  <h2>5. Image and title leading to the same place</h2>
+    <div class="grid mb-reg">
+      <div class="rounded-responsive p-responsive stroke">
+        <h3><a href="#" class="underline">Service prototype</a></h3>
+        <p>Review the latest prototype, or perform an action on it.</p>
+        <div class="flex flex-wrap gap-1">
+          <button class="btn btn-primary">View prototype</button>
+          <button class="btn btn-light">Save for later</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h2>5. Image and title leading to the same place</h2>
     <p>Recommended: avoid unnecessary duplicate focus targets</p>
-	  
-	  
-	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
-        <h3><a href="#" class="underline">one</a></h3>
-        <p>one text</p>
-      </div><div class="rounded-responsive p-responsive stroke">
-        <h3><a href="#" class="underline">two</a></h3>
-        <p>two text</p>
-      </div></div>
-	  
-	  <h2>6. Purely informational card</h2>
+    <div class="grid mb-reg">
+      <div class="rounded-responsive p-responsive stroke"> <a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+        <h3 class="underline">Link text 2</h3>
+        </a> </div>
+    </div>
+    <hr>
+    <h2>6. Purely informational card</h2>
     <p>Recommended: no link</p>
-	  
-	  
-	  <div class="grid mb-reg"><div class="rounded-responsive p-responsive stroke">
-        <h3><a href="#" class="underline">one</a></h3>
-        <p>one text</p>
-      </div><div class="rounded-responsive p-responsive stroke">
-        <h3><a href="#" class="underline">two</a></h3>
-        <p>two text</p>
-      </div></div>
-	  
-	  
-	  
-	  
-	  
+    <div class="grid mb-reg">
+      <div class="rounded-responsive p-responsive stroke">
+        <h3>Opening hours</h3>
+        <p>Our support team is available Monday to Friday, 9am to 5pm.</p>
+        <p class="smalltext dgrey-text">This card communicates information only.</p>
+      </div>
+    </div>
+    <hr>
+    <h2>Implementation checks</h2>
+    <ul>
+      <li>Use real headings, links and buttons rather than clickable div elements.</li>
+      <li>Make link purpose clear from its text and context; do not rely on colour alone.</li>
+      <li>Keep focus indicators visible, with sufficient contrast and offset.</li>
+      <li>Do not open links in a new tab unless the link text explains that behaviour.</li>
+      <li>Test with keyboard navigation, zoom, reflow, a screen reader and automated tools.</li>
+    </ul>
   </div>
 </main>
 </body>
