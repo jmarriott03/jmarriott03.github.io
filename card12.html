@@ -93,7 +93,7 @@ hr {
       <tr>
         <td>Multiple links to different destinations</td>
         <td><strong>Title link + separate links</strong></td>
-        <td>Each destination needs its own clear, keyboard-accessible link; a whole-card link would conflict with them.</td>
+        <td>Each destination needs its own clear, keyboard-accessible link; a stretched link would conflict with them.</td>
       </tr>
       <tr>
         <td>Buttons/actions as well as a destination</td>
@@ -113,7 +113,7 @@ hr {
     </table>
     <hr>
     <h2>1. Title and description, one destination</h2>
-    <p>Recommended: enlarged title link or whole-card link</p>
+    <p>Recommended: enlarged title link or stretched link</p>
     <div class="grid mb-reg">
       <div class="rounded-responsive p-responsive stroke">
         <h3><a href="#" class="underline">Planning a service</a></h3>
@@ -184,12 +184,20 @@ hr {
     <hr>
     <h2>Implementation checks</h2>
     <ul>
-      <li>Use real headings, links and buttons rather than clickable div elements.</li>
-      <li>Make link purpose clear from its text and context; do not rely on colour alone.</li>
-      <li>Keep focus indicators visible, with sufficient contrast and offset.</li>
-      <li>Do not open links in a new tab unless the link text explains that behaviour.</li>
-      <li>Test with keyboard navigation, zoom, reflow, a screen reader and automated tools.</li>
-    </ul>
+  <li>Use a descriptive link in the card heading as the default pattern.</li>
+  <li>Do not put buttons, form controls or different links inside a stretched-link card.</li>
+  <li>Do not nest links or buttons inside one another.</li>
+  <li>Ensure every link has a clear purpose from its text and accessible context.</li>
+  <li>Consolidate image and title links when they have the same destination.</li>
+  <li>Use empty alternative text for images that are decorative or redundant.</li>
+  <li>Keep the default link styling distinguishable without relying on colour alone.</li>
+  <li>Provide a focus indicator that is visible, sufficiently contrasted and not clipped.</li>
+  <li>Check pointer targets against WCAG 2.5.8’s 24 by 24 CSS pixel minimum.</li>
+  <li>Check that enlarged card hit areas do not overlap adjacent cards or controls.</li>
+  <li>Test at 200% zoom, 400% zoom and narrow reflow widths.</li>
+  <li>Test links in a screen-reader links list, not only in their visual context.</li>
+  <li>Test with keyboard, touch, screen reader, zoom and forced-colour settings.</li>
+</ul>
   </div>
 </main>
 </body>
