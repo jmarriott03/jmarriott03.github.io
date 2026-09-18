@@ -167,9 +167,12 @@ hr {
     <h2>5. Image and title leading to the same place</h2>
     <p>Recommended: avoid unnecessary duplicate focus targets</p>
     <div class="grid mb-reg">
-      <div class="rounded-responsive p-responsive stroke"> <a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
-        <h3 class="underline">Link text 2</h3>
-        </a> </div>
+      <div class="rounded-responsive p-responsive stroke">
+        <div class="mb-reg"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-responsive mb-1 rounded-1">
+          <h3 class="underline mb-reg">Annual accessibility report</h3>
+          </a></div>
+        <p>Image is decorative to the link because the adjacent title provides the same destination and purpose.</p>
+      </div>
     </div>
     <hr>
     <h2>6. Purely informational card</h2>
@@ -184,20 +187,20 @@ hr {
     <hr>
     <h2>Implementation checks</h2>
     <ul>
-  <li>Use a descriptive link in the card heading as the default pattern.</li>
-  <li>Do not put buttons, form controls or different links inside a stretched-link card.</li>
-  <li>Do not nest links or buttons inside one another.</li>
-  <li>Ensure every link has a clear purpose from its text and accessible context.</li>
-  <li>Consolidate image and title links when they have the same destination.</li>
-  <li>Use empty alternative text for images that are decorative or redundant.</li>
-  <li>Keep the default link styling distinguishable without relying on colour alone.</li>
-  <li>Provide a focus indicator that is visible, sufficiently contrasted and not clipped.</li>
-  <li>Check pointer targets against WCAG 2.5.8’s 24 by 24 CSS pixel minimum.</li>
-  <li>Check that enlarged card hit areas do not overlap adjacent cards or controls.</li>
-  <li>Test at 200% zoom, 400% zoom and narrow reflow widths.</li>
-  <li>Test links in a screen-reader links list, not only in their visual context.</li>
-  <li>Test with keyboard, touch, screen reader, zoom and forced-colour settings.</li>
-</ul>
+      <li>Use a descriptive link in the card heading as the default pattern.</li>
+      <li>Do not put buttons, form controls or different links inside a stretched-link card.</li>
+      <li>Do not nest links or buttons inside one another.</li>
+      <li>Ensure every link has a clear purpose from its text and accessible context.</li>
+      <li>Consolidate image and title links when they have the same destination.</li>
+      <li>Use empty alternative text for images that are decorative or redundant.</li>
+      <li>Keep the default link styling distinguishable without relying on colour alone.</li>
+      <li>Provide a focus indicator that is visible, sufficiently contrasted and not clipped.</li>
+      <li>Check pointer targets against WCAG 2.5.8’s 24 by 24 CSS pixel minimum.</li>
+      <li>Check that enlarged card hit areas do not overlap adjacent cards or controls.</li>
+      <li>Test at 200% zoom, 400% zoom and narrow reflow widths.</li>
+      <li>Test links in a screen-reader links list, not only in their visual context.</li>
+      <li>Test with keyboard, touch, screen reader, zoom and forced-colour settings.</li>
+    </ul>
   </div>
 </main>
 </body>
