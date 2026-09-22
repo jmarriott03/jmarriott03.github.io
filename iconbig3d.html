@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin-bottom: 1.5em;
+}
+a.link-no-underline {
+	text-decoration: none;
+}
+.max-width-35-75 {
+	max-width: 35.75em;
+}
+
+/* Stack flex items vertically on smaller screens */
+@media (max-width: 45em) {
+.flex-stack-mobile {
+	flex-direction: column;
+	align-items: stretch;
+}
+.flex-stack-mobile .max-width-35-75 {
+	max-width: 100%;
+}
+.flex-stack-mobile .icon-arrow {
+	display: inline-block;
+	transform: rotate(90deg);
+}
+.centred-items .centered-child {
+	justify-content: center;
+}
+.centred-items h3 {
+	text-align: center;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="w-80 p-responsive">
+    <h1>iconbig3d</h1>
+    <h2>icon and heading centered</h2>
+    <div class="flex flex-wrap gap-1 flex-stack-mobile mb-reg">
+      <div class="p-responsive rounded-responsive stroke max-width-35-75">
+        <h3 class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">0</span><a href="#" class="underline">Call our Clearing hotline: 0333 241 6929</a></h3>
+        <p>Our friendly Clearing team will check your results against our latest course vacancies and help you take your next step.</p>
+      </div>
+      <div class="centered-child">
+        <h3>or</h3>
+      </div>
+      <div class="p-responsive rounded-responsive stroke max-width-35-75">
+        <h3 class="centered-child gap-1"><span class="iconfont icon-big-3" aria-hidden="true">J</span><a href="#" class="underline">Apply online</a></h3>
+        <p>We’ll check your results against our latest course vacancies and guide you through your next step.</p>
+      </div>
+    </div>
+    <hr>
+    <h2>icon centered, heading left aligned</h2>
+    <div class="flex flex-wrap gap-1 flex-stack-mobile mb-reg">
+      <div class="p-responsive rounded-responsive stroke max-width-35-75">
+        <div class="centered-child mb-1">
+          <h3><span class="iconfont icon-big-3" aria-hidden="true">0</span></h3>
+        </div>
+        <h3><a href="#" class="underline">Call our Clearing hotline: 0333 241 6929</a></h3>
+        <p>Our friendly Clearing team will check your results against our latest course vacancies and help you take your next step.</p>
+      </div>
+      <div class="centered-child">
+        <h3>or</h3>
+      </div>
+      <div class="p-responsive rounded-responsive stroke max-width-35-75">
+        <div class="centered-child mb-1">
+          <h3><span class="iconfont icon-big-3" aria-hidden="true">J</span></h3>
+        </div>
+        <h3><a href="#" class="underline">Apply online</a></h3>
+        <p>We’ll check your results against our latest course vacancies and guide you through your next step.</p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
