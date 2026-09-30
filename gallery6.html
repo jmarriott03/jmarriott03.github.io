@@ -1,0 +1,405 @@
+<!doctype html>
+
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+
+a {
+	text-decoration: underline;
+}
+.grid {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid > * {
+	width: 100%;
+}
+.card {
+	position: relative;
+}
+.card-image-button {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	cursor: zoom-in;
+}
+.card-image-button:focus {
+	outline: 0;
+}
+.card-image-button:focus-visible {
+outline: 3px solid #06c;
+outline-offset: -3px;
+}
+.card-image-wrapper {
+	display: block;
+}
+.card-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.gallery-dialog {
+	width: min(90vw, 70em);
+	max-width: 70em;
+	max-height: 90vh;
+	padding: 0;
+	border: 0;
+	border-radius: 1em;
+	background: #fff;
+	color: #111;
+	box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+}
+.gallery-dialog::backdrop {
+background: rgba(0, 0, 0, 0.75);
+}
+.gallery-dialog-content {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	max-height: 90vh;
+	overflow: auto;
+}
+.gallery-dialog-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+	padding: 1em;
+	border-bottom: 1px solid #ccc;
+}
+.gallery-dialog-title {
+	margin: 0;
+}
+.gallery-dialog-close {
+	flex: 0 0 auto;
+}
+.gallery-dialog-image-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	background: #eee;
+}
+.gallery-dialog-image {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 60vh;
+}
+.gallery-dialog-footer {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	gap: 1em;
+	padding: 1em;
+	border-top: 1px solid #ccc;
+}
+.gallery-dialog-position {
+	margin: 0;
+	text-align: center;
+}
+.gallery-dialog-previous {
+	justify-self: start;
+}
+.gallery-dialog-next {
+	justify-self: end;
+}
+
+@media (max-width: 40em) {
+.gallery-dialog {
+	width: 100vw;
+	max-width: none;
+	max-height: 100vh;
+	margin: 0;
+	border-radius: 0;
+}
+.gallery-dialog-content {
+	max-height: 100vh;
+}
+.gallery-dialog-image-wrapper {
+	padding: 0.5em;
+}
+.gallery-dialog-image {
+	max-height: 65vh;
+}
+.gallery-dialog-footer {
+	grid-template-columns: 1fr 1fr;
+}
+.gallery-dialog-position {
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+.gallery-dialog-previous {
+	grid-column: 1;
+	grid-row: 2;
+}
+.gallery-dialog-next {
+	grid-column: 2;
+	grid-row: 2;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+	animation: none !important;
+	transition: none !important;
+	scroll-behavior: auto !important;
+}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="p-responsive w-80">
+    <h1>card13</h1>
+    <h2>Student gallery</h2>
+    <div class="grid mb-reg">
+      <div class="card rounded-1 stroke">
+        <button
+				type="button"
+				class="card-image-button"
+				data-image="images/1280x720student1.jpg"
+				data-title="Student 1"
+				data-alt="Student 1"
+				aria-haspopup="dialog"
+				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+						src="images/1280x720student1.jpg"
+						width="1280"
+						height="720"
+						alt=""
+						class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 1</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button
+				type="button"
+				class="card-image-button"
+				data-image="images/1280x720student2.jpg"
+				data-title="Student 2"
+				data-alt="Student 2"
+				aria-haspopup="dialog"
+				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+						src="images/1280x720student2.jpg"
+						width="1280"
+						height="720"
+						alt=""
+						class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 2</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button
+				type="button"
+				class="card-image-button"
+				data-image="images/1280x720student3.jpg"
+				data-title="Student 3"
+				data-alt="Student 3"
+				aria-haspopup="dialog"
+				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+						src="images/1280x720student3.jpg"
+						width="1280"
+						height="720"
+						alt=""
+						class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 3</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button
+				type="button"
+				class="card-image-button"
+				data-image="images/1280x720student4.jpg"
+				data-title="Student 4"
+				data-alt="Student 4"
+				aria-haspopup="dialog"
+				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+						src="images/1280x720student4.jpg"
+						width="1280"
+						height="720"
+						alt=""
+						class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 4</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button
+				type="button"
+				class="card-image-button"
+				data-image="images/1280x720student5.jpg"
+				data-title="Student 5"
+				data-alt="Student 5"
+				aria-haspopup="dialog"
+				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+						src="images/1280x720student5.jpg"
+						width="1280"
+						height="720"
+						alt=""
+						class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 5</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button
+				type="button"
+				class="card-image-button"
+				data-image="images/1280x720student6.jpg"
+				data-title="Student 6"
+				data-alt="Student 6"
+				aria-haspopup="dialog"
+				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+						src="images/1280x720student6.jpg"
+						width="1280"
+						height="720"
+						alt=""
+						class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 6</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<dialog
+	id="gallery-dialog"
+	class="gallery-dialog"
+	aria-labelledby="gallery-dialog-title">
+  <div class="gallery-dialog-content">
+    <div class="gallery-dialog-header">
+      <h2 id="gallery-dialog-title" class="gallery-dialog-title"> Student 1 </h2>
+      <form method="dialog">
+        <button
+				type="submit"
+				class="gallery-dialog-close btn btn-light"> Close </button>
+      </form>
+    </div>
+    <div class="gallery-dialog-image-wrapper"> <img
+			id="gallery-dialog-image"
+			class="gallery-dialog-image"
+			alt=""> </div>
+    <div class="gallery-dialog-footer">
+      <button
+			type="button"
+			class="gallery-dialog-previous btn btn-primary"> Previous </button>
+      <p
+			id="gallery-dialog-position"
+			class="gallery-dialog-position"
+			aria-live="polite"> Image 1 of 6 </p>
+      <button
+			type="button"
+			class="gallery-dialog-next btn btn-primary"> Next </button>
+    </div>
+  </div>
+</dialog>
+<script>
+const galleryButtons = Array.from(
+	document.querySelectorAll('.card-image-button')
+);
+
+const dialog = document.querySelector('.gallery-dialog');
+const dialogImage = document.querySelector('#gallery-dialog-image');
+const dialogTitle = document.querySelector('#gallery-dialog-title');
+const dialogPosition = document.querySelector('#gallery-dialog-position');
+const previousButton = document.querySelector('.gallery-dialog-previous');
+const nextButton = document.querySelector('.gallery-dialog-next');
+const closeButton = document.querySelector('.gallery-dialog-close');
+
+let currentIndex = 0;
+let lastTrigger = null;
+
+function updateGallery(index) {
+	currentIndex = index;
+
+	const button = galleryButtons[currentIndex];
+	const image = button.dataset.image;
+	const title = button.dataset.title;
+	const alt = button.dataset.alt;
+
+	dialogImage.src = image;
+	dialogImage.alt = alt;
+	dialogTitle.textContent = title;
+
+	dialogPosition.textContent =
+		'Image ' + (currentIndex + 1) + ' of ' + galleryButtons.length;
+
+	previousButton.disabled = currentIndex === 0;
+	nextButton.disabled = currentIndex === galleryButtons.length - 1;
+}
+
+function openGallery(index) {
+	lastTrigger = galleryButtons[index];
+
+	updateGallery(index);
+
+	dialog.showModal();
+
+	closeButton.focus();
+}
+
+function closeGallery() {
+	if (dialog.open) {
+		dialog.close();
+	}
+}
+
+galleryButtons.forEach(function (button, index) {
+	button.addEventListener('click', function () {
+		openGallery(index);
+	});
+});
+
+previousButton.addEventListener('click', function () {
+	if (currentIndex > 0) {
+		updateGallery(currentIndex - 1);
+	}
+});
+
+nextButton.addEventListener('click', function () {
+	if (currentIndex < galleryButtons.length - 1) {
+		updateGallery(currentIndex + 1);
+	}
+});
+
+dialog.addEventListener('close', function () {
+	dialogImage.removeAttribute('src');
+	dialogImage.alt = '';
+
+	if (lastTrigger) {
+		lastTrigger.focus();
+	}
+});
+
+dialog.addEventListener('click', function (event) {
+	if (event.target === dialog) {
+		closeGallery();
+	}
+});
+</script>
+</body>
+</html>

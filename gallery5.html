@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+
+a {
+	text-decoration: underline;
+}
+.grid {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+.grid > * {
+	width: 100%;
+}
+.card {
+	position: relative;
+	transition: box-shadow 0.3s ease;
+}
+.card.is-expanded {
+	grid-column: 1 / -1;
+}
+.card-image-button {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: transparent;
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	cursor: zoom-in;
+}
+.card-image-button:focus {
+	outline: none;
+}
+.card-image-button:focus-visible {
+outline: 2px solid #06c;
+outline-offset: -4px;
+}
+.card.is-expanded .card-image-button {
+	cursor: zoom-out;
+}
+.card-image-wrapper {
+	display: block;
+}
+.card-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.card.is-animating {
+	z-index: 2;
+}
+
+@media (max-width: 40em) {
+.card-image-button, .card.is-expanded .card-image-button {
+	cursor: default;
+}
+}
+</style>
+</head>
+
+<body>
+<main>
+  <div class="p-responsive w-80">
+    <h1>card13</h1>
+    <h2>Student gallery</h2>
+    <div class="grid mb-reg">
+      <div class="card rounded-1 stroke">
+        <button type="button" class="card-image-button" aria-expanded="false" aria-label="Expand image"> <span class="card-image-wrapper"> <img src="images/1280x720student1.jpg" width="1280" height="720" alt="" class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 1</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button type="button" class="card-image-button" aria-expanded="false" aria-label="Expand image"> <span class="card-image-wrapper"> <img src="images/1280x720student2.jpg" width="1280" height="720" alt="" class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 2</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button type="button" class="card-image-button" aria-expanded="false" aria-label="Expand image"> <span class="card-image-wrapper"> <img src="images/1280x720student3.jpg" width="1280" height="720" alt="" class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 3</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button type="button" class="card-image-button" aria-expanded="false" aria-label="Expand image"> <span class="card-image-wrapper"> <img src="images/1280x720student4.jpg" width="1280" height="720" alt="" class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 4</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button type="button" class="card-image-button" aria-expanded="false" aria-label="Expand image"> <span class="card-image-wrapper"> <img src="images/1280x720student5.jpg" width="1280" height="720" alt="" class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 5</p>
+        </div>
+      </div>
+      <div class="card rounded-1 stroke">
+        <button type="button" class="card-image-button" aria-expanded="false" aria-label="Expand image"> <span class="card-image-wrapper"> <img src="images/1280x720student6.jpg" width="1280" height="720" alt="" class="img-responsive card-image"> </span> </button>
+        <div class="p-1">
+          <p>Student 6</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+const grid = document.querySelector('.grid');
+const cards = Array.from(grid.children);
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const largeScreen = window.matchMedia('(min-width: 40em)');
+
+cards.forEach(function (card) {
+	const button = card.querySelector('.card-image-button');
+
+	button.addEventListener('click', function () {
+		if (!largeScreen.matches) {
+			return;
+		}
+
+		if (card.classList.contains('is-expanded')) {
+			collapseCard(card);
+		} else {
+			expandCard(card);
+		}
+	});
+});
+
+function updateButtonState(card) {
+	const button = card.querySelector('.card-image-button');
+	const expanded = card.classList.contains('is-expanded');
+
+	button.setAttribute('aria-expanded', expanded);
+
+	if (expanded) {
+		button.setAttribute('aria-label', 'Collapse image');
+	} else {
+		button.setAttribute('aria-label', 'Expand image');
+	}
+}
+
+function updateResponsiveState() {
+	if (!largeScreen.matches) {
+		const expandedCard = grid.querySelector('.card.is-expanded');
+
+		if (expandedCard) {
+			expandedCard.classList.remove('is-expanded');
+			updateButtonState(expandedCard);
+		}
+	}
+
+	cards.forEach(function (card) {
+		const button = card.querySelector('.card-image-button');
+
+		button.disabled = !largeScreen.matches;
+
+		if (!largeScreen.matches) {
+			button.setAttribute('aria-expanded', 'false');
+			button.setAttribute('aria-label', 'Image expansion unavailable on smaller screens');
+		} else {
+			updateButtonState(card);
+		}
+	});
+}
+
+largeScreen.addEventListener('change', updateResponsiveState);
+
+updateResponsiveState();
+
+function animateLayout(changeLayout) {
+	const first = new Map();
+
+	cards.forEach(function (card) {
+		const rect = card.getBoundingClientRect();
+
+		first.set(card, {
+			left: rect.left,
+			top: rect.top,
+			width: rect.width,
+			height: rect.height
+		});
+	});
+
+	changeLayout();
+
+	if (reducedMotion) {
+		return;
+	}
+
+	cards.forEach(function (card) {
+		const oldRect = first.get(card);
+		const newRect = card.getBoundingClientRect();
+
+		const deltaX = oldRect.left - newRect.left;
+		const deltaY = oldRect.top - newRect.top;
+		const scaleX = oldRect.width / newRect.width;
+		const scaleY = oldRect.height / newRect.height;
+
+		if (
+			Math.abs(deltaX) < 1 &&
+			Math.abs(deltaY) < 1 &&
+			Math.abs(scaleX - 1) < 0.01 &&
+			Math.abs(scaleY - 1) < 0.01
+		) {
+			return;
+		}
+
+		card.classList.add('is-animating');
+
+		card.animate(
+			[
+				{
+					transform:
+						'translate(' + deltaX + 'px, ' + deltaY + 'px) scale(' +
+						scaleX + ', ' + scaleY + ')'
+				},
+				{
+					transform: 'translate(0, 0) scale(1, 1)'
+				}
+			],
+			{
+				duration: 450,
+				easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)'
+			}
+		).finished.then(function () {
+			card.classList.remove('is-animating');
+		});
+	});
+}
+
+function expandCard(card) {
+	const currentlyExpanded = grid.querySelector('.card.is-expanded');
+
+	if (currentlyExpanded && currentlyExpanded !== card) {
+		animateLayout(function () {
+			currentlyExpanded.classList.remove('is-expanded');
+			updateButtonState(currentlyExpanded);
+
+			card.classList.add('is-expanded');
+			updateButtonState(card);
+		});
+		return;
+	}
+
+	animateLayout(function () {
+		card.classList.add('is-expanded');
+		updateButtonState(card);
+	});
+}
+
+function collapseCard(card) {
+	animateLayout(function () {
+		card.classList.remove('is-expanded');
+		updateButtonState(card);
+	});
+}
+</script>
+</body>
+</html>
