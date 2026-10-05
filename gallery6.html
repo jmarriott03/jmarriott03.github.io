@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8">
@@ -12,21 +11,13 @@
 <style>
 /*
 * {
-	outline: 1px dotted red;
-	outline-offset: -1px;
+outline: 1px dotted red;
+outline-offset: -1px;
 }
 */
 
 a {
 	text-decoration: underline;
-}
-.grid {
-	display: grid;
-	gap: 1em;
-	grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-}
-.grid > * {
-	width: 100%;
 }
 .card {
 	position: relative;
@@ -50,6 +41,12 @@ a {
 outline: 3px solid #06c;
 outline-offset: -3px;
 }
+
+/* Hide the ring only when focus returns after the dialog closes */
+.card-image-button.is-returning-focus:focus, .card-image-button.is-returning-focus:focus-visible {
+outline: 0;
+box-shadow: none;
+}
 .card-image-wrapper {
 	display: block;
 }
@@ -64,14 +61,12 @@ outline-offset: -3px;
 	max-height: 90vh;
 	padding: 0;
 	border: 0;
-	border-radius: 1em;
-	background: #fff;
-	color: #111;
-	box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.35);
+	background: var(--white);
+	color: var(--black);
 	overflow: hidden;
 }
 .gallery-dialog::backdrop {
-background: rgba(0, 0, 0, 0.75);
+background: rgba(0, 0, 0, 0.6);
 }
 .gallery-dialog-content {
 	display: grid;
@@ -85,7 +80,6 @@ background: rgba(0, 0, 0, 0.75);
 	justify-content: space-between;
 	gap: 1em;
 	padding: 1em;
-	border-bottom: 1px solid #ccc;
 }
 .gallery-dialog-title {
 	margin: 0;
@@ -98,7 +92,7 @@ background: rgba(0, 0, 0, 0.75);
 	align-items: center;
 	justify-content: center;
 	padding: 1em;
-	background: #eee;
+	background: var(--lgrey);
 }
 .gallery-dialog-image {
 	display: block;
@@ -106,6 +100,7 @@ background: rgba(0, 0, 0, 0.75);
 	max-width: 100%;
 	height: auto;
 	max-height: 60vh;
+	border-radius: 1em;
 }
 .gallery-dialog-footer {
 	display: grid;
@@ -113,7 +108,6 @@ background: rgba(0, 0, 0, 0.75);
 	align-items: center;
 	gap: 1em;
 	padding: 1em;
-	border-top: 1px solid #ccc;
 }
 .gallery-dialog-position {
 	margin: 0;
@@ -128,17 +122,16 @@ background: rgba(0, 0, 0, 0.75);
 
 @media (max-width: 40em) {
 .gallery-dialog {
-	width: 100vw;
+	width: calc(100vw - 2em);
 	max-width: none;
 	max-height: 100vh;
-	margin: 0;
-	border-radius: 0;
+	margin: 1em;
 }
 .gallery-dialog-content {
 	max-height: 100vh;
 }
 .gallery-dialog-image-wrapper {
-	padding: 0.5em;
+	padding: 1em;
 }
 .gallery-dialog-image {
 	max-height: 65vh;
@@ -159,126 +152,118 @@ background: rgba(0, 0, 0, 0.75);
 	grid-row: 2;
 }
 }
-
-@media (prefers-reduced-motion: reduce) {
-*, *::before, *::after {
-	animation: none !important;
-	transition: none !important;
-	scroll-behavior: auto !important;
-}
-}
 </style>
 </head>
 <body>
 <main>
   <div class="p-responsive w-80">
-    <h1>card13</h1>
+    <h1>gallery6</h1>
     <h2>Student gallery</h2>
     <div class="grid mb-reg">
       <div class="card rounded-1 stroke">
         <button
-				type="button"
-				class="card-image-button"
-				data-image="images/1280x720student1.jpg"
-				data-title="Student 1"
-				data-alt="Student 1"
-				aria-haspopup="dialog"
-				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
-						src="images/1280x720student1.jpg"
-						width="1280"
-						height="720"
-						alt=""
-						class="img-responsive card-image"> </span> </button>
+type="button"
+class="card-image-button"
+data-image="images/1280x720student1.jpg"
+data-title="Student 1"
+data-alt="Student 1"
+aria-haspopup="dialog"
+aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+src="images/1280x720student1.jpg"
+width="1280"
+height="720"
+alt=""
+class="img-responsive card-image"> </span> </button>
         <div class="p-1">
           <p>Student 1</p>
         </div>
       </div>
       <div class="card rounded-1 stroke">
         <button
-				type="button"
-				class="card-image-button"
-				data-image="images/1280x720student2.jpg"
-				data-title="Student 2"
-				data-alt="Student 2"
-				aria-haspopup="dialog"
-				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
-						src="images/1280x720student2.jpg"
-						width="1280"
-						height="720"
-						alt=""
-						class="img-responsive card-image"> </span> </button>
+type="button"
+class="card-image-button"
+data-image="images/1280x720student2.jpg"
+data-title="Student 2"
+data-alt="Student 2"
+aria-haspopup="dialog"
+aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+src="images/1280x720student2.jpg"
+width="1280"
+height="720"
+alt=""
+class="img-responsive card-image"> </span> </button>
         <div class="p-1">
           <p>Student 2</p>
         </div>
       </div>
       <div class="card rounded-1 stroke">
         <button
-				type="button"
-				class="card-image-button"
-				data-image="images/1280x720student3.jpg"
-				data-title="Student 3"
-				data-alt="Student 3"
-				aria-haspopup="dialog"
-				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
-						src="images/1280x720student3.jpg"
-						width="1280"
-						height="720"
-						alt=""
-						class="img-responsive card-image"> </span> </button>
+type="button"
+class="card-image-button"
+data-image="images/1280x720student3.jpg"
+data-title="Student 3"
+data-alt="Student 3"
+aria-haspopup="dialog"
+aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+src="images/1280x720student3.jpg"
+width="1280"
+height="720"
+alt=""
+class="img-responsive card-image"> </span> </button>
         <div class="p-1">
           <p>Student 3</p>
         </div>
       </div>
       <div class="card rounded-1 stroke">
         <button
-				type="button"
-				class="card-image-button"
-				data-image="images/1280x720student4.jpg"
-				data-title="Student 4"
-				data-alt="Student 4"
-				aria-haspopup="dialog"
-				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
-						src="images/1280x720student4.jpg"
-						width="1280"
-						height="720"
-						alt=""
-						class="img-responsive card-image"> </span> </button>
+type="button"
+class="card-image-button"
+data-image="images/1280x720student4.jpg"
+data-title="Student 4"
+data-alt="Student 4"
+aria-haspopup="dialog"
+aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+src="images/1280x720student4.jpg"
+width="1280"
+height="720"
+alt=""
+class="img-responsive card-image"> </span> </button>
         <div class="p-1">
           <p>Student 4</p>
         </div>
       </div>
       <div class="card rounded-1 stroke">
         <button
-				type="button"
-				class="card-image-button"
-				data-image="images/1280x720student5.jpg"
-				data-title="Student 5"
-				data-alt="Student 5"
-				aria-haspopup="dialog"
-				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
-						src="images/1280x720student5.jpg"
-						width="1280"
-						height="720"
-						alt=""
-						class="img-responsive card-image"> </span> </button>
+type="button"
+class="card-image-button"
+data-image="images/1280x720student5.jpg"
+data-title="Student 5"
+data-alt="Student 5"
+aria-haspopup="dialog"
+aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+src="images/1280x720student5.jpg"
+width="1280"
+height="720"
+alt=""
+class="img-responsive card-image"> </span> </button>
         <div class="p-1">
           <p>Student 5</p>
         </div>
       </div>
       <div class="card rounded-1 stroke">
         <button
-				type="button"
-				class="card-image-button"
-				data-image="images/1280x720student6.jpg"
-				data-title="Student 6"
-				data-alt="Student 6"
-				aria-haspopup="dialog"
-				aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
-						src="images/1280x720student6.jpg"
-						width="1280"
-						height="720"
-						alt=""
-						class="img-responsive card-image"> </span> </button>
+type="button"
+class="card-image-button"
+data-image="images/1280x720student6.jpg"
+data-title="Student 6"
+data-alt="Student 6"
+aria-haspopup="dialog"
+aria-controls="gallery-dialog"> <span class="card-image-wrapper"> <img
+src="images/1280x720student6.jpg"
+width="1280"
+height="720"
+alt=""
+class="img-responsive card-image"> </span> </button>
         <div class="p-1">
           <p>Student 6</p>
         </div>
@@ -287,39 +272,39 @@ background: rgba(0, 0, 0, 0.75);
   </div>
 </main>
 <dialog
-	id="gallery-dialog"
-	class="gallery-dialog"
-	aria-labelledby="gallery-dialog-title">
+id="gallery-dialog"
+class="gallery-dialog rounded-1"
+aria-labelledby="gallery-dialog-title">
   <div class="gallery-dialog-content">
     <div class="gallery-dialog-header">
       <h2 id="gallery-dialog-title" class="gallery-dialog-title"> Student 1 </h2>
       <form method="dialog">
         <button
-				type="submit"
-				class="gallery-dialog-close btn btn-light"> Close </button>
+type="submit"
+class="gallery-dialog-close btn btn-light"> Close </button>
       </form>
     </div>
     <div class="gallery-dialog-image-wrapper"> <img
-			id="gallery-dialog-image"
-			class="gallery-dialog-image"
-			alt=""> </div>
+id="gallery-dialog-image"
+class="gallery-dialog-image"
+alt=""> </div>
     <div class="gallery-dialog-footer">
       <button
-			type="button"
-			class="gallery-dialog-previous btn btn-primary"> Previous </button>
+type="button"
+class="gallery-dialog-previous btn btn-primary"> Previous </button>
       <p
-			id="gallery-dialog-position"
-			class="gallery-dialog-position"
-			aria-live="polite"> Image 1 of 6 </p>
+id="gallery-dialog-position"
+class="gallery-dialog-position"
+aria-live="polite"> Image 1 of 6 </p>
       <button
-			type="button"
-			class="gallery-dialog-next btn btn-primary"> Next </button>
+type="button"
+class="gallery-dialog-next btn btn-primary"> Next </button>
     </div>
   </div>
 </dialog>
 <script>
 const galleryButtons = Array.from(
-	document.querySelectorAll('.card-image-button')
+document.querySelectorAll('.card-image-button')
 );
 
 const dialog = document.querySelector('.gallery-dialog');
@@ -334,71 +319,76 @@ let currentIndex = 0;
 let lastTrigger = null;
 
 function updateGallery(index) {
-	currentIndex = index;
+currentIndex = index;
 
-	const button = galleryButtons[currentIndex];
-	const image = button.dataset.image;
-	const title = button.dataset.title;
-	const alt = button.dataset.alt;
+const button = galleryButtons[currentIndex];
+const image = button.dataset.image;
+const title = button.dataset.title;
+const alt = button.dataset.alt;
 
-	dialogImage.src = image;
-	dialogImage.alt = alt;
-	dialogTitle.textContent = title;
+dialogImage.src = image;
+dialogImage.alt = alt;
+dialogTitle.textContent = title;
 
-	dialogPosition.textContent =
-		'Image ' + (currentIndex + 1) + ' of ' + galleryButtons.length;
+dialogPosition.textContent =
+'Image ' + (currentIndex + 1) + ' of ' + galleryButtons.length;
 
-	previousButton.disabled = currentIndex === 0;
-	nextButton.disabled = currentIndex === galleryButtons.length - 1;
+previousButton.disabled = currentIndex === 0;
+nextButton.disabled = currentIndex === galleryButtons.length - 1;
 }
 
 function openGallery(index) {
-	lastTrigger = galleryButtons[index];
+lastTrigger = galleryButtons[index];
 
-	updateGallery(index);
+updateGallery(index);
 
-	dialog.showModal();
+dialog.showModal();
 
-	closeButton.focus();
+closeButton.focus();
 }
 
 function closeGallery() {
-	if (dialog.open) {
-		dialog.close();
-	}
+if (dialog.open) {
+dialog.close();
+}
 }
 
 galleryButtons.forEach(function (button, index) {
-	button.addEventListener('click', function () {
-		openGallery(index);
-	});
+button.addEventListener('click', function () {
+openGallery(index);
+});
+
+button.addEventListener('blur', function () {
+button.classList.remove('is-returning-focus');
+});
 });
 
 previousButton.addEventListener('click', function () {
-	if (currentIndex > 0) {
-		updateGallery(currentIndex - 1);
-	}
+if (currentIndex > 0) {
+updateGallery(currentIndex - 1);
+}
 });
 
 nextButton.addEventListener('click', function () {
-	if (currentIndex < galleryButtons.length - 1) {
-		updateGallery(currentIndex + 1);
-	}
+if (currentIndex < galleryButtons.length - 1) {
+updateGallery(currentIndex + 1);
+}
 });
 
 dialog.addEventListener('close', function () {
-	dialogImage.removeAttribute('src');
-	dialogImage.alt = '';
+dialogImage.removeAttribute('src');
+dialogImage.alt = '';
 
-	if (lastTrigger) {
-		lastTrigger.focus();
-	}
+if (lastTrigger) {
+lastTrigger.classList.add('is-returning-focus');
+lastTrigger.focus();
+}
 });
 
 dialog.addEventListener('click', function (event) {
-	if (event.target === dialog) {
-		closeGallery();
-	}
+if (event.target === dialog) {
+closeGallery();
+}
 });
 </script>
 </body>
