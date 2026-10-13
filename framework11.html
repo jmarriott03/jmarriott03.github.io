@@ -70,18 +70,62 @@
 	border-radius: 50%;
 	margin-right: 1em;
 }
+.columns {
+  column-width: 20rem;
+  column-gap: 1em;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin-bottom: 1.5em;
+}
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
+
+	
 <main>
-  <div class="content-module-wrapper bg-color-dark">
-    <div class="w-80">
+  <div class="bg-color-dark">
+    <div class="w-60">
       <div class="p-responsive">
         <h1>framework11</h1>
-        <p>A lightweight, utility-based layout system that applies spacing and visual styling contextually using low-specificity selectors, ensuring consistent vertical rhythm and <a href="#">responsive nesting behaviour</a> without global side effects.</p>
-      </div>
+        <h2>A responsive, utility-based CSS framework with a token-driven theming architecture.</h2>
+		  <p>A utility-based CSS framework with a token-driven theme system for managing colour, text and link styles across nested components. Defines reusable colour palettes and contextual surface tokens, allowing background, text and link colours to adapt to the active theme and surface. Includes responsive layout, spacing, typography, grid, image, button and border-radius utilities, with low-specificity styling designed to support predictable component nesting and reduce unintended global side effects.</p>
+		        </div>
     </div>
   </div>
+<div class="w-60 grid p-responsive">
+<div>
+	<div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ì</span><h3>1. Token-driven colour palettes</h3></div></div>
+<p>Each theme defines background, text and link colour values through CSS custom properties. Named palettes include <span class="codegrey2 nowrap">mono</span>, <span class="codegrey2 nowrap">deep-rose</span>, <span class="codegrey2 nowrap">brilliant-rose</span>, <span class="codegrey2 nowrap">raspberry-red</span>, <span class="codegrey2 nowrap">deep-orange</span>, <span class="codegrey2 nowrap">butter-yellow</span>, <span class="codegrey2 nowrap">dark-lavender</span>, <span class="codegrey2 nowrap">bondi-blue</span>, <span class="codegrey2 nowrap">turquoise</span>, <span class="codegrey2 nowrap">sea-green</span>, <span class="codegrey2 nowrap">fresh-green</span>, <span class="codegrey2 nowrap">persian-indigo</span> and <span class="codegrey2 nowrap">midnight-blue</span>, alongside <span class="codegrey2 nowrap">dark</span>.</p>
+
+
+<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ã</span><h3>2. Separation of palette and surface tokens</h3></div></div><p>Palette variables such as <span class="codegrey2 nowrap">--bg-color-light</span> describe the theme's colours. Component-facing variables such as <span class="codegrey2 nowrap">--color-text</span> and <span class="codegrey2 nowrap">--color-link</span> resolve the appropriate values for a particular surface. This separation means the same <span class="codegrey2 nowrap">.bg-color-light</span> utility can work across different themes.</p>
+
+
+<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Â</span><h3>3. Nested theme and surface behaviour</h3></div></div><p>The data-theme attribute establishes a theme context, while <span class="codegrey2 nowrap">.bg-color</span>, <span class="codegrey2 nowrap">.bg-color-light</span>, <span class="codegrey2 nowrap">.bg-color-medium</span> and <span class="codegrey2 nowrap">.bg-color-dark</span> apply individual surfaces. This allows a component to use a different surface from its parent while retaining its own text and link colour rules.</p>
+
+
+<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Á</span><h3>4. Responsive utility and layout system</h3></div></div><p>The framework includes width constraints, responsive padding and margins, auto-fitting grids, flexible two-column layouts, image sizing, typography scaling and responsive border radii. It also includes a reduced-motion media query.</p>
+
+
+<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">ê</span><h3>5. Reusable component styling and legacy compatibility</h3></div></div>
+<p>Shared button variants, card utilities, border treatments and other helpers support consistent styling. Existing production classes are retained alongside newer utilities, allowing the framework to evolve without necessarily replacing established components.</p>
+  </div>
+		
+	
+
   <div class="content-module-wrapper">
     <div class="w-80 rounded-responsive bg-color-light">
       <div class="p-responsive">
