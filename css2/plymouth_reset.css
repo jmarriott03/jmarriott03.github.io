@@ -59,7 +59,6 @@ a {
   word-wrap: break-word;
   text-underline-position: under;
   text-underline-offset: 1px;
-  text-decoration: none;
 }
 a:hover, a:focus {
   text-decoration: underline;
