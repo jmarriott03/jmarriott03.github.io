@@ -1,5 +1,5 @@
 /* Theme */
-*:root {
+/* Palette tokens are theme-level. Surface tokens are component-facing. */ :root {
   --bg-color: 0 0% 100%;
   --bg-color-light: 0 0% 93%;
   --bg-color-medium: 0 0% 80%;
@@ -13,7 +13,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Mono theme variables */
 [data-theme="mono"] {
   --bg-color-light: 0 0% 93%;
   --bg-color-medium: 0 0% 80%;
@@ -27,7 +26,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Deep rose theme variables */
 [data-theme="deep-rose"] {
   --bg-color-light: 318 100% 77%;
   --bg-color-medium: 318 100% 33%;
@@ -41,7 +39,6 @@
   --link-color-medium: var(--white);
   --link-color-dark: var(--white);
 }
-/* Brilliant rose theme variables */
 [data-theme="brilliant-rose"] {
   --bg-color-light: 328 53% 84%;
   --bg-color-medium: 327 52% 69%;
@@ -55,7 +52,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Raspberry red theme variables */
 [data-theme="raspberry-red"] {
   --bg-color-light: 337 100% 79%;
   --bg-color-medium: 337 100% 38%;
@@ -69,7 +65,6 @@
   --link-color-medium: var(--white);
   --link-color-dark: var(--white);
 }
-/* Deep orange theme variables */
 [data-theme="deep-orange"] {
   --bg-color-light: 37 73% 84%;
   --bg-color-medium: 37 73% 69%;
@@ -83,7 +78,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--black);
 }
-/* Butter yellow theme variables */
 [data-theme="butter-yellow"] {
   --bg-color-light: 51 90% 84%;
   --bg-color-medium: 51 90% 67%;
@@ -97,7 +91,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--black);
 }
-/* Dark lavender theme variables */
 [data-theme="dark-lavender"] {
   --bg-color-light: 244 19% 85%;
   --bg-color-medium: 246 21% 70%;
@@ -111,7 +104,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Bondi blue theme variables */
 [data-theme="bondi-blue"] {
   --bg-color-light: 209 53% 85%;
   --bg-color-medium: 209 53% 56%;
@@ -125,7 +117,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Turquoise theme variables */
 [data-theme="turquoise"] {
   --bg-color-light: 196 52% 89%;
   --bg-color-medium: 196 52% 67%;
@@ -139,7 +130,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Sea green theme variables */
 [data-theme="sea-green"] {
   --bg-color-light: 172 29% 90%;
   --bg-color-medium: 173 29% 71%;
@@ -153,7 +143,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Fresh green theme variables */
 [data-theme="fresh-green"] {
   --bg-color-light: 73 50% 86%;
   --bg-color-medium: 72 49% 58%;
@@ -167,7 +156,6 @@
   --link-color-medium: var(--black);
   --link-color-dark: var(--white);
 }
-/* Persian indigo theme variables */
 [data-theme="persian-indigo"] {
   --bg-color-light: 226 62% 76%;
   --bg-color-medium: 226 63% 30%;
@@ -181,7 +169,6 @@
   --link-color-medium: var(--white);
   --link-color-dark: var(--white);
 }
-/* Midnight blue theme variables */
 [data-theme="midnight-blue"] {
   --bg-color-light: 237 30% 77%;
   --bg-color-medium: 238 30% 34%;
@@ -195,7 +182,6 @@
   --link-color-medium: var(--white);
   --link-color-dark: var(--white);
 }
-/* Dark mode theme variables */
 [data-theme="dark"] {
   --bg-color: 0 0% 7%;
   --bg-color-light: 0 0% 20%;
@@ -210,45 +196,39 @@
   --link-color-medium: var(--white);
   --link-color-dark: var(--black);
 }
-body {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-}
-div :last-child {
-  margin-bottom: 0;
-}
+/* Each surface is a local token boundary. Do not use @property inherits:false here. */
 .bg-color {
-  color: var(--text-color);
+  --color-text: var(--text-color);
+  --color-link: var(--link-color);
+  color: var(--color-text);
   background-color: hsl(var(--bg-color));
 }
-.bg-color a {
-  color: var(--link-color);
-  text-decoration: underline;
-}
-.bg-color a:hover, a:focus {
-  text-decoration: underline;
-}
 .bg-color-light {
-  color: var(--text-color-light);
+  --color-text: var(--text-color-light);
+  --color-link: var(--link-color-light);
+  color: var(--color-text);
   background-color: hsl(var(--bg-color-light));
 }
-.bg-color-light a {
-  color: var(--link-color-light);
-  text-decoration: underline;
-}
 .bg-color-medium {
-  color: var(--text-color-medium);
+  --color-text: var(--text-color-medium);
+  --color-link: var(--link-color-medium);
+  color: var(--color-text);
   background-color: hsl(var(--bg-color-medium));
 }
-.bg-color-medium a {
-  color: var(--link-color-medium);
-  text-decoration: underline;
-}
 .bg-color-dark {
-  color: var(--text-color-dark);
+  --color-text: var(--text-color-dark);
+  --color-link: var(--link-color-dark);
+  color: var(--color-text);
   background-color: hsl(var(--bg-color-dark));
 }
-.bg-color-dark a {
-  color: var(--link-color-dark);
+/* All descendants consume the closest surface's link token. */ :is(.bg-color, .bg-color-light, .bg-color-medium, .bg-color-dark) a {
+  color: var(--color-link);
   text-decoration: underline;
+}
+:is(.bg-color, .bg-color-light, .bg-color-medium, .bg-color-dark) a:hover, :is(.bg-color, .bg-color-light, .bg-color-medium, .bg-color-dark) a:focus-visible {
+  text-decoration: underline;
+}
+body {
+  color: var(--color-text);
+  background-color: hsl(var(--bg-color));
 }

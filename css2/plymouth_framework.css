@@ -36,6 +36,9 @@
   line-height: normal;
   width: auto;
 }
+div :last-child {
+  margin-bottom: 0;
+}
 .nowrap {
   white-space: nowrap;
 }
