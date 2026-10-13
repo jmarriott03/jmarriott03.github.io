@@ -14,6 +14,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="mono"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 0 0% 93%;
   --bg-color-medium: 0 0% 80%;
   --bg-color-dark: 0 0% 7%;
@@ -27,6 +28,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="deep-rose"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 318 100% 77%;
   --bg-color-medium: 318 100% 33%;
   --bg-color-dark: 318 100% 21%;
@@ -40,6 +42,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="brilliant-rose"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 328 53% 84%;
   --bg-color-medium: 327 52% 69%;
   --bg-color-dark: 328 69% 30%;
@@ -53,6 +56,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="raspberry-red"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 337 100% 79%;
   --bg-color-medium: 337 100% 38%;
   --bg-color-dark: 336 100% 25%;
@@ -66,6 +70,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="deep-orange"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 37 73% 84%;
   --bg-color-medium: 37 73% 69%;
   --bg-color-dark: 37 74% 54%;
@@ -79,6 +84,7 @@
   --link-color-dark: var(--black);
 }
 [data-theme="butter-yellow"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 51 90% 84%;
   --bg-color-medium: 51 90% 67%;
   --bg-color-dark: 51 90% 51%;
@@ -92,6 +98,7 @@
   --link-color-dark: var(--black);
 }
 [data-theme="dark-lavender"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 244 19% 85%;
   --bg-color-medium: 246 21% 70%;
   --bg-color-dark: 245 47% 29%;
@@ -105,6 +112,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="bondi-blue"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 209 53% 85%;
   --bg-color-medium: 209 53% 56%;
   --bg-color-dark: 208 66% 31%;
@@ -118,6 +126,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="turquoise"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 196 52% 89%;
   --bg-color-medium: 196 52% 67%;
   --bg-color-dark: 196 55% 35%;
@@ -131,6 +140,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="sea-green"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 172 29% 90%;
   --bg-color-medium: 173 29% 71%;
   --bg-color-dark: 174 43% 35%;
@@ -144,6 +154,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="fresh-green"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 73 50% 86%;
   --bg-color-medium: 72 49% 58%;
   --bg-color-dark: 73 62% 30%;
@@ -157,6 +168,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="persian-indigo"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 226 62% 76%;
   --bg-color-medium: 226 63% 30%;
   --bg-color-dark: 226 80% 18%;
@@ -170,6 +182,7 @@
   --link-color-dark: var(--white);
 }
 [data-theme="midnight-blue"] {
+  --bg-color: 0 0% 100%;
   --bg-color-light: 237 30% 77%;
   --bg-color-medium: 238 30% 34%;
   --bg-color-dark: 237 58% 18%;
@@ -229,6 +242,8 @@
   text-decoration: underline;
 }
 body {
+  --color-text: var(--text-color);
+  --color-link: var(--link-color);
   color: var(--color-text);
   background-color: hsl(var(--bg-color));
 }
