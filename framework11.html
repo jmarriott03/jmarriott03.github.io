@@ -71,8 +71,8 @@
 	margin-right: 1em;
 }
 .columns {
-  column-width: 20rem;
-  column-gap: 1em;
+	column-width: 20rem;
+	column-gap: 1em;
 }
 .icon-big-container {
 	display: inline-flex;
@@ -88,56 +88,69 @@
 hr {
 	border: none;
 	border-top: 2px solid var(--lgrey);
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;
 }
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
-
-	
 <main>
   <div class="bg-color-dark">
-    <div class="w-60">
-      <div class="p-responsive">
+    <div class="content-module-wrapper">
+      <div class="w-60 pt-2 pb-2">
         <h1>framework11</h1>
         <h2>A responsive, utility-based CSS framework with a token-driven theming architecture.</h2>
-		  <p>A utility-based CSS framework with a token-driven theme system for managing colour, text and link styles across nested components. Defines reusable colour palettes and contextual surface tokens, allowing background, text and link colours to adapt to the active theme and surface. Includes responsive layout, spacing, typography, grid, image, button and border-radius utilities, with low-specificity styling designed to support predictable component nesting and reduce unintended global side effects.</p>
-		        </div>
-    </div>
-  </div>
-<div class="w-60 grid p-responsive">
-<div>
-	<div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ì</span><h3>1. Token-driven colour palettes</h3></div></div>
-<p>Each theme defines background, text and link colour values through CSS custom properties. Named palettes include <span class="codegrey2 nowrap">mono</span>, <span class="codegrey2 nowrap">deep-rose</span>, <span class="codegrey2 nowrap">brilliant-rose</span>, <span class="codegrey2 nowrap">raspberry-red</span>, <span class="codegrey2 nowrap">deep-orange</span>, <span class="codegrey2 nowrap">butter-yellow</span>, <span class="codegrey2 nowrap">dark-lavender</span>, <span class="codegrey2 nowrap">bondi-blue</span>, <span class="codegrey2 nowrap">turquoise</span>, <span class="codegrey2 nowrap">sea-green</span>, <span class="codegrey2 nowrap">fresh-green</span>, <span class="codegrey2 nowrap">persian-indigo</span> and <span class="codegrey2 nowrap">midnight-blue</span>, alongside <span class="codegrey2 nowrap">dark</span>.</p>
-
-
-<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ã</span><h3>2. Separation of palette and surface tokens</h3></div></div><p>Palette variables such as <span class="codegrey2 nowrap">--bg-color-light</span> describe the theme's colours. Component-facing variables such as <span class="codegrey2 nowrap">--color-text</span> and <span class="codegrey2 nowrap">--color-link</span> resolve the appropriate values for a particular surface. This separation means the same <span class="codegrey2 nowrap">.bg-color-light</span> utility can work across different themes.</p>
-
-
-<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Â</span><h3>3. Nested theme and surface behaviour</h3></div></div><p>The data-theme attribute establishes a theme context, while <span class="codegrey2 nowrap">.bg-color</span>, <span class="codegrey2 nowrap">.bg-color-light</span>, <span class="codegrey2 nowrap">.bg-color-medium</span> and <span class="codegrey2 nowrap">.bg-color-dark</span> apply individual surfaces. This allows a component to use a different surface from its parent while retaining its own text and link colour rules.</p>
-
-
-<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Á</span><h3>4. Responsive utility and layout system</h3></div></div><p>The framework includes width constraints, responsive padding and margins, auto-fitting grids, flexible two-column layouts, image sizing, typography scaling and responsive border radii. It also includes a reduced-motion media query.</p>
-
-
-<div><div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">ê</span><h3>5. Reusable component styling and legacy compatibility</h3></div></div>
-<p>Shared button variants, card utilities, border treatments and other helpers support consistent styling. Existing production classes are retained alongside newer utilities, allowing the framework to evolve without necessarily replacing established components.</p>
-  </div>
-		
-	
-
-  <div class="content-module-wrapper">
-    <div class="w-80 rounded-responsive bg-color-light">
-      <div class="p-responsive">
-        <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>A utility-based CSS framework with a token-driven theme system for managing colour, text and link styles across nested components. Defines reusable colour palettes and contextual surface tokens, allowing background, text and link colours to adapt to the active theme and surface. Includes responsive layout, spacing, typography, grid, image, button and border-radius utilities, with low-specificity styling designed to support predictable component nesting and reduce unintended global side effects.</p>
       </div>
     </div>
   </div>
   <div class="content-module-wrapper">
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ì</span>
+          <h3>1. Token-driven colour palettes</h3>
+        </div>
+      </div>
+      <p>Each theme defines background, text and link colour values through CSS custom properties. Named palettes include <span class="codegrey2 nowrap">mono</span>, <span class="codegrey2 nowrap">deep-rose</span>, <span class="codegrey2 nowrap">brilliant-rose</span>, <span class="codegrey2 nowrap">raspberry-red</span>, <span class="codegrey2 nowrap">deep-orange</span>, <span class="codegrey2 nowrap">butter-yellow</span>, <span class="codegrey2 nowrap">dark-lavender</span>, <span class="codegrey2 nowrap">bondi-blue</span>, <span class="codegrey2 nowrap">turquoise</span>, <span class="codegrey2 nowrap">sea-green</span>, <span class="codegrey2 nowrap">fresh-green</span>, <span class="codegrey2 nowrap">persian-indigo</span> and <span class="codegrey2 nowrap">midnight-blue</span>, alongside <span class="codegrey2 nowrap">dark</span>.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ã</span>
+          <h3>2. Separation of palette and surface tokens</h3>
+        </div>
+      </div>
+      <p>Palette variables such as <span class="codegrey2 nowrap">--bg-color-light</span> describe the theme's colours. Component-facing variables such as <span class="codegrey2 nowrap">--color-text</span> and <span class="codegrey2 nowrap">--color-link</span> resolve the appropriate values for a particular surface. This separation means the same <span class="codegrey2 nowrap">.bg-color-light</span> utility can work across different themes.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Â</span>
+          <h3>3. Nested theme and surface behaviour</h3>
+        </div>
+      </div>
+      <p>The data-theme attribute establishes a theme context, while <span class="codegrey2 nowrap">.bg-color</span>, <span class="codegrey2 nowrap">.bg-color-light</span>, <span class="codegrey2 nowrap">.bg-color-medium</span> and <span class="codegrey2 nowrap">.bg-color-dark</span> apply individual surfaces. This allows a component to use a different surface from its parent while retaining its own text and link colour rules.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Á</span>
+          <h3>4. Responsive utility and layout system</h3>
+        </div>
+      </div>
+      <p>The framework includes width constraints, responsive padding and margins, auto-fitting grids, flexible two-column layouts, image sizing, typography scaling and responsive border radii. It also includes a reduced-motion media query.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">ê</span>
+          <h3>5. Reusable component styling and legacy compatibility</h3>
+        </div>
+      </div>
+      <p>Shared button variants, card utilities, border treatments and other helpers support consistent styling. Existing production classes are retained alongside newer utilities, allowing the framework to evolve without necessarily replacing established components.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
     <div class="w-80 rounded-responsive bg-color-light">
-      <div class="p-responsive">
-        <h2>Card 1</h2>
-        <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="p-2">
+        <h2>Text spacing</h2>
+        <p>1.5em vertical margin between text and buttons.</p>
         <div class="flex flex-wrap gap-1">
           <button class="btn btn-primary">Primary button</button>
           <button class="btn btn-secondary">Secondary button</button>
@@ -145,161 +158,65 @@ hr {
       </div>
     </div>
   </div>
-  <div class="content-module-wrapper mb-0">
-    <div class="w-40">
-      <h2>Article body text H2</h2>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-      <div class="blockquote">
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive bg-color-dark">
+      <div class="p-2">
+        <p>80em max width</p>
       </div>
     </div>
   </div>
   <div class="content-module-wrapper">
-    <div class="w-80 hero-2col layout-33-67 bg-color-light">
-      <div class="left-column"><img src="images/1280x720fineart12.jpg" width="1280" height="720" alt="" class="img-cover"></div>
-      <div class="right-column p-resize">
-        <div class="centered text-resize quotestyle">
-          <p>Plymouth has provided me with a global-scale network and world class education in the maritime industry. Travelling around the world is the best and the most exciting part of my job, but it is also the hardest part because we can be working staying on board for up to ten months.</p>
-          <div class="quote-container"><img src="images/640x640quotes03.jpg" alt="Desirae Juurou" class="quote-image img-cover">
-            <div class="quote-text">
-              <p><a href="#">Desirae Juurou</a><br>
-                Project manager</p>
-            </div>
-          </div>
-        </div>
+    <div class="w-60 rounded-responsive bg-color-dark">
+      <div class="p-2">
+        <p>60em max width</p>
       </div>
     </div>
   </div>
   <div class="content-module-wrapper">
-    <div class="w-80 grid">
-      <div>
-        <h3>8a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
-        <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div>
-        <h3>8b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
-        <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="w-40 rounded-responsive bg-color-dark">
+      <div class="p-2">
+        <p>40em max width</p>
       </div>
     </div>
   </div>
+  <hr>
   <div class="content-module-wrapper">
-    <div class="w-80 grid rounded-responsive p-responsive bg-color-dark">
-      <div>
-        <h3>8a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
-        <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div> <img src="images/1280x720fineart12.jpg" width="1280" height="720" alt="" class="rounded-1 img-cover"> </div>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 hero-2col rounded-responsive bg-color-dark">
-      <div class="p-responsive left-column">
-        <h3>8a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
-        <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="right-column"> <img src="images/1280x720fineart12.jpg" width="1280" height="720" alt="" class="img-cover"> </div>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 rounded-responsive p-responsive bg-color-light">
-      <h2>1a) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
-      <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 rounded-responsive p-responsive bg-color-light">
-      <h2>1b) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h2>
-      <p>Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 rounded-responsive stroke">
-      <div class="p-responsive">
-        <div class="content-module-wrapper">
-          <div class="w-80 rounded-responsive bg-color-dark">
-            <div class="p-responsive">
-              <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-        <div class="content-module-wrapper">
-          <div class="w-80 rounded-responsive bg-color-dark">
-            <div class="p-responsive">
-              <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-        <div class="content-module-wrapper">
-          <div class="w-60 rounded-responsive bg-color-dark">
-            <div class="p-responsive">
-              <p>4 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-        <div class="content-module-wrapper">
-          <div class="w-40 rounded-responsive bg-color-dark">
-            <div class="p-responsive">
-              <p>5 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="content-module-wrapper">
-                <div class="w-80 rounded-responsive bg-color">
-                  <div class="p-responsive">
-                    <p>6 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-80 rounded-responsive bg-color-medium">
-      <div class="p-responsive">
-        <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </div>
-  </div>
-  <div class="content-module-wrapper">
-    <div class="w-60 rounded-responsive bg-color-medium">
-      <div class="p-responsive">
-        <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-2">
+        <p>2em to 1em Responsive horizontal margins outside component.</p>
       </div>
     </div>
   </div>
   <div class="content-module-wrapper">
     <div class="w-40 rounded-responsive bg-color-medium">
       <div class="p-responsive">
-        <p>5 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="content-module-wrapper" data-theme="deep-rose">
-          <div class="w-80 rounded-responsive bg-color-dark">
-            <div class="p-responsive">
-              <p>6 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="content-module-wrapper" data-theme="mono">
-                <div class="w-80 rounded-responsive bg-color">
-                  <div class="p-responsive">
-                    <p>7 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p>2em vertical margins between components.</p>
       </div>
     </div>
   </div>
   <div class="content-module-wrapper">
-    <div class="w-80 rounded-responsive stroke">
+    <div class="w-40 rounded-responsive bg-color-medium">
       <div class="p-responsive">
-        <p>6 Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit, sed</a> do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>2em to 1em responsive border radius.</p>
       </div>
     </div>
   </div>
-  <div class="bg-color-dark">
-    <div class="w-80">
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
       <div class="p-responsive">
-        <p>Footer</p>
+        <p>2em to 1em responsive padding inside component.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-responsive">
+        <div class="w-40 rounded-responsive bg-color-light">
+          <div class="p-responsive">
+            <p>1em padding and border radius for children components.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
