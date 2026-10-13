@@ -198,6 +198,20 @@ outline-offset: 3px;
 	grid-row: 2;
 }
 }
+.btn-neutral {
+  background: var(--white);
+  color: var(--black);
+}
+.btn-neutral:hover, .btn-neutral:focus-visible {
+  background: var(--lgrey);
+}
+.gallery-dialog .btn:disabled,
+.gallery-dialog .btn[aria-disabled="true"] {
+  background-color: var(--white);
+  color: var(--btn-disabled-txt);
+  cursor: not-allowed;
+  opacity: 1;
+}
 </style>
 </head>
 <body>
@@ -327,24 +341,24 @@ aria-labelledby="gallery-dialog-title">
       <form method="dialog">
         <button
 type="submit"
-class="gallery-dialog-close btn btn-light" aria-label="Close gallery"><span class="iconfont" aria-hidden="true">5</span></button>
+class="gallery-dialog-close btn btn-neutral" aria-label="Close gallery"><span class="iconfont" aria-hidden="true">5</span></button>
       </form>
     </div>
     <div class="gallery-dialog-image-wrapper"><img
 id="gallery-dialog-image"
 class="gallery-dialog-image"
-alt=""> </div>
+alt=""></div>
     <div class="gallery-dialog-footer">
       <button
 type="button"
-class="gallery-dialog-previous btn btn-primary"><span class="iconfont" aria-hidden="true">P</span></button>
+class="gallery-dialog-previous btn btn-neutral"><span class="iconfont" aria-hidden="true">P</span></button>
       <p
 id="gallery-dialog-position"
 class="gallery-dialog-position"
 aria-live="polite"> Image 1 of 6 </p>
       <button
 type="button"
-class="gallery-dialog-next btn btn-primary"><span class="iconfont" aria-hidden="true">N</span></button>
+class="gallery-dialog-next btn btn-neutral"><span class="iconfont" aria-hidden="true">N</span></button>
     </div>
   </div>
 </dialog>
