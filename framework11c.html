@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.p-responsive .p-responsive {
+	padding: 1em;
+}
+.p-responsive .rounded-responsive {
+	border-radius: 1em;
+}
+.content-module-wrapper {
+	display: flow-root;
+	margin-bottom: var(--mb-module);
+	padding: 0 2em;
+}
+
+@media (max-width: 40em) {
+.content-module-wrapper {
+	padding: 0 1em;
+}
+}
+.content-module-wrapper .content-module-wrapper {
+	padding: 0;
+}
+.btn-rounded-resize {
+	color: currentColor;
+	border: 2px solid currentColor;
+	font-size: 1.25rem;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+}
+.btn-rounded-resize:hover {
+	cursor: pointer;
+}
+.quotestyle:before {
+	font-family: "Times New Roman", serif;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.5em;
+	content: "\275d";
+	display: block;
+	margin-top: 0.2em;
+}
+.quote-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+.columns {
+	column-width: 20rem;
+	column-gap: 1em;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin-bottom: 2em;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+}
+td, th {
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid var(--black);
+}
+th {
+	border-bottom: 2px solid var(--black);
+}
+</style>
+</head>
+<body class="bg-color" data-theme="deep-orange">
+<main>
+	
+	<h1>A clear hierarchy for consistent, accessible and flexible content</h1>
+
+<p>The framework provides the visual language and building blocks. The CMS uses this structure to assemble pages with consistent rules, while AI can use the same information to create and validate content.</p>
+	<hr>
+	
+	
+	
+	
+  <div class="bg-color-dark">
+    <div class="content-module-wrapper">
+      <div class="w-60 pt-2 pb-2">
+        <h1>framework11</h1>
+        <h2>A responsive, utility-based CSS framework with a token-driven theming architecture.</h2>
+        <p>A utility-based CSS framework with a token-driven theme system for managing colour, text and link styles across nested components. Defines reusable colour palettes and contextual surface tokens, allowing background, text and link colours to adapt to the active theme and surface. Includes responsive layout, spacing, typography, grid, image, button and border-radius utilities, with low-specificity styling designed to support predictable component nesting and reduce unintended global side effects.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ì</span>
+          <h3>1. Token-driven colour palettes</h3>
+        </div>
+      </div>
+      <p>Each theme defines background, text and link colour values through CSS custom properties. Named palettes include <span class="codegrey2 nowrap">mono</span>, <span class="codegrey2 nowrap">deep-rose</span>, <span class="codegrey2 nowrap">brilliant-rose</span>, <span class="codegrey2 nowrap">raspberry-red</span>, <span class="codegrey2 nowrap">deep-orange</span>, <span class="codegrey2 nowrap">butter-yellow</span>, <span class="codegrey2 nowrap">dark-lavender</span>, <span class="codegrey2 nowrap">bondi-blue</span>, <span class="codegrey2 nowrap">turquoise</span>, <span class="codegrey2 nowrap">sea-green</span>, <span class="codegrey2 nowrap">fresh-green</span>, <span class="codegrey2 nowrap">persian-indigo</span> and <span class="codegrey2 nowrap">midnight-blue</span>, alongside <span class="codegrey2 nowrap">dark</span>.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Ã</span>
+          <h3>2. Separation of palette and surface tokens</h3>
+        </div>
+      </div>
+      <p>Palette variables such as <span class="codegrey2 nowrap">--bg-color-light</span> describe the theme's colours. Component-facing variables such as <span class="codegrey2 nowrap">--color-text</span> and <span class="codegrey2 nowrap">--color-link</span> resolve the appropriate values for a particular surface. This separation means the same <span class="codegrey2 nowrap">.bg-color-light</span> utility can work across different themes.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Â</span>
+          <h3>3. Nested theme and surface behaviour</h3>
+        </div>
+      </div>
+      <p>The data-theme attribute establishes a theme context, while <span class="codegrey2 nowrap">.bg-color</span>, <span class="codegrey2 nowrap">.bg-color-light</span>, <span class="codegrey2 nowrap">.bg-color-medium</span> and <span class="codegrey2 nowrap">.bg-color-dark</span> apply individual surfaces. This allows a component to use a different surface from its parent while retaining its own text and link colour rules.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">Á</span>
+          <h3>4. Responsive utility and layout system</h3>
+        </div>
+      </div>
+      <p>The framework includes width constraints, responsive padding and margins, auto-fitting grids, flexible two-column layouts, image sizing, typography scaling and responsive border radii. It also includes a reduced-motion media query.</p>
+    </div>
+    <div class="w-60 grid pt-2">
+      <div>
+        <div class="icon-big-container"><span class="iconfont icon-big-3" aria-hidden="true">ê</span>
+          <h3>5. Reusable component styling and legacy compatibility</h3>
+        </div>
+      </div>
+      <p>Shared button variants, card utilities, border treatments and other helpers support consistent styling. Existing production classes are retained alongside newer utilities, allowing the framework to evolve without necessarily replacing established components.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive bg-color-light">
+      <div class="p-responsive">
+        <h2 class="dotted">Vertical space inside component</h2>
+        <p class="dotted">1.5em vertical space between headings, text and component content.</p>
+        <div class="flex flex-wrap gap-1 dotted">
+          <button class="btn btn-primary">Primary button</button>
+          <button class="btn btn-secondary">Secondary button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive bg-color-light">
+      <div class="p-responsive">
+        <h2>Gap</h2>
+        <p>1em gap between grouped items using grid and flex.</p>
+        <div class="flex flex-wrap gap-1 mb-reg dotted">
+          <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+          <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+          <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+          <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+          <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+          <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+          <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+          <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+          <button class="btn btn-primary" disabled>Primary disabled</button>
+        </div>
+        <div class="w-80 grid dotted">
+          <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320" class="img-cover aspect-ratio-16x9"></a>
+            <div class="p-1">
+              <p class="time">13 October 2026</p>
+              <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
+            </div>
+          </div>
+          <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320" class="img-cover aspect-ratio-16x9"></a>
+            <div class="p-1">
+              <p class="time">14 October 2026</p>
+              <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+            </div>
+          </div>
+          <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320" class="img-cover aspect-ratio-16x9"></a>
+            <div class="p-1">
+              <p class="time">15 October 2026</p>
+              <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-80">
+      <h2>Most used widths</h2>
+    </div>
+  </div>
+  <div class="bg-color-dark mb-2">
+    <div class="content-module-wrapper">
+      <div class="w-80">
+        <p class="p-responsive">Full width</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-80 rounded-responsive bg-color-dark">
+      <div class="p-responsive">
+        <p>80em max width</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-60 rounded-responsive bg-color-dark">
+      <div class="p-responsive">
+        <p>60em max width</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-dark">
+      <div class="p-responsive">
+        <p>40em max width</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-40">
+      <h2>Standard component and gap measurements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Measurement</th>
+            <th scope="col">Desktop</th>
+            <th scope="col">Mobile (40em and below)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Component padding</td>
+            <td>2em</td>
+            <td>1em</td>
+          </tr>
+          <tr>
+            <td scope="row">Gap between components</td>
+            <td>2em</td>
+            <td>2em</td>
+          </tr>
+          <tr>
+            <td scope="row">Gap between grouped flex or grid items</td>
+            <td>1em</td>
+            <td>1em</td>
+          </tr>
+          <tr>
+            <td scope="row">Child component padding</td>
+            <td>1em</td>
+            <td>1em</td>
+          </tr>
+          <tr>
+            <td scope="row">Outer border radius</td>
+            <td>2em</td>
+            <td>1em</td>
+          </tr>
+          <tr>
+            <td scope="row">Child border radius</td>
+            <td>1em</td>
+            <td>1em</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-responsive">
+        <p>2em <span class="iconfont" aria-hidden="true">&quot;</span> 1em responsive horizontal margins outside component.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-responsive">
+        <p>2em vertical gap between components.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-responsive">
+        <p>2em <span class="iconfont" aria-hidden="true">&quot;</span> 1em responsive padding inside component.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-responsive">
+        <p>2em <span class="iconfont" aria-hidden="true">&quot;</span> 1em responsive border radius.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive bg-color-medium">
+      <div class="p-responsive">
+        <div class="w-40 rounded-responsive bg-color-light">
+          <div class="p-responsive">
+            <p>1em padding and 1em border radius for child components.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="w-40 rounded-responsive p-responsive bg-color-medium">
+      <h2>Token-driven theme system</h2>
+      <p>Child components retain its own text and <a href="#">link colour rules</a>.</p>
+      <div class="w-40 rounded-responsive p-responsive bg-color-dark" data-theme="raspberry-red">
+        <h2>Token-driven theme system</h2>
+        <p>Child components retain its own text and <a href="#">link colour rules</a>.</p>
+        <div class="w-40 rounded-responsive p-responsive bg-color" data-theme="mono">
+          <h2>Token-driven theme system</h2>
+          <p>Child components retain its own text and <a href="#">link colour rules</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content-module-wrapper">
+    <div class="hero-2col layout-33-67 bg-color-dark">
+      <div class="left-column p-resize">
+        <div class="centered text-resize dotted">
+          <h2>1/3 <span class="iconfont" aria-hidden="true">+</span> 2/3</h2>
+          <p>2 column hero - Sometimes there are exceptions to size and space rules.</p>
+        </div>
+      </div>
+      <div class="right-column"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-cover"></div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="hero-2col bg-color-dark">
+      <div class="left-column p-resize">
+        <div class="centered text-resize dotted">
+          <h2>1/2 <span class="iconfont" aria-hidden="true">+</span> 1/2</h2>
+          <p>2 column hero - Sometimes there are exceptions to size and space rules.</p>
+        </div>
+      </div>
+      <div class="right-column"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-cover"></div>
+    </div>
+  </div>
+  <div class="content-module-wrapper">
+    <div class="hero-2col layout-67-33 bg-color-dark">
+      <div class="left-column p-resize">
+        <div class="centered text-resize dotted">
+          <h2>2/3 <span class="iconfont" aria-hidden="true">+</span> 1/3</h2>
+          <p>2 column hero - Sometimes there are exceptions to size and space rules.</p>
+        </div>
+      </div>
+      <div class="right-column"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-cover"></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
