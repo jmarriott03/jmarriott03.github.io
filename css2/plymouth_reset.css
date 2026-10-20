@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 p, ul, ol {
   text-wrap: pretty;
-  /*  max-width: 75ch;*/
+  max-width: 75ch;
   margin: 0 0 24px 0;
 }
 h1 {
