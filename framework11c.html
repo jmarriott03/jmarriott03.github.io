@@ -104,19 +104,156 @@ td, th {
 th {
 	border-bottom: 2px solid var(--black);
 }
+	.section {margin: 2em auto;}
+	.group {margin: 0 1em;}
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
-<main>
-	
+	<main>
+	<div class="section w-40">
+		<div class="group">
 	<h1>A clear hierarchy for consistent, accessible and flexible content</h1>
 
 <p>The framework provides the visual language and building blocks. The CMS uses this structure to assemble pages with consistent rules, while AI can use the same information to create and validate content.</p>
-	<hr>
+		</div></div><hr>
+	<div class="section w-40">
+		<div class="group">
+			
+	<h2>1. Page and section structure</h2>
+<p>Defines the overall layout, content boundaries and full-width sections.</p>
+	<ul>
+<li>Page containers and maximum content width</li>
+<li>Full-width and full-bleed sections</li>
+<li>Page gutters and section spacing</li>
+<li>Responsive behaviour at the page level</li>
+	</ul>
+	
+	</div>
+		</div>
+		
+		
+
+  <div class="section bg-color-dark">
+    <div class="group w-80">
+      <div class="py-responsive">
+        <p>Full width</p>
+      </div>
+    </div>
+  </div>
+		
+		<div class="section">
+    <div class="group">
+      <div class="w-80 p-responsive bg-color-dark">
+        <p>80em max width</p>
+      </div>
+    </div>
+  </div>
+		
+		<div class="section">
+    <div class="group">
+      <div class="w-60 p-responsive bg-color-dark">
+        <p>60em max width</p>
+      </div>
+    </div>
+  </div>
+		
+		<div class="section">
+    <div class="group">
+      <div class="w-40 p-responsive bg-color-dark">
+        <p>40em max width</p>
+      </div>
+    </div>
+  </div>
+		
+<hr>
 	
 	
 	
 	
+	<div class="section">
+    <div class="group">
+	<div class="w-40">
+	
+	
+	<h2>2. Groups</h2>
+<p>Organise related components and can own shared presentation (backgrounds, padding, width, spacing).</p>
+	<ul>
+<li>Shared background, padding and width</li>
+<li>Consistent spacing between child components</li>
+<li>Optional borders or edge treatments</li>
+<li>Behaves predictably when nested</li>
+	</ul>
+	
+	
+	</div>
+		</div></div>
+		
+		<hr>
+		
+		
+		
+	<div class="section">
+    <div class="group">
+	<div class="w-40">
+	
+	
+	<h2>3. Components</h2>
+<p>Provide content, purpose and behaviour (e.g. headings, text, buttons, cards, forms).</p>
+	<ul>
+<li>Clear purpose and content structure</li>
+<li>Defined states (default, hover, focus, disabled…)</li>
+<li>Accessible markup requirements</li>
+<li>Permitted variations</li>
+	</ul>
+	
+	
+	</div>
+		</div></div>
+		
+		<hr>
+		
+	<div class="section">
+    <div class="group">
+	<div class="w-40">
+	
+	<h2>4. Presentation settings</h2>
+<p>Control permitted visual treatments (e.g. colour, style, layout variations).</p>
+	<ul>
+<li>Colour and surface options</li>
+<li>Typography and iconography</li>
+<li>Borders, radius and elevation</li>
+<li>Layout and alignment options</li>
+	
+	</ul>
+	
+	</div>
+		</div></div>
+		
+		<hr>
+		
+		
+	<div class="section">
+    <div class="group">
+	<div class="w-40">
+	
+	<h2>5. Framework tokens and utilities</h2>
+<p>Provide consistent spacing, sizing, colours and responsive behaviour.</p>
+	<ul>
+<li>Spacing (section, component, content)</li>
+<li>Sizing and width constraints</li>
+<li>Grid and flex layout</li>
+<li>Colour palette and surface tokens</li>
+<li>Responsive and container queries</li>
+<li>Accessibility helpers</li>
+		</ul>
+	
+	
+		</div></div></div>
+	
+		
+		<hr>
+		
+		
   <div class="bg-color-dark">
     <div class="content-module-wrapper">
       <div class="w-60 pt-2 pb-2">
