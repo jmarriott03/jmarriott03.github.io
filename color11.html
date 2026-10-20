@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<!--<link rel="stylesheet" href="css2/plymouth_theme.css">-->
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+--bg-color: #fff;
+--bg-color-light: #eee;
+--bg-color-dark: #111;
+--mono-light: #eee;
+--mono-dark: #333;
+--green-light: #B3E6E6;
+--green-dark: #066;
+--red-light: #FFB8B8;
+--red-dark: #900;
+--purple-light: #E6CCE6;
+--purple-dark: #636;
+--orange-light: #FFE6CC;
+--orange-dark: #B45A2D;
+--blue-light: #B8D0E8;
+--blue-dark: #036;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+/* Mono theme */
+[data-theme="mono"] {
+--bg-color: #fff;
+--bg-color-light: var(--mono-light);
+--bg-color-dark: var(--mono-dark);
+}
+/* Green theme */
+[data-theme="green"] {
+--bg-color: #fff;
+--bg-color-light: var(--green-light);
+--bg-color-dark: var(--green-dark);
+}
+/* Red theme */
+[data-theme="red"] {
+--bg-color: #fff;
+--bg-color-light: var(--red-light);
+--bg-color-dark: var(--red-dark);
+}
+/* Purple theme */
+[data-theme="purple"] {
+--bg-color: #fff;
+--bg-color-light: var(--purple-light);
+--bg-color-dark: var(--purple-dark);
+}
+/* Orange theme */
+[data-theme="orange"] {
+--bg-color: #fff;
+--bg-color-light: var(--orange-light);
+--bg-color-dark: var(--orange-dark);
+}
+/* Blue theme */
+[data-theme="blue"] {
+--bg-color: #fff;
+--bg-color-light: var(--blue-light);
+--bg-color-dark: var(--blue-dark);
+}
+/* Background utilities */
+.bg-color {
+	background-color: var(--bg-color);
+}
+.bg-color-light {
+	background-color: var(--bg-color-light);
+}
+.bg-color-dark {
+	background-color: var(--bg-color-dark);
+}
+.swatch-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	list-style: none;
+}
+
+@media (min-width: 40em) {
+.swatch-grid {
+	grid-template-columns: repeat(3, 1fr);
+}
+}
+.swatch {
+	padding: 1em;
+	border-radius: 1em;
+}
+.swatch {
+	height: 100%;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+.bck-red {
+	color: var(--white);
+	background-color: var(--btn-danger);
+}
+</style>
+</head>
+<body class="bg-color" data-theme="deep-orange">
+<main>
+  <div class="section w-40 p-responsive">
+    <h1>color11</h1>
+    <div class="icon-big-container mb-reg bck-red p-0-5 rounded-0-5"><span class="iconfont icon-big-2" aria-hidden="true">a</span>Themes simplification idea, not for production.</div>
+    <h2>Mono</h2>
+    <ul class="swatch-grid" data-theme="mono">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#EEE</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#111</strong></li>
+    </ul>
+    <h2>Green</h2>
+    <ul class="swatch-grid" data-theme="green">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#B3E6E6</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#066</strong></li>
+    </ul>
+    <h2>Red</h2>
+    <ul class="swatch-grid" data-theme="red">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#FFB8B8</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#900</strong></li>
+    </ul>
+    <h2>Purple</h2>
+    <ul class="swatch-grid" data-theme="purple">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#E6CCE6</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#636</strong></li>
+    </ul>
+    <h2>Orange</h2>
+    <ul class="swatch-grid" data-theme="orange">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#FFE6CC</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#B45A2D</strong></li>
+    </ul>
+    <h2>Blue</h2>
+    <ul class="swatch-grid" data-theme="blue">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#B8D0E8</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#036</strong></li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
