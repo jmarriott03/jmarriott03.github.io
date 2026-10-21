@@ -9,20 +9,41 @@
 <!--<link rel="stylesheet" href="css2/plymouth_theme.css">-->
 <title>University of Plymouth</title>
 <style>
-/* Responsive two-to-one column layout */
+/* Container query context */
+.w-80, .w-60, .w-40 {
+	container-type: inline-size;
+}
+/* Default: two columns */
 .grid-2-1 {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 1em;
 }
 
-@media (max-width: 40em) {
+/* One column when there are fewer than 10 list items */
+.grid-2-1:not(:has(> li:nth-child(5))) {
+grid-template-columns: 1fr;
+}
+
+/* Switch to one column when the container is narrow */
+@container (max-width: 40em) {
 .grid-2-1 {
-	grid-template-columns: 1fr;
+grid-template-columns: 1fr;
 }
 }
 ul {
 	max-width: 100%;
+	list-style: none;
+	padding-inline-start: 0;
+	margin: 0;
+}
+li {
+	border-bottom: 1px solid var(--mgrey);
+	padding-bottom: 1em;
+	margin: 0;
+}
+li a {
+	text-decoration: none;
 }
 </style>
 </head>
@@ -30,12 +51,42 @@ ul {
 <main>
   <div class="w-80 p-responsive dotted">
     <h1>list4</h1>
-    <h2>Article group list</h2>
+    <h2>Article group list 80em width</h2>
     <ul class="grid-2-1">
       <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
-      <li><a href="#">‘A moon bear rescue tale</a></li>
-      <li><a href="#">‘The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
-      <li><a href="#">‘Photographic darkrooms and studios</a></li>
+      <li><a href="#">A moon bear rescue tale</a></li>
+      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+      <li><a href="#">Photographic darkrooms and studios</a></li>
+      <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+    </ul>
+  </div>
+  <div class="w-80 p-responsive dotted">
+    <h2>Article group list 80em width (defaults to 1 column if less than 5 <span class="codegrey2">&lt;li&gt;</span> items</h2>
+    <ul class="grid-2-1">
+      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+      <li><a href="#">A moon bear rescue tale</a></li>
+      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+      <li><a href="#">Photographic darkrooms and studios</a></li>
+    </ul>
+  </div>
+  <div class="w-60 p-responsive dotted">
+    <h2>Article group list 60em width</h2>
+    <ul class="grid-2-1">
+      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+      <li><a href="#">A moon bear rescue tale</a></li>
+      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+      <li><a href="#">Photographic darkrooms and studios</a></li>
+      <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+    </ul>
+  </div>
+  <div class="w-40 p-responsive dotted">
+    <h2>Article group list 40em width</h2>
+    <ul class="grid-2-1">
+      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+      <li><a href="#">A moon bear rescue tale</a></li>
+      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+      <li><a href="#">Photographic darkrooms and studios</a></li>
+      <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
     </ul>
   </div>
 </main>
