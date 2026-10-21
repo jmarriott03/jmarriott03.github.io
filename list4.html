@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<!--<link rel="stylesheet" href="css2/plymouth_theme.css">-->
+<title>University of Plymouth</title>
+<style>
+/* Responsive two-to-one column layout */
+.grid-2-1 {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1em;
+}
+
+@media (max-width: 40em) {
+.grid-2-1 {
+	grid-template-columns: 1fr;
+}
+}
+ul {
+	max-width: 100%;
+}
+</style>
+</head>
+<body class="bg-color" data-theme="deep-orange">
+<main>
+  <div class="w-80 p-responsive dotted">
+    <h1>list4</h1>
+    <h2>Article group list</h2>
+    <ul class="grid-2-1">
+      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+      <li><a href="#">‘A moon bear rescue tale</a></li>
+      <li><a href="#">‘The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+      <li><a href="#">‘Photographic darkrooms and studios</a></li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
