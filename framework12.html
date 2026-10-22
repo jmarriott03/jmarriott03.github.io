@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--mb-module: 2em;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.p-responsive .p-responsive {
+	padding: 1em;
+}
+.p-responsive .rounded-responsive {
+	border-radius: 1em;
+}
+.content-module-wrapper {
+	display: flow-root;
+	margin-bottom: var(--mb-module);
+	padding: 0 2em;
+}
+
+@media (max-width: 40em) {
+.content-module-wrapper {
+	padding: 0 1em;
+}
+}
+.content-module-wrapper .content-module-wrapper {
+	padding: 0;
+}
+.btn-rounded-resize {
+	color: currentColor;
+	border: 2px solid currentColor;
+	font-size: 1.25rem;
+	border-radius: 2rem;
+	padding: 0.5rem;
+	background: none;
+	line-height: 1.5;
+	text-align: left;
+}
+.btn-rounded-resize:hover {
+	cursor: pointer;
+}
+.quotestyle:before {
+	font-family: "Times New Roman", serif;
+	font-size: 3em;
+	font-weight: normal;
+	line-height: 0.5em;
+	content: "\275d";
+	display: block;
+	margin-top: 0.2em;
+}
+.quote-container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.quote-image {
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	margin-right: 1em;
+}
+.columns {
+	column-width: 20rem;
+	column-gap: 1em;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin-bottom: 2em;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+}
+td, th {
+	padding: 0.5em;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid var(--black);
+}
+th {
+	border-bottom: 2px solid var(--black);
+}
+.section {
+	margin-block: 2em;
+	margin-inline: auto;
+}
+.group {
+	margin-inline: 1em;
+}
+.group .w-40 > div:not(:last-child) {
+	margin-bottom: 1.5em;
+}
+.group .w-60 > div:not(:last-child) {
+	margin-bottom: 1.5em;
+}
+.group .w-80 > div:not(:last-child) {
+	margin-bottom: 1.5em;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+</style>
+</head>
+<body class="bg-color" data-theme="deep-orange">
+<main>
+  <div class="section w-40">
+    <div class="group">
+      <h1>A clear hierarchy for consistent, accessible and flexible content</h1>
+      <p>The framework provides the visual language and building blocks. The CMS uses this structure to assemble pages with consistent rules, while AI can use the same information to create and validate content.</p>
+    </div>
+  </div>
+  <hr>
+  <div class="section w-40">
+    <div class="group">
+      <h2>1. Page and section structure</h2>
+      <p>Defines the overall layout, content boundaries and full-width sections.</p>
+      <ul>
+        <li>Page containers and maximum content width</li>
+        <li>Full-width and full-bleed sections</li>
+        <li>Page gutters and section spacing</li>
+        <li>Responsive behaviour at the page level</li>
+      </ul>
+    </div>
+  </div>
+  <div class="section bg-color-dark">
+    <div class="group w-80">
+      <div class="py-responsive">
+        <p>Full width</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-80 p-responsive bg-color-dark">
+        <p>80em max width</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-60 p-responsive bg-color-dark">
+        <p>60em max width</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-40 p-responsive bg-color-dark">
+        <p>40em max width</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="section">
+    <div class="group">
+      <div class="w-40">
+        <h2>2. Groups</h2>
+        <p>Organise related components and can own shared presentation (backgrounds, padding, width, spacing).</p>
+        <ul>
+          <li>Shared background, padding and width</li>
+          <li>Consistent spacing between child components</li>
+          <li>Optional borders or edge treatments</li>
+          <li>Behaves predictably when nested</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-40 bg-color dotted">
+        <div class="rounded-responsive p-responsive bg-color-light">
+          <h3>One</h3>
+        </div>
+        <div class="rounded-responsive p-responsive bg-color-light">
+          <h3>Two</h3>
+        </div>
+        <div class="rounded-responsive p-responsive bg-color-light">
+          <h3>Three</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-40 bg-color dotted rounded-responsive p-responsive bg-color-dark">
+        <div class="rounded-responsive p-responsive bg-color">
+          <h3>Four</h3>
+        </div>
+        <div class="rounded-responsive p-responsive bg-color">
+          <h3>Five</h3>
+        </div>
+        <div class="rounded-responsive p-responsive bg-color">
+          <h3>Six</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="section">
+    <div class="group">
+      <div class="w-40">
+        <h2>3. Components</h2>
+        <p>Provide content, purpose and behaviour (e.g. headings, text, buttons, cards, forms).</p>
+        <ul>
+          <li>Clear purpose and content structure</li>
+          <li>Defined states (default, hover, focus, disabled…)</li>
+          <li>Accessible markup requirements</li>
+          <li>Permitted variations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-40 bg-color dotted">
+        <div class="rounded-responsive p-responsive bg-color-light">
+          <h2 class="dotted">Heading</h2>
+          <p class="dotted">Content</p>
+          <div class="flex flex-wrap gap-1 dotted">
+            <button class="btn btn-primary">Primary button</button>
+            <button class="btn btn-secondary">Secondary button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="section">
+    <div class="group">
+      <div class="w-40">
+        <h2>4. Presentation settings</h2>
+        <p>Control permitted visual treatments (e.g. colour, style, layout variations).</p>
+        <ul>
+          <li>Colour and surface options</li>
+          <li>Typography and iconography</li>
+          <li>Borders, radius and elevation</li>
+          <li>Layout and alignment options</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="group">
+          <div class="w-80 rounded-responsive bg-color-light">
+            <div class="p-responsive">
+              <div class="grid mb-reg">
+                <div class="icon-big-container dotted"><span class="iconfont" aria-hidden="true">@</span>Icon 1 em</div>
+                <div class="icon-big-container dotted"><span class="iconfont icon-big-2" aria-hidden="true">@</span>Icon 2 em</div>
+                <div class="icon-big-container dotted"><span class="iconfont icon-big-3" aria-hidden="true">@</span>Icon 3 em</div>
+              </div>
+              <div class="flex flex-wrap gap-1 mb-reg dotted">
+                <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+                <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+                <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+                <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+                <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+                <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+                <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+                <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+                <button class="btn btn-primary" disabled>Primary disabled</button>
+              </div>
+              <div class="w-80 grid dotted">
+                <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320" class="img-cover aspect-ratio-16x9"></a>
+                  <div class="p-1">
+                    <p class="time">13 October 2026</p>
+                    <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
+                  </div>
+                </div>
+                <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320" class="img-cover aspect-ratio-16x9"></a>
+                  <div class="p-1">
+                    <p class="time">14 October 2026</p>
+                    <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+                  </div>
+                </div>
+                <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="#" width="320" class="img-cover aspect-ratio-16x9"></a>
+                  <div class="p-1">
+                    <p class="time">15 October 2026</p>
+                    <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="section">
+    <div class="group">
+      <div class="w-40">
+        <h2>5. Framework tokens and utilities</h2>
+        <p>Provide consistent spacing, sizing, colours and responsive behaviour.</p>
+        <ul>
+          <li>Spacing (section, component, content)</li>
+          <li>Sizing and width constraints</li>
+          <li>Grid and flex layout</li>
+          <li>Colour palette and surface tokens</li>
+          <li>Responsive and container queries</li>
+          <li>Accessibility helpers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
