@@ -12,12 +12,10 @@
 :root {
 --mb-module: 2em;
 }
-/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
-*/
 .p-responsive .p-responsive {
 	padding: 1em;
 }
@@ -111,6 +109,7 @@ th {
 .group {
 	margin-inline: 1em;
 }
+/*
 .group .w-40 > div:not(:last-child) {
 	margin-bottom: 1.5em;
 }
@@ -120,6 +119,7 @@ th {
 .group .w-80 > div:not(:last-child) {
 	margin-bottom: 1.5em;
 }
+*/
 .icon-big-container {
 	display: inline-flex;
 	align-items: center;
@@ -131,6 +131,32 @@ th {
 .icon-big-3 {
 	font-size: 3em;
 }
+.blockquote {
+	padding-left: 1em;
+	border-left: 5px solid var(--mgrey);
+}
+.container-query {
+	container-type: inline-size;
+}
+/*
+.grid-2-1 {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1em;
+}
+.grid-2-1 > div {
+	margin: 0;
+	height: 100%;
+}
+.grid-2-1 > div > :last-child {
+	margin-bottom: 0;
+}
+@container (max-width: 40em) {
+.grid-2-1 {
+grid-template-columns: 1fr;
+}
+}
+*/
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
@@ -141,7 +167,7 @@ th {
       <p>The framework provides the visual language and building blocks. The CMS uses this structure to assemble pages with consistent rules, while AI can use the same information to create and validate content.</p>
     </div>
   </div>
-  <hr>
+  <hr/>
   <div class="section w-40">
     <div class="group">
       <h2>1. Page and section structure</h2>
@@ -152,6 +178,8 @@ th {
         <li>Page gutters and section spacing</li>
         <li>Responsive behaviour at the page level</li>
       </ul>
+      <p>Paragraph text uses a shared readable measure targeting approximately 75 characters per line, separate from container width. Wider containers support layouts and collections without requiring wide paragraphs.</p>
+      <p>The framework determines gutters, widths and responsive behaviour rather than exposing arbitrary values to editors.</p>
     </div>
   </div>
   <div class="section bg-color-dark">
@@ -183,27 +211,43 @@ th {
     </div>
   </div>
   <hr>
+  <div class="section w-40">
+    <div class="group">
+      <h2>2. Groups and layout patterns</h2>
+      <p>Groups associate related components and can share approved presentation. Layout patterns arrange components; the framework controls spacing, alignment rules, column widths and responsive stacking.</p>
+      <ul>
+        <li>Shared background, padding and width</li>
+        <li>Consistent spacing between child components</li>
+        <li>Framework-defined borders and edge treatments</li>
+        <li>Behaves predictably when nested</li>
+      </ul>
+      <h3>Layout patterns</h3>
+      <p>Retain a two-column pattern for two related pieces of content. The framework controls column sizing, spacing and stacking.</p>
+      <p>Link, Document and Course lists should share automatic one- or two-column layout rules based on available width and item count, with no editor layout controls.</p>
+      <p class="blockquote">Under review: Course-list study-level groupings and whether Block collection remains a distinct layout pattern.</p>
+    </div>
+  </div>
   <div class="section">
     <div class="group">
-      <div class="w-40">
-        <h2>2. Groups</h2>
-        <p>Organise related components and can own shared presentation (backgrounds, padding, width, spacing).</p>
-        <ul>
-          <li>Shared background, padding and width</li>
-          <li>Consistent spacing between child components</li>
-          <li>Optional borders or edge treatments</li>
-          <li>Behaves predictably when nested</li>
-        </ul>
+      <div class="w-40 grid dotted">
+        <div class="card rounded-responsive p-responsive bg-color-light">
+          <h3>Related content A</h3>
+          <p>First in content order.</p>
+        </div>
+        <div class="card rounded-responsive p-responsive bg-color-light">
+          <h3>Related content B</h3>
+          <p>Stacks after the first item.</p>
+        </div>
       </div>
     </div>
   </div>
   <div class="section">
     <div class="group">
       <div class="w-40 bg-color dotted">
-        <div class="rounded-responsive p-responsive bg-color-light">
+        <div class="rounded-responsive p-responsive bg-color-light mb-reg">
           <h3>One</h3>
         </div>
-        <div class="rounded-responsive p-responsive bg-color-light">
+        <div class="rounded-responsive p-responsive bg-color-light mb-reg">
           <h3>Two</h3>
         </div>
         <div class="rounded-responsive p-responsive bg-color-light">
@@ -215,10 +259,10 @@ th {
   <div class="section">
     <div class="group">
       <div class="w-40 bg-color dotted rounded-responsive p-responsive bg-color-dark">
-        <div class="rounded-responsive p-responsive bg-color">
+        <div class="rounded-responsive p-responsive bg-color mb-reg">
           <h3>Four</h3>
         </div>
-        <div class="rounded-responsive p-responsive bg-color">
+        <div class="rounded-responsive p-responsive bg-color mb-reg">
           <h3>Five</h3>
         </div>
         <div class="rounded-responsive p-responsive bg-color">
@@ -232,13 +276,15 @@ th {
     <div class="group">
       <div class="w-40">
         <h2>3. Components</h2>
-        <p>Provide content, purpose and behaviour (e.g. headings, text, buttons, cards, forms).</p>
+        <p>Provide content, purpose and behaviour. Examples here illustrate the framework rather than defining the complete CMS component menu.</p>
         <ul>
           <li>Clear purpose and content structure</li>
           <li>Defined states (default, hover, focus, disabled…)</li>
           <li>Accessible markup requirements</li>
           <li>Permitted variations</li>
         </ul>
+        <p>Start with user needs, use the simplest suitable component and avoid separate components solely for different visual treatments.</p>
+        <p><a href="#inventory">View the proposed component inventory</a> and unresolved decisions.</p>
       </div>
     </div>
   </div>
