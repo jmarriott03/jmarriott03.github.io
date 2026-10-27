@@ -26,6 +26,8 @@
 --orange-dark: #b45a2d;
 --blue-light: #b8d0e8;
 --blue-dark: #036;
+--lime-light: #cf3;
+--lime-dark: #4d6600;
 }
 /*
 * {
@@ -68,6 +70,12 @@
 --bg-color: var(--white);
 --bg-color-light: var(--blue-light);
 --bg-color-dark: var(--blue-dark);
+}
+/* Lime theme */
+[data-theme="lime"] {
+--bg-color: var(--white);
+--bg-color-light: var(--lime-light);
+--bg-color-dark: var(--lime-dark);
 }
 /* Background utilities */
 .bg-color {
@@ -115,6 +123,11 @@
 	color: var(--white);
 	background-color: var(--btn-danger);
 }
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin: 2em 0;
+}
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
@@ -157,6 +170,13 @@
       <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
       <li class="swatch centered-child bg-color-light"><strong>#B8D0E8</strong></li>
       <li class="swatch centered-child bg-color-dark white-text"><strong>#036</strong></li>
+    </ul>
+    <hr>
+    <h2>Lime (student hub)</h2>
+    <ul class="swatch-grid" data-theme="lime">
+      <li class="swatch centered-child bg-color stroke"><strong>#FFF</strong></li>
+      <li class="swatch centered-child bg-color-light"><strong>#CF3</strong></li>
+      <li class="swatch centered-child bg-color-dark white-text"><strong>#4D6600</strong></li>
     </ul>
   </div>
 </main>
