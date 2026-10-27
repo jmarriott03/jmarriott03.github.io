@@ -12,10 +12,12 @@
 :root {
 --mb-module: 2em;
 }
+/*
 * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
+*/
 .p-responsive .p-responsive {
 	padding: 1em;
 }
@@ -306,14 +308,38 @@ grid-template-columns: 1fr;
   <div class="section">
     <div class="group">
       <div class="w-40">
-        <h2>4. Presentation settings</h2>
-        <p>Control permitted visual treatments (e.g. colour, style, layout variations).</p>
+		  
+		  
+		  
+		  
+        <h2>4. Approved presentation settings</h2>
+        <p>Editors choose a component, add content and apply approved presentation settings where appropriate. These do not expose arbitrary framework values.</p>
         <ul>
-          <li>Colour and surface options</li>
-          <li>Typography and iconography</li>
-          <li>Borders, radius and elevation</li>
-          <li>Layout and alignment options</li>
+          <li>Approved surfaces: Default, Light and Dark</li>
+          <li>Supported presentation patterns, such as Navigation lists or cards</li>
+          <li>Framework-defined typography, iconography and edge treatments</li>
+          <li>No individual editor controls for spacing, radius, widths or responsive arrangements</li>
         </ul>
+		  <h3>Who controls what?</h3>
+          <table class="mb-reg">
+            <thead>
+              <tr>
+                <th scope="col">Framework</th>
+                <th scope="col">Editor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spacing, alignment rules, readable measure, radius, column widths and responsive arrangements.</td>
+                <td>Component, content, approved surface and supported presentation pattern.</td>
+              </tr>
+            </tbody>
+          </table>
+        <p>Button colours below illustrate roles and states, not extra general-purpose surface options.</p>
+		  
+		  
+		  
+		  
       </div>
       <div class="section">
         <div class="group">
@@ -375,9 +401,48 @@ grid-template-columns: 1fr;
           <li>Responsive and container queries</li>
           <li>Accessibility helpers</li>
         </ul>
+        <h3>Proposed framework defaults</h3>
+        <ul>
+          <li>Use rounded edges throughout components; keep full-width containers square. Remove the square/rounded editor choice.</li>
+          <li>Manage component radius through a shared responsive token. Nested treatments and pill-shaped controls use related tokens.</li>
+          <li>Standardise surfaces to Default, Light and Dark. Remove Medium from future editor options.</li>
+          <li>Apply a shared paragraph measure of approximately 75 characters.</li>
+          <li>Control spacing, alignment and responsive layouts through the framework.</li>
+        </ul>
+        <p>Clear purposes, structured content requirements and predictable rules should support future AI-assisted recommendations and assembly, with editors reviewing the results.</p>
+      
       </div>
     </div>
   </div>
+	
+	
+	<hr>
+	
+	
+	
+	<section class="section">
+    <div class="group">
+      <div class="w-40">
+        <h2>6. Content sources and integrations</h2>
+        <p>Components can display manually entered, CMS-selected or externally retrieved content. Sources supply data; components determine presentation and behaviour.</p>
+        <p>Equivalent content should use consistent styles and responsive behaviour regardless of source, including the CMS, Pure and Salesforce. For example, research groups retrieved from Pure should receive the same treatment as an equivalent CMS article list.</p>
+        <h3>Navigation and related content</h3>
+        <p>Navigation supports List, Cards and Cards with images. Each instance uses one selection method: manually curated links (including CMS articles and external URLs), or dynamic retrieval using tags, filters or an approved source.</p>
+        <p>Support related content through Navigation with an appropriate heading. Dynamic tag-based content is a confirmed need; a separate Related content component is not proposed.</p>
+        <p class="note">Area to explore: technical source configuration, external retrieval and data management.</p>
+      </div>
+    </div>
+  </section>
+  <hr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </main>
 </body>
 </html>
