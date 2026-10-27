@@ -159,6 +159,47 @@ grid-template-columns: 1fr;
 }
 }
 */
+summary {
+	cursor: pointer;
+	padding: 0.5em;
+	transition: background-color 0.3s ease;
+}
+summary > * {
+	display: inline;
+}
+summary:hover {
+	background-color: var(--lgrey);
+}
+details {
+	margin: 0;
+	border-bottom: 1px solid var(--mgrey);
+}
+details > p {
+	margin: 0.5em;
+}
+details summary::-webkit-details-marker, details summary::marker {
+display: none;
+content: "";
+}
+details > summary::before {
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
+	transition: transform 0.3s ease;
+}
+details[open] > summary::before {
+	transform: rotate(180deg);
+}
+.table-wrap {
+	padding: 1em 0 1.5em 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+html {
+	scroll-behavior: smooth;
+}
+}
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
@@ -308,10 +349,6 @@ grid-template-columns: 1fr;
   <div class="section">
     <div class="group">
       <div class="w-40">
-		  
-		  
-		  
-		  
         <h2>4. Approved presentation settings</h2>
         <p>Editors choose a component, add content and apply approved presentation settings where appropriate. These do not expose arbitrary framework values.</p>
         <ul>
@@ -320,26 +357,22 @@ grid-template-columns: 1fr;
           <li>Framework-defined typography, iconography and edge treatments</li>
           <li>No individual editor controls for spacing, radius, widths or responsive arrangements</li>
         </ul>
-		  <h3>Who controls what?</h3>
-          <table class="mb-reg">
-            <thead>
-              <tr>
-                <th scope="col">Framework</th>
-                <th scope="col">Editor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Spacing, alignment rules, readable measure, radius, column widths and responsive arrangements.</td>
-                <td>Component, content, approved surface and supported presentation pattern.</td>
-              </tr>
-            </tbody>
-          </table>
+        <h3>Who controls what?</h3>
+        <table class="mb-reg">
+          <thead>
+            <tr>
+              <th scope="col">Framework</th>
+              <th scope="col">Editor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Spacing, alignment rules, readable measure, radius, column widths and responsive arrangements.</td>
+              <td>Component, content, approved surface and supported presentation pattern.</td>
+            </tr>
+          </tbody>
+        </table>
         <p>Button colours below illustrate roles and states, not extra general-purpose surface options.</p>
-		  
-		  
-		  
-		  
       </div>
       <div class="section">
         <div class="group">
@@ -410,17 +443,11 @@ grid-template-columns: 1fr;
           <li>Control spacing, alignment and responsive layouts through the framework.</li>
         </ul>
         <p>Clear purposes, structured content requirements and predictable rules should support future AI-assisted recommendations and assembly, with editors reviewing the results.</p>
-      
       </div>
     </div>
   </div>
-	
-	
-	<hr>
-	
-	
-	
-	<section class="section">
+  <hr>
+  <section class="section">
     <div class="group">
       <div class="w-40">
         <h2>6. Content sources and integrations</h2>
@@ -434,15 +461,250 @@ grid-template-columns: 1fr;
     </div>
   </section>
   <hr>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+  <section class="section">
+    <div class="group">
+      <div class="w-40">
+        <h2 id="inventory">7. Proposed component inventory</h2>
+        <p>Working proposal, not a final approved inventory. The current CMS menu contains 41 options; the proposed inventory identifies 25 component types: 16 fewer, or approximately 39%. This is indicative, not a final editor-menu count.</p>
+        <details>
+          <summary>
+            <h3>Content (7)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Text</strong></td>
+                  <td>Standard rich-text editorial content.</td>
+                </tr>
+                <tr>
+                  <td><strong>Heading</strong></td>
+                  <td>Semantic section headings.</td>
+                </tr>
+                <tr>
+                  <td><strong>Text and image</strong></td>
+                  <td>Related text and image as one coherent content unit.</td>
+                </tr>
+                <tr>
+                  <td><strong>Information group</strong></td>
+                  <td>Related, self-contained information for scanning or comparison without navigating away.</td>
+                </tr>
+                <tr>
+                  <td><strong>Callout</strong></td>
+                  <td>Important information needing additional prominence.</td>
+                </tr>
+                <tr>
+                  <td><strong>Quote</strong></td>
+                  <td>Testimonials and quotations, with featured and grouped variants.</td>
+                </tr>
+                <tr>
+                  <td><strong>Table</strong></td>
+                  <td>Tabular information for row-and-column comparison.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>Media (3)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Image</strong></td>
+                  <td>A single content image.</td>
+                </tr>
+                <tr>
+                  <td><strong>Video</strong></td>
+                  <td>A single content video.</td>
+                </tr>
+                <tr>
+                  <td><strong>Gallery</strong></td>
+                  <td>A collection of related images for browsing.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>Navigation and discovery (2)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Navigation</strong></td>
+                  <td>Curated or dynamic links with approved List, Cards and Cards with images patterns.</td>
+                </tr>
+                <tr>
+                  <td><strong>Search</strong></td>
+                  <td>Find relevant courses, people, resources or other content.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>Reveal and interaction (3)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Accordion</strong></td>
+                  <td>Selectively reveal several related sections.</td>
+                </tr>
+                <tr>
+                  <td><strong>Details/Disclosure</strong></td>
+                  <td>Reveal one short piece of supplementary content.</td>
+                </tr>
+                <tr>
+                  <td><strong>Tabs</strong></td>
+                  <td>Switch between parallel or equivalent views. Under review.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>Actions (2)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Button/CTA</strong></td>
+                  <td>A prominent action. Model to resolve.</td>
+                </tr>
+                <tr>
+                  <td><strong>Social share</strong></td>
+                  <td>Share page content through external services. Under review.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>People, organisations and contact (3)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>People list</strong></td>
+                  <td>A structured collection of people.</td>
+                </tr>
+                <tr>
+                  <td><strong>Partner logo list</strong></td>
+                  <td>A collection of partner or organisation identities.</td>
+                </tr>
+                <tr>
+                  <td><strong>Contact details</strong></td>
+                  <td>Contact information for a person, team, service or location.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>Specialist collections (4)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Course list</strong></td>
+                  <td>A course collection; study-level grouping needs review.</td>
+                </tr>
+                <tr>
+                  <td><strong>News list</strong></td>
+                  <td>A structured news collection.</td>
+                </tr>
+                <tr>
+                  <td><strong>Event list</strong></td>
+                  <td>A structured event collection.</td>
+                </tr>
+                <tr>
+                  <td><strong>Document list</strong></td>
+                  <td>Documents or downloadable resources.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <h3>Structure (1)</h3>
+          </summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Component</th>
+                  <th scope="col">Purpose/Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Divider</strong></td>
+                  <td>Visual or thematic separation. Replaces separate horizontal-line components; treatments belong to presentation settings.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 </main>
 </body>
 </html>
