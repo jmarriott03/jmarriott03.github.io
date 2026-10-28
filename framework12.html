@@ -122,17 +122,6 @@ th {
 	margin-bottom: 1.5em;
 }
 */
-.icon-big-container {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5em;
-}
-.icon-big-2 {
-	font-size: 2em;
-}
-.icon-big-3 {
-	font-size: 3em;
-}
 .blockquote {
 	padding-left: 1em;
 	border-left: 5px solid var(--mgrey);
@@ -190,6 +179,10 @@ html {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 1em;
+	max-width: 100%;
+	list-style: none;
+	padding-inline-start: 0;
+	margin: 0;
 }
 
 /* One column when there are fewer than 5 list items */
@@ -202,12 +195,6 @@ grid-template-columns: 1fr;
 .list-grid-2-1 {
 grid-template-columns: 1fr;
 }
-}
-.list-grid-2-1 {
-	max-width: 100%;
-	list-style: none;
-	padding-inline-start: 0;
-	margin: 0;
 }
 .list-grid-2-1 li {
 	border-bottom: 1px solid var(--mgrey);
