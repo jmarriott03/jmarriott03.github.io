@@ -140,25 +140,6 @@ th {
 .container-query {
 	container-type: inline-size;
 }
-/*
-.grid-2-1 {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1em;
-}
-.grid-2-1 > div {
-	margin: 0;
-	height: 100%;
-}
-.grid-2-1 > div > :last-child {
-	margin-bottom: 0;
-}
-@container (max-width: 40em) {
-.grid-2-1 {
-grid-template-columns: 1fr;
-}
-}
-*/
 summary {
 	cursor: pointer;
 	padding: 0.5em;
@@ -199,6 +180,42 @@ details[open] > summary::before {
 html {
 	scroll-behavior: smooth;
 }
+}
+/* Container query context */
+.w-80, .w-60, .w-40 {
+	container-type: inline-size;
+}
+/* Default: two columns */
+.list-grid-2-1 {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1em;
+}
+
+/* One column when there are fewer than 5 list items */
+.list-grid-2-1:not(:has(> li:nth-child(5))) {
+grid-template-columns: 1fr;
+}
+
+/* Switch to one column when the container is narrow */
+@container (max-width: 40em) {
+.list-grid-2-1 {
+grid-template-columns: 1fr;
+}
+}
+.list-grid-2-1 {
+	max-width: 100%;
+	list-style: none;
+	padding-inline-start: 0;
+	margin: 0;
+}
+.list-grid-2-1 li {
+	border-bottom: 1px solid var(--mgrey);
+	padding-bottom: 1em;
+	margin: 0;
+}
+.list-grid-2-1 li a {
+	text-decoration: none;
 }
 </style>
 </head>
@@ -311,6 +328,49 @@ html {
         <div class="rounded-responsive p-responsive bg-color">
           <h3>Six</h3>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-80 p-responsive dotted">
+        <h2>Link, Document and Course lists 80em width</h2>
+        <ul class="list-grid-2-1">
+          <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+          <li><a href="#">A moon bear rescue tale</a></li>
+          <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+          <li><a href="#">Photographic darkrooms and studios</a></li>
+          <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+        </ul>
+      </div>
+      <div class="w-80 p-responsive dotted">
+        <h2>Link, Document and Course lists 80em width (defaults to 1 column if less than 5 <span class="codegrey2">&lt;li&gt;</span> items</h2>
+        <ul class="list-grid-2-1">
+          <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+          <li><a href="#">A moon bear rescue tale</a></li>
+          <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+          <li><a href="#">Photographic darkrooms and studios</a></li>
+        </ul>
+      </div>
+      <div class="w-60 p-responsive dotted">
+        <h2>Link, Document and Course lists 60em width</h2>
+        <ul class="list-grid-2-1">
+          <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+          <li><a href="#">A moon bear rescue tale</a></li>
+          <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+          <li><a href="#">Photographic darkrooms and studios</a></li>
+          <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+        </ul>
+      </div>
+      <div class="w-40 p-responsive dotted">
+        <h2>Link, Document and Course lists 40em width</h2>
+        <ul class="list-grid-2-1">
+          <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
+          <li><a href="#">A moon bear rescue tale</a></li>
+          <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
+          <li><a href="#">Photographic darkrooms and studios</a></li>
+          <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+        </ul>
       </div>
     </div>
   </div>
