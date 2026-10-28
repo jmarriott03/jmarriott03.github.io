@@ -122,8 +122,9 @@ th {
 	margin-bottom: 1.5em;
 }
 */
-.blockquote {
-	padding-left: 1em;
+blockquote {
+	margin: 0;
+	padding: 0 0 0 1em;
 	border-left: 5px solid var(--mgrey);
 }
 .container-query {
@@ -271,7 +272,7 @@ grid-template-columns: 1fr;
       <h3>Layout patterns</h3>
       <p>Retain a two-column pattern for two related pieces of content. The framework controls column sizing, spacing and stacking.</p>
       <p>Link, Document and Course lists should share automatic one- or two-column layout rules based on available width and item count, with no editor layout controls.</p>
-      <p class="blockquote">Under review: Course-list study-level groupings and whether Block collection remains a distinct layout pattern.</p>
+      <blockquote>Under review: Course-list study-level groupings and whether Block collection remains a distinct layout pattern.</blockquote>
     </div>
   </div>
   <div class="section">
@@ -331,7 +332,8 @@ grid-template-columns: 1fr;
         </ul>
       </div>
       <div class="w-80 p-responsive dotted">
-        <h2>Link, Document and Course lists 80em width (defaults to 1 column if less than 5 <span class="codegrey2">&lt;li&gt;</span> items</h2>
+        <h2> Link, Document and Course lists 80em width
+          (defaults to 1 column if fewer than 5 <span class="codegrey2">&lt;li&gt;</span> items) </h2>
         <ul class="list-grid-2-1">
           <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
           <li><a href="#">A moon bear rescue tale</a></li>
@@ -421,45 +423,45 @@ grid-template-columns: 1fr;
         </table>
         <p>Button colours below illustrate roles and states, not extra general-purpose surface options.</p>
       </div>
-      <div class="section">
-        <div class="group">
-          <div class="w-80 rounded-responsive bg-color-light">
-            <div class="p-responsive">
-              <div class="grid mb-reg">
-                <div class="icon-big-container dotted"><span class="iconfont" aria-hidden="true">@</span>Icon 1 em</div>
-                <div class="icon-big-container dotted"><span class="iconfont icon-big-2" aria-hidden="true">@</span>Icon 2 em</div>
-                <div class="icon-big-container dotted"><span class="iconfont icon-big-3" aria-hidden="true">@</span>Icon 3 em</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="group">
+      <div class="w-80 rounded-responsive bg-color-light">
+        <div class="p-responsive">
+          <div class="grid mb-reg">
+            <div class="icon-big-container dotted"><span class="iconfont" aria-hidden="true">@</span>Icon 1 em</div>
+            <div class="icon-big-container dotted"><span class="iconfont icon-big-2" aria-hidden="true">@</span>Icon 2 em</div>
+            <div class="icon-big-container dotted"><span class="iconfont icon-big-3" aria-hidden="true">@</span>Icon 3 em</div>
+          </div>
+          <div class="flex flex-wrap gap-1 mb-reg dotted">
+            <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
+            <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
+            <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
+            <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
+            <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
+            <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
+            <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
+            <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
+            <button class="btn btn-primary" disabled>Primary disabled</button>
+          </div>
+          <div class="w-80 grid dotted">
+            <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+              <div class="p-1">
+                <p class="time">13 October 2026</p>
+                <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
               </div>
-              <div class="flex flex-wrap gap-1 mb-reg dotted">
-                <button class="btn btn-primary"><span class="iconfont" aria-hidden="true">/</span>Primary</button>
-                <button class="btn btn-secondary"><span class="iconfont" aria-hidden="true">0</span>Secondary</button>
-                <button class="btn btn-success"><span class="iconfont" aria-hidden="true">6</span>Success</button>
-                <button class="btn btn-danger"><span class="iconfont" aria-hidden="true">a</span>Danger</button>
-                <button class="btn btn-warning"><span class="iconfont" aria-hidden="true">G</span>Warning</button>
-                <button class="btn btn-info"><span class="iconfont" aria-hidden="true">é</span>Info</button>
-                <button class="btn btn-light"><span class="iconfont" aria-hidden="true">ä</span>Light</button>
-                <button class="btn btn-dark"><span class="iconfont" aria-hidden="true">ä</span>Dark</button>
-                <button class="btn btn-primary" disabled>Primary disabled</button>
+            </div>
+            <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+              <div class="p-1">
+                <p class="time">14 October 2026</p>
+                <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
               </div>
-              <div class="w-80 grid dotted">
-                <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
-                  <div class="p-1">
-                    <p class="time">13 October 2026</p>
-                    <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
-                  </div>
-                </div>
-                <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
-                  <div class="p-1">
-                    <p class="time">14 October 2026</p>
-                    <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
-                  </div>
-                </div>
-                <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
-                  <div class="p-1">
-                    <p class="time">15 October 2026</p>
-                    <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
-                  </div>
-                </div>
+            </div>
+            <div class="card rounded-1 bg-color"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+              <div class="p-1">
+                <p class="time">15 October 2026</p>
+                <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
               </div>
             </div>
           </div>
