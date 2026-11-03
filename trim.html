@@ -9,7 +9,7 @@
 <!--<link rel="stylesheet" href="css2/plymouth_theme.css">-->
 <title>University of Plymouth</title>
 <style>
-* {
+body.debug * {
 	outline: 1px dotted red;
 	outline-offset: -1px;
 }
@@ -27,7 +27,7 @@ hr {
 </style>
 </head>
 <body>
-<main>
+<main><div class="bck-black"><div class="w-80 p-responsive"><p class="largetext2 white-text"><strong>trim - press 'T' to toggle debug outline</strong></p></div></div>
   <div class="w-80 p-responsive trim">
     <h1>trim text-box: trim-both cap alphabetic; - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h1>
     <h2>h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h2>
@@ -53,5 +53,14 @@ hr {
     <p><em>em Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</em></p>
   </div>
 </main>
+<script>
+document.addEventListener('keydown', function(event) {
+	if (event.key.toLowerCase() === 't' && !event.ctrlKey && !event.metaKey && !event.altKey) {
+		if (event.target.matches('input, textarea, select, [contenteditable="true"]')) return;
+
+		document.body.classList.toggle('debug');
+	}
+});
+</script>
 </body>
 </html>
