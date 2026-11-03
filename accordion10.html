@@ -15,48 +15,57 @@
 }
 */
 .w-60 {
-    max-width: 60em;
-    overflow: hidden;
+	max-width: 60em;
+	overflow: hidden;
 }
 summary {
-    cursor: pointer;
-    padding: 0.5em;
-    transition: background-color 0.3s ease;
+	cursor: pointer;
+	padding: 0.5em;
+	transition: background-color 0.3s ease;
 }
 summary > * {
-    display: inline;
+	display: inline;
 }
 summary:hover {
-    background-color: var(--lgrey);
+	background-color: var(--lgrey);
+}
+summary {
+	list-style: none;
+}
+summary::marker {
+content: "";
+}
+summary::-webkit-details-marker {
+display: none;
 }
 details {
-    margin: 0;
-    border-bottom: 1px solid var(--mgrey);
+	margin: 0;
+	border-bottom: 1px solid var(--mgrey);
 }
 details > p {
-    margin: 0.5em;
+	margin: 0.5em;
 }
 details summary::-webkit-details-marker, details summary::marker {
 display: none;
 content: "";
 }
 details > summary::before {
-    font-family: 'icon', sans-serif;
-    font-weight: normal;
-    content: 'O';
-    float: right;
-    transition: transform 0.3s ease;
+	font-family: 'icon', sans-serif;
+	font-weight: normal;
+	content: 'O';
+	float: right;
+	transition: transform 0.3s ease;
 }
 details[open] > summary::before {
-    transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 .p-resize-2-1 {
-    padding: 2em;
+	padding: 2em;
 }
 
 @media (max-width: 40em) {
 .p-resize-2-1 {
-    padding: 1em;
+	padding: 1em;
 }
 }
 </style>

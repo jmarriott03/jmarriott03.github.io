@@ -141,6 +141,15 @@ summary > * {
 summary:hover {
 	background-color: var(--lgrey);
 }
+summary {
+	list-style: none;
+}
+summary::marker {
+content: "";
+}
+summary::-webkit-details-marker {
+display: none;
+}
 details {
 	margin: 0;
 	border-bottom: 1px solid var(--mgrey);
