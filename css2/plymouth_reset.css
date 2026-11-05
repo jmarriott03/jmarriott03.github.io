@@ -17,11 +17,8 @@ html, body {
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 24px 0;
-  text-wrap: balance;
-  text-box: trim-both cap alphabetic;
 }
 p, ul, ol {
-  text-wrap: pretty;
   margin: 0 0 24px 0;
 }
 p {
