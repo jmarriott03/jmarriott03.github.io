@@ -287,12 +287,13 @@ div :last-child {
   box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.2);
 }
 .stroke {
-  outline: 2px solid var(--lgrey);
+  outline: 2px solid var(--stroke, var(--lgrey));
   outline-offset: -2px;
   overflow: hidden; /* ADDED: Missing from original framework, required by production */
 }
 .dotted {
-  border: 1px dotted var(--red);
+  outline: 1px dotted red;
+  outline-offset: -1px;
 }
 .mrfrosty {
   background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1));

@@ -213,24 +213,28 @@
 .bg-color {
   --color-text: var(--text-color);
   --color-link: var(--link-color);
+  --stroke: var(--lgrey);
   color: var(--color-text);
   background-color: hsl(var(--bg-color));
 }
 .bg-color-light {
   --color-text: var(--text-color-light);
   --color-link: var(--link-color-light);
+  --stroke: var(--color-text);
   color: var(--color-text);
   background-color: hsl(var(--bg-color-light));
 }
 .bg-color-medium {
   --color-text: var(--text-color-medium);
   --color-link: var(--link-color-medium);
+  --stroke: var(--color-text);
   color: var(--color-text);
   background-color: hsl(var(--bg-color-medium));
 }
 .bg-color-dark {
   --color-text: var(--text-color-dark);
   --color-link: var(--link-color-dark);
+  --stroke: var(--color-text);
   color: var(--color-text);
   background-color: hsl(var(--bg-color-dark));
 }
