@@ -9,6 +9,12 @@
 <!--<link rel="stylesheet" href="css2/plymouth_theme.css">-->
 <title>University of Plymouth</title>
 <style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
 /* Container query context */
 .w-80, .w-60, .w-40 {
 	container-type: inline-size;
@@ -17,7 +23,7 @@
 .grid-2-1 {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 2em;
+	gap: 1em 2em;
 }
 
 /* One column when there are fewer than 5 list items */
@@ -39,17 +45,100 @@ ul {
 }
 li {
 	border-bottom: 1px solid var(--mgrey);
-	padding-bottom: 1em;
+	padding-bottom: 0.5em;
 	margin: 0;
 }
 li a {
 	text-decoration: none;
 }
+li a:hover span:last-child,
+li a:focus-visible span:last-child {
+    text-decoration: underline;
+}
+.icon-big-container {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+}
+.icon-big-2 {
+	font-size: 2em;
+}
+.icon-big-3 {
+	font-size: 3em;
+}
+	.red {color: var(--btn-danger);}
 </style>
 </head>
 <body class="bg-color" data-theme="deep-orange">
 <main>
   <div class="w-80 p-responsive dotted">
+	  <h2>Information sheets</h2>
+    <ul class="grid-2-1">
+      
+		  
+		  <li>
+    <a href="#">
+        <div class="icon-big-container">
+            <span class="iconfont icon-big-2 red" aria-hidden="true">U</span>
+            <span>Why Study in the South West</span>
+        </div>
+    </a>
+</li>
+		  
+		 <li><a href="#"> 
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Why Study in the South West</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>UCAS and personal statements</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Student Finance</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Preparing for your UCAS Fair</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Choosing between offers</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Choosing a course and university</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>FoH Health Careers Guide</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Nursing Poster 1</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Nursing Poster 2</div>
+        </a></li>
+		
+		<li><a href="#">
+        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Podiatry poster</div>
+        </a></li>
+		
+
+		
+		
+		
+
+
+
+
+
+		
+		
+		
+		
+    </ul>
     <h1>list4</h1>
     <h2>Article group list 80em width</h2>
     <ul class="grid-2-1">
