@@ -15,168 +15,122 @@
 	outline-offset: -1px;
 }
 */
-/* Container query context */
-.w-80, .w-60, .w-40 {
+
+/* List container establishes the container query context */
+.list-container {
 	container-type: inline-size;
 }
-/* Default: two columns */
+/* Default: one column */
 .grid-2-1 {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: 1fr;
 	gap: 1em 2em;
-}
-
-/* One column when there are fewer than 5 list items */
-.grid-2-1:not(:has(> li:nth-child(5))) {
-grid-template-columns: 1fr;
-}
-
-/* Switch to one column when the container is narrow */
-@container (max-width: 40em) {
-.grid-2-1 {
-grid-template-columns: 1fr;
-}
-}
-ul {
 	max-width: 100%;
 	list-style: none;
-	padding-inline-start: 0;
+	padding: 0;
 	margin: 0;
 }
-li {
+
+/* Two columns when the container is wide enough AND has 5+ items */
+@container (min-width: 40em) {
+.grid-2-1:has(> li:nth-child(5)) {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+/* List items */
+.grid-2-1 > li {
+	min-width: 0;
+	padding-block-end: 0.5em;
+	margin: 0;
 	border-bottom: 1px solid var(--mgrey);
-	padding-bottom: 0.5em;
-	margin: 0;
 }
-li a {
+/* Links */
+.grid-2-1 > li > a {
+	display: block;
 	text-decoration: none;
 }
-li a:hover span:last-child,
-li a:focus-visible span:last-child {
-    text-decoration: underline;
-}
-.icon-big-container {
-	display: inline-flex;
+/* Link content */
+.list-link-content {
+	display: flex;
 	align-items: center;
 	gap: 0.5em;
 }
+/* Link text */
+.list-link-text {
+	text-decoration: none;
+}
+.grid-2-1 > li > a:hover .list-link-text, .grid-2-1 > li > a:focus-visible .list-link-text {
+text-decoration: underline;
+}
+/* Icons */
 .icon-big-2 {
 	font-size: 2em;
 }
 .icon-big-3 {
 	font-size: 3em;
 }
-	.red {color: var(--btn-danger);}
+.icon-danger {
+	color: var(--btn-danger);
+}
 </style>
 </head>
+
 <body class="bg-color" data-theme="deep-orange">
 <main>
-  <div class="w-80 p-responsive dotted">
-	  <h2>Information sheets</h2>
-    <ul class="grid-2-1">
-      
-		  
-		  <li>
-    <a href="#">
-        <div class="icon-big-container">
-            <span class="iconfont icon-big-2 red" aria-hidden="true">U</span>
-            <span>Why Study in the South West</span>
-        </div>
-    </a>
-</li>
-		  
-		 <li><a href="#"> 
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Why Study in the South West</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>UCAS and personal statements</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Student Finance</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Preparing for your UCAS Fair</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Choosing between offers</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Choosing a course and university</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>FoH Health Careers Guide</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Nursing Poster 1</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Nursing Poster 2</div>
-        </a></li>
-		
-		<li><a href="#">
-        <div class="icon-big-container"><span class="iconfont icon-big-2" aria-hidden="true">Ö</span>Podiatry poster</div>
-        </a></li>
-		
-
-		
-		
-		
-
-
-
-
-
-		
-		
-		
-		
-    </ul>
-    <h1>list4</h1>
+  <div class="w-80 p-responsive dotted list-container">
+    <h2>Information sheets</h2>
+    <div class="mb-reg">
+      <ul class="grid-2-1">
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Why Study in the South West</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Why Study in the South West</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">UCAS and personal statements</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Student Finance</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Preparing for your UCAS Fair</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Choosing between offers</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Choosing a course and university</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">FoH Health Careers Guide</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Nursing Poster 1</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Nursing Poster 2</span></span></a></li>
+        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Podiatry poster</span></span></a></li>
+      </ul>
+    </div>
     <h2>Article group list 80em width</h2>
     <ul class="grid-2-1">
-      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
-      <li><a href="#">A moon bear rescue tale</a></li>
-      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
-      <li><a href="#">Photographic darkrooms and studios</a></li>
-      <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</span></span></a></li>
     </ul>
   </div>
-  <div class="w-80 p-responsive dotted">
+  <div class="w-80 p-responsive dotted list-container">
     <h2> Link, Document and Course lists 80em width
       (defaults to 1 column if fewer than 5 <span class="codegrey2">&lt;li&gt;</span> items) </h2>
     <ul class="grid-2-1">
-      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
-      <li><a href="#">A moon bear rescue tale</a></li>
-      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
-      <li><a href="#">Photographic darkrooms and studios</a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span></span></a></li>
     </ul>
   </div>
-  <div class="w-60 p-responsive dotted">
+  <div class="w-60 p-responsive dotted list-container">
     <h2>Article group list 60em width</h2>
     <ul class="grid-2-1">
-      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
-      <li><a href="#">A moon bear rescue tale</a></li>
-      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
-      <li><a href="#">Photographic darkrooms and studios</a></li>
-      <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span></span></a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span></span> </a> </li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span></span> </a> </li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</span> </span> </a> </li>
     </ul>
   </div>
-  <div class="w-40 p-responsive dotted">
+  <div class="w-40 p-responsive dotted list-container">
     <h2>Article group list 40em width</h2>
     <ul class="grid-2-1">
-      <li><a href="#">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</a></li>
-      <li><a href="#">A moon bear rescue tale</a></li>
-      <li><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></li>
-      <li><a href="#">Photographic darkrooms and studios</a></li>
-      <li><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</a></li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span> </span> </a> </li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span> </span> </a> </li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span> </span> </a> </li>
+      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span> </span> </a> </li>
+      <li> <a href="#"><span class="list-link-content"><span class="list-link-text">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</span> </span> </a> </li>
     </ul>
   </div>
 </main>
