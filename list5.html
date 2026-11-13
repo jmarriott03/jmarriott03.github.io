@@ -40,7 +40,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 /* List items */
 .grid-2-1 > li {
 	min-width: 0;
-	padding-block-end: 0.5em;
+	padding-block-end: 1em;
 	margin: 0;
 	border-bottom: 1px solid var(--mgrey);
 }
@@ -72,12 +72,47 @@ text-decoration: underline;
 .icon-danger {
 	color: var(--btn-danger);
 }
+.list-link-img {
+	height: 4em;
+	width: auto;
+	border-radius: 0.5em;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	display: block;
+	margin-inline-start: auto;
+}
+.time {
+	font-size: 0.875em;
+	color: var(--dgrey);
+	margin-bottom: 0;
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0.25em;
+}
 </style>
 </head>
 
 <body class="bg-color" data-theme="deep-orange">
 <main>
   <div class="w-80 p-responsive dotted list-container">
+    <h2>Information sheets</h2>
+    <div class="mb-reg">
+      <ul class="grid-2-1">
+        <li><a href="#"><div><h3 class="m-0">Plymouth professor champions arts and humanities research</h3></a>
+<span class="iconfont" aria-hidden="true">c</span> <time datetime="2026-04-27T08:30" class="time">27 April 2026 08:30 - 16:30</time><p>Professor Katharine Willis joins national advisory board.</p></div><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="list-link-img"/></li>
+        <li><a href="#"><span class="list-link-content"><span class="list-link-text">Why Study in the South West</span><img src="images/720x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="list-link-img"/></span></a></li>
+      </ul>
+    </div>
+	  
+	  
+	  <p class="time"> <span class="iconfont" aria-hidden="true">c</span>
+            <time datetime="2026-04-27T08:30">27 April 2026 08:30 - 16:30</time>
+          </p>
+          <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
+          <p>Professor Katharine Willis joins national advisory board.</p>
+	  
+	  
+	  
     <h2>Information sheets</h2>
     <div class="mb-reg">
       <ul class="grid-2-1">
