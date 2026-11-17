@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+@media (width <= 40em) {
+padding: 2em 1em;
+}
+}
+.group {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card {
+	max-width: 37.5em;
+}
+.card h2, .card h3, .card p, .card img {
+	margin: 0;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section p {
+	margin: 0;
+}
+.bg-color .card.bg-color {
+	border: 1px solid var(--mgrey);
+}
+</style>
+</head>
+<body data-theme="turquoise">
+<main>
+  <div class="section w-80">
+    <h1>equalheight40</h1>
+    <div class="group">
+      <h2>rounded 2em, padding 2em</h2>
+      <div class="grid">
+        <div class="card rounded-2 bg-color stroke"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-2 bg-color stroke"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-2 bg-color stroke"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-medium">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-2 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-2 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-2 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-dark">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-2 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-2 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-2 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-2">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section w-80">
+    <div class="group">
+      <h2>rounded 1em, padding 1em</h2>
+      <div class="grid">
+        <div class="card rounded-1 bg-color stroke"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-1 bg-color stroke"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-1 bg-color stroke"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-medium">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-1 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-1 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-1 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-dark">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-1 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-1 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-1 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section w-80">
+    <div class="group">
+      <h2>rounded 0.5em, padding 1em</h2>
+      <div class="grid">
+        <div class="card rounded-0-5 bg-color stroke"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-medium">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-0-5 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-dark">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-0-5 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section w-80">
+    <div class="group">
+      <h2>rounded 0.25em, padding 1em</h2>
+      <div class="grid">
+        <div class="card rounded-0-25 bg-color stroke"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-25 bg-color stroke"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-25 bg-color stroke"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-medium">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-0-25 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-25 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-25 bg-color stroke bg-color-medium"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-dark">
+    <div class="group w-80 p-responsive">
+      <div class="grid">
+        <div class="card rounded-0-5 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720professor.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>13 November 2026</p>
+            <h3><a href="#"><a href="#">Plymouth professor champions arts and humanities research</a></a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720boat.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>14 November 2026</p>
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color stroke bg-color-dark"> <a href="#"><img src="images/1280x720student22.webp" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <p>15 November 2026</p>
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
