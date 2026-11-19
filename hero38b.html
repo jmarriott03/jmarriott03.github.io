@@ -75,13 +75,33 @@ grid-template-columns: 1fr;
 	height: 2em;
 	vertical-align: middle;
 }
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
 </style>
 </head>
 <body data-theme="mono">
 <main>
   <div class="bg-color">
     <div class="section">
-      <div class="logo"> <img src="images/1280x720placeholder-mgrey.gif" alt="" class="logo"> </div>
+      <div class="logo"><img src="images/1280x720placeholder-mgrey.gif" alt="" class="logo"></div>
     </div>
   </div>
   <div class="hero-2col layout-33-67 bg-color-dark">
@@ -94,7 +114,11 @@ grid-template-columns: 1fr;
         <p>10:15 - 12:45</p>
       </div>
     </div>
-    <div class="right-column"><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-cover"></div>
+    <div class="right-column">
+      <figure><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-cover">
+        <figcaption class="rounded-0-5">Image courtesy of Getty</figcaption>
+      </figure>
+    </div>
   </div>
   <div class="section w-80">
     <div class="layout-67-33">
