@@ -1,14 +1,13 @@
 <!doctype html>
-<!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8"/>
-<meta content="Author: Jamie Marriott" name="description"/>
-<meta content="width=device-width, minimum-scale=1, initial-scale=1" name="viewport"/>
-<link href="css2/plymouth_reset.css" rel="stylesheet"/>
-<link href="css2/plymouth_framework.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link href="css2/plymouth_reset.css" rel="stylesheet">
+<link href="css2/plymouth_framework.css" rel="stylesheet">
 <link rel="stylesheet" href="css2/plymouth_theme.css">
-<title> University of Plymouth </title>
+<title>University of Plymouth</title>
 <style>
 /*
 * {
@@ -43,9 +42,17 @@
 .content-list > li:first-child {
 	padding-block-start: 0;
 }
+.content-list > li:last-child {
+	border-bottom: 0;
+}
+@container (min-width: 42em) {
+.content-list--columns:has(> li:nth-child(5)) > li:nth-last-child(-n+2) {
+border-bottom: 0;
+}
+}
 /* Two-column presentation for compact text and document lists */
 .content-list--columns {
-	column-gap: 3em;
+	column-gap: 2em;
 }
 @container (min-width: 42em) {
 .content-list--columns:has(> li:nth-child(5)) {
@@ -63,7 +70,7 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 	font-weight: 600;
 }
 .content-list__title a {
-	/*	color: inherit;*/
+	/* color: inherit; */
 	text-decoration: none;
 }
 .content-list__title a:hover, .content-list__title a:focus-visible {
@@ -80,14 +87,14 @@ outline-offset: 3px;
 	flex: 1 1 auto;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 0.35em;
+	gap: 0.5em;
 	min-width: 0;
 }
 .content-list__meta {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	gap: 0.25em 0.75em;
+	gap: 0.25em 1em;
 	margin: 0;
 	font-size: 0.875em;
 	color: var(--dgrey);
@@ -98,26 +105,12 @@ outline-offset: 3px;
 .content-list__meta-list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.25em 0.75em;
+	gap: 0.25em 1em;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	font-size: 0.875em;
 	color: var(--dgrey);
-}
-/* Document format icon */
-.content-list__file-icon {
-	display: inline-grid;
-	flex: 0 0 2.5em;
-	width: 2.5em;
-	height: 2.5em;
-	place-items: center;
-	border: 1px solid currentColor;
-	border-radius: 0.25em;
-	color: var(--btn-danger, #c33);
-	font-size: 0.75em;
-	font-weight: 700;
-	line-height: 1;
 }
 /* Visual lists use a compact, right-aligned thumbnail */
 .content-list__image {
@@ -126,7 +119,7 @@ outline-offset: 3px;
 	width: 6em;
 	height: 4em;
 	margin-inline-start: auto;
-	border-radius: 0.25em;
+	border-radius: 0.5em;
 	object-fit: cover;
 }
 /* Event status is text as well as a visual treatment */
@@ -165,293 +158,303 @@ height: 3em;
 .content-list--single {
 	grid-template-columns: minmax(0, 1fr);
 }
-.content-list + * {
-	margin-block-start: 2em;
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+@media (width <= 40em) {
+padding: 2em 1em;
+}
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section p {
+	margin: 0;
 }
 </style>
 </head>
-<body class="bg-color" data-theme="deep-orange">
+
+<body class="bg-color" data-theme="mono">
 <main>
-  <div class="w-80 p-responsive dotted list-container">
-    <h1> List component examples </h1>
-    <p> One shared list foundation supports links, documents, news, events and courses. Editors choose the content type and, where available, a simple or visual presentation. </p>
-    <h2> Link list </h2>
-    <p> Compact link lists can use two columns when the list is wide enough and contains at least five items. </p>
+  <div class="w-80 section list-container">
+    <h1>List component examples</h1>
+    <p>One shared list foundation supports links, documents, news, events and courses. Editors choose the content type and, where available, a simple or visual presentation.</p>
+    <h2>Link list</h2>
+    <p>Compact link lists can use two columns when the list is wide enough and contains at least five items.</p>
     <ul class="content-list content-list--columns">
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Why Study in the South West </a> </h3>
+          <h3 class="content-list__title"><a href="#">Why Study in the South West</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> UCAS and personal statements </a> </h3>
+          <h3 class="content-list__title"><a href="#">UCAS and personal statements</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Student Finance </a> </h3>
+          <h3 class="content-list__title"><a href="#">Student Finance</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Preparing for your UCAS Fair </a> </h3>
+          <h3 class="content-list__title"><a href="#">Preparing for your UCAS Fair</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Choosing between offers </a> </h3>
+          <h3 class="content-list__title"><a href="#">Choosing between offers</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Choosing a course and university </a> </h3>
+          <h3 class="content-list__title"><a href="#">Choosing a course and university</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> FoH Health Careers Guide </a> </h3>
+          <h3 class="content-list__title"><a href="#">FoH Health Careers Guide</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Nursing Poster 1 </a> </h3>
+          <h3 class="content-list__title"><a href="#">Nursing Poster 1</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Nursing Poster 2 </a> </h3>
+          <h3 class="content-list__title"><a href="#">Nursing Poster 2</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Podiatry poster </a> </h3>
+          <h3 class="content-list__title"><a href="#">Podiatry poster</a></h3>
         </div>
       </li>
     </ul>
-    <h2> Document list </h2>
-    <p> File type and file size are shown alongside each linked document title. </p>
+    <h2>Document list</h2>
+    <p>File type and file size are shown alongside each linked document title.</p>
     <ul class="content-list content-list--columns">
-      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+      <li> <span aria-hidden="true" class="iconfont icon-big-2 icon-danger">U</span>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Why Study in the South West </a> </h3>
-          <p class="content-list__meta"> PDF (2.4 MB) </p>
+          <h3 class="content-list__title"><a href="#">Why Study in the South West</a></h3>
+          <p class="content-list__meta">PDF (2.4 MB)</p>
         </div>
       </li>
-      <li> <span aria-hidden="true" class="content-list__file-icon"> DOCX </span>
+      <li> <span aria-hidden="true" class="iconfont icon-big-2 icon-danger">U</span>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> UCAS and personal statements </a> </h3>
-          <p class="content-list__meta"> Word document (84 KB) </p>
+          <h3 class="content-list__title"><a href="#">UCAS and personal statements</a></h3>
+          <p class="content-list__meta">Word document (84 KB)</p>
         </div>
       </li>
-      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+      <li> <span aria-hidden="true" class="iconfont icon-big-2 icon-danger">U</span>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Student Finance </a> </h3>
-          <p class="content-list__meta"> PDF (1.1 MB) </p>
+          <h3 class="content-list__title"><a href="#">Student Finance</a></h3>
+          <p class="content-list__meta">PDF (1.1 MB)</p>
         </div>
       </li>
-      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+      <li> <span aria-hidden="true" class="iconfont icon-big-2 icon-danger">U</span>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Preparing for your UCAS Fair </a> </h3>
-          <p class="content-list__meta"> PDF (640 KB) </p>
+          <h3 class="content-list__title"><a href="#">Preparing for your UCAS Fair</a></h3>
+          <p class="content-list__meta">PDF (640 KB)</p>
         </div>
       </li>
-      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+      <li> <span aria-hidden="true" class="iconfont icon-big-2 icon-danger">U</span>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Choosing between offers </a> </h3>
-          <p class="content-list__meta"> PDF (920 KB) </p>
+          <h3 class="content-list__title"><a href="#">Choosing between offers</a></h3>
+          <p class="content-list__meta">PDF (920 KB)</p>
         </div>
       </li>
     </ul>
-    <h2> News list &ndash; simple </h2>
+    <h2>News list &ndash; simple</h2>
     <ul class="content-list content-list--single">
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Plymouth professor champions arts and humanities research </a> </h3>
+          <h3 class="content-list__title"><a href="#">Plymouth professor champions arts and humanities research</a></h3>
           <p class="content-list__meta">
-            <time datetime="2026-04-27"> 27 April 2026 </time>
+            <time datetime="2026-04-27">27 April 2026</time>
           </p>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> &lsquo;Be personal and appreciative&rsquo; &ndash; research highlights effective responses to online patient feedback </a> </h3>
+          <h3 class="content-list__title"><a href="#">&lsquo;Be personal and appreciative&rsquo; &ndash; research highlights effective responses to online patient feedback</a></h3>
           <p class="content-list__meta">
-            <time datetime="2026-04-20"> 20 April 2026 </time>
+            <time datetime="2026-04-20">20 April 2026</time>
           </p>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> A moon bear rescue tale </a> </h3>
+          <h3 class="content-list__title"><a href="#">A moon bear rescue tale</a></h3>
           <p class="content-list__meta">
-            <time datetime="2026-04-14"> 14 April 2026 </time>
+            <time datetime="2026-04-14">14 April 2026</time>
           </p>
         </div>
       </li>
     </ul>
-    <h2> News list &ndash; visual </h2>
+    <h2>News list &ndash; visual</h2>
     <ul class="content-list content-list--single">
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Plymouth professor champions arts and humanities research </a> </h3>
+          <h3 class="content-list__title"><a href="#">Plymouth professor champions arts and humanities research</a></h3>
           <p class="content-list__meta">
-            <time datetime="2026-04-27"> 27 April 2026 </time>
+            <time datetime="2026-04-27">27 April 2026</time>
           </p>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"> </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> &lsquo;Be personal and appreciative&rsquo; &ndash; research highlights effective responses to online patient feedback </a> </h3>
+          <h3 class="content-list__title"><a href="#">&lsquo;Be personal and appreciative&rsquo; &ndash; research highlights effective responses to online patient feedback</a></h3>
           <p class="content-list__meta">
-            <time datetime="2026-04-20"> 20 April 2026 </time>
+            <time datetime="2026-04-20">20 April 2026</time>
           </p>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"> </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> A moon bear rescue tale </a> </h3>
+          <h3 class="content-list__title"><a href="#">A moon bear rescue tale</a></h3>
           <p class="content-list__meta">
-            <time datetime="2026-04-14"> 14 April 2026 </time>
+            <time datetime="2026-04-14">14 April 2026</time>
           </p>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"> </li>
     </ul>
-    <h2> Event list &ndash; simple </h2>
+    <h2>Event list &ndash; simple</h2>
     <ul class="content-list content-list--single">
       <li data-event-end="2026-11-17T14:00" data-event-start="2026-11-17T12:00">
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Open research seminar </a> </h3>
+          <h3 class="content-list__title"><a href="#">Open research seminar</a></h3>
           <div class="content-list__meta">
-            <time datetime="2026-11-17T12:00"> 17 November 2026, 12:00&ndash;14:00 </time>
-            <span> Seminar </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+            <time datetime="2026-11-17T12:00">17 November 2026, 12:00&ndash;14:00</time>
+            <span>Seminar</span> <span class="content-list__status" data-event-status hidden>Happening now</span> </div>
         </div>
       </li>
       <li data-event-end="2026-11-20T20:00" data-event-start="2026-11-20T18:00">
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> University public lecture </a> </h3>
+          <h3 class="content-list__title"><a href="#">University public lecture</a></h3>
           <div class="content-list__meta">
-            <time datetime="2026-11-20T18:00"> 20 November 2026, 18:00&ndash;20:00 </time>
-            <span> Public lecture </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+            <time datetime="2026-11-20T18:00">20 November 2026, 18:00&ndash;20:00</time>
+            <span>Public lecture</span> <span class="content-list__status" data-event-status hidden>Happening now</span> </div>
         </div>
       </li>
       <li data-event-end="2026-11-24T12:30" data-event-start="2026-11-24T10:00">
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Applicant experience morning </a> </h3>
+          <h3 class="content-list__title"><a href="#">Applicant experience morning</a></h3>
           <div class="content-list__meta">
-            <time datetime="2026-11-24T10:00"> 24 November 2026, 10:00&ndash;12:30 </time>
-            <span> Open day </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+            <time datetime="2026-11-24T10:00">24 November 2026, 10:00&ndash;12:30</time>
+            <span>Open day</span> <span class="content-list__status" data-event-status hidden>Happening now</span> </div>
         </div>
       </li>
     </ul>
-    <h2> Event list &ndash; visual </h2>
+    <h2>Event list &ndash; visual</h2>
     <ul class="content-list content-list--single">
       <li data-event-end="2026-11-17T14:00" data-event-start="2026-11-17T12:00">
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Open research seminar </a> </h3>
+          <h3 class="content-list__title"><a href="#">Open research seminar</a></h3>
           <div class="content-list__meta">
-            <time datetime="2026-11-17T12:00"> 17 November 2026, 12:00&ndash;14:00 </time>
-            <span> Seminar </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+            <time datetime="2026-11-17T12:00">17 November 2026, 12:00&ndash;14:00</time>
+            <span>Seminar</span> <span class="content-list__status" data-event-status hidden>Happening now</span> </div>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"> </li>
       <li data-event-end="2026-11-20T20:00" data-event-start="2026-11-20T18:00">
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> University public lecture </a> </h3>
+          <h3 class="content-list__title"><a href="#">University public lecture</a></h3>
           <div class="content-list__meta">
-            <time datetime="2026-11-20T18:00"> 20 November 2026, 18:00&ndash;20:00 </time>
-            <span> Public lecture </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+            <time datetime="2026-11-20T18:00">20 November 2026, 18:00&ndash;20:00</time>
+            <span>Public lecture</span> <span class="content-list__status" data-event-status hidden>Happening now</span> </div>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"> </li>
       <li data-event-end="2026-11-24T12:30" data-event-start="2026-11-24T10:00">
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Applicant experience morning </a> </h3>
+          <h3 class="content-list__title"><a href="#">Applicant experience morning</a></h3>
           <div class="content-list__meta">
-            <time datetime="2026-11-24T10:00"> 24 November 2026, 10:00&ndash;12:30 </time>
-            <span> Open day </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+            <time datetime="2026-11-24T10:00">24 November 2026, 10:00&ndash;12:30</time>
+            <span>Open day</span> <span class="content-list__status" data-event-status hidden>Happening now</span> </div>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"> </li>
     </ul>
-    <h2> Course list &ndash; simple </h2>
+    <h2>Course list &ndash; simple</h2>
     <ul class="content-list content-list--single">
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) </a> </h3>
+          <h3 class="content-list__title"><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills))</a></h3>
           <ul class="content-list__meta-list">
-            <li> Full-time </li>
-            <li> Part-time route available </li>
-            <li> Plymouth </li>
+            <li>Full-time</li>
+            <li>Part-time route available</li>
+            <li>Plymouth</li>
           </ul>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> BSc (Hons) Marine Biology </a> </h3>
+          <h3 class="content-list__title"><a href="#">BSc (Hons) Marine Biology</a></h3>
           <ul class="content-list__meta-list">
-            <li> Undergraduate </li>
-            <li> 3 years </li>
-            <li> Plymouth </li>
+            <li>Undergraduate</li>
+            <li>3 years</li>
+            <li>Plymouth</li>
           </ul>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> MSc Psychology </a> </h3>
+          <h3 class="content-list__title"><a href="#">MSc Psychology</a></h3>
           <ul class="content-list__meta-list">
-            <li> Postgraduate </li>
-            <li> 1 year </li>
+            <li>Postgraduate</li>
+            <li>1 year</li>
           </ul>
         </div>
       </li>
     </ul>
-    <h2> Course list &ndash; visual </h2>
+    <h2>Course list &ndash; visual</h2>
     <ul class="content-list content-list--single">
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) </a> </h3>
+          <h3 class="content-list__title"><a href="#">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills))</a></h3>
           <ul class="content-list__meta-list">
-            <li> Full-time </li>
-            <li> Part-time route available </li>
-            <li> Plymouth </li>
+            <li>Full-time</li>
+            <li>Part-time route available</li>
+            <li>Plymouth</li>
           </ul>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"> </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> BSc (Hons) Marine Biology </a> </h3>
+          <h3 class="content-list__title"><a href="#">BSc (Hons) Marine Biology</a></h3>
           <ul class="content-list__meta-list">
-            <li> Undergraduate </li>
-            <li> 3 years </li>
-            <li> Plymouth </li>
+            <li>Undergraduate</li>
+            <li>3 years</li>
+            <li>Plymouth</li>
           </ul>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"> </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> MSc Psychology </a> </h3>
+          <h3 class="content-list__title"><a href="#">MSc Psychology</a></h3>
           <ul class="content-list__meta-list">
-            <li> Postgraduate </li>
-            <li> 1 year </li>
+            <li>Postgraduate</li>
+            <li>1 year</li>
           </ul>
         </div>
-        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"/> </li>
+        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"> </li>
     </ul>
-    <h2> Long-title wrapping example </h2>
+    <h2>Long-title wrapping example</h2>
     <ul class="content-list content-list--single">
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise </a> </h3>
+          <h3 class="content-list__title"><a href="#">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</a></h3>
         </div>
       </li>
       <li>
         <div class="content-list__body">
-          <h3 class="content-list__title"> <a href="#"> Photographic darkrooms and studios </a> </h3>
+          <h3 class="content-list__title"><a href="#">Photographic darkrooms and studios</a></h3>
         </div>
       </li>
     </ul>
   </div>
 </main>
 <script>
-   /*
+/*
  * Demonstration behaviour: reveal the status only while the current local
  * time falls between the event's start and end. In the CMS, this calculation
  * should ideally be performed by the event data/service so the status is
@@ -481,6 +484,6 @@ height: 3em;
 	updateEventStatuses();
 	window.setInterval(updateEventStatuses, 60000);
 }());
-  </script>
+</script>
 </body>
 </html>
