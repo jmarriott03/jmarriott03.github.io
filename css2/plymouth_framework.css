@@ -744,6 +744,10 @@ div > :last-child {
     --columns: minmax(0, 2fr) minmax(0, 1fr);
   }
 
+  &:where(.grid-columns-33-33-33) {
+    --columns: repeat(3, minmax(0, 1fr));
+  }
+
   @media (max-width: 60em) {
     --columns: repeat(2, minmax(0, 1fr));
   }
