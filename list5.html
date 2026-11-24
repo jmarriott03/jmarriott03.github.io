@@ -1,13 +1,14 @@
 <!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Author: Jamie Marriott">
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-<link rel="stylesheet" href="css2/plymouth_reset.css">
-<link rel="stylesheet" href="css2/plymouth_framework.css">
-<!--<link rel="stylesheet" href="css2/plymouth_theme.css">-->
-<title>University of Plymouth</title>
+<meta charset="utf-8"/>
+<meta content="Author: Jamie Marriott" name="description"/>
+<meta content="width=device-width, minimum-scale=1, initial-scale=1" name="viewport"/>
+<link href="css2/plymouth_reset.css" rel="stylesheet"/>
+<link href="css2/plymouth_framework.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title> University of Plymouth </title>
 <style>
 /*
 * {
@@ -20,49 +21,128 @@
 .list-container {
 	container-type: inline-size;
 }
-/* Default: one column */
-.grid-2-1 {
+/*
+ * Shared list foundation.
+ * All list types use the same item spacing, divider and responsive rules.
+ */
+.content-list {
 	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1em 2em;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0;
 	max-width: 100%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
-
-/* Two columns when the container is wide enough AND has 5+ items */
-@container (min-width: 40em) {
-.grid-2-1:has(> li:nth-child(5)) {
-grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-}
-/* List items */
-.grid-2-1 > li {
+.content-list > li {
 	min-width: 0;
-	padding-block-end: 1em;
+	padding-block: 1em;
 	margin: 0;
 	border-bottom: 1px solid var(--mgrey);
 }
-/* Links */
-.grid-2-1 > li > a {
-	display: block;
-	text-decoration: none;
+.content-list > li:first-child {
+	padding-block-start: 0;
 }
-/* Link content */
-.list-link-content {
+/* Two-column presentation for compact text and document lists */
+.content-list--columns {
+	column-gap: 3em;
+}
+@container (min-width: 42em) {
+.content-list--columns:has(> li:nth-child(5)) {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+/* Keep descriptive content and decorative media outside the heading link */
+.content-list > li {
 	display: flex;
 	align-items: center;
-	gap: 0.5em;
+	gap: 1em;
 }
-/* Link text */
-.list-link-text {
+.content-list__title {
+	margin: 0;
+	font-weight: 600;
+}
+.content-list__title a {
+	/*	color: inherit;*/
 	text-decoration: none;
 }
-.grid-2-1 > li > a:hover .list-link-text, .grid-2-1 > li > a:focus-visible .list-link-text {
+.content-list__title a:hover, .content-list__title a:focus-visible {
 text-decoration: underline;
+text-decoration-thickness: max(1px, 0.08em);
+text-underline-offset: 0.15em;
 }
-/* Icons */
+.content-list__title a:focus-visible {
+outline: 3px solid var(--focus, #ffdd00);
+outline-offset: 3px;
+}
+.content-list__body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.35em;
+	min-width: 0;
+}
+.content-list__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.25em 0.75em;
+	margin: 0;
+	font-size: 0.875em;
+	color: var(--dgrey);
+}
+.content-list__description {
+	margin: 0;
+}
+.content-list__meta-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25em 0.75em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.875em;
+	color: var(--dgrey);
+}
+/* Document format icon */
+.content-list__file-icon {
+	display: inline-grid;
+	flex: 0 0 2.5em;
+	width: 2.5em;
+	height: 2.5em;
+	place-items: center;
+	border: 1px solid currentColor;
+	border-radius: 0.25em;
+	color: var(--btn-danger, #c33);
+	font-size: 0.75em;
+	font-weight: 700;
+	line-height: 1;
+}
+/* Visual lists use a compact, right-aligned thumbnail */
+.content-list__image {
+	display: block;
+	flex: 0 0 6em;
+	width: 6em;
+	height: 4em;
+	margin-inline-start: auto;
+	border-radius: 0.25em;
+	object-fit: cover;
+}
+/* Event status is text as well as a visual treatment */
+.content-list__status {
+	display: inline-block;
+	padding: 0.1em 0.45em;
+	border: 1px solid currentColor;
+	border-radius: 0.2em;
+	color: var(--color-text, var(--black));
+	font-size: 0.875em;
+	font-weight: 600;
+}
+.content-list__status[hidden] {
+	display: none;
+}
+/* Existing framework icon font examples */
 .icon-big-2 {
 	font-size: 2em;
 }
@@ -72,109 +152,335 @@ text-decoration: underline;
 .icon-danger {
 	color: var(--btn-danger);
 }
-.list-link-img {
-	height: 4em;
-	width: auto;
-	border-radius: 0.5em;
-	aspect-ratio: 16 / 9;
-	object-fit: cover;
-	display: block;
-	margin-inline-start: auto;
+
+/* Keep thumbnails compact on narrow list containers */
+@container (max-width: 24em) {
+.content-list__image {
+flex-basis: 4.5em;
+width: 4.5em;
+height: 3em;
 }
-.time {
-	font-size: 0.875em;
-	color: var(--dgrey);
-	margin-bottom: 0;
-	display: inline-flex;
-	align-items: baseline;
-	gap: 0.25em;
+}
+/* A single-column list remains single-column at every container width */
+.content-list--single {
+	grid-template-columns: minmax(0, 1fr);
+}
+.content-list + * {
+	margin-block-start: 2em;
 }
 </style>
 </head>
-
 <body class="bg-color" data-theme="deep-orange">
 <main>
   <div class="w-80 p-responsive dotted list-container">
-    <h2>Information sheets</h2>
-    <div class="mb-reg">
-      <ul class="grid-2-1">
-        <li><a href="#">Plymouth professor champions arts and humanities research</a><br>
-<span class="iconfont" aria-hidden="true">c</span> <time datetime="2026-04-27T08:30" class="time">27 April 2026 08:30 - 16:30</time><br>
-Professor Katharine Willis joins national advisory board.<img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="list-link-img"/></li>
-        <li><a href="#"><span class="list-link-content"><span class="list-link-text">Why Study in the South West</span><img src="images/720x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="list-link-img"/></span></a></li>
-		  
-		  <li class="link-no-underline"><a href="#"><span class="list-link-content"><span class="list-link-text">Plymouth professor champions arts and humanities research<br>
-<span class="iconfont dgrey-text" aria-hidden="true">c</span> <time datetime="2026-04-27T08:30" class="time">27 April 2026 08:30 - 16:30</time><br>
-Professor Katharine Willis joins national advisory board.</span><img src="images/720x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="list-link-img"/></span></a></li>
-		  
-		  
-      </ul>
-    </div>
-	  
-	  
-	  <p class="time"> <span class="iconfont" aria-hidden="true">c</span>
-            <time datetime="2026-04-27T08:30">27 April 2026 08:30 - 16:30</time>
+    <h1> List component examples </h1>
+    <p> One shared list foundation supports links, documents, news, events and courses. Editors choose the content type and, where available, a simple or visual presentation. </p>
+    <h2> Link list </h2>
+    <p> Compact link lists can use two columns when the list is wide enough and contains at least five items. </p>
+    <ul class="content-list content-list--columns">
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Why Study in the South West </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> UCAS and personal statements </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Student Finance </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Preparing for your UCAS Fair </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Choosing between offers </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Choosing a course and university </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> FoH Health Careers Guide </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Nursing Poster 1 </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Nursing Poster 2 </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Podiatry poster </a> </h3>
+        </div>
+      </li>
+    </ul>
+    <h2> Document list </h2>
+    <p> File type and file size are shown alongside each linked document title. </p>
+    <ul class="content-list content-list--columns">
+      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Why Study in the South West </a> </h3>
+          <p class="content-list__meta"> PDF (2.4 MB) </p>
+        </div>
+      </li>
+      <li> <span aria-hidden="true" class="content-list__file-icon"> DOCX </span>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> UCAS and personal statements </a> </h3>
+          <p class="content-list__meta"> Word document (84 KB) </p>
+        </div>
+      </li>
+      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Student Finance </a> </h3>
+          <p class="content-list__meta"> PDF (1.1 MB) </p>
+        </div>
+      </li>
+      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Preparing for your UCAS Fair </a> </h3>
+          <p class="content-list__meta"> PDF (640 KB) </p>
+        </div>
+      </li>
+      <li> <span aria-hidden="true" class="content-list__file-icon"> PDF </span>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Choosing between offers </a> </h3>
+          <p class="content-list__meta"> PDF (920 KB) </p>
+        </div>
+      </li>
+    </ul>
+    <h2> News list &ndash; simple </h2>
+    <ul class="content-list content-list--single">
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Plymouth professor champions arts and humanities research </a> </h3>
+          <p class="content-list__meta">
+            <time datetime="2026-04-27"> 27 April 2026 </time>
           </p>
-          <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
-          <p>Professor Katharine Willis joins national advisory board.</p>
-	  
-	  
-	  
-    <h2>Information sheets</h2>
-    <div class="mb-reg">
-      <ul class="grid-2-1">
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Why Study in the South West</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Why Study in the South West</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">UCAS and personal statements</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Student Finance</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Preparing for your UCAS Fair</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Choosing between offers</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Choosing a course and university</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">FoH Health Careers Guide</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Nursing Poster 1</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Nursing Poster 2</span></span></a></li>
-        <li><a href="#"><span class="list-link-content"><span class="iconfont icon-big-2 icon-danger" aria-hidden="true">U</span><span class="list-link-text">Podiatry poster</span></span></a></li>
-      </ul>
-    </div>
-    <h2>Article group list 80em width</h2>
-    <ul class="grid-2-1">
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</span></span></a></li>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> &lsquo;Be personal and appreciative&rsquo; &ndash; research highlights effective responses to online patient feedback </a> </h3>
+          <p class="content-list__meta">
+            <time datetime="2026-04-20"> 20 April 2026 </time>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> A moon bear rescue tale </a> </h3>
+          <p class="content-list__meta">
+            <time datetime="2026-04-14"> 14 April 2026 </time>
+          </p>
+        </div>
+      </li>
     </ul>
-  </div>
-  <div class="w-80 p-responsive dotted list-container">
-    <h2> Link, Document and Course lists 80em width
-      (defaults to 1 column if fewer than 5 <span class="codegrey2">&lt;li&gt;</span> items) </h2>
-    <ul class="grid-2-1">
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span></span></a></li>
+    <h2> News list &ndash; visual </h2>
+    <ul class="content-list content-list--single">
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Plymouth professor champions arts and humanities research </a> </h3>
+          <p class="content-list__meta">
+            <time datetime="2026-04-27"> 27 April 2026 </time>
+          </p>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> &lsquo;Be personal and appreciative&rsquo; &ndash; research highlights effective responses to online patient feedback </a> </h3>
+          <p class="content-list__meta">
+            <time datetime="2026-04-20"> 20 April 2026 </time>
+          </p>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> A moon bear rescue tale </a> </h3>
+          <p class="content-list__meta">
+            <time datetime="2026-04-14"> 14 April 2026 </time>
+          </p>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"/> </li>
     </ul>
-  </div>
-  <div class="w-60 p-responsive dotted list-container">
-    <h2>Article group list 60em width</h2>
-    <ul class="grid-2-1">
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span></span></a></li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span></span> </a> </li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span></span> </a> </li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</span> </span> </a> </li>
+    <h2> Event list &ndash; simple </h2>
+    <ul class="content-list content-list--single">
+      <li data-event-end="2026-11-17T14:00" data-event-start="2026-11-17T12:00">
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Open research seminar </a> </h3>
+          <div class="content-list__meta">
+            <time datetime="2026-11-17T12:00"> 17 November 2026, 12:00&ndash;14:00 </time>
+            <span> Seminar </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+        </div>
+      </li>
+      <li data-event-end="2026-11-20T20:00" data-event-start="2026-11-20T18:00">
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> University public lecture </a> </h3>
+          <div class="content-list__meta">
+            <time datetime="2026-11-20T18:00"> 20 November 2026, 18:00&ndash;20:00 </time>
+            <span> Public lecture </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+        </div>
+      </li>
+      <li data-event-end="2026-11-24T12:30" data-event-start="2026-11-24T10:00">
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Applicant experience morning </a> </h3>
+          <div class="content-list__meta">
+            <time datetime="2026-11-24T10:00"> 24 November 2026, 10:00&ndash;12:30 </time>
+            <span> Open day </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+        </div>
+      </li>
     </ul>
-  </div>
-  <div class="w-40 p-responsive dotted list-container">
-    <h2>Article group list 40em width</h2>
-    <ul class="grid-2-1">
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">‘Be personal and appreciative’ – research highlights effective responses to online patient feedback</span> </span> </a> </li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">A moon bear rescue tale</span> </span> </a> </li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise</span> </span> </a> </li>
-      <li><a href="#"><span class="list-link-content"><span class="list-link-text">Photographic darkrooms and studios</span> </span> </a> </li>
-      <li> <a href="#"><span class="list-link-content"><span class="list-link-text">CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) (Full-time, Part-time route available)</span> </span> </a> </li>
+    <h2> Event list &ndash; visual </h2>
+    <ul class="content-list content-list--single">
+      <li data-event-end="2026-11-17T14:00" data-event-start="2026-11-17T12:00">
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Open research seminar </a> </h3>
+          <div class="content-list__meta">
+            <time datetime="2026-11-17T12:00"> 17 November 2026, 12:00&ndash;14:00 </time>
+            <span> Seminar </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+      <li data-event-end="2026-11-20T20:00" data-event-start="2026-11-20T18:00">
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> University public lecture </a> </h3>
+          <div class="content-list__meta">
+            <time datetime="2026-11-20T18:00"> 20 November 2026, 18:00&ndash;20:00 </time>
+            <span> Public lecture </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+      <li data-event-end="2026-11-24T12:30" data-event-start="2026-11-24T10:00">
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Applicant experience morning </a> </h3>
+          <div class="content-list__meta">
+            <time datetime="2026-11-24T10:00"> 24 November 2026, 10:00&ndash;12:30 </time>
+            <span> Open day </span> <span class="content-list__status" data-event-status="" hidden=""> Happening now </span> </div>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"/> </li>
+    </ul>
+    <h2> Course list &ndash; simple </h2>
+    <ul class="content-list content-list--single">
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) </a> </h3>
+          <ul class="content-list__meta-list">
+            <li> Full-time </li>
+            <li> Part-time route available </li>
+            <li> Plymouth </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> BSc (Hons) Marine Biology </a> </h3>
+          <ul class="content-list__meta-list">
+            <li> Undergraduate </li>
+            <li> 3 years </li>
+            <li> Plymouth </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> MSc Psychology </a> </h3>
+          <ul class="content-list__meta-list">
+            <li> Postgraduate </li>
+            <li> 1 year </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <h2> Course list &ndash; visual </h2>
+    <ul class="content-list content-list--single">
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> CertEd Certificate in Education (incorporating the Diploma in Teaching (Further Education and Skills)) </a> </h3>
+          <ul class="content-list__meta-list">
+            <li> Full-time </li>
+            <li> Part-time route available </li>
+            <li> Plymouth </li>
+          </ul>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> BSc (Hons) Marine Biology </a> </h3>
+          <ul class="content-list__meta-list">
+            <li> Undergraduate </li>
+            <li> 3 years </li>
+            <li> Plymouth </li>
+          </ul>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/1280x720placeholder-mgrey.gif" width="1280"/> </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> MSc Psychology </a> </h3>
+          <ul class="content-list__meta-list">
+            <li> Postgraduate </li>
+            <li> 1 year </li>
+          </ul>
+        </div>
+        <img alt="" class="content-list__image" height="720" src="images/720x720placeholder-mgrey.gif" width="720"/> </li>
+    </ul>
+    <h2> Long-title wrapping example </h2>
+    <ul class="content-list content-list--single">
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> The abundance and distribution of cetaceans in the western English Channel and their exposure to ship noise </a> </h3>
+        </div>
+      </li>
+      <li>
+        <div class="content-list__body">
+          <h3 class="content-list__title"> <a href="#"> Photographic darkrooms and studios </a> </h3>
+        </div>
+      </li>
     </ul>
   </div>
 </main>
+<script>
+   /*
+ * Demonstration behaviour: reveal the status only while the current local
+ * time falls between the event's start and end. In the CMS, this calculation
+ * should ideally be performed by the event data/service so the status is
+ * available without client-side JavaScript.
+ */
+(function () {
+	"use strict";
+
+	function updateEventStatuses() {
+		var now = new Date();
+
+		document.querySelectorAll("[data-event-start][data-event-end]").forEach(function (eventItem) {
+			var start = new Date(eventItem.getAttribute("data-event-start"));
+			var end = new Date(eventItem.getAttribute("data-event-end"));
+			var isHappening = !Number.isNaN(start.getTime()) &&
+				!Number.isNaN(end.getTime()) &&
+				now >= start &&
+				now < end;
+
+			var status = eventItem.querySelector("[data-event-status]");
+			if (status) {
+				status.hidden = !isHappening;
+			}
+		});
+	}
+
+	updateEventStatuses();
+	window.setInterval(updateEventStatuses, 60000);
+}());
+  </script>
 </body>
 </html>
