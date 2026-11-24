@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+:root {
+--info: #ccc;
+--info-highlight: #999;
+--warning: #fc3;
+--warning-highlight: #c93;
+--danger: #c33;
+--danger-highlight: #933;
+}
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+@media (width <= 40em) {
+padding: 2em 1em;
+}
+}
+.group {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card {
+	max-width: 37.5em;
+}
+.card h2, .card h3, .card p, .card img {
+	margin: 0;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section p {
+	margin: 0;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin: 0;
+}
+.layout-67-33 {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2em;
+@media (width <= 60em) {
+grid-template-columns: 1fr 1fr;
+}
+@media (width <= 40em) {
+grid-template-columns: 1fr;
+}
+}
+.event-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 0;
+}
+.event-list li {
+	border-bottom: 2px solid var(--lgrey);
+	padding-bottom: 1em;
+}
+.event-list li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.logo {
+	height: 2em;
+	vertical-align: middle;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+.callout-warning-0-5 {
+	border-left: 0.5em solid var(--warning-highlight);
+	background-color: var(--warning);
+	padding: 1em;
+	border-radius: 0.5em;
+}
+.callout-warning-1 {
+	border-left: 1em solid var(--warning-highlight);
+	background-color: var(--warning);
+	padding: 1em;
+	border-radius: 1em;
+}
+.callout-warning-0-25 {
+	border-left: 0.25em solid var(--warning-highlight);
+	background-color: var(--warning);
+	padding: 1em;
+	border-radius: 0.25em;
+}
+</style>
+</head>
+<body data-theme="mono">
+<main>
+  <div class="w-80 section">
+    <div class="group">
+      <h1>callout4b</h1>
+		<h2>gap-1</h2>
+    </div>
+    <div class="callout-warning-0-5 group">
+      <h2>callout w-80 rounded-0-5</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="callout-warning-0-5 group w-60 m-0">
+      <h2>callout w-60 rounded-0-5</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="callout-warning-0-5 group w-40 m-0">
+      <h2>callout w-40 rounded-0-5</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="grid-columns grid-columns-33-33-33 gap-1">
+      <div class="callout-warning-0-5 group">
+        <h2>First column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Second column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Third column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns gap-1">
+      <div class="callout-warning-0-5 group">
+        <h2>Left column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-33-67 gap-1">
+      <div class="callout-warning-0-5 group">
+        <h2>Left column</h2>
+        <p>Content for the narrower left-hand column.</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the wider right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-67-33 gap-1">
+      <div class="callout-warning-0-5 group">
+        <h2>Left column</h2>
+        <p>Content for the wider left-hand column.</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the narrower right-hand column.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="callout-warning-1 group">
+      <h2>callout w-80 rounded-1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="callout-warning-1 group w-60 m-0">
+      <h2>callout w-60 rounded-1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="callout-warning-1 group w-40 m-0">
+      <h2>callout w-40 rounded-1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="grid-columns grid-columns-33-33-33 gap-1">
+      <div class="callout-warning-1 group">
+        <h2>First column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="rounded-1 p-1 bg-color-light group">
+        <h2>Second column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+      <div class="rounded-1 p-1 bg-color-light group">
+        <h2>Third column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns gap-1">
+      <div class="callout-warning-1 group">
+        <h2>Left column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="rounded-1 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-33-67 gap-1">
+      <div class="callout-warning-1 group">
+        <h2>Left column</h2>
+        <p>Content for the narrower left-hand column.</p>
+      </div>
+      <div class="rounded-1 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the wider right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-67-33 gap-1">
+      <div class="callout-warning-1 group">
+        <h2>Left column</h2>
+        <p>Content for the wider left-hand column.</p>
+      </div>
+      <div class="rounded-1 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the narrower right-hand column.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="callout-warning-0-25 group">
+      <h2>callout w-80 rounded-0-25</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="callout-warning-0-25 group w-60 m-0">
+      <h2>callout w-60 rounded-0-25</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="callout-warning-0-25 group w-40 m-0">
+      <h2>callout w-40 rounded-0-25</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="grid-columns grid-columns-33-33-33 gap-1">
+      <div class="callout-warning-0-25 group">
+        <h2>First column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="rounded-0-25 p-1 bg-color-light group">
+        <h2>Second column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+      <div class="rounded-0-25 p-1 bg-color-light group">
+        <h2>Third column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns gap-1">
+      <div class="callout-warning-0-25 group">
+        <h2>Left column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="rounded-0-25 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-33-67 gap-1">
+      <div class="callout-warning-0-25 group">
+        <h2>Left column</h2>
+        <p>Content for the narrower left-hand column.</p>
+      </div>
+      <div class="rounded-0-25 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the wider right-hand column.</p>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-67-33 gap-1">
+      <div class="callout-warning-0-25 group">
+        <h2>Left column</h2>
+        <p>Content for the wider left-hand column.</p>
+      </div>
+      <div class="rounded-0-25 p-1 bg-color-light group">
+        <h2>Right column</h2>
+        <p>Content for the narrower right-hand column.</p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
