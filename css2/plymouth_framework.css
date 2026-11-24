@@ -730,23 +730,26 @@ div > :last-child {
 }
 .grid-columns {
   display: grid;
+  grid-template-columns: var(--columns, repeat(2, minmax(0, 1fr)));
+
   > * {
     min-width: 0;
   }
-  &.grid-columns-50-50 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  &:where(.grid-columns-33-67) {
+    --columns: minmax(0, 1fr) minmax(0, 2fr);
   }
-  &.grid-columns-33-67 {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+
+  &:where(.grid-columns-67-33) {
+    --columns: minmax(0, 2fr) minmax(0, 1fr);
   }
-  &.grid-columns-67-33 {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  }
+
   @media (max-width: 60em) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --columns: repeat(2, minmax(0, 1fr));
   }
+
   @media (max-width: 40em) {
-    grid-template-columns: 1fr;
+    --columns: 1fr;
   }
 }
 /* ============================================================================
