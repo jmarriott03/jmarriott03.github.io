@@ -418,6 +418,9 @@ a.btn {
 .items-center {
   align-items: center;
 }
+.gap-2 {
+  gap: 2em;
+}
 .gap-1 {
   gap: 1em;
 }
@@ -724,6 +727,27 @@ div > :last-child {
 }
 .underline {
   text-decoration: underline;
+}
+.grid-columns {
+  display: grid;
+  > * {
+    min-width: 0;
+  }
+  &.grid-columns-50-50 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  &.grid-columns-33-67 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+  &.grid-columns-67-33 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+  @media (max-width: 60em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: 40em) {
+    grid-template-columns: 1fr;
+  }
 }
 /* ============================================================================
    LEGACY UTILITY CLASSES
