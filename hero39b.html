@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+@media (width <= 40em) {
+padding: 2em 1em;
+}
+}
+.group {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card {
+	max-width: 37.5em;
+}
+.card h2, .card h3, .card p, .card img {
+	margin: 0;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section p {
+	margin: 0;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin: 0;
+}
+.layout-67-33 {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2em;
+@media (width <= 60em) {
+grid-template-columns: 1fr 1fr;
+}
+@media (width <= 40em) {
+grid-template-columns: 1fr;
+}
+}
+.event-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 0;
+}
+.event-list li {
+	border-bottom: 2px solid var(--lgrey);
+	padding-bottom: 1em;
+}
+.event-list li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.logo {
+	height: 2em;
+	vertical-align: middle;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+</style>
+</head>
+<body data-theme="mono">
+<main>
+  <div class="section w-80">
+    <div class="logo"><img src="images/1280x720placeholder-mgrey.gif" alt="" class="logo"></div>
+    <div class="hero-2col layout-33-67 bg-color-dark rounded-0-5">
+      <div class="left-column p-responsive section">
+        <div class="centered text-resize group">
+          <p>Conference</p>
+          <h2>Erasing Rural Poverty</h2>
+          <p>Improve the financial wellbeing of individuals and low-income families living in rural communities.</p>
+          <p><strong>4 November 2025</strong></p>
+          <p>10:15 - 12:45</p>
+        </div>
+      </div>
+      <div class="right-column">
+        <figure><img src="images/1280x720placeholder-mgrey.gif" width="1280" height="720" alt="" class="img-cover">
+          <figcaption class="rounded-0-5">Image courtesy of Getty</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="layout-67-33">
+      <div class="group">
+        <h3>The aim of this event is to improve the financial wellbeing of individuals and low-income families living in rural communities who are experiencing financial hardship.</h3>
+        <p>This will be achieved by raising awareness of available support from agencies, such as Citizens Advice and breaking down barriers for people to access support more readily. In addition, the event will also aim to raise awareness of rural communities’ financial struggles, to give voice to those currently struggling facing financial hardship.</p>
+        <h3>The event will comprise a morning session, repeated in the afternoon to hopefully maximise attendance by fitting around peoples’ work, childcare and/or other commitments.</h3>
+        <p>Each session will commence with a series of video scenarios, depicting people from rural communities highlighting their financial plight, in a ‘talking heads’ approach. The session will then move to a more interactive discussion, led by the event leads, and asking participants their perceptions and opinions of how best to resolve the situation highlighted in each video, focusing, on available support. The session will end with event leaders sharing information where people in rural communities can access support, when facing financial difficulties.</p>
+      </div>
+      <ul class="event-list group">
+        <li class="group">
+          <h3>4 November 2025</h3>
+          <p>10:15 – 12:45</p>
+          <p>Ashburton Town Hall, North Street, Ashburton, Devon, TQ13 7QQ</p>
+          <div class="flex flex-wrap gap-1 items-center">
+            <button class="btn btn-primary">Book your place</button>
+            <a href="#">Add to your calendar</a> </div>
+        </li>
+        <li class="group">
+          <h3>10 November 2025</h3>
+          <p>10:15 – 12:45</p>
+          <p>Ashburton Town Hall, North Street, Ashburton, Devon, TQ13 7QQ</p>
+          <div class="flex flex-wrap gap-1 items-center">
+            <button class="btn btn-primary">Book your place</button>
+            <a href="#">Add to your calendar</a> </div>
+        </li>
+      </ul>
+    </div>
+    <div class="group">
+      <h2>In Plymouth, we are shaping extraordinary futures</h2>
+      <div class="grid gap-2">
+        <div class="card rounded-0-5 bg-color-light"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <h3><a href="#">Plymouth professor champions arts and humanities research</a></h3>
+            <p>19 November 2026</p>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color-light"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <h3><a href="#">University of Plymouth is first to launch an electric boat</a></h3>
+            <p>20 November 2026</p>
+          </div>
+        </div>
+        <div class="card rounded-0-5 bg-color-light"><a href="#"><img src="images/1280x720placeholder-mgrey.gif" alt="" width="320" class="img-cover aspect-ratio-16x9"></a>
+          <div class="p-1">
+            <h3><a href="#">Students who changed paths are recognised in national awards</a></h3>
+            <p>21 November 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
