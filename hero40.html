@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+@media (width <= 40em) {
+padding: 2em 1em;
+}
+}
+.group {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card {
+	max-width: 37.5em;
+}
+.card h2, .card h3, .card p, .card img {
+	margin: 0;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section p {
+	margin: 0;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin: 0;
+}
+.layout-67-33 {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2em;
+@media (width <= 60em) {
+grid-template-columns: 1fr 1fr;
+}
+@media (width <= 40em) {
+grid-template-columns: 1fr;
+}
+}
+.event-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 0;
+}
+.event-list li {
+	border-bottom: 2px solid var(--lgrey);
+	padding-bottom: 1em;
+}
+.event-list li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.logo {
+	height: 2em;
+	vertical-align: middle;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+</style>
+</head>
+<body data-theme="mono">
+<main>
+  <div class="section w-80">
+    <div class="logo"><img src="images/uoplogo.svg" alt="" class="logo"></div>
+    <div class="hero-2col layout-33-67 bg-color-dark rounded-0-5">
+      <div class="left-column p-responsive section">
+        <div class="centered group">
+          <div class="p-0-25 rounded-0-25 bg-color-medium w-fit-content">
+            <p>Undergraduate course</p>
+          </div>
+          <h3>BSc (Hons)</h3>
+          <h2>Music and Sound Production</h2>
+          <p>Master audio engineering with the latest tech in cutting-edge studios. Explore how technology is revolutionising music, create your own tools and harness AI creatively. Prepare for an exciting career in the music and technology industries.</p>
+          <div class="gap-1 p-1 rounded-0-5 bg-color-medium w-fit-content">
+            <p>Our typical offer</p>
+            <h2>104 UCAS points</h2>
+          </div>
+          <div class="flex flex-wrap gap-1 mb-reg">
+            <button class="btn btn-primary">Apply now</button>
+          </div>
+        </div>
+      </div>
+      <div class="right-column">
+        <figure><img src="images/1920x1080music.webp" width="1280" height="720" alt="" class="img-cover">
+          <figcaption class="rounded-0-5">Image courtesy of Mr Ben Payne</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="grid-columns grid-columns-33-33-33 gap-1">
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Become a professional and effective audio engineer</h2>
+        <p>Master professional audio software; build innovative and creative tools and develop your own software.</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Start from the beginning</h2>
+        <p>No prior musical training or technical expertise is necessary to undertake this course, just enthusiasm and new ideas!</p>
+      </div>
+      <div class="rounded-0-5 p-1 bg-color-light group">
+        <h2>Explore how music technologies can change and enrich lives</h2>
+        <p>Learn how to apply your advanced knowledge to enable people with severe disabilities to interact with a computer.</p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
