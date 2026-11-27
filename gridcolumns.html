@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Author: Jamie Marriott">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+<link rel="stylesheet" href="css2/plymouth_reset.css">
+<link rel="stylesheet" href="css2/plymouth_framework.css">
+<link rel="stylesheet" href="css2/plymouth_theme.css">
+<title>University of Plymouth</title>
+<style>
+/*
+* {
+	outline: 1px dotted red;
+	outline-offset: -1px;
+}
+*/
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
+@media (width <= 40em) {
+padding: 2em 1em;
+}
+}
+.group {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card > div {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.card {
+	max-width: 37.5em;
+}
+.card h2, .card h3, .card p, .card img {
+	margin: 0;
+}
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6, .section p {
+	margin: 0;
+}
+hr {
+	border: none;
+	border-top: 2px solid var(--lgrey);
+	margin: 0;
+}
+.layout-67-33 {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2em;
+@media (width <= 60em) {
+grid-template-columns: 1fr 1fr;
+}
+@media (width <= 40em) {
+grid-template-columns: 1fr;
+}
+}
+.event-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 0;
+}
+.event-list li {
+	border-bottom: 2px solid var(--lgrey);
+	padding-bottom: 1em;
+}
+.event-list li:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.logo {
+	height: 2em;
+	vertical-align: middle;
+}
+figcaption {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white);
+	padding: 0.5em;
+	font-size: 0.75em;
+	max-width: calc(100% - 2em);
+}
+figcaption a {
+	color: var(--white);
+	text-decoration: underline;
+}
+figure {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+</style>
+</head>
+<body data-theme="mono">
+<main>
+  <div class="w-80 section dotted">
+    <div class="group">
+      <h1>gridcolumns</h1>
+    </div>
+    <div class="grid-columns rounded-0-5 p-1 bg-color-dark gap-2">
+      <div class="group dotted">
+        <h2>Left column</h2>
+        <p>Content for the left-hand column.</p>
+      </div>
+      <div class="group dotted">
+        <h2>Right column</h2>
+        <p>Content for the right-hand column.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="grid-columns grid-columns-33-67 rounded-0-5 p-1 bg-color-dark gap-2">
+      <div class="group dotted">
+        <h2>Left column</h2>
+        <p>Content for the narrower left-hand column.</p>
+      </div>
+      <div class="group dotted">
+        <h2>Right column</h2>
+        <p>Content for the wider right-hand column.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="grid-columns grid-columns-67-33 rounded-0-5 p-1 bg-color-dark gap-2">
+      <div class="group dotted">
+        <h2>Left column</h2>
+        <p>Content for the wider left-hand column.</p>
+      </div>
+      <div class="group dotted">
+        <h2>Right column</h2>
+        <p>Content for the narrower right-hand column.</p>
+      </div>
+    </div>
+    <div class="codegrey w-fit-content"><code>.grid-columns {<br>
+      display: grid;<br>
+      grid-template-columns: var(--columns, repeat(2, minmax(0, 1fr)));<br>
+      <br>
+      &gt; * {<br>
+      min-width: 0;<br>
+      }<br>
+      <br>
+      &amp;:where(.grid-columns-33-67) {<br>
+      --columns: minmax(0, 1fr) minmax(0, 2fr);<br>
+      }<br>
+      <br>
+      &amp;:where(.grid-columns-67-33) {<br>
+      --columns: minmax(0, 2fr) minmax(0, 1fr);<br>
+      }<br>
+      <br>
+      &amp;:where(.grid-columns-33-33-33) {<br>
+      --columns: repeat(3, minmax(0, 1fr));<br>
+      }<br>
+      <br>
+      @media (max-width: 60em) {<br>
+      --columns: repeat(2, minmax(0, 1fr));<br>
+      }<br>
+      <br>
+      @media (max-width: 40em) {<br>
+      --columns: 1fr;<br>
+      }<br>
+      }<br>
+      <br>
+      &lt;div class=&quot;grid-columns rounded-0-5 p-1 bg-color-light gap-2&quot;&gt;<br>
+      &lt;div class=&quot;group dotted&quot;&gt;<br>
+      &lt;h2&gt;Left column&lt;/h2&gt;<br>
+      &lt;p&gt;Content for the left-hand column.&lt;/p&gt;<br>
+      &lt;/div&gt;<br>
+      &lt;div class=&quot;group dotted&quot;&gt;<br>
+      &lt;h2&gt;Right column&lt;/h2&gt;<br>
+      &lt;p&gt;Content for the right-hand column.&lt;/p&gt;<br>
+      &lt;/div&gt;<br>
+      &lt;/div&gt; </code> </div>
+  </div>
+</main>
+</body>
+</html>
